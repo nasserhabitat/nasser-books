@@ -42,3 +42,26 @@
     background-color: #f5f5f5;
     color: #666;
 }
+/* Additional CSS for English version */
+.book-description {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+.book-description h2 {
+    color: #1a5f7a;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .book-description {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
