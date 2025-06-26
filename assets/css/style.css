@@ -30,3 +30,17 @@
     text-decoration: none;
     font-weight: bold;
 }
+/* تأثير الظل عند التحويم */
+.book-img {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* تأثير التدرج اللوني */
+.hero {
+    background: linear-gradient(135deg, #002b5b, #1a5f7a);
+}
+@media (max-width: 768px) {
+    .book-img {
+        max-width: 200px;
+    }
+}
