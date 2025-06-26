@@ -1,19 +1,19 @@
 # مكتبة د. ناصر بن داود
 
-مستودع رقمي لمؤلفات الدكتور ناصر بن داود في علوم القرآن والتدبر
+مكتبة رقمية لمؤلفات الدكتور ناصر بن داود في علوم القرآن والتدبر
 
 ## الكتب المتاحة
-1. [نحو تدبر واعٍ - النسخة العربية](books/conscious-contemplation/ar)
-2. [Towards Conscious Contemplation - English Version](books/conscious-contemplation/en)
+1. [نحو تدبر واعٍ](books/conscious-contemplation/ar) - النسخة العربية
+2. [Towards Conscious Contemplation](books/conscious-contemplation/en) - النسخة الإنجليزية
 
 ## المميزات
 - واجهة ثنائية اللغة (عربي/إنجليزي)
 - تصميم متجاوب
-- روابط مباشرة لنسخ الأرشيف
-- تنظيم واضح
+- روابط مباشرة للمؤلفات
+- تنظيم واضح وسهل
 
-## 
-
-## الرخصة
-جميع الحقوق محفوظة للمؤلف © 2023
+## كيفية الاستخدام
+1. استنسخ المستودع:
+   ```bash
+   git clone https://github.com/nasserhabitat/nasser-books.git
 
