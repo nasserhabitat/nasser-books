@@ -1,102 +1,44 @@
-:root {
-  --primary-color: #1a5f7a;
-  --secondary-color: #57c5b6;
-  --dark-blue: #002b5b;
-  --white: #ffffff;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s ease;
-}
-
-/* أنماط غلاف الكتاب */
-.book-cover {
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 1.5rem;
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.book-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  object-fit: cover;
-  aspect-ratio: 2/3; /* نسبة الطول/العرض للصور */
-}
-
-.book-img:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-}
-
-/* أنماط أزرار الكتاب */
-.book-actions {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--primary-color);
-  color: var(--white);
-  padding: 0.8rem 1.8rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: var(--transition);
-  border: 2px solid transparent;
-}
-
-.btn:hover {
-  background: var(--dark-blue);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* أنماط الهيدر */
-.hero {
-  background: linear-gradient(135deg, var(--dark-blue), var(--primary-color));
-  color: var(--white);
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-/* تأثيرات للعرض على الجوال */
-@media (max-width: 768px) {
-  .book-cover {
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 1rem;
-    margin: 1rem auto;
-  }
-  
-  .book-img {
-    max-width: 200px;
-  }
-  
-  .btn {
-    padding: 0.6rem 1.4rem;
-    font-size: 0.9rem;
-  }
-  
-  .hero {
-    padding: 2rem 1rem;
-  }
 }
 
-/* تحسينات إضافية للعرض على شاشات كبيرة */
-@media (min-width: 1200px) {
-  .book-cover {
-    max-width: 900px;
-  }
-  
-  .book-img {
-    max-width: 350px;
-  }
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.cover-container {
+    margin: 0 auto;
+    max-width: fit-content;
+}
+
+.book-meta {
+    margin-top: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .icon {
+    transform: translateX(3px);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    background-color: #f5f5f5;
+    color: #666;
 }
