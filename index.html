@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مكتبة د. ناصر بن داود</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>نحو تدبرٍ واعٍ</h1>
+        <p>دليل عملي لفهم وتطبيق القرآن الكريم</p>
+    </header>
+
+    <section class="book-container">
+        <div class="language-tabs">
+            <button class="tab-btn active" onclick="openLanguage('ar')">العربية</button>
+            <button class="tab-btn" onclick="openLanguage('en')">English</button>
+        </div>
+
+        <div id="ar" class="tab-content" style="display:block">
+            <img src="books/conscious-contemplation/ar/cover.jpg" alt="غلاف الكتاب">
+            <h2>نحو تدبرٍ واعٍ</h2>
+            <p>دليل عملي لفهم وتطبيق القرآن الكريم في العصر الحديث</p>
+            <a href="books/conscious-contemplation/ar/index.html" class="btn">تفاصيل الكتاب</a>
+            <a href="https://archive.org/details/20250529_20250529_2132" class="btn-outline">قراءة على الأرشيف</a>
+        </div>
+
+        <div id="en" class="tab-content">
+            <img src="books/conscious-contemplation/en/cover.jpg" alt="Book Cover">
+            <h2>Towards Conscious Contemplation</h2>
+            <p>A Practical Guide to Understanding the Noble Qur'an</p>
+            <a href="books/conscious-contemplation/en/index.html" class="btn">Book Details</a>
+            <a href="https://archive.org/details/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/page/n1/mode/1up" class="btn-outline">Read on Archive</a>
+        </div>
+    </section>
+
+    <script>
+        function openLanguage(lang) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(lang).style.display = 'block';
+            document.querySelector(`.tab-btn[onclick="openLanguage('${lang}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
