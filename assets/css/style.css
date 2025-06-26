@@ -1,67 +1,32 @@
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
+/* أنماط الشبكة الرئيسية */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    opacity: 0.9;
-}
-
-.cover-container {
-    margin: 0 auto;
-    max-width: fit-content;
-}
-
-.book-meta {
-    margin-top: 1.5rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.author {
-    font-weight: bold;
-}
-
-.icon {
-    margin-right: 0.5rem;
-    display: inline-block;
+/* بطاقة الكتاب */
+.book-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.btn:hover .icon {
-    transform: translateX(3px);
+.book-card:hover {
+    transform: translateY(-5px);
 }
 
-.site-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    background-color: #f5f5f5;
-    color: #666;
+/* التنسيقات المشتركة */
+.hero-content, .cover-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
-/* Additional CSS for English version */
+
 .book-description {
     max-width: 800px;
     margin: 2rem auto;
-    padding: 1.5rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-    line-height: 1.7;
-}
-
-.book-description h2 {
-    color: #1a5f7a;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .book-description {
-        padding: 1rem;
-        margin: 1rem auto;
-    }
+    line-height: 1.8;
 }
