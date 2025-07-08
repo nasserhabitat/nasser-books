@@ -4,150 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الحياء: سياج الروح وبوصلة الفهم | مكتبة ناصر ابن داوود</title>
-    <meta name="description" content="كتاب الحياء: سياج الروح وبوصلة الفهم - رؤية جديدة لفهم كتاب الله من خلال فقه اللسان القرآني">
     <style>
         body {
-            font-family: 'Tajawal', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            color: #333;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .breadcrumb {
+            padding: 15px;
+            background: #f5f5f5;
+            margin-bottom: 20px;
         }
-        .hero {
-            background: linear-gradient(135deg, #1a5f7a, #159895);
-            color: white;
-            padding: 60px 20px;
+        .breadcrumb a {
+            color: #1a5f7a;
+            text-decoration: none;
+        }
+        .book-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
-        .hero-title {
-            font-size: 2.5rem;
+        .book-title {
+            color: #1a5f7a;
+            font-size: 2.2rem;
             margin-bottom: 10px;
         }
-        .subtitle {
-            font-size: 1.5rem;
-            opacity: 0.9;
-        }
-        .book-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .book-cover {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-        .book-cover img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .book-details {
-            flex: 2;
-            min-width: 300px;
-        }
-        .btn {
-            display: inline-block;
-            background: #159895;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background: #1a5f7a;
-            transform: translateY(-3px);
+        .book-subtitle {
+            color: #555;
+            font-size: 1.4rem;
         }
         .book-meta {
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        footer {
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            background: #eee;
-            font-size: 0.9rem;
+            margin: 20px 0;
         }
-        @media (max-width: 768px) {
-            .book-content {
-                flex-direction: column;
-            }
+        .book-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .book-link {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #1a5f7a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .book-link:hover {
+            background: #159895;
+        }
+        .working-link {
+            background: #1a5f7a; /* اللون الأزرق للرابط العامل */
+        }
+        .broken-link {
+            background: #cccccc; /* اللون الرمادي للرابط غير العامل */
+            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">الحياء: سياج الروح وبوصلة الفهم</h1>
-            <p class="subtitle">رؤية جديدة لفهم كتاب الله</p>
-        </div>
-    </header>
+    <nav class="breadcrumb">
+        <a href="index.html">الرئيسية</a> » 
+        <a href="books.html">الكتب</a> » 
+        <span>الحياء</span>
+    </nav>
 
-    <main class="container">
-        <div class="book-content">
-            <div class="book-cover">
-                <img src="cover-ar.png" 
-                     alt="غلاف كتاب الحياء: سياج الروح وبوصلة الفهم"
-                     loading="lazy">
-            </div>
-            
-            <div class="book-details">
-                <div class="book-meta">
-                    <p><strong>تأليف:</strong> ناصر ابن داوود</p>
-                    <p><strong>الطبعة:</strong> الأولى - 2025</p>
-                    <a href="https://archive.org/details/al-haya-book" 
-                       class="btn"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                       قراءة الكتاب على الأرشيف
-                    </a>
-                </div>
+    <div class="book-header">
+        <h1 class="book-title">الحياء</h1>
+        <p class="book-subtitle">سياج الروح وبوصلة الفهم</p>
+    </div>
 
-                <section class="book-description">
-                    <h2>وصف الكتاب</h2>
-                    <p>يسعى هذا الكتاب إلى تقديم رؤية جديدة، تطرح "الحياء" ليس فقط كغاية أخلاقية، بل كشرط أساسي وأداة معرفية لا غنى عنها لفهم كتاب الله.</p>
-                    
-                    <h3>كيف أن هذا الخلق القلبي هو:</h3>
-                    <ul>
-                        <li>البوصلة التي توجه عملية التدبر</li>
-                        <li>الترياق الذي يشفي من الفهم السطحي</li>
-                        <li>المفتاح الذي يفتح أبواب الحكمة في كلام الله</li>
-                    </ul>
-                    
-                    <p>كل ذلك عبر عدسة منهج "فقه اللسان القرآني": منهجٌ جديد لفهم النص والمخطوط الذي نأمل أن يكون مدخلاً لتدبر جديد وفهم متجدد.</p>
-                </section>
+    <div class="book-meta">
+        <p>تأليف: ناصر ابن داوود</p>
+        <p>الطبعة: الأولى - 2025</p>
+    </div>
 
-                <section class="book-features">
-                    <h3>مميزات الكتاب:</h3>
-                    <ul>
-                        <li>دراسة منهجية لمفهوم الحياء في القرآن</li>
-                        <li>ربط الأخلاق بالمعرفة القرآنية</li>
-                        <li>أسلوب أكاديمي واضح وسلس</li>
-                        <li>نماذج تطبيقية من القرآن الكريم</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>2025 © مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
-        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
-    </footer>
+    <div class="book-links">
+        <!-- الرابط العامل (أزرق) -->
+        <a href="https://archive.org/details/al-haya-book" 
+           class="book-link working-link"
+           target="_blank">
+           قراءة على الأرشيف
+        </a>
+        
+        <!-- الرابط غير العامل (رمادي) -->
+        <a href="#" 
+           class="book-link broken-link"
+           onclick="return false;">
+           النسخة الإنجليزية
+        </a>
+    </div>
 </body>
 </html>
