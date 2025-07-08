@@ -4,167 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الحياء: سياج الروح وبوصلة الفهم | مكتبة ناصر ابن داوود</title>
-    <meta name="description" content="كتاب الحياء: سياج الروح وبوصلة الفهم - رؤية جديدة لفهم كتاب الله">
     <style>
         body {
-            font-family: 'Tajawal', Arial, sans-serif;
+            font-family: 'Tajawal', sans-serif;
             line-height: 1.8;
             color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f9f9f9;
         }
-        .hero {
-            background: linear-gradient(135deg, #1a5f7a, #159895);
-            color: white;
-            padding: 60px 20px;
+        .header {
             text-align: center;
             margin-bottom: 30px;
         }
-        .hero-title {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .title {
+            color: #1a5f7a;
+            font-size: 2.2rem;
         }
-        .subtitle {
-            font-size: 1.5rem;
-            opacity: 0.9;
+        .author {
+            color: #555;
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
-        .book-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
+        .edition {
+            color: #777;
+            font-style: italic;
         }
         .book-cover {
-            flex: 1;
-            min-width: 300px;
             text-align: center;
+            margin: 20px 0;
         }
         .book-cover img {
-            max-width: 100%;
-            height: auto;
+            max-width: 300px;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .book-details {
-            flex: 2;
-            min-width: 300px;
+        .book-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
         }
         .btn {
             display: inline-block;
-            color: white;
             padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin: 10px 5px;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
         .btn-archive {
             background: #1a5f7a;
+            color: white;
         }
         .btn-english {
             background: #57C5B6;
+            color: white;
         }
         .btn-books {
             background: #159895;
+            color: white;
         }
         .btn:hover {
             opacity: 0.9;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
-        .book-meta {
+        .book-description {
             background: #f0f0f0;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin: 30px 0;
+        }
+        .book-description h2 {
+            color: #1a5f7a;
+            margin-top: 0;
+        }
+        .book-features {
+            margin: 30px 0;
+        }
+        .book-features h3 {
+            color: #1a5f7a;
+        }
+        .book-features ul {
+            padding-right: 20px;
         }
         footer {
             text-align: center;
-            padding: 30px;
             margin-top: 50px;
+            padding: 20px;
             background: #eee;
-            font-size: 0.9rem;
-        }
-        .book-description ul {
-            padding-right: 20px;
-        }
-        .book-description li {
-            margin-bottom: 10px;
-        }
-        @media (max-width: 768px) {
-            .book-content {
-                flex-direction: column;
-            }
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">الحياء: سياج الروح وبوصلة الفهم</h1>
-            <p class="subtitle">رؤية جديدة لفهم كتاب الله</p>
-        </div>
-    </header>
+    <div class="header">
+        <h1 class="title">الحياء: سياج الروح وبوصلة الفهم</h1>
+        <p class="author">تأليف: ناصر ابن داوود</p>
+        <p class="edition">الطبعة: الأولى - 2025</p>
+    </div>
 
-    <main class="container">
-        <div class="book-content">
-            <div class="book-cover">
-                <img src="cover-ar.png" 
-                     alt="غلاف كتاب الحياء: سياج الروح وبوصلة الفهم"
-                     loading="lazy">
-            </div>
-            
-            <div class="book-details">
-                <div class="book-meta">
-                    <p><strong>تأليف:</strong> ناصر ابن داوود</p>
-                    <p><strong>الطبعة:</strong> الأولى - 2025</p>
-                    
-                    <!-- روابط العمل المعدلة -->
-                    <div>
-                        <a href="https://archive.org/details/20250707_20250707_0929" 
-                           class="btn btn-archive"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                           قراءة على الأرشيف
-                        </a>
-                        
-                       <a href="https://nasserhabitat.github.io/nasser-books/books/modesty/en/index.html" 
-   class="btn btn-english">
-   النسخة الإنجليزية
-</a>
-                                                 
-                        <a href="https://nasserhabitat.github.io/nasser-books/" 
-                           class="btn btn-books"
-                           target="_blank">
-                           العودة إلى الكتب
-                        </a>
-                    </div>
-                </div>
+    <div class="book-cover">
+        <img src="cover-ar.png" alt="غلاف كتاب الحياء: سياج الروح وبوصلة الفهم">
+    </div>
 
-                <section class="book-description">
-                    <h2>وصف الكتاب</h2>
-                    <p>يسعى هذا الكتاب إلى تقديم رؤية جديدة، تطرح "الحياء" ليس فقط كغاية أخلاقية، بل كشرط أساسي وأداة معرفية لا غنى عنها لفهم كتاب الله.</p>
-                    
-                    <h3>كيف أن هذا الخلق القلبي هو:</h3>
-                    <ul>
-                        <li>البوصلة التي توجه عملية التدبر</li>
-                        <li>الترياق الذي يشفي من الفهم السطحي</li>
-                        <li>المفتاح الذي يفتح أبواب الحكمة في كلام الله</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </main>
+    <div class="book-actions">
+        <a href="https://archive.org/details/20250707_20250707_0929" 
+           class="btn btn-archive"
+           target="_blank">
+           قراءة على الأرشيف
+        </a>
+        <a href="https://nasserhabitat.github.io/nasser-books/books/modesty/en/index.html" 
+           class="btn btn-english">
+           النسخة الإنجليزية
+        </a>
+        <a href="https://nasserhabitat.github.io/nasser-books/" 
+           class="btn btn-books">
+           العودة إلى الكتب
+        </a>
+    </div>
+
+    <div class="book-description">
+        <h2>وصف الكتاب</h2>
+        <p>يسعى هذا الكتاب إلى تقديم رؤية جديدة، تطرح "الحياء" ليس فقط كغاية أخلاقية، بل كشرط أساسي وأداة معرفية لا غنى عنها لفهم كتاب الله.</p>
+    </div>
+
+    <div class="book-features">
+        <h3>كيف أن هذا الخلق القلبي هو:</h3>
+        <ul>
+            <li>البوصلة التي توجه عملية التدبر</li>
+            <li>الترياق الذي يشفي من الفهم السطحي</li>
+            <li>المفتاح الذي يفتح أبواب الحكمة في كلام الله</li>
+        </ul>
+    </div>
 
     <footer>
-        <p>2025 © مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
-        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
+        <p>© 2025 مكتبة ناصر ابن داوود. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
 </html>
