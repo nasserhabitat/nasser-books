@@ -3,15 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> تغيير المفاهيم للمصطلحات القرآنية كتطبيق لفقه اللسان القرآني| مكتبة  ناصر ابن داود </title>
-    <meta name="description" content="تغيير المفاهيم للمصطلحات القرآنية كتطبيق لفقه اللسان القرآني">
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <title>تغيير المفاهيم للمصطلحات القرآنية كتطبيق لفقه اللسان القرآني | مكتبة ناصر ابن داوود</title>
+    <meta name="description" content="إعادة بناء المفاهيم القرآنية عبر منهج فقه اللسان القرآني - تأليف ناصر ابن داوود">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .book-features {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .book-features ul {
+            padding-right: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+        }
+        .article-series {
+            margin: 2rem 0;
+        }
+        .series-item {
+            margin-bottom: 1.5rem;
+        }
+        .series-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #eee;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1><تغيير المفاهيم للمصطلحات القرآنية  </h1>
-            <p class="subtitle"> كتطبيق لفقه اللسان القرآني </p>
+            <h1>تغيير المفاهيم للمصطلحات القرآنية</h1>
+            <p class="subtitle">كتطبيق لفقه اللسان القرآني</p>
         </div>
     </header>
     
@@ -19,8 +148,7 @@
         <section class="book-cover">
             <div class="cover-container">
                 <img src="cover-ar.png"
-                     alt="غلاف كتاب أنوار البيان في رسم المصحف العثماني - تأليف ناصر ابن داوود"
-                     class="book-img"
+                     alt="غلاف كتاب تغيير المفاهيم للمصطلحات القرآنية - تأليف ناصر ابن داوود"
                      loading="lazy"
                      width="300"
                      height="400"
@@ -33,38 +161,88 @@
                    target="_blank" 
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
-                    <span class="icon">→</span>
+                </a>
+                <a href="../en/" class="btn">
+                    النسخة الإنجليزية
+                </a>
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                    العودة إلى الكتب
                 </a>
             </div>
             
             <div class="book-meta">
-                <p class="author">تأليف:  ناصر ابن داوود</p>
-                <p class="edition">الطبعة الأولى - 2025</p>
+                <p><strong>تأليف:</strong> ناصر ابن داوود</p>
+                <p><strong>الطبعة:</strong> الأولى - 2025</p>
             </div>
         </section>
         
-        <section class="book-description">
-            <h2>وصف الكتاب</h2>
-
-                <p> يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة. وذلك من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني . </p>
-               <p> "يستند هذا الكتاب في منهجيته إلى الأسس النظرية والضوابط المنهجية التي تم تفصيلها وتأصيلها في كتابنا السابق: "فقه اللسان القرآني: منهجٌ جديد لفهم النص والمخطوط .  </p>
-             <p> لا يكتفي الكتاب بالنقد، بل يقدم سلسلة من المفاهيم الجديدة والرؤى الأصيلة التي تعيد بناء الفهم الصحيح للدين والحياة .</p>>
-           يمثل هذا الكتاب، المُقدَّم في شكل سلسلة متكاملة من المقالات المتخصصة والمترابطة، رؤية تجديدية وشاملة تعالج إشكالية مركزية: كيفية فهم القرآن الكريم وتدبره بشكل أصيل وفعال في عصرنا الرقمي، متجاوزاً إشكاليات الفهم التقليدي والتأثيرات التاريخية التي قد تحجب أنواره.
-            تتضافر هذه المقالات، التي قد يكون بعضها طور بشكل مستقل ثم تم تجميعها وتحديثها ضمن هذا الإطار الشامل، لتقدم منهجية "التدبر التفاعلي" التي تتجاوز القراءة السطحية وتدعو إلى الغوص في أعماق النص القرآني.
-ينطلق الكتاب من تشخيص لأزمة الفهم السائدة، مقدماً الحلول عبر العودة إلى الأصول والمصادر الأساسية: القرآن نفسه والمخطوطات القرآنية الأصلية (سواء الورقية أو الرقمية)، مع التأكيد على فهم "لسان القرآن المبين" وقواعده الداخلية.
-            لا يكتفي الكتاب بالنقد، بل يقدم سلسلة من المفاهيم الجديدة والرؤى الأصيلة التي تعيد بناء الفهم الصحيح للدين والحياة، معتمداً على منهجية تجمع بين النقد البناء، التحليل اللغوي الدقيق، التدبر بالعقل والقلب، والاستفادة من التكنولوجيا الحديثة كأدوات مساعدة.
-تتنوع المقالات لتغطي طيفاً واسعاً من الموضوعات، مصوغة في سلاسل محددة تهدف إلى تصحيح المفاهيم وتقديم بدائل قرآنية، ومن أبرز هذه السلاسل:
-•	سلاسل حول المفاهيم الإيمانية والعقدية: كالسلسلة التي تفكك مفهوم "الربوبية والألوهية"، وتوضح العلاقة بين الله وجبريل، وأخرى تتناول "صفات المؤمنين" كمهارات عملية للتعامل مع "البينات" والولوج لعالم الأمر.
-•	سلاسل لاستكشاف مفاهيم قرآنية دقيقة: مثل السلسلة التي تغوص في معنى "الغسل المعنوي والتزكية" كعملية تطهير للباطن، وأخرى تحلل كلمة "الذكر" بأبعاده الروحية والنفسية والعملية كمنهج حياة.
-•	سلاسل لإعادة فهم العبادات والشعائر: كمقالات "الصلاة" التي تتجاوز الحركات الطقسية لترى فيها رحلة وعي وتغيير، وسلسلة "الحج" التي تقدمه كرحلة معرفية تتجاوز المكان، بالإضافة إلى فهم أعمق لـ "الصيام" كمنهج للتدبر.
-•	سلاسل لتصحيح السرديات والمفاهيم الخاطئة: كالسلسلة التي تتناول مفاهيم "القتل والإكراه والطاغوت" في القرآن لتقدم قراءة بديلة تتجاوز العنف المادي، وأخرى تفند مفهوم "النسخ" بمعنى الإزالة، وتقدمه كبيان وتوضيح، بالإضافة إلى سلسلة حول "الجن والشياطين" تفكك التصورات الخرافية.
-الهدف النهائي من هذه السلسلة المتكاملة هو تمكين القارئ من بناء علاقة حية ومباشرة مع القرآن، عبر فهم أعمق لمقاصده وتطبيق تعاليمه كـ "كتاب هداية" شامل في كل جوانب حياته، والمساهمة بوعي في بناء مجتمع يستلهم قيمه من الوحي الإلهي ويتفاعل بإيجابية مع تحديات العصر."
-
+        <section class="book-details">
+            <div class="book-description">
+                <h2>وصف الكتاب</h2>
+                <p>يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني.</p>
+                
+                <p>يستند هذا الكتاب في منهجيته إلى الأسس النظرية والضوابط المنهجية التي تم تفصيلها في كتاب "فقه اللسان القرآني: منهج جديد لفهم النص والمخطوط".</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>أبرز مميزات الكتاب:</h3>
+                <ul>
+                    <li>منهجية "التدبر التفاعلي" التي تتجاوز القراءة السطحية</li>
+                    <li>تحليل لغوي دقيق للمصطلحات القرآنية</li>
+                    <li>استفادة من التكنولوجيا الحديثة كأدوات مساعدة</li>
+                    <li>عرض شمولي يتجاوز الإشكاليات التقليدية</li>
+                </ul>
+            </div>
+            
+            <div class="article-series">
+                <h3>سلاسل المقالات المتخصصة:</h3>
+                
+                <div class="series-item">
+                    <p class="series-title">المفاهيم الإيمانية والعقدية:</p>
+                    <ul>
+                        <li>تفكيك مفهوم "الربوبية والألوهية"</li>
+                        <li>العلاقة بين الله وجبريل</li>
+                        <li>صفات المؤمنين كمهارات عملية</li>
+                    </ul>
+                </div>
+                
+                <div class="series-item">
+                    <p class="series-title">المفاهيم القرآنية الدقيقة:</p>
+                    <ul>
+                        <li>الغسل المعنوي والتزكية</li>
+                        <li>الذكر بأبعاده الروحية والنفسية</li>
+                    </ul>
+                </div>
+                
+                <div class="series-item">
+                    <p class="series-title">إعادة فهم العبادات:</p>
+                    <ul>
+                        <li>الصلاة كرحلة وعي وتغيير</li>
+                        <li>الحج كرحلة معرفية</li>
+                        <li>الصيام كمنهج للتدبر</li>
+                    </ul>
+                </div>
+                
+                <div class="series-item">
+                    <p class="series-title">تصحيح المفاهيم الخاطئة:</p>
+                    <ul>
+                        <li>مفاهيم القتل والإكراه والطاغوت</li>
+                        <li>حقيقة النسخ في القرآن</li>
+                        <li>الجن والشياطين بين الحقيقة والخرافة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="book-description">
+                <h3>الهدف من الكتاب</h3>
+                <p>يهدف هذا العمل إلى تمكين القارئ من بناء علاقة حية مع القرآن عبر فهم أعمق لمقاصده، وتطبيق تعاليمه ككتاب هداية شامل في كل جوانب الحياة، والمساهمة في بناء مجتمع يستلهم قيمه من الوحي الإلهي.</p>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 مكتبة  ناصر ابن داوود
+        <p>© 2025 مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
+        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
     </footer>
 </body>
 </html>
