@@ -276,7 +276,22 @@
             <p>جميع الحقوق محفوظة - مُرخَّص للنشر والاقتباس بشرط ذكر المؤلف</p>
         </div>
     </footer>
-
+<script>
+// كود تصحيح المسارات
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="books/"]').forEach(link => {
+        const originalPath = link.getAttribute('href');
+        const correctedPath = originalPath
+            .replace(/ /g, '-')  // استبدال المسافات بشرطة
+            .toLowerCase();      // تحويل للأحرف الصغيرة
+        
+        if (originalPath !== correctedPath) {
+            console.log('تصحيح المسار:', originalPath, '→', correctedPath);
+            link.setAttribute('href', correctedPath);
+        }
+    });
+});
+</script>
     <script>
         // فلترة الكتب حسب اللغة
         document.querySelectorAll('.filter-buttons button').forEach(button => {
