@@ -24,15 +24,10 @@
 
 ### الدراسات الإيمانية
 15. [الحَيَاءُ - سياج الروح وبوصلة الفهم](books/MODESTY/ar) - النسخة العربية
-16. [Modesty: The Fence of the Soul](books/MODESTY/en) - النسخة الإنجليزية
-17. [وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض](books/malakoot/ar) - النسخة العربية
-18. [The Realm of the Heavens and Earth](books/malakoot/en) - النسخة الإنجليزية
-19. [الأسماء الحسنى الوظيفية في القرآن الكريم](books/Divine-Names/ar) - النسخة العربية
-20. [The Functional Beautiful Names of Allah in the Qur'an](books/Divine-Names/en) - النسخة الإنجليزية
+16. [وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض](books/malakoot/ar) - النسخة العربية
+17. [الأسماء الحسنى الوظيفية في القرآن الكريم](books/names-in-the-holy/ar) - النسخة العربية
+20. [The Functional Beautiful Names of Allah in the Qur'an](books/names-in-the-holy/en) - النسخة الإنجليزية
 
-### سلسلة التفكير النقدي
-21. [أسس التفكير النقدي في فهم النص القرآني](books/Critical-Thinking/ar) - النسخة العربية
-22. [Foundations of Critical Thinking in Understanding the Qur'anic Text](books/Critical-Thinking/en) - النسخة الإنجليزية
 
 ## المميزات
 - واجهة ثنائية اللغة (عربي/إنجليزي)
