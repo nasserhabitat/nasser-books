@@ -3,9 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نحو تدبر واع | مكتبة  ناصر ابن داود</title>
+    <title>نحو تدبر واع | مكتبة ناصر ابن داوود</title>
     <meta name="description" content="كتاب نحو تدبر واع - دليل عملي لفهم وتطبيق القرآن الكريم">
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .book-features {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .book-features ul {
+            padding-right: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+        }
+        .article-series {
+            margin: 2rem 0;
+        }
+        .series-item {
+            margin-bottom: 1.5rem;
+        }
+        .series-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .chapter {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #eee;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
@@ -20,7 +156,6 @@
             <div class="cover-container">
                 <img src="cover-ar.png"
                      alt="غلاف كتاب نحو تدبر واع - تأليف ناصر ابن داوود"
-                     class="book-img"
                      loading="lazy"
                      width="300"
                      height="400"
@@ -33,25 +168,98 @@
                    target="_blank" 
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
-                    <span class="icon">→</span>
+                </a>
+                <a href="../en/" class="btn">
+                    النسخة الإنجليزية
+                </a>
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                    العودة إلى الكتب
                 </a>
             </div>
             
             <div class="book-meta">
-                <p class="author">تأليف:  ناصر ابن داوود</p>
-                <p class="edition">الطبعة الأولى - 2025</p>
+                <p><strong>تأليف:</strong> ناصر ابن داوود</p>
+                <p><strong>الطبعة:</strong> الأولى - 2025</p>
+                <p><strong>الصفحات:</strong> 350</p>
+                <p><strong>اللغة:</strong> العربية</p>
             </div>
         </section>
         
-        <section class="book-description">
-            <h2>وصف الكتاب</h2>
-            <p>هذا الكتاب يأخذك في رحلة تعلم منهجية التدبر العميق للقرآن الكريم، ويقدم أدوات عملية لتطبيق هذه المنهجية في الحياة المعاصرة.</p>
-            <p>يشرح الباحث الاسلامي ناصر ابن داوود كيفية الانتقال من التلاوة السطحية إلى الفهم العميق والتطبيق العملي لتعاليم القرآن.</p>
+        <section class="book-details">
+            <div class="book-description">
+                <h2>وصف الكتاب</h2>
+                <p>يأخذك هذا الكتاب في رحلة تعلم منهجية التدبر العميق للقرآن الكريم، ويقدم أدوات عملية لتطبيق هذه المنهجية في الحياة المعاصرة، من خلال الانتقال من التلاوة السطحية إلى الفهم العميق والتطبيق العملي لتعاليم القرآن.</p>
+                
+                <p>يستند الكتاب إلى منهجية "فقه اللسان القرآني" التي تم تفصيلها في أعمال المؤلف السابقة، مع التركيز على الجانب التطبيقي العملي.</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>أبرز مميزات الكتاب:</h3>
+                <ul>
+                    <li>منهجية متكاملة للتدبر القرآني</li>
+                    <li>أمثلة تطبيقية من القرآن الكريم</li>
+                    <li>تمارين وأنشطة عملية للقارئ</li>
+                    <li>دمج بين الأصالة والمعاصرة</li>
+                    <li>استخدام أدوات تحليلية حديثة</li>
+                </ul>
+            </div>
+            
+            <div class="chapter">
+                <h3>الفصل الأول: اللسان العربي القرآني</h3>
+                <ul>
+                    <li>الفرق بين اللغة العربية واللسان القرآني</li>
+                    <li>خصائص اللسان القرآني الفريدة</li>
+                    <li>أهمية فهم النظام المفاهيمي القرآني</li>
+                </ul>
+            </div>
+            
+            <div class="chapter">
+                <h3>الفصل الثاني: الرسم العثماني ودلالاته</h3>
+                <ul>
+                    <li>المخطوطات القرآنية كمصادر للفهم</li>
+                    <li>دلالات الرسم العثماني في التدبر</li>
+                    <li>دراسة حالات تطبيقية</li>
+                </ul>
+            </div>
+            
+            <div class="chapter">
+                <h3>الفصل الثالث: منهجية التدبر العملي</h3>
+                <ul>
+                    <li>خطوات عملية للتدبر الفعال</li>
+                    <li>أدوات تحليل النص القرآني</li>
+                    <li>كيفية الربط بين الآيات</li>
+                </ul>
+            </div>
+            
+            <div class="chapter">
+                <h3>الفصل الرابع: تصحيح المفاهيم</h3>
+                <ul>
+                    <li>نماذج لمفاهيم تحتاج تصحيحًا</li>
+                    <li>منهجية التعامل مع القضايا الخلافية</li>
+                    <li>التركيز على القواسم المشتركة</li>
+                </ul>
+            </div>
+            
+            <div class="book-features">
+                <h3>الإضافات العملية:</h3>
+                <ul>
+                    <li>ورش عمل تفاعلية مع القارئ</li>
+                    <li>جداول ورسوم بيانية توضيحية</li>
+                    <li>استشهادات بأقوال المفسرين</li>
+                    <li>حلول لتحديات العصر الحديث</li>
+                </ul>
+            </div>
+            
+            <div class="book-description">
+                <h3>الهدف من الكتاب</h3>
+                <p>يهدف هذا العمل إلى جعل تدبر القرآن مشروع حياة، من خلال تقديم منهجية واضحة تساعد القارئ على فهم كلام الله في سياقه الشامل، وتطبيق تعاليمه في الواقع المعاصر، والمساهمة في بناء حضارة إسلامية مستنيرة.</p>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 مكتبة  ناصر ابن داوود
+        <p>© 2025 مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
+        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
     </footer>
 </body>
 </html>
