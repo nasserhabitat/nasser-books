@@ -1,27 +1,45 @@
-# مكتبة  ناصر ابن داوود باحث اسلامي ومهندس
+# مكتبة ناصر ابن داوود - باحث إسلامي ومهندس
 
-مكتبة رقمية لمؤلفات  ناصر ابن داوود في علوم القرآن والتدبر
+مكتبة رقمية لمؤلفات الدكتور ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية
 
 ## الكتب المتاحة
+
+### الدراسات القرآنية
 1. [نحو تدبر واعٍ](books/conscious-contemplation/ar) - النسخة العربية
 2. [Towards Conscious Contemplation](books/conscious-contemplation/en) - النسخة الإنجليزية
 3. [أنوار البيان في رسم المصحف العثماني](books/ANWAR-AL-BAYAN/ar) - النسخة العربية
-4. [ANWAR AL-BAYAN: UNVEILING THE SECRETS OF LANGUAGE THROUGH THE UTHMANIC QUR'ANIC SCRIPT](books/ANWAR-AL-BAYAN/en) - النسخة الإنجليزية 
+4. [ANWAR AL-BAYAN: Unveiling the Secrets of Language Through the Uthmanic Qur'anic Script](books/ANWAR-AL-BAYAN/en) - النسخة الإنجليزية 
 5. [تغيير المفاهيم للمصطلحات القرآنية كتطبيق لفقه اللسان القرآني](books/Changing-the-Concepts/ar) - النسخة العربية
-6. [CHANGING THE CONCEPTS OF QURANIC TERMINOLOGY AS AN APPLICATION OF THE JURISPRUDENCE OF THE QUR'ANIC TONGUE](books/Changing-the-Concepts/en)  – النسخة الإنجليزية
+6. [Changing the Concepts of Quranic Terminology](books/Changing-the-Concepts/en) - النسخة الإنجليزية
 7. [التدبر في مرآة الرسوم: تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن](books/CONTEMPLATION-IN-THE-MIRROR/ar) - النسخة العربية
-8. [ CONTEMPLATION IN THE MIRROR OF SCRIPTS: PRACTICAL APPLICATIONS OF DIGITAL MANUSCRIPTS IN THE CONTEMPLATION OF THE QUR'AN](books/CONTEMPLATION-IN-THE-MIRROR/en) – النسخة الإنجليزية
-9. [مشروع رقمنة المخطوطات الاصلية للقران الكريم](books/digitizing/ar) - النسخة العربية
-10. [The Project of Digitizing the Original Manuscripts of the Holy Qur'an](books/digitizing/en) النسخة الإنجليزية -
-11. [الحَيَاءُ - سياج الروح وبوصلة الفهم](books/MODESTY/ar) - النسخة العربية
-12. [Modesty: The Fence Of The Soul And The Compass Of Understanding](books/MODESTY/en) – النسخة الإنجليزية
-13. [وَلِيَكُونَ مِنَ الْمُوقِنِينَ : رحلة برهانية في ملكوت السماوات والأرض وما بينهما](books/malakoot/ar) - النسخة العربية
+8. [Contemplation in the Mirror of Scripts](books/CONTEMPLATION-IN-THE-MIRROR/en) - النسخة الإنجليزية
+9. [فقه اللسان القرآني: منهج جديد لفهم النص والمخطوط](books/Quranic-Tongue-Jurisprudence/ar) - النسخة العربية
+10. [The Jurisprudence of the Qur'anic Tongue](books/Quranic-Tongue-Jurisprudence/en) - النسخة الإنجليزية
+
+### مشاريع رقمية
+11. [مشروع رقمنة المخطوطات الأصلية للقرآن الكريم](books/digitizing/ar) - النسخة العربية
+12. [Digitizing the Original Manuscripts of the Holy Qur'an](books/digitizing/en) - النسخة الإنجليزية
+13. [القرآن والمخطوطات الرقمية: رؤية معاصرة](books/Digital-Manuscripts/ar) - النسخة العربية
+14. [The Qur'an and Digital Manuscripts](books/Digital-Manuscripts/en) - النسخة الإنجليزية
+
+### الدراسات الإيمانية
+15. [الحَيَاءُ - سياج الروح وبوصلة الفهم](books/MODESTY/ar) - النسخة العربية
+16. [Modesty: The Fence of the Soul](books/MODESTY/en) - النسخة الإنجليزية
+17. [وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض](books/malakoot/ar) - النسخة العربية
+18. [The Realm of the Heavens and Earth](books/malakoot/en) - النسخة الإنجليزية
+19. [الأسماء الحسنى الوظيفية في القرآن الكريم](books/Divine-Names/ar) - النسخة العربية
+20. [The Functional Beautiful Names of Allah in the Qur'an](books/Divine-Names/en) - النسخة الإنجليزية
+
+### سلسلة التفكير النقدي
+21. [أسس التفكير النقدي في فهم النص القرآني](books/Critical-Thinking/ar) - النسخة العربية
+22. [Foundations of Critical Thinking in Understanding the Qur'anic Text](books/Critical-Thinking/en) - النسخة الإنجليزية
 
 ## المميزات
 - واجهة ثنائية اللغة (عربي/إنجليزي)
-- تصميم متجاوب
-- روابط مباشرة للمؤلفات
-- تنظيم واضح وسهل
+- تصميم متجاوب يعمل على جميع الأجهزة
+- روابط مباشرة للمؤلفات على الأرشيف والمواقع الرقمية
+- تنظيم موضوعي واضح وسهل التصفح
+- معلومات كاملة عن كل كتاب (عدد الصفحات، الطبعة، الوصف)
 
 ## كيفية الاستخدام
 1. استنسخ المستودع:
