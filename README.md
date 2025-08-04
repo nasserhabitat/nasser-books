@@ -1,6 +1,4 @@
-Here's the updated README.md with your contact information properly integrated:
 
-```markdown
 # مكتبة ناصر ابن داوود - باحث إسلامي ومهندس
 
 مكتبة رقمية لمؤلفات الدكتور ناصر ابن داود في علوم القرآن والتدبر والدراسات القرآنية الرقمية
@@ -71,6 +69,5 @@ For inquiries about the library or research collaborations:
 
 ## 📜 License | الرخصة
 This project is licensed under the [MIT License](LICENSE).
-```
 
 
