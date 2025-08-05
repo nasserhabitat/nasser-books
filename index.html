@@ -115,10 +115,26 @@
             <div id="modal-body"></div>
         </div>
     </div>
-
+// إضافة touch events للجوال
+searchInput.addEventListener('touchstart', function() {
+    this.focus();
+});
     <script>
         // جميع الدوال السابقة ...
-        
+        // يمكنك تحسين البحث باستخدام Fuzzy Search
+function fuzzySearch(text, searchTerm) {
+    const searchTermChars = searchTerm.toLowerCase().split('');
+    const textChars = text.toLowerCase().split('');
+    
+    let searchIndex = 0;
+    for (let i = 0; i < textChars.length; i++) {
+        if (textChars[i] === searchTermChars[searchIndex]) {
+            searchIndex++;
+            if (searchIndex === searchTermChars.length) return true;
+        }
+    }
+    return false;
+}
         // وظيفة البحث مع debounce
         function debounce(func, wait) {
             let timeout;
