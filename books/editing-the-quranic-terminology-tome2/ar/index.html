@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تغيير المفاهيم للمصطلحات القرآنية كتطبيق لفقه اللسان القرآني | مكتبة ناصر ابن داوود</title>
-    <meta name="description" content="إعادة بناء المفاهيم القرآنية عبر منهج فقه اللسان القرآني - تأليف ناصر ابن داوود">
+    <title>تحرير المصطلح القرآني المجلد 2 | مكتبة ناصر ابن داوود</title>
+    <meta name="description" content="دراسة تطبيقية في فقه اللسان القرآني - تأليف ناصر ابن داوود">
     <style>
         :root {
             --primary-color: #1a5f7a;
@@ -14,13 +14,17 @@
             --dark-color: #212529;
             --gray-color: #6c757d;
         }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Tajawal', sans-serif;
             line-height: 1.8;
             color: var(--dark-color);
-            margin: 0;
-            padding: 0;
             background-color: #f9f9f9;
+            padding-bottom: 2rem;
         }
         .hero {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -28,28 +32,60 @@
             padding: 4rem 1rem;
             text-align: center;
             margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+            opacity: 0.2;
         }
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         h2 {
             color: var(--primary-color);
             margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
         }
         h3 {
             color: var(--secondary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
             margin-top: 1.5rem;
+            position: relative;
+            padding-right: 15px;
+        }
+        h3::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
         }
         .subtitle {
             font-size: 1.4rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
         }
         .container {
             max-width: 1200px;
@@ -63,17 +99,27 @@
             flex: 1;
             min-width: 300px;
             text-align: center;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
         }
         .book-cover img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             border: 1px solid #ddd;
+            transition: transform 0.3s;
         }
-        .book-details {
-            flex: 2;
-            min-width: 300px;
+        .book-cover img:hover {
+            transform: scale(1.02);
+        }
+        .book-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 1.5rem 0;
         }
         .btn {
             display: inline-block;
@@ -83,9 +129,10 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin: 0.5rem;
             transition: all 0.3s ease;
             border: none;
+            text-align: center;
+            min-width: 180px;
         }
         .btn-secondary {
             background: var(--secondary-color);
@@ -95,44 +142,70 @@
         }
         .btn:hover {
             opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .book-meta {
             margin: 1.5rem 0;
-            background: rgba(255,255,255,0.8);
-            padding: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
         }
         .book-meta p {
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
+            display: flex;
+        }
+        .book-meta p strong {
+            min-width: 100px;
+            color: var(--primary-color);
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
         }
         .book-description {
             margin: 2rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .book-description p {
             margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.9;
         }
         .book-features {
             background: #f8f9fa;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             margin: 2rem 0;
             border-right: 4px solid var(--accent-color);
+            position: relative;
+        }
+        .book-features::before {
+            content: "✓";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--accent-color);
+            font-size: 2rem;
+            opacity: 0.3;
         }
         .book-features h3 {
             color: var(--primary-color);
             margin-top: 0;
+            font-size: 1.5rem;
         }
         .book-features ul {
-            padding-right: 20px;
+            padding-right: 30px;
         }
         .book-features li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             position: relative;
-            padding-right: 1.5rem;
+            padding-right: 1.8rem;
         }
         .book-features li::before {
             content: "•";
@@ -140,56 +213,131 @@
             position: absolute;
             right: 0;
             font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
         }
-        .article-series {
-            margin: 2rem 0;
-        }
-        .series-item {
-            margin-bottom: 1.5rem;
-        }
-        .series-title {
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        .toc {
-            background: white;
+        .volume-description {
+            background: #f0f8ff;
             padding: 2rem;
             border-radius: 8px;
-            margin: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
         }
-        .toc h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
+        .volume-description::after {
+            content: "1";
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            font-size: 10rem;
+            color: rgba(26, 95, 122, 0.05);
+            font-weight: bold;
+            z-index: 0;
         }
-        .toc-section {
-            margin-bottom: 1.5rem;
+        .volume-description-2 {
+            background: #fff8f0;
+            border-left: 4px solid #ffa94d;
         }
-        .toc-chapter {
-            margin-right: 1rem;
-            margin-bottom: 0.5rem;
+        .volume-description-2::after {
+            content: "2";
+            color: rgba(255, 169, 77, 0.1);
+        }
+        .volume-description h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed var(--accent-color);
+        }
+        .volume-description h4 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            position: relative;
+            padding-right: 15px;
+        }
+        .volume-description ul {
+            padding-right: 30px;
+            margin: 1rem 0;
+        }
+        .volume-description li {
+            margin-bottom: 0.8rem;
             position: relative;
             padding-right: 1.5rem;
         }
-        .toc-chapter::before {
-            content: "•";
-            color: var(--primary-color);
+        .volume-description li::before {
+            content: "—";
+            color: var(--accent-color);
             position: absolute;
             right: 0;
-            font-weight: bold;
         }
-        .site-footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            background: var(--dark-color);
-            color: white;
-            font-size: 0.9rem;
-            line-height: 1.6;
+        .volume-description p {
+            margin-bottom: 1.2rem;
+            line-height: 1.9;
         }
         .section-divider {
             border-top: 1px solid #eee;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
+        }
+        .toc {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .toc h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        .toc-section {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .toc-section h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-chapter {
+            margin-right: 1rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.8rem;
+            line-height: 1.7;
+        }
+        .toc-chapter::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            background: var(--dark-color);
+            color: white;
+            font-size: 1rem;
+            line-height: 1.8;
+            border-top: 5px solid var(--accent-color);
+        }
+        .author-bio {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            margin-top: 1.5rem;
         }
         @media (max-width: 768px) {
             .container {
@@ -199,10 +347,19 @@
                 font-size: 1.8rem;
             }
             .subtitle {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             .hero {
                 padding: 2.5rem 1rem;
+            }
+            .book-cover {
+                position: static;
+            }
+            .book-actions {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
             }
         }
     </style>
@@ -211,16 +368,16 @@
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>تحرير المصطلح القرآني المجلد 2 </h1>
-            <p class="subtitle">دراسة تطبيقية في فقه اللسان القرآني </p>
+            <h1>تحرير المصطلح القرآني المجلد 2</h1>
+            <p class="subtitle">دراسة تطبيقية في فقه اللسان القرآني - تطبيق المنهجية في تحليل المصطلحات والمفاهيم القرآنية</p>
         </div>
     </header>
     
     <main class="container">
         <section class="book-cover">
             <div class="cover-container">
-                <img src="cover-ar.png"
-                     alt="غلاف كتاب تحرير المصطلح القرآني المجلد 2  - تأليف ناصر ابن داوود"
+                <img src="https://via.placeholder.com/300x400/1a5f7a/ffffff?text=غلاف+المجلد+2" 
+                     alt="غلاف كتاب تحرير المصطلح القرآني المجلد 2 - تأليف ناصر ابن داوود"
                      loading="lazy"
                      width="300"
                      height="400"
@@ -234,13 +391,11 @@
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
                 </a>
-                 </a>
                 <a href="../en/" class="btn btn-secondary">
                     النسخة الإنجليزية
                 </a>
-                </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
-                    العودة إلى الكتب
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
+                    العودة إلى المكتبة
                 </a>
             </div>
             
@@ -248,120 +403,139 @@
                 <p><strong>تأليف:</strong> ناصر ابن داوود</p>
                 <p><strong>الطبعة:</strong> الثالثة - 2025</p>
                 <p><strong>الصفحات:</strong> 333 صفحة</p>
-                <p><strong>التصنيف:</strong> الدراسات الإسلامية، التفسير القرآني</p>
+                <p><strong>التصنيف:</strong> الدراسات القرآنية، التفسير الموضوعي</p>
                 <p><strong>اللغة:</strong> العربية</p>
+                <p><strong>المستوى:</strong> متقدم</p>
+                <p><strong>الردمك:</strong> 978-3-16-148410-0</p>
             </div>
         </section>
         
         <section class="book-details">
             <div class="book-description">
                 <h2>وصف الكتاب</h2>
-                <p>يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني.</p>
+                <p>يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يعتمد هذا المجلد على المنهجية العلمية التي تم تأصيلها في المجلد الأول، ويقدم تطبيقات عملية موسعة لفقه اللسان القرآني.</p>
                 
-                <p>يستند هذا الكتاب في منهجيته إلى الأسس النظرية والضوابط المنهجية التي تم تفصيلها في كتاب "فقه اللسان القرآني: منهج جديد لفهم النص والمخطوط".</p>
+                <p>يستند هذا الكتاب في منهجيته إلى الأسس النظرية والضوابط المنهجية التي تم تفصيلها في كتاب "فقه اللسان القرآني: منهج جديد لفهم النص والمخطوط". يقدم المؤلف في هذا المجلد قراءة معاصرة وجديدة للمصطلحات والمفاهيم القرآنية، بعيداً عن التأويلات الموروثة التي حجبت المعاني الأصلية للقرآن الكريم.</p>
             </div>
             
             <div class="book-features">
-                <h3>أبرز مميزات الكتاب:</h3>
+                <h3>أبرز مميزات الكتاب</h3>
                 <ul>
+                    <li>تحليل دقيق للمصطلحات القرآنية في سياقاتها الأصلية</li>
                     <li>منهجية "التدبر التفاعلي" التي تتجاوز القراءة السطحية</li>
-                    <li>تحليل لغوي دقيق للمصطلحات القرآنية</li>
-                    <li>استفادة من التكنولوجيا الحديثة كأدوات مساعدة</li>
-                    <li>عرض شمولي يتجاوز الإشكاليات التقليدية</li>
-                    
+                    <li>استفادة من التكنولوجيا الحديثة كأدوات مساعدة في البحث</li>
+                    <li>عرض شمولي يتجاوز الإشكاليات التقليدية في التفسير</li>
+                    <li>تحرير المصطلح من الإضافات البشرية والتأويلات المتوارثة</li>
+                    <li>دراسة تطبيقية لمفاهيم أساسية في القرآن الكريم</li>
+                    <li>ربط المنهجية النظرية بالتطبيق العملي في فهم النص</li>
                 </ul>
-            </div>
-            
-            <div class="article-series">
-                <h3>سلاسل المقالات المتخصصة:</h3>
-                
-                <div class="series-item">
-                    <p class="series-title">المفاهيم الإيمانية والعقدية:</p>
-                    <ul>
-                        <li>تفكيك مفهوم "الربوبية والألوهية"</li>
-                        <li>العلاقة بين الله وجبريل</li>
-                        <li>صفات المؤمنين كمهارات عملية</li>
-                    </ul>
-                </div>
-                
-                <div class="series-item">
-                    <p class="series-title">المفاهيم القرآنية الدقيقة:</p>
-                    <ul>
-                        <li>الغسل المعنوي والتزكية</li>
-                        <li>الذكر بأبعاده الروحية والنفسية</li>
-                    </ul>
-                </div>
-                
-                <div class="series-item">
-                    <p class="series-title">إعادة فهم العبادات:</p>
-                    <ul>
-                        <li>الصلاة كرحلة وعي وتغيير</li>
-                        <li>الحج كرحلة معرفية</li>
-                        <li>الصيام كمنهج للتدبر</li>
-                    </ul>
-                </div>
-                
-                <div class="series-item">
-                    <p class="series-title">تصحيح المفاهيم الخاطئة:</p>
-                    <ul>
-                        <li>مفاهيم القتل والإكراه والطاغوت</li>
-                        <li>حقيقة النسخ في القرآن</li>
-                        <li>الجن والشياطين بين الحقيقة والخرافة</li>
-                    </ul>
-                </div>
             </div>
             
             <div class="toc">
                 <h2>فهرس المحتويات</h2>
                 
                 <div class="toc-section">
-                    <h3>المفاهيم الإيمانية والعقدية</h3>
-                    <div class="toc-chapter">تفكيك مفهوم "الربوبية والألوهية"</div>
-                    <div class="toc-chapter">العلاقة بين الله وجبريل</div>
-                    <div class="toc-chapter">صفات المؤمنين كمهارات عملية</div>
-                    <div class="toc-chapter">بصائر نحو الله: تجاوز المألوف</div>
+                    <h3>المقدمة: منهجية العمل في المجلد الثاني</h3>
+                    <div class="toc-chapter">الأسس المنهجية لفقه اللسان القرآني</div>
+                    <div class="toc-chapter">آلية تطبيق المنهجية على المصطلحات القرآنية</div>
+                    <div class="toc-chapter">الفرق بين المجلد الأول والثاني في المنهج والتطبيق</div>
                 </div>
                 
                 <div class="toc-section">
-                    <h3>المفاهيم القرآنية الدقيقة</h3>
-                    <div class="toc-chapter">الغسل المعنوي والتزكية</div>
-                    <div class="toc-chapter">الذكر بأبعاده الروحية والنفسية</div>
-                    <div class="toc-chapter">النفس في القرآن: من التكليف إلى المصير</div>
-                    <div class="toc-chapter">الأعداد في القرآن: من الكم إلى الكيف</div>
+                    <h3>الباب الأول: تفكيك المفاهيم العقدية والفكرية</h3>
+                    <div class="toc-chapter">الجن والشياطين: قراءة جديدة في المفهوم القرآني</div>
+                    <div class="toc-chapter">بنو إسرائيل: من الفهم العرقي إلى الإدراك المفاهيمي</div>
+                    <div class="toc-chapter">الشرك في القرآن: أبعاده الحقيقية بعيداً عن التبسيط</div>
+                    <div class="toc-chapter">الحنيفية البيضاء: ملة إبراهيم كمنهج حياة متكامل</div>
                 </div>
                 
                 <div class="toc-section">
-                    <h3>إعادة فهم العبادات</h3>
-                    <div class="toc-chapter">الصلاة كرحلة وعي وتغيير</div>
-                    <div class="toc-chapter">الحج كرحلة فكرية وروحية</div>
-                    <div class="toc-chapter">الصيام كمنهج للتدبر القرآني</div>
+                    <h3>الباب الثاني: إعادة قراءة المصطلحات التشريعية</h3>
+                    <div class="toc-chapter">سلسلة "الضرب في القرآن": المعاني المتعددة والسياقات</div>
+                    <div class="toc-chapter">القتل والإكراه والطاغوت: تفكيك السرديات التقليدية</div>
+                    <div class="toc-chapter">الجلد والقطع: بين التأديب الإصلاحي والعقاب الجسدي</div>
+                    <div class="toc-chapter">مفاهيم الحلال والحرام: العودة إلى الأصل القرآني</div>
                 </div>
                 
                 <div class="toc-section">
-                    <h3>تصحيح المفاهيم الخاطئة</h3>
-                    <div class="toc-chapter">القتل والإكراه والطاغوت</div>
-                    <div class="toc-chapter">حقيقة النسخ في القرآن</div>
-                    <div class="toc-chapter">الجن والشياطين بين الحقيقة والخرافة</div>
-                    <div class="toc-chapter">بنو إسرائيل: منظور إنساني شامل</div>
+                    <h3>الباب الثالث: التدبر في القصص والأنبياء</h3>
+                    <div class="toc-chapter">سورة يوسف: استكشاف أعماق "أحسن القصص"</div>
+                    <div class="toc-chapter">موسى في القرآن: قراءة رمزية ومنهجية متجددة</div>
+                    <div class="toc-chapter">أسماء الأنبياء: الكنوز اللغوية والروحية في نظام "المثاني"</div>
+                    <div class="toc-chapter">الذبح والفداء: رؤى جديدة في قصة إبراهيم وابنه</div>
                 </div>
                 
                 <div class="toc-section">
-                    <h3>الموجودات والحيوان في القرآن</h3>
-                    <div class="toc-chapter">الموجودات في القرآن: صفات ووظائف</div>
-                    <div class="toc-chapter">الحيوان في القرآن: قراءة رمزية</div>
+                    <h3>الباب الرابع: دراسات مصطلحية ولغوية متقدمة</h3>
+                    <div class="toc-chapter">الأعداد في القرآن: من الكم الرقمي إلى الدلالة الكيفية</div>
+                    <div class="toc-chapter">الذكر والدعاء: جوهر الصلة بالله في المنظور القرآني</div>
+                    <div class="toc-chapter">"الكتاب" و"الكتب": رحلة في أسرار المصطلحين المركزيين</div>
+                    <div class="toc-chapter">"القرآن": من الحرف إلى الحقيقة في المفهوم والمصطلح</div>
+                    <div class="toc-chapter">"الصراط المستقيم": الرؤية القرآنية بخمسة أبعاد</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>الخاتمة: نحو فهم متجدد للقرآن الكريم</h3>
+                    <div class="toc-chapter">خلاصة المنهجية والتطبيقات</div>
+                    <div class="toc-chapter">آفاق البحث المستقبلية في فقه اللسان القرآني</div>
+                    <div class="toc-chapter">توصيات للباحثين وطلاب العلم</div>
                 </div>
             </div>
             
-            <div class="book-description">
-                <h3>الهدف من الكتاب</h3>
-                <p>يهدف هذا العمل في 762 صفحة إلى تمكين القارئ من بناء علاقة حية مع القرآن عبر فهم أعمق لمقاصده، وتطبيق تعاليمه ككتاب هداية شامل في كل جوانب الحياة، والمساهمة في بناء مجتمع يستلهم قيمه من الوحي الإلهي.</p>
+            <div class="volume-description">
+                <h3>وصف المجلد الأول: الأساس النظري والمنهجي</h3>
+                <p>يُعد المجلد الأول حجر الأساس والبوابة المنهجية لمشروع "تحرير المصطلح القرآني" بأكمله. يكرّس المؤلف هذا الجزء لتأسيس الأدوات الفكرية والنصّية التي سيعتمد عليها في المجلدين التاليين، واضعًا بين يدي القارئ خارطة طريق واضحة للعودة إلى فهم القرآن من خلال ذاته.</p>
+                
+                <p>يهدف هذا المجلد بشكل أساسي إلى بناء إطار عمل جديد للتدبر، ينتقل بالقارئ من التلقي التقليدي إلى التحليل المباشر للنص القرآني في صورته الأولى. يمثل هذا المجلد عملية "إعادة تأهيل" فكري ومنهجي للقارئ، حيث يفكك الأسس التقليدية للفهم ويضع مكانها أسساً جديدة قائمة على النص القرآني الأصلي وقواعده الداخلية.</p>
+                
+                <h4>المحاور الرئيسية للمجلد الأول:</h4>
+                <ul>
+                    <li><strong>تأصيل المصدر والمنهج:</strong> العودة إلى المخطوطات القرآنية الأصلية، تشخيص أزمة الفهم الحالية، وتأسيس منهجية "فقه اللسان القرآني".</li>
+                    <li><strong>إعادة بناء المفاهيم العقدية والعبادية:</strong> إعادة قراءة المفاهيم الأساسية في الإسلام مثل الصلاة، الصيام، الحج، والتسبيح.</li>
+                    <li><strong>المفاهيم الإيمانية والوجودية:</strong> فهم النفس، الجنة والنار، ليلة القدر، والإيمان نفسه بين النص والتأويل.</li>
+                    <li><strong>معرفة الله:</strong> تقديم سلاسل متخصصة في فهم الربوبية والألوهية.</li>
+                    <li><strong>منهجية التعامل مع الموروث:</strong> منهجية التعامل النقدي مع الحديث النبوي وعرض المرويات على القرآن الكريم.</li>
+                </ul>
+            </div>
+            
+            <div class="volume-description volume-description-2">
+                <h3>وصف المجلد الثاني: التطبيقات العملية والتحليل المتقدم</h3>
+                <p>يُمثل المجلد الثاني من هذا العمل الموسوعي الانتقال من التنظير المنهجي إلى التطبيق العملي المكثف لفقه "اللسان القرآني". بعد أن وضع المؤلف الأسس النظرية في المجلد الأول، يغوص هذا المجلد في قلب الإشكاليات والمفاهيم التي شكّلت عبر العصور فهم المسلمين للنص القرآني، مقدماً رؤية تجديدية تهدف إلى تفكيك المصطلحات وإعادة بنائها وفقاً لمنهجية الكتاب القائمة على أن القرآن يفسر نفسه بنفسه وبالعودة إلى أصله الأول.</p>
+                
+                <p>يتركز هذا المجلد على معالجة سلسلة واسعة ومتنوعة من المفاهيم والمصطلحات القرآنية المحورية، والتي غالبًا ما كانت مصدرًا للجدل أو الفهم المغلوط. يعمل المجلد الثاني كورشة عمل تطبيقية واسعة، يأخذ فيها المؤلف القارئ في رحلة عبر آيات القرآن ومصطلحاته، ليُظهر له كيف يمكن لمنهجية "فقه اللسان القرآني" أن تُنتج فهمًا مختلفًا وأكثر أصالة وعمقًا للمفاهيم الدينية والحياتية، داعيًا إلى تحرير العقل من التفسيرات الموروثة والعودة المباشرة إلى "النور المبين" و"اللسان العربي المبين" الذي نزل به القرآن.</p>
+                
+                <h4>محاور المجلد الرئيسية:</h4>
+                <ul>
+                    <li><strong>تفكيك المفاهيم العقدية والفكرية:</strong> الجن والشياطين، بنو إسرائيل، الشرك في القرآن، الحنيفية البيضاء</li>
+                    <li><strong>إعادة قراءة المصطلحات المتعلقة بالأحكام والعقوبات:</strong> سلسلة "الضرب في القرآن"، القتل والإكراه والطاغوت، الجلد والقطع، مفاهيم الحلال والحرام</li>
+                    <li><strong>التدبر في القصص والأنبياء:</strong> سورة يوسف، موسى في القرآن، أسماء الأنبياء، الذبح والفداء</li>
+                    <li><strong>دراسات مصطلحية ولغوية عميقة:</strong> الأعداد في القرآن، الذكر والدعاء، "الكتاب" و"الكتب"، "القرآن"، "الصراط المستقيم"</li>
+                </ul>
+            </div>
+            
+            <div class="book-features">
+                <h3>لمن هذا الكتاب؟</h3>
+                <ul>
+                    <li><strong>الباحثون في الدراسات القرآنية:</strong> الذين يسعون لأساليب جديدة في تحليل النص القرآني</li>
+                    <li><strong>طلاب العلم الشرعي:</strong> الراغبون في تعميق فهمهم للمنهجية العلمية في التعامل مع القرآن</li>
+                    <li><strong>المفكرون الإسلاميون:</strong> المهتمون بتجديد الخطاب الديني وفهم النص المؤسس</li>
+                    <li><strong>المختصون في اللسانيات:</strong> الذين يدرسون الخصائص الفريدة للغة القرآن</li>
+                    <li><strong>المهتمون بالدراسات المقارنة للأديان:</strong> لفهم المصطلحات القرآنية في سياقها الأصلي</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
-        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
+        <div class="footer-content">
+            <p>© 2025 مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
+            <p>مشروع بحثي أكاديمي غير هادف للربح - مسموح بالنشر والاقتباس مع ذكر المصدر</p>
+            
+            <div class="author-bio">
+                <p><strong>ناصر ابن داوود</strong> - باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
+                <p>خريج كلية البوليتكنيك في جامعة مونس بلجيكا، ومتخصص في تحليل المخطوطات القرآنية باستخدام التقنيات الرقمية الحديثة. يجمع في أبحاثه بين المنهجية العلمية الدقيقة والفهم العميق للتراث الإسلامي.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
