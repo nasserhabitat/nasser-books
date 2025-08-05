@@ -821,5 +821,79 @@
             simulateAutoUpdates();
         });
     </script>
+    // وظيفة البحث
+function setupSearch() {
+    const searchInput = document.getElementById('book-search');
+    const bookCards = document.querySelectorAll('.book-card');
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim().toLowerCase();
+        
+        bookCards.forEach(card => {
+            const title = card.querySelector('h2').textContent.toLowerCase();
+            const author = card.querySelector('.book-meta').textContent.toLowerCase();
+            const description = card.querySelector('.book-desc').textContent.toLowerCase();
+            
+            const matches = title.includes(searchTerm) || 
+                          author.includes(searchTerm) || 
+                          description.includes(searchTerm);
+            
+            card.style.display = matches ? 'block' : 'none';
+        });
+    });
+}
+
+// تعديل الدالة الرئيسية لتشمل البحث
+document.addEventListener('DOMContentLoaded', function() {
+    updateTimestamps();
+    setupFilterButtons();
+    setupBookDetails();
+    simulateAutoUpdates();
+    setupSearch(); // أضف هذه السطر
+});
+
+    // تحسين أداء البحث باستخدام debounce
+function debounce(func, wait) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
+
+// ثم استبدال event listener بهذا:
+searchInput.addEventListener('input', debounce(function() {
+    // كود البحث هنا
+}, 300));
+
+    <div class="search-suggestions" id="search-suggestions"></div>
+
+<style>
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.suggestion-item:hover {
+    background: #f5f5f5;
+}
+</style>
+    
 </body>
 </html>
