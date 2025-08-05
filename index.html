@@ -353,6 +353,7 @@
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
         </button>
+        <div class="search-suggestions" id="search-suggestions"></div>
     </div>
 
    
@@ -822,12 +823,44 @@
         });
     </script>
     // وظيفة البحث
+// وظيفة البحث مع debounce
+function debounce(func, wait) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
+
 function setupSearch() {
     const searchInput = document.getElementById('book-search');
+    const suggestionsContainer = document.getElementById('search-suggestions');
     const bookCards = document.querySelectorAll('.book-card');
     
-    searchInput.addEventListener('input', function() {
+    // عرض/إخفاء الاقتراحات
+    searchInput.addEventListener('focus', () => {
+        if (searchInput.value.trim() !== '') {
+            suggestionsContainer.style.display = 'block';
+        }
+    });
+    
+    searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+            suggestionsContainer.style.display = 'none';
+        }, 200);
+    });
+    
+    // البحث مع debounce
+    searchInput.addEventListener('input', debounce(function() {
         const searchTerm = this.value.trim().toLowerCase();
+        const suggestions = [];
+        
+        if (searchTerm === '') {
+            suggestionsContainer.style.display = 'none';
+            bookCards.forEach(card => card.style.display = 'block');
+            return;
+        }
         
         bookCards.forEach(card => {
             const title = card.querySelector('h2').textContent.toLowerCase();
@@ -839,7 +872,36 @@ function setupSearch() {
                           description.includes(searchTerm);
             
             card.style.display = matches ? 'block' : 'none';
+            
+            if (matches) {
+                suggestions.push({
+                    title: card.querySelector('h2').textContent,
+                    author: card.querySelector('.book-meta').textContent
+                });
+            }
         });
+        
+        // عرض الاقتراحات
+        if (suggestions.length > 0) {
+            suggestionsContainer.innerHTML = suggestions.map(book => `
+                <div class="suggestion-item">
+                    <div class="suggestion-title">${book.title}</div>
+                    <div class="suggestion-author">${book.author}</div>
+                </div>
+            `).join('');
+            
+            suggestionsContainer.style.display = 'block';
+        } else {
+            suggestionsContainer.style.display = 'none';
+        }
+    }, 300));
+    
+    // اختيار اقتراح
+    suggestionsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('suggestion-item')) {
+            searchInput.value = e.target.querySelector('.suggestion-title').textContent;
+            suggestionsContainer.style.display = 'none';
+        }
     });
 }
 
@@ -851,24 +913,6 @@ document.addEventListener('DOMContentLoaded', function() {
     simulateAutoUpdates();
     setupSearch(); // أضف هذه السطر
 });
-
-    // تحسين أداء البحث باستخدام debounce
-function debounce(func, wait) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(context, args), wait);
-    };
-}
-
-// ثم استبدال event listener بهذا:
-searchInput.addEventListener('input', debounce(function() {
-    // كود البحث هنا
-}, 300));
-
-    <div class="search-suggestions" id="search-suggestions"></div>
-
 <style>
 .search-suggestions {
     position: absolute;
