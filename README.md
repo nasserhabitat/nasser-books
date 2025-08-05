@@ -1,7 +1,7 @@
 
 # مكتبة ناصر ابن داوود - باحث إسلامي ومهندس
 
-مكتبة رقمية لمؤلفات الدكتور ناصر ابن داود في علوم القرآن والتدبر والدراسات القرآنية الرقمية
+مكتبة رقمية لمؤلفات الدكتور ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية
 
 Nasser Ibn Dawood Library - Islamic Researcher and Engineer  
 A digital library of Dr. Nasser Ibn Dawood's works on Quranic sciences, contemplation, and digital Quranic studies.
