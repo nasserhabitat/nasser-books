@@ -30,3 +30,50 @@
     margin: 2rem auto;
     line-height: 1.8;
 }
+/* أنماط شريط البحث */
+.search-container {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 45px 12px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(21, 152, 149, 0.2);
+}
+
+.search-btn {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    padding: 0;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .search-container {
+        margin: 20px 15px;
+    }
+    
+    .search-input {
+        padding: 10px 40px 10px 15px;
+    }
+}
