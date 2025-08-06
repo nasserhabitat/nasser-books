@@ -15,6 +15,8 @@
             --accent-color: #e74c3c;
             --light-color: #f5f5f5;
             --dark-color: #333;
+            --new-badge-color: #27ae60;
+            --new-section-bg: #f9f7f0;
         }
         
         * {
@@ -91,6 +93,20 @@
             margin: 2rem 0;
             color: var(--primary-color);
             font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
         }
         
         .filter-buttons {
@@ -136,11 +152,16 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
         
         .book-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .book-cover {
+            position: relative;
         }
         
         .book-cover img {
@@ -173,6 +194,7 @@
         
         .book-actions {
             display: flex;
+            gap: 10px;
         }
         
         .btn {
@@ -184,10 +206,23 @@
             border-radius: 5px;
             transition: background 0.3s ease;
             font-size: 0.9rem;
+            text-align: center;
+            flex: 1;
         }
         
         .btn:hover {
             background: var(--secondary-color);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
         }
         
         /* أنماط شريط البحث المحسنة */
@@ -300,6 +335,144 @@
             transform: scale(0.98);
         }
         
+        /* قسم الكتب الجديدة */
+        .new-books-section {
+            background-color: var(--new-section-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--new-badge-color);
+        }
+        
+        .new-books-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+        
+        .new-books-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, 50%);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .section-title-new {
+            color: var(--new-badge-color);
+            font-size: 1.8rem;
+            position: relative;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title-new::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 30px;
+            background: var(--new-badge-color);
+            border-radius: 5px;
+        }
+        
+        .new-badge {
+            background: var(--new-badge-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 10px;
+        }
+        
+        .new-badge::before {
+            content: "🆕";
+        }
+        
+        .book-card .new-badge-card {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--new-badge-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .new-filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .new-filter-buttons button {
+            padding: 8px 15px;
+            border: 2px solid var(--new-badge-color);
+            background: white;
+            color: var(--new-badge-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .new-filter-buttons button.active {
+            background: var(--new-badge-color);
+            color: white;
+        }
+        
+        .new-filter-buttons button:hover {
+            background: var(--new-badge-color);
+            color: white;
+        }
+        
+        .month-indicator {
+            background: rgba(39, 174, 96, 0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: var(--new-badge-color);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .month-indicator::before {
+            content: "📅";
+        }
+        
         /* للشاشات الصغيرة */
         @media (max-width: 768px) {
             .hero h1 {
@@ -326,6 +499,19 @@
             .book-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .new-books-section {
+                padding: 1.5rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .new-filter-buttons {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -347,7 +533,7 @@
                        aria-label="بحث الكتب" class="search-input">
                 <button class="search-btn" aria-label="تنفيذ البحث">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        <path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/>
                     </svg>
                 </button>
                 <div class="search-suggestions" id="search-suggestions"></div>
@@ -356,6 +542,108 @@
     </header>
 
     <main class="container">
+        <!-- قسم الكتب الجديدة لهذا الشهر -->
+        <div class="new-books-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title-new">
+                        <span class="new-badge">جديد</span> 
+                        الإصدارات الحديثة
+                    </h2>
+                    <div class="month-indicator">شهر أغسطس 2025</div>
+                </div>
+                <div class="new-filter-buttons">
+                    <button class="active" data-filter="all">الكل</button>
+                    <button data-filter="ar">العربية</button>
+                    <button data-filter="en">English</button>
+                </div>
+            </div>
+            
+            <div class="book-grid" id="new-book-grid">
+                <!-- تحرير المصطلح القرآني المجلد 1 -->
+                <div class="book-card" data-lang="ar">
+                    <div class="book-cover">
+                        <span class="new-badge-card">جديد</span>
+                        <img src="books/editing-the-quranic-terminology-tome1/ar/cover-ar.png" 
+                             alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 1"
+                             loading="lazy"
+                             width="250"
+                             height="350">
+                    </div>
+                    <div class="book-info">
+                        <h2>تحرير المصطلح القرآني المجلد 1</h2>
+                        <p class="book-meta">تأليف: ناصر ابن داوود</p>
+                        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
+                        <div class="book-actions">
+                            <a href="books/editing-the-quranic-terminology-tome1/ar/" class="btn">النسخة العربية</a>
+                            <a href="#" class="btn btn-outline">تفاصيل الكتاب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-lang="en">
+                    <div class="book-cover">
+                        <span class="new-badge-card">NEW</span>
+                        <img src="books/editing-the-quranic-terminology-tome1/en/cover-en.png" 
+                             alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1 Book Cover"
+                             loading="lazy"
+                             width="250"
+                             height="350">
+                    </div>
+                    <div class="book-info">
+                        <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1</h2>
+                        <p class="book-meta">By: Nasser Ibn Dawood</p>
+                        <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
+                        <div class="book-actions">
+                            <a href="books/editing-the-quranic-terminology-tome1/en/" class="btn">English Version</a>
+                            <a href="#" class="btn btn-outline">Book Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تحرير المصطلح القرآني المجلد 2 -->
+                <div class="book-card" data-lang="ar">
+                    <div class="book-cover">
+                        <span class="new-badge-card">جديد</span>
+                        <img src="books/editing-the-quranic-terminology-tome2/ar/cover-ar.png" 
+                             alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 2"
+                             loading="lazy"
+                             width="250"
+                             height="350">
+                    </div>
+                    <div class="book-info">
+                        <h2>تحرير المصطلح القرآني المجلد 2</h2>
+                        <p class="book-meta">تأليف: ناصر ابن داوود</p>
+                        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
+                        <div class="book-actions">
+                            <a href="books/editing-the-quranic-terminology-tome2/ar/" class="btn">النسخة العربية</a>
+                            <a href="#" class="btn btn-outline">تفاصيل الكتاب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-lang="en">
+                    <div class="book-cover">
+                        <span class="new-badge-card">NEW</span>
+                        <img src="books/editing-the-quranic-terminology-tome2/en/cover-en.png" 
+                             alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2 Book Cover"
+                             loading="lazy"
+                             width="250"
+                             height="350">
+                    </div>
+                    <div class="book-info">
+                        <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2</h2>
+                        <p class="book-meta">By: Nasser Ibn Dawood</p>
+                        <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
+                        <div class="book-actions">
+                            <a href="books/editing-the-quranic-terminology-tome2/en/" class="btn">English Version</a>
+                            <a href="#" class="btn btn-outline">Book Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h2 class="section-title">الكتب المتاحة</h2>
         <div class="filter-buttons">
             <button class="active" data-filter="all">الكل</button>
@@ -423,7 +711,7 @@
             <div class="book-card" data-lang="en" id="book-4">
                 <div class="book-cover">
                     <img src="books/anwar-al-bayan/en/cover-en.png" 
-                         alt="ANWAR AL-BAYAN Book Cover"
+                         alt="ANWAR AL-BAYAN: The Uthmanic Script's Linguistic Secrets"
                          loading="lazy"
                          width="250"
                          height="350">
@@ -962,6 +1250,25 @@
             });
         }
         
+        // فلترة الكتب الجديدة
+        function setupNewBooksFilter() {
+            document.querySelectorAll('.new-filter-buttons button').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelector('.new-filter-buttons .active').classList.remove('active');
+                    button.classList.add('active');
+                    
+                    const filter = button.dataset.filter;
+                    document.querySelectorAll('#new-book-grid .book-card').forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = card.dataset.lang === filter ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        }
+        
         // تحديث وقت التحديث الأخير
         function updateLastUpdateTime() {
             const now = new Date();
@@ -995,6 +1302,7 @@
             updateLastUpdateTime();
             setupSearch();
             setupFilterButtons();
+            setupNewBooksFilter();
             fixBookPaths();
             
             // هنا يمكنك إضافة كود لجلب الكتب من المصدر
