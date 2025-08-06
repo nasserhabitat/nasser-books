@@ -1364,6 +1364,41 @@
             // هنا يمكنك إضافة كود لجلب الكتب من المصدر
             // fetchBooks().then(books => { ... });
         });
+        document.addEventListener('DOMContentLoaded', () => {
+    // الحصول على جميع الأزرار التي تفتح النوافذ المنبثقة
+    const openModalButtons = document.querySelectorAll('[data-modal-target]');
+    
+    // الحصول على جميع أزرار الإغلاق
+    const closeModalButtons = document.querySelectorAll('.close-button');
+
+    // إضافة حدث النقر لأزرار "تفاصيل الكتاب"
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // منع السلوك الافتراضي للرابط
+            const modal = document.querySelector(button.dataset.modalTarget);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    // إضافة حدث النقر لأزرار الإغلاق (X)
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // إغلاق النافذة عند النقر خارج محتواها
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+});
     </script>
 </body>
 </html>
