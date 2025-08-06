@@ -589,36 +589,17 @@
                              loading="lazy"
                              width="250"
                              height="350">
-                    <div class="book-container"> <div class="book-info">
-        <h2>تحرير المصطلح القرآني المجلد 1</h2>
-        <p class="book-meta">تأليف: ناصر ابن داوود</p>
-        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-        <div class="book-actions">
-            <a href="books/editing-the-quranic-terminology-tome1/ar/" class="btn">النسخة العربية</a>
-            <a href="#" class="btn btn-outline" data-modal-target="#book-details-1">تفاصيل الكتاب</a>
-        </div>
-    </div>
-</div>
-
-<div class="modal" id="book-details-1">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>تفاصيل كتاب: تحرير المصطلح القرآني</h2>
-        <ul>
-            </div> <li><strong>المؤلف:</strong> ناصر ابن داوود</li>
-            <li> <strong>تأليف:</strong> ناصر ابن داوود </li>
-           <li> <strong>الطبعة:</strong> الثالثة - 2025</li>
-              <li><strong>عدد الصفحات:</strong> 486 صفحة</li>
-              <li> <strong>اللغة:</strong> العربية </li>
-        </ul>
-        <p>
-            <strong>نبذة موسعة:</strong>
-            <br>
-            هذا الكتاب يقدم دراسة معمقة وشاملة حول المصطلحات المستخدمة في القرآن الكريم، مع التركيز على فقه اللسان وكيفية فهم المعاني الدقيقة للكلمات القرآنية في سياقها الأصلي.
-        </p>
-    </div>
-</div> 
-
+                    </div>
+                    <div class="book-info">
+                        <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1</h2>
+                        <p class="book-meta">By: Nasser Ibn Dawood</p>
+                        <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
+                        <div class="book-actions">
+                            <a href="books/editing-the-quranic-terminology-tome1/en/" class="btn">English Version</a>
+                            <a href="#" class="btn btn-outline">Book Details</a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- تحرير المصطلح القرآني المجلد 2 -->
                 <div class="book-card" data-lang="ar">
@@ -1364,41 +1345,6 @@
             // هنا يمكنك إضافة كود لجلب الكتب من المصدر
             // fetchBooks().then(books => { ... });
         });
-        document.addEventListener('DOMContentLoaded', () => {
-    // الحصول على جميع الأزرار التي تفتح النوافذ المنبثقة
-    const openModalButtons = document.querySelectorAll('[data-modal-target]');
-    
-    // الحصول على جميع أزرار الإغلاق
-    const closeModalButtons = document.querySelectorAll('.close-button');
-
-    // إضافة حدث النقر لأزرار "تفاصيل الكتاب"
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // منع السلوك الافتراضي للرابط
-            const modal = document.querySelector(button.dataset.modalTarget);
-            if (modal) {
-                modal.style.display = 'block';
-            }
-        });
-    });
-
-    // إضافة حدث النقر لأزرار الإغلاق (X)
-    closeModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-
-    // إغلاق النافذة عند النقر خارج محتواها
-    window.addEventListener('click', (event) => {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = 'none';
-        }
-    });
-});
     </script>
 </body>
 </html>
