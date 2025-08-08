@@ -524,6 +524,7 @@
     <!-- رأس الصفحة -->
 <!-- رأس الصفحة -->
 <!-- في قسم الهيرو (header) -->
+<!-- في قسم الهيرو (header) -->
 <header class="hero">
     <div class="hero-content">
         <h1>مكتبة ناصر ابن داوود</h1>
@@ -1172,149 +1173,7 @@
     </footer>
 
     <script>
-       <script>
-    // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
-    function updateBooksCount() {
-        // نستخدم Set لتخزين معرفات الكتب الفريدة
-        const uniqueBookIds = new Set();
-        
-        // نجمع جميع عناصر الكتب من قسم الكتب المتاحة فقط
-        const allBookCards = document.querySelectorAll('#book-grid .book-card');
-        
-        // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
-        allBookCards.forEach(card => {
-            uniqueBookIds.add(card.id);
-        });
-        
-        // نعرض العدد الفعلي للكتب الفريدة
-        document.getElementById('total-books-count').textContent = uniqueBookIds.size;
-    }
-    
-    // حساب عدد الكتب الجديدة
-    function updateNewBooksCount() {
-        const newBooks = document.querySelectorAll('.new-badge-card');
-        document.getElementById('new-books-count').textContent = newBooks.length;
-    }
-    
-    // تحديث وقت التحديث الأخير
-    function updateLastUpdateTime() {
-        const now = new Date();
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-        };
-        document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
-    }
-    
-    // دالة البحث الضبابي المحسنة للغة العربية
-    function fuzzySearch(text, searchTerm) {
-        const removeDiacritics = (str) => {
-            return str.normalize('NFKD').replace(/[\u064B-\u065F]/g, '');
-        };
-
-        const cleanText = removeDiacritics(text.toLowerCase());
-        const cleanSearchTerm = removeDiacritics(searchTerm.toLowerCase());
-        
-        let searchIndex = 0;
-        for (let i = 0; i < cleanText.length; i++) {
-            if (cleanText[i] === cleanSearchTerm[searchIndex]) {
-                searchIndex++;
-                if (searchIndex === cleanSearchTerm.length) return true;
-            }
-        }
-        return false;
-    }
-    
-    // تحسين أداء البحث باستخدام Debounce
-    function debounce(func, wait, immediate) {
-        let timeout;
-        return function() {
-            const context = this, args = arguments;
-            const later = function() {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            const callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
-    }
-    
-    // تهيئة البحث
-    function setupSearch() {
-        const searchInput = document.getElementById('book-search');
-        const suggestionsContainer = document.getElementById('search-suggestions');
-        const bookCards = Array.from(document.querySelectorAll('.book-card'));
-        
-        const performSearch = debounce(function() {
-            const searchTerm = this.value.trim();
-            
-            if (searchTerm === '') {
-                suggestionsContainer.style.display = 'none';
-                bookCards.forEach(card => card.style.display = 'block');
-                return;
-            }
-            
-            const suggestions = [];
-            
-            bookCards.forEach(card => {
-                const title = card.querySelector('h2').textContent;
-                const author = card.querySelector('.book-meta').textContent;
-                const desc = card.querySelector('.book-desc')?.textContent || '';
-                
-                const matches = fuzzySearch(title, searchTerm) || 
-                              fuzzySearch(author, searchTerm) ||
-                              fuzzySearch(desc, searchTerm);
-                
-                if (matches) {
-                    card.style.display = 'block';
-                    suggestions.push({
-                        title: title,
-                        author: author,
-                        id: card.id
-                    });
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            if (suggestions.length > 0) {
-                suggestionsContainer.innerHTML = suggestions.map(book => `
-                    <div class="suggestion-item" data-id="${book.id}">
-                        <div class="suggestion-title">${book.title}</div>
-                        <div class="suggestion-author">${book.author}</div>
-                    </div>
-                `).join('');
-                suggestionsContainer.style.display = 'block';
-            } else {
-                suggestionsContainer.innerHTML = '<div class="suggestion-item">لا توجد نتائج</div>';
-                suggestionsContainer.style.display = 'block';
-            }
-        }, 300);
-        
-        searchInput.addEventListener('input', performSearch);
-        suggestionsContainer.addEventListener('click', (e) => {
-            const suggestion = e.target.closest('.suggestion-item');
-            if (suggestion) {
-                const bookId = suggestion.dataset.id;
-                if (bookId) {
-                    suggestionsContainer.style.display = 'none';
-                    const bookCard = document.getElementById(bookId);
-                    if (bookCard) {
-                        bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
-                        setTimeout(() => { bookCard.style.boxShadow = ''; }, 2000);
-                    }
-                }
-            }
-        });
-    }
-    
+     
     // فلترة الكتب حسب اللغة
     function setupFilterButtons() {
         document.querySelectorAll('.filter-buttons button').forEach(button => {
@@ -1565,6 +1424,200 @@
             // هنا يمكنك إضافة كود لجلب الكتب من المصدر
             // fetchBooks().then(books => { ... });
         });
+    <script>
+    // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
+    function updateBooksCount() {
+        // نستخدم Set لتخزين معرفات الكتب الفريدة
+        const uniqueBookIds = new Set();
+        
+        // نجمع جميع عناصر الكتب من قسم الكتب المتاحة فقط
+        const allBookCards = document.querySelectorAll('#book-grid .book-card');
+        
+        // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
+        allBookCards.forEach(card => {
+            uniqueBookIds.add(card.id);
+        });
+        
+        // نعرض العدد الفعلي للكتب الفريدة
+        document.getElementById('total-books-count').textContent = uniqueBookIds.size;
+    }
+    
+    // حساب عدد الكتب الجديدة
+    function updateNewBooksCount() {
+        const newBooks = document.querySelectorAll('.new-badge-card');
+        document.getElementById('new-books-count').textContent = newBooks.length;
+    }
+    
+    // تحديث وقت التحديث الأخير
+    function updateLastUpdateTime() {
+        const now = new Date();
+        const options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
+    }
+    
+    // دالة البحث الضبابي المحسنة للغة العربية
+    function fuzzySearch(text, searchTerm) {
+        const removeDiacritics = (str) => {
+            return str.normalize('NFKD').replace(/[\u064B-\u065F]/g, '');
+        };
+
+        const cleanText = removeDiacritics(text.toLowerCase());
+        const cleanSearchTerm = removeDiacritics(searchTerm.toLowerCase());
+        
+        let searchIndex = 0;
+        for (let i = 0; i < cleanText.length; i++) {
+            if (cleanText[i] === cleanSearchTerm[searchIndex]) {
+                searchIndex++;
+                if (searchIndex === cleanSearchTerm.length) return true;
+            }
+        }
+        return false;
+    }
+    
+    // تحسين أداء البحث باستخدام Debounce
+    function debounce(func, wait, immediate) {
+        let timeout;
+        return function() {
+            const context = this, args = arguments;
+            const later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            const callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+    
+    // تهيئة البحث
+    function setupSearch() {
+        const searchInput = document.getElementById('book-search');
+        const suggestionsContainer = document.getElementById('search-suggestions');
+        const bookCards = Array.from(document.querySelectorAll('.book-card'));
+        
+        const performSearch = debounce(function() {
+            const searchTerm = this.value.trim();
+            
+            if (searchTerm === '') {
+                suggestionsContainer.style.display = 'none';
+                bookCards.forEach(card => card.style.display = 'block');
+                return;
+            }
+            
+            const suggestions = [];
+            
+            bookCards.forEach(card => {
+                const title = card.querySelector('h2').textContent;
+                const author = card.querySelector('.book-meta').textContent;
+                const desc = card.querySelector('.book-desc')?.textContent || '';
+                
+                const matches = fuzzySearch(title, searchTerm) || 
+                              fuzzySearch(author, searchTerm) ||
+                              fuzzySearch(desc, searchTerm);
+                
+                if (matches) {
+                    card.style.display = 'block';
+                    suggestions.push({
+                        title: title,
+                        author: author,
+                        id: card.id
+                    });
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (suggestions.length > 0) {
+                suggestionsContainer.innerHTML = suggestions.map(book => `
+                    <div class="suggestion-item" data-id="${book.id}">
+                        <div class="suggestion-title">${book.title}</div>
+                        <div class="suggestion-author">${book.author}</div>
+                    </div>
+                `).join('');
+                suggestionsContainer.style.display = 'block';
+            } else {
+                suggestionsContainer.innerHTML = '<div class="suggestion-item">لا توجد نتائج</div>';
+                suggestionsContainer.style.display = 'block';
+            }
+        }, 300);
+        
+        searchInput.addEventListener('input', performSearch);
+        suggestionsContainer.addEventListener('click', (e) => {
+            const suggestion = e.target.closest('.suggestion-item');
+            if (suggestion) {
+                const bookId = suggestion.dataset.id;
+                if (bookId) {
+                    suggestionsContainer.style.display = 'none';
+                    const bookCard = document.getElementById(bookId);
+                    if (bookCard) {
+                        bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
+                        setTimeout(() => { bookCard.style.boxShadow = ''; }, 2000);
+                    }
+                }
+            }
+        });
+    }
+    
+    // فلترة الكتب حسب اللغة
+    function setupFilterButtons() {
+        document.querySelectorAll('.filter-buttons button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.filter-buttons .active').classList.remove('active');
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                document.querySelectorAll('#book-grid .book-card').forEach(card => {
+                    card.style.display = filter === 'all' || card.dataset.lang === filter ? 'block' : 'none';
+                });
+            });
+        });
+    }
+    
+    // فلترة الكتب الجديدة
+    function setupNewBooksFilter() {
+        document.querySelectorAll('.new-filter-buttons button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.new-filter-buttons .active').classList.remove('active');
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                document.querySelectorAll('#new-book-grid .book-card').forEach(card => {
+                    card.style.display = filter === 'all' || card.dataset.lang === filter ? 'block' : 'none';
+                });
+            });
+        });
+    }
+    
+    // تصحيح مسارات الكتب
+    function fixBookPaths() {
+        document.querySelectorAll('a[href^="books/"]').forEach(link => {
+            const correctedPath = link.getAttribute('href')
+                .replace(/ /g, '-')
+                .toLowerCase();
+            if (link.getAttribute('href') !== correctedPath) {
+                link.setAttribute('href', correctedPath);
+            }
+        });
+    }
+    
+    // تهيئة الصفحة عند التحميل
+    document.addEventListener('DOMContentLoaded', function() {
+        updateLastUpdateTime();
+        setupSearch();
+        setupFilterButtons();
+        setupNewBooksFilter();
+        fixBookPaths();
+        updateBooksCount();
+        updateNewBooksCount();
+    });
+</script>
     </script>
 </body>
 </html>
