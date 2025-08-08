@@ -1164,8 +1164,7 @@
         
     
     <script>
-        <script>
-    // ... بقية الدوال ...
+       
 
     // تهيئة البحث
     function setupSearch() {
@@ -1259,7 +1258,26 @@
         });
     }
 
-   
+   const bookCards = Array.from(document.querySelectorAll('.book-card'));
+
+    const hasNewBooksResults = bookCards.some(card => 
+    card.style.display === 'block' && 
+    card.closest('#new-book-grid') !== null
+);
+newBooksSection.style.display = hasNewBooksResults ? 'block' : 'none';
+
+        suggestions.push({
+    // ...
+    isNew: card.closest('#new-book-grid') !== null
+});
+
+// وفي عرض الاقتراحات:
+${book.isNew ? '<div style="color: var(--new-badge-color); font-size: 0.8rem; margin-top: 5px;">(كتاب جديد)</div>' : ''}
+
+
+        if (isNewBook) {
+    document.querySelector('.new-books-section').style.display = 'block';
+}
     // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
     function updateBooksCount() {
         // نستخدم Set لتخزين معرفات الكتب الفريدة
