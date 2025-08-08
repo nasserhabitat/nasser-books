@@ -513,10 +513,17 @@
                 width: 100%;
             }
         }
+        /* إضافة بسيطة لواجهة البحث */
+        .search-info {
+            text-align: center;
+            margin: 15px 0;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
-    <!-- شريط التحديثات -->
+     <!-- شريط التحديثات -->
     <div class="update-banner">
         🚀 المكتبة متجددة تلقائياً كل ساعة - آخر تحديث: <span id="last-update"></span>
     </div>
@@ -527,7 +534,7 @@
             <p class="subtitle">مراجع إسلامية في علوم القرآن والتدبر</p>
             
             <!-- عرض عدد الكتب -->
-            <div class="books-count" style="margin: 1rem 0; font-size: 1.1rem; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; display: inline-block;">
+            <div class="books-count">
                 إجمالي الكتب: <span id="total-books-count">20</span> كتاب | 
                 الجديد منها: <span id="new-books-count">4</span> كتاب
             </div>
@@ -538,31 +545,16 @@
                        aria-label="بحث الكتب" class="search-input">
                 <button class="search-btn" aria-label="تنفيذ البحث">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/>
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
         </div>
     </header>
-       
-        <!-- شريط البحث -->
-        <div class="search-container">
-            <input type="text" id="book-search" placeholder="ابحث عن كتاب أو مؤلف..." 
-                   aria-label="بحث الكتب" class="search-input">
-            <button class="search-btn" aria-label="تنفيذ البحث">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/>
-                </svg>
-            </button>
-            <div class="search-suggestions" id="search-suggestions"></div>
-        </div>
-    </div>
-</header>
-        
 
     <main class="container">
-        <!-- قسم الكتب الجديدة لهذا الشهر -->
+          <!-- قسم الكتب الجديدة -->
         <div class="new-books-section">
             <div class="section-header">
                 <div>
@@ -577,11 +569,11 @@
                     <button data-filter="ar">العربية</button>
                     <button data-filter="en">English</button>
                 </div>
-            </div>
+            
             
             <div class="book-grid" id="new-book-grid">
 
-               
+               <!-- الكتب الجديدة كما هي -->
                 <!-- تحرير المصطلح القرآني المجلد 1 -->
                 <div class="book-card" data-lang="ar">
                     <div class="book-cover">
@@ -1152,7 +1144,12 @@
         </div>
         
     </main>
-    
+    <!-- رسالة معلومات البحث -->
+        <div class="search-info" id="search-info" style="display: none;">
+            تبحث عن: <strong id="search-term-display"></strong> | 
+            عدد النتائج: <strong id="search-results-count">0</strong>
+        </div>
+    </main>
     <footer class="site-footer">
         <div class="footer-content">
             <p>© 2025 مكتبة ناصر ابن داوود - مهندس وباحث إسلامي</p>
@@ -1163,29 +1160,22 @@
 
         
     
-    <script>
        
 
+    <script>
     // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
     function updateBooksCount() {
-        // نستخدم Set لتخزين معرفات الكتب الفريدة
         const uniqueBookIds = new Set();
-        
-        // نجمع جميع عناصر الكتب من قسم الكتب المتاحة فقط
         const allBookCards = document.querySelectorAll('#book-grid .book-card');
-        
-        // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
         allBookCards.forEach(card => {
             uniqueBookIds.add(card.id);
         });
-        
-        // نعرض العدد الفعلي للكتب الفريدة
         document.getElementById('total-books-count').textContent = uniqueBookIds.size;
     }
     
     // حساب عدد الكتب الجديدة
     function updateNewBooksCount() {
-        const newBooks = document.querySelectorAll('#new-book-grid .new-badge-card');
+        const newBooks = document.querySelectorAll('.new-badge-card');
         document.getElementById('new-books-count').textContent = newBooks.length;
     }
     
@@ -1202,7 +1192,6 @@
         };
         document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
     }
-    
     
     // دالة البحث الضبابي المحسنة للغة العربية
     function fuzzySearch(text, searchTerm) {
@@ -1239,22 +1228,30 @@
         };
     }
     
-    // تهيئة البحث
+    // تهيئة البحث (تعديلها لتشمل فقط الكتب المتاحة)
     function setupSearch() {
         const searchInput = document.getElementById('book-search');
         const suggestionsContainer = document.getElementById('search-suggestions');
-        const bookCards = Array.from(document.querySelectorAll('.book-card'));
+        const searchInfo = document.getElementById('search-info');
+        const searchTermDisplay = document.getElementById('search-term-display');
+        const searchResultsCount = document.getElementById('search-results-count');
+        
+        // جمع الكتب من القسم الرئيسي فقط (الكتب المتاحة)
+        const bookCards = Array.from(document.querySelectorAll('#book-grid .book-card'));
         
         const performSearch = debounce(function() {
             const searchTerm = this.value.trim();
+            searchTermDisplay.textContent = searchTerm;
             
             if (searchTerm === '') {
                 suggestionsContainer.style.display = 'none';
                 bookCards.forEach(card => card.style.display = 'block');
+                searchInfo.style.display = 'none';
                 return;
             }
             
             const suggestions = [];
+            let resultsCount = 0;
             
             bookCards.forEach(card => {
                 const title = card.querySelector('h2').textContent;
@@ -1267,6 +1264,7 @@
                 
                 if (matches) {
                     card.style.display = 'block';
+                    resultsCount++;
                     suggestions.push({
                         title: title,
                         author: author,
@@ -1276,6 +1274,10 @@
                     card.style.display = 'none';
                 }
             });
+            
+            // تحديث معلومات البحث
+            searchResultsCount.textContent = resultsCount;
+            searchInfo.style.display = 'block';
             
             if (suggestions.length > 0) {
                 suggestionsContainer.innerHTML = suggestions.map(book => `
