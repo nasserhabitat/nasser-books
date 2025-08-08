@@ -40,6 +40,7 @@ A digital library of Dr. Nasser Ibn Dawood's works on Quranic sciences, contempl
 - [الأسماء الحسنى الوظيفية](books/names-in-the-holy/ar)
 - [MODESTY: The Fence of the Soul](books/modesty/en)
 - [The Functional Beautiful Names](books/names-in-the-holy/en)
+-  [AND SO THAT HE MAY BE OF THE CERTAIN ONES](books/malakoot/en)
 
 ## 🌟 Features | المميزات
 - **Bilingual Interface** | واجهة ثنائية اللغة (عربي/إنجليزي)
