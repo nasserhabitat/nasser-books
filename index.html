@@ -527,7 +527,23 @@
     <div class="hero-content">
         <h1>مكتبة ناصر ابن داوود</h1>
         <p class="subtitle">مراجع إسلامية في علوم القرآن والتدبر</p>
-        
+       
+        // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار الكتب الجديدة)
+       function updateBooksCount() {
+    // نستخدم Set لتخزين معرفات الكتب الفريدة
+    const uniqueBookIds = new Set();
+    
+    // نجمع جميع عناصر الكتب
+    const allBookCards = document.querySelectorAll('.book-card');
+    
+    // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
+    allBookCards.forEach(card => {
+        uniqueBookIds.add(card.id);
+    });
+    
+    // نعرض العدد الفعلي للكتب الفريدة
+    document.getElementById('total-books-count').textContent = uniqueBookIds.size;
+}
         <!-- إضافة عدد الكتب المتاحة -->
         <div class="books-count" style="margin: 1rem 0; font-size: 1.1rem; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; display: inline-block;">
             عدد الكتب المتاحة: <span id="total-books-count">24</span> كتاب
@@ -566,6 +582,12 @@
             </div>
             
             <div class="book-grid" id="new-book-grid">
+
+<div class="books-count" style="margin: 0.5rem 0; font-size: 1.1rem; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; display: inline-block;">
+    إجمالي الكتب: <span id="total-books-count">20</span> كتاب | 
+    الجديد منها: <span id="new-books-count">4</span> كتاب
+</div>
+                
                 <!-- تحرير المصطلح القرآني المجلد 1 -->
                 <div class="book-card" data-lang="ar">
                     <div class="book-cover">
@@ -1152,6 +1174,12 @@ function updateBooksCount() {
     document.getElementById('total-books-count').textContent = bookCards.length;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // ...
+    updateBooksCount();
+    updateNewBooksCount();
+});
+        
 // استدعاء الدالة عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
     updateBooksCount();
@@ -1175,7 +1203,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return false;
         }
-        
+
+    document.addEventListener('DOMContentLoaded', function() {
+    updateLastUpdateTime();
+    setupSearch();
+    setupFilterButtons();
+    setupNewBooksFilter();
+    fixBookPaths();
+    updateBooksCount(); // استدعاء الدالة المعدلة
+});
         // تحسين أداء البحث باستخدام Debounce
         function debounce(func, wait, immediate) {
             let timeout;
