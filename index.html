@@ -1164,6 +1164,102 @@
         
     
     <script>
+        <script>
+    // ... بقية الدوال ...
+
+    // تهيئة البحث
+    function setupSearch() {
+        const searchInput = document.getElementById('book-search');
+        const suggestionsContainer = document.getElementById('search-suggestions');
+        // جمع جميع الكتب في الصفحة (من القسمين)
+        const bookCards = Array.from(document.querySelectorAll('.book-card'));
+        const newBooksSection = document.querySelector('.new-books-section');
+        
+        const performSearch = debounce(function() {
+            const searchTerm = this.value.trim();
+            
+            if (searchTerm === '') {
+                suggestionsContainer.style.display = 'none';
+                bookCards.forEach(card => card.style.display = 'block');
+                newBooksSection.style.display = 'block'; // إظهار قسم الكتب الجديدة
+                return;
+            }
+            
+            const suggestions = [];
+            
+            bookCards.forEach(card => {
+                const title = card.querySelector('h2').textContent;
+                const author = card.querySelector('.book-meta').textContent;
+                const desc = card.querySelector('.book-desc')?.textContent || '';
+                
+                const matches = fuzzySearch(title, searchTerm) || 
+                              fuzzySearch(author, searchTerm) ||
+                              fuzzySearch(desc, searchTerm);
+                
+                if (matches) {
+                    card.style.display = 'block';
+                    suggestions.push({
+                        title: title,
+                        author: author,
+                        id: card.id,
+                        isNew: card.closest('#new-book-grid') !== null
+                    });
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // إخفاء قسم الكتب الجديدة إذا لم توجد نتائج فيه
+            const hasNewBooksResults = bookCards.some(card => 
+                card.style.display === 'block' && 
+                card.closest('#new-book-grid') !== null
+            );
+            
+            newBooksSection.style.display = hasNewBooksResults ? 'block' : 'none';
+            
+            if (suggestions.length > 0) {
+                suggestionsContainer.innerHTML = suggestions.map(book => `
+                    <div class="suggestion-item" data-id="${book.id}" data-new="${book.isNew}">
+                        <div class="suggestion-title">${book.title}</div>
+                        <div class="suggestion-author">${book.author}</div>
+                        ${book.isNew ? '<div style="color: var(--new-badge-color); font-size: 0.8rem; margin-top: 5px;">(كتاب جديد)</div>' : ''}
+                    </div>
+                `).join('');
+                suggestionsContainer.style.display = 'block';
+            } else {
+                suggestionsContainer.innerHTML = '<div class="suggestion-item">لا توجد نتائج</div>';
+                suggestionsContainer.style.display = 'block';
+                newBooksSection.style.display = 'none';
+            }
+        }, 300);
+        
+        searchInput.addEventListener('input', performSearch);
+        suggestionsContainer.addEventListener('click', (e) => {
+            const suggestion = e.target.closest('.suggestion-item');
+            if (suggestion) {
+                const bookId = suggestion.dataset.id;
+                const isNewBook = suggestion.dataset.new === 'true';
+                
+                if (bookId) {
+                    suggestionsContainer.style.display = 'none';
+                    const bookCard = document.getElementById(bookId);
+                    
+                    if (bookCard) {
+                        // إذا كان الكتاب في القسم الجديد، نجعله مرئياً
+                        if (isNewBook) {
+                            document.querySelector('.new-books-section').style.display = 'block';
+                        }
+                        
+                        bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
+                        setTimeout(() => { bookCard.style.boxShadow = ''; }, 2000);
+                    }
+                }
+            }
+        });
+    }
+
+   
     // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
     function updateBooksCount() {
         // نستخدم Set لتخزين معرفات الكتب الفريدة
