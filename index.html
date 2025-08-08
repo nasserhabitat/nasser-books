@@ -532,21 +532,28 @@
             إجمالي الكتب: <span id="total-books-count">20</span> كتاب | 
             الجديد منها: <span id="new-books-count">4</span> كتاب
         </div>
-        // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار الكتب الجديدة)
+       // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار الكتب الجديدة)
 function updateBooksCount() {
     // نستخدم Set لتخزين معرفات الكتب الفريدة
     const uniqueBookIds = new Set();
     
-    // نجمع جميع عناصر الكتب
-    const allBookCards = document.querySelectorAll('.book-card');
+    // نجمع جميع عناصر الكتب من القسم الرئيسي فقط (لا نعد الكتب الجديدة المكررة)
+    const mainBookCards = document.querySelectorAll('#book-grid .book-card');
     
     // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
-    allBookCards.forEach(card => {
-        uniqueBookIds.add(card.id);
+    mainBookCards.forEach(card => {
+        uniqueBookIds.add(card.id.replace('book-', ''));
     });
     
     // نعرض العدد الفعلي للكتب الفريدة
     document.getElementById('total-books-count').textContent = uniqueBookIds.size;
+}
+
+// حساب عدد الكتب الجديدة بشكل صحيح
+function updateNewBooksCount() {
+    // نحسب فقط الكتب التي تحمل شارة "جديد" في قسم الكتب الجديدة
+    const newBooks = document.querySelectorAll('#new-book-grid .new-badge-card');
+    document.getElementById('new-books-count').textContent = newBooks.length;
 }
         <!-- شريط البحث -->
         <div class="search-container">
@@ -1348,16 +1355,22 @@ function updateBooksCount() {
         });
     }
     
-    // تهيئة الصفحة عند التحميل
-    document.addEventListener('DOMContentLoaded', function() {
-        updateLastUpdateTime();
-        setupSearch();
-        setupFilterButtons();
-        setupNewBooksFilter();
-        fixBookPaths();
+    /// تهيئة الصفحة عند التحميل
+document.addEventListener('DOMContentLoaded', function() {
+    updateLastUpdateTime();
+    setupSearch();
+    setupFilterButtons();
+    setupNewBooksFilter();
+    fixBookPaths();
+    updateBooksCount();
+    updateNewBooksCount();
+    
+    // تحديث العد تلقائياً كل ساعة (اختياري)
+    setInterval(() => {
         updateBooksCount();
         updateNewBooksCount();
-    });
+    }, 3600000); // 60 دقيقة × 60 ثانية × 1000 مللي ثانية
+});
 </script>
     
 </body>
