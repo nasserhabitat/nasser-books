@@ -545,7 +545,6 @@
             </div>
         </div>
     </header>
-
        // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار الكتب الجديدة)
 function updateBooksCount() {
     // نستخدم Set لتخزين معرفات الكتب الفريدة
@@ -1206,7 +1205,7 @@ function updateNewBooksCount() {
     
     // حساب عدد الكتب الجديدة
     function updateNewBooksCount() {
-        const newBooks = document.querySelectorAll('.new-badge-card');
+        const newBooks = document.querySelectorAll('#new-book-grid .new-badge-card');
         document.getElementById('new-books-count').textContent = newBooks.length;
     }
     
@@ -1223,6 +1222,7 @@ function updateNewBooksCount() {
         };
         document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
     }
+    
     
     // دالة البحث الضبابي المحسنة للغة العربية
     function fuzzySearch(text, searchTerm) {
