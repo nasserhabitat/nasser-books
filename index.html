@@ -532,7 +532,22 @@
             إجمالي الكتب: <span id="total-books-count">20</span> كتاب | 
             الجديد منها: <span id="new-books-count">4</span> كتاب
         </div>
-        
+        // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار الكتب الجديدة)
+function updateBooksCount() {
+    // نستخدم Set لتخزين معرفات الكتب الفريدة
+    const uniqueBookIds = new Set();
+    
+    // نجمع جميع عناصر الكتب
+    const allBookCards = document.querySelectorAll('.book-card');
+    
+    // نضيف معرفات الكتب إلى الـ Set (الـ Set يتجاهل القيم المكررة تلقائياً)
+    allBookCards.forEach(card => {
+        uniqueBookIds.add(card.id);
+    });
+    
+    // نعرض العدد الفعلي للكتب الفريدة
+    document.getElementById('total-books-count').textContent = uniqueBookIds.size;
+}
         <!-- شريط البحث -->
         <div class="search-container">
             <input type="text" id="book-search" placeholder="ابحث عن كتاب أو مؤلف..." 
