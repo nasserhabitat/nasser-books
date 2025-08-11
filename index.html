@@ -553,6 +553,708 @@
         </div>
     </header>
 
+
+
+
+
+    بحث ذكي
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محرك البحث - مكتبة ناصر ابن داوود</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9/elasticlunr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #97bc62;
+            --accent-color: #1e3a1f;
+            --light-color: #f5f9f5;
+            --dark-color: #1a1a1a;
+            --text-color: #333;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f5f9f5, #e8f4e8);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            background: var(--secondary-color);
+            padding: 15px;
+            border-radius: 50%;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .search-section {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        #searchInput {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        #searchInput:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.2);
+        }
+        
+        #searchButton {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 0 25px;
+            font-size: 1.1rem;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        #searchButton:hover {
+            background: var(--accent-color);
+        }
+        
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            background: white;
+        }
+        
+        .results-section {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        
+        .section-title i {
+            font-size: 1.5rem;
+        }
+        
+        #resultsCount {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+        
+        #searchResults {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .book-card {
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .book-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .book-category {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .book-body {
+            padding: 20px;
+        }
+        
+        .book-excerpt {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .book-language {
+            display: inline-block;
+            background: #e8f4e8;
+            color: var(--accent-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        
+        .book-link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .book-link:hover {
+            background: var(--primary-color);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            grid-column: 1 / -1;
+        }
+        
+        .no-results i {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .no-results h3 {
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        .instructions {
+            background: #f8f8f8;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .instructions h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions ul {
+            padding-right: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background-color: #ffec99;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .search-box {
+                flex-direction: column;
+            }
+            
+            #searchResults {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-book-quran"></i>
+                <div>
+                    <h1>مكتبة ناصر ابن داوود - محرك البحث</h1>
+                    <p class="subtitle">محرك بحث متكامل للوصول السريع إلى مؤلفات الدكتور ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية</p>
+                </div>
+            </div>
+        </header>
+        
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث في الكتب (مثال: المصحف، العدد، ألف، التدبر...)">
+                <button id="searchButton"><i class="fas fa-search"></i> بحث</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="categoryFilter"><i class="fas fa-bookmark"></i> التصنيف</label>
+                    <select id="categoryFilter">
+                        <option value="all">جميع التصنيفات</option>
+                        <option value="quranic">الدراسات القرآنية</option>
+                        <option value="faith">الدراسات الإيمانية</option>
+                        <option value="digital">المشاريع الرقمية</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="languageFilter"><i class="fas fa-language"></i> اللغة</label>
+                    <select id="languageFilter">
+                        <option value="all">جميع اللغات</option>
+                        <option value="arabic">العربية</option>
+                        <option value="english">الإنجليزية</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        
+        <section class="results-section">
+            <div class="section-title">
+                <i class="fas fa-search"></i>
+                <h2>نتائج البحث <span id="resultsCount">0</span></h2>
+            </div>
+            
+            <div id="searchResults">
+                <div class="no-results">
+                    <i class="fas fa-search"></i>
+                    <h3>ابدأ بالبحث في مكتبة الكتب</h3>
+                    <p>اكتب كلمة أو عبارة في مربع البحث أعلاه للعثور على الكتب ذات الصلة</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="instructions">
+            <h3><i class="fas fa-info-circle"></i> تعليمات الاستخدام</h3>
+            <ul>
+                <li>اكتب كلمة أو عبارة في حقل البحث للعثور على الكتب التي تحتوي على هذه الكلمة</li>
+                <li>استخدم التصنيفات واللغات لتصفية نتائج البحث حسب احتياجك</li>
+                <li>انقر على "عرض الكتاب" للوصول إلى الكتاب على موقع الأرشيف</li>
+                <li>المحرك يبحث في <span class="highlight">العناوين والمحتوى</span> لجميع الكتب في المكتبة</li>
+                <li>أمثلة على كلمات للبحث: <span class="highlight">"العدد"، "ألف"، "المصحف"، "التدبر"، "الرسم"</span></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // تهيئة فهرس البحث
+        let index = elasticlunr(function() {
+            this.addField('title');
+            this.addField('content');
+            this.addField('category');
+            this.addField('language');
+            this.setRef('id');
+        });
+        
+        // بيانات الكتب (نموذجية)
+        const books = [
+            {
+                id: 1,
+                title: "نحو تدبر واعٍ",
+                content: "هذا الكتاب يقدم منهجية جديدة في تدبر القرآن الكريم، مع التركيز على الفهم العميق للآيات والسور القرآنية. يتناول الكتاب مفاهيم أساسية في التدبر الواعي وكيفية تطبيقها في الحياة اليومية. كما يقدم تحليلاً لبعض المصطلحات القرآنية الأساسية مثل 'التقوى' و'الإيمان' و'الهدى'.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 2,
+                title: "أنوار البيان في رسم المصحف العثماني",
+                content: "دراسة متعمقة في رسم المصحف العثماني وأصوله، تشرح الخصائص الفريدة للرسم القرآني وتطوره التاريخي. الكتاب يسلط الضوء على الجوانب الرقمية لتحليل الرسم القرآني باستخدام تقنيات حديثة. يتضمن تحليل لرسم كلمات مثل 'ألف' و'العدد' في المصاحف المختلفة.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 3,
+                title: "تغيير المفاهيم للمصطلحات القرآنية",
+                content: "يتناول هذا الكتاب المصطلحات القرآنية الأساسية وكيفية تغير فهمها عبر العصور. يقدم تحليلاً لمصطلحات مثل 'العبادة' و'الدين' و'الاستخلاف' ويقترح فهماً معاصراً لها. يشرح الكتاب كيف يمكن تغيير المفاهيم الخاطئة المرتبطة ببعض المصطلحات القرآنية.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 4,
+                title: "تحرير المصطلح القرآني المجلد 1",
+                content: "الجزء الأول من سلسلة متخصصة في تحرير المصطلحات القرآنية، يركز على المفاهيم الأساسية مثل 'الكتاب' و'القرآن' و'الفرقان'. يقدم الكتاب منهجية علمية لتحليل المصطلحات القرآنية في سياقاتها المختلفة.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 5,
+                title: "التدبر في مرآة الرسوم",
+                content: "دراسة رائدة تربط بين التدبر القرآني وفنون الرسم الإسلامي، تقدم رؤية جديدة لكيفية استخدام الفنون البصرية في تعزيز الفهم القرآني. الكتاب يتضمن تحليلاً لتمثيل المفاهيم القرآنية في الفن الإسلامي عبر العصور.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 6,
+                title: "فقه اللسان القرآني",
+                content: "دراسة لغوية متعمقة للسان القرآني، تبحث في الخصائص الفريدة للغة القرآن من النواحي الصوتية والصرفية والنحوية والدلالية. الكتاب يقدم تحليلاً لظاهرة 'العدد' في القرآن وكيفية استخدامها في سياقات مختلفة.",
+                category: "quranic",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 7,
+                title: "Towards Conscious Contemplation",
+                content: "This book presents a new methodology for contemplating the Quran, focusing on a deep understanding of Quranic verses and chapters. It discusses fundamental concepts of conscious contemplation and how to apply them in daily life. The book also analyzes key Quranic terms such as 'Taqwa', 'Iman', and 'Huda'.",
+                category: "quranic",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 8,
+                title: "ANWAR AL-BAYAN: Unveiling the Secrets",
+                content: "An in-depth study of the Uthmani script of the Quran, explaining the unique characteristics of Quranic orthography and its historical development. The book highlights the digital aspects of analyzing Quranic script using modern techniques. It includes analysis of words like 'alif' and 'number' in different Quranic manuscripts.",
+                category: "quranic",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 9,
+                title: "Changing the Concepts of Quranic Terminology",
+                content: "This book addresses fundamental Quranic terms and how their understanding has changed over the centuries. It provides an analysis of terms such as 'Ibadah', 'Deen', and 'Istikhlaf', proposing a contemporary understanding of them. The book explains how misconceptions associated with certain Quranic terms can be changed.",
+                category: "quranic",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 10,
+                title: "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+                content: "دراسة متعمقة لمفهوم الحياء في الإسلام، تربط بين الجوانب الروحية والعملية لهذا الخلق العظيم. الكتاب يقدم رؤية شاملة للحياء كسياج للروح وبوصلة للفهم الصحيح في الحياة.",
+                category: "faith",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 11,
+                title: "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
+                content: "كتاب يركز على مفهوم اليقين في القرآن والسنة، وكيفية تحقيقه في حياة المسلم. يقدم الكتاب منهجاً عملياً لتربية النفس على اليقين في جميع جوانب الحياة.",
+                category: "faith",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 12,
+                title: "الأسماء الحسنى الوظيفية",
+                content: "دراسة مبتكرة في الأسماء الحسنى، تقدم رؤية جديدة لكيفية تفعيل هذه الأسماء في حياة المسلم اليومية. الكتاب يربط بين المعاني العقدية للأسماء الحسنى وتطبيقاتها العملية في الحياة.",
+                category: "faith",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 13,
+                title: "MODESTY: The Fence of the Soul",
+                content: "An in-depth study of the concept of modesty in Islam, linking the spiritual and practical aspects of this great moral value. The book presents a comprehensive vision of modesty as a fence for the soul and a compass for correct understanding in life.",
+                category: "faith",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 14,
+                title: "The Functional Beautiful Names",
+                content: "An innovative study of the Beautiful Names of Allah, presenting a new vision of how to activate these names in the daily life of a Muslim. The book connects the creedal meanings of the Beautiful Names with their practical applications in life.",
+                category: "faith",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 15,
+                title: "مشروع رقمنة المخطوطات الأصلية",
+                content: "توثيق لمشروع رقمنة المخطوطات القرآنية الأصلية، يشرح المنهجية التقنية المستخدمة والتحديات والحلول. يتضمن الكتاب نماذج من المخطوطات التي تمت رقمنتها وتحليلها رقمياً.",
+                category: "digital",
+                language: "arabic",
+                link: "https://archive.org/details/@n_ben597"
+            },
+            {
+                id: 16,
+                title: "Digitizing the Original Manuscripts",
+                content: "Documentation of the project to digitize original Quranic manuscripts, explaining the technical methodology used, challenges, and solutions. The book includes samples of manuscripts that have been digitized and digitally analyzed.",
+                category: "digital",
+                language: "english",
+                link: "https://archive.org/details/@n_ben597"
+            }
+        ];
+        
+        // إضافة الكتب إلى الفهرس
+        books.forEach(book => {
+            index.addDoc({
+                id: book.id,
+                title: book.title,
+                content: book.content,
+                category: book.category,
+                language: book.language
+            });
+        });
+        
+        // وظيفة البحث
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            const category = document.getElementById('categoryFilter').value;
+            const language = document.getElementById('languageFilter').value;
+            
+            let results = [];
+            
+            if (query) {
+                // البحث في الفهرس
+                const searchResults = index.search(query, {
+                    fields: {
+                        title: {boost: 3},
+                        content: {boost: 1}
+                    },
+                    bool: "OR",
+                    expand: true
+                });
+                
+                // تحويل النتائج إلى كائنات كتاب
+                results = searchResults.map(result => {
+                    return books.find(book => book.id === parseInt(result.ref));
+                });
+            } else {
+                // إذا لم يكن هناك استعلام، عرض جميع الكتب
+                results = [...books];
+            }
+            
+            // تطبيق الفلاتر
+            if (category !== 'all') {
+                results = results.filter(book => book.category === category);
+            }
+            
+            if (language !== 'all') {
+                results = results.filter(book => book.language === language);
+            }
+            
+            // عرض النتائج
+            displayResults(results, query);
+        }
+        
+        // وظيفة عرض النتائج
+        function displayResults(results, query) {
+            const resultsContainer = document.getElementById('searchResults');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            resultsCount.textContent = results.length;
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-book-open"></i>
+                        <h3>لم يتم العثور على نتائج</h3>
+                        <p>حاول استخدام كلمات بحث مختلفة أو تغيير الفلاتر</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '';
+            
+            results.forEach(book => {
+                // تمييز كلمات البحث في النتائج
+                let excerpt = book.content;
+                if (query) {
+                    const regex = new RegExp(query, 'gi');
+                    excerpt = excerpt.replace(regex, match => `<span class="highlight">${match}</span>`);
+                }
+                
+                // تحديد أيقونة التصنيف
+                let categoryIcon, categoryName;
+                switch(book.category) {
+                    case 'quranic':
+                        categoryIcon = 'fas fa-book-quran';
+                        categoryName = 'الدراسات القرآنية';
+                        break;
+                    case 'faith':
+                        categoryIcon = 'fas fa-hands-praying';
+                        categoryName = 'الدراسات الإيمانية';
+                        break;
+                    case 'digital':
+                        categoryIcon = 'fas fa-laptop-code';
+                        categoryName = 'المشاريع الرقمية';
+                        break;
+                }
+                
+                // تحديد أيقونة اللغة
+                const languageIcon = book.language === 'arabic' ? 'fas fa-language' : 'fas fa-globe';
+                const languageName = book.language === 'arabic' ? 'العربية' : 'الإنجليزية';
+                
+                html += `
+                    <div class="book-card">
+                        <div class="book-header">
+                            <h3 class="book-title">${book.title}</h3>
+                            <div class="book-category">
+                                <i class="${categoryIcon}"></i>
+                                ${categoryName}
+                            </div>
+                        </div>
+                        <div class="book-body">
+                            <span class="book-language">
+                                <i class="${languageIcon}"></i> ${languageName}
+                            </span>
+                            <p class="book-excerpt">${excerpt.substring(0, 200)}...</p>
+                            <a href="${book.link}" target="_blank" class="book-link">
+                                <i class="fas fa-external-link-alt"></i> عرض الكتاب
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            resultsContainer.innerHTML = html;
+        }
+        
+        // تهيئة الأحداث
+        document.addEventListener('DOMContentLoaded', function() {
+            // إضافة الكتب إلى الفهرس
+            books.forEach(book => {
+                index.addDoc({
+                    id: book.id,
+                    title: book.title,
+                    content: book.content,
+                    category: book.category,
+                    language: book.language
+                });
+            });
+            
+            // تهيئة أحداث البحث
+            document.getElementById('searchButton').addEventListener('click', performSearch);
+            document.getElementById('searchInput').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            document.getElementById('categoryFilter').addEventListener('change', performSearch);
+            document.getElementById('languageFilter').addEventListener('change', performSearch);
+            
+            // البحث الأولي
+            performSearch();
+        });
+    </script>
+</body>
+</html>
+
+
+
+    
     <main class="container">
           <!-- قسم الكتب الجديدة -->
         <div class="new-books-section">
