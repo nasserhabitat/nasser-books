@@ -17,6 +17,7 @@
             --dark-color: #333;
             --new-badge-color: #27ae60;
             --new-section-bg: #f9f7f0;
+            --search-highlight: #ffeb3b;
         }
         
         * {
@@ -519,6 +520,24 @@
             margin: 15px 0;
             color: var(--primary-color);
             font-weight: 500;
+            background: rgba(41, 128, 185, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .highlight {
+            background-color: var(--search-highlight);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #e74c3c;
+            font-weight: 500;
+            display: none;
         }
     </style>
 </head>
@@ -541,7 +560,7 @@
             
             <!-- شريط البحث -->
             <div class="search-container">
-                <input type="text" id="book-search" placeholder="ابحث عن كتاب أو مؤلف..." 
+                <input type="text" id="book-search" placeholder="ابحث عن كتاب أو مؤلف أو محتوى..." 
                        aria-label="بحث الكتب" class="search-input">
                 <button class="search-btn" aria-label="تنفيذ البحث">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -569,7 +588,7 @@
                     <button data-filter="ar">العربية</button>
                     <button data-filter="en">English</button>
                 </div>
-            
+            </div>
             
             <div class="book-grid" id="new-book-grid">
 
@@ -590,7 +609,7 @@
                         <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
                         <div class="book-actions">
                             <a href="books/editing-the-quranic-terminology-tome1/ar/" class="btn">النسخة العربية</a>
-                             </div>
+                        </div>
                     </div>
                 </div>
 
@@ -609,7 +628,7 @@
                         <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
                         <div class="book-actions">
                             <a href="books/editing-the-quranic-terminology-tome1/en/" class="btn">English Version</a>
-                             </div>
+                        </div>
                     </div>
                 </div>
 
@@ -629,7 +648,7 @@
                         <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
                         <div class="book-actions">
                             <a href="books/editing-the-quranic-terminology-tome2/ar/" class="btn">النسخة العربية</a>
-                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -685,7 +704,7 @@
                         <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
                         <div class="book-actions">
                             <a href="books/editing-the-quranic-terminology-tome2/en/" class="btn">English Version</a>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1136,18 +1155,22 @@
                 <div class="book-info">
                     <h2>AND SO THAT HE MAY BE OF THE CERTAIN ONES: A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM</h2>
                     <p class="book-meta">By: Nasser Ibn Dawood</p>
-                                       <div class="book-actions">
+                    <div class="book-actions">
                         <a href="books/malakoot/en/" class="btn">English Version</a>
                     </div>
                 </div>
             </div>
         </div>
         
-    </main>
-    <!-- رسالة معلومات البحث -->
-        <div class="search-info" id="search-info" style="display: none;">
+        <!-- رسالة معلومات البحث -->
+        <div class="search-info" id="search-info">
             تبحث عن: <strong id="search-term-display"></strong> | 
             عدد النتائج: <strong id="search-results-count">0</strong>
+        </div>
+        
+        <!-- رسالة عدم وجود نتائج -->
+        <div class="no-results" id="no-results">
+            لم يتم العثور على كتب تطابق بحثك. حاول استخدام مصطلحات أخرى.
         </div>
     </main>
     <footer class="site-footer">
@@ -1157,10 +1180,6 @@
             <p>جميع الحقوق محفوظة - مُرخَّص للنشر والاقتباس بشرط ذكر المؤلف</p>
         </div>
     </footer>
-
-        
-    
-       
 
     <script>
     // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
@@ -1228,6 +1247,14 @@
         };
     }
     
+    // إبراز النص المطابق في نتائج البحث
+    function highlightText(text, searchTerm) {
+        if (!searchTerm) return text;
+        
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+    
     // تهيئة البحث (تعديلها لتشمل فقط الكتب المتاحة)
     function setupSearch() {
         const searchInput = document.getElementById('book-search');
@@ -1235,6 +1262,7 @@
         const searchInfo = document.getElementById('search-info');
         const searchTermDisplay = document.getElementById('search-term-display');
         const searchResultsCount = document.getElementById('search-results-count');
+        const noResultsMsg = document.getElementById('no-results');
         
         // جمع الكتب من القسم الرئيسي فقط (الكتب المتاحة)
         const bookCards = Array.from(document.querySelectorAll('#book-grid .book-card'));
@@ -1242,11 +1270,13 @@
         const performSearch = debounce(function() {
             const searchTerm = this.value.trim();
             searchTermDisplay.textContent = searchTerm;
+            searchTermDisplay.innerHTML = highlightText(searchTerm, searchTerm);
             
             if (searchTerm === '') {
                 suggestionsContainer.style.display = 'none';
                 bookCards.forEach(card => card.style.display = 'block');
                 searchInfo.style.display = 'none';
+                noResultsMsg.style.display = 'none';
                 return;
             }
             
@@ -1265,13 +1295,32 @@
                 if (matches) {
                     card.style.display = 'block';
                     resultsCount++;
+                    
+                    // إبراز النص في البطاقة
+                    if (fuzzySearch(title, searchTerm)) {
+                        card.querySelector('h2').innerHTML = highlightText(title, searchTerm);
+                    }
+                    if (fuzzySearch(author, searchTerm)) {
+                        card.querySelector('.book-meta').innerHTML = highlightText(author, searchTerm);
+                    }
+                    if (fuzzySearch(desc, searchTerm)) {
+                        card.querySelector('.book-desc').innerHTML = highlightText(desc, searchTerm);
+                    }
+                    
                     suggestions.push({
                         title: title,
                         author: author,
-                        id: card.id
+                        id: card.id,
+                        searchTerm: searchTerm
                     });
                 } else {
                     card.style.display = 'none';
+                    // إعادة النص الأصلي للبطاقات غير المطابقة
+                    card.querySelector('h2').innerHTML = title;
+                    card.querySelector('.book-meta').innerHTML = author;
+                    if (card.querySelector('.book-desc')) {
+                        card.querySelector('.book-desc').innerHTML = desc;
+                    }
                 }
             });
             
@@ -1279,11 +1328,18 @@
             searchResultsCount.textContent = resultsCount;
             searchInfo.style.display = 'block';
             
+            // إظهار أو إخفاء رسالة عدم وجود نتائج
+            if (resultsCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+            
             if (suggestions.length > 0) {
                 suggestionsContainer.innerHTML = suggestions.map(book => `
                     <div class="suggestion-item" data-id="${book.id}">
-                        <div class="suggestion-title">${book.title}</div>
-                        <div class="suggestion-author">${book.author}</div>
+                        <div class="suggestion-title">${highlightText(book.title, book.searchTerm)}</div>
+                        <div class="suggestion-author">${highlightText(book.author, book.searchTerm)}</div>
                     </div>
                 `).join('');
                 suggestionsContainer.style.display = 'block';
@@ -1294,6 +1350,14 @@
         }, 300);
         
         searchInput.addEventListener('input', performSearch);
+        
+        // إخفاء الاقتراحات عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!suggestionsContainer.contains(e.target) && e.target !== searchInput) {
+                suggestionsContainer.style.display = 'none';
+            }
+        });
+        
         suggestionsContainer.addEventListener('click', (e) => {
             const suggestion = e.target.closest('.suggestion-item');
             if (suggestion) {
@@ -1303,10 +1367,21 @@
                     const bookCard = document.getElementById(bookId);
                     if (bookCard) {
                         bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // إضافة تأثير بسيط للفت الانتباه
                         bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
-                        setTimeout(() => { bookCard.style.boxShadow = ''; }, 2000);
+                        setTimeout(() => { 
+                            bookCard.style.boxShadow = ''; 
+                        }, 2000);
                     }
                 }
+            }
+        });
+        
+        // البحث عند الضغط على Enter
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch.call(searchInput);
             }
         });
     }
