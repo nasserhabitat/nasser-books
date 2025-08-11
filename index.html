@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محرك البحث الداخلي - مكتبة ناصر ابن داوود</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9/elasticlunr.min.js"></script>
+    <title>مكتبة ناصر ابن داوود - محرك البحث الداخلي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c5f2d;
-            --secondary-color: #97bc62;
-            --accent-color: #1e3a1f;
-            --light-color: #f5f9f5;
-            --dark-color: #1a1a1a;
-            --text-color: #333;
-            --border-radius: 8px;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --primary-color: #1a5276;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-color: #f5f5f5;
+            --dark-color: #2c3e50;
+            --new-badge-color: #27ae60;
             --highlight-color: #ffec99;
+            --section-bg: #f9f7f0;
+            --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         * {
@@ -27,747 +26,939 @@
         }
         
         body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #f5f9f5, #e8f4e8);
-            color: var(--text-color);
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #333;
             line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-            direction: rtl;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1.5rem;
         }
         
-        header {
-            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-            color: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
-            text-align: center;
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
         }
         
         .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 15px;
-            margin-bottom: 15px;
         }
         
-        .logo i {
-            font-size: 2.5rem;
-            background: var(--secondary-color);
-            padding: 15px;
+        .logo-icon {
+            background: white;
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
         }
         
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
         }
         
-        .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(26, 82, 118, 0.8)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-content {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .search-section {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            padding: 25px;
-            margin-bottom: 30px;
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .search-box {
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stats {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
         
-        #searchInput {
-            flex: 1;
-            padding: 15px 20px;
-            border: 2px solid var(--secondary-color);
-            border-radius: var(--border-radius);
+        .stat-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Tajawal', sans-serif;
             font-size: 1.1rem;
-            font-family: 'Cairo', sans-serif;
+            outline: none;
+            box-shadow: var(--card-shadow);
+            background: white;
             transition: all 0.3s ease;
         }
         
-        #searchInput:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.2);
+        .search-input:focus {
+            box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.3);
         }
         
-        #searchButton {
-            background: var(--primary-color);
-            color: white;
+        .search-btn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
             border: none;
-            border-radius: var(--border-radius);
-            padding: 0 25px;
-            font-size: 1.1rem;
-            font-family: 'Cairo', sans-serif;
-            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: background 0.3s ease;
         }
         
-        #searchButton:hover {
-            background: var(--accent-color);
-        }
-        
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .filter-group {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .filter-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--accent-color);
-        }
-        
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: var(--border-radius);
-            font-family: 'Cairo', sans-serif;
-            font-size: 1rem;
-            background: white;
-        }
-        
-        .results-section {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            padding: 25px;
-            margin-bottom: 30px;
+        .section {
+            padding: 3rem 0;
         }
         
         .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .filter-buttons {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
         
-        .section-title i {
-            font-size: 1.5rem;
+        .filter-btn {
+            padding: 0.7rem 1.5rem;
+            background: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         
-        #resultsCount {
-            background: var(--secondary-color);
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
             color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 10px;
         }
         
-        #searchResults {
+        .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
         
         .book-card {
-            background: var(--light-color);
-            border-radius: var(--border-radius);
+            background: white;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e0e0e0;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
         
-        .book-header {
-            background: var(--primary-color);
+        .book-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--new-badge-color);
             color: white;
-            padding: 15px;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
         
-        .book-title {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
+        .book-cover {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .book-category {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .book-body {
-            padding: 20px;
-        }
-        
-        .book-excerpt {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        
-        .book-language {
-            display: inline-block;
-            background: #e8f4e8;
-            color: var(--accent-color);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-        
-        .book-link {
-            display: inline-block;
-            background: var(--secondary-color);
-            color: white;
-            text-decoration: none;
-            padding: 8px 20px;
-            border-radius: var(--border-radius);
+            color: var(--primary-color);
             font-weight: 600;
-            transition: background 0.3s ease;
-            width: 100%;
-            text-align: center;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
         
-        .book-link:hover {
-            background: var(--primary-color);
+        .book-title {
+            font-size: 1.25rem;
+            color: var(--dark-color);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            min-height: 60px;
         }
         
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            grid-column: 1 / -1;
+        .book-author {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
         
-        .no-results i {
-            font-size: 4rem;
-            color: #ddd;
-            margin-bottom: 20px;
+        .book-desc {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
         
-        .no-results h3 {
-            color: #777;
-            margin-bottom: 15px;
-        }
-        
-        .instructions {
-            background: #f8f8f8;
-            border-radius: var(--border-radius);
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--primary-color);
-        }
-        
-        .instructions h3 {
-            color: var(--accent-color);
-            margin-bottom: 15px;
+        .book-actions {
             display: flex;
+            gap: 0.8rem;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 0.7rem;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .new-books-section {
+            background: var(--section-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .new-books-section::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 250px;
+            height: 250px;
+            background: rgba(39, 174, 96, 0.05);
+            border-radius: 50%;
+        }
+        
+        .new-books-section::after {
+            content: "";
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(39, 174, 96, 0.05);
+            border-radius: 50%;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
         
-        .instructions ul {
-            padding-right: 20px;
+        .section-header .section-title {
+            margin-bottom: 0;
         }
         
-        .instructions li {
-            margin-bottom: 10px;
+        .new-badge {
+            background: var(--new-badge-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-description {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
             line-height: 1.7;
+        }
+        
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .search-results-section {
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: none;
+        }
+        
+        .search-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .search-info {
+            font-weight: 500;
+            color: var(--primary-color);
         }
         
         .highlight {
             background-color: var(--highlight-color);
-            padding: 2px 4px;
+            padding: 0.1rem 0.3rem;
             border-radius: 4px;
-            font-weight: bold;
+            font-weight: 600;
         }
         
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            grid-column: 1 / -1;
+            color: #777;
         }
         
-        .pagination button {
-            padding: 8px 15px;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .pagination button.active {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .pagination button:hover:not(.active) {
-            background: #f0f0f0;
+        .no-results i {
+            font-size: 3.5rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
         }
         
         @media (max-width: 768px) {
-            .search-box {
+            .nav {
                 flex-direction: column;
+                gap: 1rem;
             }
             
-            #searchResults {
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                gap: 1rem;
+            }
+            
+            .stat-box {
+                padding: 0.8rem 1.2rem;
+                min-width: 120px;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .books-grid {
                 grid-template-columns: 1fr;
             }
             
-            .filters {
-                flex-direction: column;
+            .nav-links {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
-            h1 {
-                font-size: 1.8rem;
+            .section-title h2 {
+                font-size: 1.7rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- شريط التنقل -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <div class="logo-text">مكتبة ناصر ابن داوود</div>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="active">الرئيسية</a>
+                    <a href="#">الكتب</a>
+                    <a href="#">البحث</a>
+                    <a href="#">حول المكتبة</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- قسم البطل -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>محرك البحث الداخلي لمكتبة ناصر ابن داوود</h1>
+                <p>ابحث داخل محتوى الكتب للعثور على المعلومات الدقيقة التي تريدها في الدراسات القرآنية والتدبر</p>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">كتاب متاح</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">كتب جديدة</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">لغات متاحة</div>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="ابحث في الكتب (مثال: المصحف، العدد، ألف، التدبر...)">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- نتائج البحث -->
     <div class="container">
-        <header>
-            <div class="logo">
-                <i class="fas fa-book-quran"></i>
-                <div>
-                    <h1>محرك البحث الداخلي - مكتبة ناصر ابن داوود</h1>
-                    <p class="subtitle">ابحث داخل محتوى الكتب للعثور على المعلومات الدقيقة التي تريدها</p>
+        <section class="search-results-section" id="searchResults">
+            <div class="search-header">
+                <div class="search-info">
+                    تبحث عن: <span class="highlight" id="searchTerm">التدبر</span> | 
+                    عدد النتائج: <span class="highlight" id="resultsCount">0</span>
                 </div>
+                <button class="filter-btn" onclick="hideSearchResults()">
+                    <i class="fas fa-times"></i> إغلاق النتائج
+                </button>
             </div>
-        </header>
-        
-        <section class="search-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ابحث في الكتب (مثال: المصحف، العدد، ألف، التدبر...)">
-                <button id="searchButton"><i class="fas fa-search"></i> بحث</button>
+            <div class="books-grid" id="searchResultsGrid">
+                <!-- سيتم عرض نتائج البحث هنا -->
             </div>
-            
-            <div class="filters">
-                <div class="filter-group">
-                    <label for="categoryFilter"><i class="fas fa-bookmark"></i> التصنيف</label>
-                    <select id="categoryFilter">
-                        <option value="all">جميع التصنيفات</option>
-                        <option value="quranic">الدراسات القرآنية</option>
-                        <option value="faith">الدراسات الإيمانية</option>
-                        <option value="digital">المشاريع الرقمية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="languageFilter"><i class="fas fa-language"></i> اللغة</label>
-                    <select id="languageFilter">
-                        <option value="all">جميع اللغات</option>
-                        <option value="arabic">العربية</option>
-                        <option value="english">الإنجليزية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="sortFilter"><i class="fas fa-sort"></i> الترتيب</label>
-                    <select id="sortFilter">
-                        <option value="relevance">الأكثر صلة</option>
-                        <option value="newest">الأحدث</option>
-                        <option value="oldest">الأقدم</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-        
-        <section class="results-section">
-            <div class="section-title">
-                <i class="fas fa-search"></i>
-                <h2>نتائج البحث <span id="resultsCount">0</span></h2>
-            </div>
-            
-            <div id="searchResults">
-                <div class="no-results">
-                    <i class="fas fa-search"></i>
-                    <h3>ابدأ بالبحث في مكتبة الكتب</h3>
-                    <p>اكتب كلمة أو عبارة في مربع البحث أعلاه للعثور على الكتب ذات الصلة</p>
-                </div>
-            </div>
-            
-            <div class="pagination" id="pagination" style="display: none;">
-                <!-- سيتم إنشاء أزرار الترقيم ديناميكياً -->
-            </div>
-        </section>
-        
-        <section class="instructions">
-            <h3><i class="fas fa-info-circle"></i> تعليمات البحث المتقدم</h3>
-            <ul>
-                <li>استخدم علامات الاقتباس للبحث عن عبارة كاملة مثل <span class="highlight">"الرسم العثماني"</span></li>
-                <li>استخدم علامة النجمة (*) للبحث عن جذور الكلمات مثل <span class="highlight">تدب*</span> للعثور على تدبر، تدبير، إلخ</li>
-                <li>استخدم علامة الطرح (-) لاستثناء كلمات معينة من البحث</li>
-                <li>ابحث داخل كتاب معين باستخدام الصيغة: <span class="highlight">عنوان الكتاب: كلمة البحث</span></li>
-                <li>المحرك يبحث في <span class="highlight">العناوين والمحتوى</span> لجميع الكتب في المكتبة</li>
-            </ul>
         </section>
     </div>
-
-    <script>
-        // تهيئة فهرس البحث
-        let index = elasticlunr(function() {
-            this.addField('title');
-            this.addField('content');
-            this.addField('category');
-            this.addField('language');
-            this.addField('author');
-            this.setRef('id');
-            this.saveDocument(false);
-        });
-        
-        // بيانات الكتب (نموذجية مع محتوى حقيقي)
-        const books = [
-            {
-                id: 1,
-                title: "نحو تدبر واعٍ",
-                content: "هذا الكتاب يقدم منهجية جديدة في تدبر القرآن الكريم، مع التركيز على الفهم العميق للآيات والسور القرآنية. يتناول الكتاب مفاهيم أساسية في التدبر الواعي وكيفية تطبيقها في الحياة اليومية. كما يقدم تحليلاً لبعض المصطلحات القرآنية الأساسية مثل 'التقوى' و'الإيمان' و'الهدى'. يعتمد الكتاب على منهجية علمية في تحليل النص القرآني مع الاهتمام بالجانب التطبيقي العملي. يشرح الكتاب كيفية استخدام الرسم العثماني في فهم دلالات الآيات القرآنية، مع إبراز أهمية العدد في البنية القرآنية.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2024-03-15"
-            },
-            {
-                id: 2,
-                title: "أنوار البيان في رسم المصحف العثماني",
-                content: "دراسة متعمقة في رسم المصحف العثماني وأصوله، تشرح الخصائص الفريدة للرسم القرآني وتطوره التاريخي. الكتاب يسلط الضوء على الجوانب الرقمية لتحليل الرسم القرآني باستخدام تقنيات حديثة. يتضمن تحليل لرسم كلمات مثل 'ألف' و'العدد' في المصاحف المختلفة. يوضح الكتاب العلاقة بين الرسم القرآني والتدبر، وكيف أن فهم الرسم يساعد في استنباط معاني جديدة للآيات. يحتوي الكتاب على أمثلة تطبيقية عديدة من سور القرآن المختلفة مع تحليل دقيق لرسم الكلمات وعلاقتها بالمعنى.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2024-01-20"
-            },
-            {
-                id: 3,
-                title: "تغيير المفاهيم للمصطلحات القرآنية",
-                content: "يتناول هذا الكتاب المصطلحات القرآنية الأساسية وكيفية تغير فهمها عبر العصور. يقدم تحليلاً لمصطلحات مثل 'العبادة' و'الدين' و'الاستخلاف' ويقترح فهماً معاصراً لها. يشرح الكتاب كيف يمكن تغيير المفاهيم الخاطئة المرتبطة ببعض المصطلحات القرآنية. يعتمد الكتاب على منهجية علمية في تحليل دلالات الألفاظ في السياق القرآني، مع الربط بين الرسم القرآني والمعنى. يبين الكتاب أهمية العدد في فهم المصطلحات القرآنية وكيف أن تكرارها في القرآن يحمل دلالات خاصة.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2023-11-10"
-            },
-            {
-                id: 4,
-                title: "تحرير المصطلح القرآني المجلد 1",
-                content: "الجزء الأول من سلسلة متخصصة في تحرير المصطلحات القرآنية، يركز على المفاهيم الأساسية مثل 'الكتاب' و'القرآن' و'الفرقان'. يقدم الكتاب منهجية علمية لتحليل المصطلحات القرآنية في سياقاتها المختلفة. يعرض الكتاب العلاقة بين المصطلح القرآني والرسم العثماني، وكيف أن رسم الكلمة يعكس دلالاتها الأصلية. يحتوي الكتاب على دراسة تطبيقية لرسم كلمة 'ألف' في القرآن وتكرارها في المصاحف التاريخية. يوضح الكتاب أهمية التدبر في فهم المصطلحات القرآنية وكيف أن العدد يلعب دوراً في بنية المصطلح القرآني.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2025-06-05"
-            },
-            {
-                id: 5,
-                title: "التدبر في مرآة الرسوم",
-                content: "دراسة رائدة تربط بين التدبر القرآني وفنون الرسم الإسلامي، تقدم رؤية جديدة لكيفية استخدام الفنون البصرية في تعزيز الفهم القرآني. الكتاب يتضمن تحليلاً لتمثيل المفاهيم القرآنية في الفن الإسلامي عبر العصور. يشرح الكتاب كيف يمكن استخدام الرسم كوسيلة للتدبر وفهم أعمق لمعاني القرآن. يحتوي على تحليل لرسم الحروف والكلمات في المصاحف القديمة وكيف يعكس ذلك فهماً خاصاً للآيات. يبين الكتاب دور العدد في البنية الفنية للرسم القرآني وكيف أن تكرار بعض الأشكال يحمل دلالات رمزية.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2023-09-15"
-            },
-            {
-                id: 6,
-                title: "فقه اللسان القرآني",
-                content: "دراسة لغوية متعمقة للسان القرآني، تبحث في الخصائص الفريدة للغة القرآن من النواحي الصوتية والصرفية والنحوية والدلالية. الكتاب يقدم تحليلاً لظاهرة 'العدد' في القرآن وكيفية استخدامها في سياقات مختلفة. يعرض الكتاب العلاقة بين الرسم القرآني واللسان القرآني، وكيف أن رسم الكلمات يعكس خصائص اللغة. يحتوي على تحليل لرسم حرف الألف في المصاحف التاريخية وتطوره عبر العصور. يوضح الكتاب أهمية التدبر اللغوي لفهم القرآن وكيف أن فهم الرسم يساعد في استنباط الأحكام.",
-                category: "quranic",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2024-05-22"
-            },
-            {
-                id: 7,
-                title: "Towards Conscious Contemplation",
-                content: "This book presents a new methodology for contemplating the Quran, focusing on a deep understanding of Quranic verses and chapters. It discusses fundamental concepts of conscious contemplation and how to apply them in daily life. The book also analyzes key Quranic terms such as 'Taqwa', 'Iman', and 'Huda'. It explores the relationship between the Uthmani script and contemplation, showing how the script enhances understanding. The book includes a detailed study of the frequency of words like 'Allah' and their significance in Quranic structure.",
-                category: "quranic",
-                language: "english",
-                author: "Nasser Ibn Dawood",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2024-02-18"
-            },
-            {
-                id: 8,
-                title: "ANWAR AL-BAYAN: Unveiling the Secrets",
-                content: "An in-depth study of the Uthmani script of the Quran, explaining the unique characteristics of Quranic orthography and its historical development. The book highlights the digital aspects of analyzing Quranic script using modern techniques. It includes analysis of words like 'alif' and 'number' in different Quranic manuscripts. The book demonstrates how understanding the script leads to deeper contemplation of Quranic meanings. It provides examples from various chapters showing the relationship between orthography and interpretation.",
-                category: "quranic",
-                language: "english",
-                author: "Nasser Ibn Dawood",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2024-01-05"
-            },
-            {
-                id: 9,
-                title: "Changing the Concepts of Quranic Terminology",
-                content: "This book addresses fundamental Quranic terms and how their understanding has changed over the centuries. It provides an analysis of terms such as 'Ibadah', 'Deen', and 'Istikhlaf', proposing a contemporary understanding of them. The book explains how misconceptions associated with certain Quranic terms can be changed. It explores the numerical patterns in Quranic terminology and their significance. The book includes a detailed study of the word 'Allah' in Quranic manuscripts and its orthographic variations.",
-                category: "quranic",
-                language: "english",
-                author: "Nasser Ibn Dawood",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2023-12-10"
-            },
-            {
-                id: 10,
-                title: "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-                content: "دراسة متعمقة لمفهوم الحياء في الإسلام، تربط بين الجوانب الروحية والعملية لهذا الخلق العظيم. الكتاب يقدم رؤية شاملة للحياء كسياج للروح وبوصلة للفهم الصحيح في الحياة. يربط الكتاب بين مفهوم الحياء والتدبر القرآني، ويبين كيف أن فهم القرآن يزيد الحياء في القلب. يحتوي على تحليل لدور الرسم القرآني في نقل المعاني المرتبطة بالحياء. يوضح الكتاب أهمية العدد في الآيات التي تتحدث عن الحياء والعلاقة بين تكرار المفاهيم وفهمها.",
-                category: "faith",
-                language: "arabic",
-                author: "ناصر ابن داوود",
-                link: "https://archive.org/details/@n_ben597",
-                date: "2023-10-30"
-            }
-        ];
-        
-        // إضافة الكتب إلى الفهرس
-        books.forEach(book => {
-            index.addDoc({
-                id: book.id,
-                title: book.title,
-                content: book.content,
-                category: book.category,
-                language: book.language,
-                author: book.author,
-                date: book.date
-            });
-        });
-        
-        // متغيرات الترقيم
-        const resultsPerPage = 6;
-        let currentPage = 1;
-        let currentResults = [];
-        
-        // وظيفة البحث
-        function performSearch() {
-            const query = document.getElementById('searchInput').value.trim();
-            const category = document.getElementById('categoryFilter').value;
-            const language = document.getElementById('languageFilter').value;
-            const sort = document.getElementById('sortFilter').value;
+    
+    <!-- قسم الكتب الجديدة -->
+    <section class="section new-books-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><span class="new-badge"><i class="fas fa-certificate"></i> جديد</span> الإصدارات الحديثة</h2>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="ar">العربية</button>
+                    <button class="filter-btn" data-filter="en">الإنجليزية</button>
+                </div>
+            </div>
             
-            let results = [];
-            
-            if (query) {
-                // البحث في الفهرس
-                const searchResults = index.search(query, {
-                    fields: {
-                        title: {boost: 3},
-                        content: {boost: 1},
-                        author: {boost: 2}
-                    },
-                    bool: "OR",
-                    expand: true
-                });
-                
-                // تحويل النتائج إلى كائنات كتاب
-                results = searchResults.map(result => {
-                    return books.find(book => book.id === parseInt(result.ref));
-                });
-            } else {
-                // إذا لم يكن هناك استعلام، عرض جميع الكتب
-                results = [...books];
-            }
-            
-            // تطبيق الفلاتر
-            if (category !== 'all') {
-                results = results.filter(book => book.category === category);
-            }
-            
-            if (language !== 'all') {
-                results = results.filter(book => book.language === language);
-            }
-            
-            // تطبيق الترتيب
-            if (sort === 'newest') {
-                results.sort((a, b) => new Date(b.date) - new Date(a.date));
-            } else if (sort === 'oldest') {
-                results.sort((a, b) => new Date(a.date) - new Date(b.date));
-            }
-            
-            // حفظ النتائج الحالية وعرض الصفحة الأولى
-            currentResults = results;
-            currentPage = 1;
-            displayResults(results, query);
-        }
-        
-        // وظيفة عرض النتائج مع الترقيم
-        function displayResults(results, query) {
-            const resultsContainer = document.getElementById('searchResults');
-            const resultsCount = document.getElementById('resultsCount');
-            const paginationContainer = document.getElementById('pagination');
-            
-            resultsCount.textContent = results.length;
-            
-            if (results.length === 0) {
-                resultsContainer.innerHTML = `
-                    <div class="no-results">
-                        <i class="fas fa-book-open"></i>
-                        <h3>لم يتم العثور على نتائج</h3>
-                        <p>حاول استخدام كلمات بحث مختلفة أو تغيير الفلاتر</p>
+            <div class="books-grid" id="newBooksGrid">
+                <!-- الكتب الجديدة -->
+                <div class="book-card">
+                    <div class="book-badge">جديد</div>
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="تحرير المصطلح القرآني المجلد 1">
                     </div>
-                `;
-                paginationContainer.style.display = 'none';
+                    <div class="book-info">
+                        <div class="book-category">الدراسات القرآنية</div>
+                        <h3 class="book-title">تحرير المصطلح القرآني المجلد 1</h3>
+                        <div class="book-author">ناصر ابن داوود</div>
+                        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني وتدبر المعاني</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">عرض الكتاب</a>
+                            <a href="#" class="action-btn btn-outline">بحث داخلي</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-badge">NEW</div>
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">Quranic Studies</div>
+                        <h3 class="book-title">CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1</h3>
+                        <div class="book-author">Nasser Ibn Dawood</div>
+                        <p class="book-desc">Applied study in the jurisprudence of Quranic language</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">View Book</a>
+                            <a href="#" class="action-btn btn-outline">Internal Search</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-badge">جديد</div>
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="تحرير المصطلح القرآني المجلد 2">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">الدراسات القرآنية</div>
+                        <h3 class="book-title">تحرير المصطلح القرآني المجلد 2</h3>
+                        <div class="book-author">ناصر ابن داوود</div>
+                        <p class="book-desc">استكمال لدراسة فقه اللسان القرآني وتطبيقاته في التدبر</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">عرض الكتاب</a>
+                            <a href="#" class="action-btn btn-outline">بحث داخلي</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-badge">NEW</div>
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">Quranic Studies</div>
+                        <h3 class="book-title">CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2</h3>
+                        <div class="book-author">Nasser Ibn Dawood</div>
+                        <p class="book-desc">Continuation of applied study in Quranic language jurisprudence</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">View Book</a>
+                            <a href="#" class="action-btn btn-outline">Internal Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الكتب المتاحة -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>الكتب المتاحة</h2>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="ar">العربية</button>
+                    <button class="filter-btn" data-filter="en">الإنجليزية</button>
+                </div>
+            </div>
+            
+            <div class="books-grid" id="allBooksGrid">
+                <!-- الكتب العربية -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="نحو تدبر واع">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">الدراسات القرآنية</div>
+                        <h3 class="book-title">نحو تدبر واع</h3>
+                        <div class="book-author">ناصر ابن داوود</div>
+                        <p class="book-desc">كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">عرض الكتاب</a>
+                            <a href="#" class="action-btn btn-outline">بحث داخلي</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1490633874781-1c63cc424610?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="أنوار البيان في رسم المصحف العثماني">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">الدراسات القرآنية</div>
+                        <h3 class="book-title">أنوار البيان في رسم المصحف العثماني</h3>
+                        <div class="book-author">ناصر ابن داوود</div>
+                        <p class="book-desc">دراسة علمية للرسم العثماني وأسراره اللغوية وتأثيرها على التدبر</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">عرض الكتاب</a>
+                            <a href="#" class="action-btn btn-outline">بحث داخلي</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="تغيير المفاهيم للمصطلحات القرآنية">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">الدراسات القرآنية</div>
+                        <h3 class="book-title">تغيير المفاهيم للمصطلحات القرآنية</h3>
+                        <div class="book-author">ناصر ابن داوود</div>
+                        <p class="book-desc">دراسة تطبيقية لفقه اللسان القرآني وتصحيح المفاهيم الخاطئة</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">عرض الكتاب</a>
+                            <a href="#" class="action-btn btn-outline">بحث داخلي</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الكتب الإنجليزية -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Towards Conscious Contemplation">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">Quranic Studies</div>
+                        <h3 class="book-title">Towards Conscious Contemplation</h3>
+                        <div class="book-author">Nasser Ibn Dawood</div>
+                        <p class="book-desc">A practical guide to deep understanding of the Holy Quran</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">View Book</a>
+                            <a href="#" class="action-btn btn-outline">Internal Search</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1629992101753-56d196c8aabb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="ANWAR AL-BAYAN: The Uthmanic Script's Linguistic Secrets">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">Quranic Studies</div>
+                        <h3 class="book-title">ANWAR AL-BAYAN: The Uthmanic Script's Linguistic Secrets</h3>
+                        <div class="book-author">Nasser Ibn Dawood</div>
+                        <p class="book-desc">Scientific study of the Uthmanic script and its linguistic secrets</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">View Book</a>
+                            <a href="#" class="action-btn btn-outline">Internal Search</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Changing Quranic Concepts">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-category">Quranic Studies</div>
+                        <h3 class="book-title">Changing Quranic Concepts</h3>
+                        <div class="book-author">Nasser Ibn Dawood</div>
+                        <p class="book-desc">Applied study of Quranic terminology jurisprudence</p>
+                        <div class="book-actions">
+                            <a href="#" class="action-btn btn-primary">View Book</a>
+                            <a href="#" class="action-btn btn-outline">Internal Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-book-open"></i> مكتبة ناصر ابن داوود
+                </div>
+                <p class="footer-description">
+                    مكتبة رقمية متخصصة في الدراسات القرآنية والتدبر، تحتوي على 24 كتاباً في مجال علوم القرآن والدراسات الإيمانية والمشاريع الرقمية. جميع الكتب متاحة للقراءة والبحث الداخلي.
+                </p>
+                <div class="copyright">
+                    © 2023 جميع الحقوق محفوظة - مكتبة ناصر ابن داوود
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // محاكاة محرك البحث
+        function searchBooks(query) {
+            const searchResultsSection = document.getElementById('searchResults');
+            const searchTermElement = document.getElementById('searchTerm');
+            const resultsCountElement = document.getElementById('resultsCount');
+            const searchResultsGrid = document.getElementById('searchResultsGrid');
+            
+            if (!query || query.trim() === '') {
+                hideSearchResults();
                 return;
             }
             
-            // حساب عدد الصفحات
-            const totalPages = Math.ceil(results.length / resultsPerPage);
+            // عرض قسم نتائج البحث
+            searchResultsSection.style.display = 'block';
+            searchTermElement.textContent = query;
             
-            // إنشاء الترقيم
-            let paginationHTML = '';
-            if (totalPages > 1) {
-                paginationHTML = `
-                    <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                `;
-                
-                for (let i = 1; i <= totalPages; i++) {
-                    paginationHTML += `
-                        <button class="${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>
-                    `;
+            // محاكاة نتائج البحث
+            const results = [
+                {
+                    id: 1,
+                    title: "نحو تدبر واع",
+                    author: "ناصر ابن داوود",
+                    category: "الدراسات القرآنية",
+                    desc: "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية. يتناول مفهوم <span class='highlight'>التدبر</span> وأهميته في الفهم الصحيح للقرآن."
+                },
+                {
+                    id: 2,
+                    title: "أنوار البيان في رسم المصحف العثماني",
+                    author: "ناصر ابن داوود",
+                    category: "الدراسات القرآنية",
+                    desc: "دراسة متعمقة للرسم العثماني وأسراره اللغوية. يتضمن الكتاب تحليل دقيق لرسم كلمات مثل <span class='highlight'>ألف</span> و<span class='highlight'>العدد</span> في المصاحف المختلفة."
+                },
+                {
+                    id: 3,
+                    title: "تحرير المصطلح القرآني المجلد 1",
+                    author: "ناصر ابن داوود",
+                    category: "الدراسات القرآنية",
+                    desc: "دراسة تطبيقية في فقه اللسان القرآني. يقدم الكتاب منهجية جديدة لفهم المصطلحات القرآنية من خلال <span class='highlight'>التدبر</span> والتحليل اللغوي."
+                },
+                {
+                    id: 4,
+                    title: "Towards Conscious Contemplation",
+                    author: "Nasser Ibn Dawood",
+                    category: "Quranic Studies",
+                    desc: "This book presents a new methodology for Quranic <span class='highlight'>contemplation</span>. It explores the relationship between script analysis and deeper understanding."
                 }
-                
-                paginationHTML += `
-                    <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                `;
-                
-                paginationContainer.innerHTML = paginationHTML;
-                paginationContainer.style.display = 'flex';
-            } else {
-                paginationContainer.style.display = 'none';
-            }
+            ];
             
-            // استخراج النتائج للصفحة الحالية
-            const startIndex = (currentPage - 1) * resultsPerPage;
-            const endIndex = Math.min(startIndex + resultsPerPage, results.length);
-            const pageResults = results.slice(startIndex, endIndex);
-            
-            // عرض نتائج الصفحة الحالية
+            // عرض نتائج البحث
+            resultsCountElement.textContent = results.length;
             let html = '';
             
-            pageResults.forEach(book => {
-                // تمييز كلمات البحث في النتائج
-                let excerpt = book.content.substring(0, 200);
-                if (query) {
-                    const regex = new RegExp(query.split(' ').join('|'), 'gi');
-                    excerpt = excerpt.replace(regex, match => `<span class="highlight">${match}</span>`);
-                }
-                
-                // تحديد أيقونة التصنيف
-                let categoryIcon, categoryName;
-                switch(book.category) {
-                    case 'quranic':
-                        categoryIcon = 'fas fa-book-quran';
-                        categoryName = 'الدراسات القرآنية';
-                        break;
-                    case 'faith':
-                        categoryIcon = 'fas fa-hands-praying';
-                        categoryName = 'الدراسات الإيمانية';
-                        break;
-                    case 'digital':
-                        categoryIcon = 'fas fa-laptop-code';
-                        categoryName = 'المشاريع الرقمية';
-                        break;
-                }
-                
-                // تحديد أيقونة اللغة
-                const languageIcon = book.language === 'arabic' ? 'fas fa-language' : 'fas fa-globe';
-                const languageName = book.language === 'arabic' ? 'العربية' : 'الإنجليزية';
-                
-                html += `
-                    <div class="book-card">
-                        <div class="book-header">
-                            <h3 class="book-title">${book.title}</h3>
-                            <div class="book-category">
-                                <i class="${categoryIcon}"></i>
-                                ${categoryName}
+            if (results.length > 0) {
+                results.forEach(book => {
+                    html += `
+                        <div class="book-card">
+                            <div class="book-cover">
+                                <img src="https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="${book.title}">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-category">${book.category}</div>
+                                <h3 class="book-title">${book.title}</h3>
+                                <div class="book-author">${book.author}</div>
+                                <p class="book-desc">${book.desc}</p>
+                                <div class="book-actions">
+                                    <a href="#" class="action-btn btn-primary">${book.category === 'الدراسات القرآنية' ? 'عرض الكتاب' : 'View Book'}</a>
+                                    <a href="#" class="action-btn btn-outline">${book.category === 'الدراسات القرآنية' ? 'بحث داخلي' : 'Internal Search'}</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="book-body">
-                            <span class="book-language">
-                                <i class="${languageIcon}"></i> ${languageName}
-                            </span>
-                            <p class="book-excerpt">${excerpt}...</p>
-                            <a href="${book.link}" target="_blank" class="book-link">
-                                <i class="fas fa-external-link-alt"></i> عرض الكتاب
-                            </a>
-                        </div>
+                    `;
+                });
+            } else {
+                html = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <h3>لم يتم العثور على نتائج</h3>
+                        <p>حاول استخدام كلمات بحث أخرى</p>
                     </div>
                 `;
-            });
+            }
             
-            resultsContainer.innerHTML = html;
+            searchResultsGrid.innerHTML = html;
+            
+            // التمرير إلى قسم نتائج البحث
+            searchResultsSection.scrollIntoView({ behavior: 'smooth' });
         }
         
-        // وظيفة تغيير الصفحة
-        function changePage(page) {
-            currentPage = page;
-            displayResults(currentResults, document.getElementById('searchInput').value.trim());
+        // إخفاء نتائج البحث
+        function hideSearchResults() {
+            document.getElementById('searchResults').style.display = 'none';
+            document.querySelector('.search-input').value = '';
         }
         
         // تهيئة الأحداث
         document.addEventListener('DOMContentLoaded', function() {
-            // إضافة الكتب إلى الفهرس
-            books.forEach(book => {
-                index.addDoc({
-                    id: book.id,
-                    title: book.title,
-                    content: book.content,
-                    category: book.category,
-                    language: book.language,
-                    author: book.author,
-                    date: book.date
-                });
-            });
-            
-            // تهيئة أحداث البحث
-            document.getElementById('searchButton').addEventListener('click', performSearch);
-            document.getElementById('searchInput').addEventListener('keyup', function(e) {
+            // البحث عند الضغط على Enter
+            const searchInput = document.querySelector('.search-input');
+            searchInput.addEventListener('keyup', function(e) {
                 if (e.key === 'Enter') {
-                    performSearch();
+                    searchBooks(this.value);
                 }
             });
             
-            document.getElementById('categoryFilter').addEventListener('change', performSearch);
-            document.getElementById('languageFilter').addEventListener('change', performSearch);
-            document.getElementById('sortFilter').addEventListener('change', performSearch);
+            // البحث عند النقر على زر البحث
+            document.querySelector('.search-btn').addEventListener('click', function() {
+                searchBooks(searchInput.value);
+            });
             
-            // البحث الأولي
-            performSearch();
+            // فلترة الكتب
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // إضافة النشط للزر المحدد
+                    this.classList.add('active');
+                    
+                    // هنا يمكن إضافة منطق الفلترة الفعلي
+                });
+            });
         });
     </script>
 </body>
