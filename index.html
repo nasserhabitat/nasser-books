@@ -1765,6 +1765,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
+        function debounce(func, wait) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
+
+// استخدمه هكذا:
+searchInput.addEventListener('input', debounce(() => {
+    showSearchSuggestions(searchInput.value.trim());
+}, 300));
     </script>
 </body>
 </html>
