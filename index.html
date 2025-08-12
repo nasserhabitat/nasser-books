@@ -1586,7 +1586,59 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 }
             });
+            // كود JavaScript محسن لتحميل بيانات الكتب من ملف JSON
+let booksData = [];
+
+// تحميل بيانات الكتب من ملف JSON
+async function loadBooksData() {
+    try {
+        const response = await fetch('books-data.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        booksData = await response.json();
+        console.log('Books data loaded successfully:', booksData);
+        
+        // تحميل محتوى الكتب بعد تحميل البيانات الأساسية
+        await loadBooksContent();
+    } catch (error) {
+        console.error('Error loading books data:', error);
+        // يمكنك هنا عرض رسالة خطأ للمستخدم إذا لزم الأمر
+    }
+}
+
+// تحميل محتوى الكتب
+async function loadBooksContent() {
+    if (!booksData.books || !Array.isArray(booksData.books)) {
+        console.error('Invalid books data structure');
+        return;
+    }
+
+    const promises = booksData.books.map(async (book) => {
+        try {
+            // تحميل المحتوى العربي إذا كان متوفراً
+            if (book.content_file) {
+                const response = await fetch(book.content_file);
+                if (response.ok) {
+                    book.content = await response.text();
+                }
+            }
             
+            // تحميل المحتوى الإنجليزي إذا كان متوفراً
+            if (book.content_file_en) {
+                const response = await fetch(book.content_file_en);
+                if (response.ok) {
+                    book.content_en = await response.text();
+                }
+            }
+        } catch (error) {
+            console.error(`Error loading content for book ${book.id}:`, error);
+        }
+    });
+    
+    await Promise.all(promises);
+    console.log('All books content loaded');
+}
             // تحديث معلومات البحث
             searchResultsCount.textContent = resultsCount;
             searchInfo.style.display = 'block';
