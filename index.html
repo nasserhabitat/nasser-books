@@ -577,7 +577,7 @@
     </header>
 
     <main class="container">
-          <!-- قسم الكتب الجديدة -->
+        <!-- قسم الكتب الجديدة - مصحح -->
         <div class="new-books-section">
             <div class="section-header">
                 <div>
@@ -595,8 +595,6 @@
             </div>
             
             <div class="book-grid" id="new-book-grid">
-
-               <!-- الكتب الجديدة كما هي -->
                 <!-- تحرير المصطلح القرآني المجلد 1 -->
                 <div class="book-card" data-lang="ar">
                     <div class="book-cover">
@@ -1435,7 +1433,7 @@
         // تحميل بيانات الكتب من ملف JSON
         async function loadBooksData() {
             try {
-                const response = await fetch('books-data.json');
+                const response = await fetch('assets/data/index.json');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -1460,16 +1458,16 @@
             const promises = booksData.books.map(async (book) => {
                 try {
                     // تحميل المحتوى العربي إذا كان متوفراً
-                    if (book.content_file) {
-                        const response = await fetch(book.content_file);
+                    if (book.path.ar) {
+                        const response = await fetch(book.path.ar);
                         if (response.ok) {
                             book.content = await response.text();
                         }
                     }
                     
                     // تحميل المحتوى الإنجليزي إذا كان متوفراً
-                    if (book.content_file_en) {
-                        const response = await fetch(book.content_file_en);
+                    if (book.path.en) {
+                        const response = await fetch(book.path.en);
                         if (response.ok) {
                             book.content_en = await response.text();
                         }
@@ -1486,7 +1484,70 @@
             await loadBooksData();
             
             // بعد تحميل البيانات، يمكنك تنفيذ باقي الكود هنا
-            setupSearchFunctionality();
+            await buildLunrIndex();
+            updateLastUpdateTime();
+            setupSearch();
+            setupFilterButtons();
+            setupNewBooksFilter();
+            fixBookPaths();
+            updateBooksCount();
+            updateNewBooksCount();
+            
+            // تحديث العد تلقائياً كل ساعة
+            setInterval(() => {
+                updateBooksCount();
+                updateNewBooksCount();
+            }, 3600000);
+
+            const searchInput = document.getElementById('book-search');
+            const searchBtn = document.querySelector('.search-btn');
+            const suggestionsContainer = document.getElementById('search-suggestions');
+            
+            const handleSearch = () => {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm.length < 2) {
+                    document.getElementById('search-results-container').style.display = 'none';
+                    return;
+                }
+                
+                document.getElementById('search-results-title').textContent = `جاري البحث عن "${searchTerm}"...`;
+                document.getElementById('search-results-container').style.display = 'block';
+                document.getElementById('search-results-content').innerHTML = '<p style="text-align: center;">جاري تحميل النتائج...</p>';
+                
+                setTimeout(() => {
+                    const results = performContentSearch(searchTerm);
+                    displaySearchResults(results, searchTerm);
+                    suggestionsContainer.style.display = 'none';
+                }, 300);
+            };
+            
+            searchInput.addEventListener('input', debounce(() => {
+                showSearchSuggestions(searchInput.value.trim());
+            }, 300));
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleSearch();
+            });
+            
+            searchBtn.addEventListener('click', handleSearch);
+            
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+                    suggestionsContainer.style.display = 'none';
+                }
+            });
+            
+            suggestionsContainer.addEventListener('click', (e) => {
+                const suggestionItem = e.target.closest('.suggestion-item');
+                if (suggestionItem) {
+                    const bookId = suggestionItem.dataset.bookId;
+                    const lang = suggestionItem.dataset.lang;
+                    searchInput.value = suggestionItem.querySelector('.suggestion-title').textContent;
+                    suggestionsContainer.style.display = 'none';
+                    
+                    handleSearch();
+                }
+            });
         });
         // كائن لتخزين فهرس Lunr
         let lunrIndex = null;
@@ -1659,7 +1720,9 @@
         // تهيئة الصفحة عند التحميل
         document.addEventListener('DOMContentLoaded', async function() {
             await loadBooksData();
-            await buildLunrIndex(); // بناء الفهرس بعد تحميل البيانات
+            
+            // بعد تحميل البيانات، يمكنك تنفيذ باقي الكود هنا
+            await buildLunrIndex();
             updateLastUpdateTime();
             setupSearch();
             setupFilterButtons();
