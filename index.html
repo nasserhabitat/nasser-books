@@ -1184,7 +1184,266 @@
             <p>جميع الحقوق محفوظة - مُرخَّص للنشر والاقتباس بشرط ذكر المؤلف</p>
         </div>
     </footer>
+// كود JavaScript محسن للبحث في المحتوى
+let booksData = [];
 
+// تحميل بيانات الكتب من ملف JSON
+async function loadBooksData() {
+    try {
+        const response = await fetch('books-data.json');
+        booksData = await response.json();
+        console.log('Books data loaded successfully');
+        
+        // تحميل محتوى الكتب بعد تحميل البيانات الأساسية
+        await loadBooksContent();
+    } catch (error) {
+        console.error('Error loading books data:', error);
+    }
+}
+
+// تحميل محتوى الكتب
+async function loadBooksContent() {
+    const promises = booksData.books.map(async (book) => {
+        try {
+            // تحميل المحتوى العربي إذا كان متوفراً
+            if (book.content_file) {
+                const response = await fetch(book.content_file);
+                book.content = await response.text();
+            }
+            
+            // تحميل المحتوى الإنجليزي إذا كان متوفراً
+            if (book.content_file_en) {
+                const response = await fetch(book.content_file_en);
+                book.content_en = await response.text();
+            }
+        } catch (error) {
+            console.error(`Error loading content for book ${book.id}:`, error);
+        }
+    });
+    
+    await Promise.all(promises);
+    console.log('All books content loaded');
+}
+
+// دالة البحث المحسنة
+function searchBooks(query, searchInContent = false) {
+    if (!query.trim()) return [];
+    
+    const normalizedQuery = normalizeArabic(query.toLowerCase());
+    const results = [];
+    
+    booksData.books.forEach(book => {
+        // البحث في العناوين والمؤلفين والوصف
+        const titleMatch = normalizeArabic(book.title.toLowerCase()).includes(normalizedQuery);
+        const titleEnMatch = book.title_en.toLowerCase().includes(query.toLowerCase());
+        const authorMatch = normalizeArabic(book.author.toLowerCase()).includes(normalizedQuery);
+        const authorEnMatch = book.author_en.toLowerCase().includes(query.toLowerCase());
+        const descMatch = normalizeArabic(book.description.toLowerCase()).includes(normalizedQuery);
+        const descEnMatch = book.description_en.toLowerCase().includes(query.toLowerCase());
+        
+        // البحث في المحتوى إذا طُلب
+        let contentMatches = [];
+        let contentEnMatches = [];
+        
+        if (searchInContent) {
+            if (book.content) {
+                const normalizedContent = normalizeArabic(book.content.toLowerCase());
+                contentMatches = findMatches(normalizedContent, normalizedQuery);
+            }
+            
+            if (book.content_en) {
+                const contentEn = book.content_en.toLowerCase();
+                contentEnMatches = findMatches(contentEn, query.toLowerCase());
+            }
+        }
+        
+        // إذا وجدنا أي تطابق
+        if (titleMatch || titleEnMatch || authorMatch || authorEnMatch || 
+            descMatch || descEnMatch || contentMatches.length > 0 || contentEnMatches.length > 0) {
+            
+            results.push({
+                id: book.id,
+                title: book.title,
+                title_en: book.title_en,
+                author: book.author,
+                description: book.description,
+                cover: book.cover,
+                path: book.path,
+                path_en: book.path_en,
+                language: book.language,
+                is_new: book.is_new,
+                titleMatches: titleMatch || titleEnMatch,
+                authorMatches: authorMatch || authorEnMatch,
+                descMatches: descMatch || descEnMatch,
+                contentMatches: contentMatches.length,
+                contentEnMatches: contentEnMatches.length,
+                // حفظ مواقع التطابق لعرض المعاينة
+                arMatchPositions: contentMatches,
+                enMatchPositions: contentEnMatches,
+                arContent: book.content,
+                enContent: book.content_en
+            });
+        }
+    });
+    
+    // ترتيب النتائج حسب عدد التطابقات
+    return results.sort((a, b) => {
+        const aTotal = (a.titleMatches ? 5 : 0) + (a.authorMatches ? 3 : 0) + 
+                      (a.descMatches ? 2 : 0) + a.contentMatches + a.contentEnMatches;
+        const bTotal = (b.titleMatches ? 5 : 0) + (b.authorMatches ? 3 : 0) + 
+                      (b.descMatches ? 2 : 0) + b.contentMatches + b.contentEnMatches;
+        return bTotal - aTotal;
+    });
+}
+
+// دالة مساعدة للعثور على جميع التطابقات في النص
+function findMatches(text, searchTerm) {
+    const matches = [];
+    let index = text.indexOf(searchTerm);
+    
+    while (index !== -1) {
+        matches.push({
+            index: index,
+            length: searchTerm.length
+        });
+        index = text.indexOf(searchTerm, index + searchTerm.length);
+    }
+    
+    return matches;
+}
+
+// دالة لتطبيع النص العربي (إزالة التشكيل)
+function normalizeArabic(text) {
+    return text.normalize('NFKD').replace(/[\u064B-\u065F]/g, '');
+}
+
+// دالة لعرض نتائج البحث
+function displaySearchResults(results, query) {
+    const resultsContainer = document.getElementById('search-results-container');
+    const resultsTitle = document.getElementById('search-results-title');
+    const resultsContent = document.getElementById('search-results-content');
+    
+    resultsContainer.style.display = 'block';
+    resultsTitle.innerHTML = `نتائج البحث عن "<span class="highlight">${query}</span>"`;
+    
+    if (results.length === 0) {
+        resultsContent.innerHTML = '<p class="no-results">لا توجد نتائج مطابقة لبحثك</p>';
+        return;
+    }
+    
+    let html = '';
+    results.forEach(book => {
+        const totalMatches = (book.titleMatches ? 1 : 0) + (book.authorMatches ? 1 : 0) + 
+                            (book.descMatches ? 1 : 0) + book.contentMatches + book.contentEnMatches;
+        
+        html += `
+            <div class="book-search-result">
+                <div class="book-result-header">
+                    <img src="${book.cover}" alt="${book.title}" class="book-result-cover">
+                    <div class="book-result-info">
+                        <h3><a href="${book.language === 'ar' ? book.path : book.path_en}">${book.title}</a></h3>
+                        <p class="book-meta">${book.author}</p>
+                        <p class="book-desc">${book.description}</p>
+                        <div class="match-stats">
+                            <span class="match-count">${totalMatches} تطابق${totalMatches > 1 ? 'ات' : ''}</span>
+                            ${book.is_new ? '<span class="new-badge">جديد</span>' : ''}
+                        </div>
+                    </div>
+                </div>
+        `;
+        
+        // إظهار معاينات من المحتوى إذا كان هناك تطابقات في المحتوى
+        if (book.contentMatches > 0 || book.contentEnMatches > 0) {
+            html += `<div class="content-previews">`;
+            
+            // معاينات المحتوى العربي
+            if (book.contentMatches > 0) {
+                html += `<div class="content-preview-section">
+                    <h4>تطابقات في المحتوى (العربية):</h4>`;
+                
+                // عرض أول 3 معاينات فقط
+                book.arMatchPositions.slice(0, 3).forEach(match => {
+                    const preview = getContentPreview(book.arContent, match.index, match.length);
+                    html += `<p class="content-preview">${highlightText(preview, query, 'ar')}</p>`;
+                });
+                
+                html += `</div>`;
+            }
+            
+            // معاينات المحتوى الإنجليزي
+            if (book.contentEnMatches > 0) {
+                html += `<div class="content-preview-section">
+                    <h4>تطابقات في المحتوى (English):</h4>`;
+                
+                // عرض أول 3 معاينات فقط
+                book.enMatchPositions.slice(0, 3).forEach(match => {
+                    const preview = getContentPreview(book.enContent, match.index, match.length);
+                    html += `<p class="content-preview">${highlightText(preview, query, 'en')}</p>`;
+                });
+                
+                html += `</div>`;
+            }
+            
+            html += `</div>`;
+        }
+        
+        html += `</div>`;
+    });
+    
+    resultsContent.innerHTML = html;
+}
+
+// دالة لإنشاء معاينة من المحتوى
+function getContentPreview(content, position, length, previewLength = 100) {
+    if (!content) return '';
+    
+    const start = Math.max(0, position - previewLength);
+    const end = Math.min(content.length, position + length + previewLength);
+    let preview = content.substring(start, end);
+    
+    if (start > 0) preview = '...' + preview;
+    if (end < content.length) preview = preview + '...';
+    
+    return preview;
+}
+
+// دالة لإبراز النص المطابق
+function highlightText(text, query, language) {
+    if (!text || !query) return text;
+    
+    const normalizedText = language === 'ar' ? normalizeArabic(text) : text;
+    const normalizedQuery = language === 'ar' ? normalizeArabic(query) : query;
+    
+    return normalizedText.replace(
+        new RegExp(normalizedQuery, 'gi'), 
+        match => `<span class="highlight">${match}</span>`
+    );
+}
+
+// تهيئة البحث عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadBooksData();
+    
+    const searchInput = document.getElementById('book-search');
+    const searchBtn = document.querySelector('.search-btn');
+    
+    // دالة للتعامل مع البحث
+    const handleSearch = () => {
+        const query = searchInput.value.trim();
+        if (query.length < 2) return;
+        
+        const searchInContent = confirm('هل ترغب بالبحث في محتوى الكتب أيضاً؟');
+        const results = searchBooks(query, searchInContent);
+        displaySearchResults(results, query);
+    };
+    
+    // أحداث البحث
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSearch();
+    });
+    
+    searchBtn.addEventListener('click', handleSearch);
+});
     <script>
     // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
     function updateBooksCount() {
