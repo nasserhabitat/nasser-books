@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -1356,7 +1357,36 @@
             
             searchInput.addEventListener('input', performTitleSearch);
             
-            // ... (بقية setupSearch كما هي، مثل click events)
+            document.addEventListener('click', (e) => {
+                if (!suggestionsContainer.contains(e.target) && e.target !== searchInput) {
+                    suggestionsContainer.style.display = 'none';
+                }
+            });
+            
+            suggestionsContainer.addEventListener('click', (e) => {
+                const suggestion = e.target.closest('.suggestion-item');
+                if (suggestion) {
+                    const bookId = suggestion.dataset.id;
+                    if (bookId) {
+                        suggestionsContainer.style.display = 'none';
+                        const bookCard = document.getElementById(bookId);
+                        if (bookCard) {
+                            bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            
+                            bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
+                            setTimeout(() => { 
+                                bookCard.style.boxShadow = ''; 
+                            }, 2000);
+                        }
+                    }
+                }
+            });
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performTitleSearch.call(searchInput);
+                }
+            });
         }
         
         // فلترة الكتب حسب اللغة
@@ -1657,3 +1687,4 @@
     </script>
 </body>
 </html>
+```
