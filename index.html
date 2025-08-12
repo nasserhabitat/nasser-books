@@ -1161,7 +1161,11 @@
                 </div>
             </div>
         </div>
-        
+        <!-- قسم نتائج البحث -->
+<div id="search-results-container" style="display: none; margin-top: 2rem; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h3 id="search-results-title" style="color: var(--primary-color); margin-bottom: 1.5rem;"></h3>
+    <div id="search-results-content"></div>
+</div>
         <!-- رسالة معلومات البحث -->
         <div class="search-info" id="search-info">
             تبحث عن: <strong id="search-term-display"></strong> | 
@@ -1442,6 +1446,325 @@
             updateNewBooksCount();
         }, 3600000);
     });
+
+
+        // كائن لتخزين فهرس الكتب
+const bookIndex = {};
+let allBooksLoaded = false;
+
+// دالة لتحميل محتوى الكتب وفهرستها
+async function loadAndIndexBooks() {
+    if (allBooksLoaded) return;
+    
+    const bookFolders = [
+        'conscious-contemplation',
+        'anwar-al-bayan',
+        'changing-the-concepts',
+        'contemplation-in-the-mirror',
+        'digitizing',
+        'modesty',
+        'names-in-the-holy',
+        'the-jurisprudence',
+        'editing-the-quranic-terminology-tome1',
+        'editing-the-quranic-terminology-tome2',
+        'editing-the-quranic-terminology-tome3',
+        'malakoot'
+    ];
+
+    const loadingPromises = bookFolders.map(async (folder) => {
+        try {
+            // تحميل المحتوى العربي
+            const arResponse = await fetch(`books/${folder}/ar/content.txt`);
+            const arContent = await arResponse.text();
+            
+            // تحميل المحتوى الإنجليزي
+            const enResponse = await fetch(`books/${folder}/en/content.txt`);
+            const enContent = await enResponse.text();
+            
+            // إضافة إلى الفهرس
+            bookIndex[folder] = {
+                ar: arContent,
+                en: enContent,
+                title: {
+                    ar: document.querySelector(`#book-grid [id^="book-"] a[href*="${folder}"]`)?.parentElement?.querySelector('h2')?.textContent || folder,
+                    en: document.querySelector(`#book-grid [id^="book-"] a[href*="${folder}"]`)?.parentElement?.querySelector('h2')?.textContent || folder
+                },
+                path: {
+                    ar: `books/${folder}/ar/`,
+                    en: `books/${folder}/en/`
+                }
+            };
+        } catch (error) {
+            console.error(`Error loading book ${folder}:`, error);
+        }
+    });
+
+    await Promise.all(loadingPromises);
+    allBooksLoaded = true;
+    console.log('All books loaded and indexed');
+}
+
+// دالة لتطبيع النص العربي (إزالة التشكيل)
+function normalizeArabic(text) {
+    return text.normalize('NFKD').replace(/[\u064B-\u065F]/g, '');
+}
+
+// دالة البحث المحسنة
+function performContentSearch(searchTerm, lang = 'all') {
+    if (!searchTerm.trim()) return [];
+    
+    const results = [];
+    const normalizedSearch = normalizeArabic(searchTerm.toLowerCase());
+    
+    for (const [bookId, bookData] of Object.entries(bookIndex)) {
+        // البحث في المحتوى العربي
+        if (lang === 'all' || lang === 'ar') {
+            const arContent = normalizeArabic(bookData.ar.toLowerCase());
+            const arMatches = findMatches(arContent, normalizedSearch);
+            
+            if (arMatches.length > 0) {
+                results.push({
+                    bookId,
+                    language: 'ar',
+                    title: bookData.title.ar,
+                    matches: arMatches,
+                    preview: getPreview(bookData.ar, arMatches[0].index, 100),
+                    path: bookData.path.ar
+                });
+            }
+        }
+        
+        // البحث في المحتوى الإنجليزي
+        if (lang === 'all' || lang === 'en') {
+            const enContent = bookData.en.toLowerCase();
+            const enMatches = findMatches(enContent, searchTerm.toLowerCase());
+            
+            if (enMatches.length > 0) {
+                results.push({
+                    bookId,
+                    language: 'en',
+                    title: bookData.title.en,
+                    matches: enMatches,
+                    preview: getPreview(bookData.en, enMatches[0].index, 100),
+                    path: bookData.path.en
+                });
+            }
+        }
+    }
+    
+    return results.sort((a, b) => b.matches.length - a.matches.length);
+}
+
+// دالة للعثور على جميع التطابقات
+function findMatches(content, searchTerm) {
+    const matches = [];
+    let index = content.indexOf(searchTerm);
+    
+    while (index !== -1) {
+        matches.push({ index, length: searchTerm.length });
+        index = content.indexOf(searchTerm, index + searchTerm.length);
+    }
+    
+    return matches;
+}
+
+// دالة لإنشاء معاينة النص
+function getPreview(content, position, length) {
+    const start = Math.max(0, position - length);
+    const end = Math.min(content.length, position + length);
+    let preview = content.substring(start, end);
+    
+    if (start > 0) preview = '...' + preview;
+    if (end < content.length) preview = preview + '...';
+    
+    return preview;
+}
+
+// دالة لعرض نتائج البحث
+function displaySearchResults(results, searchTerm) {
+    const container = document.getElementById('search-results-container');
+    const titleElement = document.getElementById('search-results-title');
+    const contentElement = document.getElementById('search-results-content');
+    
+    if (results.length === 0) {
+        container.style.display = 'block';
+        titleElement.textContent = `لا توجد نتائج لـ "${searchTerm}"`;
+        contentElement.innerHTML = `
+            <p style="color: #666; text-align: center;">حاول استخدام كلمات بحث مختلفة أو مصطلحات أوسع</p>
+        `;
+        return;
+    }
+    
+    container.style.display = 'block';
+    titleElement.innerHTML = `نتائج البحث عن "<span style="color: var(--accent-color);">${searchTerm}</span>" (${results.length} نتيجة)`;
+    
+    let html = '';
+    results.forEach((result, index) => {
+        const highlightedPreview = highlightText(result.preview, searchTerm, result.language);
+        const bookNumber = result.bookId.split('-').pop() || index + 1;
+        
+        html += `
+            <div class="search-result" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
+                <h4 style="margin-bottom: 0.5rem;">
+                    <a href="${result.path}" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">
+                        ${result.title} (${result.language === 'ar' ? 'العربية' : 'English'})
+                    </a>
+                </h4>
+                <p style="color: #555; line-height: 1.6;">
+                    ${highlightedPreview}
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                    <small style="color: #777;">
+                        ${result.matches.length} مطابقة في هذا الكتاب
+                    </small>
+                    <a href="${result.path}" style="color: var(--secondary-color); font-size: 0.9rem;">عرض الكتاب</a>
+                </div>
+            </div>
+        `;
+    });
+    
+    contentElement.innerHTML = html;
+}
+
+// دالة لإبراز النص المطابق
+function highlightText(text, searchTerm, language) {
+    if (language === 'ar') {
+        const normalizedText = normalizeArabic(text);
+        const normalizedSearch = normalizeArabic(searchTerm);
+        return text.replace(new RegExp(normalizedSearch, 'gi'), match => 
+            `<span class="highlight" style="background-color: var(--search-highlight); padding: 2px 0; border-radius: 3px;">${match}</span>`
+        );
+    } else {
+        return text.replace(new RegExp(searchTerm, 'gi'), match => 
+            `<span class="highlight" style="background-color: var(--search-highlight); padding: 2px 0; border-radius: 3px;">${match}</span>`
+        );
+    }
+}
+
+// دالة لعرض اقتراحات أثناء الكتابة
+function showSearchSuggestions(searchTerm) {
+    if (searchTerm.length < 2) {
+        document.getElementById('search-suggestions').style.display = 'none';
+        return;
+    }
+    
+    const suggestions = [];
+    const normalizedSearch = normalizeArabic(searchTerm.toLowerCase());
+    
+    // البحث في العناوين أولاً
+    for (const [bookId, bookData] of Object.entries(bookIndex)) {
+        // البحث في العناوين العربية
+        const arTitle = normalizeArabic(bookData.title.ar.toLowerCase());
+        if (arTitle.includes(normalizedSearch)) {
+            suggestions.push({
+                type: 'title',
+                language: 'ar',
+                bookId,
+                text: bookData.title.ar,
+                path: bookData.path.ar
+            });
+        }
+        
+        // البحث في العناوين الإنجليزية
+        const enTitle = bookData.title.en.toLowerCase();
+        if (enTitle.includes(searchTerm.toLowerCase())) {
+            suggestions.push({
+                type: 'title',
+                language: 'en',
+                bookId,
+                text: bookData.title.en,
+                path: bookData.path.en
+            });
+        }
+    }
+    
+    // عرض الاقتراحات
+    const suggestionsContainer = document.getElementById('search-suggestions');
+    if (suggestions.length > 0) {
+        suggestionsContainer.innerHTML = suggestions.map(suggestion => `
+            <div class="suggestion-item" data-book-id="${suggestion.bookId}" data-lang="${suggestion.language}">
+                <div class="suggestion-title">
+                    ${highlightText(suggestion.text, searchTerm, suggestion.language)}
+                </div>
+                <div class="suggestion-type" style="font-size: 0.8rem; color: #666;">
+                    ${suggestion.type === 'title' ? 'عنوان كتاب' : 'محتوى كتاب'} - ${suggestion.language === 'ar' ? 'العربية' : 'English'}
+                </div>
+            </div>
+        `).join('');
+        
+        suggestionsContainer.style.display = 'block';
+    } else {
+        suggestionsContainer.style.display = 'none';
+    }
+}
+
+// تهيئة البحث عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', async () => {
+    // تحميل الكتب بشكل غير متزامن
+    loadAndIndexBooks().then(() => {
+        console.log('Books ready for search');
+    }).catch(error => {
+        console.error('Error loading books:', error);
+    });
+    
+    const searchInput = document.getElementById('book-search');
+    const searchBtn = document.querySelector('.search-btn');
+    const suggestionsContainer = document.getElementById('search-suggestions');
+    
+    // البحث عند الضغط على Enter أو زر البحث
+    const handleSearch = () => {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm.length < 2) {
+            document.getElementById('search-results-container').style.display = 'none';
+            return;
+        }
+        
+        // إظهار تحميل مؤقت
+        document.getElementById('search-results-title').textContent = `جاري البحث عن "${searchTerm}"...`;
+        document.getElementById('search-results-container').style.display = 'block';
+        document.getElementById('search-results-content').innerHTML = '<p style="text-align: center;">جاري تحميل النتائج...</p>';
+        
+        // البحث الفعلي بعد تأخير بسيط
+        setTimeout(() => {
+            const results = performContentSearch(searchTerm);
+            displaySearchResults(results, searchTerm);
+            suggestionsContainer.style.display = 'none';
+        }, 300);
+    };
+    
+    // أحداث البحث
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.trim();
+        showSearchSuggestions(searchTerm);
+    });
+    
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSearch();
+    });
+    
+    searchBtn.addEventListener('click', handleSearch);
+    
+    // إغلاق الاقتراحات عند النقر خارجها
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+            suggestionsContainer.style.display = 'none';
+        }
+    });
+    
+    // اختيار اقتراح
+    suggestionsContainer.addEventListener('click', (e) => {
+        const suggestionItem = e.target.closest('.suggestion-item');
+        if (suggestionItem) {
+            const bookId = suggestionItem.dataset.bookId;
+            const lang = suggestionItem.dataset.lang;
+            searchInput.value = suggestionItem.querySelector('.suggestion-title').textContent;
+            suggestionsContainer.style.display = 'none';
+            
+            // يمكنك هنا توجيه المستخدم مباشرة إلى الكتاب أو عرض نتائج البحث
+            handleSearch();
+        }
+    });
+});
     </script>
 </body>
 </html>
