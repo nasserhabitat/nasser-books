@@ -7,6 +7,7 @@
     <meta name="description" content="مكتبة رقمية لمؤلفات الباحث الإسلامي والمهندس ناصر ابن داوود في علوم القرآن والتدبر">
     <meta property="og:title" content="مكتبة ناصر ابن داوود - مؤلفات في علوم القرآن">
     <meta property="og:description" content="مكتبة رقمية شاملة لمؤلفات الباحث الإسلامي ناصر ابن داوود">
+    <meta property="og:image" content="https://nasser-ibn-dawood.com/assets/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -226,7 +227,6 @@
             color: white;
         }
         
-        /* أنماط شريط البحث المحسنة */
         .search-container {
             max-width: 700px;
             margin: 30px auto;
@@ -331,12 +331,10 @@
             margin-bottom: 0.5rem;
         }
         
-        /* تأثيرات للجوال */
         .search-input:active {
             transform: scale(0.98);
         }
         
-        /* قسم الكتب الجديدة */
         .new-books-section {
             background-color: var(--new-section-bg);
             padding: 2rem;
@@ -474,7 +472,6 @@
             content: "📅";
         }
         
-        /* للشاشات الصغيرة */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -514,7 +511,7 @@
                 width: 100%;
             }
         }
-        /* إضافة بسيطة لواجهة البحث */
+        
         .search-info {
             text-align: center;
             margin: 15px 0;
@@ -539,10 +536,17 @@
             font-weight: 500;
             display: none;
         }
+        
+        .error-message {
+            text-align: center;
+            padding: 20px;
+            color: #e74c3c;
+            font-weight: 500;
+            display: none;
+        }
     </style>
 </head>
 <body>
-     <!-- شريط التحديثات -->
     <div class="update-banner">
         🚀 المكتبة متجددة تلقائياً كل ساعة - آخر تحديث: <span id="last-update"></span>
     </div>
@@ -551,14 +555,10 @@
         <div class="hero-content">
             <h1>مكتبة ناصر ابن داوود</h1>
             <p class="subtitle">مراجع إسلامية في علوم القرآن والتدبر</p>
-            
-            <!-- عرض عدد الكتب -->
             <div class="books-count">
-                إجمالي الكتب: <span id="total-books-count">20</span> كتاب | 
-                الجديد منها: <span id="new-books-count">4</span> كتاب
+                إجمالي الكتب: <span id="total-books-count">0</span> كتاب | 
+                الجديد منها: <span id="new-books-count">0</span> كتاب
             </div>
-            
-            <!-- شريط البحث -->
             <div class="search-container">
                 <input type="text" id="book-search" placeholder="ابحث عن كتاب أو مؤلف أو محتوى..." 
                        aria-label="بحث الكتب" class="search-input">
@@ -573,7 +573,6 @@
     </header>
 
     <main class="container">
-          <!-- قسم الكتب الجديدة -->
         <div class="new-books-section">
             <div class="section-header">
                 <div>
@@ -584,595 +583,37 @@
                     <div class="month-indicator">شهر أغسطس 2025</div>
                 </div>
                 <div class="new-filter-buttons">
-                    <button class="active" data-filter="all">الكل</button>
-                    <button data-filter="ar">العربية</button>
-                    <button data-filter="en">English</button>
+                    <button class="active" data-filter="all" aria-label="عرض جميع الكتب الجديدة">الكل</button>
+                    <button data-filter="ar" aria-label="تصفية الكتب الجديدة بالعربية">العربية</button>
+                    <button data-filter="en" aria-label="تصفية الكتب الجديدة بالإنجليزية">English</button>
                 </div>
             </div>
-            
-            <div class="book-grid" id="new-book-grid">
-
-               <!-- الكتب الجديدة كما هي -->
-                <!-- تحرير المصطلح القرآني المجلد 1 -->
-                <div class="book-card" data-lang="ar">
-                    <div class="book-cover">
-                        <span class="new-badge-card">جديد</span>
-                        <img src="books/editing-the-quranic-terminology-tome1/ar/cover-ar.png" 
-                             alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 1"
-                             loading="lazy"
-                             width="250"
-                             height="350">
-                    </div>
-                    <div class="book-info">
-                        <h2>تحرير المصطلح القرآني المجلد 1</h2>
-                        <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                        <div class="book-actions">
-                            <a href="books/editing-the-quranic-terminology-tome1/ar/" class="btn">النسخة العربية</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card" data-lang="en">
-                    <div class="book-cover">
-                        <span class="new-badge-card">NEW</span>
-                        <img src="books/editing-the-quranic-terminology-tome1/en/cover-en.png" 
-                             alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1 Book Cover"
-                             loading="lazy"
-                             width="250"
-                             height="350">
-                    </div>
-                    <div class="book-info">
-                        <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1</h2>
-                        <p class="book-meta">By: Nasser Ibn Dawood</p>
-                        <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                        <div class="book-actions">
-                            <a href="books/editing-the-quranic-terminology-tome1/en/" class="btn">English Version</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- تحرير المصطلح القرآني المجلد 2 -->
-                <div class="book-card" data-lang="ar">
-                    <div class="book-cover">
-                        <span class="new-badge-card">جديد</span>
-                        <img src="books/editing-the-quranic-terminology-tome2/ar/cover-ar.png" 
-                             alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 2"
-                             loading="lazy"
-                             width="250"
-                             height="350">
-                    </div>
-                    <div class="book-info">
-                        <h2>تحرير المصطلح القرآني المجلد 2</h2>
-                        <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                        <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                        <div class="book-actions">
-                            <a href="books/editing-the-quranic-terminology-tome2/ar/" class="btn">النسخة العربية</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- تحرير المصطلح القرآني المجلد 3 -->
-            <div class="book-card" data-lang="ar" id="book-21">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome3/ar/cover-ar.png" 
-                         alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 3"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>تحرير المصطلح القرآني المجلد 3</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome3/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-lang="en" id="book-22">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome3/en/cover-en.png" 
-                         alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 3 Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 3</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome3/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-                <div class="book-card" data-lang="en">
-                    <div class="book-cover">
-                        <span class="new-badge-card">NEW</span>
-                        <img src="books/editing-the-quranic-terminology-tome2/en/cover-en.png" 
-                             alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2 Book Cover"
-                             loading="lazy"
-                             width="250"
-                             height="350">
-                    </div>
-                    <div class="book-info">
-                        <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2</h2>
-                        <p class="book-meta">By: Nasser Ibn Dawood</p>
-                        <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                        <div class="book-actions">
-                            <a href="books/editing-the-quranic-terminology-tome2/en/" class="btn">English Version</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="book-grid" id="new-book-grid"></div>
         </div>
 
         <h2 class="section-title">الكتب المتاحة</h2>
         <div class="filter-buttons">
-            <button class="active" data-filter="all">الكل</button>
-            <button data-filter="ar">العربية</button>
-            <button data-filter="en">English</button>
+            <button class="active" data-filter="all" aria-label="عرض جميع الكتب">الكل</button>
+            <button data-filter="ar" aria-label="تصفية الكتب بالعربية">العربية</button>
+            <button data-filter="en" aria-label="تصفية الكتب بالإنجليزية">English</button>
         </div>
         
-        <div class="book-grid" id="book-grid">
-            <!-- نحو تدبر واع -->
-            <div class="book-card" data-lang="ar" id="book-1">
-                <div class="book-cover">
-                    <img src="books/conscious-contemplation/ar/cover-ar.png" 
-                         alt="غلاف كتاب نحو تدبر واع"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>نحو تدبر واع</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية</p>
-                    <div class="book-actions">
-                        <a href="books/conscious-contemplation/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-2">
-                <div class="book-cover">
-                    <img src="books/conscious-contemplation/en/cover-en.png" 
-                         alt="Towards Conscious Contemplation Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>Towards Conscious Contemplation</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">A practical guide to deep understanding of the Holy Quran</p>
-                    <div class="book-actions">
-                        <a href="books/conscious-contemplation/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- أنوار البيان -->
-            <div class="book-card" data-lang="ar" id="book-3">
-                <div class="book-cover">
-                    <img src="books/anwar-al-bayan/ar/cover-ar.png" 
-                         alt="غلاف كتاب أنوار البيان في رسم المصحف العثماني"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>أنوار البيان في رسم المصحف العثماني</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة علمية للرسم العثماني وأسراره اللغوية</p>
-                    <div class="book-actions">
-                        <a href="books/anwar-al-bayan/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-4">
-                <div class="book-cover">
-                    <img src="books/anwar-al-bayan/en/cover-en.png" 
-                         alt="ANWAR AL-BAYAN: The Uthmanic Script's Linguistic Secrets"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>ANWAR AL-BAYAN: The Uthmanic Script's Linguistic Secrets</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">Scientific study of the Uthmanic script and its linguistic secrets</p>
-                    <div class="book-actions">
-                        <a href="books/anwar-al-bayan/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- تغيير المفاهيم -->
-            <div class="book-card" data-lang="ar" id="book-5">
-                <div class="book-cover">
-                    <img src="books/changing-the-concepts/ar/cover-ar.png" 
-                         alt="غلاف كتاب تغيير المفاهيم للمصطلحات القرآنية"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>تغيير المفاهيم للمصطلحات القرآنية</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة تطبيقية لفقه اللسان القرآني</p>
-                    <div class="book-actions">
-                        <a href="books/changing-the-concepts/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-6">
-                <div class="book-cover">
-                    <img src="books/changing-the-concepts/en/cover-en.png" 
-                         alt="Changing Quranic Concepts Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>Changing Quranic Concepts</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">Applied study of Quranic terminology jurisprudence</p>
-                    <div class="book-actions">
-                        <a href="books/changing-the-concepts/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- التدبر في مرآة الرسوم -->
-            <div class="book-card" data-lang="ar" id="book-7">
-                <div class="book-cover">
-                    <img src="books/contemplation-in-the-mirror/ar/cover-ar.png" 
-                         alt="غلاف كتاب التدبر في مرآة الرسوم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>التدبر في مرآة الرسوم</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن</p>
-                    <div class="book-actions">
-                        <a href="books/contemplation-in-the-mirror/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-8">
-                <div class="book-cover">
-                    <img src="books/contemplation-in-the-mirror/en/cover-en.png" 
-                         alt="Contemplation in the Mirror of Scripts Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>Contemplation in the Mirror of Scripts</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">Practical applications of digital manuscripts in Quranic contemplation</p>
-                    <div class="book-actions">
-                        <a href="books/contemplation-in-the-mirror/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- رقمنة المخطوطات -->
-            <div class="book-card" data-lang="ar" id="book-9">
-                <div class="book-cover">
-                    <img src="books/digitizing/ar/cover-ar.png" 
-                         alt="غلاف كتاب مشروع رقمنة المخطوطات الأصلية للقرآن الكريم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>مشروع رقمنة المخطوطات الأصلية للقرآن الكريم</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة منهجية لحفظ النص القرآني رقمياً</p>
-                    <div class="book-actions">
-                        <a href="books/digitizing/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-10">
-                <div class="book-cover">
-                    <img src="books/digitizing/en/cover-en.png" 
-                         alt="Digitizing Quranic Manuscripts Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>Digitizing Quranic Manuscripts</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">Methodological study of digital preservation of Quranic text</p>
-                    <div class="book-actions">
-                        <a href="books/digitizing/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- الحياء -->
-            <div class="book-card" data-lang="ar" id="book-11">
-                <div class="book-cover">
-                    <img src="books/modesty/ar/cover-ar.png" 
-                         alt="غلاف كتاب الحياء - سياج الروح وبوصلة الفهم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>الحياء - سياج الروح وبوصلة الفهم</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة في مفهوم الحياء في الإسلام وتطبيقاته</p>
-                    <div class="book-actions">
-                        <a href="books/modesty/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-12">
-                <div class="book-cover">
-                    <img src="books/modesty/en/cover-en.png" 
-                         alt="Modesty: The Fence of the Soul Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>Modesty: The Fence of the Soul</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">Study of the concept of modesty in Islam and its applications</p>
-                    <div class="book-actions">
-                        <a href="books/modesty/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- الأسماء الحسنى -->
-            <div class="book-card" data-lang="ar" id="book-13">
-                <div class="book-cover">
-                    <img src="books/names-in-the-holy/ar/cover-ar.png" 
-                         alt="غلاف كتاب الأسماء الحسنى الوظيفية في القرآن الكريم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>الأسماء الحسنى الوظيفية في القرآن الكريم</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة توقيفية تحليلية لدلالات التدبير الإلهي</p>
-                    <div class="book-actions">
-                        <a href="books/names-in-the-holy/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-14">
-                <div class="book-cover">
-                    <img src="books/names-in-the-holy/en/cover-en.png" 
-                         alt="THE MOST BEAUTIFUL FUNCTIONAL NAMES IN THE HOLY QUR'AN Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>THE MOST BEAUTIFUL FUNCTIONAL NAMES IN THE HOLY QUR'AN</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">AN ANALYTICAL ENDOWMENT STUDY OF THE IMPLICATIONS OF DIVINE MANAGEMENT</p>
-                    <div class="book-actions">
-                        <a href="books/names-in-the-holy/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- فقه اللسان القرآني -->
-            <div class="book-card" data-lang="ar" id="book-15">
-                <div class="book-cover">
-                    <img src="books/the-jurisprudence/ar/cover-ar.png" 
-                         alt="غلاف كتاب فقه اللسان القرآني"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>فقه اللسان القرآني</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">منهجٌ جديد لفهم النص والمخطوط</p>
-                    <div class="book-actions">
-                        <a href="books/the-jurisprudence/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-card" data-lang="en" id="book-16">
-                <div class="book-cover">
-                    <img src="books/the-jurisprudence/en/cover-en.png" 
-                         alt="THE JURISPRUDENCE OF THE QUR'ANIC TONGUE Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>THE JURISPRUDENCE OF THE QUR'ANIC TONGUE</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">A NEW APPROACH TO UNDERSTANDING THE TEXT AND MANUSCRIPT</p>
-                    <div class="book-actions">
-                        <a href="books/the-jurisprudence/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- تحرير المصطلح القرآني المجلد 1 -->
-            <div class="book-card" data-lang="ar" id="book-17">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome1/ar/cover-ar.png" 
-                         alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 1"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>تحرير المصطلح القرآني المجلد 1</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome1/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-lang="en" id="book-18">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome1/en/cover-en.png" 
-                         alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1 Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 1</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome1/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- تحرير المصطلح القرآني المجلد 2 -->
-            <div class="book-card" data-lang="ar" id="book-19">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome2/ar/cover-ar.png" 
-                         alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 2"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>تحرير المصطلح القرآني المجلد 2</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome2/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-lang="en" id="book-20">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome2/en/cover-en.png" 
-                         alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2 Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 2</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome2/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- تحرير المصطلح القرآني المجلد 3 -->
-            <div class="book-card" data-lang="ar" id="book-21">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome3/ar/cover-ar.png" 
-                         alt="غلاف كتاب تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني المجلد 3"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>تحرير المصطلح القرآني المجلد 3</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة تطبيقية في فقه اللسان القرآني</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome3/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-lang="en" id="book-22">
-                <div class="book-cover">
-                    <img src="books/editing-the-quranic-terminology-tome3/en/cover-en.png" 
-                         alt="CLARIFYING THE QUR'ANIC TERMINOLOGY tome 3 Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY tome 3</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <p class="book-desc">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
-                    <div class="book-actions">
-                        <a href="books/editing-the-quranic-terminology-tome3/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ليكن من الموقنين -->
-            <div class="book-card" data-lang="ar" id="book-23">
-                <div class="book-cover">
-                    <img src="books/malakoot/ar/cover-ar.png" 
-                         alt="غلاف كتاب وليكون من الموقنين"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>وليكن من الموقنين: رحلة برهانية في ملكوت السماوات والأرض</h2>
-                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                    <p class="book-desc">دراسة فلسفية وعلمية للإيمان بالغيب</p>
-                    <div class="book-actions">
-                        <a href="books/malakoot/ar/" class="btn">النسخة العربية</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-lang="en" id="book-24">
-                <div class="book-cover">
-                    <img src="books/malakoot/en/cover-en.png" 
-                         alt="AND SO THAT HE MAY BE OF THE CERTAIN ONES: A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM" Book Cover"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-                </div>
-                <div class="book-info">
-                    <h2>AND SO THAT HE MAY BE OF THE CERTAIN ONES: A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM</h2>
-                    <p class="book-meta">By: Nasser Ibn Dawood</p>
-                    <div class="book-actions">
-                        <a href="books/malakoot/en/" class="btn">English Version</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="book-grid" id="book-grid"></div>
         
-        <!-- رسالة معلومات البحث -->
         <div class="search-info" id="search-info">
             تبحث عن: <strong id="search-term-display"></strong> | 
             عدد النتائج: <strong id="search-results-count">0</strong>
         </div>
         
-        <!-- رسالة عدم وجود نتائج -->
         <div class="no-results" id="no-results">
             لم يتم العثور على كتب تطابق بحثك. حاول استخدام مصطلحات أخرى.
         </div>
+        
+        <div class="error-message" id="error-message">
+            خطأ في تحميل بيانات الكتب. يرجى المحاولة لاحقاً.
+        </div>
     </main>
+    
     <footer class="site-footer">
         <div class="footer-content">
             <p>© 2025 مكتبة ناصر ابن داوود - مهندس وباحث إسلامي</p>
@@ -1182,23 +623,785 @@
     </footer>
 
     <script>
-    // حساب عدد الكتب الفريدة تلقائياً (بدون تكرار)
-    function updateBooksCount() {
-        const uniqueBookIds = new Set();
-        const allBookCards = document.querySelectorAll('#book-grid .book-card');
-        allBookCards.forEach(card => {
-            uniqueBookIds.add(card.id);
-        });
-        document.getElementById('total-books-count').textContent = uniqueBookIds.size;
-    }
-    
-    // حساب عدد الكتب الجديدة
-    function updateNewBooksCount() {
-        const newBooks = document.querySelectorAll('.new-badge-card');
-        document.getElementById('new-books-count').textContent = newBooks.length;
-    }
-    
-    // تحديث وقت التحديث الأخير
+    // JSON data (embedded for simplicity; in production, fetch from index.json)
+    const booksData = {
+        "books": [
+            {
+                "id": "conscious-contemplation",
+                "title": {
+                    "ar": "نحو تدبر واع",
+                    "en": "Towards Conscious Contemplation"
+                },
+                "description": {
+                    "ar": "أحدث دراسة في منهجية التدبر القرآني وفق الرؤية المعاصرة (إصدار 2025)",
+                    "en": "Cutting-edge study on Quranic contemplation methodology (2025 Edition)"
+                },
+                "path": {
+                    "ar": "books/conscious-contemplation/ar/content.txt",
+                    "en": "books/conscious-contemplation/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/conscious-contemplation/ar/cover-ar.png",
+                    "en": "books/conscious-contemplation/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "التدبر القرآني",
+                "keywords": [
+                    "تدبر",
+                    "منهجية",
+                    "معاصرة",
+                    "تدبر القرآن",
+                    "فهم القرآن",
+                    "تطبيق القرآن",
+                    "منهجية التدبر",
+                    "القرآن في العصر الحديث",
+                    "نور العقل",
+                    "رقمنة المخطوطات القرآنية",
+                    "الرسم العثماني",
+                    "المخطوطات القرآنية الأصلية",
+                    "منهج حياة",
+                    "الفهم الواعي للقرآن",
+                    "آيات القرآن",
+                    "القرآن الكريم",
+                    "تدبر عملي",
+                    "ناصر ابن داوود"
+                ]
+            },
+            {
+                "id": "anwar-al-bayan",
+                "title": {
+                    "ar": "أنوار البيان في رسم المصحف العثماني (إصدار 2025)",
+                    "en": "ANWAR AL-BAYAN: The Uthmanic Script (2025 Edition)"
+                },
+                "description": {
+                    "ar": "دراسة متكاملة للرسم العثماني بأحدث المنهجيات البحثية",
+                    "en": "Comprehensive study of Uthmanic script using latest research methodologies"
+                },
+                "path": {
+                    "ar": "books/anwar-al-bayan/ar/content.txt",
+                    "en": "books/anwar-al-bayan/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/anwar-al-bayan/ar/cover-ar.png",
+                    "en": "books/anwar-al-bayan/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "الرسم العثماني",
+                "keywords": [
+                    "رسم",
+                    "مصحف",
+                    "عثماني",
+                    "الرسم العثماني",
+                    "المصحف العثماني",
+                    "أسرار اللسان",
+                    "أنوار البيان",
+                    "تدبر القرآن",
+                    "المخطوطات الرقمية",
+                    "اللغة العربية",
+                    "علوم القرآن",
+                    "القرآن الكريم",
+                    "الفهم العميق",
+                    "الدراسات القرآنية",
+                    "التفسير",
+                    "الخط العربي",
+                    "الكتابة القرآنية"
+                ]
+            },
+            {
+                "id": "changing-the-concepts",
+                "title": {
+                    "ar": "تغيير المفاهيم القرآنية (إصدار 2025)",
+                    "en": "Changing Quranic Concepts (2025 Edition)"
+                },
+                "description": {
+                    "ar": "رؤية معاصرة لإعادة صياغة المفاهيم القرآنية",
+                    "en": "Contemporary vision for redefining Quranic concepts"
+                },
+                "path": {
+                    "ar": "books/changing-the-concepts/ar/content.txt",
+                    "en": "books/changing-the-concepts/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/changing-the-concepts/ar/cover-ar.png",
+                    "en": "books/changing-the-concepts/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "المصطلحات القرآنية",
+                "keywords": [
+                    "مفاهيم",
+                    "مصطلحات",
+                    "تغيير",
+                    "تغيير المفاهيم",
+                    "المصطلحات القرآنية",
+                    "فقه اللسان القرآني",
+                    "التدبر القرآني",
+                    "المخطوطات القرآنية الأصلية",
+                    "الرقمنة",
+                    "الوعي",
+                    "الإصلاح والتجديد",
+                    "القرآن الكريم كمصدر أوحد وكافٍ",
+                    "السنة النبوية ومنهجية التعامل النقدي",
+                    "الربوبية والألوهية",
+                    "النفس في القرآن",
+                    "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+                    "القيم القرآنية (العدل، الرحمة، الإحسان)",
+                    "التفكير النقدي",
+                    "الذكاء والفطرة",
+                    "الشرك والتوحيد",
+                    "الكون والإنسان",
+                    "القيامة واليوم الآخر",
+                    "الجنة والنار",
+                    "الآيات الكونية",
+                    "البيانات كمفهوم قرآني",
+                    "المصداق القرآني",
+                    "الحروف المقطعة",
+                    "النسخ بمعناه الجديد",
+                    "الجن والشياطين تصحيح المفاهيم",
+                    "الأعداد في القرآن",
+                    "القصص القرآني (سورة يوسف كنموذج)",
+                    "القتل والقتال تفكيك المفاهيم",
+                    "بنو إسرائيل منظور مفاهيمي",
+                    "الخلافة الإنسانية",
+                    "الزوج والأزواج فهم وظيفي",
+                    "الرجال والنساء فهم وظيفي",
+                    "القبلة بوصلة الحياة",
+                    "المسجد الحرام والمسجد الأقصى رموز الوعي",
+                    "الكذب",
+                    "الحلال والحرام",
+                    "الضحك والبكاء",
+                    "الصيد",
+                    "حجر",
+                    "اليقين",
+                    "الذكر",
+                    "الدعاء",
+                    "الرزق",
+                    "الميزان",
+                    "الجلد والجلود",
+                    "البعوضة كمثل قرآني",
+                    "الاستغفار",
+                    "العرش والماء",
+                    "الخلق والتصوير",
+                    "البشر والإنسان",
+                    "الخيل والبغال والحمير",
+                    "المليكة والملائكة والروح",
+                    "الأمة الوسط",
+                    "السفه",
+                    "الشرق والغرب",
+                    "الصراط المستقيم",
+                    "اللغة العربية ولسان القرآن",
+                    "الفيل",
+                    "الرحيم اسم الله",
+                    "إحياء البلد",
+                    "كلام الله",
+                    "رؤية الله",
+                    "التسليم",
+                    "الساعة",
+                    "الموتى والأموات",
+                    "الأصنام الفكرية",
+                    "الفجر",
+                    "القرآن نهر جارٍ",
+                    "استشعار معاني الحروف"
+                ]
+            },
+            {
+                "id": "contemplation-in-the-mirror",
+                "title": {
+                    "ar": "التدبر في مرآة الرسوم (إصدار 2025)",
+                    "en": "Contemplation in Scripts Mirror (2025 Edition)"
+                },
+                "description": {
+                    "ar": "أحدث تطبيقات الذكاء الاصطناعي في تحليل المخطوطات القرآنية",
+                    "en": "Latest AI applications in analyzing Quranic manuscripts"
+                },
+                "path": {
+                    "ar": "books/contemplation-in-the-mirror/ar/content.txt",
+                    "en": "books/contemplation-in-the-mirror/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/contemplation-in-the-mirror/ar/cover-ar.png",
+                    "en": "books/contemplation-in-the-mirror/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "التقنية القرآنية",
+                "keywords": [
+                    "ذكاء اصطناعي",
+                    "مخطوطات",
+                    "رقمنة",
+                    "التدبر في مرآة الرسوم",
+                    "المخطوطات الرقمية",
+                    "تدبر القرآن",
+                    "الرسم العثماني",
+                    "تطبيقات عملية للقرآن",
+                    "فهم القرآن",
+                    "أسرار الرسم العثماني",
+                    "نور المخطوطات الرقمية",
+                    "أنوار البيان",
+                    "جداول المعاني",
+                    "ناصر ابن داوود"
+                ]
+            },
+            {
+                "id": "digitizing",
+                "title": {
+                    "ar": "مشروع رقمنة القرآن الكريم (2025)",
+                    "en": "Quran Digitization Project (2025)"
+                },
+                "description": {
+                    "ar": "أحدث تقنيات حفظ النص القرآني رقمياً وفق معايير 2025",
+                    "en": "State-of-the-art digital preservation of Quranic text (2025 Standards)"
+                },
+                "path": {
+                    "ar": "books/digitizing/ar/content.txt",
+                    "en": "books/digitizing/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/digitizing/ar/cover-ar.png",
+                    "en": "books/digitizing/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "الحفظ الرقمي",
+                "keywords": [
+                    "رقمنة",
+                    "تقنية",
+                    "حفظ",
+                    "رقمنة المخطوطات القرآنية",
+                    "تدبر القرآن",
+                    "نهضة قرآنية رقمية",
+                    "فهم القرآن",
+                    "التكنولوجيا والقرآن",
+                    "المخطوطة الرقمية الشخصية",
+                    "الأصالة والمعاصرة",
+                    "التراث العلمي الإسلامي",
+                    "الذكاء الاصطناعي والقرآن",
+                    "مشروع قرآني",
+                    "تحديات رقمنة المخطوطات",
+                    "تسويق المشروع القرآني",
+                    "مستقبل التدبر القرآني",
+                    "نشر التدبرات",
+                    "بناء الثقة والشراكات",
+                    "التوعية والتثقيف"
+                ]
+            },
+            {
+                "id": "modesty",
+                "title": {
+                    "ar": "الحياء في العصر الرقمي (2025)",
+                    "en": "Modesty in Digital Age (2025)"
+                },
+                "description": {
+                    "ar": "دراسة معاصرة لمفهوم الحياء في عصر التكنولوجيا",
+                    "en": "Contemporary study of modesty concept in technology era"
+                },
+                "path": {
+                    "ar": "books/modesty/ar/content.txt",
+                    "en": "books/modesty/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/modesty/ar/cover-ar.png",
+                    "en": "books/modesty/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "الأخلاق الرقمية",
+                "keywords": [
+                    "حياء",
+                    "أخلاق",
+                    "رقمية",
+                    "الأخلاق الإسلامية",
+                    "الفضائل",
+                    "التقوى",
+                    "الحياء في الإسلام",
+                    "الأدب",
+                    "السلوك الرقمي",
+                    "الآداب الإسلامية",
+                    "التكنولوجيا والأخلاق",
+                    "العلاقات الرقمية",
+                    "الحشمة",
+                    "الستر",
+                    "الاحتشام"
+                ]
+            },
+            {
+                "id": "names-in-the-holy",
+                "title": {
+                    "ar": "الأسماء الحسنى في ضوء الدراسات الحديثة (2025)",
+                    "en": "Divine Names in Modern Studies (2025)"
+                },
+                "description": {
+                    "ar": "رؤية معاصرة لدلالات الأسماء الإلهية وفق أبحاث 2025",
+                    "en": "Contemporary vision of divine names based on 2025 research"
+                },
+                "path": {
+                    "ar": "books/names-in-the-holy/ar/content.txt",
+                    "en": "books/names-in-the-holy/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/names-in-the-holy/ar/cover-ar.png",
+                    "en": "books/names-in-the-holy/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "الدراسات الإلهية",
+                "keywords": [
+                    "أسماء",
+                    "إلهية",
+                    "دراسات",
+                    "الأسماء الحسنى",
+                    "الأسماء الحسنى الوظيفية",
+                    "التدبير الإلهي",
+                    "القرآن الكريم",
+                    "دراسة توقيفية",
+                    "دلالات الأسماء الحسنى",
+                    "الإحصاء",
+                    "فهم سنن الكون",
+                    "اليقين",
+                    "الطمأنينة",
+                    "حل المشكلات",
+                    "الدعاء",
+                    "التوكل",
+                    "تطبيق الأسماء الحسنى",
+                    "المعرفة بالله",
+                    "أسرار الأسماء",
+                    "العلاقة بالله",
+                    "التأمل في القرآن"
+                ]
+            },
+            {
+                "id": "the-jurisprudence",
+                "title": {
+                    "ar": "فقه اللسان القرآني (إصدار 2025)",
+                    "en": "Quranic Linguistics (2025 Edition)"
+                },
+                "description": {
+                    "ar": "دراسة لغوية معاصرة للسان القرآني بأحدث المناهج",
+                    "en": "Contemporary linguistic study of Quranic language using latest methodologies"
+                },
+                "path": {
+                    "ar": "books/the-jurisprudence/ar/content.txt",
+                    "en": "books/the-jurisprudence/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/the-jurisprudence/ar/cover-ar.png",
+                    "en": "books/the-jurisprudence/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "اللسانيات القرآنية",
+                "keywords": [
+                    "لسانيات",
+                    "لغة",
+                    "قرآنية",
+                    "فقه اللسان القرآني",
+                    "فهم النص القرآني",
+                    "المخطوطات القرآنية",
+                    "الرسوم القرآنية",
+                    "التدبر",
+                    "المخطوطات الرقمية",
+                    "المفاهيم الجديدة",
+                    "التدبر التفاعلي",
+                    "رقمنة المخطوطات الأصلية",
+                    "المصاحف العثمانية",
+                    "فهم القرآن",
+                    "تطبيق القرآن",
+                    "قواعد اللسان العربي القرآني",
+                    "استنباط القواعد من النص القرآني",
+                    "الشواهد من المخطوطات الأصلية",
+                    "دلالات الحروف",
+                    "سبعا من المثاني",
+                    "الأزواج",
+                    "الترادف",
+                    "المنهج اللفظي",
+                    "المحكم والمتشابه",
+                    "السياق اللساني",
+                    "المصطلح القرآني",
+                    "الناسخ والمنسوخ",
+                    "تجديد الخطاب الديني",
+                    "الواقع المعاصر",
+                    "الكتابة القرآنية",
+                    "القرآن الكريم"
+                ]
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome1",
+                "title": {
+                    "ar": "تحرير المصطلح القرآني - المجلد الأول (2025)",
+                    "en": "Quranic Terminology - Volume 1 (2025)"
+                },
+                "description": {
+                    "ar": "أحدث دراسة في المصطلحات القرآنية (إصدار 2025)",
+                    "en": "Cutting-edge study in Quranic terminology (2025 Release)"
+                },
+                "path": {
+                    "ar": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+                    "en": "books/editing-the-quranic-terminology-tome1/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+                    "en": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "المصطلحات القرآنية",
+                "keywords": [
+                    "مصطلحات",
+                    "جزء1",
+                    "تحرير",
+                    "تغيير المفاهيم",
+                    "المصطلحات القرآنية",
+                    "فقه اللسان القرآني",
+                    "التدبر القرآني",
+                    "المخطوطات القرآنية الأصلية",
+                    "الرقمنة",
+                    "الوعي",
+                    "الإصلاح والتجديد",
+                    "القرآن الكريم كمصدر أوحد وكافٍ",
+                    "السنة النبوية ومنهجية التعامل النقدي",
+                    "الربوبية والألوهية",
+                    "النفس في القرآن",
+                    "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+                    "القيم القرآنية (العدل، الرحمة، الإحسان)",
+                    "التفكير النقدي",
+                    "الذكاء والفطرة",
+                    "الشرك والتوحيد",
+                    "الكون والإنسان",
+                    "القيامة واليوم الآخر",
+                    "الجنة والنار",
+                    "الآيات الكونية",
+                    "البيانات كمفهوم قرآني",
+                    "المصداق القرآني",
+                    "الحروف المقطعة",
+                    "النسخ بمعناه الجديد",
+                    "الجن والشياطين تصحيح المفاهيم",
+                    "الأعداد في القرآن",
+                    "القصص القرآني (سورة يوسف كنموذج)",
+                    "القتل والقتال تفكيك المفاهيم",
+                    "بنو إسرائيل منظور مفاهيمي",
+                    "الخلافة الإنسانية",
+                    "الزوج والأزواج فهم وظيفي",
+                    "الرجال والنساء فهم وظيفي",
+                    "القبلة بوصلة الحياة",
+                    "المسجد الحرام والمسجد الأقصى رموز الوعي",
+                    "الكذب",
+                    "الحلال والحرام",
+                    "الضحك والبكاء",
+                    "الصيد",
+                    "حجر",
+                    "اليقين",
+                    "الذكر",
+                    "الدعاء",
+                    "الرزق",
+                    "الميزان",
+                    "الجلد والجلود",
+                    "البعوضة كمثل قرآني",
+                    "الاستغفار",
+                    "العرش والماء",
+                    "الخلق والتصوير",
+                    "البشر والإنسان",
+                    "الخيل والبغال والحمير",
+                    "المليكة والملائكة والروح",
+                    "الأمة الوسط",
+                    "السفه",
+                    "الشرق والغرب",
+                    "الصراط المستقيم",
+                    "اللغة العربية ولسان القرآن",
+                    "الفيل",
+                    "الرحيم اسم الله",
+                    "إحياء البلد",
+                    "كلام الله",
+                    "رؤية الله",
+                    "التسليم",
+                    "الساعة",
+                    "الموتى والأموات",
+                    "الأصنام الفكرية",
+                    "الفجر",
+                    "القرآن نهر جارٍ",
+                    "استشعار معاني الحروف"
+                ]
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome2",
+                "title": {
+                    "ar": "تحرير المصطلح القرآني - المجلد الثاني (2025)",
+                    "en": "Quranic Terminology - Volume 2 (2025)"
+                },
+                "description": {
+                    "ar": "تكملة لأحدث دراسة في المصطلحات القرآنية (2025)",
+                    "en": "Continuation of advanced Quranic terminology study (2025)"
+                },
+                "path": {
+                    "ar": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+                    "en": "books/editing-the-quranic-terminology-tome2/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
+                    "en": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "المصطلحات القرآنية",
+                "keywords": [
+                    "مصطلحات",
+                    "جزء2",
+                    "تحرير",
+                    "تغيير المفاهيم",
+                    "المصطلحات القرآنية",
+                    "فقه اللسان القرآني",
+                    "التدبر القرآني",
+                    "المخطوطات القرآنية الأصلية",
+                    "الرقمنة",
+                    "الوعي",
+                    "الإصلاح والتجديد",
+                    "القرآن الكريم كمصدر أوحد وكافٍ",
+                    "السنة النبوية ومنهجية التعامل النقدي",
+                    "الربوبية والألوهية",
+                    "النفس في القرآن",
+                    "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+                    "القيم القرآنية (العدل، الرحمة، الإحسان)",
+                    "التفكير النقدي",
+                    "الذكاء والفطرة",
+                    "الشرك والتوحيد",
+                    "الكون والإنسان",
+                    "القيامة واليوم الآخر",
+                    "الجنة والنار",
+                    "الآيات الكونية",
+                    "البيانات كمفهوم قرآني",
+                    "المصداق القرآني",
+                    "الحروف المقطعة",
+                    "النسخ بمعناه الجديد",
+                    "الجن والشياطين تصحيح المفاهيم",
+                    "الأعداد في القرآن",
+                    "القصص القرآني (سورة يوسف كنموذج)",
+                    "القتل والقتال تفكيك المفاهيم",
+                    "بنو إسرائيل منظور مفاهيمي",
+                    "الخلافة الإنسانية",
+                    "الزوج والأزواج فهم وظيفي",
+                    "الرجال والنساء فهم وظيفي",
+                    "القبلة بوصلة الحياة",
+                    "المسجد الحرام والمسجد الأقصى رموز الوعي",
+                    "الكذب",
+                    "الحلال والحرام",
+                    "الضحك والبكاء",
+                    "الصيد",
+                    "حجر",
+                    "اليقين",
+                    "الذكر",
+                    "الدعاء",
+                    "الرزق",
+                    "الميزان",
+                    "الجلد والجلود",
+                    "البعوضة كمثل قرآني",
+                    "الاستغفار",
+                    "العرش والماء",
+                    "الخلق والتصوير",
+                    "البشر والإنسان",
+                    "الخيل والبغال والحمير",
+                    "المليكة والملائكة والروح",
+                    "الأمة الوسط",
+                    "السفه",
+                    "الشرق والغرب",
+                    "الصراط المستقيم",
+                    "اللغة العربية ولسان القرآن",
+                    "الفيل",
+                    "الرحيم اسم الله",
+                    "إحياء البلد",
+                    "كلام الله",
+                    "رؤية الله",
+                    "التسليم",
+                    "الساعة",
+                    "الموتى والأموات",
+                    "الأصنام الفكرية",
+                    "الفجر",
+                    "القرآن نهر جارٍ",
+                    "استشعار معاني الحروف"
+                ]
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome3",
+                "title": {
+                    "ar": "تحرير المصطلح القرآني - المجلد الثالث (2025)",
+                    "en": "Quranic Terminology - Volume 3 (2025)"
+                },
+                "description": {
+                    "ar": "الجزء الأخير من سلسلة الدراسات المصطلحية (إصدار 2025)",
+                    "en": "Final part of terminology studies series (2025 Edition)"
+                },
+                "path": {
+                    "ar": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+                    "en": "books/editing-the-quranic-terminology-tome3/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
+                    "en": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "المصطلحات القرآنية",
+                "keywords": [
+                    "مصطلحات",
+                    "جزء3",
+                    "تحرير",
+                    "تغيير المفاهيم",
+                    "المصطلحات القرآنية",
+                    "فقه اللسان القرآني",
+                    "التدبر القرآني",
+                    "المخطوطات القرآنية الأصلية",
+                    "الرقمنة",
+                    "الوعي",
+                    "الإصلاح والتجديد",
+                    "القرآن الكريم كمصدر أوحد وكافٍ",
+                    "السنة النبوية ومنهجية التعامل النقدي",
+                    "الربوبية والألوهية",
+                    "النفس في القرآن",
+                    "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+                    "القيم القرآنية (العدل، الرحمة، الإحسان)",
+                    "التفكير النقدي",
+                    "الذكاء والفطرة",
+                    "الشرك والتوحيد",
+                    "الكون والإنسان",
+                    "القيامة واليوم الآخر",
+                    "الجنة والنار",
+                    "الآيات الكونية",
+                    "البيانات كمفهوم قرآني",
+                    "المصداق القرآني",
+                    "الحروف المقطعة",
+                    "النسخ بمعناه الجديد",
+                    "الجن والشياطين تصحيح المفاهيم",
+                    "الأعداد في القرآن",
+                    "القصص القرآني (سورة يوسف كنموذج)",
+                    "القتل والقتال تفكيك المفاهيم",
+                    "بنو إسرائيل منظور مفاهيمي",
+                    "الخلافة الإنسانية",
+                    "الزوج والأزواج فهم وظيفي",
+                    "الرجال والنساء فهم وظيفي",
+                    "القبلة بوصلة الحياة",
+                    "المسجد الحرام والمسجد الأقصى رموز الوعي",
+                    "الكذب",
+                    "الحلال والحرام",
+                    "الضحك والبكاء",
+                    "الصيد",
+                    "حجر",
+                    "اليقين",
+                    "الذكر",
+                    "الدعاء",
+                    "الرزق",
+                    "الميزان",
+                    "الجلد والجلود",
+                    "البعوضة كمثل قرآني",
+                    "الاستغفار",
+                    "العرش والماء",
+                    "الخلق والتصوير",
+                    "البشر والإنسان",
+                    "الخيل والبغال والحمير",
+                    "المليكة والملائكة والروح",
+                    "الأمة الوسط",
+                    "السفه",
+                    "الشرق والغرب",
+                    "الصراط المستقيم",
+                    "اللغة العربية ولسان القرآن",
+                    "الفيل",
+                    "الرحيم اسم الله",
+                    "إحياء البلد",
+                    "كلام الله",
+                    "رؤية الله",
+                    "التسليم",
+                    "الساعة",
+                    "الموتى والأموات",
+                    "الأصنام الفكرية",
+                    "الفجر",
+                    "القرآن نهر جارٍ",
+                    "استشعار معاني الحروف"
+                ]
+            },
+            {
+                "id": "malakoot",
+                "title": {
+                    "ar": "ملكوت السماوات والأرض (رؤية 2025)",
+                    "en": "Kingdom of Heavens and Earth (2025 Vision)"
+                },
+                "description": {
+                    "ar": "أحدث دراسة في الإيمان بالغيب وفق الاكتشافات المعاصرة",
+                    "en": "Latest study on unseen belief based on modern discoveries"
+                },
+                "path": {
+                    "ar": "books/malakoot/ar/content.txt",
+                    "en": "books/malakoot/en/content.txt"
+                },
+                "cover": {
+                    "ar": "books/malakoot/ar/cover-ar.png",
+                    "en": "books/malakoot/en/cover-en.png"
+                },
+                "year": 2025,
+                "edition": "الطبعة الأولى 2025",
+                "category": "الإيمان والعلم",
+                "keywords": [
+                    "ملكوت",
+                    "إيمان",
+                    "علم",
+                    "اليقين",
+                    "ملكوت السماوات والأرض",
+                    "برهان",
+                    "رؤية الحقيقة",
+                    "القرآن",
+                    "الحقائق العلمية",
+                    "الوحي",
+                    "الفطرة",
+                    "الكون",
+                    "الخلق",
+                    "الخالق",
+                    "الأرض المسطحة",
+                    "الأرض الثابتة",
+                    "التفكر",
+                    "التدبر",
+                    "نظريات إسلامية",
+                    "شكل الكون",
+                    "الشمس",
+                    "القمر",
+                    "الكواكب",
+                    "علم الفلك",
+                    "ناصر ابن داوود",
+                    "ناصر بن داود التدبر في مرآة الرسوم"
+                ]
+            }
+        ],
+        "metadata": {
+            "year": 2025,
+            "total_books": 20,
+            "total_arabic": 10,
+            "total_english": 10,
+            "release_date": "2025-08-15",
+            "categories": [
+                "التدبر القرآني",
+                "الرسم العثماني",
+                "المصطلحات القرآنية",
+                "التقنية القرآنية",
+                "الحفظ الرقمي",
+                "الأخلاق الرقمية",
+                "الدراسات الإلهية",
+                "اللسانيات القرآنية",
+                "الإيمان والعلم"
+            ],
+            "features": {
+                "all_new": true,
+                "latest_research": true,
+                "digital_editions": true,
+                "multilingual": true,
+                "searchable": true,
+                "indexed": true
+            },
+            "author": {
+                "name": "ناصر ابن داوود",
+                "bio": "باحث إسلامي متخصص في علوم القرآن والتدبر، مهندس متخصص في الرقمنة والحفظ الرقمي للمخطوطات القرآنية",
+                "website": "https://nasser-ibn-dawood.com"
+            }
+        }
+    };
+
+    // Update last update time
     function updateLastUpdateTime() {
         const now = new Date();
         const options = { 
@@ -1211,16 +1414,93 @@
         };
         document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
     }
-    
-    // دالة البحث الضبابي المحسنة للغة العربية
+
+    // Render books dynamically
+    function renderBooks(data) {
+        const bookGrid = document.getElementById('book-grid');
+        const newBookGrid = document.getElementById('new-book-grid');
+        let bookCount = 0;
+        let newBookCount = 0;
+
+        data.books.forEach((book, index) => {
+            // Arabic version
+            const arCard = document.createElement('div');
+            arCard.className = 'book-card';
+            arCard.dataset.lang = 'ar';
+            arCard.id = `book-${index * 2 + 1}`;
+            const isNew = book.year === 2025 && ['editing-the-quranic-terminology-tome1', 'editing-the-quranic-terminology-tome2', 'editing-the-quranic-terminology-tome3'].includes(book.id);
+            arCard.innerHTML = `
+                <div class="book-cover">
+                    ${isNew ? '<span class="new-badge-card">جديد</span>' : ''}
+                    <img data-src="${book.cover.ar}" alt="${book.title.ar}" loading="lazy" width="250" height="350">
+                </div>
+                <div class="book-info">
+                    <h2>${book.title.ar}</h2>
+                    <p class="book-meta">تأليف: ناصر ابن داوود</p>
+                    <p class="book-desc">${book.description.ar}</p>
+                    <div class="book-actions">
+                        <a href="${book.path.ar}" class="btn">النسخة العربية</a>
+                    </div>
+                </div>
+            `;
+            // English version
+            const enCard = document.createElement('div');
+            enCard.className = 'book-card';
+            enCard.dataset.lang = 'en';
+            enCard.id = `book-${index * 2 + 2}`;
+            enCard.innerHTML = `
+                <div class="book-cover">
+                    ${isNew ? '<span class="new-badge-card">NEW</span>' : ''}
+                    <img data-src="${book.cover.en}" alt="${book.title.en}" loading="lazy" width="250" height="350">
+                </div>
+                <div class="book-info">
+                    <h2>${book.title.en}</h2>
+                    <p class="book-meta">By: Nasser Ibn Dawood</p>
+                    <p class="book-desc">${book.description.en}</p>
+                    <div class="book-actions">
+                        <a href="${book.path.en}" class="btn">English Version</a>
+                    </div>
+                </div>
+            `;
+            
+            // Place in appropriate grid
+            if (isNew) {
+                newBookGrid.appendChild(arCard);
+                newBookGrid.appendChild(enCard);
+                newBookCount += 2;
+            } else {
+                bookGrid.appendChild(arCard);
+                bookGrid.appendChild(enCard);
+            }
+            bookCount += 2;
+        });
+
+        document.getElementById('total-books-count').textContent = bookCount;
+        document.getElementById('new-books-count').textContent = newBookCount;
+    }
+
+    // Lazy load images
+    function setupLazyLoading() {
+        const images = document.querySelectorAll('.book-cover img');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        }, { rootMargin: '0px 0px 100px 0px' });
+        images.forEach(img => observer.observe(img));
+    }
+
+    // Fuzzy search with diacritic removal
     function fuzzySearch(text, searchTerm) {
         const removeDiacritics = (str) => {
             return str.normalize('NFKD').replace(/[\u064B-\u065F]/g, '');
         };
-
         const cleanText = removeDiacritics(text.toLowerCase());
         const cleanSearchTerm = removeDiacritics(searchTerm.toLowerCase());
-        
         let searchIndex = 0;
         for (let i = 0; i < cleanText.length; i++) {
             if (cleanText[i] === cleanSearchTerm[searchIndex]) {
@@ -1230,8 +1510,15 @@
         }
         return false;
     }
-    
-    // تحسين أداء البحث باستخدام Debounce
+
+    // Highlight search matches
+    function highlightText(text, searchTerm) {
+        if (!searchTerm) return text;
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    // Debounce function
     function debounce(func, wait, immediate) {
         let timeout;
         return function() {
@@ -1246,27 +1533,17 @@
             if (callNow) func.apply(context, args);
         };
     }
-    
-    // إبراز النص المطابق في نتائج البحث
-    function highlightText(text, searchTerm) {
-        if (!searchTerm) return text;
-        
-        const regex = new RegExp(`(${searchTerm})`, 'gi');
-        return text.replace(regex, '<span class="highlight">$1</span>');
-    }
-    
-    // تهيئة البحث (تعديلها لتشمل فقط الكتب المتاحة)
-    function setupSearch() {
+
+    // Setup search functionality
+    function setupSearch(data) {
         const searchInput = document.getElementById('book-search');
         const suggestionsContainer = document.getElementById('search-suggestions');
         const searchInfo = document.getElementById('search-info');
         const searchTermDisplay = document.getElementById('search-term-display');
         const searchResultsCount = document.getElementById('search-results-count');
         const noResultsMsg = document.getElementById('no-results');
-        
-        // جمع الكتب من القسم الرئيسي فقط (الكتب المتاحة)
-        const bookCards = Array.from(document.querySelectorAll('#book-grid .book-card'));
-        
+        const bookCards = Array.from(document.querySelectorAll('#book-grid .book-card, #new-book-grid .book-card'));
+
         const performSearch = debounce(function() {
             const searchTerm = this.value.trim();
             searchTermDisplay.textContent = searchTerm;
@@ -1284,19 +1561,23 @@
             let resultsCount = 0;
             
             bookCards.forEach(card => {
-                const title = card.querySelector('h2').textContent;
-                const author = card.querySelector('.book-meta').textContent;
-                const desc = card.querySelector('.book-desc')?.textContent || '';
+                const bookId = card.id.split('-')[1];
+                const book = data.books.find(b => card.id === `book-${data.books.indexOf(b) * 2 + 1}` || card.id === `book-${data.books.indexOf(b) * 2 + 2}`);
+                const lang = card.dataset.lang;
+                const title = book.title[lang];
+                const author = lang === 'ar' ? 'تأليف: ناصر ابن داوود' : 'By: Nasser Ibn Dawood';
+                const desc = book.description[lang];
+                const keywords = book.keywords.join(' ');
                 
                 const matches = fuzzySearch(title, searchTerm) || 
                               fuzzySearch(author, searchTerm) ||
-                              fuzzySearch(desc, searchTerm);
+                              fuzzySearch(desc, searchTerm) ||
+                              fuzzySearch(keywords, searchTerm);
                 
                 if (matches) {
                     card.style.display = 'block';
                     resultsCount++;
                     
-                    // إبراز النص في البطاقة
                     if (fuzzySearch(title, searchTerm)) {
                         card.querySelector('h2').innerHTML = highlightText(title, searchTerm);
                     }
@@ -1315,20 +1596,15 @@
                     });
                 } else {
                     card.style.display = 'none';
-                    // إعادة النص الأصلي للبطاقات غير المطابقة
                     card.querySelector('h2').innerHTML = title;
                     card.querySelector('.book-meta').innerHTML = author;
-                    if (card.querySelector('.book-desc')) {
-                        card.querySelector('.book-desc').innerHTML = desc;
-                    }
+                    card.querySelector('.book-desc').innerHTML = desc;
                 }
             });
             
-            // تحديث معلومات البحث
             searchResultsCount.textContent = resultsCount;
             searchInfo.style.display = 'block';
             
-            // إظهار أو إخفاء رسالة عدم وجود نتائج
             if (resultsCount === 0) {
                 noResultsMsg.style.display = 'block';
             } else {
@@ -1351,7 +1627,6 @@
         
         searchInput.addEventListener('input', performSearch);
         
-        // إخفاء الاقتراحات عند النقر خارجها
         document.addEventListener('click', (e) => {
             if (!suggestionsContainer.contains(e.target) && e.target !== searchInput) {
                 suggestionsContainer.style.display = 'none';
@@ -1367,8 +1642,6 @@
                     const bookCard = document.getElementById(bookId);
                     if (bookCard) {
                         bookCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        
-                        // إضافة تأثير بسيط للفت الانتباه
                         bookCard.style.boxShadow = '0 0 0 3px rgba(41, 128, 185, 0.5)';
                         setTimeout(() => { 
                             bookCard.style.boxShadow = ''; 
@@ -1378,15 +1651,14 @@
             }
         });
         
-        // البحث عند الضغط على Enter
         searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 performSearch.call(searchInput);
             }
         });
     }
-    
-    // فلترة الكتب حسب اللغة
+
+    // Setup filter buttons
     function setupFilterButtons() {
         document.querySelectorAll('.filter-buttons button').forEach(button => {
             button.addEventListener('click', () => {
@@ -1399,8 +1671,8 @@
             });
         });
     }
-    
-    // فلترة الكتب الجديدة
+
+    // Setup new books filter
     function setupNewBooksFilter() {
         document.querySelectorAll('.new-filter-buttons button').forEach(button => {
             button.addEventListener('click', () => {
@@ -1413,33 +1685,47 @@
             });
         });
     }
-    
-    // تصحيح مسارات الكتب
+
+    // Fix book paths
     function fixBookPaths() {
-        document.querySelectorAll('a[href^="books/"]').forEach(link => {
-            const correctedPath = link.getAttribute('href')
-                .replace(/ /g, '-')
-                .toLowerCase();
-            if (link.getAttribute('href') !== correctedPath) {
-                link.setAttribute('href', correctedPath);
-            }
+        document.querySelectorAll('.book-actions a[href^="books/"]').forEach(link => {
+            const correctedPath = link.getAttribute('href').replace(/ /g, '-').toLowerCase();
+            link.setAttribute('href', correctedPath);
         });
     }
-    
-    // تهيئة الصفحة عند التحميل
+
+    // Initialize page
     document.addEventListener('DOMContentLoaded', function() {
+        // In production, replace with fetch:
+        // fetch('index.json')
+        //     .then(response => {
+        //         if (!response.ok) throw new Error('Failed to load book data');
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         renderBooks(data);
+        //         setupSearch(data);
+        //         setupLazyLoading();
+        //         updateLastUpdateTime();
+        //         setupFilterButtons();
+        //         setupNewBooksFilter();
+        //         fixBookPaths();
+        //     })
+        //     .catch(error => {
+        //         console.error('Error fetching index.json:', error);
+        //         document.getElementById('error-message').style.display = 'block';
+        //     });
+        
+        renderBooks(booksData);
+        setupSearch(booksData);
+        setupLazyLoading();
         updateLastUpdateTime();
-        setupSearch();
         setupFilterButtons();
         setupNewBooksFilter();
         fixBookPaths();
-        updateBooksCount();
-        updateNewBooksCount();
-        
-        // تحديث العد تلقائياً كل ساعة
+
         setInterval(() => {
-            updateBooksCount();
-            updateNewBooksCount();
+            updateLastUpdateTime();
         }, 3600000);
     });
     </script>
