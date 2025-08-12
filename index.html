@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -1444,44 +1443,35 @@
 
             lunr.Pipeline.registerFunction(arabicStemmer, 'arabicStemmer');
             
-            const bookFolders = [
-                'conscious-contemplation',
-                'anwar-al-bayan',
-                'changing-the-concepts',
-                'contemplation-in-the-mirror',
-                'digitizing',
-                'modesty',
-                'names-in-the-holy',
-                'the-jurisprudence',
-                'editing-the-quranic-terminology-tome1',
-                'editing-the-quranic-terminology-tome2',
-                'editing-the-quranic-terminology-tome3',
-                'malakoot'
-            ];
-
-            for (const folder of bookFolders) {
+            const response = await fetch('assets/data/index.json');
+            const data = await response.json();
+            const books = data.books;
+            
+            for (const book of books) {
                 try {
-                    const arResponse = await fetch(`books/${folder}/ar/content.txt`);
+                    // Arabic version
+                    const arResponse = await fetch(book.path.ar);
                     const arContent = await arResponse.text();
                     bookDocuments.push({
-                        id: folder + '-ar',
-                        title: document.querySelector(`#book-grid a[href*="${folder}/ar/"]`)?.parentElement?.querySelector('h2')?.textContent || folder,
-                        content: arContent,
+                        id: book.id + '-ar',
+                        title: book.title.ar,
+                        content: arContent + ' ' + book.keywords.join(' '), // إضافة keywords لتحسين البحث
                         lang: 'ar',
-                        path: `books/${folder}/ar/`
+                        path: book.path.ar.replace('/content.txt', '/')
                     });
 
-                    const enResponse = await fetch(`books/${folder}/en/content.txt`);
+                    // English version
+                    const enResponse = await fetch(book.path.en);
                     const enContent = await enResponse.text();
                     bookDocuments.push({
-                        id: folder + '-en',
-                        title: document.querySelector(`#book-grid a[href*="${folder}/en/"]`)?.parentElement?.querySelector('h2')?.textContent || folder,
-                        content: enContent,
+                        id: book.id + '-en',
+                        title: book.title.en,
+                        content: enContent + ' ' + book.keywords.join(' '),
                         lang: 'en',
-                        path: `books/${folder}/en/`
+                        path: book.path.en.replace('/content.txt', '/')
                     });
                 } catch (error) {
-                    console.error(`Error loading book ${folder}:`, error);
+                    console.error(`Error loading book ${book.id}:`, error);
                 }
             }
 
@@ -1687,4 +1677,3 @@
     </script>
 </body>
 </html>
-```
