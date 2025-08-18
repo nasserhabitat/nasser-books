@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>مكتبة ناصر ابن داوود</title>
     <meta name="description" content="مكتبة رقمية لمؤلفات الباحث الإسلامي والمهندس ناصر ابن داوود في علوم القرآن والتدبر">
     <meta property="og:title" content="مكتبة ناصر ابن داوود - مؤلفات في علوم القرآن">
@@ -19,20 +20,17 @@
             --new-section-bg: #f9f7f0;
             --search-highlight: #ffeb3b;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: #f9f9f9;
             color: var(--dark-color);
             line-height: 1.6;
         }
-        
         .update-banner {
             background-color: var(--primary-color);
             color: white;
@@ -41,7 +39,6 @@
             font-size: 0.9rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
         .hero {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
@@ -51,7 +48,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .hero::before {
             content: "";
             position: absolute;
@@ -63,32 +59,27 @@
             background-size: 100% 100%;
             opacity: 0.3;
         }
-        
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
-        
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
-        
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
             margin-bottom: 1.5rem;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
         }
-        
         .section-title {
             text-align: center;
             margin: 2rem 0;
@@ -97,7 +88,6 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
         .section-title::after {
             content: "";
             position: absolute;
@@ -109,7 +99,6 @@
             background: var(--primary-color);
             border-radius: 3px;
         }
-        
         .filter-buttons {
             display: flex;
             justify-content: center;
@@ -117,7 +106,6 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
         }
-        
         .filter-buttons button {
             padding: 8px 20px;
             border: 2px solid var(--primary-color);
@@ -129,24 +117,20 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
         .filter-buttons button.active {
             background: var(--primary-color);
             color: white;
         }
-        
         .filter-buttons button:hover {
             background: var(--primary-color);
             color: white;
         }
-        
         .book-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
         .book-card {
             background: white;
             border-radius: 10px;
@@ -155,49 +139,40 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
-        
         .book-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
-        
         .book-cover {
             position: relative;
         }
-        
         .book-cover img {
             width: 100%;
             height: auto;
             display: block;
             border-bottom: 1px solid #eee;
         }
-        
         .book-info {
             padding: 1.5rem;
         }
-        
         .book-card h2 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
             font-size: 1.3rem;
         }
-        
         .book-meta {
             color: #666;
             margin-bottom: 1rem;
             font-size: 0.9rem;
         }
-        
         .book-desc {
             margin-bottom: 1.5rem;
             color: #555;
         }
-        
         .book-actions {
             display: flex;
             gap: 10px;
         }
-        
         .btn {
             display: inline-block;
             padding: 8px 20px;
@@ -210,22 +185,18 @@
             text-align: center;
             flex: 1;
         }
-        
         .btn:hover {
             background: var(--secondary-color);
         }
-        
         .btn-outline {
             background: transparent;
             border: 1px solid var(--primary-color);
             color: var(--primary-color);
         }
-        
         .btn-outline:hover {
             background: var(--primary-color);
             color: white;
         }
-        
         /* أنماط شريط البحث المحسنة */
         .search-container {
             max-width: 700px;
@@ -233,7 +204,6 @@
             position: relative;
             transition: all 0.3s ease;
         }
-        
         .search-input {
             width: 100%;
             padding: 15px 50px 15px 20px;
@@ -246,18 +216,15 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             background-color: white;
         }
-        
         .search-input:focus {
             border-color: var(--secondary-color);
             box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.2);
             transform: translateY(-2px);
         }
-        
         .search-input::placeholder {
             color: #999;
             opacity: 1;
         }
-        
         .search-btn {
             position: absolute;
             left: 20px;
@@ -270,12 +237,10 @@
             padding: 0;
             transition: all 0.3s ease;
         }
-        
         .search-input:focus + .search-btn {
             color: var(--secondary-color);
             transform: translateY(-50%) scale(1.1);
         }
-        
         .search-suggestions {
             position: absolute;
             top: 100%;
@@ -291,34 +256,28 @@
             display: none;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        
         .suggestion-item {
             padding: 12px 20px;
             cursor: pointer;
             transition: all 0.2s ease;
             border-bottom: 1px solid #eee;
         }
-        
         .suggestion-item:last-child {
             border-bottom: none;
         }
-        
         .suggestion-item:hover {
             background: #f5f5f5;
             transform: translateX(-5px);
         }
-        
         .suggestion-title {
             font-weight: 500;
             color: var(--primary-color);
             margin-bottom: 3px;
         }
-        
         .suggestion-author {
             font-size: 0.9rem;
             color: #666;
         }
-        
         .site-footer {
             background: var(--dark-color);
             color: white;
@@ -326,16 +285,13 @@
             padding: 2rem 1rem;
             margin-top: 3rem;
         }
-        
         .footer-content p {
             margin-bottom: 0.5rem;
         }
-        
         /* تأثيرات للجوال */
         .search-input:active {
             transform: scale(0.98);
         }
-        
         /* قسم الكتب الجديدة */
         .new-books-section {
             background-color: var(--new-section-bg);
@@ -346,7 +302,6 @@
             overflow: hidden;
             border-left: 5px solid var(--new-badge-color);
         }
-        
         .new-books-section::before {
             content: "";
             position: absolute;
@@ -358,7 +313,6 @@
             border-radius: 50%;
             transform: translate(50%, -50%);
         }
-        
         .new-books-section::after {
             content: "";
             position: absolute;
@@ -370,7 +324,6 @@
             border-radius: 50%;
             transform: translate(-50%, 50%);
         }
-        
         .section-header {
             display: flex;
             justify-content: space-between;
@@ -379,7 +332,6 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        
         .section-title-new {
             color: var(--new-badge-color);
             font-size: 1.8rem;
@@ -388,7 +340,6 @@
             display: flex;
             align-items: center;
         }
-        
         .section-title-new::before {
             content: "";
             position: absolute;
@@ -400,7 +351,6 @@
             background: var(--new-badge-color);
             border-radius: 5px;
         }
-        
         .new-badge {
             background: var(--new-badge-color);
             color: white;
@@ -412,11 +362,9 @@
             gap: 5px;
             margin-right: 10px;
         }
-        
         .new-badge::before {
             content: "🆕";
         }
-        
         .book-card .new-badge-card {
             position: absolute;
             top: 15px;
@@ -429,13 +377,11 @@
             z-index: 2;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        
         .new-filter-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-        
         .new-filter-buttons button {
             padding: 8px 15px;
             border: 2px solid var(--new-badge-color);
@@ -448,17 +394,14 @@
             transition: all 0.3s ease;
             font-size: 0.9rem;
         }
-        
         .new-filter-buttons button.active {
             background: var(--new-badge-color);
             color: white;
         }
-        
         .new-filter-buttons button:hover {
             background: var(--new-badge-color);
             color: white;
         }
-        
         .month-indicator {
             background: rgba(39, 174, 96, 0.15);
             padding: 5px 15px;
@@ -469,11 +412,9 @@
             align-items: center;
             gap: 5px;
         }
-        
         .month-indicator::before {
             content: "📅";
         }
-        
         /* للشاشات الصغيرة */
         @media (max-width: 768px) {
             .hero h1 {
