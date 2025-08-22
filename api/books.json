@@ -1,1 +1,89 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "books": [
+    {
+      "id": "conscious-contemplation",
+      "titles": {
+        "ar": "نحو تدبر واعٍ",
+        "en": "Towards Conscious Contemplation"
+      },
+      "description": {
+        "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+        "en": "A practical guide to deep understanding of the Holy Quran"
+      },
+      "paths": {
+        "ar": {
+          "html": "books/conscious-contemplation/ar/content.html",
+          "pdf": "books/conscious-contemplation/ar/content.pdf",
+          "text": "books/conscious-contemplation/ar/content.txt",
+          "cover": "books/conscious-contemplation/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "books/conscious-contemplation/en/content.html",
+          "pdf": "books/conscious-contemplation/en/content.pdf",
+          "text": "books/conscious-contemplation/en/content.txt",
+          "cover": "books/conscious-contemplation/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 180,
+        "chapters": 8,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["التدبر", "القرآن الكريم", "الفهم الواعي"]
+      }
+    },
+    {
+      "id": "anwar-al-bayan",
+      "titles": {
+        "ar": "أنوار البيان في رسم المصحف العثماني",
+        "en": "ANWAR AL-BAYAN: Unveiling the Secrets"
+      },
+      "description": {
+        "ar": "دراسة علمية للرسم العثماني وأسراره اللغوية",
+        "en": "Scientific study of the Uthmanic script and its linguistic secrets"
+      },
+      "paths": {
+        "ar": {
+          "html": "books/anwar-al-bayan/ar/content.html",
+          "pdf": "books/anwar-al-bayan/ar/content.pdf",
+          "text": "books/anwar-al-bayan/ar/content.txt",
+          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "books/anwar-al-bayan/en/content.html",
+          "pdf": "books/anwar-al-bayan/en/content.pdf",
+          "text": "books/anwar-al-bayan/en/content.txt",
+          "cover": "books/anwar-al-bayan/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 161,
+        "chapters": 12,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الرسم العثماني", "علوم القرآن", "التجويد"]
+      }
+    }
+  ]
+}
