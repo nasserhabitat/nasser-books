@@ -99,16 +99,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png"
+          "html": "books/changing-the-concepts/ar/content.html",
+          "pdf": "books/changing-the-concepts/ar/content.pdf",
+          "text": "books/changing-the-concepts/ar/content.txt",
+          "cover": "books/changing-the-concepts/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/cover-en.png"
+          "html": "books/changing-the-concepts/en/content.html",
+          "pdf": "books/changing-the-concepts/en/content.pdf",
+          "text": "books/changing-the-concepts/en/content.txt",
+          "cover": "books/changing-the-concepts/en/cover-en.png"
         }
       },
       "metadata": {
@@ -134,16 +134,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+          "html": "books/editing-the-quranic-terminology-tome1/ar/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+          "html": "books/editing-the-quranic-terminology-tome1/en/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
         }
       },
       "metadata": {
@@ -169,16 +169,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
+          "html": "books/editing-the-quranic-terminology-tome2/ar/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+          "html": "books/editing-the-quranic-terminology-tome2/en/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
         }
       },
       "metadata": {
@@ -204,16 +204,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
+          "html": "books/editing-the-quranic-terminology-tome3/ar/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+          "html": "books/editing-the-quranic-terminology-tome3/en/content.html",
+          "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
+          "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
+          "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
         }
       },
       "metadata": {
@@ -239,16 +239,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png"
+          "html": "books/contemplation-in-the-mirror/ar/content.html",
+          "pdf": "books/contemplation-in-the-mirror/ar/content.pdf",
+          "text": "books/contemplation-in-the-mirror/ar/content.txt",
+          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/cover-en.png"
+          "html": "books/contemplation-in-the-mirror/en/content.html",
+          "pdf": "books/contemplation-in-the-mirror/en/content.pdf",
+          "text": "books/contemplation-in-the-mirror/en/content.txt",
+          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
         }
       },
       "metadata": {
@@ -274,16 +274,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png"
+          "html": "books/the-jurisprudence/ar/content.html",
+          "pdf": "books/the-jurisprudence/ar/content.pdf",
+          "text": "books/the-jurisprudence/ar/content.txt",
+          "cover": "books/the-jurisprudence/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/cover-en.png"
+          "html": "books/the-jurisprudence/en/content.html",
+          "pdf": "books/the-jurisprudence/en/content.pdf",
+          "text": "books/the-jurisprudence/en/content.txt",
+          "cover": "books/the-jurisprudence/en/cover-en.png"
         }
       },
       "metadata": {
@@ -309,16 +309,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png"
+          "html": "books/digitizing/ar/content.html",
+          "pdf": "books/digitizing/ar/content.pdf",
+          "text": "books/digitizing/ar/content.txt",
+          "cover": "books/digitizing/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/cover-en.png"
+          "html": "books/digitizing/en/content.html",
+          "pdf": "books/digitizing/en/content.pdf",
+          "text": "books/digitizing/en/content.txt",
+          "cover": "books/digitizing/en/cover-en.png"
         }
       },
       "metadata": {
@@ -344,16 +344,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png"
+          "html": "books/modesty/ar/content.html",
+          "pdf": "books/modesty/ar/content.pdf",
+          "text": "books/modesty/ar/content.txt",
+          "cover": "books/modesty/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/cover-en.png"
+          "html": "books/modesty/en/content.html",
+          "pdf": "books/modesty/en/content.pdf",
+          "text": "books/modesty/en/content.txt",
+          "cover": "books/modesty/en/cover-en.png"
         }
       },
       "metadata": {
@@ -379,16 +379,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png"
+          "html": "books/malakoot/ar/content.html",
+          "pdf": "books/malakoot/ar/content.pdf",
+          "text": "books/malakoot/ar/content.txt",
+          "cover": "books/malakoot/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/cover-en.png"
+          "html": "books/malakoot/en/content.html",
+          "pdf": "books/malakoot/en/content.pdf",
+          "text": "books/malakoot/en/content.txt",
+          "cover": "books/malakoot/en/cover-en.png"
         }
       },
       "metadata": {
@@ -414,16 +414,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png"
+          "html": "books/names-in-the-holy/ar/content.html",
+          "pdf": "books/names-in-the-holy/ar/content.pdf",
+          "text": "books/names-in-the-holy/ar/content.txt",
+          "cover": "books/names-in-the-holy/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/cover-en.png"
+          "html": "books/names-in-the-holy/en/content.html",
+          "pdf": "books/names-in-the-holy/en/content.pdf",
+          "text": "books/names-in-the-holy/en/content.txt",
+          "cover": "books/names-in-the-holy/en/cover-en.png"
         }
       },
       "metadata": {
