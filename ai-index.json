@@ -1,1 +1,439 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "books": [
+    {
+      "id": "conscious-contemplation",
+      "titles": {
+        "ar": "نحو تدبر واعٍ",
+        "en": "Towards Conscious Contemplation"
+      },
+      "description": {
+        "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+        "en": "A practical guide to deep understanding of the Holy Quran"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 180,
+        "chapters": 8,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["التدبر", "القرآن الكريم", "الفهم الواعي"]
+      }
+    },
+    {
+      "id": "anwar-al-bayan",
+      "titles": {
+        "ar": "أنوار البيان في رسم المصحف العثماني",
+        "en": "ANWAR AL-BAYAN: Unveiling the Secrets"
+      },
+      "description": {
+        "ar": "دراسة علمية للرسم العثماني وأسراره اللغوية",
+        "en": "Scientific study of the Uthmanic script and its linguistic secrets"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 161,
+        "chapters": 12,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الرسم العثماني", "علوم القرآن", "التجويد"]
+      }
+    },
+    {
+      "id": "changing-the-concepts",
+      "titles": {
+        "ar": "تغيير المفاهيم للمصطلحات القرآنية",
+        "en": "Changing the Concepts of Quranic Terminology"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية لفقه اللسان القرآني",
+        "en": "Applied study of Quranic terminology jurisprudence"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 220,
+        "chapters": 10,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير"]
+      }
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome1",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني المجلد 1",
+        "en": "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني",
+        "en": "AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 250,
+        "chapters": 14,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير"]
+      }
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome2",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني المجلد 2",
+        "en": "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 2"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني",
+        "en": "AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 280,
+        "chapters": 16,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير"]
+      }
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome3",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني المجلد 3",
+        "en": "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني",
+        "en": "AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 300,
+        "chapters": 18,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير"]
+      }
+    },
+    {
+      "id": "contemplation-in-the-mirror",
+      "titles": {
+        "ar": "التدبر في مرآة الرسوم",
+        "en": "Contemplation in the Mirror of Scripts"
+      },
+      "description": {
+        "ar": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن",
+        "en": "Practical applications of digital manuscripts in Quranic contemplation"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 200,
+        "chapters": 9,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["التدبر", "المخطوطات الرقمية", "الرسوم"]
+      }
+    },
+    {
+      "id": "the-jurisprudence",
+      "titles": {
+        "ar": "فقه اللسان القرآني",
+        "en": "The Jurisprudence of the Qur'anic Tongue"
+      },
+      "description": {
+        "ar": "منهجٌ جديد لفهم النص والمخطوط",
+        "en": "A NEW APPROACH TO UNDERSTANDING THE TEXT AND MANUSCRIPT"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages": 240,
+        "chapters": 11,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["فقه اللغة", "اللسان القرآني", "النص والمخطوط"]
+      }
+    },
+    {
+      "id": "digitizing",
+      "titles": {
+        "ar": "مشروع رقمنة المخطوطات الأصلية",
+        "en": "Digitizing the Original Manuscripts"
+      },
+      "description": {
+        "ar": "دراسة منهجية لحفظ النص القرآني رقمياً",
+        "en": "Methodological study of digital preservation of Quranic text"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "digital_projects",
+        "pages": 190,
+        "chapters": 8,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الرقمنة", "المخطوطات", "الحفظ الرقمي"]
+      }
+    },
+    {
+      "id": "modesty",
+      "titles": {
+        "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+        "en": "MODESTY: The Fence of the Soul"
+      },
+      "description": {
+        "ar": "دراسة في مفهوم الحياء في الإسلام وتطبيقاته",
+        "en": "Study of the concept of modesty in Islam and its applications"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages": 150,
+        "chapters": 7,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية"]
+      }
+    },
+    {
+      "id": "malakoot",
+      "titles": {
+        "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
+        "en": "AND SO THAT HE MAY BE OF THE CERTAIN ONES"
+      },
+      "description": {
+        "ar": "دراسة فلسفية وعلمية للإيمان بالغيب",
+        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages": 210,
+        "chapters": 10,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الإيمان", "الغيب", "اليقين"]
+      }
+    },
+    {
+      "id": "names-in-the-holy",
+      "titles": {
+        "ar": "الأسماء الحسنى الوظيفية",
+        "en": "The Functional Beautiful Names"
+      },
+      "description": {
+        "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
+        "en": "AN ANALYTICAL ENDOWMENT STUDY OF THE IMPLICATIONS OF DIVINE MANAGEMENT"
+      },
+      "paths": {
+        "ar": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png"
+        },
+        "en": {
+          "html": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.html",
+          "pdf": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.pdf",
+          "text": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/content.txt",
+          "cover": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages": 230,
+        "chapters": 12,
+        "language": "arabic",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الأسماء الحسنى", "التدبير الإلهي", "العقيدة"]
+      }
+    }
+  ]
+}
