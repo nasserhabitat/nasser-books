@@ -27,16 +27,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png"
+          "html": "books/conscious-contemplation/ar/content.html",
+          "pdf": "books/conscious-contemplation/ar/content.pdf",
+          "text": "books/conscious-contemplation/ar/content.txt",
+          "cover": "books/conscious-contemplation/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/cover-en.png"
+          "html": "books/conscious-contemplation/en/content.html",
+          "pdf": "books/conscious-contemplation/en/content.pdf",
+          "text": "books/conscious-contemplation/en/content.txt",
+          "cover": "books/conscious-contemplation/en/cover-en.png"
         }
       },
       "metadata": {
@@ -62,16 +62,16 @@
       },
       "paths": {
         "ar": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png"
+          "html": "books/anwar-al-bayan/ar/content.html",
+          "pdf": "books/anwar-al-bayan/ar/content.pdf",
+          "text": "books/anwar-al-bayan/ar/content.txt",
+          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
         },
         "en": {
-          "html": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.html",
-          "pdf": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.pdf",
-          "text": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/content.txt",
-          "cover": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/cover-en.png"
+          "html": "books/anwar-al-bayan/en/content.html",
+          "pdf": "books/anwar-al-bayan/en/content.pdf",
+          "text": "books/anwar-al-bayan/en/content.txt",
+          "cover": "books/anwar-al-bayan/en/cover-en.png"
         }
       },
       "metadata": {
@@ -84,7 +84,9 @@
         "structured_data": true,
         "topics": ["الرسم العثماني", "علوم القرآن", "التجويد"]
       }
-    },
+    }
+  ]
+}
     {
       "id": "changing-the-concepts",
       "titles": {
