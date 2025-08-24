@@ -1,1 +1,77 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "anwar-al-bayan",
+    "titles": {
+      "ar": "أنوار البيان في رسم المصحف العثماني",
+      "en": "ANWAR AL-BAYAN: Unveiling the Secrets"
+    },
+    "description": {
+      "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم. يقدم الكتاب منهجية متكاملة لفهم القرآن الكريم من خلال استكشاف العلاقة الوثيقة بين الرسم العثماني والتدبر العميق لمعاني القرآن.",
+      "en": "A comprehensive scientific study of the Uthmanic script and its linguistic secrets in understanding the Holy Quran. The book presents an integrated methodology for understanding the Quran through exploring the deep relationship between the Uthmanic script and profound contemplation of Quranic meanings."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/anwar-al-bayan/ar/content.html",
+        "pdf": "books/anwar-al-bayan/ar/content.pdf",
+        "text": "books/anwar-al-bayan/ar/content.txt",
+        "cover": "books/anwar-al-bayan/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/anwar-al-bayan/en/content.html",
+        "pdf": "books/anwar-al-bayan/en/content.pdf",
+        "text": "books/anwar-al-bayan/en/content.txt",
+        "cover": "books/anwar-al-bayan/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 161,
+      "chapters": 12,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["الرسم العثماني", "علوم القرآن", "التجويد", "المخطوطات القرآنية", "التدبر القرآني"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "استلهام طريقة تدوين القرآن في المخطوطات القرآنية القديمة",
+        "تحليل دقيق للرسم العثماني والسياق القرآني",
+        "معالجة الأخطاء الشائعة في الرسم الإملائي الحديث",
+        "طريقة جديدة لترتيب كلمات القرآن متعددة الرسم",
+        "نماذج تطبيقية للتدبر القرآني"
+      ],
+      "controversial_issues": [
+        "الفرق بين 'كتاب' و'كُتُب'",
+        "معنى كلمة 'السموت'",
+        "تطور كتابة الهمزة",
+        "أثر التشكيل والتنقيط على الفهم"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2033"
+    },
+    "content_overview": {
+      "methodology": "منهجية متكاملة تجمع بين التحليل اللغوي والدراسة التاريخية والتطبيق العملي",
+      "sources": [
+        "مصحف صنعاء",
+        "مصحف طوب قابي",
+        "المخطوطات القرآنية القديمة",
+        "أصول اللغة العربية"
+      ],
+      "applications": "تطبيقات عملية لفهم القرآن من خلال العودة إلى الأصول والتسلح بمنهجية علمية متوازنة"
+    }
+  }
+}
