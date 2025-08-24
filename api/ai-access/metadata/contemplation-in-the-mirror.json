@@ -1,1 +1,103 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "contemplation-in-the-mirror",
+    "titles": {
+      "ar": "التدبر في مرآة الرسوم",
+      "en": "Contemplation in the Mirror of Scripts"
+    },
+    "description": {
+      "ar": "كتاب يقدم منهجية جديدة لفهم القرآن الكريم من خلال دراسة المخطوطات القرآنية القديمة وتحليلها رقمياً، مع التركيز على دلالات الرسم العثماني وعلاقته بتدبر المعاني القرآنية. يستند إلى مفهوم 'فقه السبع المثاني' كأساس لفهم البنية اللغوية العميقة للنص القرآني.",
+      "en": "A book presenting a new methodology for understanding the Holy Quran through studying ancient Quranic manuscripts and their digital analysis, focusing on the significance of the Uthmanic script and its relationship to contemplating Quranic meanings. It is based on the concept of 'Jurisprudence of the Seven Oft-Repeated' as a foundation for understanding the deep linguistic structure of the Quranic text."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/contemplation-in-the-mirror/ar/content.html",
+        "pdf": "books/contemplation-in-the-mirror/ar/content.pdf",
+        "text": "books/contemplation-in-the-mirror/ar/content.txt",
+        "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/contemplation-in-the-mirror/en/content.html",
+        "pdf": "books/contemplation-in-the-mirror/en/content.pdf",
+        "text": "books/contemplation-in-the-mirror/en/content.txt",
+        "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 253,
+      "chapters": 9,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["التدبر", "المخطوطات الرقمية", "الرسوم", "الرسم العثماني", "فقه السبع المثاني"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "دمج بين الدراسات القرآنية التقليدية والتقنيات الرقمية الحديثة",
+        "تحليل معمق للرسم العثماني ودلالاته",
+        "منهجية 'فقه السبع المثاني' كأداة لفهم القرآن",
+        "أمثلة تطبيقية من المخطوطات القرآنية",
+        "رؤية جديدة للتعامل مع القرآن في العصر الرقمي"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2006"
+    },
+    "content_overview": {
+      "methodology": "منهجية تجمع بين دراسة المخطوطات القرآنية القديمة والتحليل الرقمي الحديث لفهم أعمق للنص القرآني",
+      "main_sections": [
+        {
+          "title": "الرسم العثماني والمخطوطات",
+          "topics": [
+            "الرسم العثماني: حماية أزلية للنص القرآني",
+            "المخطوطة الرقمية الشخصية",
+            "خصائص الرسم العثماني",
+            "تحليل لغوي لسورة التحريم"
+          ]
+        },
+        {
+          "title": "منهجيات التدبر",
+          "topics": [
+            "مبادئ توجيهية لفهم ثوري",
+            "التدبر بين الإجماع والتفرد",
+            "القرآن من المعنى إلى المبنى",
+            "ضوابط فهم الآيات المتشابهة"
+          ]
+        },
+        {
+          "title": "التطبيقات العملية",
+          "topics": [
+            "أمثلة تطبيقية على تدبر الآيات المتشابهة",
+            "منهج تفسير القرآن بالقرآن",
+            "تدبر القصص القرآني",
+            "تدبر آيات الأحكام"
+          ]
+        },
+        {
+          "title": "الأدوات والتقنيات",
+          "topics": [
+            "الأدوات الأساسية لتدبر القرآن",
+            "دور التكنولوجيا في تسهيل التدبر",
+            "التدبر الجماعي",
+            "جدول عملي للتدبر"
+          ]
+        }
+      ],
+      "goal": "تقديم منهجية متكاملة للتعامل مع القرآن الكريم في ضوء المخطوطات القديمة والتقنيات الحديثة، لإحياء علاقة الأمة بكتابها عبر فهم أعمق يستلهم التراث ويتجاوزه باستخدام أدوات العصر"
+    }
+  }
+}
