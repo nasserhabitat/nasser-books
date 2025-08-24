@@ -1,1 +1,78 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "malakoot",
+    "titles": {
+      "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
+      "en": "And to be among the Certain"
+    },
+    "description": {
+      "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما - دراسة كونية قرآنية شاملة. يقدم هذا العمل الموسوعي رؤية متكاملة للكون من منظور قرآني، يجمع بين التحليل العلمي العميق والفهم الروحي الأصيل للآيات الكونية، مع نقد منهجي للنظريات الفلكية المعاصرة.",
+      "en": "A demonstrative journey in the dominion of the heavens, the earth, and what is between them - a comprehensive Quranic cosmic study. This encyclopedic work presents an integrated vision of the universe from a Quranic perspective, combining deep scientific analysis with authentic spiritual understanding of cosmic signs, along with systematic critique of contemporary astronomical theories."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/malakoot/ar/content.html",
+        "pdf": "books/malakoot/ar/content.pdf",
+        "text": "books/malakoot/ar/content.txt",
+        "cover": "books/malakoot/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/malakoot/en/content.html",
+        "pdf": "books/malakoot/en/content.pdf",
+        "text": "books/malakoot/en/content.txt",
+        "cover": "books/malakoot/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "cosmology_quranic_studies",
+      "pages": 611,
+      "chapters": 356,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["علم الكون القرآني", "نقد النظريات الفلكية", "آيات الآفاق في القرآن", "ثبات الأرض ومركزيتها", "العرش والكرسي"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "دراسة شاملة للكون كما ورد في القرآن الكريم",
+        "نقد علمي منهجي للنظريات الفلكية السائدة",
+        "تحليل معمق لآيات السماوات والأرض في القرآن",
+        "رؤية متكاملة تجمع بين البعد المادي والروحي",
+        "أدلة قرآنية وعلمية على ثبات الأرض ومركزيتها"
+      ],
+      "main_themes": [
+        "المنظور القرآني للكون: السماوات والأرض وما بينهما",
+        "حقيقة الأرض: بين الأدلة القرآنية والنظريات العلمية",
+        "نظام الشمس والقمر: دراسة تحليلية للآيات الكونية",
+        "العرش والكرسي: البعد المادي والرمزي في القرآن",
+        "نقد العلم الزائف: تحليل لخرافات علم الفلك الحديث"
+      ],
+      "digital_archive": "https://archive.org/details/20250624_20250624_0823"
+    },
+    "content_overview": {
+      "methodology": "منهجية متكاملة تجمع بين التحليل العلمي والتأويل القرآني والنقد المنهجي للنظريات المعاصرة",
+      "sources": [
+        "القرآن الكريم وتفاسيره",
+        "الدراسات الفلكية التقليدية والحديثة",
+        "المراجع العلمية في علوم الفلك والفيزياء",
+        "المناظرات العلمية حول نماذج الكون"
+      ],
+      "applications": "تطبيقات عملية لفهم الكون من منظور قرآني وتحرير العقل من هيمنة النماذج العلمية السائدة غير المثبتة"
+    }
+  }
+}
