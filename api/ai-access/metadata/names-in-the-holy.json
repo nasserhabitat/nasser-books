@@ -1,1 +1,77 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "names-in-the-holy",
+    "titles": {
+      "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم",
+      "en": "The Functional Beautiful Names in the Holy Quran"
+    },
+    "description": {
+      "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي. يهدف هذا الكتاب إلى التعمق في فهم الأسماء الحسنى من منظور 'الوظيفية'، أي تتبع دلالاتها العملية والتطبيقية في سياقاتها القرآنية، وكيف تتجلى من خلالها سنن الله في تدبير الكون وشؤون الخلق.",
+      "en": "An analytical study of the divine management's implications. This book aims to delve into understanding the Beautiful Names from a 'functional' perspective, tracking their practical and applied implications in their Quranic contexts, and how through them God's laws in managing the universe and creation are manifested."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/names-in-the-holy/ar/content.html",
+        "pdf": "books/names-in-the-holy/ar/content.pdf",
+        "text": "books/names-in-the-holy/ar/content.txt",
+        "cover": "books/names-in-the-holy/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/names-in-the-holy/en/content.html",
+        "pdf": "books/names-in-the-holy/en/content.pdf",
+        "text": "books/names-in-the-holy/en/content.txt",
+        "cover": "books/names-in-the-holy/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_names_studies",
+      "pages": 220,
+      "chapters": 60,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["الأسماء الحسنى", "التدبير الإلهي", "الدراسات القرآنية", "التفسير الموضوعي", "التطبيقات العملية"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "دراسة توقيفية صارمة تعتمد فقط على الأسماء المثبتة قرآنياً",
+        "تحليل وظيفي للأسماء الحسنى في سياقاتها القرآنية",
+        "تصنيف الأسماء إلى فئات ومجموعات دلالية",
+        "تطبيقات عملية لتفعيل الأسماء في الحياة اليومية",
+        "معجم شامل للأسماء الحسنى القرآنية"
+      ],
+      "main_sections": [
+        "المفهوم والأسس: الإطار النظري والمنهجية",
+        "الأسماء الحسنى الوظيفية: التحليل والتصنيف",
+        "معاني وثمرات الأسماء: دراسة تحليلية لكل اسم",
+        "التطبيقات العملية: تحويل المعرفة إلى ممارسة"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2125"
+    },
+    "content_overview": {
+      "methodology": "منهجية توقيفية تحليلية تجمع بين الدراسة القرآنية والتحليل اللغوي والتطبيق العملي",
+      "sources": [
+        "القرآن الكريم وتفاسيره",
+        "معاجم اللغة العربية",
+        "الدراسات السابقة في الأسماء الحسنى",
+        "التراث الإسلامي في العقيدة والأخلاق"
+      ],
+      "applications": "تطبيقات عملية لتفعيل الأسماء الحسنى في الحياة اليومية والدعاء والتدبر"
+    }
+  }
+}
