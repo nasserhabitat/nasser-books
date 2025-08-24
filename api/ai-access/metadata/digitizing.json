@@ -1,1 +1,117 @@
-
+{
+  "book": {
+    "id": "digitizing",
+    "titles": {
+      "ar": "مشروع رقمنة المخطوطات الأصلية",
+      "en": "Digitizing the Original Manuscripts"
+    },
+    "descriptions": {
+      "ar": "دراسة منهجية لحفظ النص القرآني رقمياً",
+      "en": "Methodological study of digital preservation of Quranic text"
+    },
+    "author": {
+      "name": "ناصر ابن داوود",
+      "bio": "باحث إسلامي ومهندس متخصص في الدراسات القرآنية واللغوية"
+    },
+    "technical_info": {
+      "word_count_ar": 38500,
+      "word_count_en": 35200,
+      "page_count": 190,
+      "chapter_count": 8,
+      "language": "arabic",
+      "character_encoding": "UTF-8"
+    },
+    "ai_analysis": {
+      "topics": ["الرقمنة", "المخطوطات القرآنية", "الحفظ الرقمي", "التقنيات الحديثة"],
+      "keywords": [
+        "المخطوطات",
+        "الرقمنة",
+        "الحفظ",
+        "القرآن",
+        "التقنيات",
+        "الترميم"
+      ],
+      "entities": [
+        {
+          "type": "concept",
+          "name": "الرقمنة",
+          "mentions": 45
+        },
+        {
+          "type": "concept", 
+          "name": "الحفظ الرقمي",
+          "mentions": 32
+        },
+        {
+          "type": "technology",
+          "name": "المسح الضوئي",
+          "mentions": 28
+        }
+      ],
+      "readability_score": 7.8,
+      "complexity": "medium"
+    },
+    "files": {
+      "html_ar": {
+        "path": "books/digitizing/ar/content.html",
+        "size": "1.8MB",
+        "word_count": 38500
+      },
+      "text_ar": {
+        "path": "books/digitizing/ar/content.txt",
+        "size": "750KB",
+        "word_count": 38500
+      },
+      "pdf_ar": {
+        "path": "books/digitizing/ar/content.pdf",
+        "size": "3.2MB",
+        "page_count": 190
+      },
+      "html_en": {
+        "path": "books/digitizing/en/content.html",
+        "size": "1.6MB",
+        "word_count": 35200
+      },
+      "text_en": {
+        "path": "books/digitizing/en/content.txt",
+        "size": "680KB",
+        "word_count": 35200
+      },
+      "pdf_en": {
+        "path": "books/digitizing/en/content.pdf",
+        "size": "2.9MB",
+        "page_count": 190
+      },
+      "cover_ar": {
+        "path": "books/digitizing/ar/cover-ar.png",
+        "size": "1.2MB",
+        "dimensions": "300x400"
+      },
+      "cover_en": {
+        "path": "books/digitizing/en/cover-en.png",
+        "size": "1.1MB",
+        "dimensions": "300x400"
+      }
+    },
+    "access_points": {
+      "browser_ar": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/",
+      "browser_en": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/",
+      "ai_api": "https://nasserhabitat.github.io/nasser-books/api/ai-access/metadata/digitizing.json",
+      "text_download_ar": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.txt",
+      "text_download_en": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.txt"
+    },
+    "research_data": {
+      "methodology": "دراسة تطبيقية",
+      "research_type": "بحث تقني تطبيقي",
+      "data_sources": ["المخطوطات القرآنية", "مراجع التقنية الرقمية", "أبحاث الحفظ الرقمي"],
+      "contribution": "تطوير منهجية متكاملة لرقمنة المخطوطات القرآنية"
+    },
+    "ai_accessibility": {
+      "structured_data": true,
+      "machine_readable": true,
+      "text_analysis_ready": true,
+      "supported_formats": ["html", "pdf", "txt", "json"],
+      "metadata_quality": "high"
+    }
+  }
+}
