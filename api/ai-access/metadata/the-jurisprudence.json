@@ -1,1 +1,88 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "the-jurisprudence",
+    "titles": {
+      "ar": "فقه اللسان العربي القرآني",
+      "en": "The Jurisprudence of the Quranic Arabic Language"
+    },
+    "description": {
+      "ar": "دراسة منهجية عميقة لفهم اللسان العربي القرآني من خلال منهجية 'فقه اللسان العربي القرآني' التي تهدف إلى تجاوز الفهم السطحي والغوص في البنية اللغوية والمعرفية العميقة للنص الإلهي. يضع الكتاب المبادئ المؤسسة لهذا الفقه، منطلقًا من أن القرآن بلسانه العربي المبين يحمل نظامًا داخليًا محكمًا وقصديًا.",
+      "en": "A systematic and in-depth study of understanding the Quranic Arabic language through the methodology of 'Jurisprudence of the Quranic Arabic Language' which aims to go beyond superficial understanding and delve into the deep linguistic and cognitive structure of the divine text. The book establishes the foundational principles of this jurisprudence, starting from the premise that the Quran in its clear Arabic tongue carries an internal, precise, and intentional system."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/the-jurisprudence/ar/content.html",
+        "pdf": "books/the-jurisprudence/ar/content.pdf",
+        "text": "books/the-jurisprudence/ar/content.txt",
+        "cover": "books/the-jurisprudence/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/the-jurisprudence/en/content.html",
+        "pdf": "books/the-jurisprudence/en/content.pdf",
+        "text": "books/the-jurisprudence/en/content.txt",
+        "cover": "books/the-jurisprudence/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_linguistics_studies",
+      "pages": 564,
+      "chapters": 16,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["فقه اللغة القرآنية", "اللسان العربي", "المخطوطات القرآنية", "التدبر القرآني", "الإعجاز اللغوي"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "دراسة أسماء الحروف وطاقاتها الدلالية",
+        "تحليل 'المثاني' (الأزواج الحرفية) كنظام بنائي ودلالي",
+        "الاستناد إلى المخطوطات القرآنية الأصلية",
+        "دراسة النظام العددي في القرآن",
+        "تحليل سياق النزول وأثره في التفسير",
+        "منهجية التعامل مع القصص القرآني",
+        "ضوابط الاستعانة بالعلوم والمعارف الخارجية"
+      ],
+      "main_principles": [
+        "خصوصية اللسان القرآني وقصديته المطلقة",
+        "ديناميكية المعنى وتعدد تجلياته ضمن وحدة الأصل",
+        "وحدة النص ومنظومته الشاملة وأخطار التجزئة",
+        "التبيين الذاتي واستنباط القواعد من الداخل",
+        "جوهرية 'أسماء الحروف' كنظام دلالي تأسيسي",
+        "محورية 'المثاني' كنظام بنائي ودلالي",
+        "التفاعل الحيوي مع السياق",
+        "الاستئناس بشواهد المخطوطات والرسم الأصلي",
+        "استكشاف الظاهر والباطن عبر 'القِران'",
+        "العقل كأداة أساسية للتدبر",
+        "الانسجام مع المقاصد الكلية",
+        "الارتباط بالواقع ومصداقية التطبيق"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2057"
+    },
+    "content_overview": {
+      "methodology": "منهجية 'فقه اللسان العربي القرآني' التي تجمع بين الدراسة اللغوية والتحليل النصي والاستناد إلى المخطوطات الأصلية",
+      "sources": [
+        "القرآن الكريم وتفاسيره",
+        "المخطوطات القرآنية الأصلية",
+        "معاجم اللغة العربية",
+        "الدراسات اللغوية الحديثة",
+        "التراث الإسلامي في علوم القرآن"
+      ],
+      "applications": "تطبيقات عملية لفهم القرآن من خلال منهجية فقه اللسان القرآني وتحرير العقل من القيود التقليدية في التفسير"
+    }
+  }
+}
