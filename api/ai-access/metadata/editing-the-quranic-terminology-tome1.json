@@ -1,1 +1,111 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "editing-the-quranic-terminology-tome1",
+    "titles": {
+      "ar": "تحرير المصطلح القرآني المجلد 1",
+      "en": "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1"
+    },
+    "description": {
+      "ar": "يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يُعد المجلد الأول حجر الأساس والبوابة المنهجية لمشروع 'تحرير المصطلح القرآني' بأكمله.",
+      "en": "This book aims to reconstruct the edifice of correct understanding of religion and life by correcting prevailing concepts and presenting authentic insights into Quranic terminology, inspired by the essence of the Quranic language. The first volume serves as the foundation stone and methodological gateway to the entire 'Clarifying the Qur'anic Terminology' project."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/editing-the-quranic-terminology-tome1/ar/content.html",
+        "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+        "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/editing-the-quranic-terminology-tome1/en/content.html",
+        "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
+        "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 486,
+      "chapters": 14,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير", "الرسم العثماني", "المخطوطات القرآنية"],
+      "edition": "الثالثة - 2025",
+      "volume": 1,
+      "total_volumes": 3,
+      "key_features": [
+        "منهجية 'التدبر التفاعلي' التي تتجاوز القراءة السطحية",
+        "تحليل لغوي دقيق للمصطلحات القرآنية",
+        "استفادة من التكنولوجيا الحديثة كأدوات مساعدة",
+        "عرض شمولي يتجاوز الإشكاليات التقليدية",
+        "تحرير المصطلح من الإضافات البشرية والتأويلات"
+      ],
+      "main_themes": [
+        "تأصيل المصدر والمنهج: العودة إلى المخطوطات القرآنية الأصلية",
+        "إعادة بناء المفاهيم العقدية والعبادية",
+        "المفاهيم الإيمانية والوجودية",
+        "معرفة الله وفهم الربوبية والألوهية",
+        "منهجية التعامل مع الموروث الديني"
+      ],
+      "digital_archive": "https://archive.org/details/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201/"
+    },
+    "content_overview": {
+      "methodology": "منهجية تعتمد على الأسس النظرية والضوابط المنهجية لكتاب 'فقه اللسان القرآني' مع التركيز على العودة إلى المخطوطات القرآنية الأصلية",
+      "main_sections": [
+        {
+          "title": "المقدمة المنهجية",
+          "chapters": [
+            "أزمة الفهم الديني المعاصر",
+            "المنهجية الجديدة لفهم المصطلح القرآني",
+            "أهمية العودة إلى المخطوطات الأصلية"
+          ]
+        },
+        {
+          "title": "المفاهيم الإيمانية والعقدية",
+          "chapters": [
+            "تفكيك مفهوم 'الربوبية والألوهية'",
+            "العلاقة بين الله وجبريل",
+            "صفات المؤمنين كمهارات عملية",
+            "بصائر نحو الله: تجاوز المألوف"
+          ]
+        },
+        {
+          "title": "المفاهيم القرآنية الدقيقة",
+          "chapters": [
+            "الغسل المعنوي والتزكية",
+            "الذكر بأبعاده الروحية والنفسية",
+            "النفس في القرآن: من التكليف إلى المصير",
+            "الأعداد في القرآن: من الكم إلى الكيف"
+          ]
+        },
+        {
+          "title": "إعادة فهم العبادات",
+          "chapters": [
+            "الصلاة كرحلة وعي وتغيير",
+            "الحج كرحلة فكرية وروحية",
+            "الصيام كمنهج للتدبر القرآني",
+            "التسبيح: جوهر العبادة ومعناها"
+          ]
+        }
+      ],
+      "goal": "تمكين القارئ من بناء علاقة حية مع القرآن عبر فهم أعمق لمقاصده، وتطبيق تعاليمه ككتاب هداية شامل في كل جوانب الحياة، والمساهمة في بناء مجتمع يستلهم قيمه من الوحي الإلهي"
+    }
+  }
+}
