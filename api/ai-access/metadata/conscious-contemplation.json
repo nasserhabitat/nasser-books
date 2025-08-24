@@ -1,1 +1,105 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "conscious-contemplation",
+    "titles": {
+      "ar": "نحو تدبر واعٍ",
+      "en": "Towards Conscious Contemplation"
+    },
+    "description": {
+      "ar": "كتاب يقدم منهجية متكاملة للتدبر العميق للقرآن الكريم مع أدوات عملية لتطبيق هذه المنهجية في الحياة المعاصرة. ينتقل بالقارئ من التلاوة السطحية إلى الفهم العميق والتطبيق العملي لتعاليم القرآن.",
+      "en": "A practical guide that provides an integrated methodology for deep contemplation of the Holy Quran, offering practical tools to apply this methodology in contemporary life. It transitions the reader from superficial recitation to deep understanding and practical application of Quranic teachings."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/conscious-contemplation/ar/content.html",
+        "pdf": "books/conscious-contemplation/ar/content.pdf",
+        "text": "books/conscious-contemplation/ar/content.txt",
+        "cover": "books/conscious-contemplation/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/conscious-contemplation/en/content.html",
+        "pdf": "books/conscious-contemplation/en/content.pdf",
+        "text": "books/conscious-contemplation/en/content.txt",
+        "cover": "books/conscious-contemplation/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 350,
+      "chapters": 8,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["التدبر", "القرآن الكريم", "الفهم الواعي", "الرسم العثماني", "فقه اللسان القرآني"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "منهجية متكاملة للتدبر القرآني",
+        "أمثلة تطبيقية من القرآن الكريم",
+        "تمارين وأنشطة عملية للقارئ",
+        "دمج بين الأصالة والمعاصرة",
+        "استخدام أدوات تحليلية حديثة"
+      ],
+      "practical_additions": [
+        "ورش عمل تفاعلية مع القارئ",
+        "جداول ورسوم بيانية توضيحية",
+        "استشهادات بأقوال المفسرين",
+        "حلول لتحديات العصر الحديث"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2132"
+    },
+    "content_overview": {
+      "methodology": "منهجية 'فقه اللسان القرآني' المبنية على الانتقال من التلاوة السطحية إلى الفهم العميق والتطبيق العملي",
+      "main_chapters": [
+        {
+          "title": "اللسان العربي القرآني",
+          "topics": [
+            "الفرق بين اللغة العربية واللسان القرآني",
+            "خصائص اللسان القرآني الفريدة",
+            "أهمية فهم النظام المفاهيمي القرآني"
+          ]
+        },
+        {
+          "title": "الرسم العثماني ودلالاته",
+          "topics": [
+            "المخطوطات القرآنية كمصادر للفهم",
+            "دلالات الرسم العثماني في التدبر",
+            "دراسة حالات تطبيقية"
+          ]
+        },
+        {
+          "title": "منهجية التدبر العملي",
+          "topics": [
+            "خطوات عملية للتدبر الفعال",
+            "أدوات تحليل النص القرآني",
+            "كيفية الربط بين الآيات"
+          ]
+        },
+        {
+          "title": "تصحيح المفاهيم",
+          "topics": [
+            "نماذج لمفاهيم تحتاج تصحيحًا",
+            "منهجية التعامل مع القضايا الخلافية",
+            "التركيز على القواسم المشتركة"
+          ]
+        }
+      ],
+      "goal": "جعل تدبر القرآن مشروع حياة من خلال منهجية واضحة تساعد على فهم كلام الله في سياقه الشامل وتطبيق تعاليمه في الواقع المعاصر"
+    }
+  }
+}
