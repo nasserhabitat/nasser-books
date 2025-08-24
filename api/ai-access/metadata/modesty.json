@@ -1,1 +1,78 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "modesty",
+    "titles": {
+      "ar": "الحياء: سياج الروح وبوصلة الفهم",
+      "en": "Modesty: The Soul's Fortress and Compass of Understanding"
+    },
+    "description": {
+      "ar": "يسعى هذا الكتاب إلى تقديم رؤية جديدة، تطرح 'الحياء' ليس فقط كغاية أخلاقية، بل كشرط أساسي وأداة معرفية لا غنى عنها لفهم كتاب الله. يقدم الكتاب منهجية متكاملة تربط بين الخلق القلبي والفهم العقلي في تدبر القرآن الكريم.",
+      "en": "This book seeks to present a new vision that proposes 'modesty' not only as an ethical goal but as an essential condition and indispensable cognitive tool for understanding the Book of Allah. The book offers an integrated methodology that connects heart ethics with intellectual understanding in contemplating the Holy Quran."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/modesty/ar/content.html",
+        "pdf": "books/modesty/ar/content.pdf",
+        "text": "books/modesty/ar/content.txt",
+        "cover": "books/modesty/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/modesty/en/content.html",
+        "pdf": "books/modesty/en/content.pdf",
+        "text": "books/modesty/en/content.txt",
+        "cover": "books/modesty/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_ethics_studies",
+      "pages": 220,
+      "chapters": 18,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["الأخلاق القرآنية", "التدبر القرآني", "الحياء في الإسلام", "فقه اللسان القرآني", "البعد الأخلاقي في المعرفة"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "رؤية جديدة للحياء كأداة معرفية وليس فقط فضيلة أخلاقية",
+        "منهجية متكاملة تربط بين الخلق القلبي والفهم العقلي",
+        "تحليل دقيق لجذر (ح ي ي) في القرآن واللغة",
+        "نماذج تطبيقية لتدبر القرآن من خلال بوصلة الحياء",
+        "معالجة تحديات الحياء في العصر الرقمي"
+      ],
+      "main_sections": [
+        "مدخل إلى فقه اللسان القرآني",
+        "تفكيك الشفرة: دراسة جذر (ح ي ي)",
+        "تجليات الحياء في المشهد القرآني",
+        "من الأخلاق إلى المعرفة: الحياء كترياق للفهم السطحي",
+        "الحياء والأثر الحضاري"
+      ],
+      "digital_archive": "https://archive.org/details/20250707_20250707_0929"
+    },
+    "content_overview": {
+      "methodology": "منهجية متكاملة تجمع بين التحليل اللغوي للجذور القرآنية والدراسة الأخلاقية والتطبيق العملي في التدبر",
+      "sources": [
+        "القرآن الكريم وتفاسيره",
+        "معاجم اللغة العربية",
+        "التراث الإسلامي في الأخلاق والآداب",
+        "الدراسات المعاصرة في الأخلاق الإسلامية"
+      ],
+      "applications": "تطبيقات عملية لفهم القرآن من خلال بوصلة الحياء الأخلاقية وتحرير العقل من الفهم السطحي للنصوص"
+    }
+  }
+}
