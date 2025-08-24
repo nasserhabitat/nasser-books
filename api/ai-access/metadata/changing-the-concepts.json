@@ -1,1 +1,108 @@
-
+{
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-01-15",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt", "png"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "book": {
+    "id": "changing-the-concepts",
+    "titles": {
+      "ar": "تغيير المفاهيم للمصطلحات القرآنية",
+      "en": "Changing the Concepts of Quranic Terminology"
+    },
+    "description": {
+      "ar": "يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يستند في منهجيته إلى الأسس النظرية والضوابط المنهجية لكتاب 'فقه اللسان القرآني'.",
+      "en": "This book aims to reconstruct the edifice of correct understanding of religion and life by correcting prevailing concepts and presenting authentic insights into Quranic terminology, inspired by the essence of the Quranic language. It is methodologically based on the theoretical foundations and methodological controls detailed in the book 'The Jurisprudence of the Qur'anic Tongue'."
+    },
+    "paths": {
+      "ar": {
+        "html": "books/changing-the-concepts/ar/content.html",
+        "pdf": "books/changing-the-concepts/ar/content.pdf",
+        "text": "books/changing-the-concepts/ar/content.txt",
+        "cover": "books/changing-the-concepts/ar/cover-ar.png"
+      },
+      "en": {
+        "html": "books/changing-the-concepts/en/content.html",
+        "pdf": "books/changing-the-concepts/en/content.pdf",
+        "text": "books/changing-the-concepts/en/content.txt",
+        "cover": "books/changing-the-concepts/en/cover-en.png"
+      }
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 762,
+      "chapters": 10,
+      "language": "arabic",
+      "ai_accessible": true,
+      "structured_data": true,
+      "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير", "التدبر التفاعلي", "المفاهيم الإيمانية"],
+      "edition": "الثالثة - 2025",
+      "key_features": [
+        "منهجية 'التدبر التفاعلي' التي تتجاوز القراءة السطحية",
+        "تحليل لغوي دقيق للمصطلحات القرآنية",
+        "استفادة من التكنولوجيا الحديثة كأدوات مساعدة",
+        "عرض شمولي يتجاوز الإشكاليات التقليدية"
+      ],
+      "article_series": [
+        "المفاهيم الإيمانية والعقدية",
+        "المفاهيم القرآنية الدقيقة",
+        "إعادة فهم العبادات",
+        "تصحيح المفاهيم الخاطئة",
+        "الموجودات والحيوان في القرآن"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2050"
+    },
+    "content_overview": {
+      "methodology": "منهجية تفاعلية تجمع بين التحليل اللغوي الدقيق والفهم الشمولي للمصطلحات القرآنية",
+      "main_sections": [
+        {
+          "title": "المفاهيم الإيمانية والعقدية",
+          "chapters": [
+            "تفكيك مفهوم 'الربوبية والألوهية'",
+            "العلاقة بين الله وجبريل",
+            "صفات المؤمنين كمهارات عملية",
+            "بصائر نحو الله: تجاوز المألوف"
+          ]
+        },
+        {
+          "title": "المفاهيم القرآنية الدقيقة",
+          "chapters": [
+            "الغسل المعنوي والتزكية",
+            "الذكر بأبعاده الروحية والنفسية",
+            "النفس في القرآن: من التكليف إلى المصير",
+            "الأعداد في القرآن: من الكم إلى الكيف"
+          ]
+        },
+        {
+          "title": "إعادة فهم العبادات",
+          "chapters": [
+            "الصلاة كرحلة وعي وتغيير",
+            "الحج كرحلة فكرية وروحية",
+            "الصيام كمنهج للتدبر القرآني"
+          ]
+        },
+        {
+          "title": "تصحيح المفاهيم الخاطئة",
+          "chapters": [
+            "القتل والإكراه والطاغوت",
+            "حقيقة النسخ في القرآن",
+            "الجن والشياطين بين الحقيقة والخرافة",
+            "بنو إسرائيل: منظور إنساني شامل"
+          ]
+        }
+      ],
+      "goal": "تمكين القارئ من بناء علاقة حية مع القرآن عبر فهم أعمق لمقاصده، وتطبيق تعاليمه ككتاب هداية شامل في كل جوانب الحياة"
+    }
+  }
+}
