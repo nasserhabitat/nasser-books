@@ -221,7 +221,16 @@ Quranic linguistics
 Digital manuscript analysis
 
 Contemporary approaches to Quranic contemplation
+## 🌐 روابط الكتب عبر المنصات | Book Links Across Platforms
 
+- **Archive.org**: [جميع الرفوعات](https://archive.org/details/@n_ben597/uploads)
+- **GitHub**: متاحة مباشرة عبر الموقع[](https://nasserhabitat.github.io/nasser-books/)
+- **OneDrive**: [مجلد الكتب](https://1drv.ms/f/c/5840890994f66798/Euthh9o-FpZKiIaaGj0rjDMBeAGPDI7zXdszgCHF40Jtfg?e=uKs6UW)
+- **Google Drive**: 
+  - [مجلد 1](https://drive.google.com/drive/folders/15kfq_TCwlpNXlu1DP3hxUAdhVGSMdXyI?usp=sharing)
+  - [مجلد 2](https://drive.google.com/drive/folders/1SdF8QIRWQZvq4Vy_ZB4XsolenX6gnJkO?usp=sharing)
+ 
+  - 
 📬 التواصل | Contact
 للاستفسارات حول المكتبة أو التعاون البحثي:
 
