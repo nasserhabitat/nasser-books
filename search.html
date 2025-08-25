@@ -211,18 +211,24 @@
             color: #777;
         }
         
-        .read-more {
-            display: inline-block;
+        .book-actions {
             margin-top: 1rem;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .book-action {
             padding: 8px 15px;
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            font-size: 0.9rem;
         }
         
-        .read-more:hover {
+        .book-action:hover {
             background-color: var(--secondary-color);
         }
         
@@ -250,6 +256,22 @@
             background-color: var(--primary-color);
             color: white;
             border-color: var(--primary-color);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: #d32f2f;
+            background-color: #ffebee;
+            border-radius: 8px;
+            margin: 2rem 0;
         }
         
         footer {
@@ -284,6 +306,10 @@
                 margin-bottom: 1rem;
                 align-self: center;
             }
+            
+            .book-actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -308,10 +334,9 @@
                     <label class="filter-label" for="categoryFilter">التصنيف:</label>
                     <select class="filter-select" id="categoryFilter">
                         <option value="all">جميع التصنيفات</option>
-                        <option value="religion">العلوم الإسلامية</option>
-                        <option value="literature">الأدب العربي</option>
-                        <option value="history">التاريخ</option>
-                        <option value="science">العلوم</option>
+                        <option value="quranic_studies">الدراسات القرآنية</option>
+                        <option value="faith_studies">الدراسات الإيمانية</option>
+                        <option value="digital_projects">المشاريع الرقمية</option>
                     </select>
                 </div>
                 
@@ -319,240 +344,211 @@
                     <label class="filter-label" for="languageFilter">اللغة:</label>
                     <select class="filter-select" id="languageFilter">
                         <option value="all">جميع اللغات</option>
-                        <option value="arabic">العربية</option>
-                        <option value="english">الإنجليزية</option>
+                        <option value="ar">العربية</option>
+                        <option value="en">الإنجليزية</option>
                     </select>
                 </div>
                 
                 <div class="filter-group">
-                    <label class="filter-label" for="yearFilter">السنة:</label>
-                    <select class="filter-select" id="yearFilter">
-                        <option value="all">جميع السنوات</option>
-                        <option value="recent">الأحدث</option>
-                        <option value="oldest">الأقدم</option>
+                    <label class="filter-label" for="sortSelect">ترتيب حسب:</label>
+                    <select class="filter-select" id="sortSelect">
+                        <option value="relevance">الأكثر صلة</option>
+                        <option value="pages">عدد الصفحات</option>
                     </select>
                 </div>
             </div>
         </section>
         
         <section class="results-section" id="resultsSection">
-            <div class="results-header">
-                <div class="results-count">عرض 10 نتائج</div>
-                <div>
-                    <label for="sortSelect">ترتيب حسب:</label>
-                    <select class="sort-select" id="sortSelect">
-                        <option value="relevance">الأكثر صلة</option>
-                        <option value="newest">الأحدث</option>
-                        <option value="popular">الأكثر شيوعاً</option>
-                    </select>
-                </div>
+            <div class="loading" id="loadingIndicator">جاري تحميل البيانات...</div>
+            <div class="error" id="errorMessage" style="display: none;"></div>
+            
+            <div class="results-header" id="resultsHeader" style="display: none;">
+                <div class="results-count" id="resultsCount">عرض 0 نتائج</div>
             </div>
             
             <div class="book-results" id="bookResults">
                 <!-- سيتم ملء النتائج هنا بواسطة JavaScript -->
             </div>
             
-            <div class="pagination" id="pagination">
-                <button class="pagination-button active">1</button>
-                <button class="pagination-button">2</button>
-                <button class="pagination-button">3</button>
-            </div>
+            <div class="pagination" id="pagination" style="display: none;"></div>
         </section>
     </div>
     
     <footer>
         <div class="container">
             <p>مكتبة ناصر ابن داوود © 2023 - جميع الحقوق محفوظة</p>
+            <p>الترخيص: CC BY-SA 4.0</p>
         </div>
     </footer>
 
     <script>
-        // بيانات نموذجية للكتب (يمكن استبدالها ببيانات حقيقية)
-        const sampleBooks = [
-            {
-                id: 1,
-                title: "تفسير القرآن الكريم",
-                author: "ابن كثير",
-                category: "religion",
-                language: "arabic",
-                year: 1373,
-                description: "أشهر كتب تفسير القرآن الكريم، يتميز بأسلوبه الواضح واعتماده على التفسير بالمأثور.",
-                coverColor: "#4a8cb3"
-            },
-            {
-                id: 2,
-                title: "صحيح البخاري",
-                author: "الإمام البخاري",
-                category: "religion",
-                language: "arabic",
-                year: 846,
-                description: "أصح كتاب بعد كتاب الله تعالى، جمع فيه الإمام البخاري الأحاديث النبوية الصحيحة.",
-                coverColor: "#2c5c7f"
-            },
-            {
-                id: 3,
-                title: "الأيام",
-                author: "طه حسين",
-                category: "literature",
-                language: "arabic",
-                year: 1929,
-                description: "سيرة ذاتية للأديب طه حسين، يروي فيها مراحل حياته منذ الطفولة حتى أصبح من كبار الأدباء.",
-                coverColor: "#d9a74a"
-            },
-            {
-                id: 4,
-                title: "مقدمة ابن خلدون",
-                author: "ابن خلدون",
-                category: "history",
-                language: "arabic",
-                year: 1377,
-                description: "أحد أهم الأعمال التاريخية التي تناولت قوانين العمران البشري وتطور المجتمعات.",
-                coverColor: "#5a7f9f"
-            },
-            {
-                id: 5,
-                title: "الشفاء",
-                author: "ابن سينا",
-                category: "science",
-                language: "arabic",
-                year: 1020,
-                description: "أشهر كتاب في الطب عند العرب، ظل المرجع الرئيسي في الطب لقرون عديدة.",
-                coverColor: "#3a6c8f"
-            },
-            {
-                id: 6,
-                title: "ديوان المتنبي",
-                author: "المتنبي",
-                category: "literature",
-                language: "arabic",
-                year: 965,
-                description: "أشهر دواوين الشعر العربي، يحتوي على قصائد الشاعر الكبير أبي الطيب المتنبي.",
-                coverColor: "#7a5c3f"
-            },
-            {
-                id: 7,
-                title: "فقه السنة",
-                author: "السيد سابق",
-                category: "religion",
-                language: "arabic",
-                year: 1945,
-                description: "كتاب في الفقه الإسلامي يتميز بأسلوبه السهل والواضح وبعده عن التعقيد.",
-                coverColor: "#4a8c6f"
-            },
-            {
-                id: 8,
-            title: "العبر وديوان المبتدأ والخبر",
-                author: "ابن خلدون",
-                category: "history",
-                language: "arabic",
-                year: 1377,
-                description: "من أهم كتب التاريخ التي تناولت تاريخ البشر وأخبار الأمم والدول.",
-                coverColor: "#6a4c8f"
-            },
-            {
-                id: 9,
-                title: "الحاوي في الطب",
-                author: "الرازي",
-                category: "science",
-                language: "arabic",
-                year: 925,
-                description: "أكبر موسوعة طبية في العالم الإسلامي في العصور الوسطى، جمع فيه الرازي كل المعارف الطبية.",
-                coverColor: "#3a8c7f"
-            },
-            {
-                id: 10,
-                title: "رسالة الغفران",
-                author: "أبو العلاء المعري",
-                category: "literature",
-                language: "arabic",
-                year: 1033,
-                description: "من روائع الأدب العربي، تجمع بين الشعر والنثر وتتناول قضايا فلسفية وأدبية.",
-                coverColor: "#8a5c4f"
+        // بيانات الكتب سيتم جلبها من ملف JSON
+        let booksData = [];
+        let currentLanguage = 'ar'; // اللغة الافتراضية هي العربية
+        
+        // دالة لجلب بيانات الكتب من ملف JSON
+        async function fetchBooksData() {
+            try {
+                const response = await fetch('api/books.json');
+                if (!response.ok) {
+                    throw new Error('فشل في جلب بيانات الكتب');
+                }
+                const data = await response.json();
+                booksData = data.books || [];
+                
+                // إخفاء مؤشر التحميل
+                document.getElementById('loadingIndicator').style.display = 'none';
+                
+                // معالجة البحث عند تحميل الصفحة
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get('q') || '';
+                
+                if (searchQuery) {
+                    document.getElementById('searchInput').value = searchQuery;
+                    const results = searchBooks(searchQuery);
+                    displayBooks(results);
+                } else {
+                    displayBooks(booksData);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loadingIndicator').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorMessage').textContent = 'حدث خطأ في تحميل بيانات الكتب: ' + error.message;
             }
-        ];
-
+        }
+        
         // دالة لعرض الكتب
         function displayBooks(books) {
             const bookResults = document.getElementById('bookResults');
+            const resultsHeader = document.getElementById('resultsHeader');
+            const resultsCount = document.getElementById('resultsCount');
+            const pagination = document.getElementById('pagination');
+            
             bookResults.innerHTML = '';
             
             if (books.length === 0) {
-                bookResults.innerHTML = '<div class="no-results">لم يتم العثور على نتائج</div>';
+                bookResults.innerHTML = '<div class="no-results" style="text-align: center; padding: 2rem;">لم يتم العثور على نتائج</div>';
+                resultsHeader.style.display = 'flex';
+                resultsCount.textContent = 'عرض 0 نتائج';
+                pagination.style.display = 'none';
                 return;
             }
+            
+            resultsHeader.style.display = 'flex';
+            resultsCount.textContent = `عرض ${books.length} نتائج`;
             
             books.forEach(book => {
                 const bookCard = document.createElement('div');
                 bookCard.className = 'book-card';
                 
+                // استخدام اللغة المحددة للعناوين والوصف
+                const title = book.titles && book.titles[currentLanguage] ? book.titles[currentLanguage] : book.titles.ar || 'بدون عنوان';
+                const description = book.description && book.description[currentLanguage] ? book.description[currentLanguage] : book.description.ar || 'بدون وصف';
+                const author = book.metadata.author || 'ناصر ابن داوود';
+                const category = getCategoryName(book.metadata.category);
+                const pages = book.metadata.pages || 'غير معروف';
+                const language = book.metadata.language === 'arabic' ? 'العربية' : 'الإنجليزية';
+                
                 bookCard.innerHTML = `
-                    <div class="book-cover" style="background-color: ${book.coverColor}">
-                        <span style="color: white; font-weight: bold;">${book.title.substring(0, 2)}</span>
+                    <div class="book-cover" style="background-color: ${getRandomColor()}">
+                        <span style="color: white; font-weight: bold;">${title.substring(0, 2)}</span>
                     </div>
                     <div class="book-info">
-                        <h2 class="book-title">${book.title}</h2>
-                        <div class="book-author">تأليف: ${book.author}</div>
-                        <p class="book-description">${book.description}</p>
+                        <h2 class="book-title">${title}</h2>
+                        <div class="book-author">تأليف: ${author}</div>
+                        <p class="book-description">${description}</p>
                         <div class="book-meta">
-                            <span>التصنيف: ${getCategoryName(book.category)}</span>
-                            <span>اللغة: ${getLanguageName(book.language)}</span>
-                            <span>السنة: ${book.year} م</span>
+                            <span>التصنيف: ${category}</span>
+                            <span>اللغة: ${language}</span>
+                            <span>الصفحات: ${pages}</span>
+                            <span>الفصول: ${book.metadata.chapters || 'غير معروف'}</span>
                         </div>
-                        <a href="#" class="read-more">قراءة المزيد</a>
+                        <div class="book-actions">
+                            ${book.paths && book.paths.ar && book.paths.ar.html ? 
+                                `<a href="${book.paths.ar.html}" class="book-action" target="_blank">قراءة HTML</a>` : ''}
+                            ${book.paths && book.paths.ar && book.paths.ar.pdf ? 
+                                `<a href="${book.paths.ar.pdf}" class="book-action" target="_blank">تحميل PDF</a>` : ''}
+                            ${book.paths && book.paths.ar && book.paths.ar.text ? 
+                                `<a href="${book.paths.ar.text}" class="book-action" target="_blank">النص الكامل</a>` : ''}
+                        </div>
                     </div>
                 `;
                 
                 bookResults.appendChild(bookCard);
             });
             
-            // تحديث عدد النتائج
-            document.querySelector('.results-count').textContent = `عرض ${books.length} نتائج`;
+            // إظهار Pagination إذا كان هناك أكثر من 10 نتائج
+            if (books.length > 10) {
+                pagination.style.display = 'flex';
+                updatePagination(books.length);
+            } else {
+                pagination.style.display = 'none';
+            }
         }
         
+        // دالة للبحث في الكتب
+        function searchBooks(query) {
+            if (!query) {
+                return booksData;
+            }
+            
+            return booksData.filter(book => {
+                // البحث في العناوين والوصف والمؤلف والمواضيع
+                const searchableText = `
+                    ${book.titles.ar || ''} 
+                    ${book.titles.en || ''} 
+                    ${book.description.ar || ''} 
+                    ${book.description.en || ''} 
+                    ${book.metadata.author || ''} 
+                    ${(book.metadata.topics || []).join(' ')}
+                `.toLowerCase();
+                
+                return searchableText.includes(query.toLowerCase());
+            });
+        }
+        
+        // دالة للحصول على اسم التصنيف
         function getCategoryName(category) {
             const categories = {
-                'religion': 'العلوم الإسلامية',
-                'literature': 'الأدب العربي',
-                'history': 'التاريخ',
-                'science': 'العلوم'
+                'quranic_studies': 'الدراسات القرآنية',
+                'faith_studies': 'الدراسات الإيمانية',
+                'digital_projects': 'المشاريع الرقمية'
             };
             return categories[category] || category;
         }
         
-        function getLanguageName(language) {
-            const languages = {
-                'arabic': 'العربية',
-                'english': 'الإنجليزية'
-            };
-            return languages[language] || language;
+        // دالة لتوليد لون عشوائي للغلاف
+        function getRandomColor() {
+            const colors = ['#2c5c7f', '#4a8cb3', '#d9a74a', '#5a7f9f', '#3a6c8f', '#7a5c3f', '#4a8c6f', '#6a4c8f', '#3a8c7f', '#8a5c4f'];
+            return colors[Math.floor(Math.random() * colors.length)];
         }
         
-        // البحث عن الكتب
-        function searchBooks(query) {
-            if (!query) {
-                return sampleBooks;
-            }
+        // دالة لتحديث Pagination
+        function updatePagination(totalItems) {
+            const paginationElement = document.getElementById('pagination');
+            const pageCount = Math.ceil(totalItems / 10);
             
-            return sampleBooks.filter(book => 
-                book.title.includes(query) || 
-                book.author.includes(query) || 
-                book.description.includes(query)
-            );
+            paginationElement.innerHTML = '';
+            for (let i = 1; i <= pageCount; i++) {
+                const button = document.createElement('button');
+                button.className = 'pagination-button';
+                if (i === 1) button.classList.add('active');
+                button.textContent = i;
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.pagination-button').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    // هنا يمكن تطبيق Pagination على النتائج
+                });
+                paginationElement.appendChild(button);
+            }
         }
         
         // معالجة البحث عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', function() {
-            // الحصول على معامل البحث من URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const searchQuery = urlParams.get('q') || '';
-            
-            if (searchQuery) {
-                document.getElementById('searchInput').value = searchQuery;
-                const results = searchBooks(searchQuery);
-                displayBooks(results);
-            } else {
-                displayBooks(sampleBooks);
-            }
+            // جلب بيانات الكتب
+            fetchBooksData();
             
             // إضافة معالج حدث للنموذج
             document.getElementById('searchForm').addEventListener('submit', function(e) {
@@ -568,46 +564,35 @@
             
             // إضافة معالجات الأحداث للفلاتر
             document.getElementById('categoryFilter').addEventListener('change', applyFilters);
-            document.getElementById('languageFilter').addEventListener('change', applyFilters);
-            document.getElementById('yearFilter').addEventListener('change', applyFilters);
+            document.getElementById('languageFilter').addEventListener('change', function() {
+                currentLanguage = this.value;
+                applyFilters();
+            });
             document.getElementById('sortSelect').addEventListener('change', applyFilters);
         });
         
         // تطبيق الفلاتر والترتيب
         function applyFilters() {
             const category = document.getElementById('categoryFilter').value;
-            const language = document.getElementById('languageFilter').value;
-            const year = document.getElementById('yearFilter').value;
             const sort = document.getElementById('sortSelect').value;
             
-            let filteredBooks = sampleBooks;
+            let filteredBooks = booksData;
             
             // تطبيق فلاتر البحث
             if (category !== 'all') {
-                filteredBooks = filteredBooks.filter(book => book.category === category);
-            }
-            
-            if (language !== 'all') {
-                filteredBooks = filteredBooks.filter(book => book.language === language);
+                filteredBooks = filteredBooks.filter(book => book.metadata.category === category);
             }
             
             // تطبيق الترتيب
-            if (sort === 'newest') {
-                filteredBooks.sort((a, b) => b.year - a.year);
-            } else if (sort === 'oldest') {
-                filteredBooks.sort((a, b) => a.year - b.year);
-            } else if (sort === 'popular') {
-                // في الواقع الفعلي، يمكن أن يكون هناك خاصية عدد المشاهدات أو التقييمات
-                filteredBooks.sort(() => Math.random() - 0.5); // ترتيب عشوائي كنموذج
+            if (sort === 'pages') {
+                filteredBooks.sort((a, b) => (b.metadata.pages || 0) - (a.metadata.pages || 0));
             }
             
             // البحث إذا كان هناك استعلام بحث
             const searchQuery = document.getElementById('searchInput').value;
             if (searchQuery) {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.title.includes(searchQuery) || 
-                    book.author.includes(searchQuery) || 
-                    book.description.includes(searchQuery)
+                filteredBooks = searchBooks(searchQuery).filter(book => 
+                    filteredBooks.some(b => b.id === book.id)
                 );
             }
             
