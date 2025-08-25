@@ -61,49 +61,49 @@ A comprehensive digital library of Dr. Nasser Ibn Dawood's works on Quranic scie
 
 #### English | الإنجليزية
 
-1. **Towards Conscious Contemplation**  
+9. **Towards Conscious Contemplation**  
    - [Read HTML](books/conscious-contemplation/en/content.html)
    - [Download PDF](books/conscious-contemplation/en/content.pdf)
    - [Plain Text](books/conscious-contemplation/en/content.txt)
    - [Cover](books/conscious-contemplation/en/cover-en.png)
 
-2. **ANWAR AL-BAYAN: Unveiling the Secrets**  
+10. **ANWAR AL-BAYAN: Unveiling the Secrets**  
    - [Read HTML](books/anwar-al-bayan/en/content.html)
    - [Download PDF](books/anwar-al-bayan/en/content.pdf)
    - [Plain Text](books/anwar-al-bayan/en/content.txt)
    - [Cover](books/anwar-al-bayan/en/cover-en.png)
 
-3. **Changing the Concepts of Quranic Terminology**  
+11. **Changing the Concepts of Quranic Terminology**  
    - [Read HTML](books/changing-the-concepts/en/content.html)
    - [Download PDF](books/changing-the-concepts/en/content.pdf)
    - [Plain Text](books/changing-the-concepts/en/content.txt)
    - [Cover](books/changing-the-concepts/en/cover-en.png)
 
-4. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1**  
+12. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1**  
    - [Read HTML](books/editing-the-quranic-terminology-tome1/en/content.html)
    - [Download PDF](books/editing-the-quranic-terminology-tome1/en/content.pdf)
    - [Plain Text](books/editing-the-quranic-terminology-tome1/en/content.txt)
    - [Cover](books/editing-the-quranic-terminology-tome1/en/cover-en.png)
 
-5. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 2**  
+13. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 2**  
    - [Read HTML](books/editing-the-quranic-terminology-tome2/en/content.html)
    - [Download PDF](books/editing-the-quranic-terminology-tome2/en/content.pdf)
    - [Plain Text](books/editing-the-quranic-terminology-tome2/en/content.txt)
    - [Cover](books/editing-the-quranic-terminology-tome2/en/cover-en.png)
 
-6. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3**  
+14. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3**  
    - [Read HTML](books/editing-the-quranic-terminology-tome3/en/content.html)
    - [Download PDF](books/editing-the-quranic-terminology-tome3/en/content.pdf)
    - [Plain Text](books/editing-the-quranic-terminology-tome3/en/content.txt)
    - [Cover](books/editing-the-quranic-terminology-tome3/en/cover-en.png)
 
-7. **Contemplation in the Mirror of Scripts**  
+15. **Contemplation in the Mirror of Scripts**  
    - [Read HTML](books/contemplation-in-the-mirror/en/content.html)
    - [Download PDF](books/contemplation-in-the-mirror/en/content.pdf)
    - [Plain Text](books/contemplation-in-the-mirror/en/content.txt)
    - [Cover](books/contemplation-in-the-mirror/en/cover-en.png)
 
-8. **The Jurisprudence of the Qur'anic Tongue**  
+16. **The Jurisprudence of the Qur'anic Tongue**  
    - [Read HTML](books/the-jurisprudence/en/content.html)
    - [Download PDF](books/the-jurisprudence/en/content.pdf)
    - [Plain Text](books/the-jurisprudence/en/content.txt)
@@ -113,7 +113,7 @@ A comprehensive digital library of Dr. Nasser Ibn Dawood's works on Quranic scie
 
 #### العربية | Arabic
 
-9. **مشروع رقمنة المخطوطات الأصلية**  
+17. **مشروع رقمنة المخطوطات الأصلية**  
    - [قراءة HTML](books/digitizing/ar/content.html)
    - [تحميل PDF](books/digitizing/ar/content.pdf)
    - [النص الخام](books/digitizing/ar/content.txt)
@@ -121,7 +121,7 @@ A comprehensive digital library of Dr. Nasser Ibn Dawood's works on Quranic scie
 
 #### English | الإنجليزية
 
-9. **Digitizing the Original Manuscripts**  
+18 **Digitizing the Original Manuscripts**  
    - [Read HTML](books/digitizing/en/content.html)
    - [Download PDF](books/digitizing/en/content.pdf)
    - [Plain Text](books/digitizing/en/content.txt)
@@ -131,19 +131,19 @@ A comprehensive digital library of Dr. Nasser Ibn Dawood's works on Quranic scie
 
 #### العربية | Arabic
 
-10. **الحَيَاءُ - سياج الروح وبوصلة الفهم**  
+19. **الحَيَاءُ - سياج الروح وبوصلة الفهم**  
     - [قراءة HTML](books/modesty/ar/content.html)
     - [تحميل PDF](books/modesty/ar/content.pdf)
     - [النص الخام](books/modesty/ar/content.txt)
     - [الغلاف](books/modesty/ar/cover-ar.png)
 
-11. **وَلِيَكُونَ مِنَ الْمُوقِنِينَ**  
+20. **وَلِيَكُونَ مِنَ الْمُوقِنِينَ**  
     - [قراءة HTML](books/malakoot/ar/content.html)
     - [تحميل PDF](books/malakoot/ar/content.pdf)
     - [النص الخام](books/malakoot/ar/content.txt)
     - [الغلاف](books/malakoot/ar/cover-ar.png)
 
-12. **الأسماء الحسنى الوظيفية**  
+21. **الأسماء الحسنى الوظيفية**  
     - [قراءة HTML](books/names-in-the-holy/ar/content.html)
     - [تحميل PDF](books/names-in-the-holy/ar/content.pdf)
     - [النص الخام](books/names-in-the-holy/ar/content.txt)
@@ -151,19 +151,19 @@ A comprehensive digital library of Dr. Nasser Ibn Dawood's works on Quranic scie
 
 #### English | الإنجليزية
 
-10. **MODESTY: The Fence of the Soul**  
+22. **MODESTY: The Fence of the Soul**  
     - [Read HTML](books/modesty/en/content.html)
     - [Download PDF](books/modesty/en/content.pdf)
     - [Plain Text](books/modesty/en/content.txt)
     - [Cover](books/modesty/en/cover-en.png)
 
-11. **The Functional Beautiful Names**  
+23. **The Functional Beautiful Names**  
     - [Read HTML](books/names-in-the-holy/en/content.html)
     - [Download PDF](books/names-in-the-holy/en/content.pdf)
     - [Plain Text](books/names-in-the-holy/en/content.txt)
     - [Cover](books/names-in-the-holy/en/cover-en.png)
 
-12. **AND SO THAT HE MAY BE OF THE CERTAIN ONES**  
+24. **AND SO THAT HE MAY BE OF THE CERTAIN ONES**  
     - [Read HTML](books/malakoot/en/content.html)
     - [Download PDF](books/malakoot/en/content.pdf)
     - [Plain Text](books/malakoot/en/content.txt)
