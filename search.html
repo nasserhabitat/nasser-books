@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بحث في المكتبة | مكتبة ناصر ابن داوود</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        .search-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        .search-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .results-info {
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        .book-result {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .book-result h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .book-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>بحث في المكتبة</h1>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="search-box">
+            <input type="text" id="search-input" class="search-input" placeholder="اكتب كلمة أو عبارة للبحث...">
+            <button onclick="performSearch()" class="search-button">بحث</button>
+        </div>
+        
+        <div id="results-info" class="results-info"></div>
+        <div id="search-results"></div>
+        
+        <a href="https://nasserhabitat.github.io/nasser-books/" class="back-link">← العودة إلى المكتبة</a>
+    </main>
+
+    <script>
+        // تحميل فهرس البحث عند تحميل الصفحة
+        let searchIndex = [];
+        
+        fetch('./search-index.json')
+            .then(response => response.json())
+            .then(data => {
+                searchIndex = data;
+                // البحث تلقائياً إذا كان هناك معامل بحث في الرابط
+                const urlParams = new URLSearchParams(window.location.search);
+                const query = urlParams.get('q');
+                if (query) {
+                    document.getElementById('search-input').value = query;
+                    performSearch();
+                }
+            })
+            .catch(error => console.error('Error loading search index:', error));
+        
+        // السماح بالبحث عند الضغط على Enter
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        function performSearch() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            if (query === '') return;
+            
+            // تحديث عنوان الصفحة ليتضمن معامل البحث
+            window.history.replaceState({}, '', `?q=${encodeURIComponent(query)}`);
+            
+            // تنفيذ البحث
+            const results = searchIndex.filter(book => 
+                book.title.toLowerCase().includes(query) || 
+                book.description.toLowerCase().includes(query) ||
+                book.content.toLowerCase().includes(query)
+            );
+            
+            displayResults(results, query);
+        }
+        
+        function displayResults(results, query) {
+            const resultsContainer = document.getElementById('search-results');
+            const resultsInfo = document.getElementById('results-info');
+            
+            if (results.length === 0) {
+                resultsInfo.textContent = `لا توجد نتائج للبحث عن "${query}"`;
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <p>لم نعثر على أي نتائج تطابق بحثك. حاول استخدام كلمات أخرى.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            resultsInfo.textContent = `عثرنا على ${results.length} نتيجة للبحث عن "${query}"`;
+            
+            resultsContainer.innerHTML = results.map(book => `
+                <div class="book-result">
+                    <h3><a href="${book.url}">${book.title}</a></h3>
+                    <div class="book-meta">
+                        <span>تأليف: ${book.author}</span> | 
+                        <span>الصفحات: ${book.pages}</span> | 
+                        <span>التصنيف: ${book.category}</span>
+                    </div>
+                    <p>${book.description}</p>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
