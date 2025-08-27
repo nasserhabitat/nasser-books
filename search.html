@@ -380,7 +380,7 @@
     
     <footer>
         <div class="container">
-            <p>مكتبة ناصر ابن داوود © 2023 - جميع الحقوق محفوظة</p>
+            <p>مكتبة ناصر ابن داوود © 2025 - جميع الحقوق محفوظة</p>
             <p>الترخيص: CC BY-SA 4.0 - متوافق مع الذكاء الاصطناعي</p>
         </div>
     </footer>
@@ -394,7 +394,7 @@
         async function fetchBooksData() {
             try {
                 document.getElementById('loadingIndicator').style.display = 'block';
-                const response = await fetch('api/books.json');
+                const response = await fetch('ai-index.json');
                 if (!response.ok) {
                     throw new Error('فشل في جلب بيانات الكتب: ' + response.status);
                 }
@@ -419,7 +419,7 @@
                 console.error('Error:', error);
                 document.getElementById('loadingIndicator').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'block';
-                document.getElementById('errorMessage').textContent = 'حدث خطأ في تحميل بيانات الكتب: ' + error.message;
+                document.getElementById('errorMessage').textContent = 'حدث خطأ في تحميل بيانات الكتب. يرجى التحقق من اتصال الإنترنت أو المحاولة لاحقًا: ' + error.message;
             }
         }
         
@@ -454,10 +454,14 @@
                 const category = getCategoryName(book.metadata.category);
                 const pages = book.metadata.pages || 'غير معروف';
                 const language = book.metadata.language === 'arabic' ? 'العربية' : 'الإنجليزية';
+                const cover = book.links && book.links[currentLanguage] && book.links[currentLanguage].cover ? book.links[currentLanguage].cover : '';
+                
+                // إنشاء روابط الإجراءات بناءً على اللغة المختارة
+                const bookLinks = book.links && book.links[currentLanguage] ? book.links[currentLanguage] : {};
                 
                 bookCard.innerHTML = `
-                    <div class="book-cover" style="background-color: ${getRandomColor()}">
-                        <span style="color: white; font-weight: bold;">${title.substring(0, 2)}</span>
+                    <div class="book-cover">
+                        ${cover ? `<img src="${cover}" alt="غلاف كتاب ${title}">` : `<span style="color: white; font-weight: bold; background-color: ${getRandomColor()}">${title.substring(0, 2)}</span>`}
                     </div>
                     <div class="book-info">
                         <h2 class="book-title">${title} <span class="ai-badge">متوافق مع الذكاء الاصطناعي</span></h2>
@@ -470,12 +474,9 @@
                             <span>الفصول: ${book.metadata.chapters || 'غير معروف'}</span>
                         </div>
                         <div class="book-actions">
-                            ${book.paths && book.paths.ar && book.paths.ar.html ? 
-                                `<a href="${book.paths.ar.html}" class="book-action" target="_blank">قراءة HTML</a>` : ''}
-                            ${book.paths && book.paths.ar && book.paths.ar.pdf ? 
-                                `<a href="${book.paths.ar.pdf}" class="book-action" target="_blank">تحميل PDF</a>` : ''}
-                            ${book.paths && book.paths.ar && book.paths.ar.text ? 
-                                `<a href="${book.paths.ar.text}" class="book-action" target="_blank">النص الكامل</a>` : ''}
+                            ${bookLinks.html ? `<a href="${bookLinks.html}" class="book-action" target="_blank">قراءة HTML</a>` : ''}
+                            ${bookLinks.pdf ? `<a href="${bookLinks.pdf}" class="book-action" target="_blank">تحميل PDF</a>` : ''}
+                            ${bookLinks.text ? `<a href="${bookLinks.text}" class="book-action" target="_blank">النص الكامل</a>` : ''}
                         </div>
                     </div>
                 `;
@@ -572,7 +573,7 @@
             // إضافة معالجات الأحداث للفلاتر
             document.getElementById('categoryFilter').addEventListener('change', applyFilters);
             document.getElementById('languageFilter').addEventListener('change', function() {
-                currentLanguage = this.value;
+                currentLanguage = this.value === 'all' ? 'ar' : this.value; // تعيين اللغة الافتراضية إلى العربية إذا كان "جميع اللغات"
                 applyFilters();
             });
             document.getElementById('sortSelect').addEventListener('change', applyFilters);
@@ -596,9 +597,14 @@
             
             let filteredBooks = booksData;
             
-            // تطبيق فلاتر البحث
+            // تطبيق فلتر التصنيف
             if (category !== 'all') {
                 filteredBooks = filteredBooks.filter(book => book.metadata.category === category);
+            }
+            
+            // تطبيق فلتر اللغة
+            if (currentLanguage !== 'all') {
+                filteredBooks = filteredBooks.filter(book => book.metadata.language === 'arabic' || currentLanguage === 'en');
             }
             
             // تطبيق الترتيب
