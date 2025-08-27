@@ -1,22 +1,870 @@
-لإكمال تحويل الروابط الداخلية إلى روابط خارجية في الكود، سنقوم بإضافة الروابط الخارجية للكتب المتبقية في مصفوفة `libraryBooks`، وتعديل دالة `createBookCard` لاستخدام هذه الروابط الخارجية بدلاً من الروابط الداخلية. سنحافظ على هيكلية الكود الأصلي مع إجراء التعديلات اللازمة فقط. نظرًا لأن الكود طويل، سأركز على تحديث قسم `<script>` الذي يحتوي على بيانات الكتب ودالة إنشاء بطاقة الكتاب، مع ضمان إكمال قائمة الكتب بالروابط الخارجية للكتب المتبقية ("modesty", "malakoot", "names-in-the-holy")، ودمج الروابط الخارجية لجميع الصيغ (HTML، PDF، TXT).
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>مكتبة ناصر ابن داوود - منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</title>
+    <meta name="description" content="مكتبة رقمية شاملة لمؤلفات الباحث الإسلامي ناصر ابن داوود في علوم القرآن والتدبر، متوافقة مع الذكاء الاصطناعي">
+    
+    <!-- بيانات منظمة للذكاء الاصطناعي -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DigitalLibrary",
+        "name": "مكتبة ناصر ابن داوود",
+        "description": "مكتبة رقمية شاملة لمؤلفات الباحث الإسلامي ناصر ابن داوود في علوم القرآن والتدبر",
+        "url": "https://nasserhabitat.github.io/nasser-books/",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": {
+            "@type": "Person",
+            "name": "ناصر ابن داوود",
+            "jobTitle": "باحث إسلامي ومهندس"
+        },
+        "numberOfBooks": 24,
+        "inLanguage": ["ar", "en"],
+        "aiAccessibility": {
+            "isAccessible": true,
+            "supportedFormats": ["HTML", "PDF", "TXT"],
+            "metadataAvailable": true,
+            "structuredData": true
+        }
+    }
+    </script>
+    
+    <!-- إمكانية الوصول للذكاء الاصطناعي -->
+    <meta name="AI-Accessible" content="true">
+    <meta name="Book-Library" content="true">
+    <meta name="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --new-badge-color: #27ae60;
+            --new-section-bg: #f9f7f0;
+            --search-highlight: #ffeb3b;
+            --ai-color: #6a0dad;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f9f9f9;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        .update-banner {
+            background: linear-gradient(135deg, var(--ai-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.3;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .library-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .library-stats span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .filter-buttons button {
+            padding: 8px 20px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .filter-buttons button.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        .filter-buttons button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .book-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .book-cover {
+            position: relative;
+            flex-shrink: 0;
+        }
+        .book-cover img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .ai-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--ai-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .new-badge-card {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--new-badge-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .book-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        .book-meta {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .book-desc {
+            margin-bottom: 1.5rem;
+            color: #555;
+            flex-grow: 1;
+        }
+        .book-formats {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .book-formats span {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        .book-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+            flex: 1;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .ai-access-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .ai-access-links a {
+            color: var(--ai-color);
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+        .ai-access-links a:hover {
+            text-decoration: underline;
+        }
+        /* أنماط شريط البحث المحسنة */
+        .search-container {
+            max-width: 700px;
+            margin: 30px auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        .search-input:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.2);
+            transform: translateY(-2px);
+        }
+        .search-input::placeholder {
+            color: #999;
+            opacity: 1;
+        }
+        .search-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        .search-input:focus + .search-btn {
+            color: var(--secondary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .suggestion-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #eee;
+        }
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        .suggestion-item:hover {
+            background: #f5f5f5;
+            transform: translateX(-5px);
+        }
+        .suggestion-title {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 3px;
+        }
+        .suggestion-author {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .site-footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+        /* تأثيرات للجوال */
+        .search-input:active {
+            transform: scale(0.98);
+        }
+        /* قسم الكتب الجديدة */
+        .new-books-section {
+            background-color: var(--new-section-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--new-badge-color);
+        }
+        .new-books-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+        .new-books-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, 50%);
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .section-title-new {
+            color: var(--new-badge-color);
+            font-size: 1.8rem;
+            position: relative;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title-new::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 30px;
+            background: var(--new-badge-color);
+            border-radius: 5px;
+        }
+        .new-badge {
+            background: var(--new-badge-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 10px;
+        }
+        .new-badge::before {
+            content: "🆕";
+        }
+        .month-indicator {
+            background: rgba(39, 174, 96, 0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: var(--new-badge-color);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .month-indicator::before {
+            content: "📅";
+        }
+        .new-filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .new-filter-buttons button {
+            padding: 8px 15px;
+            border: 2px solid var(--new-badge-color);
+            background: white;
+            color: var(--new-badge-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        .new-filter-buttons button.active {
+            background: var(--new-badge-color);
+            color: white;
+        }
+        .new-filter-buttons button:hover {
+            background: var(--new-badge-color);
+            color: white;
+        }
+        /* قسم واجهات API */
+        .api-section {
+            background: #f8f9fa;
+            padding: 3rem 1rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        .api-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .api-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .api-card:hover {
+            transform: translateY(-5px);
+        }
+        .api-card h3 {
+            color: var(--ai-color);
+            margin-bottom: 15px;
+        }
+        .api-card code {
+            background: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .api-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .api-link:hover {
+            text-decoration: underline;
+        }
+        /* إضافة بسيطة لواجهة البحث */
+        .search-info {
+            text-align: center;
+            margin: 15px 0;
+            color: var(--primary-color);
+            font-weight: 500;
+            background: rgba(41, 128, 185, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .highlight {
+            background-color: var(--search-highlight);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #e74c3c;
+            font-weight: 500;
+            display: none;
+        }
+        .ai-access {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 10px;
+        }
+        .ai-access h3 {
+            margin-bottom: 10px;
+            color: var(--ai-color);
+        }
+        .ai-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .ai-link {
+            padding: 8px 15px;
+            background: var(--ai-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .ai-link:hover {
+            background: #5a0c9d;
+        }
+        .advanced-filters {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .filter-group label {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        .filter-group select {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Tajawal', sans-serif;
+        }
+        /* للشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .search-container {
+                margin: 20px 10px;
+            }
+            
+            .search-input {
+                padding: 12px 45px 12px 15px;
+                font-size: 1rem;
+            }
+            
+            .search-btn {
+                left: 15px;
+            }
+            
+            .book-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .new-books-section {
+                padding: 1.5rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .new-filter-buttons {
+                width: 100%;
+            }
+            
+            .api-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .ai-links {
+                flex-direction: column;
+            }
+            
+            .advanced-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التحديثات -->
+    <div class="update-banner">
+        🤖 منصة متوافقة مع الذكاء الاصطناعي - آخر تحديث: <span id="last-update"></span>
+    </div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>مكتبة ناصر ابن داوود</h1>
+            <p class="subtitle">منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</p>
+            
+            <!-- إحصائيات المكتبة -->
+            <div class="library-stats">
+                <span>📚 24 كتاب</span> | 
+                <span>🌐 نسختان linguistically</span> | 
+                <span>🤖 متوافق مع الذكاء الاصطناعي</span>
+            </div>
+            
+            <!-- شريط البحث المحسن -->
+            <div class="search-container">
+                <input type="text" id="book-search" placeholder="ابحث في المكتبة (نص، مفاهيم، آيات...)" 
+                       aria-label="بحث الكتب" class="search-input">
+                <button class="search-btn" aria-label="تنفيذ البحث">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            
+            <!-- وصول سريع للذكاء الاصطناعي -->
+            <div class="ai-access">
+                <h3>وصول الذكاء الاصطناعي:</h3>
+                <div class="ai-links">
+                    <a href="api/books.json" class="ai-link">فهرس الكتب (JSON)</a>
+                    <a href="api/ai-access/index.json" class="ai-link">واجهة الذكاء الاصطناعي</a>
+                    <a href="api/search.html?q=القرآن" class="ai-link">محرك البحث</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-### التعديلات المطلوبة:
-1. **إكمال مصفوفة `libraryBooks`**:
-   - إضافة الروابط الخارجية للكتب المتبقية بناءً على النمط المستخدم في المستودع (Google Drive لـ HTML وArchive.org لـ PDF وTXT).
-   - التأكد من أن كل كتاب يحتوي على روابط للصيغ الثلاث (HTML، PDF، TXT) لكل من النسختين العربية والإنجليزية.
+    <main class="container">
+        <!-- قسم الكتب الجديدة - مصحح -->
+        <div class="new-books-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title-new">
+                        <span class="new-badge">جديد</span> 
+                        الإصدارات الحديثة
+                    </h2>
+                    <div class="month-indicator">شهر أغسطس 2025</div>
+                </div>
+                <div class="new-filter-buttons">
+                    <button class="active" data-filter="all">الكل</button>
+                    <button data-filter="ar">العربية</button>
+                    <button data-filter="en">English</button>
+                </div>
+            </div>
+            
+            <div class="book-grid" id="new-book-grid">
+                <!-- سيتم ملؤها ديناميكيًا -->
+            </div>
+        </div>
 
-2. **تعديل دالة `createBookCard`**:
-   - استبدال الروابط الداخلية (`${book.path_ar}/` و`${book.path_en}/`) بروابط HTML الخارجية من `links_ar.html` و`links_en.html`.
-   - تحديث رابط تحميل النص الخام لاستخدام `links_ar.txt` بدلاً من `${book.path_ar}/content.txt`.
-   - الإبقاء على رابط بيانات الذكاء الاصطناعي كما هو (`api/ai-access/metadata/${book.id}.json`)، لأنه لا يحتاج إلى تغيير إذا كان يُدار محليًا في المستودع.
+        <section class="books-section">
+            <h2 class="section-title">المكتبة الرقمية المتوافقة مع الذكاء الاصطناعي</h2>
+            
+            <!-- فلاتر متقدمة -->
+            <div class="advanced-filters">
+                <div class="filter-group">
+                    <label>نوع المحتوى:</label>
+                    <select id="content-type">
+                        <option value="all">الكل</option>
+                        <option value="quranic">دراسات قرآنية</option>
+                        <option value="faith">دراسات إيمانية</option>
+                        <option value="digital">مشاريع رقمية</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>التوافق مع الذكاء الاصطناعي:</label>
+                    <select id="ai-compatibility">
+                        <option value="all">الكل</option>
+                        <option value="structured">بيانات منظمة</option>
+                        <option value="api">واجهة برمجة</option>
+                        <option value="analysis">قابل للتحليل</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- قائمة الكتب مع بيانات إضافية للذكاء الاصطناعي -->
+            <div class="book-grid" id="book-grid">
+                <!-- سيتم ملؤها ديناميكيًا -->
+            </div>
+        </section>
+        
+        <!-- قسم واجهات برمجة التطبيقات للذكاء الاصطناعي -->
+        <section class="api-section">
+            <h2 class="section-title">واجهات برمجة التطبيقات (APIs) للذكاء الاصطناعي</h2>
+            
+            <div class="api-cards">
+                <div class="api-card">
+                    <h3>📚 فهرس الكتب</h3>
+                    <p>واجهة JSON تحتوي على بيانات جميع الكتب وهيكلها</p>
+                    <code>GET /api/books.json</code>
+                    <a href="api/books.json" class="api-link">تجربة الواجهة</a>
+                </div>
+                
+                <div class="api-card">
+                    <h3>🔍 محرك البحث</h3>
+                    <p>بحث متقدم في محتوى جميع الكتب مع دعم الاستعلامات المعقدة</p>
+                    <code>GET /api/search.html?q=استعلام</code>
+                    <a href="api/search.html?q=القرآن" class="api-link">تجربة الواجهة</a>
+                </div>
+                
+                <div class="api-card">
+                    <h3>🤖 وصول الذكاء الاصطناعي</h3>
+                    <p>واجهة مخصصة لأنظمة الذكاء الاصطناعي مع بيانات متقدمة</p>
+                    <code>GET /api/ai-access/index.json</code>
+                    <a href="api/ai-access/index.json" class="api-link">تجربة الواجهة</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- قسم نتائج البحث -->
+        <div id="search-results-container" style="display: none; margin-top: 2rem; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <h3 id="search-results-title" style="color: var(--primary-color); margin-bottom: 1.5rem;"></h3>
+            <div id="search-results-content"></div>
+        </div>
+        <!-- رسالة معلومات البحث -->
+        <div class="search-info" id="search-info">
+            تبحث عن: <strong id="search-term-display"></strong> | 
+            عدد النتائج: <strong id="search-results-count">0</strong>
+        </div>
+        
+        <!-- رسالة عدم وجود نتائج -->
+        <div class="no-results" id="no-results">
+            لم يتم العثور على كتب تطابق بحثك. حاول استخدام مصطلحات أخرى.
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن المكتبة الرقمية</h3>
+                <p>منصة معرفية متوافقة مع الذكاء الاصطناعي تهدف إلى نشر المؤلفات القرآنية واللغوية للباحث ناصر ابن داوود.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>وصول الذكاء الاصطناعي</h3>
+                <p>جميع المحتويات متاحة للتحليل الآلي والبحث مع بيانات منظمة كاملة.</p>
+                <p>ترخيص: CC BY-SA 4.0</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>التواصل</h3>
+                <p>البريد الإلكتروني: nasserhabitat@gmail.com</p>
+                <p>الموقع: https://nasserhabitat.github.io/nasser-books/</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 مكتبة ناصر ابن داوود - منصة متوافقة مع الذكاء الاصطناعي</p>
+        </div>
+    </footer>
 
-3. **الحفاظ على توافق الذكاء الاصطناعي**:
-   - الروابط الخارجية تسهل الوصول لأنظمة الذكاء الاصطناعي، حيث يمكن للأنظمة الآلية الوصول إلى المحتوى مباشرة عبر Google Drive وArchive.org دون الحاجة إلى استنساخ المستودع.
-
-### الكود المحدث (قسم `<script>` فقط):
-فيما يلي الجزء المحدث من الكود، مع التركيز على مصفوفة `libraryBooks` ودالة `createBookCard`. بقية الكود (HTML وCSS) تظل كما هي دون تغيير، حيث إن التعديلات تقتصر على الجزء البرمجي.
-
-```html
+    
 <script>
     // بيانات الكتب لهيكل الذكاء الاصطناعي
     const libraryBooks = [
@@ -689,36 +1537,3 @@
         }, 3600000);
     });
 </script>
-```
-
-### التغييرات التي تم إجراؤها:
-1. **تحديث مصفوفة `libraryBooks`**:
-   - استبدلت الحقول `path_ar` و`path_en` بحقول `links_ar` و`links_en`، حيث تحتوي كل منهما على روابط خارجية للصيغ (`html`, `pdf`, `txt`) وصورة الغلاف (`cover`).
-   - أكملت الروابط الخارجية للكتب المتبقية ("modesty", "malakoot", "names-in-the-holy") بناءً على النمط المستخدم في المستودع (Google Drive لـ HTML وArchive.org لـ PDF وTXT).
-   - حافظت على روابط صور الأغلفة الداخلية (`books/[book-id]/[lang]/cover-[lang].png`) لأنها لا تزال متاحة محليًا في المستودع.
-
-2. **تعديل دالة `createBookCard`**:
-   - استبدلت رابط النسخة العربية (`${book.path_ar}/`) برابط `book.links_ar.html`.
-   - استبدلت رابط النسخة الإنجليزية (`${book.path_en}/`) برابط `book.links_en.html`.
-   - استبدلت رابط تحميل النص الخام (`${book.path_ar}/content.txt`) برابط `book.links_ar.txt`.
-   - أضفت `target="_blank"` إلى الروابط الخارجية لفتحها في نافذة جديدة.
-   - حافظت على رابط بيانات الذكاء الاصطناعي (`api/ai-access/metadata/${book.id}.json`) كما هو، لأنه قد يكون جزءًا من واجهة برمجية داخلية.
-   - استبدلت مصدر صورة الغلاف من `${book.path_ar}/cover-ar.png` إلى `${book.links_ar.cover}` للحفاظ على التوافق مع الهيكلية الجديدة.
-
-3. **توافق الذكاء الاصطناعي**:
-   - الروابط الخارجية (Google Drive وArchive.org) متاحة مباشرة عبر الإنترنت، مما يسهل على أنظمة الذكاء الاصطناعي الوصول إلى المحتوى دون الحاجة إلى استنساخ المستودع.
-   - الحقول `ai_access` لم تتغير، حيث لا تزال تشير إلى توافق الكتب مع التحليل الآلي (بيانات منظمة، واجهة برمجية، تحليل المحتوى).
-
-4. **ملاحظات حول الروابط**:
-   - الروابط الخارجية المستخدمة تم استخراجها من المستودع (https://github.com/nasserhabitat/nasser-books) بناءً على النمط الموجود في ملفات `README.md` لكل كتاب.
-   - إذا كانت هناك روابط إضافية أو تغييرات في الروابط الخارجية، يجب تحديث مصفوفة `libraryBooks` وفقًا لذلك.
-   - افترضت أن روابط Google Drive وArchive.org المقدمة صحيحة ونشطة. إذا كانت هناك روابط غير صحيحة، يجب التحقق منها واستبدالها.
-
-### كيفية الاستخدام:
-- **للمستخدمين العاديين**: النقر على زر "النسخة العربية" أو "English Version" سيفتح ملف HTML على Google Drive في نافذة جديدة.
-- **لأنظمة الذكاء الاصطناعي**: يمكن الوصول إلى النصوص الخام (TXT) عبر روابط Archive.org، مما يسهل التحليل الآلي. كما يمكن استخدام واجهة `api/ai-access/metadata/${book.id}.json` للوصول إلى البيانات المنظمة.
-- **لتحميل الملفات**: رابط "تحميل النص الخام" يوجه إلى ملف TXT على Archive.org، مع إمكانية التنزيل المباشر.
-
-### ملاحظات إضافية:
-- **إدارة الروابط الخارجية**: تأكد من أن روابط Google Drive وArchive.org محدثة ونشطة. إذا تغيرت الروابط، يجب تحديث مصفوفة `libraryBooks`.
-- **تحسين الأداء**: يمكن تحسين الأداء بإضافة آلية للتحقق من صحة الروابط الخارجية بشكل ديناميكي باستخدام واجهة برمجية (API)
