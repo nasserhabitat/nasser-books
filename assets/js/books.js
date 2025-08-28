@@ -1,39 +1,24 @@
-// فلترة الكتب حسب اللغة
-function setupFilterButtons() {
-    document.querySelectorAll('.filter-buttons button').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelector('.filter-buttons .active').classList.remove('active');
-            button.classList.add('active');
-            const filter = button.dataset.filter;
-            document.querySelectorAll('#book-grid .book-card').forEach(card => {
-                card.style.display = filter === 'all' || card.dataset.lang === filter ? 'block' : 'none';
-            });
-        });
-    });
-}
-
-// فلترة الكتب الجديدة
-function setupNewBooksFilter() {
-    document.querySelectorAll('.new-filter-buttons button').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelector('.new-filter-buttons .active').classList.remove('active');
-            button.classList.add('active');
-            const filter = button.dataset.filter;
-            document.querySelectorAll('#new-book-grid .book-card').forEach(card => {
-                card.style.display = filter === 'all' || card.dataset.lang === filter ? 'block' : 'none';
-            });
-        });
-    });
-}
-
-// تصحيح مسارات الكتب
+// تصحيح روابط الكتب الخارجية
 function fixBookPaths() {
-    document.querySelectorAll('a[href^="books/"]').forEach(link => {
-        const correctedPath = link.getAttribute('href')
-            .replace(/ /g, '-')
-            .toLowerCase();
+    document.querySelectorAll('.book-actions a, .ai-access-links a').forEach(link => {
+        let correctedPath = link.getAttribute('href');
+        
+        // إزالة المسافات وتحويل إلى حروف صغيرة إذا لزم الأمر
+        correctedPath = correctedPath.replace(/\s+/g, '-').toLowerCase();
+        
+        // التأكد من أن الرابط يبدأ بـ http أو https
+        if (!correctedPath.startsWith('http://') && !correctedPath.startsWith('https://')) {
+            correctedPath = 'https://' + correctedPath;
+        }
+        
+        // تحديث الرابط إذا كان مختلفاً
         if (link.getAttribute('href') !== correctedPath) {
             link.setAttribute('href', correctedPath);
         }
     });
 }
+
+// تهيئة الصفحة عند التحميل
+document.addEventListener('DOMContentLoaded', function() {
+    fixBookPaths();
+});
