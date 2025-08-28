@@ -3,39 +3,38 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-01-15",
+    "last_updated": "2025-08-28",
     "total_books": 24,
     "languages": ["ar", "en"],
-    "formats": ["html", "pdf", "txt", "png"],
+    "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
     "author": {
       "name": "ناصر ابن داوود",
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
-    }
+    },
+    "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
     "id": "malakoot",
     "titles": {
       "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
-      "en": "And to be among the Certain"
+      "en": "To Be Among the Certain"
     },
     "description": {
-      "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما - دراسة كونية قرآنية شاملة. يقدم هذا العمل الموسوعي رؤية متكاملة للكون من منظور قرآني، يجمع بين التحليل العلمي العميق والفهم الروحي الأصيل للآيات الكونية، مع نقد منهجي للنظريات الفلكية المعاصرة.",
-      "en": "A demonstrative journey in the dominion of the heavens, the earth, and what is between them - a comprehensive Quranic cosmic study. This encyclopedic work presents an integrated vision of the universe from a Quranic perspective, combining deep scientific analysis with authentic spiritual understanding of cosmic signs, along with systematic critique of contemporary astronomical theories."
+      "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما، تقدم هذه الدراسة الموسوعية رؤية متكاملة للكون من منظور قرآني. تجمع بين التحليل العلمي العميق والفهم الروحي الأصيل للآيات الكونية، مع نقد منهجي للنظريات الفلكية المعاصرة لتحرير العقل من النماذج العلمية غير المثبتة.",
+      "en": "A demonstrative journey through the dominion of the heavens, the earth, and what lies between them, this encyclopedic study offers an integrated Quranic perspective on the universe. It combines deep scientific analysis with authentic spiritual insights into cosmic signs, alongside a systematic critique of contemporary astronomical theories to liberate the mind from unproven scientific models."
     },
-    "paths": {
+    "links": {
       "ar": {
-        "html": "books/malakoot/ar/content.html",
-        "pdf": "books/malakoot/ar/content.pdf",
-        "text": "books/malakoot/ar/content.txt",
-        "cover": "books/malakoot/ar/cover-ar.png"
+        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
+        "pdf": "https://dn721701.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%84%D9%8A%D9%83%D9%88%D9%86%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D9%86%D9%8A%D9%86.pdf",
+        "text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%84%D9%8A%D9%83%D9%88%D9%86%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D9%86%D9%8A%D9%86_djvu.txt"
       },
       "en": {
-        "html": "books/malakoot/en/content.html",
-        "pdf": "books/malakoot/en/content.pdf",
-        "text": "books/malakoot/en/content.txt",
-        "cover": "books/malakoot/en/cover-en.png"
+        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
+        "pdf": "https://dn721503.ca.archive.org/0/items/to-be-among-the-certain/To%20Be%20Among%20the%20Certain.pdf",
+        "text": "https://archive.org/stream/to-be-among-the-certain/To%20Be%20Among%20the%20Certain_djvu.txt"
       }
     },
     "metadata": {
@@ -46,7 +45,7 @@
       "language": "arabic",
       "ai_accessible": true,
       "structured_data": true,
-      "topics": ["علم الكون القرآني", "نقد النظريات الفلكية", "آيات الآفاق في القرآن", "ثبات الأرض ومركزيتها", "العرش والكرسي"],
+      "topics": ["علم الكون القرآني", "نقد النظريات الفلكية", "آيات الآفاق", "ثبات الأرض", "العرش والكرسي", "تحليل علمي"],
       "edition": "الأولى - 2025",
       "key_features": [
         "دراسة شاملة للكون كما ورد في القرآن الكريم",
@@ -65,14 +64,45 @@
       "digital_archive": "https://archive.org/details/20250624_20250624_0823"
     },
     "content_overview": {
-      "methodology": "منهجية متكاملة تجمع بين التحليل العلمي والتأويل القرآني والنقد المنهجي للنظريات المعاصرة",
-      "sources": [
-        "القرآن الكريم وتفاسيره",
-        "الدراسات الفلكية التقليدية والحديثة",
-        "المراجع العلمية في علوم الفلك والفيزياء",
-        "المناظرات العلمية حول نماذج الكون"
+      "methodology": "منهجية متكاملة تجمع بين التحليل العلمي، التأويل القرآني، والنقد المنهجي للنظريات الفلكية المعاصرة",
+      "main_sections": [
+        {
+          "title": "المنظور القرآني للكون",
+          "chapters": [
+            "السماوات والأرض: تحليل الآيات الكونية",
+            "ما بينهما: الأبعاد الروحية والمادية"
+          ]
+        },
+        {
+          "title": "حقيقة الأرض",
+          "chapters": [
+            "ثبات الأرض: الأدلة القرآنية",
+            "نقد النظريات العلمية حول حركة الأرض"
+          ]
+        },
+        {
+          "title": "نظام الشمس والقمر",
+          "chapters": [
+            "الآيات الكونية: تحليل حركة الشمس والقمر",
+            "النظام الكوني في القرآن"
+          ]
+        },
+        {
+          "title": "العرش والكرسي",
+          "chapters": [
+            "البعد المادي للعرش والكرسي",
+            "الرمزية الروحية في الآيات"
+          ]
+        },
+        {
+          "title": "نقد العلم الزائف",
+          "chapters": [
+            "تحليل خرافات علم الفلك الحديث",
+            "تحرير العقل من النماذج العلمية غير المثبتة"
+          ]
+        }
       ],
-      "applications": "تطبيقات عملية لفهم الكون من منظور قرآني وتحرير العقل من هيمنة النماذج العلمية السائدة غير المثبتة"
+      "goal": "تقديم رؤية قرآنية متكاملة للكون تجمع بين التحليل العلمي والفهم الروحي، مع نقد منهجي للنظريات الفلكية المعاصرة لتحرير العقل من النماذج العلمية غير المثبتة"
     }
   }
 }
