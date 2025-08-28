@@ -1,10 +1,10 @@
 {
-  "libraryസ: "library": {
+  "library": {
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
     "last_updated": "2025-08-28",
-    "total_books": 12,
+    "total_books": 24,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -353,7 +353,7 @@
       },
       "description": {
         "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM""
+        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
       },
       "links": {
         "ar": {
