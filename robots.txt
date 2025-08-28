@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /assets/data/
+Allow: /api/
+Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
