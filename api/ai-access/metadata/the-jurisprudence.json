@@ -3,39 +3,38 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-01-15",
+    "last_updated": "2025-08-28",
     "total_books": 24,
     "languages": ["ar", "en"],
-    "formats": ["html", "pdf", "txt", "png"],
+    "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
     "author": {
       "name": "ناصر ابن داوود",
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
-    }
+    },
+    "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
     "id": "the-jurisprudence",
     "titles": {
       "ar": "فقه اللسان العربي القرآني",
-      "en": "The Jurisprudence of the Quranic Arabic Language"
+      "en": "Jurisprudence of the Quranic Arabic"
     },
     "description": {
-      "ar": "دراسة منهجية عميقة لفهم اللسان العربي القرآني من خلال منهجية 'فقه اللسان العربي القرآني' التي تهدف إلى تجاوز الفهم السطحي والغوص في البنية اللغوية والمعرفية العميقة للنص الإلهي. يضع الكتاب المبادئ المؤسسة لهذا الفقه، منطلقًا من أن القرآن بلسانه العربي المبين يحمل نظامًا داخليًا محكمًا وقصديًا.",
-      "en": "A systematic and in-depth study of understanding the Quranic Arabic language through the methodology of 'Jurisprudence of the Quranic Arabic Language' which aims to go beyond superficial understanding and delve into the deep linguistic and cognitive structure of the divine text. The book establishes the foundational principles of this jurisprudence, starting from the premise that the Quran in its clear Arabic tongue carries an internal, precise, and intentional system."
+      "ar": "دراسة منهجية لفهم اللسان العربي القرآني من خلال منهجية 'فقه اللسان العربي القرآني'. يهدف الكتاب إلى تجاوز الفهم السطحي عبر الغوص في البنية اللغوية والمعرفية للنص القرآني، ووضع مبادئ تأسيسية تؤكد على النظام الداخلي المحكم والقصدي للقرآن.",
+      "en": "A systematic study of the Quranic Arabic language through the methodology of 'Jurisprudence of the Quranic Arabic.' The book aims to transcend superficial understanding by delving into the linguistic and cognitive structure of the Quranic text, establishing foundational principles that affirm the Quran's precise and intentional internal system."
     },
-    "paths": {
+    "links": {
       "ar": {
-        "html": "books/the-jurisprudence/ar/content.html",
-        "pdf": "books/the-jurisprudence/ar/content.pdf",
-        "text": "books/the-jurisprudence/ar/content.txt",
-        "cover": "books/the-jurisprudence/ar/cover-ar.png"
+        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
+        "pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
+        "text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt"
       },
       "en": {
-        "html": "books/the-jurisprudence/en/content.html",
-        "pdf": "books/the-jurisprudence/en/content.pdf",
-        "text": "books/the-jurisprudence/en/content.txt",
-        "cover": "books/the-jurisprudence/en/cover-en.png"
+        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
+        "pdf": "https://dn721503.ca.archive.org/0/items/jurisprudence-quranic-arabic/Jurisprudence%20of%20the%20Quranic%20Arabic.pdf",
+        "text": "https://archive.org/stream/jurisprudence-quranic-arabic/Jurisprudence%20of%20the%20Quranic%20Arabic_djvu.txt"
       }
     },
     "metadata": {
@@ -46,7 +45,7 @@
       "language": "arabic",
       "ai_accessible": true,
       "structured_data": true,
-      "topics": ["فقه اللغة القرآنية", "اللسان العربي", "المخطوطات القرآنية", "التدبر القرآني", "الإعجاز اللغوي"],
+      "topics": ["فقه اللغة القرآنية", "اللسان العربي", "المخطوطات القرآنية", "التدبر القرآني", "الإعجاز اللغوي", "تحليل نصي"],
       "edition": "الأولى - 2025",
       "key_features": [
         "دراسة أسماء الحروف وطاقاتها الدلالية",
@@ -57,32 +56,55 @@
         "منهجية التعامل مع القصص القرآني",
         "ضوابط الاستعانة بالعلوم والمعارف الخارجية"
       ],
-      "main_principles": [
-        "خصوصية اللسان القرآني وقصديته المطلقة",
-        "ديناميكية المعنى وتعدد تجلياته ضمن وحدة الأصل",
-        "وحدة النص ومنظومته الشاملة وأخطار التجزئة",
-        "التبيين الذاتي واستنباط القواعد من الداخل",
-        "جوهرية 'أسماء الحروف' كنظام دلالي تأسيسي",
-        "محورية 'المثاني' كنظام بنائي ودلالي",
-        "التفاعل الحيوي مع السياق",
-        "الاستئناس بشواهد المخطوطات والرسم الأصلي",
-        "استكشاف الظاهر والباطن عبر 'القِران'",
-        "العقل كأداة أساسية للتدبر",
-        "الانسجام مع المقاصد الكلية",
-        "الارتباط بالواقع ومصداقية التطبيق"
+      "main_themes": [
+        "خصوصية اللسان القرآني وقصديته",
+        "ديناميكية المعنى ووحدة النص",
+        "أسماء الحروف والمثاني كنظام دلالي",
+        "التفاعل مع السياق والمخطوطات الأصلية",
+        "التدبر العقلي والمقاصد الكلية"
       ],
       "digital_archive": "https://archive.org/details/20250529_20250529_2057"
     },
     "content_overview": {
-      "methodology": "منهجية 'فقه اللسان العربي القرآني' التي تجمع بين الدراسة اللغوية والتحليل النصي والاستناد إلى المخطوطات الأصلية",
-      "sources": [
-        "القرآن الكريم وتفاسيره",
-        "المخطوطات القرآنية الأصلية",
-        "معاجم اللغة العربية",
-        "الدراسات اللغوية الحديثة",
-        "التراث الإسلامي في علوم القرآن"
+      "methodology": "منهجية 'فقه اللسان العربي القرآني' التي تجمع بين التحليل اللغوي، الدراسة النصية، والاستناد إلى المخطوطات القرآنية الأصلية لفهم النظام الداخلي للقرآن",
+      "main_sections": [
+        {
+          "title": "خصوصية اللسان القرآني",
+          "chapters": [
+            "قصدية اللسان العربي القرآني",
+            "وحدة النص وخطورة التجزئة"
+          ]
+        },
+        {
+          "title": "أسماء الحروف والمثاني",
+          "chapters": [
+            "دراسة أسماء الحروف وطاقاتها الدلالية",
+            "المثاني كنظام بنائي ودلالي"
+          ]
+        },
+        {
+          "title": "التفاعل مع السياق",
+          "chapters": [
+            "تحليل سياق النزول وأثره",
+            "التفاعل الحيوي مع القصص القرآني"
+          ]
+        },
+        {
+          "title": "الاستناد إلى المخطوطات",
+          "chapters": [
+            "شواهد المخطوطات القرآنية الأصلية",
+            "النظام العددي في القرآن"
+          ]
+        },
+        {
+          "title": "التدبر العقلي والمقاصد",
+          "chapters": [
+            "العقل كأداة للتدبر",
+            "الانسجام مع المقاصد الكلية وتطبيقات الواقع"
+          ]
+        }
       ],
-      "applications": "تطبيقات عملية لفهم القرآن من خلال منهجية فقه اللسان القرآني وتحرير العقل من القيود التقليدية في التفسير"
+      "goal": "وضع مبادئ تأسيسية لفهم اللسان العربي القرآني من خلال منهجية فقه اللسان، لتجاوز الفهم السطحي والكشف عن النظام الداخلي المحكم للنص القرآني"
     }
   }
 }
