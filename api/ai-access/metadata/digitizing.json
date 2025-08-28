@@ -1,117 +1,98 @@
 {
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-08-28",
+    "total_books": 24,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
+  },
   "book": {
     "id": "digitizing",
     "titles": {
       "ar": "مشروع رقمنة المخطوطات الأصلية",
       "en": "Digitizing the Original Manuscripts"
     },
-    "descriptions": {
-      "ar": "دراسة منهجية لحفظ النص القرآني رقمياً",
-      "en": "Methodological study of digital preservation of Quranic text"
+    "description": {
+      "ar": "دراسة منهجية لتطوير تقنيات رقمنة المخطوطات القرآنية الأصلية، مع التركيز على الحفظ الرقمي وتحليل النصوص باستخدام الأدوات الحديثة. يقدم الكتاب إطارًا عمليًا لحفظ النص القرآني وجعله متاحًا للأجيال القادمة مع ضمان الدقة والأصالة.",
+      "en": "A methodological study on developing techniques for digitizing original Quranic manuscripts, focusing on digital preservation and text analysis using modern tools. The book provides a practical framework for preserving the Quranic text and making it accessible for future generations while ensuring accuracy and authenticity."
     },
-    "author": {
-      "name": "ناصر ابن داوود",
-      "bio": "باحث إسلامي ومهندس متخصص في الدراسات القرآنية واللغوية"
-    },
-    "technical_info": {
-      "word_count_ar": 38500,
-      "word_count_en": 35200,
-      "page_count": 190,
-      "chapter_count": 8,
-      "language": "arabic",
-      "character_encoding": "UTF-8"
-    },
-    "ai_analysis": {
-      "topics": ["الرقمنة", "المخطوطات القرآنية", "الحفظ الرقمي", "التقنيات الحديثة"],
-      "keywords": [
-        "المخطوطات",
-        "الرقمنة",
-        "الحفظ",
-        "القرآن",
-        "التقنيات",
-        "الترميم"
-      ],
-      "entities": [
-        {
-          "type": "concept",
-          "name": "الرقمنة",
-          "mentions": 45
-        },
-        {
-          "type": "concept", 
-          "name": "الحفظ الرقمي",
-          "mentions": 32
-        },
-        {
-          "type": "technology",
-          "name": "المسح الضوئي",
-          "mentions": 28
-        }
-      ],
-      "readability_score": 7.8,
-      "complexity": "medium"
-    },
-    "files": {
-      "html_ar": {
-        "path": "books/digitizing/ar/content.html",
-        "size": "1.8MB",
-        "word_count": 38500
+    "links": {
+      "ar": {
+        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
+        "pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2100/%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9.pdf",
+        "text": "https://archive.org/stream/20250529_20250529_2100/%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9_djvu.txt"
       },
-      "text_ar": {
-        "path": "books/digitizing/ar/content.txt",
-        "size": "750KB",
-        "word_count": 38500
-      },
-      "pdf_ar": {
-        "path": "books/digitizing/ar/content.pdf",
-        "size": "3.2MB",
-        "page_count": 190
-      },
-      "html_en": {
-        "path": "books/digitizing/en/content.html",
-        "size": "1.6MB",
-        "word_count": 35200
-      },
-      "text_en": {
-        "path": "books/digitizing/en/content.txt",
-        "size": "680KB",
-        "word_count": 35200
-      },
-      "pdf_en": {
-        "path": "books/digitizing/en/content.pdf",
-        "size": "2.9MB",
-        "page_count": 190
-      },
-      "cover_ar": {
-        "path": "books/digitizing/ar/cover-ar.png",
-        "size": "1.2MB",
-        "dimensions": "300x400"
-      },
-      "cover_en": {
-        "path": "books/digitizing/en/cover-en.png",
-        "size": "1.1MB",
-        "dimensions": "300x400"
+      "en": {
+        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
+        "pdf": "https://dn721503.ca.archive.org/0/items/digitizing-the-original-manuscripts/Digitizing%20the%20Original%20Manuscripts.pdf",
+        "text": "https://archive.org/stream/digitizing-the-original-manuscripts/Digitizing%20the%20Original%20Manuscripts_djvu.txt"
       }
     },
-    "access_points": {
-      "browser_ar": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/",
-      "browser_en": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/",
-      "ai_api": "https://nasserhabitat.github.io/nasser-books/api/ai-access/metadata/digitizing.json",
-      "text_download_ar": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/content.txt",
-      "text_download_en": "https://nasserhabitat.github.io/nasser-books/books/digitizing/en/content.txt"
-    },
-    "research_data": {
-      "methodology": "دراسة تطبيقية",
-      "research_type": "بحث تقني تطبيقي",
-      "data_sources": ["المخطوطات القرآنية", "مراجع التقنية الرقمية", "أبحاث الحفظ الرقمي"],
-      "contribution": "تطوير منهجية متكاملة لرقمنة المخطوطات القرآنية"
-    },
-    "ai_accessibility": {
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "quranic_studies",
+      "pages": 190,
+      "chapters": 8,
+      "language": "arabic",
+      "word_count_ar": 38500,
+      "word_count_en": 35200,
+      "ai_accessible": true,
       "structured_data": true,
-      "machine_readable": true,
-      "text_analysis_ready": true,
-      "supported_formats": ["html", "pdf", "txt", "json"],
-      "metadata_quality": "high"
+      "topics": ["الرقمنة", "المخطوطات القرآنية", "الحفظ الرقمي", "التقنيات الحديثة", "تحليل النصوص", "الترميم الرقمي"],
+      "edition": "الأولى - 2025",
+      "key_features": [
+        "إطار منهجي لرقمنة المخطوطات القرآنية",
+        "استخدام تقنيات المسح الضوئي والتحليل الرقمي",
+        "ضمان دقة وأصالة النصوص المرقمنة",
+        "تطبيقات عملية لحفظ النص القرآني",
+        "دمج التكنولوجيا الحديثة مع الدراسات القرآنية"
+      ],
+      "digital_archive": "https://archive.org/details/20250529_20250529_2100"
+    },
+    "content_overview": {
+      "methodology": "دراسة تطبيقية تجمع بين تقنيات الرقمنة الحديثة والدراسات القرآنية لتطوير منهجية متكاملة لحفظ النص القرآني",
+      "data_sources": [
+        "المخطوطات القرآنية",
+        "مراجع التقنية الرقمية",
+        "أبحاث الحفظ الرقمي"
+      ],
+      "contribution": "تطوير منهجية متكاملة لرقمنة المخطوطات القرآنية مع ضمان الدقة والأصالة، وتوفير أدوات تحليلية لفهم النصوص",
+      "main_sections": [
+        {
+          "title": "أسس الرقمنة",
+          "topics": [
+            "مبادئ الحفظ الرقمي",
+            "تقنيات المسح الضوئي",
+            "معايير الجودة في الرقمنة"
+          ]
+        },
+        {
+          "title": "تحليل المخطوطات القرآنية",
+          "topics": [
+            "خصائص المخطوطات القرآنية",
+            "التحليل الرقمي للنصوص",
+            "دراسة حالات تطبيقية"
+          ]
+        },
+        {
+          "title": "التطبيقات العملية",
+          "topics": [
+            "إتاحة النصوص للأجيال القادمة",
+            "أدوات التحليل الرقمي",
+            "التكامل مع الدراسات القرآنية"
+          ]
+        }
+      ],
+      "goal": "تقديم منهجية متكاملة لرقمنة المخطوطات القرآنية للحفاظ على النص القرآني وجعله متاحًا للدراسة والتحليل باستخدام التقنيات الحديثة"
     }
   }
 }
