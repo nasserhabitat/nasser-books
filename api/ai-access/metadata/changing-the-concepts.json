@@ -3,16 +3,17 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-01-15",
+    "last_updated": "2025-08-28",
     "total_books": 24,
     "languages": ["ar", "en"],
-    "formats": ["html", "pdf", "txt", "png"],
+    "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
     "author": {
       "name": "ناصر ابن داوود",
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
-    }
+    },
+    "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
     "id": "changing-the-concepts",
@@ -22,20 +23,18 @@
     },
     "description": {
       "ar": "يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يستند في منهجيته إلى الأسس النظرية والضوابط المنهجية لكتاب 'فقه اللسان القرآني'.",
-      "en": "This book aims to reconstruct the edifice of correct understanding of religion and life by correcting prevailing concepts and presenting authentic insights into Quranic terminology, inspired by the essence of the Quranic language. It is methodologically based on the theoretical foundations and methodological controls detailed in the book 'The Jurisprudence of the Qur'anic Tongue'."
+      "en": "This book seeks to reconstruct a correct understanding of religion and life by refining prevailing concepts and offering authentic insights into Quranic terminology, drawing from the essence of the Quranic language. It builds on the theoretical foundations and methodological principles outlined in 'The Jurisprudence of the Qur'anic Tongue'."
     },
-    "paths": {
+    "links": {
       "ar": {
-        "html": "books/changing-the-concepts/ar/content.html",
-        "pdf": "books/changing-the-concepts/ar/content.pdf",
-        "text": "books/changing-the-concepts/ar/content.txt",
-        "cover": "books/changing-the-concepts/ar/cover-ar.png"
+        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
+        "pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9.pdf",
+        "text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9_djvu.txt"
       },
       "en": {
-        "html": "books/changing-the-concepts/en/content.html",
-        "pdf": "books/changing-the-concepts/en/content.pdf",
-        "text": "books/changing-the-concepts/en/content.txt",
-        "cover": "books/changing-the-concepts/en/cover-en.png"
+        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
+        "pdf": "https://dn721503.ca.archive.org/0/items/changing-the-concepts-of-quranic-terminology/Changing%20the%20Concepts%20of%20Quranic%20Terminology.pdf",
+        "text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology/Changing%20the%20Concepts%20of%20Quranic%20Terminology_djvu.txt"
       }
     },
     "metadata": {
@@ -46,7 +45,7 @@
       "language": "arabic",
       "ai_accessible": true,
       "structured_data": true,
-      "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير", "التدبر التفاعلي", "المفاهيم الإيمانية"],
+      "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير", "التدبر التفاعلي", "المفاهيم الإيمانية", "تحليل لغوي"],
       "edition": "الثالثة - 2025",
       "key_features": [
         "منهجية 'التدبر التفاعلي' التي تتجاوز القراءة السطحية",
