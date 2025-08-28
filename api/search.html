@@ -70,10 +70,10 @@
         let currentPage = 1;
         const resultsPerPage = 10;
 
-        // Fetch books.json data
+        // Fetch index.json data
         async function fetchBooks() {
             try {
-                const response = await fetch('books.json');
+                const response = await fetch('../data/index.json');
                 if (!response.ok) throw new Error('فشل في جلب بيانات الكتب');
                 booksData = await response.json();
                 searchBooks(); // Initial display
@@ -98,10 +98,10 @@
 
             // Filter books
             const filteredBooks = booksData.books.filter(book => {
-                const title = book.titles[lang].toLowerCase();
+                const title = book.title[lang].toLowerCase();
                 const description = book.description[lang].toLowerCase();
-                const topics = book.metadata.topics.map(topic => topic.toLowerCase());
-                return title.includes(query) || description.includes(query) || topics.some(topic => topic.includes(query));
+                const keywords = book.keywords.map(keyword => keyword.toLowerCase());
+                return title.includes(query) || description.includes(query) || keywords.some(keyword => keyword.includes(query));
             });
 
             // Pagination
@@ -118,14 +118,13 @@
                     const card = document.createElement('div');
                     card.className = 'result-card';
                     card.innerHTML = `
-                        <h3>${book.titles[lang]}</h3>
+                        <h3>${book.title[lang]}</h3>
                         <p>${book.description[lang]}</p>
                         <div class="links">
-                            <a href="${book.links[lang].html}" target="_blank" class="btn btn-sm btn-outline-primary">HTML</a>
-                            <a href="${book.links[lang].pdf}" target="_blank" class="btn btn-sm btn-outline-primary">PDF</a>
-                            <a href="${book.links[lang].text}" target="_blank" class="btn btn-sm btn-outline-primary">Text</a>
+                            <a href="${book.path[lang]}" target="_blank" class="btn btn-sm btn-outline-primary">Text</a>
+                            <img src="${book.cover[lang]}" alt="Cover" style="max-width: 100px; margin-top: 10px;">
                         </div>
-                        <p><small>الفئة: ${book.metadata.category} | الصفحات: ${book.metadata.pages} | الفصول: ${book.metadata.chapters}</small></p>
+                        <p><small>الفئة: ${book.category} | السنة: ${book.year}</small></p>
                     `;
                     resultsDiv.appendChild(card);
                 });
