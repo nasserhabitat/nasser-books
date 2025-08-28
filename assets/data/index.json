@@ -1,3 +1,4 @@
+```json
 {
   "books": [
     {
@@ -522,7 +523,7 @@
         "مصطلحات",
         "جزء2",
         "تحرير",
-        "تغ performيير المفاهيم",
+        "تغيير المفاهيم",
         "المصطلحات القرآنية",
         "فقه اللسان القرآني",
         "التدبر القرآني",
@@ -748,6 +749,10 @@
     "total_arabic": 11,
     "total_english": 11,
     "release_date": "2025-08-15",
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
     "categories": [
       "التدبر القرآني",
       "الرسم العثماني",
@@ -774,3 +779,4 @@
     }
   }
 }
+```
