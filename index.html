@@ -1282,6 +1282,30 @@
         document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
     }
     
+    // دالة لتحميل المحتويات مسبقًا
+    async function preloadBookContents() {
+        await Promise.all(libraryBooks.map(async (book) => {
+            if (book.content_ar === null) {
+                try {
+                    const responseAr = await fetch(book.links_ar.txt);
+                    book.content_ar = await responseAr.text();
+                } catch (error) {
+                    book.content_ar = '';
+                    console.error(`Error loading Arabic content for ${book.id}:`, error);
+                }
+            }
+            if (book.content_en === null) {
+                try {
+                    const responseEn = await fetch(book.links_en.txt);
+                    book.content_en = await responseEn.text();
+                } catch (error) {
+                    book.content_en = '';
+                    console.error(`Error loading English content for ${book.id}:`, error);
+                }
+            }
+        }));
+    }
+    
     // إعداد البحث
     function setupSearch() {
         const searchInput = document.getElementById('book-search');
@@ -1327,9 +1351,9 @@
         async function searchBooks(query) {
             const matchingBooks = [];
             for (let book of libraryBooks) {
-                const titleMatchAr = book.title_ar.includes(query);
-                const titleMatchEn = book.title_en.includes(query);
-                const descMatch = getBookDescription(book.id).includes(query);
+                const titleMatchAr = book.title_ar.toLowerCase().includes(query.toLowerCase());
+                const titleMatchEn = book.title_en.toLowerCase().includes(query.toLowerCase());
+                const descMatch = getBookDescription(book.id).toLowerCase().includes(query.toLowerCase());
                 
                 // جلب المحتوى إذا لم يكن محملًا بعد
                 if (book.content_ar === null) {
@@ -1337,7 +1361,7 @@
                         const responseAr = await fetch(book.links_ar.txt);
                         book.content_ar = await responseAr.text();
                     } catch (error) {
-                        book.content_ar = ''; // في حالة خطأ، تجاهل
+                        book.content_ar = '';
                     }
                 }
                 if (book.content_en === null) {
@@ -1345,12 +1369,12 @@
                         const responseEn = await fetch(book.links_en.txt);
                         book.content_en = await responseEn.text();
                     } catch (error) {
-                        book.content_en = ''; // في حالة خطأ، تجاهل
+                        book.content_en = '';
                     }
                 }
                 
-                const contentMatchAr = book.content_ar.includes(query);
-                const contentMatchEn = book.content_en.includes(query);
+                const contentMatchAr = book.content_ar.toLowerCase().includes(query.toLowerCase());
+                const contentMatchEn = book.content_en.toLowerCase().includes(query.toLowerCase());
                 
                 if (titleMatchAr || titleMatchEn || descMatch || contentMatchAr || contentMatchEn) {
                     matchingBooks.push(book);
@@ -1572,9 +1596,10 @@
     }
     
     // تهيئة الصفحة عند التحميل
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', async function() {
         updateLastUpdateTime();
         loadBooks();
+        await preloadBookContents();
         setupSearch();
         setupFilterButtons();
         setupNewBooksFilter();
