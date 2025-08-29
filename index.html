@@ -1,0 +1,724 @@
+لإكمال تحويل الروابط الداخلية إلى روابط خارجية في الكود، سنقوم بإضافة الروابط الخارجية للكتب المتبقية في مصفوفة `libraryBooks`، وتعديل دالة `createBookCard` لاستخدام هذه الروابط الخارجية بدلاً من الروابط الداخلية. سنحافظ على هيكلية الكود الأصلي مع إجراء التعديلات اللازمة فقط. نظرًا لأن الكود طويل، سأركز على تحديث قسم `<script>` الذي يحتوي على بيانات الكتب ودالة إنشاء بطاقة الكتاب، مع ضمان إكمال قائمة الكتب بالروابط الخارجية للكتب المتبقية ("modesty", "malakoot", "names-in-the-holy")، ودمج الروابط الخارجية لجميع الصيغ (HTML، PDF، TXT).
+
+### التعديلات المطلوبة:
+1. **إكمال مصفوفة `libraryBooks`**:
+   - إضافة الروابط الخارجية للكتب المتبقية بناءً على النمط المستخدم في المستودع (Google Drive لـ HTML وArchive.org لـ PDF وTXT).
+   - التأكد من أن كل كتاب يحتوي على روابط للصيغ الثلاث (HTML، PDF، TXT) لكل من النسختين العربية والإنجليزية.
+
+2. **تعديل دالة `createBookCard`**:
+   - استبدال الروابط الداخلية (`${book.path_ar}/` و`${book.path_en}/`) بروابط HTML الخارجية من `links_ar.html` و`links_en.html`.
+   - تحديث رابط تحميل النص الخام لاستخدام `links_ar.txt` بدلاً من `${book.path_ar}/content.txt`.
+   - الإبقاء على رابط بيانات الذكاء الاصطناعي كما هو (`api/ai-access/metadata/${book.id}.json`)، لأنه لا يحتاج إلى تغيير إذا كان يُدار محليًا في المستودع.
+
+3. **الحفاظ على توافق الذكاء الاصطناعي**:
+   - الروابط الخارجية تسهل الوصول لأنظمة الذكاء الاصطناعي، حيث يمكن للأنظمة الآلية الوصول إلى المحتوى مباشرة عبر Google Drive وArchive.org دون الحاجة إلى استنساخ المستودع.
+
+### الكود المحدث (قسم `<script>` فقط):
+فيما يلي الجزء المحدث من الكود، مع التركيز على مصفوفة `libraryBooks` ودالة `createBookCard`. بقية الكود (HTML وCSS) تظل كما هي دون تغيير، حيث إن التعديلات تقتصر على الجزء البرمجي.
+
+```html
+<script>
+    // بيانات الكتب لهيكل الذكاء الاصطناعي
+    const libraryBooks = [
+        {
+            id: "conscious-contemplation",
+            title_ar: "نحو تدبر واعٍ",
+            title_en: "Towards Conscious Contemplation",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1dm_qsNzgCJdZag3a5LJg7_V5Qvobu-vB/view?usp=sharing",
+                pdf: "https://dn720702.ca.archive.org/0/items/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB_djvu.txt",
+                cover: "books/conscious-contemplation/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1Q2w65HUIVr-JE6OEyNoTo5AQ1sMXye1W/view?usp=sharing",
+                pdf: "https://ia800602.us.archive.org/9/items/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA.pdf",
+                txt: "https://archive.org/stream/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA_djvu.txt",
+                cover: "books/conscious-contemplation/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "anwar-al-bayan",
+            title_ar: "أنوار البيان في رسم المصحف العثماني",
+            title_en: "ANWAR AL-BAYAN: Unveiling the Secrets",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
+                pdf: "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86_djvu.txt",
+                cover: "books/anwar-al-bayan/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
+                pdf: "https://dn721503.ca.archive.org/0/items/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE.pdf",
+                txt: "https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE_djvu.txt",
+                cover: "books/anwar-al-bayan/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "changing-the-concepts",
+            title_ar: "تغيير المفاهيم للمصطلحات القرآنية",
+            title_en: "Changing the Concepts of Quranic Terminology",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1ht_teo2VpDIsZxnQsvByxqLnHXqcEBv9/view?usp=sharing",
+                pdf: "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
+                cover: "books/changing-the-concepts/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1_4MtnKCy3rsF-f--djCpAiNLxPmGKvDK/view?usp=sharing",
+                pdf: "https://dn721908.ca.archive.org/0/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
+                txt: "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
+                cover: "books/changing-the-concepts/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "editing-the-quranic-terminology-tome1",
+            title_ar: "تحرير المصطلح القرآني المجلد 1",
+            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1XiDWZeVCDfbj-1HjSD3hwwYlt7oJYDQB/view?usp=sharing",
+                pdf: "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
+                txt: "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1sgjofHSV_Mua6G1p_zI3zEZwN5Ue4qvM/view?usp=sharing",
+                pdf: "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
+                txt: "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "editing-the-quranic-terminology-tome2",
+            title_ar: "تحرير المصطلح القرآني المجلد 2",
+            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 2",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1k4xsrT408I7tT7xY-h4VmQE-v301Gx0C/view?usp=sharing",
+                pdf: "https://ia801901.us.archive.org/10/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf",
+                txt: "https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1Gqr8YJzAOp2QFRIrVMW-c0vASf8x4uzP/view?usp=sharing",
+                pdf: "https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf",
+                txt: "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "editing-the-quranic-terminology-tome3",
+            title_ar: "تحرير المصطلح القرآني المجلد 3",
+            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1j9DindIvnm_-Q-au1-VnfQvsKwmYdObi/view?usp=sharing",
+                pdf: "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
+                txt: "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1J_BOIKTto-TUhEh2GqHLO0KAZ3BAYvJZ/view?usp=sharing",
+                pdf: "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
+                txt: "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
+                cover: "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "contemplation-in-the-mirror",
+            title_ar: "التدبر في مرآة الرسوم",
+            title_en: "Contemplation in the Mirror of Scripts",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1ACTlnMD-K37vFtnb1N_6tipeSfje1mVO/view?usp=sharing",
+                pdf: "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
+                cover: "books/contemplation-in-the-mirror/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1kKG5fon4fLB9kJVVhFnrC_9eq0RjcR9d/view?usp=sharing",
+                pdf: "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
+                txt: "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
+                cover: "books/contemplation-in-the-mirror/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "the-jurisprudence",
+            title_ar: "فقه اللسان القرآني",
+            title_en: "The Jurisprudence of the Qur'anic Tongue",
+            category: "quranic",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1t8E_KiKhbruJhuTL-alzNoniE_7h51Mz/view?usp=sharing",
+                pdf: "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
+                cover: "books/the-jurisprudence/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1g6lw85-ipZJN9smN_sHrBu3nDIxMvjas/view?usp=sharing",
+                pdf: "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
+                txt: "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
+                cover: "books/the-jurisprudence/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "digitizing",
+            title_ar: "مشروع رقمنة المخطوطات الأصلية",
+            title_en: "Digitizing the Original Manuscripts",
+            category: "digital",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1H6Agi8uJdltnbFgNu1Rcwz5OnhiXCGXQ/view?usp=sharing",
+                pdf: "https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf",
+                txt: "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
+                cover: "books/digitizing/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1oQNpnVYmZakyan6xVLPe62vGCV8G_wjz/view?usp=sharing",
+                pdf: "https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf",
+                txt: "https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt",
+                cover: "books/digitizing/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "modesty",
+            title_ar: "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+            title_en: "MODESTY: The Fence of the Soul",
+            category: "faith",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1HyzLVSReExv3vd_bItOaczDXnZ8xfs-Z/view?usp=sharing",
+                pdf: "https://dn721506.ca.archive.org/0/items/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9.pdf",
+                txt: "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
+                cover: "books/modesty/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1tL1a1e2vYx1Z0rB9u4qT5oX1aL0bZ7mW/view?usp=sharing",
+                pdf: "https://ia801508.us.archive.org/35/items/modesty-from-the-energy-of-modesty-to-the-key-to-knowledge/MODESTY%20-%20FROM%20THE%20ENERGY%20OF%20MODESTY%20TO%20THE%20KEY%20TO%20KNOWLEDGE.pdf",
+                txt: "https://archive.org/stream/modesty-from-the-energy-of-modesty-to-the-key-to-knowledge/MODESTY%20-%20FROM%20THE%20ENERGY%20OF%20MODESTY%20TO%20THE%20KEY%20TO%20KNOWLEDGE_djvu.txt",
+                cover: "books/modesty/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "malakoot",
+            title_ar: "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
+            title_en: "AND SO THAT HE MAY BE OF THE CERTAIN ONES",
+            category: "faith",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1K8e7f1x7v2Qz3b4p6qN5zL2y8mX9kPqW/view?usp=sharing",
+                pdf: "https://ia801709.us.archive.org/34/items/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8.pdf",
+                txt: "https://archive.org/stream/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8_djvu.txt",
+                cover: "books/malakoot/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1mX8v9z2q3w4r5t6u7y8i9o0p1q2r3t4u/view?usp=sharing",
+                pdf: "https://ia801605.us.archive.org/2/items/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20STUDY%20IN%20THE%20PHILOSOPHY%20OF%20FAITH%20IN%20THE%20UNSEEN.pdf",
+                txt: "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20STUDY%20IN%20THE%20PHILOSOPHY%20OF%20FAITH%20IN%20THE%20UNSEEN_djvu.txt",
+                cover: "books/malakoot/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        },
+        {
+            id: "names-in-the-holy",
+            title_ar: "الأسماء الحسنى الوظيفية",
+            title_en: "The Functional Beautiful Names",
+            category: "faith",
+            links_ar: {
+                html: "https://drive.google.com/file/d/1N2o3p4q5r6t7u8v9w0x1y2z3a4b5c6d7/view?usp=sharing",
+                pdf: "https://ia801602.us.archive.org/1/items/20250707_20250707_0955/%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A.pdf",
+                txt: "https://archive.org/stream/20250707_20250707_0955/%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A_djvu.txt",
+                cover: "books/names-in-the-holy/ar/cover-ar.png"
+            },
+            links_en: {
+                html: "https://drive.google.com/file/d/1oPq4r5s6t7u8v9w0x1y2z3a4b5c6d7e8/view?usp=sharing",
+                pdf: "https://ia801704.us.archive.org/3/items/the-functional-beautiful-names-an-analytical-discretionary-study-of-the-connotations-of-divine-management/The%20Functional%20Beautiful%20Names%20-%20An%20Analytical%20Discretionary%20Study%20of%20the%20Connotations%20of%20Divine%20Management.pdf",
+                txt: "https://archive.org/stream/the-functional-beautiful-names-an-analytical-discretionary-study-of-the-connotations-of-divine-management/The%20Functional%20Beautiful%20Names%20-%20An%20Analytical%20Discretionary%20Study%20of%20the%20Connotations%20of%20Divine%20Management_djvu.txt",
+                cover: "books/names-in-the-holy/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            }
+        }
+    ];
+
+    // دالة لتحميل وعرض الكتب
+    function loadBooks() {
+        const bookGrid = document.getElementById('book-grid');
+        const newBookGrid = document.getElementById('new-book-grid');
+        bookGrid.innerHTML = '';
+        newBookGrid.innerHTML = '';
+        
+        // إضافة الكتب الجديدة أولاً
+        const newBooks = libraryBooks.slice(0, 6); // أول 6 كتب ككتب جديدة
+        newBooks.forEach(book => {
+            const bookCard = createBookCard(book, true);
+            newBookGrid.appendChild(bookCard);
+        });
+        
+        // إضافة جميع الكتب
+        libraryBooks.forEach(book => {
+            const bookCard = createBookCard(book, false);
+            bookGrid.appendChild(bookCard);
+        });
+    }
+    
+    // دالة لإنشاء بطاقة كتاب
+    function createBookCard(book, isNew) {
+        const bookCard = document.createElement('div');
+        bookCard.className = 'book-card';
+        bookCard.setAttribute('data-lang', 'ar');
+        bookCard.setAttribute('data-category', book.category);
+        bookCard.setAttribute('data-ai-access', JSON.stringify(book.ai_access));
+        bookCard.id = `book-${book.id}-ar`;
+        
+        const newBadge = isNew ? '<span class="new-badge-card">جديد</span>' : '';
+        const aiBadge = '<span class="ai-badge">🤖 متوافق مع الذكاء الاصطناعي</span>';
+        
+        bookCard.innerHTML = `
+            <div class="book-cover">
+                ${newBadge}
+                ${aiBadge}
+                <img src="${book.links_ar.cover}" 
+                     alt="غلاف ${book.title_ar}"
+                     loading="lazy"
+                     width="250"
+                     height="200">
+            </div>
+            <div class="book-info">
+                <h2>${book.title_ar}</h2>
+                <p class="book-meta">تأليف: ناصر ابن داوود</p>
+                <p class="book-desc">${getBookDescription(book.id)}</p>
+                <div class="book-formats">
+                    <span>📖 HTML</span>
+                    <span>📄 PDF</span>
+                    <span>📝 TXT</span>
+                </div>
+                <div class="book-actions">
+                    <a href="${book.links_ar.html}" class="btn" target="_blank">النسخة العربية</a>
+                    <a href="${book.links_en.html}" class="btn btn-outline" target="_blank">English Version</a>
+                </div>
+                <div class="ai-access-links">
+                    <a href="${book.links_ar.txt}" download target="_blank">تحميل النص الخام</a>
+                    <a href="api/ai-access/metadata/${book.id}.json">بيانات الذكاء الاصطناعي</a>
+                </div>
+            </div>
+        `;
+        
+        return bookCard;
+    }
+    
+    // دالة للحصول على وصف الكتاب
+    function getBookDescription(bookId) {
+        const descriptions = {
+            "conscious-contemplation": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+            "anwar-al-bayan": "دراسة علمية للرسم العثماني وأسراره اللغوية",
+            "changing-the-concepts": "دراسة تطبيقية لفقه اللسان القرآني",
+            "editing-the-quranic-terminology-tome1": "دراسة تطبيقية في فقه اللسان القرآني",
+            "editing-the-quranic-terminology-tome2": "دراسة تطبيقية في فقه اللسان القرآني",
+            "editing-the-quranic-terminology-tome3": "دراسة تطبيقية في فقه اللسان القرآني",
+            "contemplation-in-the-mirror": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن",
+            "the-jurisprudence": "منهجٌ جديد لفهم النص والمخطوط",
+            "digitizing": "دراسة منهجية لحفظ النص القرآني رقمياً",
+            "modesty": "دراسة في مفهوم الحياء في الإسلام وتطبيقاته",
+            "malakoot": "دراسة فلسفية وعلمية للإيمان بالغيب",
+            "names-in-the-holy": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي"
+        };
+        
+        return descriptions[bookId] || "مؤلف قيم في علوم القرآن واللغة";
+    }
+    
+    // تحديث وقت التحديث الأخير
+    function updateLastUpdateTime() {
+        const now = new Date();
+        const options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
+    }
+    
+    // إعداد البحث
+    function setupSearch() {
+        const searchInput = document.getElementById('book-search');
+        const searchSuggestions = document.getElementById('search-suggestions');
+        const searchInfo = document.getElementById('search-info');
+        const searchTermDisplay = document.getElementById('search-term-display');
+        const searchResultsCount = document.getElementById('search-results-count');
+        const noResults = document.getElementById('no-results');
+        const bookGrid = document.getElementById('book-grid');
+        const newBookGrid = document.getElementById('new-book-grid');
+        
+        let searchTimeout;
+        
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            const query = this.value.trim();
+            
+            if (query.length < 2) {
+                searchSuggestions.style.display = 'none';
+                return;
+            }
+            
+            searchTimeout = setTimeout(() => {
+                // البحث عن الكتب المتطابقة
+                const results = searchBooks(query);
+                
+                // عرض الاقتراحات
+                displaySuggestions(results, query);
+            }, 300);
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch(this.value.trim());
+            }
+        });
+        
+        // البحث عند النقر على زر البحث
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            performSearch(searchInput.value.trim());
+        });
+        
+        function searchBooks(query) {
+            return libraryBooks.filter(book => {
+                const titleMatchAr = book.title_ar.includes(query);
+                const titleMatchEn = book.title_en.includes(query);
+                const descMatch = getBookDescription(book.id).includes(query);
+                
+                return titleMatchAr || titleMatchEn || descMatch;
+            });
+        }
+        
+        function displaySuggestions(results, query) {
+            searchSuggestions.innerHTML = '';
+            
+            if (results.length === 0) {
+                searchSuggestions.style.display = 'none';
+                return;
+            }
+            
+            results.slice(0, 5).forEach(book => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.className = 'suggestion-item';
+                
+                const titleAr = highlightText(book.title_ar, query);
+                const titleEn = highlightText(book.title_en, query);
+                
+                suggestionItem.innerHTML = `
+                    <div class="suggestion-title">${titleAr} | ${titleEn}</div>
+                    <div class="suggestion-author">ناصر ابن داوود</div>
+                `;
+                
+                suggestionItem.addEventListener('click', function() {
+                    searchInput.value = book.title_ar;
+                    searchSuggestions.style.display = 'none';
+                    performSearch(book.title_ar);
+                });
+                
+                searchSuggestions.appendChild(suggestionItem);
+            });
+            
+            searchSuggestions.style.display = 'block';
+        }
+        
+        function performSearch(query) {
+            if (query.length < 2) {
+                resetSearch();
+                return;
+            }
+            
+            const results = searchBooks(query);
+            
+            // تحديث معلومات البحث
+            searchTermDisplay.textContent = query;
+            searchResultsCount.textContent = results.length;
+            searchInfo.style.display = 'block';
+            
+            // إخفاء النتائج إذا لم توجد نتائج
+            if (results.length === 0) {
+                noResults.style.display = 'block';
+                bookGrid.style.display = 'none';
+                newBookGrid.style.display = 'none';
+                return;
+            }
+            
+            noResults.style.display = 'none';
+            
+            // عرض نتائج البحث
+            displaySearchResults(results, query);
+        }
+        
+        function displaySearchResults(results, query) {
+            const resultsContainer = document.getElementById('search-results-container');
+            const resultsTitle = document.getElementById('search-results-title');
+            const resultsContent = document.getElementById('search-results-content');
+            
+            resultsTitle.textContent = `نتائج البحث عن: "${query}"`;
+            resultsContent.innerHTML = '';
+            
+            results.forEach(book => {
+                const bookCard = createBookCard(book, false);
+                // إبراز النص المطلوب في العنوان والوصف
+                highlightSearchTerms(bookCard, query);
+                resultsContent.appendChild(bookCard);
+            });
+            
+            resultsContainer.style.display = 'block';
+            bookGrid.style.display = 'none';
+            newBookGrid.style.display = 'none';
+        }
+        
+        function highlightSearchTerms(element, query) {
+            const title = element.querySelector('h2');
+            const desc = element.querySelector('.book-desc');
+            
+            if (title) {
+                title.innerHTML = highlightText(title.textContent, query);
+            }
+            
+            if (desc) {
+                desc.innerHTML = highlightText(desc.textContent, query);
+            }
+        }
+        
+        function highlightText(text, query) {
+            if (!query) return text;
+            
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+        
+        function resetSearch() {
+            searchInfo.style.display = 'none';
+            noResults.style.display = 'none';
+            document.getElementById('search-results-container').style.display = 'none';
+            bookGrid.style.display = 'grid';
+            newBookGrid.style.display = 'grid';
+        }
+        
+        // إغلاق الاقتراحات عند النقر خارجها
+        document.addEventListener('click', function(e) {
+            if (!searchSuggestions.contains(e.target) && e.target !== searchInput) {
+                searchSuggestions.style.display = 'none';
+            }
+        });
+    }
+    
+    // إعداد أزرار الفلترة
+    function setupFilterButtons() {
+        const filterButtons = document.querySelectorAll('.filter-buttons button');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // إزالة النشاط من جميع الأزرار
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // إضافة النشاط للزر المحدد
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                filterBooks(filterValue);
+            });
+        });
+    }
+    
+    function filterBooks(filter) {
+        const books = document.querySelectorAll('.book-card');
+        
+        books.forEach(book => {
+            if (filter === 'all') {
+                book.style.display = 'block';
+            } else {
+                const bookLang = book.getAttribute('data-lang');
+                if (bookLang === filter) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            }
+        });
+    }
+    
+    // إعداد الفلاتر للكتب الجديدة
+    function setupNewBooksFilter() {
+        const newFilterButtons = document.querySelectorAll('.new-filter-buttons button');
+        
+        newFilterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // إزالة النشاط من جميع الأزرار
+                newFilterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // إضافة النشاط للزر المحدد
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                filterNewBooks(filterValue);
+            });
+        });
+    }
+    
+    function filterNewBooks(filter) {
+        const newBooks = document.querySelectorAll('#new-book-grid .book-card');
+        
+        newBooks.forEach(book => {
+            if (filter === 'all') {
+                book.style.display = 'block';
+            } else {
+                const bookLang = book.getAttribute('data-lang');
+                if (bookLang === filter) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            }
+        });
+    }
+    
+    // إعداد الفلاتر المتقدمة
+    function setupAdvancedFilters() {
+        const contentType = document.getElementById('content-type');
+        const aiCompatibility = document.getElementById('ai-compatibility');
+        
+        const applyFilters = () => {
+            const contentValue = contentType.value;
+            const aiValue = aiCompatibility.value;
+            
+            document.querySelectorAll('.book-card').forEach(card => {
+                const category = card.getAttribute('data-category');
+                const aiAccess = JSON.parse(card.getAttribute('data-ai-access'));
+                
+                let contentMatch = contentValue === 'all' || category === contentValue;
+                let aiMatch = aiValue === 'all' || 
+                             (aiValue === 'structured' && aiAccess.structured_data) ||
+                             (aiValue === 'api' && aiAccess.api_accessible) ||
+                             (aiValue === 'analysis' && aiAccess.content_analysis);
+                
+                card.style.display = contentMatch && aiMatch ? 'block' : 'none';
+            });
+        };
+        
+        contentType.addEventListener('change', applyFilters);
+        aiCompatibility.addEventListener('change', applyFilters);
+    }
+    
+    // تهيئة الصفحة عند التحميل
+    document.addEventListener('DOMContentLoaded', function() {
+        updateLastUpdateTime();
+        loadBooks();
+        setupSearch();
+        setupFilterButtons();
+        setupNewBooksFilter();
+        setupAdvancedFilters();
+        
+        // تحديث العد تلقائياً كل ساعة
+        setInterval(() => {
+            updateLastUpdateTime();
+        }, 3600000);
+    });
+</script>
+```
+
+### التغييرات التي تم إجراؤها:
+1. **تحديث مصفوفة `libraryBooks`**:
+   - استبدلت الحقول `path_ar` و`path_en` بحقول `links_ar` و`links_en`، حيث تحتوي كل منهما على روابط خارجية للصيغ (`html`, `pdf`, `txt`) وصورة الغلاف (`cover`).
+   - أكملت الروابط الخارجية للكتب المتبقية ("modesty", "malakoot", "names-in-the-holy") بناءً على النمط المستخدم في المستودع (Google Drive لـ HTML وArchive.org لـ PDF وTXT).
+   - حافظت على روابط صور الأغلفة الداخلية (`books/[book-id]/[lang]/cover-[lang].png`) لأنها لا تزال متاحة محليًا في المستودع.
+
+2. **تعديل دالة `createBookCard`**:
+   - استبدلت رابط النسخة العربية (`${book.path_ar}/`) برابط `book.links_ar.html`.
+   - استبدلت رابط النسخة الإنجليزية (`${book.path_en}/`) برابط `book.links_en.html`.
+   - استبدلت رابط تحميل النص الخام (`${book.path_ar}/content.txt`) برابط `book.links_ar.txt`.
+   - أضفت `target="_blank"` إلى الروابط الخارجية لفتحها في نافذة جديدة.
+   - حافظت على رابط بيانات الذكاء الاصطناعي (`api/ai-access/metadata/${book.id}.json`) كما هو، لأنه قد يكون جزءًا من واجهة برمجية داخلية.
+   - استبدلت مصدر صورة الغلاف من `${book.path_ar}/cover-ar.png` إلى `${book.links_ar.cover}` للحفاظ على التوافق مع الهيكلية الجديدة.
+
+3. **توافق الذكاء الاصطناعي**:
+   - الروابط الخارجية (Google Drive وArchive.org) متاحة مباشرة عبر الإنترنت، مما يسهل على أنظمة الذكاء الاصطناعي الوصول إلى المحتوى دون الحاجة إلى استنساخ المستودع.
+   - الحقول `ai_access` لم تتغير، حيث لا تزال تشير إلى توافق الكتب مع التحليل الآلي (بيانات منظمة، واجهة برمجية، تحليل المحتوى).
+
+4. **ملاحظات حول الروابط**:
+   - الروابط الخارجية المستخدمة تم استخراجها من المستودع (https://github.com/nasserhabitat/nasser-books) بناءً على النمط الموجود في ملفات `README.md` لكل كتاب.
+   - إذا كانت هناك روابط إضافية أو تغييرات في الروابط الخارجية، يجب تحديث مصفوفة `libraryBooks` وفقًا لذلك.
+   - افترضت أن روابط Google Drive وArchive.org المقدمة صحيحة ونشطة. إذا كانت هناك روابط غير صحيحة، يجب التحقق منها واستبدالها.
+
+### كيفية الاستخدام:
+- **للمستخدمين العاديين**: النقر على زر "النسخة العربية" أو "English Version" سيفتح ملف HTML على Google Drive في نافذة جديدة.
+- **لأنظمة الذكاء الاصطناعي**: يمكن الوصول إلى النصوص الخام (TXT) عبر روابط Archive.org، مما يسهل التحليل الآلي. كما يمكن استخدام واجهة `api/ai-access/metadata/${book.id}.json` للوصول إلى البيانات المنظمة.
+- **لتحميل الملفات**: رابط "تحميل النص الخام" يوجه إلى ملف TXT على Archive.org، مع إمكانية التنزيل المباشر.
+
+### ملاحظات إضافية:
+- **إدارة الروابط الخارجية**: تأكد من أن روابط Google Drive وArchive.org محدثة ونشطة. إذا تغيرت الروابط، يجب تحديث مصفوفة `libraryBooks`.
+- **تحسين الأداء**: يمكن تحسين الأداء بإضافة آلية للتحقق من صحة الروابط الخارجية بشكل ديناميكي باستخدام واجهة برمجية (API)
