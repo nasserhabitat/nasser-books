@@ -244,6 +244,13 @@
             color: #555;
             flex-grow: 1;
         }
+        .search-snippet {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
         .book-formats {
             display: flex;
             gap: 8px;
@@ -1134,7 +1141,7 @@
             title_en: "AND SO THAT HE MAY BE OF THE CERTAIN ONES",
             category: "faith",
             links_ar: {
-                html: "https://drive.google.com/file/d/1K8e7f1x7v2Qz3b4p6qN5zL2y8mX9kPqW/view?usp=sharing",
+                html: "https://drive.google.com/file/d/1K8e7f1x7v2y2Qz3b4p6qN5zL2y8mX9kPqW/view?usp=sharing",
                 pdf: "https://ia801709.us.archive.org/34/items/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8.pdf",
                 txt: "https://archive.org/stream/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8_djvu.txt",
                 cover: "books/malakoot/ar/cover-ar.png"
@@ -1204,7 +1211,7 @@
     }
     
     // دالة لإنشاء بطاقة كتاب
-    function createBookCard(book, isNew) {
+    function createBookCard(book, isNew, query = '') {
         const bookCard = document.createElement('div');
         bookCard.className = 'book-card';
         bookCard.setAttribute('data-lang', 'ar');
@@ -1214,6 +1221,16 @@
         
         const newBadge = isNew ? '<span class="new-badge-card">جديد</span>' : '';
         const aiBadge = '<span class="ai-badge">🤖 متوافق مع الذكاء الاصطناعي</span>';
+
+        let snippet = '';
+        if (query) {
+            const snippetAr = getSnippet(book.content_ar, query);
+            const snippetEn = getSnippet(book.content_en, query);
+            snippet = snippetAr || snippetEn;
+            if (snippet) {
+                snippet = `<p class="search-snippet">${snippet}</p>`;
+            }
+        }
         
         bookCard.innerHTML = `
             <div class="book-cover">
@@ -1228,7 +1245,7 @@
             <div class="book-info">
                 <h2>${book.title_ar}</h2>
                 <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                <p class="book-desc">${getBookDescription(book.id)}</p>
+                <p class="book-desc">${getBookDescription(book.id)}${snippet}</p>
                 <div class="book-formats">
                     <span>📖 HTML</span>
                     <span>📄 PDF</span>
@@ -1350,12 +1367,14 @@
         
         async function searchBooks(query) {
             const matchingBooks = [];
+            const escapedQuery = escapeRegExp(query);
+            const regex = new RegExp(escapedQuery, 'i');
             for (let book of libraryBooks) {
-                const titleMatchAr = book.title_ar.toLowerCase().includes(query.toLowerCase());
-                const titleMatchEn = book.title_en.toLowerCase().includes(query.toLowerCase());
-                const descMatch = getBookDescription(book.id).toLowerCase().includes(query.toLowerCase());
+                const titleMatchAr = regex.test(book.title_ar);
+                const titleMatchEn = regex.test(book.title_en);
+                const descMatch = regex.test(getBookDescription(book.id));
                 
-                // جلب المحتوى إذا لم يكن محملًا بعد
+                // جلب المحتوى إذا لم يكن محملًا بعد (رغم الفهرسة المسبقة)
                 if (book.content_ar === null) {
                     try {
                         const responseAr = await fetch(book.links_ar.txt);
@@ -1373,8 +1392,8 @@
                     }
                 }
                 
-                const contentMatchAr = book.content_ar.toLowerCase().includes(query.toLowerCase());
-                const contentMatchEn = book.content_en.toLowerCase().includes(query.toLowerCase());
+                const contentMatchAr = regex.test(book.content_ar);
+                const contentMatchEn = regex.test(book.content_en);
                 
                 if (titleMatchAr || titleMatchEn || descMatch || contentMatchAr || contentMatchEn) {
                     matchingBooks.push(book);
@@ -1451,7 +1470,7 @@
             resultsContent.innerHTML = '';
             
             results.forEach(book => {
-                const bookCard = createBookCard(book, false);
+                const bookCard = createBookCard(book, false, query);
                 // إبراز النص المطلوب في العنوان والوصف
                 highlightSearchTerms(bookCard, query);
                 resultsContent.appendChild(bookCard);
@@ -1471,15 +1490,36 @@
             }
             
             if (desc) {
-                desc.innerHTML = highlightText(desc.textContent, query);
+                desc.innerHTML = highlightText(desc.innerHTML, query);
             }
         }
         
         function highlightText(text, query) {
             if (!query) return text;
             
-            const regex = new RegExp(`(${query})`, 'gi');
+            const escapedQuery = escapeRegExp(query);
+            const regex = new RegExp(`(${escapedQuery})`, 'gi');
             return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+        
+        function getSnippet(content, query) {
+            if (!content) return '';
+            
+            const lowerContent = content.toLowerCase();
+            const lowerQuery = query.toLowerCase();
+            const index = lowerContent.indexOf(lowerQuery);
+            
+            if (index === -1) return '';
+            
+            const start = Math.max(0, index - 50);
+            const end = Math.min(content.length, index + query.length + 50);
+            const snippet = '...' + content.substring(start, end) + '...';
+            
+            return highlightText(snippet, query);
+        }
+        
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
         
         function resetSearch() {
