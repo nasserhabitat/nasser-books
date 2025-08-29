@@ -124,7 +124,7 @@
                         <p>${book.description[lang]}</p>
                         <div class="links">
                             <a href="${book.path[lang]}" target="_blank" class="btn btn-sm btn-outline-primary">Text</a>
-                            <img src="${book.cover[lang]}" alt="Cover" style="max-width: 100px; margin-top: 10px;">
+                            <img src="${book.cover[lang]}" alt="Cover" style="max-width: 100px; margin-top: 10px;" onerror="this.src='https://nasserhabitat.github.io/nasser-books/assets/images/placeholder.png'">
                         </div>
                         <p><small>الفئة: ${book.category} | السنة: ${book.year}</small></p>
                     `;
