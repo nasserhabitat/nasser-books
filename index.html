@@ -890,7 +890,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "anwar-al-bayan",
@@ -914,7 +916,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "changing-the-concepts",
@@ -938,7 +942,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "editing-the-quranic-terminology-tome1",
@@ -962,7 +968,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "editing-the-quranic-terminology-tome2",
@@ -986,7 +994,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "editing-the-quranic-terminology-tome3",
@@ -1010,7 +1020,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "contemplation-in-the-mirror",
@@ -1034,7 +1046,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "the-jurisprudence",
@@ -1058,7 +1072,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "digitizing",
@@ -1082,7 +1098,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "modesty",
@@ -1106,7 +1124,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "malakoot",
@@ -1130,7 +1150,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         },
         {
             id: "names-in-the-holy",
@@ -1154,7 +1176,9 @@
                 api_accessible: true,
                 content_analysis: true,
                 formats: ["html", "pdf", "txt"]
-            }
+            },
+            content_ar: null,
+            content_en: null
         }
     ];
 
@@ -1230,7 +1254,7 @@
             "conscious-contemplation": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
             "anwar-al-bayan": "دراسة علمية للرسم العثماني وأسراره اللغوية",
             "changing-the-concepts": "دراسة تطبيقية لفقه اللسان القرآني",
-            "editinرحلة برهانية في ملكوت السماوات والأرض وما بينهما - دراسة كونية قرآنية شاملةg-the-quranic-terminology-tome1": "دراسة تطبيقية في فقه اللسان القرآني",
+            "editing-the-quranic-terminology-tome1": "دراسة تطبيقية في فقه اللسان القرآني",
             "editing-the-quranic-terminology-tome2": "دراسة تطبيقية في فقه اللسان القرآني",
             "editing-the-quranic-terminology-tome3": "دراسة تطبيقية في فقه اللسان القرآني",
             "contemplation-in-the-mirror": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن",
@@ -1280,9 +1304,9 @@
                 return;
             }
             
-            searchTimeout = setTimeout(() => {
+            searchTimeout = setTimeout(async () => {
                 // البحث عن الكتب المتطابقة
-                const results = searchBooks(query);
+                const results = await searchBooks(query);
                 
                 // عرض الاقتراحات
                 displaySuggestions(results, query);
@@ -1300,14 +1324,39 @@
             performSearch(searchInput.value.trim());
         });
         
-        function searchBooks(query) {
-            return libraryBooks.filter(book => {
+        async function searchBooks(query) {
+            const matchingBooks = [];
+            for (let book of libraryBooks) {
                 const titleMatchAr = book.title_ar.includes(query);
                 const titleMatchEn = book.title_en.includes(query);
                 const descMatch = getBookDescription(book.id).includes(query);
                 
-                return titleMatchAr || titleMatchEn || descMatch;
-            });
+                // جلب المحتوى إذا لم يكن محملًا بعد
+                if (book.content_ar === null) {
+                    try {
+                        const responseAr = await fetch(book.links_ar.txt);
+                        book.content_ar = await responseAr.text();
+                    } catch (error) {
+                        book.content_ar = ''; // في حالة خطأ، تجاهل
+                    }
+                }
+                if (book.content_en === null) {
+                    try {
+                        const responseEn = await fetch(book.links_en.txt);
+                        book.content_en = await responseEn.text();
+                    } catch (error) {
+                        book.content_en = ''; // في حالة خطأ، تجاهل
+                    }
+                }
+                
+                const contentMatchAr = book.content_ar.includes(query);
+                const contentMatchEn = book.content_en.includes(query);
+                
+                if (titleMatchAr || titleMatchEn || descMatch || contentMatchAr || contentMatchEn) {
+                    matchingBooks.push(book);
+                }
+            }
+            return matchingBooks;
         }
         
         function displaySuggestions(results, query) {
@@ -1342,13 +1391,13 @@
             searchSuggestions.style.display = 'block';
         }
         
-        function performSearch(query) {
+        async function performSearch(query) {
             if (query.length < 2) {
                 resetSearch();
                 return;
             }
             
-            const results = searchBooks(query);
+            const results = await searchBooks(query);
             
             // تحديث معلومات البحث
             searchTermDisplay.textContent = query;
@@ -1537,3 +1586,5 @@
         }, 3600000);
     });
 </script>
+</body>
+</html>
