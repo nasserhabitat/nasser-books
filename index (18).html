@@ -1232,38 +1232,35 @@
             }
         }https://github.com/nasserhabitat/nasser-books/blob/main/index.html
         
-       ```javascript
-bookCard.innerHTML = `
-    <div class="book-cover">
-        ${newBadge}
-        ${aiBadge}
-        <img src="${book.links_ar.cover}" 
-             alt="غلاف ${book.title_ar}"
-             loading="lazy"
-             width="250"
-             height="200">
-    </div>
-    <div class="book-info">
-        <h2>${book.title_ar}</h2>
-        <p class="book-meta">تأليف: ناصر ابن داوود</p>
-        <p class="book-desc">${getBookDescription(book.id)}${snippet}</p>
-        <div class="book-formats">
-            <span>📄 PDF</span>
-        </div>
-        <div class="book-actions">
-            <a href="${book.links_ar.pdf}" class="btn" target="_blank" download>تحميل PDF</a>
-            <a href="${book.links_en.pdf}" class="btn btn-outline" target="_blank" download>PDF English Version</a>
-        </div>
-        <div class="ai-access-links">
-            <a href="${book.links_ar.html}" target="_blank">النسخة العربية HTML</a>
-            <a href="${book.links_en.html}" target="_blank">English HTML Version</a>
-            <a href="${book.links_ar.txt}" target="_blank">تحميل النص الخام</a>
-            <a href="${book.links_en.txt}" target="_blank">Download Raw Text (English)</a>
-            <a href="api/ai-access/metadata/${book.id}.json">بيانات الذكاء الاصطناعي</a>
-        </div>
-    </div>
-`;
-```;
+        bookCard.innerHTML = `
+            <div class="book-cover">
+                ${newBadge}
+                ${aiBadge}
+                <img src="${book.links_ar.cover}" 
+                     alt="غلاف ${book.title_ar}"
+                     loading="lazy"
+                     width="250"
+                     height="200">
+            </div>
+            <div class="book-info">
+                <h2>${book.title_ar}</h2>
+                <p class="book-meta">تأليف: ناصر ابن داوود</p>
+                <p class="book-desc">${getBookDescription(book.id)}${snippet}</p>
+                <div class="book-formats">
+                    <span>📖 HTML</span>
+                    <span>📄 PDF</span>
+                    <span>📝 TXT</span>
+                </div>
+                <div class="book-actions">
+                    <a href="books/${book.id}/ar/index.html"  class="btn" target="_blank">النسخة العربية</a>
+                    <a href="books/${book.id}/en/index.html"  class="btn btn-outline" target="_blank">English Version</a>
+                </div>
+                <div class="ai-access-links">
+                    <a href="${book.links_ar.txt}" download target="_blank">تحميل النص الخام</a>
+                    <a href="api/ai-access/metadata/${book.id}.json">بيانات الذكاء الاصطناعي</a>
+                </div>
+            </div>
+        `;
         
         return bookCard;
     }
