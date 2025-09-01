@@ -198,7 +198,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
 #### الإنجليزية | English
 
 18. **Digitizing the Original Manuscripts**  
-   - [Read HTML](https://drive.google.com/file/d/1oQNpnVYmZakyan6xVLPe62vGCV8G_wjz/view?usp=sharing](https://drive.google.com/uc?export=download&id=1oQNpnVYmZakyan6xVLPe62vGCV8G_wjz)  
+   - [Read HTML](https://drive.google.com/uc?export=download&id=1oQNpnVYmZakyan6xVLPe62vGCV8G_wjz)  
    - [Download PDF](books/digitizing/en/content.pdf)  
    - [Plain Text](books/digitizing/en/content.txt)  
    - [Cover](books/digitizing/en/cover-en.png)  
@@ -218,7 +218,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [تحميل PDF Archive](https://dn721506.ca.archive.org/0/items/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9.pdf)
 
 20. **وَلِيَكُونَ مِنَ الْمُوقِنِينَ**  
-   - [قراءة HTML](https://drive.google.com/file/d/1Z4GRsLuCxDPkvYZps1UzHWCKS6i6MIV-/view?usp=sharing)  
+   - [قراءة HTML](https://drive.google.com/uc?export=download&id=1yqpLD_MIbRE8rWTMTJhKy2mU2nD3IRsI)  
    - [تحميل PDF](books/malakoot/ar/content.pdf)  
    - [النص الخام](books/malakoot/ar/content.txt)  
    - [الغلاف](books/malakoot/ar/cover-ar.png)  
@@ -252,7 +252,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [Download PDF Archive](https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf)
 
 24. **AND SO THAT HE MAY BE OF THE CERTAIN ONES**  
-   - [Read HTML](https://drive.google.com/file/d/1H_USB9m-r8YOcyItzTCaRm60fJGt-UPI/view?usp=sharing)  
+   - [Read HTML]([https://drive.google.com/uc?export=download&id=1yqpLD_MIbRE8rWTMTJhKy2mU2nD3IRsI](https://drive.google.com/uc?export=download&id=1gdFg-pqkqo89iW4uu1htoTQ9PQPbCP00))  
    - [Download PDF](books/malakoot/en/content.pdf)  
    - [Plain Text](books/malakoot/en/content.txt)  
    - [Cover](books/malakoot/en/cover-en.png)  
