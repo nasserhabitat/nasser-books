@@ -92,8 +92,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [النص الخام](books/editing-the-quranic-terminology-tome2/ar/content.txt)  
    - [الغلاف](books/editing-the-quranic-terminology-tome2/ar/cover-ar.png)  
    - [النص الخام Archive](https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt)  
-   - [تحميل PDF Archive](https://ia801901.us.archive.org/10/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf)
-
+   - [تحميل PDF Archive](https://dn721506.ca.archive.org/0/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf)
 6. **تحرير المصطلح القرآني المجلد 3**  
    - [قراءة HTML](https://drive.google.com/file/d/1j9DindIvnm_-Q-au1-VnfQvsKwmYdObi/view?usp=sharing)  
    - [تحميل PDF](books/editing-the-quranic-terminology-tome3/ar/content.pdf)  
