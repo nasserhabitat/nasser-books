@@ -120,7 +120,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
 #### الإنجليزية | English
 
 9. **Towards Conscious Contemplation**  
-   - [Read HTML]([https://drive.google.com/file/d/1Q2w65HUIVr-JE6OEyNoTo5AQ1sMXye1W/view?usp=sharing](https://drive.google.com/uc?export=download&id=1Q2w65HUIVr-JE6OEyNoTo5AQ1sMXye1W)  
+   - [Read HTML](https://drive.google.com/uc?export=download&id=1Q2w65HUIVr-JE6OEyNoTo5AQ1sMXye1W)  
    - [Download PDF](books/conscious-contemplation/en/content.pdf)  
    - [Plain Text](books/conscious-contemplation/en/content.txt)  
    - [Cover](books/conscious-contemplation/en/cover-en.png)  
@@ -128,7 +128,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [Download PDF Archive](https://ia800602.us.archive.org/9/items/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA.pdf)
 
 10. **ANWAR AL-BAYAN: Unveiling the Secrets**  
-   - [Read HTML]([https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing](https://drive.google.com/uc?export=download&id=10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU))  
+   - [Read HTML](https://drive.google.com/uc?export=download&id=10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU))  
    - [Download PDF](books/anwar-al-bayan/en/content.pdf)  
    - [Plain Text](books/anwar-al-bayan/en/content.txt)  
    - [Cover](books/anwar-al-bayan/en/cover-en.png)  
@@ -136,7 +136,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [Download PDF Archive](https://dn721503.ca.archive.org/0/items/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE.pdf)
 
 11. **Changing the Concepts of Quranic Terminology**  
-   - [Read HTML]([https://drive.google.com/file/d/1_4MtnKCy3rsF-f--djCpAiNLxPmGKvDK/view?usp=sharing](https://drive.google.com/uc?export=download&id=1_4MtnKCy3rsF-f--djCpAiNLxPmGKvDK)  
+   - [Read HTML](https://drive.google.com/uc?export=download&id=1_4MtnKCy3rsF-f--djCpAiNLxPmGKvDK)  
    - [Download PDF](books/changing-the-concepts/en/content.pdf)  
    - [Plain Text](books/changing-the-concepts/en/content.txt)  
    - [Cover](books/changing-the-concepts/en/cover-en.png)  
@@ -160,7 +160,7 @@ We use external links (Google Drive and Archive.org) to access HTML content. If 
    - [Download PDF Archive](https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf)
 
 14. **CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3**  
-   - [Read HTML](https://drive.google.com/file/d/1J_BOIKTto-TUhEh2GqHLO0KAZ3BAYvJZ/view?usp=sharing](https://drive.google.com/uc?export=download&id=1J_BOIKTto-TUhEh2GqHLO0KAZ3BAYvJZ)  
+   - [Read HTML](https://drive.google.com/uc?export=download&id=1J_BOIKTto-TUhEh2GqHLO0KAZ3BAYvJZ)  
    - [Download PDF](books/editing-the-quranic-terminology-tome3/en/content.pdf)  
    - [Plain Text](books/editing-the-quranic-terminology-tome3/en/content.txt)  
    - [Cover](books/editing-the-quranic-terminology-tome3/en/cover-en.png)  
