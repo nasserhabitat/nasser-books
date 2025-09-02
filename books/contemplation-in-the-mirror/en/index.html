@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contemplation in the Mirror of Scripts | Dr. Nasser Ibn Dawood</title>
+    <meta name="description" content="Practical Applications of Digital Manuscripts in the Contemplation of the Qur'an - A New Methodology for Understanding Quranic Text">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .book-features {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .book-features ul {
+            padding-left: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        .chapter {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .toc-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        .toc-columns {
+            column-count: 2;
+            column-gap: 2rem;
+        }
+        .toc-item {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        .toc-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .toc-item a:hover {
+            text-decoration: underline;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #eee;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .toc-columns {
+                column-count: 1;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Contemplation in the Mirror of Scripts</h1>
+            <p class="subtitle">Practical Applications of Digital Manuscripts in the Contemplation of the Qur'an</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="book-cover">
+            <div class="cover-container">
+                <img src="cover-en.png"
+                     alt="Book Cover: Contemplation in the Mirror of Scripts by Dr. Nasser Ibn Dawood"
+                     loading="lazy"
+                     width="300"
+                     height="400"
+                     decoding="async">
+            </div>
+            
+            <div class="book-actions">
+                <a href="https://archive.org/details/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/page/n1/mode/2up" 
+                   class="btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Read on Archive.org
+                </a>
+                <a href="../ar/" class="btn">
+                    Arabic Version
+                </a>
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                    Back to Books
+                </a>
+            </div>
+            
+            <div class="book-meta">
+                <p><strong>Author:</strong> Dr. Nasser Ibn Dawood</p>
+                <p><strong>Edition:</strong> First Edition - 2025</p>
+                <p><strong>Pages:</strong> 253</p>
+                <p><strong>Language:</strong> English</p>
+            </div>
+        </section>
+        
+        <section class="book-details">
+            <div class="book-description">
+                <h2>Book Description</h2>
+                <p>This groundbreaking work presents a revolutionary methodology for understanding the Qur'an through the study of ancient Quranic manuscripts and their digital analysis, with particular focus on the significance of the Uthmani script and its relationship to profound Quranic contemplation.</p>
+                
+                <p>The book builds upon the "Fiqh of the Seven Mathani" concept as a foundation for comprehending the deep linguistic architecture of the Quranic text, offering practical applications for the digital age.</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Integration of traditional Quranic scholarship with modern digital technologies</li>
+                    <li>Comprehensive analysis of the Uthmani script and its semantic implications</li>
+                    <li>The "Fiqh of the Seven Mathani" methodology as a tool for Quranic understanding</li>
+                    <li>Practical case studies from Quranic manuscripts</li>
+                    <li>Innovative approaches to engaging with the Qur'an in the digital era</li>
+                </ul>
+            </div>
+
+            <div class="book-features">
+                <h3>Core Themes:</h3>
+                <ul>
+                    <li><strong>Contemplation as Methodology:</strong> Moving beyond superficial reading to deep reflection</li>
+                    <li><strong>Reevaluating Traditional Interpretations:</strong> Critical examination of historical exegesis</li>
+                    <li><strong>The Qur'an as Primary Source:</strong> Establishing the text as the fundamental reference</li>
+                    <li><strong>Rationality in Islam:</strong> Balancing reason with transmitted knowledge</li>
+                    <li><strong>Manuscript Studies:</strong> Returning to original Quranic codices</li>
+                    <li><strong>Fiqh of the Seven Mathani:</strong> A new linguistic approach to Quranic structure</li>
+                </ul>
+            </div>
+            
+            <div class="toc-container">
+                <h3>Table of Contents</h3>
+                <div class="toc-columns">
+                    <div class="toc-item"><a href="#">Introduction: "Contemplation in the Mirror of Scripts" (p3)</a></div>
+                    <div class="toc-item"><a href="#">Quranic Manuscript Digitization Project (p5)</a></div>
+                    <div class="toc-item"><a href="#">1. Uthmani Script: Eternal Guardian (p12)</a></div>
+                    <div class="toc-item"><a href="#">2. Personal Digital Manuscripts (p13)</a></div>
+                    <div class="toc-item"><a href="#">3. Variant Surah Names (p15)</a></div>
+                    <div class="toc-item"><a href="#">4. "Yubayi'unaka" vs "Yabi'unaka" (p18)</a></div>
+                    <div class="toc-item"><a href="#">5. Uthmani Script Characteristics (p20)</a></div>
+                    <div class="toc-item"><a href="#">6. Uthmani Script as Quran's Guardian (p23)</a></div>
+                    <div class="toc-item"><a href="#">7. Linguistic Analysis of Surah At-Tahrim (p26)</a></div>
+                    <div class="toc-item"><a href="#">8. Interpretation of Surah At-Tahrim (p30)</a></div>
+                    <div class="toc-item"><a href="#">9. Principles for Revolutionary Understanding (p34)</a></div>
+                    <div class="toc-item"><a href="#">10. Thematic Quranic Verse Index (p35)</a></div>
+                    <div class="toc-item"><a href="#">11. Truth's Echo in Human Nature (p42)</a></div>
+                    <div class="toc-item"><a href="#">12. The "Crime" of Adhering to Scripture (p43)</a></div>
+                    <div class="toc-item"><a href="#">13. Quran as Soul's Mirror (p43)</a></div>
+                    <div class="toc-item"><a href="#">14. Rationality in Islamic Thought (p45)</a></div>
+                    <div class="toc-item"><a href="#">15. Majoritarianism vs Intellectual Vigilance (p48)</a></div>
+                    <div class="toc-item"><a href="#">16. Contemplation: Consensus vs Individuality (p51)</a></div>
+                    <div class="toc-item"><a href="#">17. "Clear Arabic Tongue" Reexamined (p53)</a></div>
+                    <div class="toc-item"><a href="#">18. From Meaning to Structure (p54)</a></div>
+                    <div class="toc-item"><a href="#">19. Ambiguous Verses & Lexical Variation (p56)</a></div>
+                    <div class="toc-item"><a href="#">20. Principles for Understanding Ambiguity (p59)</a></div>
+                    <div class="toc-item"><a href="#">21-23. Practical Examples of Contemplation (p61-67)</a></div>
+                    <div class="toc-item"><a href="#">24. Quran as Sole Guidance Source (p69)</a></div>
+                    <div class="toc-item"><a href="#">25. Quran-by-Quran Interpretation (p71)</a></div>
+                    <div class="toc-item"><a href="#">26. Divine Encompassing of Disbelievers (p73)</a></div>
+                    <div class="toc-item"><a href="#">27. Prophet, Messenger, Quran & Sunnah (p74)</a></div>
+                    <div class="toc-item"><a href="#">28. Do We Truly Contemplate? (p76)</a></div>
+                    <div class="toc-item"><a href="#">29-31. Toward New Understanding (p78-80)</a></div>
+                    <div class="toc-item"><a href="#">32. Quran as Living Dialogue (p82)</a></div>
+                    <div class="toc-item"><a href="#">33. Beyond Literalism (p83)</a></div>
+                    <div class="toc-item"><a href="#">34. Quran's Indivisible Unity (p84)</a></div>
+                    <div class="toc-item"><a href="#">35. Contemplation as Lifestyle (p85)</a></div>
+                    <div class="toc-item"><a href="#">36. Correcting Common Misconceptions (p87)</a></div>
+                    <div class="toc-item"><a href="#">37. Islamic Jurisprudence Schools (p88)</a></div>
+                    <div class="toc-item"><a href="#">38. Analysis of Muhammad Shahrour's Method (p89)</a></div>
+                    <div class="toc-item"><a href="#">39. The Challenge of Sound Understanding (p92)</a></div>
+                    <div class="toc-item"><a href="#">40. "Resurrection or Value?" Manuscript Puzzle (p93)</a></div>
+                    <div class="toc-item"><a href="#">41. Surah Az-Zalzalah Reinterpreted (p95)</a></div>
+                    <div class="toc-item"><a href="#">42. From 'Value' to 'Resurrection' (p97)</a></div>
+                    <div class="toc-item"><a href="#">43. Principles of Interpretation Rebalanced (p99)</a></div>
+                    <div class="toc-item"><a href="#">44. Between Textual Stability & Understanding (p101)</a></div>
+                    <div class="toc-item"><a href="#">45. Toward Deeper Quranic Understanding (p105)</a></div>
+                    <div class="toc-item"><a href="#">46. Interpreting Miraculous Narratives (p107)</a></div>
+                    <div class="toc-item"><a href="#">47. Evaluating Isra'iliyyat (p109)</a></div>
+                    <div class="toc-item"><a href="#">48. Symbolic vs Secular Interpretation (p111)</a></div>
+                    <div class="toc-item"><a href="#">49. Historical Context's Role (p113)</a></div>
+                    <div class="toc-item"><a href="#">50. Interpreting Miracles (p115)</a></div>
+                    <div class="toc-item"><a href="#">51. Synonymy in Arabic (p119)</a></div>
+                    <div class="toc-item"><a href="#">52. Quranic Synonyms Explored (p121)</a></div>
+                    <div class="toc-item"><a href="#">53. Narrative Influences on Understanding (p122)</a></div>
+                    <div class="toc-item"><a href="#">54. Toward Deeper Contemplation (p124)</a></div>
+                    <div class="toc-item"><a href="#">55. Quran's Essential Nature (p126)</a></div>
+                    <div class="toc-item"><a href="#">56. Contemporary Contemplation (p128)</a></div>
+                    <div class="toc-item"><a href="#">57. Beyond the Ten Readings (p130)</a></div>
+                    <div class="toc-item"><a href="#">58. New Understanding Through Manuscripts (p131)</a></div>
+                    <div class="toc-item"><a href="#">59. Foundational Principles (p133)</a></div>
+                    <div class="toc-item"><a href="#">60. Critical Hadith Evaluation (p135)</a></div>
+                    <div class="toc-item"><a href="#">61. Quranic Language as Standard (p136)</a></div>
+                    <div class="toc-item"><a href="#">62. "Intercession" Reexamined (p138)</a></div>
+                    <div class="toc-item"><a href="#">63. Collective Contemplation (p140)</a></div>
+                    <div class="toc-item"><a href="#">64. Contemplation as Right & Duty (p141)</a></div>
+                    <div class="toc-item"><a href="#">65. Arabic Language vs Quranic Tongue (p143)</a></div>
+                    <div class="toc-item"><a href="#">66. Quranic Linguistic Examples (p151)</a></div>
+                    <div class="toc-item"><a href="#">67. Practical Contemplation Methodology (p152)</a></div>
+                    <div class="toc-item"><a href="#">68. Quran as Life's Key (p153)</a></div>
+                    <div class="toc-item"><a href="#">69. Revelation & Preservation (p155)</a></div>
+                    <div class="toc-item"><a href="#">70. Quran's Inimitability (p156)</a></div>
+                    <div class="toc-item"><a href="#">71. Origins of Arabic Script (p158)</a></div>
+                    <div class="toc-item"><a href="#">72. Uthmani Script Contemplation (p159)</a></div>
+                    <div class="toc-item"><a href="#">73. Evolution of Arabic Letters (p162)</a></div>
+                    <div class="toc-item"><a href="#">74. Development of Arabic Calligraphy (p163)</a></div>
+                    <div class="toc-item"><a href="#">75. Calligraphy as Art & Identity (p165)</a></div>
+                    <div class="toc-item"><a href="#">76. Contemporary Contemplation (p167)</a></div>
+                    <div class="toc-item"><a href="#">77. Comprehensive Methodology (p169)</a></div>
+                    <div class="toc-item"><a href="#">78. Contemplation as Key (p173)</a></div>
+                    <div class="toc-item"><a href="#">79. Heart & Mind Preparation (p174)</a></div>
+                    <div class="toc-item"><a href="#">80-81. Essential Contemplation Tools (p176-178)</a></div>
+                    <div class="toc-item"><a href="#">82. Practical Application (p182)</a></div>
+                    <div class="toc-item"><a href="#">83. Comprehensive Rules (p184)</a></div>
+                    <div class="toc-item"><a href="#">84. Fruits of Contemplation (p187)</a></div>
+                    <div class="toc-item"><a href="#">85. Q&A on Contemplation (p188)</a></div>
+                    <div class="toc-item"><a href="#">86. Quranic Rhetorical Styles (p190-206)</a></div>
+                    <div class="toc-item"><a href="#">87-91. Contemplating Various Verse Types (p207-215)</a></div>
+                    <div class="toc-item"><a href="#">92. Personality Development (p216)</a></div>
+                    <div class="toc-item"><a href="#">93. Teaching Children (p218)</a></div>
+                    <div class="toc-item"><a href="#">94. Technology's Role (p219)</a></div>
+                    <div class="toc-item"><a href="#">95. Group Contemplation (p221)</a></div>
+                    <div class="toc-item"><a href="#">96. Sound vs Flawed Understanding (p223)</a></div>
+                    <div class="toc-item"><a href="#">97. Practical Contemplation Plan (p224)</a></div>
+                    <div class="toc-item"><a href="#">98. "Mind & Heart Treasures" (p227)</a></div>
+                    <div class="toc-item"><a href="#">99. "Between Breeze & Deep Dive" (p229)</a></div>
+                    <div class="toc-item"><a href="#">100. "Cosmic Contemplation" (p230)</a></div>
+                    <div class="toc-item"><a href="#">101. "Light Upon Light" (p231)</a></div>
+                    <div class="toc-item"><a href="#">102. "From Recitation to Contemplation" (p233)</a></div>
+                    <div class="toc-item"><a href="#">103. "Multiple Perspectives" (p235)</a></div>
+                    <div class="toc-item"><a href="#">104. "Quran & Cosmos" (p236)</a></div>
+                    <div class="toc-item"><a href="#">105. "Quran's Compilation" (p237)</a></div>
+                    <div class="toc-item"><a href="#">106. "Surah Names as Keys" (p238)</a></div>
+                    <div class="toc-item"><a href="#">107. "Science & Quran" (p239)</a></div>
+                    <div class="toc-item"><a href="#">108. "From Heritage to Modernity" (p241)</a></div>
+                    <div class="toc-item"><a href="#">109. "Secrets Unveiled" (p242)</a></div>
+                    <div class="toc-item"><a href="#">110. Summary (p244)</a></div>
+                    <div class="toc-item"><a href="#">111. "Mushaf Qab Saray" Excerpts (p247)</a></div>
+                    <div class="toc-item"><a href="#">112. Acknowledgments (p248)</a></div>
+                    <div class="toc-item"><a href="#">113. References (p249)</a></div>
+                </div>
+            </div>
+            
+            <div class="book-description">
+                <h3>The Book's Vision</h3>
+                <p>This work aims to present an integrated methodology for engaging with the Holy Qur'an through both ancient manuscripts and modern technologies, reviving the Muslim community's relationship with its sacred text through deeper understanding that honors tradition while employing contemporary analytical tools.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Dr. Nasser Ibn Dawood Library - All Rights Reserved</p>
+        <p>Islamic Researcher and Engineer Specializing in Digital Quranic Studies</p>
+    </footer>
+</body>
+</html>

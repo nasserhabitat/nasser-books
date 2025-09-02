@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحرير المصطلح القرآني المجلد 2 | مكتبة ناصر ابن داوود</title>
+    <meta name="description" content="دراسة تطبيقية في فقه اللسان القرآني - تأليف ناصر ابن داوود">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57C5B6;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .book-features {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .book-features ul {
+            padding-right: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        .article-series {
+            margin: 2rem 0;
+        }
+        .series-item {
+            margin-bottom: 1.5rem;
+        }
+        .series-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .toc {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+        .toc-chapter {
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .toc-chapter::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: var(--dark-color);
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>تحرير المصطلح القرآني المجلد 1</h1>
+            <p class="subtitle">دراسة تطبيقية في فقه اللسان القرآني</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="book-cover">
+            <div class="cover-container">
+                <img src="cover-ar.png"
+                     alt="غلاف كتاب تحرير المصطلح القرآني المجلد 2 - تأليف ناصر ابن داوود"
+                     loading="lazy"
+                     width="300"
+                     height="400"
+                     decoding="async">
+            </div>
+            
+            <div class="book-actions">
+                <a href="https://archive.org/details/2_20250724_20250724_0836" 
+                   class="btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    قراءة على الأرشيف
+                </a>
+                <a href="../en/" class="btn btn-secondary">
+                    النسخة الإنجليزية
+                </a>
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
+                    العودة إلى الكتب
+                </a>
+            </div>
+            
+            <div class="book-meta">
+                <p><strong>تأليف:</strong> ناصر ابن داوود</p>
+                <p><strong>الطبعة:</strong> الثالثة - 2025</p>
+                <p><strong>الصفحات:</strong> 333 صفحة</p>
+                <p><strong>التصنيف:</strong> الدراسات الإسلامية، التفسير القرآني</p>
+                <p><strong>اللغة:</strong> العربية</p>
+            </div>
+        </section>
+
+<section class="book-details">
+    <div class="book-description">
+        <h2>Book Description</h2>
+        <p>This book aims to rebuild the foundation of correct understanding of religion and life by correcting prevalent concepts and presenting original insights into Qur'anic terminology, inspired by the essence of the Qur'anic language. This volume builds upon the scientific methodology established in Volume 1, offering expanded practical applications for the jurisprudence of the Qur'anic language.</p>
+        
+        <p>The methodology of this work is based on the theoretical foundations and methodological principles detailed in the book "Jurisprudence of the Qur'anic Language: A New Methodology for Understanding Text and Manuscript." In this volume, the author presents a contemporary and innovative reading of Qur'anic terms and concepts, moving beyond inherited interpretations that have obscured the original meanings of the Noble Qur'an.</p>
+    </div>
+    
+    <div class="book-features">
+        <h3>Key Features of the Book</h3>
+        <ul>
+            <li>Precise analysis of Qur'anic terms in their original contexts</li>
+            <li>"Interactive Contemplation" methodology that transcends superficial reading</li>
+            <li>Utilization of modern technology as research tools</li>
+            <li>Comprehensive approach that transcends traditional exegetical issues</li>
+            <li>Liberating terminology from human additions and inherited interpretations</li>
+            <li>Applied study of fundamental concepts in the Noble Qur'an</li>
+            <li>Connecting theoretical methodology with practical application in textual understanding</li>
+        </ul>
+    </div>
+    
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        
+        <div class="toc-section">
+            <h3>Introduction: Methodology for Volume 2</h3>
+            <div class="toc-chapter">Methodological foundations of Qur'anic language jurisprudence</div>
+            <div class="toc-chapter">Application mechanism of the methodology to Qur'anic terms</div>
+            <div class="toc-chapter">Differences between Volume 1 and 2 in methodology and application</div>
+        </div>
+        
+        <div class="toc-section">
+            <h3>Part One: Deconstructing Doctrinal and Intellectual Concepts</h3>
+            <div class="toc-chapter">Jinn and Devils: A new reading of Qur'anic concepts</div>
+            <div class="toc-chapter">Children of Israel: From ethnic understanding to conceptual perception</div>
+            <div class="toc-chapter">Shirk (Polytheism) in the Qur'an: Its true dimensions beyond simplification</div>
+            <div class="toc-chapter">Pure Monotheism: Abraham's creed as a comprehensive way of life</div>
+        </div>
+        
+        <div class="toc-section">
+            <h3>Part Two: Re-reading Legislative Terminology</h3>
+            <div class="toc-chapter">Series "Darb (Striking) in the Qur'an": Multiple meanings and contexts</div>
+            <div class="toc-chapter">Killing, Coercion and Taghut: Deconstructing traditional narratives</div>
+            <div class="toc-chapter">Flogging and Amputation: Between reformative discipline and physical punishment</div>
+            <div class="toc-chapter">Concepts of Halal and Haram: Returning to Qur'anic origins</div>
+        </div>
+        
+        <div class="toc-section">
+            <h3>Part Three: Contemplating Stories and Prophets</h3>
+            <div class="toc-chapter">Surah Yusuf: Exploring depths of "The Best of Stories"</div>
+            <div class="toc-chapter">Moses in the Qur'an: A symbolic and renewed methodological reading</div>
+            <div class="toc-chapter">Prophets' Names: Linguistic and spiritual treasures in the "Mathani" system</div>
+            <div class="toc-chapter">Sacrifice and Ransom: New insights in Abraham and his son's story</div>
+        </div>
+        
+        <div class="toc-section">
+            <h3>Part Four: Advanced Terminological and Linguistic Studies</h3>
+            <div class="toc-chapter">Numbers in the Qur'an: From numerical quantity to qualitative significance</div>
+            <div class="toc-chapter">Remembrance and Supplication: Essence of connection with God in Qur'anic perspective</div>
+            <div class="toc-chapter">"Al-Kitab" (The Book) and "Al-Kutub" (The Books): Journey into secrets of central terms</div>
+            <div class="toc-chapter">"Al-Qur'an": From letter to reality in concept and terminology</div>
+            <div class="toc-chapter">"The Straight Path": Qur'anic vision in five dimensions</div>
+        </div>
+        
+        <div class="toc-section">
+            <h3>Conclusion: Toward Renewed Understanding of the Qur'an</h3>
+            <div class="toc-chapter">Summary of methodology and applications</div>
+            <div class="toc-chapter">Future research horizons in Qur'anic language jurisprudence</div>
+            <div class="toc-chapter">Recommendations for researchers and students of knowledge</div>
+        </div>
+    </div>
+    
+    <div class="volume-description">
+        <h3>Volume 1 Description: Theoretical and Methodological Foundation</h3>
+        <p>Volume 1 serves as the cornerstone and methodological gateway to the entire "Clarifying Qur'anic Terminology" project. The author dedicates this part to establishing the intellectual and textual tools that will be used in subsequent volumes, providing readers with a clear roadmap to understanding the Qur'an through its own framework.</p>
+        
+        <p>This volume primarily aims to build a new framework for contemplation (tadabbur), transitioning readers from traditional reception to direct analysis of the Qur'anic text in its original form. It represents an intellectual and methodological "rehabilitation" process that deconstructs traditional foundations of understanding and replaces them with new foundations based on the original Qur'anic text and its internal rules.</p>
+        
+        <h4>Main Themes of Volume 1:</h4>
+        <ul>
+            <li><strong>Rooting Sources and Methodology:</strong> Returning to original Qur'anic manuscripts, diagnosing current understanding crises, and establishing "Fiqh al-Lisan al-Qur'ani" methodology</li>
+            <li><strong>Reconstructing Doctrinal and Worship Concepts:</strong> Rereading fundamental Islamic concepts like prayer, fasting, pilgrimage, and glorification</li>
+            <li><strong>Faith and Existential Concepts:</strong> Understanding the self, Paradise and Hell, Night of Decree (Laylat al-Qadr), and faith between text and interpretation</li>
+            <li><strong>Knowing Allah:</strong> Presenting specialized series on understanding Lordship (Rububiyyah) and Divinity (Uluhiyyah)</li>
+            <li><strong>Methodology for Handling Heritage:</strong> Critical approach to Prophetic traditions and evaluating narrations against the Qur'an</li>
+        </ul>
+    </div>
+    
+    <div class="volume-description volume-description-2">
+        <h3>Volume 2 Description: Practical Applications and Advanced Analysis</h3>
+        <p>The second volume of this encyclopedic work represents the transition from methodological theorization to intensive practical application of "Qur'anic Language Jurisprudence." After establishing theoretical foundations in Volume 1, this volume delves into core issues and concepts that have shaped Muslim understanding of the Qur'anic text throughout history, offering a renewing vision to deconstruct terms and reconstruct them according to the book's methodology based on the principle that the Qur'an explains itself.</p>
+        
+        <p>This volume focuses on addressing a wide range of pivotal Qur'anic concepts and terms that have often been sources of controversy or misunderstanding. Serving as an applied workshop, the author takes readers on a journey through Qur'anic verses and terms, demonstrating how "Fiqh al-Lisan al-Qur'ani" methodology can produce different, more authentic, and deeper understanding of religious and life concepts, calling for liberation from inherited interpretations and direct return to the "Clear Light" and "Clear Arabic Tongue" in which the Qur'an was revealed.</p>
+        
+        <h4>Main Themes of Volume 2:</h4>
+        <ul>
+            <li><strong>Deconstructing Doctrinal and Intellectual Concepts:</strong> Jinn and devils, Children of Israel, Shirk in the Qur'an, Pure Monotheism</li>
+            <li><strong>Re-reading Terms Related to Rulings and Punishments:</strong> Series "Darb in the Qur'an", Killing, Coercion and Taghut, Flogging and Amputation, Concepts of Halal and Haram</li>
+            <li><strong>Contemplating Stories and Prophets:</strong> Surah Yusuf, Moses in the Qur'an, Names of Prophets, Sacrifice and Ransom</li>
+            <li><strong>Deep Terminological and Linguistic Studies:</strong> Numbers in the Qur'an, Remembrance and Supplication, "Al-Kitab" and "Al-Kutub", "Al-Qur'an", "The Straight Path"</li>
+        </ul>
+    </div>
+    
+    <div class="book-features">
+        <h3>Who is this Book For?</h3>
+        <ul>
+            <li><strong>Researchers in Qur'anic Studies:</strong> Those seeking new approaches to Qur'anic text analysis</li>
+            <li><strong>Students of Islamic Sciences:</strong> Those wishing to deepen understanding of scientific methodology in approaching the Qur'an</li>
+            <li><strong>Islamic Thinkers:</strong> Those interested in renewing religious discourse and understanding foundational texts</li>
+            <li><strong>Linguistics Specialists:</strong> Those studying unique characteristics of Qur'anic language</li>
+            <li><strong>Comparative Religion Scholars:</strong> Those seeking to understand Qur'anic terminology in its original context</li>
+        </ul>
+    </div>
+</section>
