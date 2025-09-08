@@ -6,7 +6,7 @@
     "last_updated": "2025-08-28",
     "total_books": 24,
     "languages": ["ar", "en"],
-    "formats": ["html", "pdf", "txt"],
+    "formats": ["html", "pdf", "txt", "docx"],
     "license": "CC BY-SA 4.0",
     "author": {
       "name": "ناصر ابن داوود",
@@ -15,38 +15,50 @@
     },
     "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
-  "book": {
-    "id": "contemplation-in-the-mirror",
-    "titles": {
-      "ar": "التدبر في مرآة الرسوم",
-      "en": "Contemplation in the Mirror of Scripts"
-    },
-    "description": {
-      "ar": "كتاب يقدم منهجية جديدة لفهم القرآن الكريم من خلال دراسة المخطوطات القرآنية القديمة وتحليلها رقمياً، مع التركيز على دلالات الرسم العثماني وعلاقته بتدبر المعاني القرآنية. يستند إلى مفهوم 'فقه السبع المثاني' كأساس لفهم البنية اللغوية العميقة للنص القرآني.",
-      "en": "A book presenting a novel methodology for understanding the Noble Quran through the study and digital analysis of ancient Quranic manuscripts, focusing on the significance of the Uthmanic script and its role in contemplating Quranic meanings. It is grounded in the concept of 'Jurisprudence of the Seven Oft-Repeated' as a foundation for exploring the deep linguistic structure of the Quranic text."
-    },
-    "links": {
-      "ar": {
-        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
-        "pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85.pdf",
-        "text": "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85_djvu.txt"
+  "books": [
+    {
+      "id": "contemplation-in-the-mirror",
+      "titles": {
+        "ar": "التدبر في مرآة الرسوم",
+        "en": "Contemplation in the Mirror of Scripts"
       },
-      "en": {
-        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
-        "pdf": "https://dn721503.ca.archive.org/0/items/contemplation-in-the-mirror-of-scripts/Contemplation%20in%20the%20Mirror%20of%20Scripts.pdf",
-        "text": "https://archive.org/stream/contemplation-in-the-mirror-of-scripts/Contemplation%20in%20the%20Mirror%20of%20Scripts_djvu.txt"
-      }
-    },
-    "metadata": {
-      "author": "ناصر ابن داوود",
-      "category": "quranic_studies",
-      "pages": 253,
-      "chapters": 9,
-      "language": "arabic",
-      "ai_accessible": true,
-      "structured_data": true,
-      "topics": ["التدبر", "المخطوطات الرقمية", "الرسوم", "الرسم العثماني", "فقه السبع المثاني", "تحليل رقمي"],
-      "edition": "الأولى - 2025",
+      "description": {
+        "ar": "كتاب يقدم منهجية جديدة لفهم القرآن الكريم من خلال دراسة المخطوطات القرآنية القديمة وتحليلها رقمياً، مع التركيز على دلالات الرسم العثماني وعلاقته بتدبر المعاني القرآنية. يستند إلى مفهوم 'فقه السبع المثاني' كأساس لفهم البنية اللغوية العميقة للنص القرآني.",
+        "en": "A book presenting a novel methodology for understanding the Noble Quran through the study and digital analysis of ancient Quranic manuscripts, focusing on the significance of the Uthmanic script and its role in contemplating Quranic meanings. It is grounded in the concept of 'Jurisprudence of the Seven Oft-Repeated' as a foundation for exploring the deep linguistic structure of the Quranic text."
+      },
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
+          "html": "https://drive.google.com/uc?export=download&id=1BDuFDAdddtGAP97yRzbO4B0l9cwRasG-",
+          "pdf": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
+          "text": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
+          "archive_text": "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
+          "archive_pdf": "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
+          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
+        },
+        "en": {
+          "docx": "https://drive.google.com/uc?export=download&id=1odCjX8iTsk4Kr3EZvvIDWFJgc45LHXIM",
+          "html": "https://drive.google.com/uc?export=download&id=1_fnsqsqsXSa4RVsVON5yPLV09vsC8i53",
+          "pdf": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
+          "text": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
+          "archive_text": "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
+          "archive_pdf": "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
+          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 251,
+        "pages_en": 254,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["التدبر", "المخطوطات الرقمية", "الرسوم", "الرسم العثماني", "فقه السبع المثاني", "تحليل رقمي"],
+        "edition": "الأولى - 2025",
+        "digital_archive": "https://archive.org/details/20250529_20250529_2006"
+      },
       "key_features": [
         "دمج بين الدراسات القرآنية التقليدية والتقنيات الرقمية الحديثة",
         "تحليل معمق للرسم العثماني ودلالاته",
@@ -54,49 +66,48 @@
         "أمثلة تطبيقية من المخطوطات القرآنية",
         "رؤية جديدة للتعامل مع القرآن في العصر الرقمي"
       ],
-      "digital_archive": "https://archive.org/details/20250529_20250529_2006"
-    },
-    "content_overview": {
-      "methodology": "منهجية تجمع بين دراسة المخطوطات القرآنية القديمة والتحليل الرقمي الحديث لفهم أعمق للنص القرآني",
-      "main_sections": [
-        {
-          "title": "الرسم العثماني والمخطوطات",
-          "topics": [
-            "الرسم العثماني: حماية أزلية للنص القرآني",
-            "المخطوطة الرقمية الشخصية",
-            "خصائص الرسم العثماني",
-            "تحليل لغوي لسورة التحريم"
-          ]
-        },
-        {
-          "title": "منهجيات التدبر",
-          "topics": [
-            "مبادئ توجيهية لفهم ثوري",
-            "التدبر بين الإجماع والتفرد",
-            "القرآن من المعنى إلى المبنى",
-            "ضوابط فهم الآيات المتشابهة"
-          ]
-        },
-        {
-          "title": "التطبيقات العملية",
-          "topics": [
-            "أمثلة تطبيقية على تدبر الآيات المتشابهة",
-            "منهج تفسير القرآن بالقرآن",
-            "تدبر القصص القرآني",
-            "تدبر آيات الأحكام"
-          ]
-        },
-        {
-          "title": "الأدوات والتقنيات",
-          "topics": [
-            "الأدوات الأساسية لتدبر القرآن",
-            "دور التكنولوجيا في تسهيل التدبر",
-            "التدبر الجماعي",
-            "جدول عملي للتدبر"
-          ]
-        }
-      ],
-      "goal": "تقديم منهجية متكاملة للتعامل مع القرآن الكريم في ضوء المخطوطات القديمة والتقنيات الحديثة، لإحياء علاقة الأمة بكتابها عبر فهم أعمق يستلهم التراث ويتجاوزه باستخدام أدوات العصر"
+      "content_overview": {
+        "methodology": "منهجية تجمع بين دراسة المخطوطات القرآنية القديمة والتحليل الرقمي الحديث لفهم أعمق للنص القرآني",
+        "main_sections": [
+          {
+            "title": "الرسم العثماني والمخطوطات",
+            "topics": [
+              "الرسم العثماني: حماية أزلية للنص القرآني",
+              "المخطوطة الرقمية الشخصية",
+              "خصائص الرسم العثماني",
+              "تحليل لغوي لسورة التحريم"
+            ]
+          },
+          {
+            "title": "منهجيات التدبر",
+            "topics": [
+              "مبادئ توجيهية لفهم ثوري",
+              "التدبر بين الإجماع والتفرد",
+              "القرآن من المعنى إلى المبنى",
+              "ضوابط فهم الآيات المتشابهة"
+            ]
+          },
+          {
+            "title": "التطبيقات العملية",
+            "topics": [
+              "أمثلة تطبيقية على تدبر الآيات المتشابهة",
+              "منهج تفسير القرآن بالقرآن",
+              "تدبر القصص القرآني",
+              "تدبر آيات الأحكام"
+            ]
+          },
+          {
+            "title": "الأدوات والتقنيات",
+            "topics": [
+              "الأدوات الأساسية لتدبر القرآن",
+              "دور التكنولوجيا في تسهيل التدبر",
+              "التدبر الجماعي",
+              "جدول عملي للتدبر"
+            ]
+          }
+        ],
+        "goal": "تقديم منهجية متكاملة لل التعامل مع القرآن الكريم في ضوء المخطوطات القديمة والتقنيات الحديثة، لإحياء علاقة الأمة بكتابها عبر فهم أعمق يستلهم التراث ويتجاوزه باستخدام أدوات العصر"
+      }
     }
-  }
+  ]
 }
