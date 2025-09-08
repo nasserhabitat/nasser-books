@@ -27,45 +27,58 @@
     },
     "links": {
       "ar": {
-        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
-        "pdf": "https://dn721701.ca.archive.org/0/items/20250724_20250724_0900/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
-        "text": "https://archive.org/stream/20250724_20250724_0900/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt"
+        "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
+        "html": "https://drive.google.com/uc?export=download&id=1arQYF-1rAeR8I-llkx2r4TeBUF7Q7Sgq",
+        "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
+        "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+        "text_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
+        "archive_text": "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
+        "archive_pdf": "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
+        "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
       },
       "en": {
-        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
-        "pdf": "https://dn721503.ca.archive.org/0/items/clarifying-the-quranic-terminology-tome3/Clarifying%20the%20Quranic%20Terminology%20Tome%203.pdf",
-        "text": "https://archive.org/stream/clarifying-the-quranic-terminology-tome3/Clarifying%20the%20Quranic%20Terminology%20Tome%203_djvu.txt"
+        "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
+        "html": "https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9",
+        "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K",
+        "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
+        "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
+        "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
+        "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
+        "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
       }
     },
     "metadata": {
       "author": "ناصر ابن داوود",
       "category": "quranic_studies",
-      "pages": 229,
-      "chapters": 12,
-      "language": "arabic",
+      "pages_ar": 229,
+      "pages_en": 315,
+      "language_ar": "arabic",
+      "language_en": "english",
       "ai_accessible": true,
       "structured_data": true,
       "topics": ["المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر", "الخلافة الإنسانية", "الرقمنة", "تحليل لغوي"],
       "edition": "الثالثة - 2025",
       "volume": 3,
-      "total_volumes": 3,
-      "key_features": [
-        "دراسة تطبيقية متعمقة للمصطلحات القرآنية",
-        "منهجية جديدة في فهم اللسان القرآني",
-        "تحليل سياقي للآيات القرآنية",
-        "رؤية شاملة لفقه المصطلحات القرآنية",
-        "ربط المفاهيم القرآنية بالواقع المعاصر"
-      ],
-      "main_themes": [
-        "بناء النموذج المعرفي والحضاري: الخلافة الإنسانية",
-        "إعادة تعريف الكيان الإنساني: الروح، القلب، الفؤاد، النفس",
-        "تفكيك وإعادة بناء المنظومة الاجتماعية والأسرية",
-        "إعادة هيكلة المفاهيم الاقتصادية والأخلاقية: الرزق، الميزان، الربا",
-        "قراءة وجودية لمفاهيم الغيب والآخرة: الجنة، جهنم، الموت",
-        "تعميق المنهجية اللغوية والتدبرية: الحروف المقطعة، النسخ، التفسير"
-      ],
-      "digital_archive": "https://archive.org/details/20250724_20250724_0900"
+      "total_volumes": 3
     },
+    "key_features": [
+      "دراسة تطبيقية متعمقة للمصطلحات القرآنية",
+      "منهجية جديدة في فهم اللسان القرآني",
+      "تحليل سياقي للآيات القرآنية",
+      "رؤية شاملة لفقه المصطلحات القرآنية",
+      "ربط المفاهيم القرآنية بالواقع المعاصر"
+    ],
+    "main_themes": [
+      "بناء النموذج المعرفي والحضاري: الخلافة الإنسانية",
+      "إعادة تعريف الكيان الإنساني: الروح، القلب، الفؤاد، النفس",
+      "تفكيك وإعادة بناء المنظومة الاجتماعية والأسرية",
+      "إعادة هيكلة المفاهيم الاقتصادية والأخلاقية: الرزق، الميزان، الربا",
+      "قراءة وجودية لمفاهيم الغيب والآخرة: الجنة، جهنم، الموت",
+      "تعميق المنهجية اللغوية والتدبرية: الحروف المقطعة، النسخ، التفسير"
+    ],
+    "digital_archive": "https://archive.org/details/20250724_20250724_0900",
     "content_overview": {
       "methodology": "منهجية تعتمد على الأسس النظرية والضوابط المنهجية لكتاب 'فقه اللسان القرآني' مع التركيز على التطبيق العملي لبناء منظومة فكرية وحياتية شاملة",
       "main_sections": [
