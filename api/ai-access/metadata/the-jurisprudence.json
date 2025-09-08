@@ -27,44 +27,57 @@
     },
     "links": {
       "ar": {
-        "html": "https://drive.google.com/file/d/1xM6KWN0wMorA_WwP5eHDaG77-QHNO9_y/view?usp=sharing",
-        "pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
-        "text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt"
+        "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
+        "html": "https://drive.google.com/uc?export=download&id=17pKy2zffItvfWXVxDcAeCO0Mzd9JKbcd",
+        "pdf": "books/the-jurisprudence/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
+        "text": "books/the-jurisprudence/ar/content.txt",
+        "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
+        "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
+        "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
+        "cover": "books/the-jurisprudence/ar/cover-ar.png"
       },
       "en": {
-        "html": "https://drive.google.com/file/d/10rf76k4G3Wn2zp7e8cv998ZLH_gDQIDU/view?usp=sharing",
-        "pdf": "https://dn721503.ca.archive.org/0/items/jurisprudence-quranic-arabic/Jurisprudence%20of%20the%20Quranic%20Arabic.pdf",
-        "text": "https://archive.org/stream/jurisprudence-quranic-arabic/Jurisprudence%20of%20the%20Quranic%20Arabic_djvu.txt"
+        "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
+        "html": "https://drive.google.com/uc?export=download&id=1af5VjhR0H6kKTtuhCz-PxXR70z6VfmYe",
+        "pdf": "books/the-jurisprudence/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
+        "text": "books/the-jurisprudence/en/content.txt",
+        "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+        "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
+        "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
+        "cover": "books/the-jurisprudence/en/cover-en.png"
       }
     },
     "metadata": {
       "author": "ناصر ابن داوود",
-      "category": "quranic_linguistics_studies",
-      "pages": 564,
-      "chapters": 16,
-      "language": "arabic",
+      "category": "quranic_studies",
+      "pages_ar": 569,
+      "pages_en": 829,
+      "language_ar": "arabic",
+      "language_en": "english",
       "ai_accessible": true,
       "structured_data": true,
       "topics": ["فقه اللغة القرآنية", "اللسان العربي", "المخطوطات القرآنية", "التدبر القرآني", "الإعجاز اللغوي", "تحليل نصي"],
-      "edition": "الأولى - 2025",
-      "key_features": [
-        "دراسة أسماء الحروف وطاقاتها الدلالية",
-        "تحليل 'المثاني' (الأزواج الحرفية) كنظام بنائي ودلالي",
-        "الاستناد إلى المخطوطات القرآنية الأصلية",
-        "دراسة النظام العددي في القرآن",
-        "تحليل سياق النزول وأثره في التفسير",
-        "منهجية التعامل مع القصص القرآني",
-        "ضوابط الاستعانة بالعلوم والمعارف الخارجية"
-      ],
-      "main_themes": [
-        "خصوصية اللسان القرآني وقصديته",
-        "ديناميكية المعنى ووحدة النص",
-        "أسماء الحروف والمثاني كنظام دلالي",
-        "التفاعل مع السياق والمخطوطات الأصلية",
-        "التدبر العقلي والمقاصد الكلية"
-      ],
-      "digital_archive": "https://archive.org/details/20250529_20250529_2057"
+      "edition": "الأولى - 2025"
     },
+    "key_features": [
+      "دراسة أسماء الحروف وطاقاتها الدلالية",
+      "تحليل 'المثاني' (الأزواج الحرفية) كنظام بنائي ودلالي",
+      "الاستناد إلى المخطوطات القرآنية الأصلية",
+      "دراسة النظام العددي في القرآن",
+      "تحليل سياق النزول وأثره في التفسير",
+      "منهجية التعامل مع القصص القرآني",
+      "ضوابط الاستعانة بالعلوم والمعارف الخارجية"
+    ],
+    "main_themes": [
+      "خصوصية اللسان القرآني وقصديته",
+      "ديناميكية المعنى ووحدة النص",
+      "أسماء الحروف والمثاني كنظام دلالي",
+      "التفاعل مع السياق والمخطوطات الأصلية",
+      "التدبر العقلي والمقاصد الكلية"
+    ],
+    "digital_archive": "https://archive.org/details/20250529_20250529_2057",
     "content_overview": {
       "methodology": "منهجية 'فقه اللسان العربي القرآني' التي تجمع بين التحليل اللغوي، الدراسة النصية، والاستناد إلى المخطوطات القرآنية الأصلية لفهم النظام الداخلي للقرآن",
       "main_sections": [
