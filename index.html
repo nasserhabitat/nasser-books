@@ -292,6 +292,20 @@
             background: var(--primary-color);
             color: white;
         }
+        .formats-section {
+            margin-top: 10px;
+        }
+        .formats-section h4 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+        .btn-small {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
         .ai-access-links {
             display: flex;
             justify-content: space-between;
@@ -876,10 +890,10 @@
     // بيانات الكتب لهيكل الذكاء الاصطناعي
     const libraryBooks = [
         {
-            id: "conscious-contemplation",
-            title_ar: "نحو تدبر واعٍ",
-            title_en: "Towards Conscious Contemplation",
-            category: "quranic",
+            "id": "conscious-contemplation",
+            "title_ar": "نحو تدبر واع",
+            "title_en": "Towards Conscious Contemplation",
+            "category": "quranic",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
@@ -918,10 +932,10 @@
             content_en: null
         },
         {
-            id: "anwar-al-bayan",
-            title_ar: "أنوار البيان في رسم المصحف العثماني",
-            title_en: "ANWAR AL-BAYAN: Unveiling the Secrets",
-            category: "quranic",
+            "id": "anwar-al-bayan",
+            "title_ar": "أنوار البيان في رسم المصحف العثماني (إصدار 2025)",
+            "title_en": "ANWAR AL-BAYAN: The Uthmanic Script (2025 Edition)",
+            "category": "quranic",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
@@ -960,10 +974,10 @@
             content_en: null
         },
         {
-            id: "changing-the-concepts",
-            title_ar: "تغيير المفاهيم للمصطلحات القرآنية",
-            title_en: "Changing the Concepts of Quranic Terminology",
-            category: "quranic",
+            "id": "changing-the-concepts",
+            "title_ar": "تغيير المفاهيم القرآنية (إصدار 2025)",
+            "title_en": "Changing Quranic Concepts (2025 Edition)",
+            "category": "quranic",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
@@ -1002,136 +1016,10 @@
             content_en: null
         },
         {
-            id: "editing-the-quranic-terminology-tome1",
-            title_ar: "تحرير المصطلح القرآني المجلد 1",
-            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 1",
-            category: "quranic",
-            "links": {
-                "ar": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-                    "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
-                    "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
-                    "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
-                    "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
-                    "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
-                },
-                "en": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-                    "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
-                    "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
-                    "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
-                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
-                    "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-                }
-            },
-            "cover": {
-                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
-                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-            },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
-            },
-            content_ar: null,
-            content_en: null
-        },
-        {
-            id: "editing-the-quranic-terminology-tome2",
-            title_ar: "تحرير المصطلح القرآني المجلد 2",
-            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 2",
-            category: "quranic",
-            "links": {
-                "ar": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1zxjbEztgVd5u34ddWIjHSu5DH1-jKkCE",
-                    "html": "https://drive.google.com/uc?export=download&id=15MjoBBy2Unl_5zKVvBo1Mhl33mkHzOfL",
-                    "pdf": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-                    "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-                    "archive_text": "https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt",
-                    "archive_pdf": "https://dn721506.ca.archive.org/0/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
-                },
-                "en": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1qVJJHYcRLFxQ1i08iiJ0oj8dL0D_JBu-",
-                    "html": "https://drive.google.com/uc?export=download&id=10w6g6cRBubErISUlkyTpdaAQxFJoT0yO",
-                    "pdf": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1OZjyDOBnxQoeahD1P7D-BCjqbuDnKS53",
-                    "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1ceHbTYwL1eVy_cuSPIZtU10u_IxXW9cU",
-                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google_djvu.txt",
-                    "archive_pdf": "https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
-                }
-            },
-            "cover": {
-                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
-                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/cover-en.png"
-            },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
-            },
-            content_ar: null,
-            content_en: null
-        },
-        {
-            id: "editing-the-quranic-terminology-tome3",
-            title_ar: "تحرير المصطلح القرآني المجلد 3",
-            title_en: "CLARIFYING THE QUR'ANIC TERMINOLOGY Tome 3",
-            category: "quranic",
-            "links": {
-                "ar": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
-                    "html": "https://drive.google.com/uc?export=download&id=1arQYF-1rAeR8I-llkx2r4TeBUF7Q7Sgq",
-                    "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
-                    "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
-                    "archive_text": "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
-                    "archive_pdf": "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
-                },
-                "en": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-                    "html": "https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9",
-                    "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K",
-                    "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
-                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
-                    "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
-                    "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
-                }
-            },
-            "cover": {
-                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
-                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/cover-en.png"
-            },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
-            },
-            content_ar: null,
-            content_en: null
-        },
-        {
-            id: "contemplation-in-the-mirror",
-            title_ar: "التدبر في مرآة الرسوم",
-            title_en: "Contemplation in the Mirror of Scripts",
-            category: "quranic",
+            "id": "contemplation-in-the-mirror",
+            "title_ar": "التدبر في مرآة الرسوم (إصدار 2025)",
+            "title_en": "Contemplation in Scripts Mirror (2025 Edition)",
+            "category": "quranic",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
@@ -1170,52 +1058,10 @@
             content_en: null
         },
         {
-            id: "the-jurisprudence",
-            title_ar: "فقه اللسان القرآني",
-            title_en: "The Jurisprudence of the Qur'anic Tongue",
-            category: "quranic",
-            "links": {
-                "ar": {
-                    "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
-                    "html": "https://drive.google.com/uc?export=download&id=1s3cWON8pBchVWm2JrNO46fxatuRA-1nG",
-                    "pdf": "books/the-jurisprudence/ar/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
-                    "text": "books/the-jurisprudence/ar/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
-                    "archive_text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
-                    "archive_pdf": "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
-                    "cover": "books/the-jurisprudence/ar/cover-ar.png"
-                },
-                "en": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
-                    "html": "https://drive.google.com/uc?export=download&id=1y-OGxX0ACCgjAs4ZqlRfHdxexaX-nWOw",
-                    "pdf": "books/the-jurisprudence/en/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
-                    "text": "books/the-jurisprudence/en/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
-                    "archive_text": "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
-                    "archive_pdf": "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
-                    "cover": "books/the-jurisprudence/en/cover-en.png"
-                }
-            },
-            "cover": {
-                "ar": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
-                "en": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/cover-en.png"
-            },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
-            },
-            content_ar: null,
-            content_en: null
-        },
-        {
-            id: "digitizing",
-            title_ar: "مشروع رقمنة المخطوطات الأصلية",
-            title_en: "Digitizing the Original Manuscripts",
-            category: "digital",
+            "id": "digitizing",
+            "title_ar": "مشروع رقمنة القرآن الكريم (2025)",
+            "title_en": "Quran Digitization Project (2025)",
+            "category": "digital",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
@@ -1254,10 +1100,10 @@
             content_en: null
         },
         {
-            id: "modesty",
-            title_ar: "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-            title_en: "MODESTY: The Fence of the Soul",
-            category: "faith",
+            "id": "modesty",
+            "title_ar": "الحياء في العصر الرقمي (2025)",
+            "title_en": "Modesty in Digital Age (2025)",
+            "category": "faith",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
@@ -1296,52 +1142,10 @@
             content_en: null
         },
         {
-            id: "malakoot",
-            title_ar: "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
-            title_en: "AND SO THAT HE MAY BE OF THE CERTAIN ONES",
-            category: "faith",
-            "links": {
-                "ar": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
-                    "html": "https://drive.google.com/uc?export=download&id=1Bsr6CrHZCElQgkZAzkMuDo3ICBB3N-VZ",
-                    "pdf": "books/malakoot/ar/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH",
-                    "text": "books/malakoot/ar/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
-                    "archive_text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt",
-                    "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
-                    "cover": "books/malakoot/ar/cover-ar.png"
-                },
-                "en": {
-                    "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-                    "html": "https://drive.google.com/uc?export=download&id=1GdyQg-pQtDzR74UsilKtuZfs6G2p1kge",
-                    "pdf": "books/malakoot/en/content.pdf",
-                    "pdf_external": "https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N",
-                    "text": "books/malakoot/en/content.txt",
-                    "text_external": "https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg",
-                    "archive_text": "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt",
-                    "archive_pdf": "https://ia801600.us.archive.org/10/items/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM.pdf",
-                    "cover": "books/malakoot/en/cover-en.png"
-                }
-            },
-            "cover": {
-                "ar": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png",
-                "en": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/cover-en.png"
-            },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
-            },
-            content_ar: null,
-            content_en: null
-        },
-        {
-            id: "names-in-the-holy",
-            title_ar: "الأسماء الحسنى الوظيفية",
-            title_en: "The Functional Beautiful Names",
-            category: "faith",
+            "id": "names-in-the-holy",
+            "title_ar": "الأسماء الحسنى في ضوء الدراسات الحديثة (2025)",
+            "title_en": "Divine Names in Modern Studies (2025)",
+            "category": "faith",
             "links": {
                 "ar": {
                     "docx": "https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz",
@@ -1378,6 +1182,216 @@
             },
             content_ar: null,
             content_en: null
+        },
+        {
+            "id": "the-jurisprudence",
+            "title_ar": "فقه اللسان القرآني (إصدار 2025)",
+            "title_en": "Quranic Linguistics (2025 Edition)",
+            "category": "quranic",
+            "links": {
+                "ar": {
+                    "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
+                    "html": "https://drive.google.com/uc?export=download&id=1s3cWON8pBchVWm2JrNO46fxatuRA-1nG",
+                    "pdf": "books/the-jurisprudence/ar/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
+                    "text": "books/the-jurisprudence/ar/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
+                    "archive_text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
+                    "archive_pdf": "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
+                    "cover": "books/the-jurisprudence/ar/cover-ar.png"
+                },
+                "en": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
+                    "html": "https://drive.google.com/uc?export=download&id=1y-OGxX0ACCgjAs4ZqlRfHdxexaX-nWOw",
+                    "pdf": "books/the-jurisprudence/en/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
+                    "text": "books/the-jurisprudence/en/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
+                    "archive_text": "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
+                    "archive_pdf": "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
+                    "cover": "books/the-jurisprudence/en/cover-en.png"
+                }
+            },
+            "cover": {
+                "ar": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
+                "en": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            },
+            content_ar: null,
+            content_en: null
+        },
+        {
+            "id": "editing-the-quranic-terminology-tome1",
+            "title_ar": "تحرير المصطلح القرآني - المجلد الأول (2025)",
+            "title_en": "Quranic Terminology - Volume 1 (2025)",
+            "category": "quranic",
+            "links": {
+                "ar": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
+                    "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
+                    "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
+                    "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
+                    "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
+                    "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+                },
+                "en": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+                    "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
+                    "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
+                    "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
+                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
+                    "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+                }
+            },
+            "cover": {
+                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            },
+            content_ar: null,
+            content_en: null
+        },
+        {
+            "id": "editing-the-quranic-terminology-tome2",
+            "title_ar": "تحرير المصطلح القرآني - المجلد الثاني (2025)",
+            "title_en": "Quranic Terminology - Volume 2 (2025)",
+            "category": "quranic",
+            "links": {
+                "ar": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1zxjbEztgVd5u34ddWIjHSu5DH1-jKkCE",
+                    "html": "https://drive.google.com/uc?export=download&id=15MjoBBy2Unl_5zKVvBo1Mhl33mkHzOfL",
+                    "pdf": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
+                    "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
+                    "archive_text": "https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt",
+                    "archive_pdf": "https://dn721506.ca.archive.org/0/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
+                },
+                "en": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1qVJJHYcRLFxQ1i08iiJ0oj8dL0D_JBu-",
+                    "html": "https://drive.google.com/uc?export=download&id=10w6g6cRBubErISUlkyTpdaAQxFJoT0yO",
+                    "pdf": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1OZjyDOBnxQoeahD1P7D-BCjqbuDnKS53",
+                    "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1ceHbTYwL1eVy_cuSPIZtU10u_IxXW9cU",
+                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google_djvu.txt",
+                    "archive_pdf": "https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+                }
+            },
+            "cover": {
+                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
+                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            },
+            content_ar: null,
+            content_en: null
+        },
+        {
+            "id": "editing-the-quranic-terminology-tome3",
+            "title_ar": "تحرير المصطلح القرآني - المجلد الثالث (2025)",
+            "title_en": "Quranic Terminology - Volume 3 (2025)",
+            "category": "quranic",
+            "links": {
+                "ar": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
+                    "html": "https://drive.google.com/uc?export=download&id=1arQYF-1rAeR8I-llkx2r4TeBUF7Q7Sgq",
+                    "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
+                    "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
+                    "archive_text": "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
+                    "archive_pdf": "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
+                },
+                "en": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
+                    "html": "https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9",
+                    "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K",
+                    "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
+                    "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
+                    "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
+                    "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+                }
+            },
+            "cover": {
+                "ar": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
+                "en": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            },
+            content_ar: null,
+            content_en: null
+        },
+        {
+            "id": "malakoot",
+            "title_ar": "ملكوت السماوات والأرض (رؤية 2025)",
+            "title_en": "Kingdom of Heavens and Earth (2025 Vision)",
+            "category": "faith",
+            "links": {
+                "ar": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
+                    "html": "https://drive.google.com/uc?export=download&id=1Bsr6CrHZCElQgkZAzkMuDo3ICBB3N-VZ",
+                    "pdf": "books/malakoot/ar/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH",
+                    "text": "books/malakoot/ar/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
+                    "archive_text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt",
+                    "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
+                    "cover": "books/malakoot/ar/cover-ar.png"
+                },
+                "en": {
+                    "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
+                    "html": "https://drive.google.com/uc?export=download&id=1GdyQg-pQtDzR74UsilKtuZfs6G2p1kge",
+                    "pdf": "books/malakoot/en/content.pdf",
+                    "pdf_external": "https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N",
+                    "text": "books/malakoot/en/content.txt",
+                    "text_external": "https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg",
+                    "archive_text": "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt",
+                    "archive_pdf": "https://ia801600.us.archive.org/10/items/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM.pdf",
+                    "cover": "books/malakoot/en/cover-en.png"
+                }
+            },
+            "cover": {
+                "ar": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png",
+                "en": "https://nasserhabitat.github.io/nasser-books/books/malakoot/en/cover-en.png"
+            },
+            ai_access: {
+                structured_data: true,
+                api_accessible: true,
+                content_analysis: true,
+                formats: ["html", "pdf", "txt"]
+            },
+            content_ar: null,
+            content_en: null
         }
     ];
 
@@ -1396,7 +1410,7 @@
         });
         
         // إضافة جميع الكتب
-        libraryBooks.forEach(book=> {
+        libraryBooks.forEach(book => {
             const bookCard = createBookCard(book, false);
             bookGrid.appendChild(bookCard);
         });
@@ -1428,7 +1442,7 @@
             <div class="book-cover">
                 ${newBadge}
                 ${aiBadge}
-                <img src="${book.links.ar.cover}" 
+                <img src="${book.cover.ar}" 
                      alt="غلاف ${book.title_ar}"
                      loading="lazy"
                      width="250"
@@ -1444,11 +1458,25 @@
                     <span>📝 TXT</span>
                 </div>
                 <div class="book-actions">
-                    <a href="books/${book.id}/ar/index.html"  class="btn" target="_blank">النسخة العربية</a>
-                    <a href="books/${book.id}/en/index.html"  class="btn btn-outline" target="_blank">English Version</a>
+                    <a href="books/${book.id}/ar/index.html" class="btn" target="_blank">النسخة العربية</a>
+                    <a href="books/${book.id}/en/index.html" class="btn btn-outline" target="_blank">English Version</a>
+                </div>
+                <div class="formats-section">
+                    <h4>الصيغ المتاحة - العربية:</h4>
+                    <a href="${book.links.ar.html}" class="btn btn-small">HTML</a>
+                    <a href="${book.links.ar.pdf_external}" class="btn btn-small">PDF</a>
+                    <a href="${book.links.ar.text_external}" class="btn btn-small">TXT</a>
+                    <a href="${book.links.ar.docx}" class="btn btn-small">DOCX</a>
+                </div>
+                <div class="formats-section">
+                    <h4>Available Formats - English:</h4>
+                    <a href="${book.links.en.html}" class="btn btn-small">HTML</a>
+                    <a href="${book.links.en.pdf_external}" class="btn btn-small">PDF</a>
+                    <a href="${book.links.en.text_external}" class="btn btn-small">TXT</a>
+                    <a href="${book.links.en.docx}" class="btn btn-small">DOCX</a>
                 </div>
                 <div class="ai-access-links">
-                    <a href="${book.links.ar.text}" download target="_blank">تحميل النص الخام</a>
+                    <a href="${book.links.ar.text_external}" download target="_blank">تحميل النص الخام</a>
                     <a href="api/ai-access/metadata/${book.id}.json">بيانات الذكاء الاصطناعي</a>
                 </div>
             </div>
