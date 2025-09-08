@@ -50,6 +50,13 @@
       }
     },
     "metadata": {
+              "category": "faith_studies",
+        "pages_ar": 46,
+        "pages_en": 40,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
       "topics": ["الأخلاق القرآنية", "التدبر القرآني", "الحياء في الإسلام", "فقه اللسان القرآني", "البعد الأخلاقي", "العصر الرقمي"],
       "edition": "الأولى - 2025",
       "key_features": [
