@@ -1406,13 +1406,15 @@
              publishedDate: "2025-09-22T12:00:00Z"
         }
     ];
-let allBooks = [...libraryBooks];
+ let allBooks = [...libraryBooks];
     let bookContent = {};
     const formatsMap = {
         'docx': 'DOCX',
         'html': 'HTML',
         'pdf': 'PDF',
-        'text': 'TEXT'
+        'text': 'TEXT',
+        'pdf_external': 'External PDF',
+        'text_external': 'External TEXT'
     };
     const langMap = {
         'ar': {
@@ -1447,8 +1449,8 @@ let allBooks = [...libraryBooks];
             linksHtml += `<div class="formats-section"><h4>${langMap[lang].formats_title}</h4>`;
             linksHtml += `<div class="book-actions">`;
             for (const key in links) {
-                if (links.hasOwnProperty(key) && formatsMap[key]) {
-                    linksHtml += `<a href="${links[key]}" class="btn btn-small" download>${formatsMap[key]}</a>`;
+                if (links.hasOwnProperty(key) && formatsMap[key] && key !== 'cover') {
+                    linksHtml += `<a href="${links[key]}" class="btn btn-small" download>${formatsMap[key] || key.toUpperCase()}</a>`;
                 }
             }
             linksHtml += `</div></div>`;
