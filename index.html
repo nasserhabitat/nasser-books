@@ -7,7 +7,6 @@
     <title>مكتبة ناصر ابن داوود - منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</title>
     <meta name="description" content="مكتبة رقمية شاملة لمؤلفات الباحث الإسلامي ناصر ابن داوود في علوم القرآن والتدبر، متوافقة مع الذكاء الاصطناعي">
     
-    <!-- بيانات منظمة للذكاء الاصطناعي -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -32,7 +31,6 @@
     }
     </script>
     
-    <!-- إمكانية الوصول للذكاء الاصطناعي -->
     <meta name="AI-Accessible" content="true">
     <meta name="Book-Library" content="true">
     <meta name="Content-Type" content="text/html; charset=UTF-8">
@@ -247,6 +245,7 @@
         .book-cover {
             position: relative;
             flex-shrink: 0;
+            background-color: #f0f0f0; /* Added background for better contain effect */
         }
         
         .books-grid .book-cover {
@@ -262,9 +261,8 @@
         .book-cover img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* FIXED: Changed from 'cover' to 'contain' */
             display: block;
-            border-bottom: 1px solid #eee;
         }
         
         .ai-badge {
@@ -893,7 +891,6 @@
     </style>
 </head>
 <body>
-    <!-- شريط التحديثات -->
     <div class="update-banner">
         🤖 منصة متوافقة مع الذكاء الاصطناعي - آخر تحديث: <span id="last-update"></span>
     </div>
@@ -903,14 +900,12 @@
             <h1>مكتبة ناصر ابن داوود</h1>
             <p class="subtitle">منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</p>
             
-            <!-- إحصائيات المكتبة -->
             <div class="library-stats">
                 <span>📚 24 كتاب</span> | 
                 <span>🌐 نسختان linguistically</span> | 
                 <span>🤖 متوافق مع الذكاء الاصطناعي</span>
             </div>
             
-            <!-- شريط البحث المحسن -->
             <div class="search-container">
                 <input type="text" id="book-search" placeholder="ابحث في المكتبة (نص، مفاهيم، آيات...)" 
                        aria-label="بحث الكتب" class="search-input">
@@ -922,7 +917,6 @@
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
             
-            <!-- وصول سريع للذكاء الاصطناعي -->
             <div class="ai-access">
                 <h3>وصول الذكاء الاصطناعي:</h3>
                 <div class="ai-links">
@@ -935,7 +929,6 @@
     </header>
 
     <main class="container">
-        <!-- قسم الكتب الجديدة - مصحح -->
         <div class="new-books-section">
             <div class="section-header">
                 <div>
@@ -946,13 +939,12 @@
                     <div class="month-indicator">شهر أغسطس 2025</div>
                 </div>
                 <div class="new-filter-buttons">
-                    <button class="active" data-filter="all">الكل</button>
-                    <button data-filter="ar">العربية</button>
+                    <button data-filter="all">الكل</button>
+                    <button class="active" data-filter="ar">العربية</button>
                     <button data-filter="en">English</button>
                 </div>
             </div>
             
-            <!-- خيارات العرض للكتب الجديدة -->
             <div class="view-options">
                 <button class="view-btn active" id="gridViewNew">
                     <i class="fas fa-th"></i>
@@ -963,18 +955,15 @@
             </div>
             
             <div class="books-grid" id="new-book-grid">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
             
             <div class="books-list" id="new-book-list" style="display: none;">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
         </div>
 
         <section class="books-section">
             <h2 class="section-title">المكتبة الرقمية المتوافقة مع الذكاء الاصطناعي</h2>
             
-            <!-- خيارات العرض -->
             <div class="view-options">
                 <button class="view-btn active" id="gridView">
                     <i class="fas fa-th"></i>
@@ -984,7 +973,6 @@
                 </button>
             </div>
             
-            <!-- فلاتر متقدمة -->
             <div class="advanced-filters">
                 <div class="filter-group">
                     <label>نوع المحتوى:</label>
@@ -1007,17 +995,13 @@
                 </div>
             </div>
             
-            <!-- قائمة الكتب مع بيانات إضافية للذكاء الاصطناعي -->
             <div class="books-grid" id="book-grid">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
             
             <div class="books-list" id="book-list" style="display: none;">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
         </section>
         
-        <!-- قسم واجهات برمجة التطبيقات للذكاء الاصطناعي -->
         <section class="api-section">
             <h2 class="section-title">واجهات برمجة التطبيقات (APIs) للذكاء الاصطناعي</h2>
             
@@ -1045,18 +1029,15 @@
             </div>
         </section>
         
-        <!-- قسم نتائج البحث -->
         <div id="search-results-container" style="display: none; margin-top: 2rem; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
             <h3 id="search-results-title" style="color: var(--primary-color); margin-bottom: 1.5rem;"></h3>
             <div id="search-results-content"></div>
         </div>
-        <!-- رسالة معلومات البحث -->
         <div class="search-info" id="search-info">
             تبحث عن: <strong id="search-term-display"></strong> | 
             عدد النتائج: <strong id="search-results-count">0</strong>
         </div>
         
-        <!-- رسالة عدم وجود نتائج -->
         <div class="no-results" id="no-results">
             لم يتم العثور على كتب تطابق بحثك. حاول استخدام مصطلحات أخرى.
         </div>
@@ -1655,8 +1636,11 @@
              publishedDate: "2025-09-22T12:00:00Z"
         }
     ];
- let allBooks = [...libraryBooks];
+    let allBooks = [...libraryBooks];
     let bookContent = {};
+    // FIXED: Global state for the current language
+    let currentLang = 'ar'; 
+
     const formatsMap = {
         'docx': 'DOCX',
         'html': 'HTML',
@@ -1684,10 +1668,6 @@
         }
     };
 
-    function getLang() {
-        return document.documentElement.lang || 'ar';
-    }
-
     function updateLastUpdateTime() {
         const lastUpdateSpan = document.getElementById('last-update');
         const now = new Date();
@@ -1711,8 +1691,8 @@
         return linksHtml;
     }
 
-    function createBookCard(book, viewType = 'grid') {
-        const lang = getLang();
+    // FIXED: Function now accepts language as a parameter
+    function createBookCard(book, lang, viewType = 'grid') {
         const card = document.createElement('div');
         card.className = 'book-card';
         card.setAttribute('data-category', book.category);
@@ -1721,10 +1701,9 @@
 
         const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
         const bookTitle = book[`title_${lang}`] || book.title_ar;
-        const bookCover = book.cover[lang] || book.cover.ar;
+        const bookCover = (book.cover && book.cover[lang]) ? book.cover[lang] : (book.cover ? book.cover.ar : '');
         const bookDesc = book[`description_${lang}`] || langMap[lang].no_desc;
         
-        // التحقق من وجود روابط الصفحات
         const hasPageLink = book.links.page && book.links.page[lang];
         const pageLinkHtml = hasPageLink ? `<a href="${book.links.page[lang]}" class="btn btn-small">${langMap[lang].more_link_label}</a>` : '';
 
@@ -1752,36 +1731,50 @@
 
         return card;
     }
-
-    function loadBooks() {
+    
+    // FIXED: Central function to render all books based on current filters and language
+    function displayBooks() {
         const bookGrid = document.getElementById('book-grid');
         const bookList = document.getElementById('book-list');
         const newBookGrid = document.getElementById('new-book-grid');
         const newBookList = document.getElementById('new-book-list');
 
+        // Clear all containers
         bookGrid.innerHTML = '';
         bookList.innerHTML = '';
-        if (newBookGrid) {
-            newBookGrid.innerHTML = '';
-        }
-        if (newBookList) {
-            newBookList.innerHTML = '';
-        }
+        newBookGrid.innerHTML = '';
+        newBookList.innerHTML = '';
+
+        const contentTypeValue = document.getElementById('content-type').value;
+        const aiCompatibilityValue = document.getElementById('ai-compatibility').value;
 
         allBooks.forEach(book => {
-            const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-            const gridCard = createBookCard(book, 'grid');
-            const listCard = createBookCard(book, 'list');
+            // Apply advanced filters
+            const contentMatch = contentTypeValue === 'all' || book.category === contentTypeValue;
+            const aiAccess = book.ai_access;
+            const aiMatch = aiCompatibilityValue === 'all' || 
+                         (aiCompatibilityValue === 'structured' && aiAccess.structured_data) ||
+                         (aiCompatibilityValue === 'api' && aiAccess.api_accessible) ||
+                         (aiCompatibilityValue === 'analysis' && aiAccess.content_analysis);
 
-            if (isNew && newBookGrid && newBookList) {
-                newBookGrid.appendChild(gridCard);
-                newBookList.appendChild(listCard);
-            } else {
-                bookGrid.appendChild(gridCard);
-                bookList.appendChild(listCard);
+            if (contentMatch && aiMatch) {
+                const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+                
+                // Create cards with the current language
+                const gridCard = createBookCard(book, currentLang, 'grid');
+                const listCard = createBookCard(book, currentLang, 'list');
+
+                if (isNew) {
+                    newBookGrid.appendChild(gridCard);
+                    newBookList.appendChild(listCard.cloneNode(true)); // Use cloneNode for list view
+                } else {
+                    bookGrid.appendChild(gridCard);
+                    bookList.appendChild(listCard.cloneNode(true));
+                }
             }
         });
     }
+
 
     async function preloadBookContents() {
         const promises = allBooks.map(async (book) => {
@@ -1790,7 +1783,6 @@
                     const response = await fetch(book.links.ar.text);
                     const content = await response.text();
                     bookContent[book.id] = content;
-                    console.log(`Loaded content for: ${book.title_ar}`);
                 } catch (error) {
                     console.error(`Failed to load content for ${book.title_ar}:`, error);
                 }
@@ -1801,22 +1793,17 @@
 
     function searchBooks(searchTerm) {
         const resultsContainer = document.getElementById('search-results-content');
-        resultsContainer.innerHTML = '';
         const searchInfo = document.getElementById('search-info');
         const noResults = document.getElementById('no-results');
-        const bookGrid = document.getElementById('book-grid');
-        const bookList = document.getElementById('book-list');
-        const newBookGrid = document.getElementById('new-book-grid');
-        const newBookList = document.getElementById('new-book-list');
+        const allBookSections = document.querySelectorAll('.books-section, .new-books-section');
 
         if (searchTerm.length > 2) {
-            bookGrid.style.display = 'none';
-            bookList.style.display = 'none';
-            if (newBookGrid) newBookGrid.style.display = 'none';
-            if (newBookList) newBookList.style.display = 'none';
+            allBookSections.forEach(sec => sec.style.display = 'none');
             document.getElementById('search-results-container').style.display = 'block';
             searchInfo.style.display = 'block';
             noResults.style.display = 'none';
+            resultsContainer.innerHTML = '';
+
 
             let count = 0;
             const searchTermLower = searchTerm.toLowerCase();
@@ -1844,7 +1831,7 @@
 
                 if (found) {
                     count++;
-                    const resultCard = createBookCard(book);
+                    const resultCard = createBookCard(book, currentLang); // Use current language
                     if (snippet) {
                         resultCard.querySelector('.search-snippet').innerHTML = `<strong>مقتطف من المحتوى:</strong><br>${snippet}`;
                         resultCard.querySelector('.search-snippet').style.display = 'block';
@@ -1865,10 +1852,8 @@
             document.getElementById('search-results-container').style.display = 'none';
             searchInfo.style.display = 'none';
             noResults.style.display = 'none';
-            bookGrid.style.display = 'grid';
-            bookList.style.display = 'none';
-            if (newBookGrid) newBookGrid.style.display = 'grid';
-            if (newBookList) newBookList.style.display = 'none';
+            allBookSections.forEach(sec => sec.style.display = 'block');
+            displayBooks(); // Re-render books when search is cleared
         }
     }
 
@@ -1879,60 +1864,45 @@
         searchBtn.addEventListener('click', () => searchBooks(searchInput.value));
     }
 
-    function setupFilterButtons() {
-        const filterButtons = document.querySelectorAll('.filter-buttons button');
+    // FIXED: Function to handle language filter buttons
+    function setupNewBooksFilter() {
+        const filterButtons = document.querySelectorAll('.new-filter-buttons button');
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
+                
                 const filter = button.dataset.filter;
-                applyFilters(filter);
+                if (filter === 'ar' || filter === 'en') {
+                    currentLang = filter;
+                } else {
+                    // 'all' defaults to Arabic or your preferred default
+                    currentLang = 'ar'; 
+                }
+                
+                // Update HTML tag for direction and lang attributes
+                if (currentLang === 'ar') {
+                    document.documentElement.lang = 'ar';
+                    document.documentElement.dir = 'rtl';
+                } else {
+                    document.documentElement.lang = 'en';
+                    document.documentElement.dir = 'ltr';
+                }
+
+                displayBooks(); // Re-render all books with the new language
             });
         });
-    }
-
-    function applyFilters(filter) {
-        document.querySelectorAll('.book-card').forEach(card => {
-            const category = card.getAttribute('data-category');
-            if (filter === 'all' || category === filter) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-
-    function setupNewBooksFilter() {
     }
 
     function setupAdvancedFilters() {
         const contentType = document.getElementById('content-type');
         const aiCompatibility = document.getElementById('ai-compatibility');
         
-        const applyFilters = () => {
-            const contentValue = contentType.value;
-            const aiValue = aiCompatibility.value;
-            
-            document.querySelectorAll('.book-card').forEach(card => {
-                const category = card.getAttribute('data-category');
-                const aiAccess = JSON.parse(card.getAttribute('data-ai-access'));
-                
-                let contentMatch = contentValue === 'all' || category === contentValue;
-                let aiMatch = aiValue === 'all' || 
-                             (aiValue === 'structured' && aiAccess.structured_data) ||
-                             (aiValue === 'api' && aiAccess.api_accessible) ||
-                             (aiValue === 'analysis' && aiAccess.content_analysis);
-                
-                card.style.display = contentMatch && aiMatch ? 'block' : 'none';
-            });
-        };
-        
-        contentType.addEventListener('change', applyFilters);
-        aiCompatibility.addEventListener('change', applyFilters);
+        contentType.addEventListener('change', displayBooks);
+        aiCompatibility.addEventListener('change', displayBooks);
     }
     
     function setupViewOptions() {
-        // العرض العادي
         const gridView = document.getElementById('gridView');
         const listView = document.getElementById('listView');
         
@@ -1952,7 +1922,6 @@
             });
         }
         
-        // عرض الكتب الجديدة
         const gridViewNew = document.getElementById('gridViewNew');
         const listViewNew = document.getElementById('listViewNew');
         
@@ -1975,10 +1944,9 @@
     
     document.addEventListener('DOMContentLoaded', async function() {
         updateLastUpdateTime();
-        loadBooks();
+        displayBooks(); // Initial render
         await preloadBookContents();
         setupSearch();
-        setupFilterButtons();
         setupNewBooksFilter();
         setupAdvancedFilters();
         setupViewOptions();
