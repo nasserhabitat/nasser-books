@@ -553,7 +553,7 @@ body {
         font-size: 1rem;
     }
     
-    .book-grid {
+   .book-grid {
         grid-template-columns: 1fr;
     }
     
