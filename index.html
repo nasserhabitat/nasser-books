@@ -1314,7 +1314,7 @@
         await Promise.all(libraryBooks.map(async (book) => {
             if (book.content_ar === null) {
                 try {
-                    const responseAr = await fetch(book.links.ar.text);
+                    const responseAr = await fetch(book.links.ar.text_external);
                     book.content_ar = await responseAr.text();
                 } catch (error) {
                     book.content_ar = '';
@@ -1323,7 +1323,7 @@
             }
             if (book.content_en === null) {
                 try {
-                    const responseEn = await fetch(book.links.en.text);
+                    const responseEn = await fetch(book.links.en.text_external);
                     book.content_en = await responseEn.text();
                 } catch (error) {
                     book.content_en = '';
