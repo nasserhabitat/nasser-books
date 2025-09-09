@@ -885,8 +885,7 @@
         </div>
     </footer>
 
-    
-<script>
+  <script>
     // بيانات الكتب لهيكل الذكاء الاصطناعي
     const libraryBooks = [
         {
@@ -922,14 +921,14 @@
                 "ar": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png",
                 "en": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/cover-en.png"
             },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
+            "ai_access": {
+                "structured_data": true,
+                "api_accessible": true,
+                "content_analysis": true,
+                "formats": ["html", "pdf", "txt"]
             },
-            content_ar: null,
-            content_en: null
+            "content_ar": null,
+            "content_en": null
         },
         {
             "id": "anwar-al-bayan",
@@ -964,16 +963,16 @@
                 "ar": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png",
                 "en": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/cover-en.png"
             },
-            ai_access: {
-                structured_data: true,
-                api_accessible: true,
-                content_analysis: true,
-                formats: ["html", "pdf", "txt"]
+            "ai_access": {
+                "structured_data": true,
+                "api_accessible": true,
+                "content_analysis": true,
+                "formats": ["html", "pdf", "txt"]
             },
-            content_ar: null,
-            content_en: null
+            "content_ar": null,
+            "content_en": null
         },
-        {
+{
             "id": "changing-the-concepts",
             "title_ar": "تغيير المفاهيم القرآنية (إصدار 2025)",
             "title_en": "Changing Quranic Concepts (2025 Edition)",
@@ -1394,441 +1393,186 @@
             content_en: null
         }
     ];
+let allBooks = [...libraryBooks]; // نسخة من البيانات
+    let bookContent = {}; // كائن لتخزين المحتوى المُحمّل
 
-    // دالة لتحميل وعرض الكتب
-    function loadBooks() {
-        const bookGrid = document.getElementById('book-grid');
-        const newBookGrid = document.getElementById('new-book-grid');
-        bookGrid.innerHTML = '';
-        newBookGrid.innerHTML = '';
-        
-        // إضافة الكتب الجديدة أولاً
-        const newBooks = libraryBooks.slice(0, 6); // أول 6 كتب ككتب جديدة
-        newBooks.forEach(book => {
-            const bookCard = createBookCard(book, true);
-            newBookGrid.appendChild(bookCard);
-        });
-        
-        // إضافة جميع الكتب
-        libraryBooks.forEach(book => {
-            const bookCard = createBookCard(book, false);
-            bookGrid.appendChild(bookCard);
-        });
+    // دالة لتحديث تاريخ آخر تحديث
+    function updateLastUpdateTime() {
+        const lastUpdateSpan = document.getElementById('last-update');
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        lastUpdateSpan.textContent = now.toLocaleDateString('ar-EG', options);
     }
-    
-    // دالة لإنشاء بطاقة كتاب
-    function createBookCard(book, isNew, query = '') {
-        const bookCard = document.createElement('div');
-        bookCard.className = 'book-card';
-        bookCard.setAttribute('data-lang', 'ar');
-        bookCard.setAttribute('data-category', book.category);
-        bookCard.setAttribute('data-ai-access', JSON.stringify(book.ai_access));
-        bookCard.id = `book-${book.id}-ar`;
-        
-        const newBadge = isNew ? '<span class="new-badge-card">جديد</span>' : '';
-        const aiBadge = '<span class="ai-badge">🤖 متوافق مع الذكاء الاصطناعي</span>';
 
-        let snippet = '';
-        if (query) {
-            const snippetAr = getSnippet(book.content_ar, query);
-            const snippetEn = getSnippet(book.content_en, query);
-            snippet = snippetAr || snippetEn;
-            if (snippet) {
-                snippet = `<p class="search-snippet">${snippet}</p>`;
-            }
-        }
-        
-        bookCard.innerHTML = `
+    // دالة لإنشاء بطاقة كتاب
+    function createBookCard(book) {
+        const card = document.createElement('div');
+        card.className = 'book-card';
+        card.setAttribute('data-category', book.category);
+        card.setAttribute('data-ai-access', JSON.stringify(book.ai_access));
+
+        const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000); // مثال بسيط
+
+        card.innerHTML = `
+            ${isNew ? '<span class="new-badge-card">جديد</span>' : ''}
             <div class="book-cover">
-                ${newBadge}
-                ${aiBadge}
-                <img src="${book.cover.ar}" 
-                     alt="غلاف ${book.title_ar}"
-                     loading="lazy"
-                     width="250"
-                     height="200">
+                <img src="${book.cover.ar}" alt="غلاف كتاب ${book.title_ar}">
+                <span class="ai-badge">AI Ready</span>
             </div>
             <div class="book-info">
                 <h2>${book.title_ar}</h2>
-                <p class="book-meta">تأليف: ناصر ابن داوود</p>
-                <p class="book-desc">${getBookDescription(book.id)}${snippet}</p>
+                <div class="book-meta">
+                    <span>${book.author}</span> |
+                    <span>${book.pages} صفحة</span>
+                </div>
+                <p class="book-desc">${book.description}</p>
+                <div class="search-snippet" style="display:none;"></div>
                 <div class="book-formats">
-                    <span>📖 HTML</span>
-                    <span>📄 PDF</span>
-                    <span>📝 TXT</span>
+                    ${book.ai_access.formats.map(format => `<span>${format.toUpperCase()}</span>`).join('')}
                 </div>
                 <div class="book-actions">
-                    <a href="books/${book.id}/ar/index.html" class="btn" target="_blank">النسخة العربية</a>
-                    <a href="books/${book.id}/en/index.html" class="btn btn-outline" target="_blank">English Version</a>
-                </div>
-                <div class="formats-section">
-                    <h4>الصيغ المتاحة - العربية:</h4>
-                    <a href="${book.links.ar.html}" class="btn btn-small">HTML</a>
-                    <a href="${book.links.ar.pdf_external}" class="btn btn-small">PDF</a>
-                    <a href="${book.links.ar.text_external}" class="btn btn-small">TXT</a>
-                    <a href="${book.links.ar.docx}" class="btn btn-small">DOCX</a>
-                </div>
-                <div class="formats-section">
-                    <h4>Available Formats - English:</h4>
-                    <a href="${book.links.en.html}" class="btn btn-small">HTML</a>
-                    <a href="${book.links.en.pdf_external}" class="btn btn-small">PDF</a>
-                    <a href="${book.links.en.text_external}" class="btn btn-small">TXT</a>
-                    <a href="${book.links.en.docx}" class="btn btn-small">DOCX</a>
-                </div>
-                <div class="ai-access-links">
-                    <a href="${book.links.ar.text_external}" download target="_blank">تحميل النص الخام</a>
-                    <a href="api/ai-access/metadata/${book.id}.json">بيانات الذكاء الاصطناعي</a>
+                    <a href="${book.links.ar.pdf}" class="btn" download>تحميل PDF</a>
+                    <a href="#" class="btn btn-outline" data-id="${book.id}">اقرأ المزيد</a>
                 </div>
             </div>
         `;
-        
-        return bookCard;
+
+        return card;
     }
-    
-    // دالة للحصول على وصف الكتاب
-    function getBookDescription(bookId) {
-        const descriptions = {
-            "conscious-contemplation": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
-            "anwar-al-bayan": "دراسة علمية للرسم العثماني وأسراره اللغوية",
-            "changing-the-concepts": "دراسة تطبيقية لفقه اللسان القرآني",
-            "editing-the-quranic-terminology-tome1": "دراسة تطبيقية في فقه اللسان القرآني",
-            "editing-the-quranic-terminology-tome2": "دراسة تطبيقية في فقه اللسان القرآني",
-            "editing-the-quranic-terminology-tome3": "دراسة تطبيقية في فقه اللسان القرآني",
-            "contemplation-in-the-mirror": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن",
-            "the-jurisprudence": "منهجٌ جديد لفهم النص والمخطوط",
-            "digitizing": "دراسة منهجية لحفظ النص القرآني رقمياً",
-            "modesty": "دراسة في مفهوم الحياء في الإسلام وتطبيقاته",
-            "malakoot": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما - دراسة كونية قرآنية شاملة",
-            "names-in-the-holy": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي"
-        };
-        
-        return descriptions[bookId] || "مؤلف قيم في علوم القرآن واللغة";
+
+    // دالة لتحميل الكتب
+    function loadBooks() {
+        const bookGrid = document.getElementById('book-grid');
+        allBooks.forEach(book => {
+            bookGrid.appendChild(createBookCard(book));
+        });
     }
-    
-    // تحديث وقت التحديث الأخير
-    function updateLastUpdateTime() {
-        const now = new Date();
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-        };
-        document.getElementById('last-update').textContent = now.toLocaleDateString('ar-SA', options);
-    }
-    
-    // دالة لتحميل المحتويات مسبقًا
+
+    // دالة لتحميل محتوى الكتب بشكل مسبق
     async function preloadBookContents() {
-        await Promise.all(libraryBooks.map(async (book) => {
-            if (book.content_ar === null) {
+        const promises = allBooks.map(async (book) => {
+            if (book.links.ar && book.links.ar.text) {
                 try {
-                    const responseAr = await fetch(book.links.ar.text);
-                    book.content_ar = await responseAr.text();
+                    const response = await fetch(book.links.ar.text);
+                    const content = await response.text();
+                    bookContent[book.id] = content;
+                    console.log(`Loaded content for: ${book.title_ar}`);
                 } catch (error) {
-                    book.content_ar = '';
-                    console.error(`Error loading Arabic content for ${book.id}:`, error);
+                    console.error(`Failed to load content for ${book.title_ar}:`, error);
                 }
             }
-            if (book.content_en === null) {
-                try {
-                    const responseEn = await fetch(book.links.en.text);
-                    book.content_en = await responseEn.text();
-                } catch (error) {
-                    book.content_en = '';
-                    console.error(`Error loading English content for ${book.id}:`, error);
-                }
-            }
-        }));
+        });
+        await Promise.all(promises);
     }
-    
-    // إعداد البحث
-    function setupSearch() {
-        const searchInput = document.getElementById('book-search');
-        const searchSuggestions = document.getElementById('search-suggestions');
+
+    // دالة للبحث في المحتوى
+    function searchBooks(searchTerm) {
+        const resultsContainer = document.getElementById('search-results-content');
+        resultsContainer.innerHTML = '';
         const searchInfo = document.getElementById('search-info');
-        const searchTermDisplay = document.getElementById('search-term-display');
-        const searchResultsCount = document.getElementById('search-results-count');
         const noResults = document.getElementById('no-results');
         const bookGrid = document.getElementById('book-grid');
         const newBookGrid = document.getElementById('new-book-grid');
-        
-        let searchTimeout;
-        
-        searchInput.addEventListener('input', function() {
-            clearTimeout(searchTimeout);
-            const query = this.value.trim();
-            
-            if (query.length < 2) {
-                searchSuggestions.style.display = 'none';
-                return;
-            }
-            
-            searchTimeout = setTimeout(async () => {
-                // البحث عن الكتب المتطابقة
-                const results = await searchBooks(query);
-                
-                // عرض الاقتراحات
-                displaySuggestions(results, query);
-            }, 300);
-        });
-        
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch(this.value.trim());
-            }
-        });
-        
-        // البحث عند النقر على زر البحث
-        document.querySelector('.search-btn').addEventListener('click', function() {
-            performSearch(searchInput.value.trim());
-        });
-        
-        async function searchBooks(query) {
-            const matchingBooks = [];
-            const escapedQuery = escapeRegExp(query);
-            const regex = new RegExp(escapedQuery, 'i');
-            for (let book of libraryBooks) {
-                const titleMatchAr = regex.test(book.title_ar);
-                const titleMatchEn = regex.test(book.title_en);
-                const descMatch = regex.test(getBookDescription(book.id));
-                
-                // جلب المحتوى إذا لم يكن محملًا بعد (رغم الفهرسة المسبقة)
-                if (book.content_ar === null) {
-                    try {
-                        const responseAr = await fetch(book.links.ar.text);
-                        book.content_ar = await responseAr.text();
-                    } catch (error) {
-                        book.content_ar = '';
-                    }
-                }
-                if (book.content_en === null) {
-                    try {
-                        const responseEn = await fetch(book.links.en.text);
-                        book.content_en = await responseEn.text();
-                    } catch (error) {
-                        book.content_en = '';
-                    }
-                }
-                
-                const contentMatchAr = regex.test(book.content_ar);
-                const contentMatchEn = regex.test(book.content_en);
-                
-                if (titleMatchAr || titleMatchEn || descMatch || contentMatchAr || contentMatchEn) {
-                    matchingBooks.push(book);
-                }
-            }
-            return matchingBooks;
-        }
-        
-        function displaySuggestions(results, query) {
-            searchSuggestions.innerHTML = '';
-            
-            if (results.length === 0) {
-                searchSuggestions.style.display = 'none';
-                return;
-            }
-            
-            results.slice(0, 5).forEach(book => {
-                const suggestionItem = document.createElement('div');
-                suggestionItem.className = 'suggestion-item';
-                
-                const titleAr = highlightText(book.title_ar, query);
-                const titleEn = highlightText(book.title_en, query);
-                
-                suggestionItem.innerHTML = `
-                    <div class="suggestion-title">${titleAr} | ${titleEn}</div>
-                    <div class="suggestion-author">ناصر ابن داوود</div>
-                `;
-                
-                suggestionItem.addEventListener('click', function() {
-                    searchInput.value = book.title_ar;
-                    searchSuggestions.style.display = 'none';
-                    performSearch(book.title_ar);
-                });
-                
-                searchSuggestions.appendChild(suggestionItem);
-            });
-            
-            searchSuggestions.style.display = 'block';
-        }
-        
-        async function performSearch(query) {
-            if (query.length < 2) {
-                resetSearch();
-                return;
-            }
-            
-            const results = await searchBooks(query);
-            
-            // تحديث معلومات البحث
-            searchTermDisplay.textContent = query;
-            searchResultsCount.textContent = results.length;
-            searchInfo.style.display = 'block';
-            
-            // إخفاء النتائج إذا لم توجد نتائج
-            if (results.length === 0) {
-                noResults.style.display = 'block';
-                bookGrid.style.display = 'none';
-                newBookGrid.style.display = 'none';
-                return;
-            }
-            
-            noResults.style.display = 'none';
-            
-            // عرض نتائج البحث
-            displaySearchResults(results, query);
-        }
-        
-        function displaySearchResults(results, query) {
-            const resultsContainer = document.getElementById('search-results-container');
-            const resultsTitle = document.getElementById('search-results-title');
-            const resultsContent = document.getElementById('search-results-content');
-            
-            resultsTitle.textContent = `نتائج البحث عن: "${query}"`;
-            resultsContent.innerHTML = '';
-            
-            results.forEach(book => {
-                const bookCard = createBookCard(book, false, query);
-                // إبراز النص المطلوب في العنوان والوصف
-                highlightSearchTerms(bookCard, query);
-                resultsContent.appendChild(bookCard);
-            });
-            
-            resultsContainer.style.display = 'block';
+
+        if (searchTerm.length > 2) {
             bookGrid.style.display = 'none';
             newBookGrid.style.display = 'none';
-        }
-        
-        function highlightSearchTerms(element, query) {
-            const title = element.querySelector('h2');
-            const desc = element.querySelector('.book-desc');
-            
-            if (title) {
-                title.innerHTML = highlightText(title.textContent, query);
+            document.getElementById('search-results-container').style.display = 'block';
+            searchInfo.style.display = 'block';
+            noResults.style.display = 'none';
+
+            let count = 0;
+            const searchTermLower = searchTerm.toLowerCase();
+
+            allBooks.forEach(book => {
+                let found = false;
+                let snippet = '';
+
+                // البحث في العنوان
+                if (book.title_ar.toLowerCase().includes(searchTermLower) || (book.title_en && book.title_en.toLowerCase().includes(searchTermLower))) {
+                    found = true;
+                }
+
+                // البحث في المحتوى المحمّل
+                if (!found && bookContent[book.id]) {
+                    const content = bookContent[book.id];
+                    const index = content.toLowerCase().indexOf(searchTermLower);
+                    if (index !== -1) {
+                        found = true;
+                        // استخراج مقتطف من المحتوى
+                        const start = Math.max(0, index - 100);
+                        const end = Math.min(content.length, index + searchTerm.length + 100);
+                        let rawSnippet = content.substring(start, end);
+                        rawSnippet = rawSnippet.replace(new RegExp(searchTerm, 'gi'), `<span class="highlight">${searchTerm}</span>`);
+                        snippet = `...${rawSnippet}...`;
+                    }
+                }
+
+                if (found) {
+                    count++;
+                    const resultCard = createBookCard(book);
+                    if (snippet) {
+                        resultCard.querySelector('.search-snippet').innerHTML = `<strong>مقتطف من المحتوى:</strong><br>${snippet}`;
+                        resultCard.querySelector('.search-snippet').style.display = 'block';
+                    }
+                    resultsContainer.appendChild(resultCard);
+                }
+            });
+
+            document.getElementById('search-term-display').textContent = searchTerm;
+            document.getElementById('search-results-count').textContent = count;
+            document.getElementById('search-results-title').textContent = `نتائج البحث عن "${searchTerm}"`;
+
+            if (count === 0) {
+                noResults.style.display = 'block';
             }
-            
-            if (desc) {
-                desc.innerHTML = highlightText(desc.innerHTML, query);
-            }
-        }
-        
-        function highlightText(text, query) {
-            if (!query) return text;
-            
-            const escapedQuery = escapeRegExp(query);
-            const regex = new RegExp(`(${escapedQuery})`, 'gi');
-            return text.replace(regex, '<span class="highlight">$1</span>');
-        }
-        
-        function getSnippet(content, query) {
-            if (!content) return '';
-            
-            const lowerContent = content.toLowerCase();
-            const lowerQuery = query.toLowerCase();
-            const index = lowerContent.indexOf(lowerQuery);
-            
-            if (index === -1) return '';
-            
-            const start = Math.max(0, index - 50);
-            const end = Math.min(content.length, index + query.length + 50);
-            const snippet = '...' + content.substring(start, end) + '...';
-            
-            return highlightText(snippet, query);
-        }
-        
-        function escapeRegExp(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
-        
-        function resetSearch() {
+
+        } else {
+            document.getElementById('search-results-container').style.display = 'none';
             searchInfo.style.display = 'none';
             noResults.style.display = 'none';
-            document.getElementById('search-results-container').style.display = 'none';
             bookGrid.style.display = 'grid';
             newBookGrid.style.display = 'grid';
         }
-        
-        // إغلاق الاقتراحات عند النقر خارجها
-        document.addEventListener('click', function(e) {
-            if (!searchSuggestions.contains(e.target) && e.target !== searchInput) {
-                searchSuggestions.style.display = 'none';
-            }
-        });
     }
-    
-    // إعداد أزرار الفلترة
+
+    // دالة لتهيئة البحث
+    function setupSearch() {
+        const searchInput = document.getElementById('book-search');
+        const searchBtn = document.querySelector('.search-btn');
+        searchInput.addEventListener('input', (event) => searchBooks(event.target.value));
+        searchBtn.addEventListener('click', () => searchBooks(searchInput.value));
+    }
+
+    // تهيئة الفلاتر
     function setupFilterButtons() {
         const filterButtons = document.querySelectorAll('.filter-buttons button');
-        
         filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // إزالة النشاط من جميع الأزرار
+            button.addEventListener('click', () => {
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // إضافة النشاط للزر المحدد
-                this.classList.add('active');
-                
-                const filterValue = this.getAttribute('data-filter');
-                filterBooks(filterValue);
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                applyFilters(filter);
             });
         });
     }
-    
-    function filterBooks(filter) {
-        const books = document.querySelectorAll('.book-card');
-        
-        books.forEach(book => {
-            if (filter === 'all') {
-                book.style.display = 'block';
+
+    function applyFilters(filter) {
+        document.querySelectorAll('.book-card').forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+                card.style.display = 'block';
             } else {
-                const bookLang = book.getAttribute('data-lang');
-                if (bookLang === filter) {
-                    book.style.display = 'block';
-                } else {
-                    book.style.display = 'none';
-                }
+                card.style.display = 'none';
             }
         });
     }
-    
-    // إعداد الفلاتر للكتب الجديدة
+
     function setupNewBooksFilter() {
-        const newFilterButtons = document.querySelectorAll('.new-filter-buttons button');
-        
-        newFilterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // إزالة النشاط من جميع الأزرار
-                newFilterButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // إضافة النشاط للزر المحدد
-                this.classList.add('active');
-                
-                const filterValue = this.getAttribute('data-filter');
-                filterNewBooks(filterValue);
-            });
-        });
+        // يمكن إضافة منطق فلترة هنا إذا لزم الأمر
     }
-    
-    function filterNewBooks(filter) {
-        const newBooks = document.querySelectorAll('#new-book-grid .book-card');
-        
-        newBooks.forEach(book => {
-            if (filter === 'all') {
-                book.style.display = 'block';
-            } else {
-                const bookLang = book.getAttribute('data-lang');
-                if (bookLang === filter) {
-                    book.style.display = 'block';
-                } else {
-                    book.style.display = 'none';
-                }
-            }
-        });
-    }
-    
-    // إعداد الفلاتر المتقدمة
+
+    // تهيئة الفلاتر المتقدمة
     function setupAdvancedFilters() {
         const contentType = document.getElementById('content-type');
         const aiCompatibility = document.getElementById('ai-compatibility');
@@ -1871,5 +1615,7 @@
         }, 3600000);
     });
 </script>
+  
+
 </body>
 </html>
