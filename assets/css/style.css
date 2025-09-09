@@ -543,6 +543,12 @@ body {
     border-radius: 5px;
     font-family: 'Tajawal', sans-serif;
 }
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
 
 @media (max-width: 768px) {
     .hero h1 {
