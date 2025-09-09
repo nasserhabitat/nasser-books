@@ -1406,10 +1406,33 @@
              publishedDate: "2025-09-22T12:00:00Z"
         }
     ];
-let allBooks = [...libraryBooks]; // نسخة من البيانات
-    let bookContent = {}; // كائن لتخزين المحتوى المُحمّل
+let allBooks = [...libraryBooks];
+    let bookContent = {};
+    const formatsMap = {
+        'docx': 'DOCX',
+        'html': 'HTML',
+        'pdf': 'PDF',
+        'text': 'TEXT'
+    };
+    const langMap = {
+        'ar': {
+            'pdf_label': 'تحميل PDF',
+            'read_more_label': 'روابط التحميل',
+            'formats_title': 'روابط التحميل',
+            'no_desc': 'لا يوجد وصف متاح.'
+        },
+        'en': {
+            'pdf_label': 'Download PDF',
+            'read_more_label': 'Download Links',
+            'formats_title': 'Download Links',
+            'no_desc': 'No description available.'
+        }
+    };
 
-    // دالة لتحديث تاريخ آخر تحديث
+    function getLang() {
+        return document.documentElement.lang || 'ar';
+    }
+
     function updateLastUpdateTime() {
         const lastUpdateSpan = document.getElementById('last-update');
         const now = new Date();
@@ -1417,49 +1440,64 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         lastUpdateSpan.textContent = now.toLocaleDateString('ar-EG', options);
     }
 
-    // دالة لإنشاء بطاقة كتاب
+    function generateDownloadLinks(book, lang) {
+        let linksHtml = '';
+        const links = book.links[lang];
+        if (links) {
+            linksHtml += `<div class="formats-section"><h4>${langMap[lang].formats_title}</h4>`;
+            linksHtml += `<div class="book-actions">`;
+            for (const key in links) {
+                if (links.hasOwnProperty(key) && formatsMap[key]) {
+                    linksHtml += `<a href="${links[key]}" class="btn btn-small" download>${formatsMap[key]}</a>`;
+                }
+            }
+            linksHtml += `</div></div>`;
+        }
+        return linksHtml;
+    }
+
     function createBookCard(book) {
+        const lang = getLang();
         const card = document.createElement('div');
         card.className = 'book-card';
         card.setAttribute('data-category', book.category);
         card.setAttribute('data-ai-access', JSON.stringify(book.ai_access));
-        card.setAttribute('data-id', book.id); // إضافة id للتمييز
+        card.setAttribute('data-id', book.id);
 
-        const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000); // مثال بسيط
+        const isNew = new Date(book.publishedDate) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+        const bookTitle = book[`title_${lang}`] || book.title_ar;
+        const bookCover = book.cover[lang] || book.cover.ar;
+        const bookDesc = book[`description_${lang}`] || langMap[lang].no_desc;
+        const bookLinks = book.links[lang];
 
         card.innerHTML = `
-            ${isNew ? '<span class="new-badge-card">جديد</span>' : ''}
+            ${isNew ? `<span class="new-badge-card">${lang === 'ar' ? 'جديد' : 'New'}</span>` : ''}
             <div class="book-cover">
-                <img src="${book.cover.ar}" alt="غلاف كتاب ${book.title_ar}">
+                <img src="${bookCover}" alt="غلاف كتاب ${bookTitle}">
                 <span class="ai-badge">AI Ready</span>
             </div>
             <div class="book-info">
-                <h2>${book.title_ar}</h2>
+                <h2>${bookTitle}</h2>
                 <div class="book-meta">
                     <span>${book.author || 'ناصر ابن داوود'}</span> |
                     <span>${book.pages || 'غير محدد'} صفحة</span>
                 </div>
-                <p class="book-desc">${book.description || 'لا يوجد وصف متاح.'}</p>
+                <p class="book-desc">${bookDesc}</p>
                 <div class="search-snippet" style="display:none;"></div>
                 <div class="book-formats">
                     ${book.ai_access.formats.map(format => `<span>${format.toUpperCase()}</span>`).join('')}
                 </div>
-                <div class="book-actions">
-                    <a href="${book.links.ar.pdf}" class="btn" download>تحميل PDF</a>
-                    <a href="#" class="btn btn-outline" data-id="${book.id}">اقرأ المزيد</a>
-                </div>
+                ${generateDownloadLinks(book, lang)}
             </div>
         `;
 
         return card;
     }
 
-    // دالة لتحميل الكتب وتوزيعها على الشبكات
     function loadBooks() {
         const bookGrid = document.getElementById('book-grid');
         const newBookGrid = document.getElementById('new-book-grid');
-        
-        // إفراغ الشبكات قبل التحميل
+
         bookGrid.innerHTML = '';
         if (newBookGrid) {
             newBookGrid.innerHTML = '';
@@ -1477,7 +1515,6 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         });
     }
 
-    // دالة لتحميل محتوى الكتب بشكل مسبق
     async function preloadBookContents() {
         const promises = allBooks.map(async (book) => {
             if (book.links.ar && book.links.ar.text) {
@@ -1494,7 +1531,6 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         await Promise.all(promises);
     }
 
-    // دالة للبحث في المحتوى
     function searchBooks(searchTerm) {
         const resultsContainer = document.getElementById('search-results-content');
         resultsContainer.innerHTML = '';
@@ -1517,18 +1553,15 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
                 let found = false;
                 let snippet = '';
 
-                // البحث في العنوان
                 if (book.title_ar.toLowerCase().includes(searchTermLower) || (book.title_en && book.title_en.toLowerCase().includes(searchTermLower))) {
                     found = true;
                 }
 
-                // البحث في المحتوى المحمّل
                 if (!found && bookContent[book.id]) {
                     const content = bookContent[book.id];
                     const index = content.toLowerCase().indexOf(searchTermLower);
                     if (index !== -1) {
                         found = true;
-                        // استخراج مقتطف من المحتوى
                         const start = Math.max(0, index - 100);
                         const end = Math.min(content.length, index + searchTerm.length + 100);
                         let rawSnippet = content.substring(start, end);
@@ -1565,7 +1598,6 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         }
     }
 
-    // دالة لتهيئة البحث
     function setupSearch() {
         const searchInput = document.getElementById('book-search');
         const searchBtn = document.querySelector('.search-btn');
@@ -1573,7 +1605,6 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         searchBtn.addEventListener('click', () => searchBooks(searchInput.value));
     }
 
-    // تهيئة الفلاتر
     function setupFilterButtons() {
         const filterButtons = document.querySelectorAll('.filter-buttons button');
         filterButtons.forEach(button => {
@@ -1598,10 +1629,8 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
     }
 
     function setupNewBooksFilter() {
-        // يمكن إضافة منطق فلترة هنا إذا لزم الأمر
     }
 
-    // تهيئة الفلاتر المتقدمة
     function setupAdvancedFilters() {
         const contentType = document.getElementById('content-type');
         const aiCompatibility = document.getElementById('ai-compatibility');
@@ -1628,7 +1657,6 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         aiCompatibility.addEventListener('change', applyFilters);
     }
     
-    // تهيئة الصفحة عند التحميل
     document.addEventListener('DOMContentLoaded', async function() {
         updateLastUpdateTime();
         loadBooks();
@@ -1638,12 +1666,10 @@ let allBooks = [...libraryBooks]; // نسخة من البيانات
         setupNewBooksFilter();
         setupAdvancedFilters();
         
-        // تحديث العد تلقائياً كل ساعة
         setInterval(() => {
             updateLastUpdateTime();
         }, 3600000);
     });
 </script>
- 
 </body>
 </html>
