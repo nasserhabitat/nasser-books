@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+                 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,6 @@
     <title>مكتبة ناصر ابن داوود - منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</title>
     <meta name="description" content="مكتبة رقمية شاملة لمؤلفات الباحث الإسلامي ناصر ابن داوود في علوم القرآن والتدبر، متوافقة مع الذكاء الاصطناعي">
     
-    <!-- بيانات منظمة للذكاء الاصطناعي -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -32,7 +31,6 @@
     }
     </script>
     
-    <!-- إمكانية الوصول للذكاء الاصطناعي -->
     <meta name="AI-Accessible" content="true">
     <meta name="Book-Library" content="true">
     <meta name="Content-Type" content="text/html; charset=UTF-8">
@@ -934,10 +932,57 @@
         .book-cover img.error + .book-cover-placeholder {
             display: flex;
         }
+
+        /* START: Added styles for English version links */
+        .en-badge-cover {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #6c5ce7;
+            color: white;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 5px;
+            z-index: 3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .btn-english {
+            display: block;
+            padding: 8px 20px;
+            background: #6c5ce7;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 10px;
+            border: none;
+        }
+
+        .btn-english:hover {
+            background: #5849be;
+            color: white !important;
+        }
+
+        .english-text-link {
+            display: block;
+            text-align: center;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #6c5ce7;
+            text-decoration: none;
+        }
+
+        .english-text-link:hover {
+            text-decoration: underline;
+        }
+        /* END: Added styles for English version links */
     </style>
 </head>
 <body>
-    <!-- شريط التحديثات -->
     <div class="update-banner">
         🤖 منصة متوافقة مع الذكاء الاصطناعي - آخر تحديث: <span id="last-update"></span>
     </div>
@@ -947,14 +992,12 @@
             <h1>مكتبة ناصر ابن داوود</h1>
             <p class="subtitle">منصة المعرفة القرآنية المتوافقة مع الذكاء الاصطناعي</p>
             
-            <!-- إحصائيات المكتبة -->
             <div class="library-stats">
                 <span>📚 24 كتاب</span> | 
                 <span>🌐 نسختان linguistically</span> | 
                 <span>🤖 متوافق مع الذكاء الاصطناعي</span>
             </div>
             
-            <!-- شريط البحث المحسن -->
             <div class="search-container">
                 <input type="text" id="book-search" placeholder="ابحث في المكتبة (نص، مفاهيم، آيات...)" 
                        aria-label="بحث الكتب" class="search-input">
@@ -966,7 +1009,6 @@
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
             
-            <!-- وصول سريع للذكاء الاصطناعي -->
             <div class="ai-access">
                 <h3>وصول الذكاء الاصطناعي:</h3>
                 <div class="ai-links">
@@ -979,7 +1021,6 @@
     </header>
 
     <main class="container">
-        <!-- قسم الكتب الجديدة - مصحح -->
         <div class="new-books-section">
             <div class="section-header">
                 <div>
@@ -996,7 +1037,6 @@
                 </div>
             </div>
             
-            <!-- خيارات العرض للكتب الجديدة -->
             <div class="view-options">
                 <button class="view-btn active" id="gridViewNew">
                     <i class="fas fa-th"></i>
@@ -1007,18 +1047,15 @@
             </div>
             
             <div class="books-grid" id="new-book-grid">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
             
             <div class="books-list" id="new-book-list" style="display: none;">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
         </div>
 
         <section class="books-section">
             <h2 class="section-title">المكتبة الرقمية المتوافقة مع الذكاء الاصطناعي</h2>
             
-            <!-- خيارات العرض -->
             <div class="view-options">
                 <button class="view-btn active" id="gridView">
                     <i class="fas fa-th"></i>
@@ -1029,7 +1066,6 @@
                 </button>
             </div>
             
-            <!-- فلاتر متقدمة -->
             <div class="advanced-filters">
                 <div class="filter-group">
                     <label for="content-type">نوع المحتوى:</label>
@@ -1052,17 +1088,13 @@
                 </div>
             </div>
             
-            <!-- قائمة الكتب مع بيانات إضافية للذكاء الاصطناعي -->
             <div class="books-grid" id="book-grid">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
             
             <div class="books-list" id="book-list" style="display: none;">
-                <!-- سيتم ملؤها ديناميكيًا -->
-            </div>
+                </div>
         </section>
         
-        <!-- قسم واجهات برمجة التطبيقات للذكاء الاصطناعي -->
         <section class="api-section">
             <h2 class="section-title">واجهات برمجة التطبيقات (APIs) للذكاء الاصطناعي</h2>
             
@@ -1090,18 +1122,15 @@
             </div>
         </section>
         
-        <!-- قسم نتائج البحث -->
         <div id="search-results-container" style="display: none; margin-top: 2rem; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
             <h3 id="search-results-title" style="color: var(--primary-color); margin-bottom: 1.5rem;"></h3>
             <div id="search-results-content"></div>
         </div>
-        <!-- رسالة معلومات البحث -->
         <div class="search-info" id="search-info">
             تبحث عن: <strong id="search-term-display"></strong> | 
             عدد النتائج: <strong id="search-results-count">0</strong>
         </div>
         
-        <!-- رسالة عدم وجود نتائج -->
         <div class="no-results" id="no-results">
             لم يتم العثور على كتب تطابق بحثك. حاول استخدام مصطلحات أخرى.
         </div>
@@ -1758,6 +1787,11 @@
             return linksHtml;
         }
 
+        /**
+         * START: MODIFIED FUNCTION
+         * This function now includes logic to add an "EN" badge, an "English Version" button,
+         * and a text link for books that have an English version available.
+         */
         function createBookCard(book, viewType = 'grid') {
             const lang = getLang();
             const card = document.createElement('div');
@@ -1770,14 +1804,30 @@
             const bookTitle = book[`title_${lang}`] || book.title_ar;
             const bookCover = book.cover[lang] || book.cover.ar;
             const bookDesc = book[`description_${lang}`] || langMap[lang].no_desc;
-            
-            // التحقق من وجود روابط الصفحات
+
+            // Check for English version
+            const hasEnglishVersion = book.links.page && book.links.page.en;
+
+            // 1. Create the "EN" badge for the cover
+            const enBadgeHtml = hasEnglishVersion ? '<span class="en-badge-cover">EN</span>' : '';
+
+            // 2. Create the "English Version" button and text link
+            let englishVersionHtml = '';
+            if (hasEnglishVersion) {
+                englishVersionHtml = `
+                    <a href="${book.links.page.en}" class="btn btn-english">English Version</a>
+                    <a href="${book.links.page.en}" class="english-text-link">Available in English</a>
+                `;
+            }
+
+            // Check for "Read More" page link for the current language
             const hasPageLink = book.links.page && book.links.page[lang];
             const pageLinkHtml = hasPageLink ? `<a href="${book.links.page[lang]}" class="btn btn-small">${langMap[lang].more_link_label}</a>` : '';
 
             card.innerHTML = `
                 ${isNew ? `<span class="new-badge-card">${lang === 'ar' ? 'جديد' : 'New'}</span>` : ''}
                 <div class="book-cover">
+                    ${enBadgeHtml}
                     <img src="${bookCover}" alt="غلاف كتاب ${bookTitle}" onerror="this.classList.add('error'); this.nextElementSibling.style.display='flex';">
                     <div class="book-cover-placeholder" style="display: none;">${bookTitle.substring(0, 2)}</div>
                     <span class="ai-badge">AI Ready</span>
@@ -1794,12 +1844,17 @@
                         ${book.ai_access.formats.map(format => `<span>${format.toUpperCase()}</span>`).join('')}
                     </div>
                     ${generateDownloadLinks(book, lang)}
+                    ${englishVersionHtml}
                     ${pageLinkHtml}
                 </div>
             `;
 
             return card;
         }
+        /**
+         * END: MODIFIED FUNCTION
+         */
+
 
         function loadBooks() {
             const bookGrid = document.getElementById('book-grid');
@@ -2039,4 +2094,3 @@
     </script>
 </body>
 </html>
-
