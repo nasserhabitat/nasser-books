@@ -70,13 +70,13 @@
         "ar": "أنوار البيان في رسم المصحف العثماني (إصدار 2025)",
         "en": "ANWAR AL-BAYAN: The Uthmanic Script (2025 Edition)"
       },
-      "description": {
-        "ar": "دراسة متكاملة للرسم العثماني بأحدث المنهجيات البحثية",
-        "en": "Comprehensive study of Uthmanic script using latest research methodologies"
+      "description":{
+        "ar": "أحدث دراسة في منهجية التدبر القرآني وفق الرؤية معاصرة (إصدار 2025)",
+        "en": "Cutting-edge study on Quranic contemplation methodology (2025 Edition)"
       },
       "path": {
-              "links": {
-        "ar": {
+        "links": {
+          "ar": {
           "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
           "html": "https://drive.google.com/uc?export=download&id=1DBteEkgtxU2M20wfbAojjpSnVbwKfRUN",
           "pdf": "books/anwar-al-bayan/ar/content.pdf",
