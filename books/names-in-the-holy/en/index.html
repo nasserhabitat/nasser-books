@@ -85,6 +85,7 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
         }
         .btn-secondary {
             background: var(--secondary-color);
@@ -102,9 +103,11 @@
             background: rgba(255,255,255,0.8);
             padding: 1rem;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
+            font-size: 1.1rem;
         }
         .book-description {
             margin: 2rem 0;
@@ -112,6 +115,7 @@
         .book-description p {
             margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.8;
         }
         ul, ol {
             padding-left: 20px;
@@ -153,6 +157,36 @@
             background: var(--dark-color);
             color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none;
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .book-section {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed var(--gray-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -164,8 +198,8 @@
             .subtitle {
                 font-size: 1.2rem;
             }
-            .book-cover, .book-details {
-                min-width: 100%;
+            .hero {
+                padding: 2.5rem 1rem;
             }
         }
     </style>
@@ -213,6 +247,20 @@
         </section>
         
         <section class="book-details">
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy" class="btn" target="_blank" rel="noopener noreferrer">DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1f_mabKNo9-zwcgkxylTHjCu1e_esDLHZ" class="btn" target="_blank" rel="noopener noreferrer">HTML</a>
+                    <a href="books/names-in-the-holy/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu" class="btn" target="_blank" rel="noopener noreferrer">External PDF</a>
+                    <a href="books/names-in-the-holy/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">TEXT</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE" class="btn" target="_blank" rel="noopener noreferrer">External TEXT</a>
+                    <a href="https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                    <a href="https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                </div>
+            </div>
+            
             <div class="book-description">
                 <h2>About This Book</h2>
                 <p>This groundbreaking study presents a new methodological approach to understanding Allah's Most Beautiful Names, moving beyond traditional narratives to a functional and analytical perspective rooted exclusively in the Qur'anic text. The work employs a strict tawqif methodology, recognizing only those divine names explicitly mentioned in the Holy Qur'an while rejecting commonly cited names without Qur'anic foundation.</p>
@@ -350,7 +398,7 @@
             </div>
         </section>
     </main>
-
+    
     <footer class="site-footer">
         <p>© 2025 Dr. Nasser Ibn Dawood Library. All rights reserved.</p>
         <p>Islamic Researcher and Engineer specializing in Digital Quranic Studies</p>
