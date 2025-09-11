@@ -174,6 +174,32 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
+        /* START: Added Styles for Download Section */
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none; /* Override default h3 style */
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        /* END: Added Styles */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -210,9 +236,9 @@
             </div>
             
             <div class="book-actions">
-                <a href="https://archive.org/details/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google/" 
-                   class="btn" 
-                   target="_blank" 
+                <a href="https://archive.org/details/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google/"
+                   class="btn"
+                   target="_blank"
                    rel="noopener noreferrer">
                     Read on Archive.org
                 </a>
@@ -233,21 +259,43 @@
         </section>
         
         <section class="book-details">
-                       
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                    <a href="books/editing-the-quranic-terminology-tome1/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh" class="btn" target="_blank" rel="noopener noreferrer">Download External PDF</a>
+                    <a href="books/editing-the-quranic-terminology-tome1/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                    <a href="https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp" class="btn" target="_blank" rel="noopener noreferrer">Download External TEXT</a>
+                    <a href="https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                    <a href="https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                </div>
+            </div>
+            
             <div class="volume-description">
-    <h3>Volume 1 Description</h3>
-    <p>The first volume serves as the foundational cornerstone and methodological gateway to the entire "Clarifying the Qur'anic Terminology" project. The author dedicates this section to establishing the intellectual and textual tools that will be relied upon in the subsequent volumes, providing readers with a clear roadmap to return to understanding the Qur'an through its own framework.</p>
-    
-    <p>This volume primarily aims to construct a new framework for contemplation (tadabbur), transitioning the reader from traditional reception to direct analysis of the Qur'anic text in its original form.</p>
-    
-    <h4>Main Themes:</h4>
-    <ul>
-        <li><strong>Rooting Sources and Methodology:</strong> Returning to original Qur'anic manuscripts, diagnosing the current crisis of understanding, and establishing the "Fiqh al-Lisan al-Qur'ani" (Jurisprudence of Qur'anic Language) methodology.</li>
-        <li><strong>Reconstructing Doctrinal and Worship Concepts:</strong> Rereading fundamental Islamic concepts like prayer (salah), fasting (sawm), pilgrimage (hajj), and glorification (tasbih).</li>
-        <li><strong>Faith and Existential Concepts:</strong> Understanding the self, Paradise and Hell, the Night of Decree (Laylat al-Qadr), and faith itself between text and interpretation.</li>
-        <li><strong>Knowing Allah:</strong> Presenting specialized series on understanding Lordship (Rububiyyah) and Divinity (Uluhiyyah).</li>
-        <li><strong>Methodology for Handling Heritage:</strong> Critical approach to Prophetic traditions (hadith) and evaluating narrations against the Qur'an.</li>
-    </ul>
-    
-    <p>In essence, Volume 1 is an intellectual and methodological "rehabilitation" process that deconstructs traditional foundations of understanding and replaces them with new foundations based on the original Qur'anic text and its internal rules.</p>
-</div>
+                <h3>Volume 1 Description</h3>
+                <p>The first volume serves as the foundational cornerstone and methodological gateway to the entire "Clarifying the Qur'anic Terminology" project. The author dedicates this section to establishing the intellectual and textual tools that will be relied upon in the subsequent volumes, providing readers with a clear roadmap to return to understanding the Qur'an through its own framework.</p>
+                
+                <p>This volume primarily aims to construct a new framework for contemplation (tadabbur), transitioning the reader from traditional reception to direct analysis of the Qur'anic text in its original form.</p>
+                
+                <h4>Main Themes:</h4>
+                <ul>
+                    <li><strong>Rooting Sources and Methodology:</strong> Returning to original Qur'anic manuscripts, diagnosing the current crisis of understanding, and establishing the "Fiqh al-Lisan al-Qur'ani" (Jurisprudence of Qur'anic Language) methodology.</li>
+                    <li><strong>Reconstructing Doctrinal and Worship Concepts:</strong> Rereading fundamental Islamic concepts like prayer (salah), fasting (sawm), pilgrimage (hajj), and glorification (tasbih).</li>
+                    <li><strong>Faith and Existential Concepts:</strong> Understanding the self, Paradise and Hell, the Night of Decree (Laylat al-Qadr), and faith itself between text and interpretation.</li>
+                    <li><strong>Knowing Allah:</strong> Presenting specialized series on understanding Lordship (Rububiyyah) and Divinity (Uluhiyyah).</li>
+                    <li><strong>Methodology for Handling Heritage:</strong> Critical approach to Prophetic traditions (hadith) and evaluating narrations against the Qur'an.</li>
+                </ul>
+                
+                <p>In essence, Volume 1 is an intellectual and methodological "rehabilitation" process that deconstructs traditional foundations of understanding and replaces them with new foundations based on the original Qur'anic text and its internal rules.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Dr. Nasser Ibn Dawood Library - All Rights Reserved</p>
+        <p>Islamic Researcher and Engineer Specializing in Digital Quranic Studies</p>
+    </footer>
+</body>
+</html>
