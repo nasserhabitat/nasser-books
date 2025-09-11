@@ -85,6 +85,7 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
         }
         .btn-secondary {
             background: var(--secondary-color);
@@ -102,9 +103,11 @@
             background: rgba(255,255,255,0.8);
             padding: 1rem;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
+            font-size: 1.1rem;
         }
         .book-description {
             margin: 2rem 0;
@@ -112,34 +115,30 @@
         .book-description p {
             margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.8;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        .toc {
-            background: white;
-            padding: 2rem;
+        .book-features {
+            background: #f8f9fa;
+            padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
         }
-        .toc h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
         }
-        .toc-section {
-            margin-bottom: 1.5rem;
+        .book-features ul {
+            padding-left: 20px;
         }
-        .toc-chapter {
-            margin-left: 1rem;
-            margin-bottom: 0.5rem;
+        .book-features li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
             position: relative;
             padding-left: 1.5rem;
         }
-        .toc-chapter::before {
+        .book-features li::before {
             content: "•";
             color: var(--primary-color);
             position: absolute;
@@ -153,19 +152,49 @@
             background: var(--dark-color);
             color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none;
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .book-section {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed var(--gray-color);
         }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             .subtitle {
                 font-size: 1.2rem;
             }
-            .book-cover, .book-details {
-                min-width: 100%;
+            .hero {
+                padding: 2.5rem 1rem;
             }
         }
     </style>
@@ -213,6 +242,20 @@
         </section>
         
         <section class="book-details">
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2" class="btn" target="_blank" rel="noopener noreferrer">DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE" class="btn" target="_blank" rel="noopener noreferrer">HTML</a>
+                    <a href="books/modesty/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1i5__DOFOeEH8XhaL2vKlsK6JIgnQq7Vp" class="btn" target="_blank" rel="noopener noreferrer">External PDF</a>
+                    <a href="books/modesty/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">TEXT</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY" class="btn" target="_blank" rel="noopener noreferrer">External TEXT</a>
+                    <a href="https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                    <a href="https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                </div>
+            </div>
+            
             <div class="book-description">
                 <h2>About This Book</h2>
                 <p>This groundbreaking work attempts to transform our understanding of "modesty" from static moral concept to dynamic cognitive tool for Quranic comprehension. Dr. Nasser Ibn Dawood presents a revolutionary approach that reveals modesty as both a spiritual compass and intellectual methodology.</p>
@@ -245,60 +288,9 @@
                     <li>Comprehensive glossary of Arabic terms</li>
                 </ul>
             </div>
-
-            <div class="toc">
-                <h2>Table of Contents</h2>
-                
-                <div class="toc-section">
-                    <h3>Introduction</h3>
-                    <div class="toc-chapter">Modesty: The Soul's Fence and Compass of Understanding</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Approach to Quranic Linguistics</h3>
-                    <div class="toc-chapter">A New Methodology for Textual Understanding</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Part I: Decoding the Cipher</h3>
-                    <div class="toc-chapter">Chapter 1: At the Root - The Semantic Field of Ḥ-Y-Y</div>
-                    <div class="toc-chapter">Chapter 2: Modesty in Lexicons and Tradition - Comparative Analysis</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Part II: Manifestations of Modesty in the Quran</h3>
-                    <div class="toc-chapter">Chapter 3: Divine Modesty - "Allah is not ashamed of the truth"</div>
-                    <div class="toc-chapter">Chapter 4: Prophetic Modesty - Perfection in Character</div>
-                    <div class="toc-chapter">Chapter 5: Feminine Modesty - The Essence of Chastity and Beauty</div>
-                    <div class="toc-chapter">Chapter 6: Joseph's Modesty - The Strength of Chastity and Beauty of Forgiveness</div>
-                    <div class="toc-chapter">Chapter 7: Mary's Modesty - Reflection of Pure Innate Nature</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Part III: From Ethics to Epistemology</h3>
-                    <div class="toc-chapter">Chapter 8: Traditional Framework - Understanding Parables Through Moral Excellence</div>
-                    <div class="toc-chapter">Chapter 9: New Horizons - Hermeneutical Approaches to Parables</div>
-                    <div class="toc-chapter">Chapter 10: Comprehensive Theory - Modesty as Antidote to "The Mosquito Syndrome"</div>
-                    <div class="toc-chapter">Chapter 11: The Compass of Modesty - How Character Becomes Key to Contemplation</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Part IV: Modesty and Civilizational Impact</h3>
-                    <div class="toc-chapter">Chapter 12: The Individual Between Modesty's Compass and Shyness's Prison</div>
-                    <div class="toc-chapter">Chapter 13: Modesty in Society Building - The Nation's Fortress Against Adversaries</div>
-                    <div class="toc-chapter">Chapter 14: Pitfalls and Boundaries - Between Ineptitude and Shamelessness</div>
-                    <div class="toc-chapter">Chapter 15: Digital Age Challenges - An Ethical Compass for Changing Times</div>
-                </div>
-                
-                <div class="toc-section">
-                    <h3>Conclusion & References</h3>
-                    <div class="toc-chapter">Toward a "Modest" Generation</div>
-                    <div class="toc-chapter">Sources and References</div>
-                </div>
-            </div>
         </section>
     </main>
-
+    
     <footer class="site-footer">
         <p>© 2025 Dr. Nasser Ibn Dawood Library. All rights reserved.</p>
         <p>Islamic Researcher and Engineer specializing in Digital Quranic Studies</p>
