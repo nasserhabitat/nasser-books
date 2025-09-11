@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AND SO THAT HE MAY BE OF THE CERTAIN ONES: A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM | Dr. Nasser Ibn Dawood</title>
+    <title>Dr. Nasser Ibn Dawood's Books</title>
     <style>
-        /* CSS remains unchanged */
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
@@ -22,110 +21,275 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-        /* ... (rest of CSS unchanged) ... */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .book-features {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .book-features ul {
+            padding-left: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        .volume-description ul {
+            padding-left: 20px;
+        }
+        .volume-description li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .volume-description li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: var(--dark-color);
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none;
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .book-section {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed var(--gray-color);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>AND SO THAT HE MAY BE OF THE CERTAIN ONES</h1>
-            <p class="subtitle">A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM</p>
+            <h1>Dr. Nasser Ibn Dawood's Library</h1>
+            <p class="subtitle">A collection of digital studies on the Qur'an and Islamic sciences</p>
         </div>
     </header>
     
     <main class="container">
-        <section class="book-cover">
-            <div class="cover-container">
-                <img src="cover-en.png"
-                     alt="Book Cover: AND SO THAT HE MAY BE OF THE CERTAIN ONES: A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM by Dr. Nasser Ibn Dawood"
-                     loading="lazy"
-                     width="300"
-                     height="400"
-                     decoding="async">
-            </div>
-            
-            <div class="book-actions">
-                <a href="https://archive.org/details/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom" 
-                   class="btn" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    Read on Archive.org
-                </a>
-                <a href="../ar/" class="btn btn-secondary">
-                    Arabic Version
-                </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
-                    Back to Books
-                </a>
-            </div>
-            
-            <div class="book-meta">
-                <p><strong>Author:</strong> Dr. Nasser Ibn Dawood</p>
-                <p><strong>Pages:</strong> 797</p>
-                <p><strong>Language:</strong> English</p>
+        <section class="book-section">
+            <header>
+                <h2>CLARIFYING THE QUR'ANIC TERMINOLOGY VOLUME 3</h2>
+                <p class="subtitle">AN APPLIED STUDY IN THE JURISPRUDENCE OF THE QUR'ANIC LANGUAGE</p>
+            </header>
+            <div class="book-details">
+                <div class="download-section">
+                    <h3>Download Formats</h3>
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                        <a href="books/editing-the-quranic-terminology-tome3/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K" class="btn" target="_blank" rel="noopener noreferrer">Download External PDF</a>
+                        <a href="books/editing-the-quranic-terminology-tome3/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc" class="btn" target="_blank" rel="noopener noreferrer">Download External TEXT</a>
+                        <a href="https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                        <a href="https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                    </div>
+                </div>
+                
+                <div class="book-description">
+                    <h2>Book Description</h2>
+                    <p>This book aims to rebuild the foundation of correct understanding of religion and life by correcting prevalent concepts and presenting original insights into Qur'anic terminology, inspired by the essence of the Qur'anic language.</p>
+                    <p>The methodology of this work is based on the theoretical foundations and methodological principles detailed in the book "Jurisprudence of the Qur'anic Language: A New Approach to Understanding Text and Manuscript".</p>
+                </div>
             </div>
         </section>
-        
-        <section class="book-details">
-            <div class="book-description">
-                <h2>Book Description</h2>
-                <p>This encyclopedic work presents a comprehensive vision of the universe from a Quranic perspective, combining deep scientific analysis and authentic spiritual understanding of cosmic verses, with systematic criticism of contemporary astronomical theories.</p>
+
+        <section class="book-section">
+            <header>
+                <h2>AND SO THAT HE MAY BE OF THE CERTAIN ONES</h2>
+                <p class="subtitle">A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM</p>
+            </header>
+            <div class="book-details">
+                <div class="download-section">
+                    <h3>Download Formats</h3>
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1GdyQg-pQtDzR74UsilKtuZfs6G2p1kge" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                        <a href="books/malakoot/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N" class="btn" target="_blank" rel="noopener noreferrer">Download External PDF</a>
+                        <a href="books/malakoot/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                        <a href="https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg" class="btn" target="_blank" rel="noopener noreferrer">Download External TEXT</a>
+                        <a href="https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                        <a href="https://ia801600.us.archive.org/10/items/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                    </div>
+                </div>
                 
-                <p>The book is not merely a scientific study but a faith journey aiming to transform belief into certainty through contemplation of God's signs in the horizons and within oneself.</p>
-            </div>
-            
-            <div class="book-features">
-                <h3>Key Features:</h3>
-                <ul>
-                    <li>Comprehensive study of the universe as presented in the Holy Quran</li>
-                    <li>Systematic scientific critique of mainstream astronomical theories</li>
-                    <li>In-depth analysis of cosmic verses about heavens and earth</li>
-                    <li>Integrated vision combining material and spiritual dimensions</li>
-                    <li>Quranic and scientific evidence for Earth's stability and centrality</li>
-                </ul>
-            </div>
-            
-            <div class="book-features">
-                <h3>Main Themes:</h3>
-                <ul>
-                    <li><strong>Quranic Perspective of the Universe:</strong> Heavens, earth and what is between them</li>
-                    <li><strong>Nature of Earth:</strong> Between Quranic evidence and scientific theories</li>
-                    <li><strong>Sun-Moon System:</strong> Analytical study of cosmic verses</li>
-                    <li><strong>The Throne and The Chair:</strong> Material and symbolic dimensions in the Quran</li>
-                    <li><strong>Critique of Pseudoscience:</strong> Analysis of modern astronomy fallacies</li>
-                </ul>
-            </div>
-            
-            <div class="toc-container">
-                <h3>Some selected titles from the book index</h3>
-                <div class="toc-columns">
-                    <div class="toc-item"><a href="#">1. Introduction to the Book (p.2)</a></div>
-                    <div class="toc-item"><a href="#">3. The Reality of the Universe and the Role of Faith (p.23)</a></div>
-                    <div class="toc-item"><a href="#">9. New Interpretive Vision of Creation Verses (p.22)</a></div>
-                    <div class="toc-item"><a href="#">13. Series: "The Most Gracious is Established on the Throne" (p.28)</a></div>
-                    <div class="toc-item"><a href="#">30. Star Trails and the Celestial Dome (p.71)</a></div>
-                    <div class="toc-item"><a href="#">31. Earth's Dimensions and Layers (p.74)</a></div>
-                    <div class="toc-item"><a href="#">35. Refutation of Earth's Sphericity (p.81)</a></div>
-                    <div class="toc-item"><a href="#">46. Beyond Astronomical Deception (p.88)</a></div>
-                    <div class="toc-item"><a href="#">52. Verses of the Horizons: Reality of the Sun (p.105)</a></div>
-                    <div class="toc-item"><a href="#">60. Series: Truth About Stars and Planets (p.125)</a></div>
-                    <div class="toc-item"><a href="#">66. Satellites: The Great Illusion (p.143)</a></div>
-                    <div class="toc-item"><a href="#">85. Refuting Earth's Rotation Model (p.193)</a></div>
-                    <div class="toc-item"><a href="#">100. The Throne: Supreme Cosmic Network (p.216)</a></div>
-                    <div class="toc-item"><a href="#">115. Divine Oaths by Stars (p.230)</a></div>
-                    <div class="toc-item"><a href="#">162. Antichrist and Astronomical Sciences (p.304)</a></div>
-                    <div class="toc-item"><a href="#">200. New Interpretive Vision of Creation Verses (p.332)</a></div>
-                    <div class="toc-item"><a href="#">250. "Seven is Not a Number" (p.438)</a></div>
-                    <div class="toc-item"><a href="#">300. Concept of the Throne in the Quran (p.507)</a></div>
-                    <div class="toc-item"><a href="#">342. The Night Journey and Ascension (p.580)</a></div>
-                    <div class="toc-item"><a href="#">356. Book Summary (p.602)</a></div>
+                <div class="book-description">
+                    <h2>Book Description</h2>
+                    <p>This encyclopedic work presents a comprehensive vision of the universe from a Quranic perspective, combining deep scientific analysis and authentic spiritual understanding of cosmic verses, with systematic criticism of contemporary astronomical theories.</p>
+                    <p>The book is not merely a scientific study but a faith journey aiming to transform belief into certainty through contemplation of God's signs in the horizons and within oneself.</p>
                 </div>
             </div>
         </section>
     </main>
     
     <footer class="site-footer">
-        <p>© 2024 Dr. Nasser Ibn Dawood. All Rights Reserved. | Designed with ❤️ by Nasser Habitat</p>
+        <p>© 2025 Dr. Nasser Ibn Dawood. All Rights Reserved. | Designed with ❤️ by Nasser Habitat</p>
     </footer>
 </body>
 </html>
