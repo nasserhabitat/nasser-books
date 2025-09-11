@@ -1,3 +1,6 @@
+Based on your previous request and the provided JSON data, here is the updated HTML for the "Digitizing the Original Manuscripts of the Holy Qur'an" page. I've added the new download links to a new section, following the structure from the "Changing the Concepts" example.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +14,7 @@
             --secondary-color: #159895;
             --light-color: #f8f9fa;
             --dark-color: #212529;
+            --accent-color: #57C5B6;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,6 +39,16 @@
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
         }
         .subtitle {
             font-size: 1.4rem;
@@ -74,14 +88,25 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
         }
         .btn:hover {
-            background: var(--secondary-color);
+            opacity: 0.9;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .book-meta {
             margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
@@ -96,10 +121,11 @@
             line-height: 1.8;
         }
         .book-features {
-            background: #f0f0f0;
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
         }
         .book-features h3 {
             color: var(--primary-color);
@@ -112,6 +138,15 @@
         .book-features li {
             margin-bottom: 0.8rem;
             line-height: 1.6;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         .project-components {
             margin: 2rem 0;
@@ -133,12 +168,40 @@
             background: #f9f9f9;
             border-left: 4px solid var(--primary-color);
         }
+        /* START: Added Styles for Download Section */
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none; /* Override default h3 style */
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        /* END: Added Styles */
         .site-footer {
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
-            background: #eee;
+            background: var(--dark-color);
+            color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
         }
         @media (max-width: 768px) {
             .container {
@@ -149,6 +212,9 @@
             }
             .subtitle {
                 font-size: 1.2rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem;
             }
         }
     </style>
@@ -173,16 +239,16 @@
             </div>
             
             <div class="book-actions">
-                <a href="https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505" 
-                   class="btn" 
-                   target="_blank" 
+                <a href="https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505"
+                   class="btn"
+                   target="_blank"
                    rel="noopener noreferrer">
                     Read on Archive.org
                 </a>
-                <a href="../ar/" class="btn">
+                <a href="../ar/" class="btn btn-secondary">
                     Arabic Version
                 </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
                     Back to Books
                 </a>
             </div>
@@ -196,6 +262,19 @@
         </section>
         
         <section class="book-details">
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1Y_LEMVudlj8jKSe1WG4zTG2jsWsSwmnm" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                    <a href="books/digitizing/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS" class="btn" target="_blank" rel="noopener noreferrer">Download External PDF</a>
+                    <a href="books/digitizing/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng" class="btn" target="_blank" rel="noopener noreferrer">Download External TEXT</a>
+                    <a href="https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                    <a href="https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                </div>
+            </div>
             <div class="book-description">
                 <h2>About This Project</h2>
                 <p>This initiative represents far more than a technical digitization effort - it is a comprehensive scholarly movement to reconnect with the Qur'an in its most authentic form through cutting-edge digital technologies combined with traditional Islamic scholarship.</p>
@@ -290,3 +369,4 @@
     </footer>
 </body>
 </html>
+```
