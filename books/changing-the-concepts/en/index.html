@@ -165,6 +165,32 @@
             margin: 2rem 0;
             border-left: 4px solid #ffc107;
         }
+        /* START: Added Styles for Download Section */
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: none; /* Override default h3 style */
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        /* END: Added Styles */
         .site-footer {
             text-align: center;
             padding: 2rem;
@@ -237,6 +263,17 @@
                 <p><strong>Note:</strong> This English translation is based on the 2nd Arabic edition (417 pages). The expanded 3rd Arabic edition (762 pages) will be translated at a later date.</p>
             </div>
             
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1af5VjhR0H6kKTtuhCz-PxXR70z6VfmYe" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                    <a href="content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                    <a href="https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                    <a href="https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                </div>
+            </div>
             <div class="book-description">
                 <h2>Book Description</h2>
                 <p>This book aims to reconstruct the proper understanding of religion and life by correcting prevailing concepts and presenting authentic perspectives on Quranic terminology, inspired by the essence of the Qur'anic language.</p>
