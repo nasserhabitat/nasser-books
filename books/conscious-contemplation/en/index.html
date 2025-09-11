@@ -120,6 +120,31 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        /* START: Added Styles */
+        .download-section {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .download-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .download-links .btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        /* END: Added Styles */
         .site-footer {
             text-align: center;
             padding: 2rem;
@@ -189,7 +214,20 @@
                 
                 <p>The book builds upon the "Jurisprudence of Quranic Language" methodology detailed in the author's previous works, with special focus on practical implementation and contemporary applications.</p>
             </div>
-            
+
+            <div class="download-section">
+                <h3>Download Formats</h3>
+                <div class="download-links">
+                    <a href="https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1WD9u3euczFKSz6HDJ8sHqOb7Oneq4T5a" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
+                    <a href="content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1yKPdEMoAMHXLmKlhaSVhy61tjWoVEVbv" class="btn" target="_blank" rel="noopener noreferrer">External PDF</a>
+                    <a href="content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1sWN_QZ-Ovmam3g2Y-I_a1OXkV4wFiqYb" class="btn" target="_blank" rel="noopener noreferrer">External TEXT</a>
+                    <a href="https://ia800602.us.archive.org/9/items/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
+                    <a href="https://archive.org/stream/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
+                </div>
+            </div>
             <div class="book-features">
                 <h3>Key Features:</h3>
                 <ul>
