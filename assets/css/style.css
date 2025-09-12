@@ -88,6 +88,13 @@ body {
     font-size: 0.9rem;
 }
 
+.book-result-cover {
+    width: 100px;
+    height: 150px;
+    background-image: url('books/conscious-contemplation/ar/cover-ar.png');
+    background-size: cover;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
