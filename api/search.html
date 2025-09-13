@@ -226,6 +226,15 @@
             color: #cbd5e1;
         }
         
+        .path-correction-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
         @media (max-width: 768px) {
             .search-box {
                 flex-direction: column;
@@ -251,6 +260,11 @@
         </div>
         
         <div class="search-container">
+            <div class="path-correction-note">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>تم تصحيح مسارات الكتب:</strong> جميع مسارات الكتب الآن تشير إلى المسار الصحيح (<code>/books/</code> بدلاً من <code>/api/books/</code>)
+            </div>
+            
             <div class="search-box">
                 <input type="text" id="searchInput" class="form-control search-input" placeholder="ابحث عن كتاب أو موضوع..." value="القرآن">
                 <select id="languageSelect" class="form-select lang-select">
@@ -291,6 +305,14 @@
         const resultsPerPage = 9;
         let currentFilter = 'all';
 
+        // دالة لتصحيح مسار الكتاب
+        function correctBookPath(path) {
+            if (!path) return '';
+            
+            // استبدال المسارات التي تحتوي على /api/books/ إلى /books/
+            return path.replace('/api/books/', '/books/');
+        }
+
         // Fetch index.json data
         async function fetchBooks() {
             try {
@@ -300,6 +322,23 @@
                     throw new Error(`فشل في جلب بيانات الكتب: ${response.status} ${response.statusText}`);
                 }
                 booksData = await response.json();
+                
+                // تصحيح مسارات الكتب في البيانات
+                booksData.books.forEach(book => {
+                    if (book.path && book.path.ar) {
+                        book.path.ar = correctBookPath(book.path.ar);
+                    }
+                    if (book.path && book.path.en) {
+                        book.path.en = correctBookPath(book.path.en);
+                    }
+                    if (book.cover && book.cover.ar) {
+                        book.cover.ar = correctBookPath(book.cover.ar);
+                    }
+                    if (book.cover && book.cover.en) {
+                        book.cover.en = correctBookPath(book.cover.en);
+                    }
+                });
+                
                 searchBooks(); // Initial display
             } catch (error) {
                 showError(`خطأ: ${error.message}. تأكد من أن ملف index.json متوفر في assets/data/ أو تحقق من اتصال الشبكة.`);
@@ -381,6 +420,9 @@
                         coverImage = book.cover[lang];
                     }
                     
+                    // تأكد من أن مسار الكتاب صحيح
+                    const bookPath = book.path[lang] || '#';
+                    
                     const col = document.createElement('div');
                     col.className = 'col-md-6 col-lg-4';
                     col.innerHTML = `
@@ -397,7 +439,7 @@
                                     <span><i class="fas fa-calendar"></i> ${book.year || 'غير محدد'}</span>
                                 </div>
                                 <div class="action-buttons">
-                                    <a href="${book.path[lang]}" target="_blank" class="btn-text">
+                                    <a href="${bookPath}" target="_blank" class="btn-text">
                                         <i class="fas fa-book me-1"></i> اقرأ الآن
                                     </a>
                                 </div>
