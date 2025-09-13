@@ -97,11 +97,25 @@
     margin-bottom: 1rem;
 }
 
+.search-results .book-result-cover {
+  width: 120px; /* تقليل إلى 80-120px ليكون أصغر من الصفحات الأخرى (180px) */
+  height: auto;
+  max-height: 180px; /* حد أقصى لتجنب الارتفاع الكبير */
+  object-fit: contain; /* يحافظ على الجودة دون تشويه أو قص */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* تجنب تعارض مع style.css */
 .book-result-cover {
-    width: 100px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: none !important; /* إزالة أي background إذا ورث */
+}
+
+@media (max-width: 768px) {
+  .search-results .book-result-cover {
+    width: 80px;
+    max-height: 120px;
+  }
 }
 
 .book-result-info {
