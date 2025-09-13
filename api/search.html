@@ -155,6 +155,17 @@
             color: white;
         }
         
+        .btn-disabled {
+            background: #94a3b8;
+            color: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
         .pagination {
             justify-content: center;
             margin-top: 30px;
@@ -235,6 +246,11 @@
             color: #856404;
         }
         
+        .file-checking {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
         @media (max-width: 768px) {
             .search-box {
                 flex-direction: column;
@@ -262,7 +278,7 @@
         <div class="search-container">
             <div class="path-correction-note">
                 <i class="fas fa-info-circle me-2"></i>
-                <strong>تم تصحيح مسارات الكتب:</strong> جميع مسارات الكتب الآن تشير إلى المسار الصحيح (<code>/books/</code> بدلاً من <code>/api/books/</code>)
+                <strong>تم تحسين تجربة القراءة:</strong> الآن يتم التحقق من وجود الملف قبل عرض رابط القراءة لتجنب أخطاء 404.
             </div>
             
             <div class="search-box">
@@ -304,6 +320,7 @@
         let currentPage = 1;
         const resultsPerPage = 9;
         let currentFilter = 'all';
+        let fileAvailabilityCache = {};
 
         // دالة لتصحيح مسار الكتاب
         function correctBookPath(path) {
@@ -311,6 +328,57 @@
             
             // استبدال المسارات التي تحتوي على /api/books/ إلى /books/
             return path.replace('/api/books/', '/books/');
+        }
+
+        // دالة للتحقق من وجود الملف
+        async function checkFileAvailability(url) {
+            if (fileAvailabilityCache[url]) {
+                return fileAvailabilityCache[url];
+            }
+            
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                const isAvailable = response.ok;
+                fileAvailabilityCache[url] = isAvailable;
+                return isAvailable;
+            } catch (error) {
+                fileAvailabilityCache[url] = false;
+                return false;
+            }
+        }
+
+        // دالة لإنشاء زر القراءة مع التحقق من وجود الملف
+        async function createReadButton(book, lang) {
+            const buttonContainer = document.createElement('div');
+            
+            if (!book.path || !book.path[lang]) {
+                buttonContainer.innerHTML = `
+                    <span class="btn-disabled">
+                        <i class="fas fa-exclamation-circle me-1"></i> غير متاح
+                    </span>
+                `;
+                return buttonContainer;
+            }
+            
+            const correctedPath = correctBookPath(book.path[lang]);
+            const isAvailable = await checkFileAvailability(correctedPath);
+            
+            if (isAvailable) {
+                buttonContainer.innerHTML = `
+                    <a href="${correctedPath}" target="_blank" class="btn-text">
+                        <i class="fas fa-book me-1"></i> اقرأ الآن
+                    </a>
+                `;
+            } else {
+                buttonContainer.innerHTML = `
+                    <span class="btn-disabled">
+                        <i class="fas fa-exclamation-circle me-1"></i> غير متاح
+                    <span class="file-checking" title="الملف غير متاح حالياً"><i class="fas fa-info-circle"></i></span>
+                    </span>
+                `;
+            }
+            
+            return buttonContainer;
         }
 
         // Fetch index.json data
@@ -368,7 +436,7 @@
         }
 
         // Search and display results
-        function searchBooks() {
+        async function searchBooks() {
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
             const lang = document.getElementById('languageSelect').value;
             const resultsDiv = document.getElementById('results');
@@ -413,18 +481,19 @@
                     </div>
                 `;
             } else {
-                paginatedBooks.forEach(book => {
+                for (const book of paginatedBooks) {
                     // Ensure correct image path
                     let coverImage = 'https://nasserhabitat.github.io/nasser-books/assets/images/placeholder.png';
                     if (book.cover && book.cover[lang]) {
                         coverImage = book.cover[lang];
                     }
                     
-                    // تأكد من أن مسار الكتاب صحيح
-                    const bookPath = book.path[lang] || '#';
-                    
                     const col = document.createElement('div');
                     col.className = 'col-md-6 col-lg-4';
+                    
+                    // إنشاء زر القراءة مع التحقق من وجود الملف
+                    const readButton = await createReadButton(book, lang);
+                    
                     col.innerHTML = `
                         <div class="result-card">
                             <div class="book-cover">
@@ -439,15 +508,15 @@
                                     <span><i class="fas fa-calendar"></i> ${book.year || 'غير محدد'}</span>
                                 </div>
                                 <div class="action-buttons">
-                                    <a href="${bookPath}" target="_blank" class="btn-text">
-                                        <i class="fas fa-book me-1"></i> اقرأ الآن
-                                    </a>
                                 </div>
                             </div>
                         </div>
                     `;
+                    
+                    // إضافة زر القراءة إلى المكان المناسب
+                    col.querySelector('.action-buttons').appendChild(readButton);
                     resultsDiv.appendChild(col);
-                });
+                }
             }
 
             // Update pagination
