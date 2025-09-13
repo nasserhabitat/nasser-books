@@ -242,19 +242,16 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
-        /* تحسينات لعرض الصور */
+        /* START: Image display improvements */
         .book-cover {
             position: relative;
             flex-shrink: 0;
             overflow: hidden;
-            background: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #f8f9fa; /* A light background for the image container */
         }
         
         .books-grid .book-cover {
-            height: 280px; /* زيادة الارتفاع قليلاً */
+            height: 280px; 
             width: 100%;
         }
         
@@ -266,11 +263,11 @@
         .book-cover img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* تغيير من cover إلى contain للحفاظ على نسبة الأبعاد */
+            object-fit: cover; /* Changed to 'cover' to fill the container */
             display: block;
             transition: transform 0.3s ease;
-            padding: 10px; /* إضافة مسافة داخلية */
         }
+        /* END: Image display improvements */
         
         .book-card:hover .book-cover img {
             transform: scale(1.05); /* تأثير تكبير بسيط عند المرور */
@@ -1094,12 +1091,10 @@
             </div>
             
             <div class="books-grid" id="new-book-grid">
-                <!-- سيتم ملؤه بواسطة JavaScript -->
-            </div>
+                </div>
             
             <div class="books-list" id="new-book-list" style="display: none;">
-                <!-- سيتم ملؤه بواسطة JavaScript -->
-            </div>
+                </div>
         </div>
 
         <section class="books-section">
@@ -1137,12 +1132,10 @@
             </div>
             
             <div class="books-grid" id="book-grid">
-                <!-- سيتم ملؤه بواسطة JavaScript -->
-            </div>
+                </div>
             
             <div class="books-list" id="book-list" style="display: none;">
-                <!-- سيتم ملؤه بواسطة JavaScript -->
-            </div>
+                </div>
         </section>
         
         <section class="api-section">
@@ -1210,7 +1203,6 @@
         </div>
     </footer>
 
-    <!-- HTML for e-book reader -->
     <div id="reader-modal" class="reader-modal">
         <div class="reader-modal-content">
             <span class="reader-close">&times;</span>
@@ -1761,7 +1753,7 @@
                     "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
                     "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
                     "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
-                    "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%�%80google.pdf",
+                    "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%2%80google.pdf",
                     "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
                  },
                 "page": {
@@ -1931,7 +1923,7 @@
                 ${isNew ? `<span class="new-badge-card">${lang === 'ar' ? 'جديد' : 'New'}</span>` : ''}
                 <div class="book-cover">
                     ${enBadgeHtml}
-                    <img src="${bookCover}" alt="غلاف كتاب ${bookTitle}" onerror="this.classList.add('error'); this.nextElementSibling.style.display='flex';">
+                    <img src="${bookCover}" alt="غلاف كتاب ${bookTitle}" loading="lazy" onerror="this.classList.add('error'); this.nextElementSibling.style.display='flex';">
                     <div class="book-cover-placeholder" style="display: none;">${bookTitle.substring(0, 2)}</div>
                     <span class="ai-badge">AI Ready</span>
                 </div>
@@ -1986,10 +1978,10 @@
 
                 if (isNew && newBookGrid && newBookList) {
                     newBookGrid.appendChild(gridCard);
-                    newBookList.appendChild(listCard);
+                    newBookList.appendChild(createBookCard(book, 'list'));
                 } else {
                     bookGrid.appendChild(gridCard);
-                    bookList.appendChild(listCard);
+                    bookList.appendChild(createBookCard(book, 'list'));
                 }
             });
         }
@@ -2125,7 +2117,7 @@
                 const contentValue = contentType.value;
                 const aiValue = aiCompatibility.value;
                 
-                document.querySelectorAll('.book-card').forEach(card => {
+                document.querySelectorAll('#book-grid .book-card, #book-list .book-card').forEach(card => {
                     const category = card.getAttribute('data-category');
                     const aiAccess = JSON.parse(card.getAttribute('data-ai-access'));
                     
@@ -2135,7 +2127,7 @@
                                  (aiValue === 'api' && aiAccess.api_accessible) ||
                                  (aiValue === 'analysis' && aiAccess.content_analysis);
                     
-                    card.style.display = contentMatch && aiMatch ? 'block' : 'none';
+                    card.style.display = contentMatch && aiMatch ? 'flex' : 'none';
                 });
             };
             
