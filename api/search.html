@@ -1,3 +1,19 @@
+أكيد، تم إصلاح الملف `api/search.html` ليعتمد بشكل كامل على الروابط الخارجية من **Google Drive** و **Internet Archive** المتوفرة في ملف البيانات `index.json`.
+
+بالإضافة إلى ذلك، تم إجراء تحسينات وإصلاحات أخرى لجعل الصفحة تعمل بشكل صحيح مع هيكل البيانات الفعلي، بما في ذلك:
+
+  * **إصلاح جلب الروابط**: تم تحديث الكود ليقرأ الروابط من `book.links` بدلاً من `book.path` غير الموجود.
+  * **تحديد أولويات الروابط**: يتم الآن اختيار رابط PDF من **Internet Archive** أولاً، ثم رابط PDF من **Google Drive** في حال عدم توفر الأول.
+  * **إصلاح مسارات الصور**: تم تصحيح بناء روابط صور الأغلفة لتكون مطلقة وصحيحة.
+  * **تحديث الفئات (Filters)**: تم تعديل الفئات في الواجهة لتتطابق مع البيانات الفعلية في `index.json` (`دراسات قرآنية`, `دراسات إيمانية`, `مشاريع رقمية`).
+  * **تحسين عرض البيانات**: يتم الآن عرض عدد الصفحات بدلاً من سنة النشر التي لم تكن متوفرة.
+  * **تنظيف الكود**: تمت إزالة الدوال غير الضرورية التي كانت تعالج المسارات المحلية.
+
+إليك الكود المصحح والجاهز للاستخدام:
+
+### النسخة المصححة من `api/search.html`
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -97,7 +113,7 @@
         }
         
         .book-cover {
-            height: 180px;
+            height: 200px;
             object-fit: cover;
             width: 100%;
             background: #f1f5f9;
@@ -105,6 +121,12 @@
             align-items: center;
             justify-content: center;
             color: #94a3b8;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .book-info {
@@ -237,20 +259,6 @@
             color: #cbd5e1;
         }
         
-        .path-correction-note {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 0;
-            color: #856404;
-        }
-        
-        .file-checking {
-            display: inline-block;
-            margin-right: 5px;
-        }
-        
         @media (max-width: 768px) {
             .search-box {
                 flex-direction: column;
@@ -276,11 +284,6 @@
         </div>
         
         <div class="search-container">
-            <div class="path-correction-note">
-                <i class="fas fa-info-circle me-2"></i>
-                <strong>تم تحسين تجربة القراءة:</strong> الآن يتم التحقق من وجود الملف قبل عرض رابط القراءة لتجنب أخطاء 404.
-            </div>
-            
             <div class="search-box">
                 <input type="text" id="searchInput" class="form-control search-input" placeholder="ابحث عن كتاب أو موضوع..." value="القرآن">
                 <select id="languageSelect" class="form-select lang-select">
@@ -296,11 +299,9 @@
                 <div class="filter-title">الفئات:</div>
                 <div class="filter-badges">
                     <div class="filter-badge active" onclick="toggleFilter('all')">الكل</div>
-                    <div class="filter-badge" onclick="toggleFilter('تفسير')">تفسير</div>
-                    <div class="filter-badge" onclick="toggleFilter('حديث')">حديث</div>
-                    <div class="filter-badge" onclick="toggleFilter('فقه')">فقه</div>
-                    <div class="filter-badge" onclick="toggleFilter('لغة')">لغة</div>
-                    <div class="filter-badge" onclick="toggleFilter('سيرة')">سيرة</div>
+                    <div class="filter-badge" onclick="toggleFilter('quranic_studies')">دراسات قرآنية</div>
+                    <div class="filter-badge" onclick="toggleFilter('faith_studies')">دراسات إيمانية</div>
+                    <div class="filter-badge" onclick="toggleFilter('digital_projects')">مشاريع رقمية</div>
                 </div>
             </div>
             
@@ -316,56 +317,29 @@
     </div>
 
     <script>
-        let booksData = [];
+        let allBooks = [];
         let currentPage = 1;
         const resultsPerPage = 9;
         let currentFilter = 'all';
-        let fileAvailabilityCache = {};
 
-        // دالة لتصحيح مسار الكتاب
-        function correctBookPath(path) {
-            if (!path) return '';
-            
-            // استبدال المسارات التي تحتوي على /api/books/ إلى /books/
-            return path.replace('/api/books/', '/books/');
-        }
-
-        // دالة للتحقق من وجود الملف
-        async function checkFileAvailability(url) {
-            if (fileAvailabilityCache[url]) {
-                return fileAvailabilityCache[url];
-            }
-            
-            try {
-                const response = await fetch(url, { method: 'HEAD' });
-                const isAvailable = response.ok;
-                fileAvailabilityCache[url] = isAvailable;
-                return isAvailable;
-            } catch (error) {
-                fileAvailabilityCache[url] = false;
-                return false;
-            }
-        }
-
-        // دالة لإنشاء زر القراءة مع التحقق من وجود الملف
-        async function createReadButton(book, lang) {
+        // دالة لإنشاء زر القراءة بالاعتماد على الروابط الخارجية
+        function createReadButton(book, lang) {
             const buttonContainer = document.createElement('div');
-            
-            if (!book.path || !book.path[lang]) {
-                buttonContainer.innerHTML = `
-                    <span class="btn-disabled">
-                        <i class="fas fa-exclamation-circle me-1"></i> غير متاح
-                    </span>
-                `;
-                return buttonContainer;
+            let bookUrl = null;
+
+            if (book.links && book.links[lang]) {
+                const langLinks = book.links[lang];
+                // تحديد الأولوية: أرشيف الإنترنت ثم جوجل درايف
+                if (langLinks.archive_pdf) {
+                    bookUrl = langLinks.archive_pdf;
+                } else if (langLinks.pdf_external) {
+                    bookUrl = langLinks.pdf_external;
+                }
             }
-            
-            const correctedPath = correctBookPath(book.path[lang]);
-            const isAvailable = await checkFileAvailability(correctedPath);
-            
-            if (isAvailable) {
+
+            if (bookUrl) {
                 buttonContainer.innerHTML = `
-                    <a href="${correctedPath}" target="_blank" class="btn-text">
+                    <a href="${bookUrl}" target="_blank" class="btn-text">
                         <i class="fas fa-book me-1"></i> اقرأ الآن
                     </a>
                 `;
@@ -373,218 +347,165 @@
                 buttonContainer.innerHTML = `
                     <span class="btn-disabled">
                         <i class="fas fa-exclamation-circle me-1"></i> غير متاح
-                    <span class="file-checking" title="الملف غير متاح حالياً"><i class="fas fa-info-circle"></i></span>
                     </span>
                 `;
             }
-            
             return buttonContainer;
         }
 
-        // Fetch index.json data
+        // جلب بيانات الكتب من ملف index.json
         async function fetchBooks() {
             try {
-                showError(''); // Clear any previous errors
+                showError('');
                 const response = await fetch('https://nasserhabitat.github.io/nasser-books/assets/data/index.json');
                 if (!response.ok) {
                     throw new Error(`فشل في جلب بيانات الكتب: ${response.status} ${response.statusText}`);
                 }
-                booksData = await response.json();
-                
-                // تصحيح مسارات الكتب في البيانات
-                booksData.books.forEach(book => {
-                    if (book.path && book.path.ar) {
-                        book.path.ar = correctBookPath(book.path.ar);
-                    }
-                    if (book.path && book.path.en) {
-                        book.path.en = correctBookPath(book.path.en);
-                    }
-                    if (book.cover && book.cover.ar) {
-                        book.cover.ar = correctBookPath(book.cover.ar);
-                    }
-                    if (book.cover && book.cover.en) {
-                        book.cover.en = correctBookPath(book.cover.en);
-                    }
-                });
-                
-                searchBooks(); // Initial display
+                const data = await response.json();
+                allBooks = data.books || [];
+                searchBooks(); // العرض الأولي للنتائج
             } catch (error) {
-                showError(`خطأ: ${error.message}. تأكد من أن ملف index.json متوفر في assets/data/ أو تحقق من اتصال الشبكة.`);
+                showError(`خطأ: ${error.message}. تأكد من أن ملف index.json متوفر أو تحقق من اتصال الشبكة.`);
             }
         }
 
-        // Show error message
         function showError(message) {
             const errorDiv = document.getElementById('error');
             errorDiv.textContent = message;
-            if (message) {
-                errorDiv.classList.remove('d-none');
-            } else {
-                errorDiv.classList.add('d-none');
-            }
+            errorDiv.classList.toggle('d-none', !message);
         }
 
-        // Toggle filter
         function toggleFilter(filter) {
+            const currentBadge = document.querySelector(`.filter-badge[onclick="toggleFilter('${currentFilter}')"]`);
+            if(currentBadge) currentBadge.classList.remove('active');
+            
             currentFilter = filter;
-            document.querySelectorAll('.filter-badge').forEach(badge => {
-                badge.classList.remove('active');
-            });
-            event.target.classList.add('active');
+            
+            const newBadge = document.querySelector(`.filter-badge[onclick="toggleFilter('${currentFilter}')"]`);
+            if(newBadge) newBadge.classList.add('active');
+            
             currentPage = 1;
             searchBooks();
         }
 
-        // Search and display results
-        async function searchBooks() {
+        // البحث وعرض النتائج
+        function searchBooks() {
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
             const lang = document.getElementById('languageSelect').value;
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '';
 
-            // Filter books
-            let filteredBooks = booksData.books.filter(book => {
+            // فلترة الكتب
+            const filteredBooks = allBooks.filter(book => {
                 const title = book.title[lang]?.toLowerCase() || '';
                 const description = book.description[lang]?.toLowerCase() || '';
-                const keywords = book.keywords?.map(keyword => keyword.toLowerCase()) || [];
+                const keywords = book.metadata?.keywords?.map(k => k.toLowerCase()) || [];
+                const category = book.metadata?.category || '';
                 
-                // Apply category filter
-                const categoryMatch = currentFilter === 'all' || 
-                                    (book.category && book.category.includes(currentFilter));
+                const categoryMatch = currentFilter === 'all' || category === currentFilter;
                 
-                // Apply search query
-                const queryMatch = !query || 
-                                 title.includes(query) || 
-                                 description.includes(query) || 
+                const queryMatch = !query ||
+                                 title.includes(query) ||
+                                 description.includes(query) ||
                                  keywords.some(keyword => keyword.includes(query));
                 
                 return categoryMatch && queryMatch;
             });
 
-            // Update stats
-            document.getElementById('stats').textContent = 
-                `عثرنا على ${filteredBooks.length} نتيجة لبحثك`;
+            document.getElementById('stats').textContent = `عثرنا على ${filteredBooks.length} نتيجة لبحثك`;
 
-            // Pagination
+            // تقسيم الصفحات
             const totalPages = Math.ceil(filteredBooks.length / resultsPerPage);
             const startIndex = (currentPage - 1) * resultsPerPage;
-            const endIndex = startIndex + resultsPerPage;
-            const paginatedBooks = filteredBooks.slice(startIndex, endIndex);
+            const paginatedBooks = filteredBooks.slice(startIndex, startIndex + resultsPerPage);
 
-            // Display results
+            // عرض النتائج
             if (paginatedBooks.length === 0) {
                 resultsDiv.innerHTML = `
                     <div class="no-results">
                         <i class="fas fa-search"></i>
                         <h4>لم يتم العثور على نتائج</h4>
                         <p>حاول استخدام كلمات بحث أخرى أو تغيير الفئة</p>
-                    </div>
-                `;
+                    </div>`;
             } else {
-                for (const book of paginatedBooks) {
-                    // Ensure correct image path
-                    let coverImage = 'https://nasserhabitat.github.io/nasser-books/assets/images/placeholder.png';
-                    if (book.cover && book.cover[lang]) {
-                        coverImage = book.cover[lang];
+                const BASE_URL = 'https://nasserhabitat.github.io/nasser-books/';
+                paginatedBooks.forEach(book => {
+                    let coverImage = `${BASE_URL}assets/images/placeholder.png`;
+                    if (book.links && book.links[lang] && book.links[lang].cover) {
+                        coverImage = BASE_URL + book.links[lang].cover;
                     }
+                    
+                    const pages = book.metadata ? book.metadata['pages_' + lang] || '' : '';
+                    const pagesHTML = pages ? `<span><i class="fas fa-file-alt"></i> ${pages} صفحة</span>` : '';
                     
                     const col = document.createElement('div');
                     col.className = 'col-md-6 col-lg-4';
                     
-                    // إنشاء زر القراءة مع التحقق من وجود الملف
-                    const readButton = await createReadButton(book, lang);
+                    const readButton = createReadButton(book, lang);
                     
                     col.innerHTML = `
                         <div class="result-card">
                             <div class="book-cover">
-                                <img src="${coverImage}" alt="${book.title[lang]}" class="img-fluid" 
-                                    onerror="this.src='https://nasserhabitat.github.io/nasser-books/assets/images/placeholder.png'">
+                                <img src="${coverImage}" alt="${book.title[lang]}" onerror="this.src='${BASE_URL}assets/images/placeholder.png'">
                             </div>
                             <div class="book-info">
                                 <h3 class="book-title">${book.title[lang]}</h3>
                                 <p class="book-desc">${book.description[lang]}</p>
                                 <div class="book-meta">
-                                    <span><i class="fas fa-tag"></i> ${book.category || 'غير محدد'}</span>
-                                    <span><i class="fas fa-calendar"></i> ${book.year || 'غير محدد'}</span>
+                                    <span><i class="fas fa-tag"></i> ${book.metadata.category || 'غير محدد'}</span>
+                                    ${pagesHTML}
                                 </div>
-                                <div class="action-buttons">
-                                </div>
+                                <div class="action-buttons"></div>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
                     
-                    // إضافة زر القراءة إلى المكان المناسب
                     col.querySelector('.action-buttons').appendChild(readButton);
                     resultsDiv.appendChild(col);
-                }
+                });
             }
 
-            // Update pagination
             updatePagination(totalPages);
         }
 
-        // Update pagination controls
         function updatePagination(totalPages) {
             const pagination = document.getElementById('pagination');
             pagination.innerHTML = '';
-
             if (totalPages <= 1) return;
 
-            // Previous button
-            const prevLi = document.createElement('li');
-            prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-            prevLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage - 1})">
-                <i class="fas fa-arrow-right"></i>
-            </a>`;
-            pagination.appendChild(prevLi);
+            const createPageItem = (page, text, disabled = false, active = false) => {
+                const li = document.createElement('li');
+                li.className = `page-item ${disabled ? 'disabled' : ''} ${active ? 'active' : ''}`;
+                li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${page})">${text}</a>`;
+                return li;
+            };
 
-            // Page numbers
+            pagination.appendChild(createPageItem(currentPage - 1, '<i class="fas fa-arrow-right"></i>', currentPage === 1));
+            
             const startPage = Math.max(1, currentPage - 2);
             const endPage = Math.min(totalPages, startPage + 4);
-            
             for (let i = startPage; i <= endPage; i++) {
-                const li = document.createElement('li');
-                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-                li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
-                pagination.appendChild(li);
+                pagination.appendChild(createPageItem(i, i, false, i === currentPage));
             }
-
-            // Next button
-            const nextLi = document.createElement('li');
-            nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-            nextLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage + 1})">
-                <i class="fas fa-arrow-left"></i>
-            </a>`;
-            pagination.appendChild(nextLi);
+            
+            pagination.appendChild(createPageItem(currentPage + 1, '<i class="fas fa-arrow-left"></i>', currentPage === totalPages));
         }
 
-        // Change page
         function changePage(page) {
-            if (page < 1 || page > Math.ceil(booksData.books.length / resultsPerPage)) return;
+            const totalPages = Math.ceil(allBooks.filter(b => currentFilter === 'all' || b.metadata.category === currentFilter).length / resultsPerPage);
+            if (page < 1 || page > totalPages) return;
             currentPage = page;
             searchBooks();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
-        document.getElementById('searchInput').addEventListener('input', () => {
-            currentPage = 1;
-            searchBooks();
-        });
-        
-        document.getElementById('languageSelect').addEventListener('change', () => {
-            currentPage = 1;
-            searchBooks();
-        });
-        
-        document.getElementById('searchInput').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                searchBooks();
-            }
-        });
+        // Event Listeners
+        document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; searchBooks(); });
+        document.getElementById('languageSelect').addEventListener('change', () => { currentPage = 1; searchBooks(); });
+        document.getElementById('searchInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') searchBooks(); });
 
         // Initial fetch
         fetchBooks();
     </script>
 </body>
 </html>
+```
