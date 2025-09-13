@@ -5,6 +5,24 @@
     position: relative;
     display: flex;
 }
+/* في search.css */
+.book-result-cover {
+  width: 100px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease; /* تأثير ناعم عند التحميل */
+}
+
+.book-result-cover[loading="lazy"] {
+  opacity: 0.5; /* خفيف قبل التحميل */
+}
+
+.book-result-cover:not([loading]) {
+  opacity: 1; /* كامل بعد التحميل */
+}
 
 .search-input {
     width: 100%;
