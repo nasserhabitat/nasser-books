@@ -16,59 +16,52 @@
     "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
-    "id": "editing-the-quranic-terminology-tome1",
-    "titles": {
-      "ar": "تحرير المصطلح القرآني المجلد 1",
-      "en": "Clarifying the Quranic Terminology Tome 1"
-    },
-    "description": {
-      "ar": "يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يُعد المجلد الأول حجر الأساس والبوابة المنهجية لمشروع 'تحرير المصطلح القرآني' بأكمله.",
-      "en": "This book seeks to reconstruct a correct understanding of religion and life by refining prevailing concepts and offering authentic insights into Quranic terminology, inspired by the essence of the Quranic language. The first volume serves as the foundational cornerstone and methodological gateway for the entire 'Clarifying the Quranic Terminology' project."
-    },
-    "links": {
-      "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-        "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
-        "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
-        "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
-        "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
-        "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%ج%D9%84%D8%AF%201.pdf",
-        "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+   
+      "id": "editing-the-quranic-terminology-tome1",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
+        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
       },
-      "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-        "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
-        "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
-        "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
-        "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
-        "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
-        "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-      }
-    },
-    "metadata": {
-      "author": "ناصر ابن داوود",
-      "category": "quranic_studies",
-      "pages_ar": 376,
-      "pages_en": 486,
-      "language_ar": "arabic",
-      "language_en": "english",
-      "ai_accessible": true,
-      "structured_data": true,
-      "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير", "الرسم العثماني", "المخطوطات القرآنية", "تحليل لغوي"],
-      "edition": "الثالثة - 2025",
-      "volume": 1,
-      "total_volumes": 3,
-      "key_features": [
-        "منهجية 'التدبر التفاعلي' التي تتجاوز القراءة السطحية",
-        "تحليل لغوي دقيق للمصطلحات القرآنية",
-        "استفادة من التكنولوجيا الحديثة كأدوات مساعدة",
-        "عرض شمولي يتجاوز الإشكاليات التقليدية",
-        "تحرير المصطلح من الإضافات البشرية والتأويلات"
-      ],
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الأول",
+        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
+          "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
+          "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
+          "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
+          "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
+          "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
+          "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+        },
+        "en": {
+          "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+          "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
+          "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
+          "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
+          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
+          "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
+          "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 376,
+        "pages_en": 486,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
+,
       "main_themes": [
         "تأصيل المصدر والمنهج: العودة إلى المخطوطات القرآنية الأصلية",
         "إعادة بناء المفاهيم العقدية والعبادية",
