@@ -1,0 +1,347 @@
+Looking at your HTML code, I can see it's a book page for "المسيح ومريم في القرآن" (Christ and Mary in the Quran). The code is well-structured but has some formatting issues in the content section. Let me provide you with a cleaned-up version:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> المسيح ومريم في القرآن | مكتبة ناصر ابن داوود</title>
+    <meta name="description" content="من الرمز الباطني إلى النموذج الإنساني">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57C5B6;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .book-cover {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .book-meta {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .book-meta p {
+            margin: 0.5rem 0;
+        }
+        .book-description {
+            margin: 2rem 0;
+        }
+        .book-description p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .book-features {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
+        }
+        .book-features h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .book-features ul {
+            padding-right: 20px;
+        }
+        .book-features li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        .toc {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--secondary-color);
+        }
+        .toc h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .toc ol {
+            padding-right: 20px;
+            columns: 2;
+            column-gap: 2rem;
+        }
+        .toc li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--primary-color);
+        }
+        .conclusion h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: var(--dark-color);
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+            .toc ol {
+                columns: 1;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1> المسيح ومريم في القرآن </h1>
+            <p class="subtitle"> من الرمز الباطني إلى النموذج الإنساني</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="book-cover">
+            <div class="cover-container">
+                <img src="cover-ar.png"
+                     alt="غلاف كتاب المسيح ومريم في القرآن - تأليف ناصر ابن داوود"
+                     loading="lazy"
+                     width="300"
+                     height="400"
+                     decoding="async">
+            </div>
+            
+            <div class="book-actions">
+                <a href="https://archive.org/details/20250529_20250529_2033" 
+                   class="btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    قراءة على الأرشيف
+                </a>
+                <a href="../en/" class="btn btn-secondary">
+                    النسخة الإنجليزية
+                </a>
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
+                    العودة إلى الكتب
+                </a>
+            </div>
+            
+            <div class="book-meta">
+                <p><strong>تأليف:</strong> ناصر ابن داوود</p>
+                <p><strong>الطبعة:</strong> الأولى - 2025</p>
+                <p><strong>الصفحات:</strong> 96 صفحة</p>
+                <p><strong>التصنيف:</strong> الدراسات الإسلامية، التفسير القرآني</p>
+                <p><strong>اللغة:</strong> العربية</p>
+            </div>
+        </section>
+        
+        <section class="book-details">
+            <div class="book-description">
+                <h2>وصف الكتاب</h2>
+                <p>"هذا الكتابُ ليس تفسيرًا، بل هو دعوةٌ للسفرِ في أعماقِ "اللسانِ العربيِّ المبين" ؛ لا بوصفِه لغةً فحسب، بل بوصفِه شيفرةً إلهيةً ونظامًا معرفيًا فريدًا. هو محاولةٌ للغوصِ في "غيبياتِ" المعنى التي تغيبُ عن القراءةِ الحرفيَّةِ السطحية ، لنكتشفَ كيف أنَّ قصةَ المسيحِ وأمِّهِ مريم، ليست مجرَّدَ واقعةٍ تاريخية، بل هي خارطةُ طريقٍ حيَّةٌ لكلِّ نفسٍ بشريةٍ تتوقُ إلى ولادةِ وعيها الجديد.</p>
+                
+                <p>إنها رحلةٌ لنتعلَّمَ كيف نكونُ "مريم" في شجاعةِ الانتباذِ عن موروثاتِ الفكرِ البالية ، وكيف نُحيي "المسيحَ" الكامنَ في أعماقِنا، لنكونَ برنامجَ إحياءٍ في واقعِنا، وقوةَ مسحٍ لجهلِ العقولِ وموتِ القلوب. فهل أنتم مستعدونَ لتدبُّرِ ما لم يُكشف للكثيرين؟</p>
+                
+                <p>فإن السلسلة التي بين يديك – "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني" – هي ثمرة تطبيقية لمنهجية أوسع نسميها "فقه اللسان القرآني"، والتدبر الباطني الذي تعتمده هو أحد أهم فروع هذا الفقه وأكثرها غوصًا في أعماق النص. وهي تنطلق من قناعة راسخة بأن القرآن ليس نصًا خطيًا مغلقًا، بل هو كونٌ مفتوح من المعاني، نظامٌ لغوي ومعرفي فريد، ذو بناء داخلي محكم وقصدي.</p>
+            </div>
+
+            <div class="toc">
+                <h3>فهرس المحتويات</h3>
+                <ol>
+                    <li>مقدمة الكتاب: المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني</li>
+                    <li>الفهرس</li>
+                    <li>مقدمة المنهجية: أسس التدبر الباطني وضوابطه – في إطار مشروع "فقه اللسان القرآني</li>
+                    <li>ملخص منهجي متكامل جديد : نحو فقه جديد للسان القرآني</li>
+                    <li>مخاطبة العقل التقليدي: حوارٌ لا صِدَام</li>
+                    <li>مريم العذراء.. تحليل نفسي لشخصية شكلتها الصدمات والعزلة</li>
+                    <li>مريم الثائرة.. الانتباذ والحجاب والولادة العذرية كرموز للتحرر الفكري</li>
+                    <li>ولادة المسيح ومعجزاته: قراءة رمزية علمية معاصرة</li>
+                    <li>معنى "المسيح": البرنامج الإلهي لمسح الجهل وإحياء العقول</li>
+                    <li>الرفع الإلهي: بين الجاذبية الروحية والسنن الكونية</li>
+                    <li>الكلمة: الشيفرة الإلهية بين الخلق والوعي</li>
+                    <li>النصارى في الميزان القرآني: حين تنحرف النصرة من "نصرة الله" إلى "نصرة الهوى"</li>
+                    <li>أنصار الله النموذج القرآني للنصرة الراشدة في الحواريين والأنصار</li>
+                    <li>كنوز القرآن الخفية: كيف نفهم رموز "المحراب" في قصة مريم</li>
+                    <li>من الحدث التاريخي إلى الطاقة الروحية المتجددة</li>
+                    <li>أسماء الأنبياء في القرآن: كنوز لغوية ومرايا روحية في ضوء نظام المثاني</li>
+                    <li>الحروف المقطعة وقصة الخضر: التفسير الباطني للقرآن (سورة مريم والكهف نموذجًا)</li>
+                    <li>المسيح عيسى وأمه مريم كـ "إلهين دون الرحمن" (حالة خاصة)</li>
+                    <li>المسيح ومريم في القرآن: قراءة باطنية في الرموز والمعاني المستترة</li>
+                    <li>مريم وعيسى عليهما السلام: تشريح نفسي ومعرفي للنشأة والمعجزات</li>
+                    <li>ما وراء المادة: قراءة رمزية لـ"الأكل" و"الشرب" و"الصيد" في الميزان القرآني</li>
+                    <li>ما وراء "أهل الكتاب": "المشرك"، "المجوسي"، و"الصابئون" في ميزان القرآن ومعيار النجاة</li>
+                    <li>المائدة السماوية: غذاء للجسد أم غذاء للروح؟ تأملات في سورة المائدة</li>
+                    <li>كيف تكلم الله بالأسماء الحسنى: رحلة عبر الأنبياء تتوج بالمسيح ومريم</li>
+                    <li>ملحق: ورشة عمل تدبرية</li>
+                    <li>كيف تُفعِّل برنامج المسيح في حياتك؟</li>
+                    <li>الأسماء الحسنى في رسالة عيسى ومريم - تتويج الرحلة النبوية</li>
+                    <li>خاتمة: كُن أنتَ الوفدَ القادم</li>
+                    <li>شكرٌ وعرفان: إلى كل من أضاء شمعةً في درب التدبر</li>
+                    <li>الهوامش والمراجع</li>
+                </ol>
+            </div>
+
+            <div class="conclusion">
+                <h3>خاتمة: كُن أنتَ الوفدَ القادم</h3>
+                <p>في ختامِ رحلتِنا عبرَ دروبِ المعاني المستترةِ في قصةِ المسيحِ ومريم، نصلُ إلى نقطةٍ ليست هي النهاية، بل هي بدايةُ المسؤولية. لقد حاولنا معًا أن نزيحَ غبارَ الزمنِ عن رموزِ القرآنِ الخالدة، لا لنُحصيَها، بل لنُحييَها في واقعِنا.</p>
+                
+                <p>بدأنا من "مريم"؛ تلك النفسُ الطاهرةُ التي علَّمتنا أنَّ ولادةَ "الكلمةِ" الحقَّةِ تتطلَّبُ "محرابًا" من الصمتِ الداخلي، وشجاعةَ الانتباذِ عن ضجيجِ العالمِ. ورأينا فيها نموذجًا لكلِّ وعيٍ يستعدُّ لاستقبالِ الإلهامِ الإلهي. ثمَّ تجلَّى لنا "المسيحُ"؛ ليس بوصفِه معجزةً تاريخيةً فحسب، بل كـ"برنامجٍ إحيائيٍّ" متجدِّد ، و"كلمةٍ" إلهيةٍ تحملُ في طيَّاتِها شيفرةَ العلمِ والإيمانِ معًا، ودعوةً لكلِّ إنسانٍ ليمسحَ عن نفسِهِ جيناتِ العدوانِ ويُحييَ في محيطِهِ أراضي الوعيِ الميتة.</p>
+                
+                <p>إنَّ هذا الكتابَ لم يُكتب ليُقرأ، بل ليُعاش. إنه دعوةٌ صريحةٌ لكلِّ قارئٍ أن يتجاوزَ دورَ المتلقِّي، ليصبحَ هو نفسُه "وفدًا قادمًا" ، يحملُ مشعلَ التدبُّرِ ويُحيي هذه المعانيَ في حياتِه.</p>
+                
+                <p>فلتكن أنتَ "مريمَ" في محرابِ عقلك، تستقبلُ الوحيَ وتتحدَّى المُسلَّمات.</p>
+                <p>ولتكن أنتَ "المسيحَ" في أفعالِك، برنامجَ إحياءٍ وسلامٍ حيثما حللت.</p>
+                <p>ولتكن من "أنصارِ الله" الذين ينصرونَ المبدأَ لا الأشخاص، والحقَّ لا الهوى.</p>
+                
+                <p>إنَّ القرآنَ ليس كتابَ تاريخٍ، بل هو "منهاجُ حياةٍ" ونظامُ تشغيلٍ للوعيِ الإنساني. واليوم، يسلِّمُ إليكَ هذا الكتابُ أمانةَ السؤالِ ومفتاحَ التدبُّر. فلتنطلق في رحلتِكَ الخاصة، لتكتشفَ كنوزَ القرآنِ الخفيَّة، وتكونَ أنتَ نفسُك آيةً حيَّةً من آياتِه، ووفدًا من وفودِ سمائِه.</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>أبرز مميزات الكتاب:</h3>
+                <ul>
+                    <li>قراءة باطنية عميقة لقصة المسيح ومريم في القرآن</li>
+                    <li>منهجية "فقه اللسان القرآني" كأداة للتدبر</li>
+                    <li>تحليل نفسي ومعرفي لشخصية مريم العذراء</li>
+                    <li>قراءة رمزية معاصرة لمعجزات المسيح</li>
+                    <li>ربط الرموز القرآنية بالتطبيق العملي في الحياة</li>
+                    <li>ورشة عمل تدبرية لتطبيق المفاهيم</li>
+                    <li>مخاطبة العقل التقليدي بأسلوب حوار لا صدام</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 مكتبة ناصر ابن داوود - جميع الحقوق محفوظة</p>
+        <p>باحث إسلامي ومهندس متخصص في الدراسات القرآنية الرقمية</p>
+    </footer>
+</body>
+</html>
+```
+
+## Key improvements made:
+
+1. **Structured the content properly** - Organized the table of contents into a proper ordered list
+2. **Added styling for new sections** - Created CSS classes for table of contents and conclusion sections
+3. **Fixed text formatting** - Properly formatted paragraphs and removed the jumbled text
+4. **Added book features** - Included relevant features based on the book's content
+5. **Improved responsiveness** - Made the table of contents single-column on mobile devices
+6. **Enhanced visual hierarchy** - Used different background colors for different content sections
+
+The page now has a clean, professional appearance with properly organized content that's easy to read and navigate.
