@@ -23,56 +23,51 @@
     "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
-    "id": "changing-the-concepts",
-    "titles": {
-      "ar": "تغيير المفاهيم للمصطلحات القرآنية",
-      "en": "Changing the Concepts of Quranic Terminology"
-    },
-    "description": {
-      "ar": "يهدف هذا الكتاب إلى إعادة بناء صرح الفهم الصحيح للدين والحياة من خلال تصحيح المفاهيم السائدة وتقديم رؤى أصيلة للمصطلحات القرآنية، مستلهمة من جوهر اللسان القرآني. يستند في منهجيته إلى الأسس النظرية والضوابط المنهجية لكتاب 'فقه اللسان القرآني'.",
-      "en": "This book seeks to reconstruct a correct understanding of religion and life by refining prevailing concepts and offering authentic insights into Quranic terminology, drawing from the essence of the Quranic language. It builds on the theoretical foundations and methodological principles outlined in 'The Jurisprudence of the Qur'anic Tongue'."
-    },
-    "links": {
-      "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
-        "html": "https://drive.google.com/uc?export=download&id=17pKy2zffItvfWXVxDcAeCO0Mzd9JKbcd",
-        "pdf": "books/changing-the-concepts/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
-        "text": "books/changing-the-concepts/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
-        "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
-        "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
-        "cover": "books/changing-the-concepts/ar/cover-ar.png"
+   
+      "id": "changing-the-concepts",
+      "titles": {
+        "ar": "تغيير المفاهيم",
+        "en": "Changing the Concepts"
       },
-      "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
-        "html": "https://drive.google.com/uc?export=download&id=1af5VjhR0H6kKTtuhCz-PxXR70z6VfmYe",
-        "pdf": "books/changing-the-concepts/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
-        "text": "books/changing-the-concepts/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-        "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur'anic%20Tongue_djvu.txt",
-        "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur'anic%20Tongue.pdf",
-        "cover": "books/changing-the-concepts/en/cover-en.png"
-      }
-    },
-    "metadata": {
-      "author": "ناصر ابن داوود",
-      "category": "quranic_studies",
-      "pages_ar": 569,
-      "pages_en": 829,
-      "language_ar": "arabic",
-      "language_en": "english",
-      "ai_accessible": true,
-      "structured_data": true,
-      "topics": [
-        "المصطلحات القرآنية",
-        "فقه اللغة",
-        "التفسير",
-        "التدبر التفاعلي",
-        "المفاهيم الإيمانية",
-        "تحليل لغوي"
-      ],
+      "description": {
+        "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
+        "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png",
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
+          "html": "https://drive.google.com/uc?export=download&id=1sOuXA8sA8a0vVU8betDkJvIZeNA6EjCB",
+          "pdf": "books/changing-the-concepts/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
+          "text": "books/changing-the-concepts/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
+          "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
+          "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
+          "cover": "books/changing-the-concepts/ar/cover-ar.png"
+        },
+        "en": {
+          "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
+          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
+          "pdf": "books/changing-the-concepts/en/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
+          "text": "books/changing-the-concepts/en/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+          "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
+          "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
+          "cover": "books/changing-the-concepts/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 569,
+        "pages_en": 829,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
       "edition": "الثالثة - 2025",
       "key_features": [
         "منهجية 'التدبر التفاعلي' التي تتجاوز القراءة السطحية",
