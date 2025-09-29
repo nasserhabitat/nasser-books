@@ -90,104 +90,14 @@ const libraryBooks = [
         }
     },
     {
-        id: "editing-the-quranic-terminology-tome3",
-        title_ar: "تحرير المصطلح القرآني المجلد 3",
-        title_en: "Editing the Qur'anic Term - Tome 3",
-        path_ar: "https://drive.google.com/file/d/1j9DindIvnm_-Q-au1-VnfQvsKwmYdObi/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1J_BOIKTto-TUhEh2GqHLO0KAZ3BAYvJZ/view?usp=sharing",
-        pdf_ar: "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
-        pdf_en: "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
-        text_ar: "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
-        text_en: "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
-        category: "quranic_studies",
-        ai_access: {
-            structured_data: true,
-            api_accessible: true,
-            content_analysis: true,
-            formats: ["html", "pdf", "txt"]
-        }
-    },
-    {
-        id: "contemplation-in-the-mirror",
-        title_ar: "التدبر في مرآة الرسوم",
-        title_en: "Contemplation in the Mirror of Drawings",
-        path_ar: "https://drive.google.com/file/d/1ACTlnMD-K37vFtnb1N_6tipeSfje1mVO/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1kKG5fon4fLB9kJVVhFnrC_9eq0RjcR9d/view?usp=sharing",
-        pdf_ar: "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
-        pdf_en: "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
-        text_ar: "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
-        text_en: "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
-        category: "quranic_studies",
-        ai_access: {
-            structured_data: true,
-            api_accessible: true,
-            content_analysis: true,
-            formats: ["html", "pdf", "txt"]
-        }
-    },
-    {
-        id: "the-jurisprudence",
-        title_ar: "فقه اللسان القرآني",
-        title_en: "The Jurisprudence of the Quranic Tongue",
-        path_ar: "https://drive.google.com/file/d/1t8E_KiKhbruJhuTL-alzNoniE_7h51Mz/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1g6lw85-ipZJN9smN_sHrBu3nDIxMvjas/view?usp=sharing",
-        pdf_ar: "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
-        pdf_en: "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
-        text_ar: "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
-        text_en: "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
-        category: "quranic_studies",
-        ai_access: {
-            structured_data: true,
-            api_accessible: true,
-            content_analysis: true,
-            formats: ["html", "pdf", "txt"]
-        }
-    },
-    {
-        id: "digitizing",
-        title_ar: "مشروع رقمنة المخطوطات الأصلية",
-        title_en: "The Project of Digitizing the Original Manuscripts",
-        path_ar: "https://drive.google.com/file/d/1H6Agi8uJdltnbFgNu1Rcwz5OnhiXCGXQ/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1oQNpnVYmZakyan6xVLPe62vGCV8G_wjz/view?usp=sharing",
-        pdf_ar: "https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf",
-        pdf_en: "https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf",
-        text_ar: "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
-        text_en: "https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt",
-        category: "digital_projects",
-        ai_access: {
-            structured_data: true,
-            api_accessible: true,
-            content_analysis: true,
-            formats: ["html", "pdf", "txt"]
-        }
-    },
-    {
-        id: "modesty",
-        title_ar: "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-        title_en: "Modesty: From the Energy of Modesty to the Key to Knowledge",
-        path_ar: "https://drive.google.com/file/d/1HyzLVSReExv3vd_bItOaczDXnZ8xfs-Z/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1tL1a1e2vYx1Z0rB9u4qT5oX1aL0bZ7mW/view?usp=sharing",
-        pdf_ar: "https://dn721506.ca.archive.org/0/items/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9.pdf",
-        pdf_en: "https://ia801508.us.archive.org/35/items/modesty-from-the-energy-of-modesty-to-the-key-to-knowledge/MODESTY%20-%20FROM%20THE%20ENERGY%20OF%20MODESTY%20TO%20THE%20KEY%20TO%20KNOWLEDGE.pdf",
-        text_ar: "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-        text_en: "https://archive.org/stream/modesty-from-the-energy-of-modesty-to-the-key-to-knowledge/MODESTY%20-%20FROM%20THE%20ENERGY%20OF%20MODESTY%20TO%20THE%20KEY%20TO%20KNOWLEDGE_djvu.txt",
-        category: "faith_studies",
-        ai_access: {
-            structured_data: true,
-            api_accessible: true,
-            content_analysis: true,
-            formats: ["html", "pdf", "txt"]
-        }
-    },
-    {
-        id: "malakoot",
-        title_ar: "وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
-        title_en: "And So That He May Be of the Certain Ones",
-        path_ar: "https://drive.google.com/file/d/1K8e7f1x7v2Qz3b4p6qN5zL2y8mX9kPqW/view?usp=sharing",
-        path_en: "https://drive.google.com/file/d/1mX8v9z2q3w4r5t6u7y8i9o0p1q2r3t4u/view?usp=sharing",
-        pdf_ar: "https://ia801709.us.archive.org/34/items/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8.pdf",
-        pdf_en: "https://ia801605.us.archive.org/2/items/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20STUDY%20IN%20THE%20PHILOSOPHY%20OF%20FAITH%20IN%20THE%20UNSEEN.pdf",
-        text_ar: "https://archive.org/stream/20250707_20250707_0947/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8_djvu.txt",
+        id: "and-so-that-he-may-be-of-the-certain-ones",
+        title_ar: "وليكون من الموقنين: دراسة في فلسفة الإيمان بالغيب",
+        title_en: "And So That He May Be of the Certain Ones: A Study in the Philosophy of Faith in the Unseen",
+        path_ar: "https://drive.google.com/file/d/1T5Rj8S9T0U1V2W3X4Y5Z6A7B8C9D0E1F/view?usp=sharing",
+        path_en: "https://drive.google.com/file/d/1G2H3I4J5K6L7M8N9O0P1Q2R3S4T5U6V7/view?usp=sharing",
+        pdf_ar: "https://dn721406.ca.archive.org/0/items/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/%D9%88%D9%84%D9%8A%D9%83%D9%88%D9%86%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D9%86%D9%8A%D9%86%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8.pdf",
+        pdf_en: "https://ia800208.us.archive.org/12/items/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20STUDY%20IN%20THE%20PHILOSOPHY%20OF%20FAITH%20IN%20THE%20UNSEEN.pdf",
+        text_ar: "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/%D9%88%D9%84%D9%8A%D9%83%D9%88%D9%86%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D9%86%D9%8A%D9%86%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%BA%D9%8A%D8%A8_djvu.txt",
         text_en: "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-study-in-the-philosophy-of-faith-in-the-unseen/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20STUDY%20IN%20THE%20PHILOSOPHY%20OF%20FAITH%20IN%20THE%20UNSEEN_djvu.txt",
         category: "faith_studies",
         ai_access: {
@@ -207,6 +117,42 @@ const libraryBooks = [
         pdf_en: "https://ia801704.us.archive.org/3/items/the-functional-beautiful-names-an-analytical-discretionary-study-of-the-connotations-of-divine-management/The%20Functional%20Beautiful%20Names%20-%20An%20Analytical%20Discretionary%20Study%20of%20the%20Connotations%20of%20Divine%20Management.pdf",
         text_ar: "https://archive.org/stream/20250707_20250707_0955/%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A_djvu.txt",
         text_en: "https://archive.org/stream/the-functional-beautiful-names-an-analytical-discretionary-study-of-the-connotations-of-divine-management/The%20Functional%20Beautiful%20Names%20-%20An%20Analytical%20Discretionary%20Study%20of%20the%20Connotations%20of%20Divine%20Management_djvu.txt",
+        category: "faith_studies",
+        ai_access: {
+            structured_data: true,
+            api_accessible: true,
+            content_analysis: true,
+            formats: ["html", "pdf", "txt"]
+        }
+    },
+    {
+        id: "prostration-and-glorification-in-the-qur’an",
+        title_ar: "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
+        title_en: "Prostration and Glorification in the Qur’an: From Heartfelt Purification to Practical Submission",
+        path_ar: "https://drive.google.com/file/d/1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB/view?usp=sharing",
+        path_en: "https://drive.google.com/file/d/1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd/view?usp=sharing",
+        pdf_ar: "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
+        pdf_en: "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
+        text_ar: "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
+        text_en: "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
+        category: "faith_studies",
+        ai_access: {
+            structured_data: true,
+            api_accessible: true,
+            content_analysis: true,
+            formats: ["html", "pdf", "txt"]
+        }
+    },
+    {
+        id: "christ-and-mary-in-the-qur’an",
+        title_ar: "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
+        title_en: "Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model",
+        path_ar: "https://drive.google.com/file/d/1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ/view?usp=sharing",
+        path_en: "https://drive.google.com/file/d/16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t/view?usp=sharing",
+        pdf_ar: "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
+        pdf_en: "https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t",
+        text_ar: "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
+        text_en: "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
         category: "faith_studies",
         ai_access: {
             structured_data: true,
@@ -303,7 +249,9 @@ function getBookDescription(bookId) {
         "digitizing": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
         "modesty": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
         "malakoot": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "names-in-the-holy": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى"
+        "names-in-the-holy": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
+        "prostration-and-glorification-in-the-qur’an": "دراسة معمقة للسجود والتسبيح في القرآن الكريم من التنزيه القلبي إلى الخضوع العملي",
+        "christ-and-mary-in-the-qur’an": "دراسة تحليلية لشخصيتي المسيح ومريم في القرآن الكريم من الرمز الباطني إلى النموذج الإنساني"
     };
     
     return descriptions[bookId] || "مؤلف قيم في علوم القرآن واللغة";
