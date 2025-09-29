@@ -16,49 +16,51 @@
     "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
-    "id": "the-jurisprudence",
-    "titles": {
-      "ar": "فقه اللسان العربي القرآني",
-      "en": "Jurisprudence of the Quranic Arabic"
-    },
-    "description": {
-      "ar": "دراسة منهجية لفهم اللسان العربي القرآني من خلال منهجية 'فقه اللسان العربي القرآني'. يهدف الكتاب إلى تجاوز الفهم السطحي عبر الغوص في البنية اللغوية والمعرفية للنص القرآني، ووضع مبادئ تأسيسية تؤكد على النظام الداخلي المحكم والقصدي للقرآن.",
-      "en": "A systematic study of the Quranic Arabic language through the methodology of 'Jurisprudence of the Quranic Arabic.' The book aims to transcend superficial understanding by delving into the linguistic and cognitive structure of the Quranic text, establishing foundational principles that affirm the Quran's precise and intentional internal system."
-    },
-    "links": {
-      "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
-        "html": "https://drive.google.com/uc?export=download&id=17pKy2zffItvfWXVxDcAeCO0Mzd9JKbcd",
-        "pdf": "books/the-jurisprudence/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
-        "text": "books/the-jurisprudence/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
-        "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
-        "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
-        "cover": "books/the-jurisprudence/ar/cover-ar.png"
+    
+      "id": "the-jurisprudence",
+      "titles": {
+        "ar": "فقه اللسان القرآني",
+        "en": "The Jurisprudence of the Quranic Tongue"
       },
-      "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
-        "html": "https://drive.google.com/uc?export=download&id=1af5VjhR0H6kKTtuhCz-PxXR70z6VfmYe",
-        "pdf": "books/the-jurisprudence/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
-        "text": "books/the-jurisprudence/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-        "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
-        "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
-        "cover": "books/the-jurisprudence/en/cover-en.png"
-      }
-    },
-    "metadata": {
-      "author": "ناصر ابن داوود",
-      "category": "quranic_studies",
-      "pages_ar": 569,
-      "pages_en": 829,
-      "language_ar": "arabic",
-      "language_en": "english",
-      "ai_accessible": true,
-      "structured_data": true,
-      "topics": ["فقه اللغة القرآنية", "اللسان العربي", "المخطوطات القرآنية", "التدبر القرآني", "الإعجاز اللغوي", "تحليل نصي"],
+      "description": {
+        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
+        "en": "A new approach to understanding the text and manuscript of the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
+          "html": "https://drive.google.com/uc?export=download&id=1EVBgXQivnuE8NmlCeFTDuNfSUfjBZlMQ",
+          "pdf": "books/the-jurisprudence/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
+          "text": "books/the-jurisprudence/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
+          "archive_text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
+          "archive_pdf": "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
+          "cover": "books/the-jurisprudence/ar/cover-ar.png"
+        },
+        "en": {
+          "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
+          "html": "https://drive.google.com/uc?export=download&id=1FXmnM4toB3DUinTLvmMovtnlihz4hHN5",
+          "pdf": "books/the-jurisprudence/en/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
+          "text": "books/the-jurisprudence/en/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
+          "archive_text": "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
+          "archive_pdf": "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
+          "cover": "books/the-jurisprudence/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 592,
+        "pages_en": 416,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"],
       "edition": "الأولى - 2025"
     },
     "key_features": [
