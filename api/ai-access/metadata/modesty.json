@@ -16,48 +16,51 @@
     "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
-    "id": "modesty",
-    "titles": {
-      "ar": "الحياء: سياج الروح وبوصلة الفهم",
-      "en": "Modesty: The Soul's Compass"
-    },
-    "description": {
-      "ar": "يقدم هذا الكتاب رؤية جديدة للحياء، ليس فقط كفضيلة أخلاقية، بل كأداة معرفية أساسية لفهم القرآن الكريم. يربط الكتاب بين الأخلاق القلبية والفهم العقلي من خلال منهجية متكاملة للتدبر، مع معالجة تحديات الحياء في العصر الرقمي.",
-      "en": "This book offers a new vision of modesty, not only as an ethical virtue but as an essential cognitive tool for understanding the Holy Quran. It connects heart ethics with intellectual comprehension through an integrated methodology for contemplation, addressing the challenges of modesty in the digital age."
-    },
-    "links": {
-      "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
-        "html": "https://drive.google.com/uc?export=download&id=1_eMZ1jwOChzjZBKZsS5V1uwrZJvddk5u",
-        "pdf": "books/modesty/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
-        "text": "books/modesty/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
-        "archive_text": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-        "archive_pdf": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9.pdf",
-        "cover": "books/modesty/ar/cover-ar.png"
+   
+      "id": "modesty",
+      "titles": {
+        "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+        "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
       },
-      "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
-        "html": "https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE",
-        "pdf": "books/modesty/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1i5__DOFOeEH8XhaL2vKlsK6JIgnQq7Vp",
-        "text": "books/modesty/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
-        "archive_text": "https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt",
-        "archive_pdf": "https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf",
-        "cover": "books/modesty/en/cover-en.png"
-      }
-    },
-    "metadata": {
-              "category": "faith_studies",
+      "description": {
+        "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
+        "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
+          "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
+          "pdf": "books/modesty/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
+          "text": "books/modesty/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
+          "archive_text": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
+          "archive_pdf": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
+          "cover": "books/modesty/ar/cover-ar.png"
+        },
+        "en": {
+          "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
+          "html": "https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE",
+          "pdf": "books/modesty/en/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
+          "text": "books/modesty/en/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
+          "archive_text": "https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt",
+          "archive_pdf": "https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf",
+          "cover": "books/modesty/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
         "pages_ar": 46,
         "pages_en": 40,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-      "topics": ["الأخلاق القرآنية", "التدبر القرآني", "الحياء في الإسلام", "فقه اللسان القرآني", "البعد الأخلاقي", "العصر الرقمي"],
+        "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"],
       "edition": "الأولى - 2025",
       "key_features": [
         "رؤية جديدة للحياء كأداة معرفية وليس فقط فضيلة أخلاقية",
