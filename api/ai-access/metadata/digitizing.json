@@ -17,30 +17,36 @@
   },
   "books": [
     {
+      
       "id": "digitizing",
       "titles": {
-        "ar": "مشروع رقمنة المخطوطات الأصلية",
-        "en": "Digitizing the Original Manuscripts"
+        "ar": "رقمنة المخطوطات القرآنية",
+        "en": "Digitization of Quranic Manuscripts"
       },
       "description": {
-        "ar": "دراسة منهجية لتطوير تقنيات رقمنة المخطوطات القرآنية الأصلية، مع التركيز على الحفظ الرقمي وتحليل النصوص باستخدام الأدوات الحديثة. يقدم الكتاب إطارًا عمليًا لحفظ النص القرآني وجعله متاحًا للأجيال القادمة مع ضمان الدقة والأصالة.",
-        "en": "A methodological study on developing techniques for digitizing original Quranic manuscripts, focusing on digital preservation and text analysis using modern tools. The book provides a practical framework for preserving the Quranic text and making it accessible for future generations while ensuring accuracy and authenticity."
+        "ar": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
+        "en": "A methodological study for the digital preservation of the Quranic text and its applications"
       },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png",
       "links": {
         "ar": {
           "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
-          "html": "https://drive.google.com/uc?export=download&id=17fkfkt6JcDV2S14qeRSIT9X1y6j7PZBZ",
-          "pdf": "https://drive.google.com/uc?export=download&id=1IJ2FneZK2jB3ur5ZYrTU08EXFwWw9hvs",
-          "text": "https://drive.google.com/uc?export=download&id=1JkXjPUssUOeC9Qbt7eKNUj4xfl2aCtR_",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
+          "html": "https://drive.google.com/uc?export=download&id=18vLE3iJJ3KHUT0AFOr_YFTXgIIMeaU8i",
+          "pdf": "books/digitizing/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1IJ2FneZK2jB3ur5ZYrTU08EXFwWw9hvs",
+          "text": "books/digitizing/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1JkXjPUssUOeC9Qbt7eKNUj4xfl2aCtR_",
+          "archive_text": "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
           "archive_pdf": "https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%80%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf",
           "cover": "books/digitizing/ar/cover-ar.png"
         },
         "en": {
           "docx": "https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA",
-          "html": "https://drive.google.com/uc?export=download&id=1Y_LEMVudlj8jKSe1WG4zTG2jsWsSwmnm",
-          "pdf": "https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS",
-          "text": "https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng",
+          "html": "https://drive.google.com/uc?export=download&id=1sp_GiMD7ArS8Cg-kFPnKp_c0yXh7gYbf",
+          "pdf": "books/digitizing/en/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS",
+          "text": "books/digitizing/en/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng",
           "archive_text": "https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt",
           "archive_pdf": "https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf",
           "cover": "books/digitizing/en/cover-en.png"
@@ -55,17 +61,7 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["الرقمنة", "المخطوطات القرآنية", "الحفظ الرقمي", "التقنيات الحديثة", "تحليل النصوص", "الترميم الرقمي"],
-        "edition": "الأولى - 2025",
-        "digital_archive": "https://archive.org/details/20250529_20250529_2100"
-      },
-      "key_features": [
-        "إطار منهجي لرقمنة المخطوطات القرآنية",
-        "استخدام تقنيات المسح الضوئي والتحليل الرقمي",
-        "ضمان دقة وأصالة النصوص المرقمنة",
-        "تطبيقات عملية لحفظ النص القرآني",
-        "دمج التكنولوجيا الحديثة مع الدراسات القرآنية"
-      ],
+        "topics": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"],
       "content_overview": {
         "methodology": "دراسة تطبيقية تجمع بين تقنيات الرقمنة الحديثة والدراسات القرآنية لتطوير منهجية متكاملة لحفظ النص القرآني",
         "data_sources": [
