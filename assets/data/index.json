@@ -1,5 +1,20 @@
 {
-  "books":
+  "library": {
+    "name": "مكتبة ناصر ابن داوود",
+    "version": "2.0",
+    "ai_compatible": true,
+    "last_updated": "2025-08-28",
+    "total_books": 14,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt"],
+    "license": "CC BY-SA 4.0",
+    "author": {
+      "name": "ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com",
+      "website": "https://nasserhabitat.github.io/nasser-books/"
+    }
+  },
+  "books": [
     {
       "id": "conscious-contemplation",
       "titles": {
@@ -67,7 +82,7 @@
           "text": "books/anwar-al-bayan/ar/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
           "archive_text": "https://archive.org/stream/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
+          "archive_pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
           "cover": "books/anwar-al-bayan/ar/cover-ar.png"
         },
         "en": {
@@ -364,7 +379,7 @@
           "cover": "books/the-jurisprudence/en/cover-en.png"
         }
       },
-   "metadata": {
+      "metadata": {
         "author": "ناصر ابن داوود",
         "category": "quranic_studies",
         "pages_ar": 592,
@@ -490,7 +505,7 @@
           "text": "books/malakoot/ar/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
           "archive_text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B5%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt",
-          "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
+          "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
           "cover": "books/malakoot/ar/cover-ar.png"
         },
         "en": {
@@ -656,5 +671,5 @@
         "topics": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"]
       }
     }
+  ]
 }
-
