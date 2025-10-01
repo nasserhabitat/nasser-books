@@ -1,4 +1,4 @@
-# مكتبة ناصر ابن داوود - باحث إسلامي ومهندس
+مكتبة ناصر ابن داوود - باحث إسلامي ومهندس
 
 **Nasser Ibn Dawood Library - Islamic Researcher and Engineer**
 
@@ -141,6 +141,17 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام على Archive.org](https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt)  
    - [📖 تحميل PDF من Archive.org](https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf)
 
+9. **فقه اللسان القرآني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP)  
+   - [📖 تحميل PDF (مباشر)](books/the-jurisprudence/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1EVBgXQivnuE8NmlCeFTDuNfSUfjBZlMQ)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6)  
+   - [📝 النص الخام (مباشر)](books/the-jurisprudence/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-jurisprudence/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org](https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf)
+
 #### الإنجليزية | English
 
 1. **Towards Conscious Contemplation**  
@@ -231,6 +242,17 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf)
 
+9. **The Jurisprudence of the Quranic Tongue**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK)  
+   - [📖 Download PDF (direct)](books/the-jurisprudence/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1FXmnM4toB3DUinTLvmMovtnlihz4hHN5)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV)  
+   - [📝 Plain Text (direct)](books/the-jurisprudence/en/content.txt)  
+   - [🖼️ Cover](books/the-jurisprudence/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt)  
+   - [📖 Download PDF from Archive.org](https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf)
+
 ### ✨ الدراسات الإيمانية | Faith Studies
 
 #### العربية | Arabic
@@ -265,8 +287,8 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx)  
    - [📝 النص الخام (مباشر)](books/prostration-and-glorification-in-the-qur’an/ar/content.txt)  
    - [🖼️ الغلاف](books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](null)  
-   - [📖 تحميل PDF من Archive.org](null)
+   - [📝 النص الخام على Archive.org] (https://archive.org/stream/content_20250929/content_djvu.txt)
+   - [📖 تحميل PDF من Archive.org] (https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf) 
 
 4. **المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني**  
    - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0)  
@@ -276,8 +298,8 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ)  
    - [📝 النص الخام (مباشر)](books/christ-and-mary-in-the-qur’an/ar/content.txt)  
    - [🖼️ الغلاف](books/christ-and-mary-in-the-qur’an/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](null)  
-   - [📖 تحميل PDF من Archive.org](null)
+   - [📝 النص الخام على Archive.org]  (https://archive.org/stream/content_20250929/content_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org]( https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf)
 
 5. **الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي**  
    - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz)  
@@ -322,8 +344,8 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD)  
    - [📝 Plain Text (direct)](books/prostration-and-glorification-in-the-qur’an/en/content.txt)  
    - [🖼️ Cover](books/prostration-and-glorification-in-the-qur’an/en/cover-en.png)  
-   - [📝 Plain Text on Archive.org](null)  
-   - [📖 Download PDF from Archive.org](null)
+   - [📝 Plain Text on Archive.org](https://ia902803.us.archive.org/23/items/context_20250929/context.txt)  
+   - [📖 Download PDF from Archive.org](https://ia902803.us.archive.org/23/items/context_20250929/context.pdf)
 
 4. **Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4)  
@@ -333,8 +355,8 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w)  
    - [📝 Plain Text (direct)](books/christ-and-mary-in-the-qur’an/en/content.txt)  
    - [🖼️ Cover](books/christ-and-mary-in-the-qur’an/en/cover-en.png)  
-   - [📝 Plain Text on Archive.org](null)  
-   - [📖 Download PDF from Archive.org](null)
+   - [📝 Plain Text on Archive.org]( https://archive.org/stream/context_202509/content_djvu.txt)  
+   - [📖 Download PDF from Archive.org]( https://ia801003.us.archive.org/24/items/context_202509/content.pdf)
 
 5. **The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy)  
@@ -361,7 +383,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
 ## 🛠 كيفية الاستخدام | How to Use
 
 1. **استنسخ المستودع** | Clone the repository:
-   ```bash
+   ```bash:disable-run
    git clone https://github.com/nasserhabitat/nasser-books.git
    ```
 
@@ -409,3 +431,4 @@ For inquiries about the library or research collaborations:
 هذا المشروع مرخص تحت رخصة MIT. المحتوى متاح للاستخدام والبحث بموجب ترخيص المشاع الإبداعي (CC BY-SA 4.0).  
 
 This project is licensed under the MIT License. Content is available for use and research under Creative Commons license (CC BY-SA 4.0).
+```
