@@ -1,675 +1,776 @@
 {
-  "library": {
-    "name": "مكتبة ناصر ابن داوود",
-    "version": "2.0",
-    "ai_compatible": true,
-    "last_updated": "2025-08-28",
-    "total_books": 14,
-    "languages": ["ar", "en"],
-    "formats": ["html", "pdf", "txt"],
-    "license": "CC BY-SA 4.0",
-    "author": {
-      "name": "ناصر ابن داوود",
-      "email": "nasserhabitat@gmail.com",
-      "website": "https://nasserhabitat.github.io/nasser-books/"
-    }
-  },
-        "books": [
-      {
+  "books": [
+    {
       "id": "conscious-contemplation",
-      "titles": {
-        "ar": "نحو تدبر واعٍ",
+      "title": {
+        "ar": "نحو تدبر واع",
         "en": "Towards Conscious Contemplation"
       },
       "description": {
-        "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
-        "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
+        "ar": "أحدث دراسة في منهجية التدبر القرآني وفق الرؤية المعاصرة (إصدار 2025)",
+        "en": "Cutting-edge study on Quranic contemplation methodology (2025 Edition)"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
-          "html": "https://drive.google.com/uc?export=download&id=1CjD4C5WZBg6Nl7JTHMdvrgMbHI1GRVem",
-          "pdf": "books/conscious-contemplation/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1rMSGwIltsrPSjT4RLoX8ds21MyB633i7",
-          "text": "books/conscious-contemplation/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ZjCEi5V3dye2T0fwpAExfnM9haDKhnQF",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB_djvu.txt",
-          "archive_pdf": "https://dn720702.ca.archive.org/0/items/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB.pdf",
-          "cover": "books/conscious-contemplation/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX",
-          "html": "https://drive.google.com/uc?export=download&id=11gaZUgs7DkUBe_8OABu1remHgaEfZmnn",
-          "pdf": "books/conscious-contemplation/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1yKPdEMoAMHXLmKlhaSVhy61tjWoVEVbv",
-          "text": "books/conscious-contemplation/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1sWN_QZ-Ovmam3g2Y-I_a1OXkV4wFiqYb",
-          "archive_text": "https://archive.org/stream/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA_djvu.txt",
-          "archive_pdf": "https://ia800602.us.archive.org/9/items/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA.pdf",
-          "cover": "books/conscious-contemplation/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/conscious-contemplation/ar/content.txt",
+        "en": "books/conscious-contemplation/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 91,
-        "pages_en": 126,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"]
-      }
+      "cover": {
+        "ar": "books/conscious-contemplation/ar/cover-ar.png",
+        "en": "books/conscious-contemplation/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "التدبر القرآني",
+      "keywords": [
+        "تدبر",
+        "منهجية",
+        "معاصرة",
+        "تدبر القرآن",
+        "فهم القرآن",
+        "تطبيق القرآن",
+        "منهجية التدبر",
+        "القرآن في العصر الحديث",
+        "نور العقل",
+        "رقمنة المخطوطات القرآنية",
+        "الرسم العثماني",
+        "المخطوطات القرآنية الأصلية",
+        "منهج حياة",
+        "الفهم الواعي للقرآن",
+        "آيات القرآن",
+        "القرآن الكريم",
+        "تدبر عملي",
+        "ناصر ابن داوود"
+      ]
     },
     {
       "id": "anwar-al-bayan",
-      "titles": {
-        "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
-        "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
+      "title": {
+        "ar": "أنوار البيان في رسم المصحف العثماني (إصدار 2025)",
+        "en": "ANWAR AL-BAYAN: The Uthmanic Script (2025 Edition)"
       },
       "description": {
-        "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم",
-        "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
+        "ar": "دراسة متكاملة للرسم العثماني بأحدث المنهجيات البحثية",
+        "en": "Comprehensive study of Uthmanic script using latest research methodologies"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
-          "html": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "pdf": "books/anwar-al-bayan/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "text": "books/anwar-al-bayan/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
-          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi",
-          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
-          "pdf": "books/anwar-al-bayan/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kyDrHDpYAWA1G0KE8Ow5e5VIk-lbM6zZ",
-          "text": "books/anwar-al-bayan/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1vo44VX03M_ZR-ISriWgqAteOrvG8HMu2",
-          "archive_text": "https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE_djvu.txt",
-          "archive_pdf": "https://dn721503.ca.archive.org/0/items/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE.pdf",
-          "cover": "books/anwar-al-bayan/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/anwar-al-bayan/ar/content.txt",
+        "en": "books/anwar-al-bayan/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 161,
-        "pages_en": 215,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["الرسم العثماني", "المصحف العثماني", "أسرار اللسان", "أنوار البيان", "تدبر القرآن", "المخطوطات الرقمية", "اللغة العربية", "علوم القرآن", "القرآن الكريم", "الفهم العميق", "الدراسات القرآنية", "التفسير", "الخط العربي", "الكتابة القرآنية"]
-      }
+      "cover": {
+        "ar": "books/anwar-al-bayan/ar/cover-ar.png",
+        "en": "books/anwar-al-bayan/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "الرسم العثماني",
+      "keywords": [
+        "رسم",
+        "مصحف",
+        "عثماني",
+        "الرسم العثماني",
+        "المصحف العثماني",
+        "أسرار اللسان",
+        "أنوار البيان",
+        "تدبر القرآن",
+        "المخطوطات الرقمية",
+        "اللغة العربية",
+        "علوم القرآن",
+        "القرآن الكريم",
+        "الفهم العميق",
+        "الدراسات القرآنية",
+        "التفسير",
+        "الخط العربي",
+        "الكتابة القرآنية"
+      ]
     },
     {
       "id": "changing-the-concepts",
-      "titles": {
-        "ar": "تغيير المفاهيم",
-        "en": "Changing the Concepts"
+      "title": {
+        "ar": "تغيير المفاهيم القرآنية (إصدار 2025)",
+        "en": "Changing Quranic Concepts (2025 Edition)"
       },
       "description": {
-        "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
-        "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
+        "ar": "رؤية معاصرة لإعادة صياغة المفاهيم القرآنية",
+        "en": "Contemporary vision for redefining Quranic concepts"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
-          "html": "https://drive.google.com/uc?export=download&id=1sOuXA8sA8a0vVU8betDkJvIZeNA6EjCB",
-          "pdf": "books/changing-the-concepts/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
-          "text": "books/changing-the-concepts/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
-          "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
-          "cover": "books/changing-the-concepts/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
-          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
-          "pdf": "books/changing-the-concepts/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
-          "text": "books/changing-the-concepts/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-          "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
-          "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
-          "cover": "books/changing-the-concepts/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/changing-the-concepts/ar/content.txt",
+        "en": "books/changing-the-concepts/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 569,
-        "pages_en": 829,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome1",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
+      "cover": {
+        "ar": "books/changing-the-concepts/ar/cover-ar.png",
+        "en": "books/changing-the-concepts/en/cover-en.png"
       },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الأول",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-          "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
-          "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
-          "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
-          "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
-          "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-          "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
-          "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
-          "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 376,
-        "pages_en": 486,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome2",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثاني",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 2"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1zxjbEztgVd5u34ddWIjHSu5DH1-jKkCE",
-          "html": "https://drive.google.com/uc?export=download&id=1_a5rQoHcQjG9SMOlza8-z_GDjpHf8qFw",
-          "pdf": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-          "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-          "archive_text": "https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt",
-          "archive_pdf": "https://dn721506.ca.archive.org/0/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1qVJJHYcRLFxQ1i08iiJ0oj8dL0D_JBu-",
-          "html": "https://drive.google.com/uc?export=download&id=1PGDe1-UdiA4BzTyFE4k06ati_AxegBo3",
-          "pdf": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1OZjyDOBnxQoeahD1P7D-BCjqbuDnKS53",
-          "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ceHbTYwL1eVy_cuSPIZtU10u_IxXW9cU",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 333,
-        "pages_en": 473,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome3",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثالث",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 3"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
-          "html": "https://drive.google.com/uc?export=download&id=1hzPkLEVEZ_ejzUsHoiPlpPp0BkBnxTO2",
-          "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
-          "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
-          "archive_text": "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
-          "archive_pdf": "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-          "html": "https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9",
-          "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K",
-          "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 229,
-        "pages_en": 315,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
-      }
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "المصطلحات القرآنية",
+      "keywords": [
+        "مفاهيم",
+        "مصطلحات",
+        "تغيير",
+        "تغيير المفاهيم",
+        "المصطلحات القرآنية",
+        "فقه اللسان القرآني",
+        "التدبر القرآني",
+        "المخطوطات القرآنية الأصلية",
+        "الرقمنة",
+        "الوعي",
+        "الإصلاح والتجديد",
+        "القرآن الكريم كمصدر أوحد وكافٍ",
+        "السنة النبوية ومنهجية التعامل النقدي",
+        "الربوبية والألوهية",
+        "النفس في القرآن",
+        "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+        "القيم القرآنية (العدل، الرحمة، الإحسان)",
+        "التفكير النقدي",
+        "الذكاء والفطرة",
+        "الشرك والتوحيد",
+        "الكون والإنسان",
+        "القيامة واليوم الآخر",
+        "الجنة والنار",
+        "الآيات الكونية",
+        "البيانات كمفهوم قرآني",
+        "المصداق القرآني",
+        "الحروف المقطعة",
+        "النسخ بمعناه الجديد",
+        "الجن والشياطين تصحيح المفاهيم",
+        "الأعداد في القرآن",
+        "القصص القرآني (سورة يوسف كنموذج)",
+        "القتل والقتال تفكيك المفاهيم",
+        "بنو إسرائيل منظور مفاهيمي",
+        "الخلافة الإنسانية",
+        "الزوج والأزواج فهم وظيفي",
+        "الرجال والنساء فهم وظيفي",
+        "القبلة بوصلة الحياة",
+        "المسجد الحرام والمسجد الأقصى رموز الوعي",
+        "الكذب",
+        "الحلال والحرام",
+        "الضحك والبكاء",
+        "الصيد",
+        "حجر",
+        "اليقين",
+        "الذكر",
+        "الدعاء",
+        "الرزق",
+        "الميزان",
+        "الجلد والجلود",
+        "البعوضة كمثل قرآني",
+        "الاستغفار",
+        "العرش والماء",
+        "الخلق والتصوير",
+        "البشر والإنسان",
+        "الخيل والبغال والحمير",
+        "المليكة والملائكة والروح",
+        "الأمة الوسط",
+        "السفه",
+        "الشرق والغرب",
+        "الصراط المستقيم",
+        "اللغة العربية ولسان القرآن",
+        "الفيل",
+        "الرحيم اسم الله",
+        "إحياء البلد",
+        "كلام الله",
+        "رؤية الله",
+        "التسليم",
+        "الساعة",
+        "الموتى والأموات",
+        "الأصنام الفكرية",
+        "الفجر",
+        "القرآن نهر جارٍ",
+        "استشعار معاني الحروف"
+      ]
     },
     {
       "id": "contemplation-in-the-mirror",
-      "titles": {
-        "ar": "التدبر في مرآة الرسوم",
-        "en": "Contemplation in the Mirror of Drawings"
+      "title": {
+        "ar": "التدبر في مرآة الرسوم (إصدار 2025)",
+        "en": "Contemplation in Scripts Mirror (2025 Edition)"
       },
       "description": {
-        "ar": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن الكريم",
-        "en": "Practical applications of digital manuscripts in the contemplation of the Quran"
+        "ar": "أحدث تطبيقات الذكاء الاصطناعي في تحليل المخطوطات القرآنية",
+        "en": "Latest AI applications in analyzing Quranic manuscripts"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
-          "html": "https://drive.google.com/uc?export=download&id=1GYo1Qabj6ZoRIX_x4E8hf4_iZ0StNS1Y",
-          "pdf": "books/contemplation-in-the-mirror/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
-          "text": "books/contemplation-in-the-mirror/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
-          "archive_pdf": "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
-          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1odCjX8iTsk4Kr3EZvvIDWFJgc45LHXIM",
-          "html": "https://drive.google.com/uc?export=download&id=1XDF6eAHoC4WbZXygZZzf_dMD4L2u3VPp",
-          "pdf": "books/contemplation-in-the-mirror/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
-          "text": "books/contemplation-in-the-mirror/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
-          "archive_text": "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
-          "archive_pdf": "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
-          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/contemplation-in-the-mirror/ar/content.txt",
+        "en": "books/contemplation-in-the-mirror/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 251,
-        "pages_en": 254,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"]
-      }
-    },
-    {
-      "id": "the-jurisprudence",
-      "titles": {
-        "ar": "فقه اللسان القرآني",
-        "en": "The Jurisprudence of the Quranic Tongue"
+      "cover": {
+        "ar": "books/contemplation-in-the-mirror/ar/cover-ar.png",
+        "en": "books/contemplation-in-the-mirror/en/cover-en.png"
       },
-      "description": {
-        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
-        "en": "A new approach to understanding the text and manuscript of the Quran"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
-          "html": "https://drive.google.com/uc?export=download&id=1EVBgXQivnuE8NmlCeFTDuNfSUfjBZlMQ",
-          "pdf": "books/the-jurisprudence/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
-          "text": "books/the-jurisprudence/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
-          "archive_pdf": "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
-          "cover": "books/the-jurisprudence/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
-          "html": "https://drive.google.com/uc?export=download&id=1FXmnM4toB3DUinTLvmMovtnlihz4hHN5",
-          "pdf": "books/the-jurisprudence/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
-          "text": "books/the-jurisprudence/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
-          "archive_text": "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
-          "archive_pdf": "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
-          "cover": "books/the-jurisprudence/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 592,
-        "pages_en": 416,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"]
-      }
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "التقنية القرآنية",
+      "keywords": [
+        "ذكاء اصطناعي",
+        "مخطوطات",
+        "رقمنة",
+        "التدبر في مرآة الرسوم",
+        "المخطوطات الرقمية",
+        "تدبر القرآن",
+        "الرسم العثماني",
+        "تطبيقات عملية للقرآن",
+        "فهم القرآن",
+        "أسرار الرسم العثماني",
+        "نور المخطوطات الرقمية",
+        "أنوار البيان",
+        "جداول المعاني",
+        "ناصر ابن داوود"
+      ]
     },
     {
       "id": "digitizing",
-      "titles": {
-        "ar": "رقمنة المخطوطات القرآنية",
-        "en": "Digitization of Quranic Manuscripts"
+      "title": {
+        "ar": "مشروع رقمنة القرآن الكريم (2025)",
+        "en": "Quran Digitization Project (2025)"
       },
       "description": {
-        "ar": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
-        "en": "A methodological study for the digital preservation of the Quranic text and its applications"
+        "ar": "أحدث تقنيات حفظ النص القرآني رقمياً وفق معايير 2025",
+        "en": "State-of-the-art digital preservation of Quranic text (2025 Standards)"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
-          "html": "https://drive.google.com/uc?export=download&id=18vLE3iJJ3KHUT0AFOr_YFTXgIIMeaU8i",
-          "pdf": "books/digitizing/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1IJ2FneZK2jB3ur5ZYrTU08EXFwWw9hvs",
-          "text": "books/digitizing/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1JkXjPUssUOeC9Qbt7eKNUj4xfl2aCtR_",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
-          "archive_pdf": "https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%80%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf",
-          "cover": "books/digitizing/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA",
-          "html": "https://drive.google.com/uc?export=download&id=1sp_GiMD7ArS8Cg-kFPnKp_c0yXh7gYbf",
-          "pdf": "books/digitizing/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS",
-          "text": "books/digitizing/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng",
-          "archive_text": "https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf",
-          "cover": "books/digitizing/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/digitizing/ar/content.txt",
+        "en": "books/digitizing/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "digital_projects",
-        "pages_ar": 177,
-        "pages_en": 227,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"]
-      }
+      "cover": {
+        "ar": "books/digitizing/ar/cover-ar.png",
+        "en": "books/digitizing/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "الحفظ الرقمي",
+      "keywords": [
+        "رقمنة",
+        "تقنية",
+        "حفظ",
+        "رقمنة المخطوطات القرآنية",
+        "تدبر القرآن",
+        "نهضة قرآنية رقمية",
+        "فهم القرآن",
+        "التكنولوجيا والقرآن",
+        "المخطوطة الرقمية الشخصية",
+        "الأصالة والمعاصرة",
+        "التراث العلمي الإسلامي",
+        "الذكاء الاصطناعي والقرآن",
+        "مشروع قرآني",
+        "تحديات رقمنة المخطوطات",
+        "تسويق المشروع القرآني",
+        "مستقبل التدبر القرآني",
+        "نشر التدبرات",
+        "بناء الثقة والشراكات",
+        "التوعية والتثقيف"
+      ]
     },
     {
       "id": "modesty",
-      "titles": {
-        "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-        "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
+      "title": {
+        "ar": "الحياء في العصر الرقمي (2025)",
+        "en": "Modesty in Digital Age (2025)"
       },
       "description": {
-        "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
-        "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+        "ar": "دراسة معاصرة لمفهوم الحياء في عصر التكنولوجيا",
+        "en": "Contemporary study of modesty concept in technology era"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
-          "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
-          "pdf": "books/modesty/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
-          "text": "books/modesty/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
-          "archive_text": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "archive_pdf": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "cover": "books/modesty/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
-          "html": "https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE",
-          "pdf": "books/modesty/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
-          "text": "books/modesty/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
-          "archive_text": "https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt",
-          "archive_pdf": "https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf",
-          "cover": "books/modesty/en/cover-en.png"
-        }
+      "path": {
+        "ar": "books/modesty/ar/content.txt",
+        "en": "books/modesty/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 46,
-        "pages_en": 40,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"]
-      }
-    },
-    {
-      "id": "malakoot",
-      "titles": {
-        "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
+      "cover": {
+        "ar": "books/modesty/ar/cover-ar.png",
+        "en": "books/modesty/en/cover-en.png"
       },
-      "description": {
-        "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
-          "html": "https://drive.google.com/uc?export=download&id=13nlGntfmvlgozUIGF1GcT0RA-VEGSQ-P",
-          "pdf": "books/malakoot/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH",
-          "text": "books/malakoot/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
-          "archive_text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B5%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt",
-          "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
-          "cover": "books/malakoot/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-          "html": "https://drive.google.com/uc?export=download&id=1U0qsfnSg-AVEVFrGkNCtY7TqC-EuFDkh",
-          "pdf": "books/malakoot/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N",
-          "text": "books/malakoot/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg",
-          "archive_text": "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 610,
-        "pages_en": 797,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"]
-      }
-    },
-    {
-      "id": "prostration-and-glorification-in-the-qur’an",
-      "titles": {
-        "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
-        "en": "Prostration and Glorification in the Qur’an: From Heartfelt Purification to Practical Submission"
-      },
-      "description": {
-        "ar": "من التنزيه القلبي إلى الخضوع العملي",
-        "en": "FROM HEARTFELT PURIFICATION TO PRACTICAL SUBMISSION"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
-          "html": "https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe",
-          "pdf": "books/prostration-and-glorification-in-the-qur’an/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
-          "text": "books/prostration-and-glorification-in-the-qur’an/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
-          "archive_text": null,
-          "archive_pdf": null,
-          "cover": "books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo",
-          "html": "https://drive.google.com/uc?export=download&id=1sDxqVx_D8NvO1q0CGrQs25_-CxW_Wsi0",
-          "pdf": "books/prostration-and-glorification-in-the-qur’an/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
-          "text": "books/prostration-and-glorification-in-the-qur’an/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
-          "archive_text": null,
-          "archive_pdf": null,
-          "cover": "books/prostration-and-glorification-in-the-qur’an/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 131,
-        "pages_en": 189,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"]
-      }
-    },
-    {
-      "id": "christ-and-mary-in-the-qur’an",
-      "titles": {
-        "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
-        "en": "Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model"
-      },
-      "description": {
-        "ar": "من الرمز الباطني إلى النموذج الإنساني",
-        "en": "From the esoteric symbol to the human model"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-qur’an/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
-          "html": "https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni",
-          "pdf": "books/christ-and-mary-in-the-qur’an/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
-          "text": "books/christ-and-mary-in-the-qur’an/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
-          "archive_text": null,
-          "archive_pdf": null,
-          "cover": "books/christ-and-mary-in-the-qur’an/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4",
-          "html": "https://drive.google.com/uc?export=download&id=1tNy2hUQvoEDFLaj9kOm-mGzuzp1Q_Uzt",
-          "pdf": "books/christ-and-mary-in-the-qur’an/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t",
-          "text": "books/christ-and-mary-in-the-qur’an/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
-          "archive_text": null,
-          "archive_pdf": null,
-          "cover": "books/christ-and-mary-in-the-qur’an/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 69,
-        "pages_en": 94,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["المسيح", "مريم", "القرآن", "التدبر الباطني", "الرمز الباطني", "النموذج الإنساني", "نماذج الوعي", "التفسير الرمزي", "فقه اللسان القرآني", "نظام المثاني", "الكلمة", "برنامج إحيائي", "الوعي الجديد", "التحرر الفكري", "أسماء الله الحسنى", "الرفع الإلهي", "الولادة العذرية", "مريم الثائرة", "تحليل نفسي لمريم", "المحراب", "النصارى في القرآن", "قراءة علمية معاصرة"]
-      }
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "الأخلاق الرقمية",
+      "keywords": [
+        "حياء",
+        "أخلاق",
+        "رقمية",
+        "الأخلاق الإسلامية",
+        "الفضائل",
+        "التقوى",
+        "الحياء في الإسلام",
+        "الأدب",
+        "السلوك الرقمي",
+        "الآداب الإسلامية",
+        "التكنولوجيا والأخلاق",
+        "العلاقات الرقمية",
+        "الحشمة",
+        "الستر",
+        "الاحتشام"
+      ]
     },
     {
       "id": "names-in-the-holy",
-      "titles": {
-        "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
-        "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
+      "title": {
+        "ar": "الأسماء الحسنى في ضوء الدراسات الحديثة (2025)",
+        "en": "Divine Names in Modern Studies (2025)"
       },
       "description": {
-        "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
-        "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
+        "ar": "رؤية معاصرة لدلالات الأسماء الإلهية وفق أبحاث 2025",
+        "en": "Contemporary vision of divine names based on 2025 research"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz",
-          "pdf": "books/names-in-the-holy/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o",
-          "html": "https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc",
-          "text": "books/names-in-the-holy/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD",
-          "cover": "books/names-in-the-holy/ar/cover-ar.png",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83_djvu.txt",
-          "archive_pdf": "https://dn721500.ca.archive.org/0/items/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83.pdf"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu",
-          "html": "https://drive.google.com/uc?export=download&id=12cV5qFDaZ-0SzQGInIn9cP9vOONVzY9-",
-          "text_external": "https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE",
-          "pdf": "books/names-in-the-holy/en/content.pdf",
-          "text": "books/names-in-the-holy/en/content.txt",
-          "cover": "books/names-in-the-holy/en/cover-en.png",
-          "archive_text": "https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt",
-          "archive_pdf": "https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf"
-        }
+      "path": {
+        "ar": "books/names-in-the-holy/ar/content.txt",
+        "en": "books/names-in-the-holy/en/content.txt"
       },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 193,
-        "pages_en": 248,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"]
-      }
-}
-]
+      "cover": {
+        "ar": "books/names-in-the-holy/ar/cover-ar.png",
+        "en": "books/names-in-the-holy/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "الدراسات الإلهية",
+      "keywords": [
+        "أسماء",
+        "إلهية",
+        "دراسات",
+        "الأسماء الحسنى",
+        "الأسماء الحسنى الوظيفية",
+        "التدبير الإلهي",
+        "القرآن الكريم",
+        "دراسة توقيفية",
+        "دلالات الأسماء الحسنى",
+        "الإحصاء",
+        "فهم سنن الكون",
+        "اليقين",
+        "الطمأنينة",
+        "حل المشكلات",
+        "الدعاء",
+        "التوكل",
+        "تطبيق الأسماء الحسنى",
+        "المعرفة بالله",
+        "أسرار الأسماء",
+        "العلاقة بالله",
+        "التأمل في القرآن"
+      ]
+    },
+    {
+      "id": "the-jurisprudence",
+      "title": {
+        "ar": "فقه اللسان القرآني (إصدار 2025)",
+        "en": "Quranic Linguistics (2025 Edition)"
+      },
+      "description": {
+        "ar": "دراسة لغوية معاصرة للسان القرآني بأحدث المناهج",
+        "en": "Contemporary linguistic study of Quranic language using latest methodologies"
+      },
+      "path": {
+        "ar": "books/the-jurisprudence/ar/content.txt",
+        "en": "books/the-jurisprudence/en/content.txt"
+      },
+      "cover": {
+        "ar": "books/the-jurisprudence/ar/cover-ar.png",
+        "en": "books/the-jurisprudence/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "اللسانيات القرآنية",
+      "keywords": [
+        "لسانيات",
+        "لغة",
+        "قرآنية",
+        "فقه اللسان القرآني",
+        "فهم النص القرآني",
+        "المخطوطات القرآنية",
+        "الرسوم القرآنية",
+        "التدبر",
+        "المخطوطات الرقمية",
+        "المفاهيم الجديدة",
+        "التدبر التفاعلي",
+        "رقمنة المخطوطات الأصلية",
+        "المصاحف العثمانية",
+        "فهم القرآن",
+        "تطبيق القرآن",
+        "قواعد اللسان العربي القرآني",
+        "استنباط القواعد من النص القرآني",
+        "الشواهد من المخطوطات الأصلية",
+        "دلالات الحروف",
+        "سبعا من المثاني",
+        "الأزواج",
+        "الترادف",
+        "المنهج اللفظي",
+        "المحكم والمتشابه",
+        "السياق اللساني",
+        "المصطلح القرآني",
+        "الناسخ والمنسوخ",
+        "تجديد الخطاب الديني",
+        "الواقع المعاصر",
+        "الكتابة القرآنية",
+        "القرآن الكريم"
+      ]
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome1",
+      "title": {
+        "ar": "تحرير المصطلح القرآني - المجلد الأول (2025)",
+        "en": "Quranic Terminology - Volume 1 (2025)"
+      },
+      "description": {
+        "ar": "أحدث دراسة في المصطلحات القرآنية (إصدار 2025)",
+        "en": "Cutting-edge study in Quranic terminology (2025 Release)"
+      },
+      "path": {
+        "ar": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+        "en": "books/editing-the-quranic-terminology-tome1/en/content.txt"
+      },
+      "cover": {
+        "ar": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+        "en": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "المصطلحات القرآنية",
+      "keywords": [
+        "مصطلحات",
+        "جزء1",
+        "تحرير",
+        "تغيير المفاهيم",
+        "المصطلحات القرآنية",
+        "فقه اللسان القرآني",
+        "التدبر القرآني",
+        "المخطوطات القرآنية الأصلية",
+        "الرقمنة",
+        "الوعي",
+        "الإصلاح والتجديد",
+        "القرآن الكريم كمصدر أوحد وكافٍ",
+        "السنة النبوية ومنهجية التعامل النقدي",
+        "الربوبية والألوهية",
+        "النفس في القرآن",
+        "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+        "القيم القرآنية (العدل، الرحمة، الإحسان)",
+        "التفكير النقدي",
+        "الذكاء والفطرة",
+        "الشرك والتوحيد",
+        "الكون والإنسان",
+        "القيامة واليوم الآخر",
+        "الجنة والنار",
+        "الآيات الكونية",
+        "البيانات كمفهوم قرآني",
+        "المصداق القرآني",
+        "الحروف المقطعة",
+        "النسخ بمعناه الجديد",
+        "الجن والشياطين تصحيح المفاهيم",
+        "الأعداد في القرآن",
+        "القصص القرآني (سورة يوسف كنموذج)",
+        "القتل والقتال تفكيك المفاهيم",
+        "بنو إسرائيل منظور مفاهيمي",
+        "الخلافة الإنسانية",
+        "الزوج والأزواج فهم وظيفي",
+        "الرجال والنساء فهم وظيفي",
+        "القبلة بوصلة الحياة",
+        "المسجد الحرام والمسجد الأقصى رموز الوعي",
+        "الكذب",
+        "الحلال والحرام",
+        "الضحك والبكاء",
+        "الصيد",
+        "حجر",
+        "اليقين",
+        "الذكر",
+        "الدعاء",
+        "الرزق",
+        "الميزان",
+        "الجلد والجلود",
+        "البعوضة كمثل قرآني",
+        "الاستغفار",
+        "العرش والماء",
+        "الخلق والتصوير",
+        "البشر والإنسان",
+        "الخيل والبغال والحمير",
+        "المليكة والملائكة والروح",
+        "الأمة الوسط",
+        "السفه",
+        "الشرق والغرب",
+        "الصراط المستقيم",
+        "اللغة العربية ولسان القرآن",
+        "الفيل",
+        "الرحيم اسم الله",
+        "إحياء البلد",
+        "كلام الله",
+        "رؤية الله",
+        "التسليم",
+        "الساعة",
+        "الموتى والأموات",
+        "الأصنام الفكرية",
+        "الفجر",
+        "القرآن نهر جارٍ",
+        "استشعار معاني الحروف"
+      ]
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome2",
+      "title": {
+        "ar": "تحرير المصطلح القرآني - المجلد الثاني (2025)",
+        "en": "Quranic Terminology - Volume 2 (2025)"
+      },
+      "description": {
+        "ar": "تكملة لأحدث دراسة في المصطلحات القرآنية (2025)",
+        "en": "Continuation of advanced Quranic terminology study (2025)"
+      },
+      "path": {
+        "ar": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+        "en": "books/editing-the-quranic-terminology-tome2/en/content.txt"
+      },
+      "cover": {
+        "ar": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
+        "en": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "المصطلحات القرآنية",
+      "keywords": [
+        "مصطلحات",
+        "جزء2",
+        "تحرير",
+        "تغيير المفاهيم",
+        "المصطلحات القرآنية",
+        "فقه اللسان القرآني",
+        "التدبر القرآني",
+        "المخطوطات القرآنية الأصلية",
+        "الرقمنة",
+        "الوعي",
+        "الإصلاح والتجديد",
+        "القرآن الكريم كمصدر أوحد وكافٍ",
+        "السنة النبوية ومنهجية التعامل النقدي",
+        "الربوبية والألوهية",
+        "النفس في القرآن",
+        "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+        "القيم القرآنية (العدل، الرحمة، الإحسان)",
+        "التفكير النقدي",
+        "الذكاء والفطرة",
+        "الشرك والتوحيد",
+        "الكون والإنسان",
+        "القيامة واليوم الآخر",
+        "الجنة والنار",
+        "الآيات الكونية",
+        "البيانات كمفهوم قرآني",
+        "المصداق القرآني",
+        "الحروف المقطعة",
+        "النسخ بمعناه الجديد",
+        "الجن والشياطين تصحيح المفاهيم",
+        "الأعداد في القرآن",
+        "القصص القرآني (سورة يوسف كنموذج)",
+        "القتل والقتال تفكيك المفاهيم",
+        "بنو إسرائيل منظور مفاهيمي",
+        "الخلافة الإنسانية",
+        "الزوج والأزواج فهم وظيفي",
+        "الرجال والنساء فهم وظيفي",
+        "القبلة بوصلة الحياة",
+        "المسجد الحرام والمسجد الأقصى رموز الوعي",
+        "الكذب",
+        "الحلال والحرام",
+        "الضحك والبكاء",
+        "الصيد",
+        "حجر",
+        "اليقين",
+        "الذكر",
+        "الدعاء",
+        "الرزق",
+        "الميزان",
+        "الجلد والجلود",
+        "البعوضة كمثل قرآني",
+        "الاستغفار",
+        "العرش والماء",
+        "الخلق والتصوير",
+        "البشر والإنسان",
+        "الخيل والبغال والحمير",
+        "المليكة والملائكة والروح",
+        "الأمة الوسط",
+        "السفه",
+        "الشرق والغرب",
+        "الصراط المستقيم",
+        "اللغة العربية ولسان القرآن",
+        "الفيل",
+        "الرحيم اسم الله",
+        "إحياء البلد",
+        "كلام الله",
+        "رؤية الله",
+        "التسليم",
+        "الساعة",
+        "الموتى والأموات",
+        "الأصنام الفكرية",
+        "الفجر",
+        "القرآن نهر جارٍ",
+        "استشعار معاني الحروف"
+      ]
+    },
+    {
+      "id": "editing-the-quranic-terminology-tome3",
+      "title": {
+        "ar": "تحرير المصطلح القرآني - المجلد الثالث (2025)",
+        "en": "Quranic Terminology - Volume 3 (2025)"
+      },
+      "description": {
+        "ar": "الجزء الأخير من سلسلة الدراسات المصطلحية (إصدار 2025)",
+        "en": "Final part of terminology studies series (2025 Edition)"
+      },
+      "path": {
+        "ar": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+        "en": "books/editing-the-quranic-terminology-tome3/en/content.txt"
+      },
+      "cover": {
+        "ar": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
+        "en": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "المصطلحات القرآنية",
+      "keywords": [
+        "مصطلحات",
+        "جزء3",
+        "تحرير",
+        "تغيير المفاهيم",
+        "المصطلحات القرآنية",
+        "فقه اللسان القرآني",
+        "التدبر القرآني",
+        "المخطوطات القرآنية الأصلية",
+        "الرقمنة",
+        "الوعي",
+        "الإصلاح والتجديد",
+        "القرآن الكريم كمصدر أوحد وكافٍ",
+        "السنة النبوية ومنهجية التعامل النقدي",
+        "الربوبية والألوهية",
+        "النفس في القرآن",
+        "العبادة (الصلاة، الصيام، الحج، التسبيح)",
+        "القيم القرآنية (العدل، الرحمة، الإحسان)",
+        "التفكير النقدي",
+        "الذكاء والفطرة",
+        "الشرك والتوحيد",
+        "الكون والإنسان",
+        "القيامة واليوم الآخر",
+        "الجنة والنار",
+        "الآيات الكونية",
+        "البيانات كمفهوم قرآني",
+        "المصداق القرآني",
+        "الحروف المقطعة",
+        "النسخ بمعناه الجديد",
+        "الجن والشياطين تصحيح المفاهيم",
+        "الأعداد في القرآن",
+        "القصص القرآني (سورة يوسف كنموذج)",
+        "القتل والقتال تفكيك المفاهيم",
+        "بنو إسرائيل منظور مفاهيمي",
+        "الخلافة الإنسانية",
+        "الزوج والأزواج فهم وظيفي",
+        "الرجال والنساء فهم وظيفي",
+        "القبلة بوصلة الحياة",
+        "المسجد الحرام والمسجد الأقصى رموز الوعي",
+        "الكذب",
+        "الحلال والحرام",
+        "الضحك والبكاء",
+        "الصيد",
+        "حجر",
+        "اليقين",
+        "الذكر",
+        "الدعاء",
+        "الرزق",
+        "الميزان",
+        "الجلد والجلود",
+        "البعوضة كمثل قرآني",
+        "الاستغفار",
+        "العرش والماء",
+        "الخلق والتصوير",
+        "البشر والإنسان",
+        "الخيل والبغال والحمير",
+        "المليكة والملائكة والروح",
+        "الأمة الوسط",
+        "السفه",
+        "الشرق والغرب",
+        "الصراط المستقيم",
+        "اللغة العربية ولسان القرآن",
+        "الفيل",
+        "الرحيم اسم الله",
+        "إحياء البلد",
+        "كلام الله",
+        "رؤية الله",
+        "التسليم",
+        "الساعة",
+        "الموتى والأموات",
+        "الأصنام الفكرية",
+        "الفجر",
+        "القرآن نهر جارٍ",
+        "استشعار معاني الحروف"
+      ]
+    },
+    {
+      "id": "malakoot",
+      "title": {
+        "ar": "ملكوت السماوات والأرض (رؤية 2025)",
+        "en": "Kingdom of Heavens and Earth (2025 Vision)"
+      },
+      "description": {
+        "ar": "أحدث دراسة في الإيمان بالغيب وفق الاكتشافات المعاصرة",
+        "en": "Latest study on unseen belief based on modern discoveries"
+      },
+      "path": {
+        "ar": "books/malakoot/ar/content.txt",
+        "en": "books/malakoot/en/content.txt"
+      },
+      "cover": {
+        "ar": "books/malakoot/ar/cover-ar.png",
+        "en": "books/malakoot/en/cover-en.png"
+      },
+      "year": 2025,
+      "edition": "الطبعة الأولى 2025",
+      "category": "الإيمان والعلم",
+      "keywords": [
+        "ملكوت",
+        "إيمان",
+        "علم",
+        "اليقين",
+        "ملكوت السماوات والأرض",
+        "برهان",
+        "رؤية الحقيقة",
+        "القرآن",
+        "الحقائق العلمية",
+        "الوحي",
+        "الفطرة",
+        "الكون",
+        "الخلق",
+        "الخالق",
+        "الأرض المسطحة",
+        "الأرض الثابتة",
+        "التفكر",
+        "التدبر",
+        "نظريات إسلامية",
+        "شكل الكون",
+        "الشمس",
+        "القمر",
+        "الكواكب",
+        "علم الفلك",
+        "ناصر ابن داوود",
+        "التدبر في مرآة الرسوم"
+      ]
+    }
+   ],
+    "metadata": {
+    "year": 2025,
+    "total_books": 24,
+    "total_arabic": 12,
+    "total_english": 12,
+    "release_date": "2025-08-15",
+    "categories": [
+      "التدبر القرآني",
+      "الرسم العثماني",
+      "المصطلحات القرآنية",
+      "التقنية القرآنية",
+      "الحفظ الرقمي",
+      "الأخلاق الرقمية",
+      "الدراسات الإلهية",
+      "اللسانيات القرآنية",
+      "الإيمان والعلم"
+    ],
+    "features": {
+      "all_new": true,
+      "latest_research": true,
+      "digital_editions": true,
+      "multilingual": true,
+      "searchable": true,
+      "indexed": true
+    },
+    "author": {
+      "name": "ناصر ابن داوود",
+      "bio": "باحث إسلامي متخصص في علوم القرآن والتدبر، مهندس متخصص في الرقمنة والحفظ الرقمي للمخطوطات القرآنية",
+      "website": "https://nasser-ibn-dawood.com"
+    }
+  }
 }
