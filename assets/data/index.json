@@ -549,8 +549,8 @@
           "pdf_external": "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
           "text": "books/prostration-and-glorification-in-the-qur’an/ar/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
-          "archive_text": null,
-          "archive_pdf": null,
+          "archive_text": "https://archive.org/stream/content_20250929_1646/content_djvu.txt",
+          "archive_pdf": "https://dn721505.ca.archive.org/0/items/content_20250929_1646/content.pdf",
           "cover": "books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png"
         },
         "en": {
@@ -560,8 +560,8 @@
           "pdf_external": "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
           "text": "books/prostration-and-glorification-in-the-qur’an/en/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
-          "archive_text": null,
-          "archive_pdf": null,
+          "archive_text": "https://ia902803.us.archive.org/23/items/context_20250929/context.txt",
+          "archive_pdf": "https://ia902803.us.archive.org/23/items/context_20250929/context.pdf",
           "cover": "books/prostration-and-glorification-in-the-qur’an/en/cover-en.png"
         }
       },
@@ -596,8 +596,8 @@
           "pdf_external": "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
           "text": "books/christ-and-mary-in-the-qur’an/ar/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
-          "archive_text": null,
-          "archive_pdf": null,
+          "archive_text": "https://archive.org/stream/content_20250929/content_djvu.txt",
+          "archive_pdf": "https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf",
           "cover": "books/christ-and-mary-in-the-qur’an/ar/cover-ar.png"
         },
         "en": {
@@ -607,8 +607,8 @@
           "pdf_external": "https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t",
           "text": "books/christ-and-mary-in-the-qur’an/en/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
-          "archive_text": null,
-          "archive_pdf": null,
+          "archive_text": "https://archive.org/stream/context_20250929/context_djvu.txt",
+          "archive_pdf": "https://ia902803.us.archive.org/23/items/context_20250929/context.pdf",
           "cover": "books/christ-and-mary-in-the-qur’an/en/cover-en.png"
         }
       },
@@ -674,4 +674,3 @@
 }
 ]
 }
-
