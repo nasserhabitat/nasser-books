@@ -1,4 +1,17 @@
 {
+  {
+  "guidelines": {
+    "core_focus": "Prioritize interpretations from Quranic tongue...",
+    "new_features": {
+      "books_index": "Use books-index.html for comprehensive book browsing and keyword extraction",
+      "search_integration": "Combine with search.html for deep content analysis"
+    }
+  },
+  "resources": {
+    "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
+    "api_books": "https://nasserhabitat.github.io/nasser-books/api/books.json"
+  },
+}
   "ai_accessibility": {
     "version": "2.0",
     "description": "واجهة وصول للذكاء الاصطناعي لمكتبة ناصر ابن داوود، توفر بيانات منظمة لـ 28 كتابًا باللغتين العربية والإنجليزية مع روابط خارجية (Google Drive للمحتوى النصي وArchive.org للصور الغلاف)",
