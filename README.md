@@ -400,6 +400,13 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - استخدم ملف ai-index.json للوصول المبرمج | Use ai-index.json for programmatic access
    - استخدم النصوص الخام للتحليل اللغوي | Use 📝 Plain Texts for linguistic analysis
 
+## 🌐 صفحات الموقع
+
+- [الصفحة الرئيسية](index.html)
+- [فهرس الكتب الشامل](books-index.html) - 🔥 جديد
+- [توصيات الذكاء الاصطناعي](ai-recommendations.html)
+- [محرك البحث](search.html)
+
 ## 📝 عن المؤلف | About the Author
 
 الدكتور ناصر ابن داوود هو باحث إسلامي ومهندس متخصص في الدراسات القرآنية. يركز عمله على:
