@@ -14,6 +14,16 @@
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
   },
+  {
+  "pages": {
+    "main": "https://nasserhabitat.github.io/nasser-books/",
+    "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
+    "search": "https://nasserhabitat.github.io/nasser-books/search.html",
+    "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
+  },
+  "books_count": 28,
+  "last_updated": "2024-01-15"
+},
   "books": [
     {
       "id": "conscious-contemplation",
