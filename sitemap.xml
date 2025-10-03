@@ -7,7 +7,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+ 
   <!-- صفحة عرض جميع الكتب -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books.html</loc>
@@ -23,7 +23,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+ <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/books-index.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
   <!-- ملف البيانات (أقل أولوية) -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/assets/data/index.json</loc>
