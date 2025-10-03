@@ -377,6 +377,21 @@
             background: var(--english-color);
         }
         
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--light-text);
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
         footer {
             text-align: center;
             margin-top: 50px;
@@ -473,7 +488,9 @@
         
         <!-- شبكة الكتب -->
         <div class="books-grid" id="booksContainer">
-            <!-- سيتم تعبئة الكتب ديناميكياً -->
+            <div class="loading">
+                <p>📖 جاري تحميل الكتب...</p>
+            </div>
         </div>
         
         <!-- قسم الذكاء الاصطناعي -->
@@ -509,47 +526,53 @@
     </footer>
 
     <script>
+        // بيانات افتراضية للكتب في حالة فشل التحميل
+        const defaultBooks = [
+            {
+                id: 'default-book-1',
+                title: 'نحو تدبر واعٍ',
+                author: 'ناصر ابن داوود',
+                description: 'كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية',
+                keywords: ['تدبر القرآن', 'فهم القرآن', 'تطبيق القرآن'],
+                category: 'الدراسات القرآنية',
+                pages: 91,
+                language: 'ar',
+                links: {
+                    pdf: '#',
+                    drive: '#',
+                    archive: '#',
+                    txt: '#'
+                }
+            }
+        ];
+
         // تحميل البيانات من ai-index.json
         async function loadBooksData() {
             try {
+                // جلب البيانات من ملف ai-index.json الحالي
                 const response = await fetch('./ai-index.json');
                 const data = await response.json();
-                const books = data.books;
                 
-                // إنشاء مصفوفة للكتب باللغتين
-                const allBooks = [];
+                if (!data.books || !Array.isArray(data.books)) {
+                    throw new Error('تنسيق البيانات غير صحيح');
+                }
                 
-                books.forEach(book => {
-                    // استخراج الكلمات المفتاحية من topics
-                    const keywords = book.metadata?.topics || [];
-                    
-                    // تحديد التصنيف
-                    let category = book.metadata?.category || "عام";
-                    let categoryAr = "";
-                    switch(category) {
-                        case "quranic_studies":
-                            categoryAr = "الدراسات القرآنية";
-                            break;
-                        case "faith_studies":
-                            categoryAr = "الدراسات الإيمانية";
-                            break;
-                        case "digital_projects":
-                            categoryAr = "المشاريع الرقمية";
-                            break;
-                        default:
-                            categoryAr = "عام";
-                    }
-                    
+                const booksData = data.books;
+                
+                // تحويل البيانات للشكل المطلوب في الصفحة
+                const formattedBooks = [];
+                
+                booksData.forEach(book => {
                     // إضافة النسخة العربية
-                    if (book.links?.ar) {
-                        allBooks.push({
+                    if (book.links && book.links.ar) {
+                        formattedBooks.push({
                             id: book.id + '-ar',
                             originalId: book.id,
-                            title: book.titles?.ar || book.title,
+                            title: book.titles?.ar || 'عنوان غير متوفر',
                             author: book.metadata?.author || "ناصر ابن داوود",
                             description: book.description?.ar || "كتاب في فقه اللسان القرآني وتحرير المصطلحات",
-                            keywords: keywords,
-                            category: categoryAr,
+                            keywords: book.metadata?.topics || ["اللسان القرآني", "تفسير باطني"],
+                            category: getCategoryArabic(book.metadata?.category),
                             pages: book.metadata?.pages_ar || 0,
                             language: 'ar',
                             links: {
@@ -562,15 +585,15 @@
                     }
                     
                     // إضافة النسخة الإنجليزية
-                    if (book.links?.en) {
-                        allBooks.push({
+                    if (book.links && book.links.en) {
+                        formattedBooks.push({
                             id: book.id + '-en',
                             originalId: book.id,
-                            title: book.titles?.en || book.title,
+                            title: book.titles?.en || 'Title not available',
                             author: book.metadata?.author || "Nasser Ibn Dawood",
                             description: book.description?.en || "A book on the jurisprudence of the Quranic tongue and editing terminology",
-                            keywords: keywords,
-                            category: categoryAr,
+                            keywords: book.metadata?.topics || ["Quranic tongue", "Esoteric interpretation"],
+                            category: getCategoryArabic(book.metadata?.category),
                             pages: book.metadata?.pages_en || 0,
                             language: 'en',
                             links: {
@@ -583,24 +606,36 @@
                     }
                 });
                 
-                renderBooks(allBooks);
-                setupFiltering(allBooks);
+                renderBooks(formattedBooks);
+                setupFiltering(formattedBooks);
                 
             } catch (error) {
                 console.error('خطأ في تحميل بيانات الكتب:', error);
+                // استخدام البيانات الافتراضية حال فشل التحميل
                 document.getElementById('booksContainer').innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <div class="error-message">
                         <p>⚠️ تعذر تحميل بيانات الكتب. يرجى المحاولة لاحقاً.</p>
                         <p>يمكنك زيارة <a href="https://nasserhabitat.github.io/nasser-books/">الموقع الرئيسي</a></p>
                     </div>
                 `;
+                renderBooks(defaultBooks);
+                setupFiltering(defaultBooks);
             }
+        }
+
+        // دالة لتحويل التصنيف الإنجليزي إلى عربي
+        function getCategoryArabic(category) {
+            const categoryMap = {
+                'quranic_studies': 'الدراسات القرآنية',
+                'faith_studies': 'الدراسات الإيمانية',
+                'digital_projects': 'المشاريع الرقمية'
+            };
+            return categoryMap[category] || 'عام';
         }
 
         // دالة لعرض الكتب
         function renderBooks(booksToRender) {
             const container = document.getElementById('booksContainer');
-            container.innerHTML = '';
             
             if (booksToRender.length === 0) {
                 container.innerHTML = `
@@ -611,12 +646,15 @@
                 return;
             }
             
+            let booksHTML = '';
+            
             booksToRender.forEach(book => {
                 const isArabic = book.language === 'ar';
                 const languageClass = isArabic ? 'arabic' : 'english';
                 const languageText = isArabic ? 'عربي' : 'English';
+                const downloadText = isArabic ? 'نص' : 'Text';
                 
-                const bookCard = `
+                booksHTML += `
                     <div class="book-card" data-category="${book.category}" data-language="${book.language}">
                         <div class="book-header ${languageClass}">
                             <div class="language-badge">${languageText}</div>
@@ -642,21 +680,20 @@
                             
                             <div class="book-links">
                                 <a href="${book.links.pdf}" class="book-link pdf" target="_blank">PDF</a>
-                                <a href="${book.links.txt}" class="book-link txt" target="_blank">${isArabic ? 'نص' : 'Text'}</a>
+                                <a href="${book.links.txt}" class="book-link txt" target="_blank">${downloadText}</a>
                                 <a href="${book.links.drive}" class="book-link drive" target="_blank">Google Drive</a>
                                 <a href="${book.links.archive}" class="book-link archive" target="_blank">Archive.org</a>
                             </div>
                         </div>
                     </div>
                 `;
-                container.innerHTML += bookCard;
             });
+            
+            container.innerHTML = booksHTML;
         }
 
         // إعداد نظام التصفية والبحث
         function setupFiltering(allBooks) {
-            let currentBooks = [...allBooks];
-            
             // التصفية حسب اللغة
             document.querySelectorAll('.filter-tag.language').forEach(tag => {
                 tag.addEventListener('click', function() {
