@@ -344,7 +344,7 @@
             try {
                 showError('');
                 // المسار الصحيح لملف JSON - تم نقله إلى assets/data/
-                const response = await fetch('https://nasserhabitat.github.io/nasser-books/assets/data/index.json');
+               const response = await fetch('https://nasserhabitat.github.io/nasser-books/index.json');
                 if (!response.ok) {
                     throw new Error(`فشل في جلب بيانات الكتب: ${response.status} ${response.statusText}`);
                 }
