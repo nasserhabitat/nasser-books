@@ -6,11 +6,8 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="ابحث في مكتبة ناصر ابن داوود الرقمية - المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي">
     <meta name="keywords" content="مكتبة, كتب, قرآن, لغة عربية, ذكاء اصطناعي, بحث, ناصر ابن داوود">
-    <meta property="og:title" content="بحث متقدم - مكتبة ناصر ابن داوود">
-    <meta property="og:description" content="ابحث في المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي">
     <title>بحث متقدم - مكتبة ناصر ابن داوود</title>
     
-    <!-- إضافة خط عربي محسن -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
@@ -20,7 +17,8 @@
             --accent-color: #e74c3c;
             --light-color: #f5f5f5;
             --dark-color: #333;
-            --ai-color: #6a0dad;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --border-radius: 10px;
         }
@@ -36,13 +34,16 @@
             background-color: #f9f9f9;
             color: var(--dark-color);
             line-height: 1.6;
-            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+            flex: 1;
         }
         
         header {
@@ -51,7 +52,6 @@
             padding: 2rem 0;
             text-align: center;
             margin-bottom: 2rem;
-            position: relative;
         }
         
         .logo {
@@ -64,34 +64,12 @@
             margin-bottom: 1rem;
         }
         
-        /* زر التبديل بين اللغات */
-        .lang-toggle {
-            position: absolute;
-            left: 20px;
-            top: 20px;
-        }
-        
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
         .search-section {
             background-color: white;
             padding: 2rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             margin: 2rem auto;
-            position: relative;
         }
         
         .search-container {
@@ -99,7 +77,7 @@
             margin-bottom: 1.5rem;
         }
         
-        /* تخصيص مظهر بحث جوجل */
+        /* تخصيص محرك البحث */
         .gcse-search {
             width: 100%;
         }
@@ -123,28 +101,18 @@
             font-size: 1.1rem !important;
         }
         
-        .gsc-search-button {
-            margin-left: 10px !important;
-        }
-        
         .gsc-search-button-v2 {
             padding: 10px 20px !important;
             border: none !important;
             border-radius: 50px !important;
             background: var(--primary-color) !important;
             font-size: 1rem !important;
-            transition: background 0.3s ease !important;
         }
         
-        .gsc-search-button-v2:hover {
-            background: var(--secondary-color) !important;
-        }
-        
-        /* تحسين مظهر نتائج البحث */
+        /* تحسين نتائج البحث */
         .gsc-results-wrapper-overlay {
             border-radius: var(--border-radius) !important;
             box-shadow: var(--shadow) !important;
-            margin-top: 10px !important;
         }
         
         .gsc-webResult.gsc-result {
@@ -152,13 +120,65 @@
             padding: 15px 0 !important;
         }
         
-        .gsc-result .gs-title {
-            color: var(--primary-color) !important;
-            font-weight: 500 !important;
+        /* رسائل حالة البحث */
+        .search-status {
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            text-align: center;
         }
         
-        .gsc-result .gs-snippet {
-            color: var(--dark-color) !important;
+        .no-results {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        
+        .search-help {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            color: var(--primary-color);
+        }
+        
+        .suggestions {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+        }
+        
+        .suggestions h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .suggestions-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .suggestion-item {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .suggestion-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
         }
         
         .filters {
@@ -185,53 +205,6 @@
             border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-            transition: border 0.3s ease;
-        }
-        
-        .filter-select:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-        
-        .info-box {
-            background: #e3f2fd;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        /* مؤشر التحميل */
-        #loading {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: var(--border-radius);
-            margin: 10px 0;
-        }
-        
-        .spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-left-color: var(--primary-color);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 10px;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* إحصائيات البحث */
-        .search-stats {
-            background: #f8f9fa;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            display: none;
         }
         
         footer {
@@ -239,27 +212,13 @@
             padding: 2rem 0;
             color: #777;
             border-top: 1px solid #eee;
-            margin-top: 2rem;
+            margin-top: auto;
+            background: white;
         }
         
         @media (max-width: 768px) {
             .filters {
                 flex-direction: column;
-            }
-            
-            .gsc-input-box {
-                flex-direction: column !important;
-            }
-            
-            .gsc-search-button {
-                margin-top: 10px !important;
-                margin-left: 0 !important;
-            }
-            
-            .lang-toggle {
-                position: static;
-                text-align: center;
-                margin-bottom: 15px;
             }
         }
     </style>
@@ -267,9 +226,6 @@
 <body>
     <header>
         <div class="container">
-            <div class="lang-toggle">
-                <button class="lang-btn" id="langToggle">English</button>
-            </div>
             <div class="logo">📚</div>
             <h1>بحث متقدم في مكتبة ناصر ابن داوود</h1>
             <p>ابحث في المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي</p>
@@ -281,18 +237,32 @@
             <div class="search-container">
                 <!-- محرك بحث جوجل المخصص -->
                 <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
-                <div class="gcse-search" data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search-results.html"></div>
+                <div class="gcse-search"></div>
             </div>
             
-            <!-- مؤشر التحميل -->
-            <div id="loading">
-                <div class="spinner"></div>
-                <p>جاري البحث... ⏳</p>
+            <!-- رسائل حالة البحث -->
+            <div class="search-status no-results" id="noResults" style="display: none;">
+                <h3>⚠️ لم يتم العثور على نتائج</h3>
+                <p>جرب استخدام كلمات بحث مختلفة أو تصفح الاقتراحات أدناه</p>
             </div>
             
-            <!-- إحصائيات البحث -->
-            <div class="search-stats" id="searchStats">
-                <p>تم العثور على <span id="resultCount">0</span> نتيجة لبحثك عن "<span id="searchQuery"></span>"</p>
+            <div class="search-status search-help">
+                <p>🔍 <strong>نصيحة:</strong> جرب البحث بكلمات مفتاحية بسيطة مثل "القرآن" أو "اللغة"</p>
+            </div>
+            
+            <!-- اقتراحات بحث -->
+            <div class="suggestions">
+                <h3>🔍 اقتراحات للبحث:</h3>
+                <div class="suggestions-list">
+                    <div class="suggestion-item" onclick="setSearchQuery('القرآن الكريم')">القرآن الكريم</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('اللغة العربية')">اللغة العربية</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('التفسير')">التفسير</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('الحديث')">الحديث</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('الفقه')">الفقه</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('العقيدة')">العقيدة</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('أدب')">أدب</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('بلاغة')">بلاغة</div>
+                </div>
             </div>
             
             <div class="info-box">
@@ -330,146 +300,64 @@
     </footer>
 
     <script>
+        // تعيين استعلام البحث عند النقر على الاقتراحات
+        function setSearchQuery(query) {
+            const searchInput = document.querySelector('.gsc-input input');
+            if (searchInput) {
+                searchInput.value = query;
+                // تشغيل البحث
+                const searchButton = document.querySelector('.gsc-search-button');
+                if (searchButton) {
+                    searchButton.click();
+                }
+            }
+        }
+        
+        // مراقبة نتائج البحث
+        function checkSearchResults() {
+            setTimeout(() => {
+                const results = document.querySelector('.gsc-results .gsc-result');
+                const noResultsMsg = document.getElementById('noResults');
+                
+                if (!results) {
+                    noResultsMsg.style.display = 'block';
+                } else {
+                    noResultsMsg.style.display = 'none';
+                }
+            }, 1500);
+        }
+        
+        // إضافة مستمع للأحداث للبحث
         document.addEventListener('DOMContentLoaded', function() {
             console.log('محرك البحث جاهز للاستخدام');
             
-            // عناصر DOM
-            const categoryFilter = document.getElementById('categoryFilter');
-            const languageFilter = document.getElementById('languageFilter');
-            const langToggle = document.getElementById('langToggle');
-            const loading = document.getElementById('loading');
-            const searchStats = document.getElementById('searchStats');
-            const resultCount = document.getElementById('resultCount');
-            const searchQuery = document.getElementById('searchQuery');
+            // التحقق من النتائج عند تحميل الصفحة أول مرة
+            setTimeout(checkSearchResults, 2000);
             
-            // حالة اللغة
-            let isEnglish = false;
-            
-            // تبديل اللغة
-            langToggle.addEventListener('click', function() {
-                isEnglish = !isEnglish;
-                if (isEnglish) {
-                    document.querySelector('h1').textContent = 'Advanced Search - Nasser Ibn Dawood Library';
-                    document.querySelector('header p').textContent = 'Search in Quranic and linguistic works compatible with AI';
-                    document.querySelector('.info-box p').innerHTML = '🔍 <strong>Searches full content</strong> of all available books and documents in the library';
-                    document.querySelector('footer p:first-child').textContent = 'Nasser Ibn Dawood Library © 2025 - All Rights Reserved';
-                    document.querySelector('footer p:last-child').textContent = 'License: CC BY-SA 4.0 - AI Compatible';
-                    langToggle.textContent = 'العربية';
-                    
-                    // تحديث الفلاتر
-                    document.querySelector('label[for="categoryFilter"]').textContent = 'Category:';
-                    document.querySelector('label[for="languageFilter"]').textContent = 'Language:';
-                    document.querySelector('#categoryFilter option[value="all"]').textContent = 'All Categories';
-                    document.querySelector('#categoryFilter option[value="quranic_studies"]').textContent = 'Quranic Studies';
-                    document.querySelector('#categoryFilter option[value="faith_studies"]').textContent = 'Faith Studies';
-                    document.querySelector('#categoryFilter option[value="digital_projects"]').textContent = 'Digital Projects';
-                    document.querySelector('#languageFilter option[value="all"]').textContent = 'All Languages';
-                    document.querySelector('#languageFilter option[value="ar"]').textContent = 'Arabic';
-                    document.querySelector('#languageFilter option[value="en"]').textContent = 'English';
-                    
-                    // تحديث الـ SEO
-                    document.title = 'Advanced Search - Nasser Ibn Dawood Library';
-                    document.querySelector('meta[name="description"]').setAttribute('content', 'Search in Nasser Ibn Dawood Digital Library - Quranic and linguistic works compatible with AI');
-                    document.querySelector('meta[property="og:title"]').setAttribute('content', 'Advanced Search - Nasser Ibn Dawood Library');
-                    document.querySelector('meta[property="og:description"]').setAttribute('content', 'Search in Quranic and linguistic works compatible with AI');
-                } else {
-                    document.querySelector('h1').textContent = 'بحث متقدم في مكتبة ناصر ابن داوود';
-                    document.querySelector('header p').textContent = 'ابحث في المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي';
-                    document.querySelector('.info-box p').innerHTML = '🔍 <strong>يبحث في المحتوى الكامل</strong> لجميع الكتب والمستندات المتاحة في المكتبة';
-                    document.querySelector('footer p:first-child').textContent = 'مكتبة ناصر ابن داوود © 2025 - جميع الحقوق محفوظة';
-                    document.querySelector('footer p:last-child').textContent = 'الترخيص: CC BY-SA 4.0 - متوافق مع الذكاء الاصطناعي';
-                    langToggle.textContent = 'English';
-                    
-                    // تحديث الفلاتر
-                    document.querySelector('label[for="categoryFilter"]').textContent = 'التصنيف:';
-                    document.querySelector('label[for="languageFilter"]').textContent = 'اللغة:';
-                    document.querySelector('#categoryFilter option[value="all"]').textContent = 'جميع التصنيفات';
-                    document.querySelector('#categoryFilter option[value="quranic_studies"]').textContent = 'الدراسات القرآنية';
-                    document.querySelector('#categoryFilter option[value="faith_studies"]').textContent = 'الدراسات الإيمانية';
-                    document.querySelector('#categoryFilter option[value="digital_projects"]').textContent = 'المشاريع الرقمية';
-                    document.querySelector('#languageFilter option[value="all"]').textContent = 'جميع اللغات';
-                    document.querySelector('#languageFilter option[value="ar"]').textContent = 'العربية';
-                    document.querySelector('#languageFilter option[value="en"]').textContent = 'الإنجليزية';
-                    
-                    // تحديث الـ SEO
-                    document.title = 'بحث متقدم - مكتبة ناصر ابن داوود';
-                    document.querySelector('meta[name="description"]').setAttribute('content', 'ابحث في مكتبة ناصر ابن داوود الرقمية - المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي');
-                    document.querySelector('meta[property="og:title"]').setAttribute('content', 'بحث متقدم - مكتبة ناصر ابن داوود');
-                    document.querySelector('meta[property="og:description"]').setAttribute('content', 'ابحث في المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي');
-                }
-            });
-            
-            // تحديث البحث عند تغيير الفلاتر
-            function updateSearch() {
-                const category = categoryFilter.value;
-                const language = languageFilter.value;
-                
-                console.log('تصفية البحث:', { category, language });
-                
-                // في التطبيق الحقيقي، هنا يمكن استخدام Google CSE API لتطبيق الفلاتر
-                // showLoading();
+            // إضافة مستمع لزر البحث
+            const searchButton = document.querySelector('.gsc-search-button');
+            if (searchButton) {
+                searchButton.addEventListener('click', function() {
+                    setTimeout(checkSearchResults, 1000);
+                });
             }
             
-            categoryFilter.addEventListener('change', updateSearch);
-            languageFilter.addEventListener('change', updateSearch);
-            
-            // إظهار وإخفاء مؤشر التحميل
-            function showLoading() {
-                loading.style.display = 'block';
-            }
-            
-            function hideLoading() {
-                loading.style.display = 'none';
-            }
-            
-            // تتبع عمليات البحث
-            function trackSearch(query) {
-                if (query && query.trim() !== '') {
-                    console.log('بحث عن:', query);
-                    
-                    // محاكاة لإحصائيات البحث (في التطبيق الحقيقي سيتم الحصول على البيانات من Google CSE)
-                    const randomResults = Math.floor(Math.random() * 50) + 1;
-                    resultCount.textContent = randomResults;
-                    searchQuery.textContent = query;
-                    searchStats.style.display = 'block';
-                    
-                    // إخفاء الإحصائيات بعد 10 ثوانٍ
-                    setTimeout(() => {
-                        searchStats.style.display = 'none';
-                    }, 10000);
-                    
-                    // يمكن إضافة Google Analytics هنا
-                    // gtag('event', 'search', { search_term: query });
-                }
-            }
-            
-            // محاكاة حدث البحث (في التطبيق الحقيقي، سيتم ربط هذا بأحداث محرك البحث الفعلية)
-            document.addEventListener('click', function(e) {
-                if (e.target.closest('.gsc-search-button')) {
-                    const searchInput = document.querySelector('.gsc-input input');
-                    if (searchInput && searchInput.value) {
-                        showLoading();
-                        trackSearch(searchInput.value);
-                        
-                        // إخفاء التحميل بعد فترة (محاكاة)
-                        setTimeout(hideLoading, 1500);
+            // أيضًا عند الضغط على Enter
+            const searchInput = document.querySelector('.gsc-input input');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        setTimeout(checkSearchResults, 1000);
                     }
-                }
-            });
-            
-            // أيضا تتبع عند الضغط على Enter في حقل البحث
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' && e.target.closest('.gsc-input')) {
-                    const searchInput = document.querySelector('.gsc-input input');
-                    if (searchInput && searchInput.value) {
-                        showLoading();
-                        trackSearch(searchInput.value);
-                        
-                        // إخفاء التحميل بعد فترة (محاكاة)
-                        setTimeout(hideLoading, 1500);
-                    }
-                }
-            });
+                });
+            }
+        });
+        
+        // إعادة التحقق عند تغيير الصفحات في نتائج البحث
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.gsc-cursor-page')) {
+                setTimeout(checkSearchResults, 1500);
+            }
         });
     </script>
 </body>
