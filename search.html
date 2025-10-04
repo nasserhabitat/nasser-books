@@ -9,6 +9,7 @@
     <title>بحث متقدم - مكتبة ناصر ابن داوود</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -77,7 +78,37 @@
             margin-bottom: 1.5rem;
         }
         
-        /* تخصيص محرك البحث */
+        /* محرك البحث المخصص */
+        .custom-search-box {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .custom-search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px 0 0 50px;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        
+        .custom-search-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            padding: 0 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .custom-search-button:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* تخصيص محرك بحث جوجل */
         .gcse-search {
             width: 100%;
         }
@@ -109,15 +140,95 @@
             font-size: 1rem !important;
         }
         
-        /* تحسين نتائج البحث */
-        .gsc-results-wrapper-overlay {
-            border-radius: var(--border-radius) !important;
-            box-shadow: var(--shadow) !important;
+        /* نتائج البحث المحلي */
+        .local-results {
+            margin-top: 2rem;
         }
         
-        .gsc-webResult.gsc-result {
-            border-bottom: 1px solid #eee !important;
-            padding: 15px 0 !important;
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .results-count {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .book-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-badge {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .book-description {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .book-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .book-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--light-color);
+            color: var(--dark-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .book-link:hover {
+            background: var(--primary-color);
+            color: white;
         }
         
         /* رسائل حالة البحث */
@@ -220,6 +331,28 @@
             .filters {
                 flex-direction: column;
             }
+            
+            .book-header {
+                flex-direction: column;
+            }
+            
+            .book-links {
+                flex-direction: column;
+            }
+            
+            .custom-search-box {
+                flex-direction: column;
+            }
+            
+            .custom-search-input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .custom-search-button {
+                border-radius: 50px;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -234,10 +367,31 @@
     
     <div class="container">
         <section class="search-section">
+            <!-- محرك البحث المحلي -->
             <div class="search-container">
-                <!-- محرك بحث جوجل المخصص -->
+                <div class="custom-search-box">
+                    <input type="text" class="custom-search-input" id="localSearchInput" placeholder="ابحث في عناوين الكتب ومحتواها...">
+                    <button class="custom-search-button" id="localSearchButton">
+                        <i class="fas fa-search"></i> بحث
+                    </button>
+                </div>
+            </div>
+            
+            <!-- محرك بحث جوجل المخصص -->
+            <div class="search-container">
                 <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
                 <div class="gcse-search"></div>
+            </div>
+            
+            <!-- نتائج البحث المحلي -->
+            <div class="local-results" id="localResults">
+                <div class="results-header">
+                    <h2>نتائج البحث من المكتبة</h2>
+                    <div class="results-count" id="resultsCount">14 كتاب متاح</div>
+                </div>
+                <div id="booksContainer">
+                    <!-- سيتم ملء هذا القسم بالكتب عبر JavaScript -->
+                </div>
             </div>
             
             <!-- رسائل حالة البحث -->
@@ -300,64 +454,308 @@
     </footer>
 
     <script>
-        // تعيين استعلام البحث عند النقر على الاقتراحات
-        function setSearchQuery(query) {
-            const searchInput = document.querySelector('.gsc-input input');
-            if (searchInput) {
-                searchInput.value = query;
-                // تشغيل البحث
-                const searchButton = document.querySelector('.gsc-search-button');
-                if (searchButton) {
-                    searchButton.click();
+        // بيانات الفهرس (سيتم استبدالها بطلب AJAX لملف search-index.json في التطبيق الحقيقي)
+        const bookIndex = [
+            {
+              "id": "conscious-contemplation",
+              "titles": {
+                "ar": "نحو تدبر واعٍ",
+                "en": "Towards Conscious Contemplation"
+              },
+              "description": {
+                "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+                "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
+              },
+              "cover_image": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png",
+              "links": {
+                "ar": {
+                  "pdf": "books/conscious-contemplation/ar/content.pdf",
+                  "text": "books/conscious-contemplation/ar/content.txt"
+                },
+                "en": {
+                  "pdf": "books/conscious-contemplation/en/content.pdf",
+                  "text": "books/conscious-contemplation/en/content.txt"
                 }
+              },
+              "metadata": {
+                "author": "ناصر ابن داوود",
+                "category": "quranic_studies",
+                "pages_ar": 91,
+                "pages_en": 126,
+                "language_ar": "arabic",
+                "language_en": "english",
+                "ai_accessible": true,
+                "structured_data": true,
+                "topics": ["التدبر", "القرآن الكريم", "الفهم الواعي", "التطبيقات العصرية"]
+              }
+            },
+            {
+              "id": "anwar-al-bayan",
+              "titles": {
+                "ar": "أنوار البيان في رسم المصحف العثماني",
+                "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran"
+              },
+              "description": {
+                "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم",
+                "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
+              },
+              "cover_image": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png",
+              "links": {
+                "ar": {
+                  "pdf": "books/anwar-al-bayan/ar/content.pdf",
+                  "text": "books/anwar-al-bayan/ar/content.txt"
+                },
+                "en": {
+                  "pdf": "books/anwar-al-bayan/en/content.pdf",
+                  "text": "books/anwar-al-bayan/en/content.txt"
+                }
+              },
+              "metadata": {
+                "author": "ناصر ابن داوود",
+                "category": "quranic_studies",
+                "pages_ar": 161,
+                "pages_en": 215,
+                "language_ar": "arabic",
+                "language_en": "english",
+                "ai_accessible": true,
+                "structured_data": true,
+                "topics": ["الرسم العثماني", "علوم القرآن", "التجويد", "المخطوطات القرآنية"]
+              }
+            },
+            {
+              "id": "changing-the-concepts",
+              "titles": {
+                "ar": "تغيير المفاهيم للمصطلحات القرآنية",
+                "en": "Changing the Concepts of Quranic Terminology"
+              },
+              "description": {
+                "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
+                "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
+              },
+              "cover_image": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png",
+              "links": {
+                "ar": {
+                  "pdf": "books/changing-the-concepts/ar/content.pdf",
+                  "text": "books/changing-the-concepts/ar/content.txt"
+                },
+                "en": {
+                  "pdf": "books/changing-the-concepts/en/content.pdf",
+                  "text": "books/changing-the-concepts/en/content.txt"
+                }
+              },
+              "metadata": {
+                "author": "ناصر ابن داوود",
+                "category": "quranic_studies",
+                "pages_ar": 569,
+                "pages_en": 829,
+                "language_ar": "arabic",
+                "language_en": "english",
+                "ai_accessible": true,
+                "structured_data": true,
+                "topics": ["المصطلحات القرآنية", "فقه اللغة", "التفسير"]
+              }
+            },
+            {
+              "id": "modesty",
+              "titles": {
+                "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+                "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
+              },
+              "description": {
+                "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
+                "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+              },
+              "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
+              "links": {
+                "ar": {
+                  "pdf": "books/modesty/ar/content.pdf",
+                  "text": "books/modesty/ar/content.txt"
+                },
+                "en": {
+                  "pdf": "books/modesty/en/content.pdf",
+                  "text": "books/modesty/en/content.txt"
+                }
+              },
+              "metadata": {
+                "author": "ناصر ابن داوود",
+                "category": "faith_studies",
+                "pages_ar": 46,
+                "pages_en": 40,
+                "language_ar": "arabic",
+                "language_en": "english",
+                "ai_accessible": true,
+                "structured_data": true,
+                "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"]
+              }
             }
+        ];
+
+        // عناصر DOM
+        const localSearchInput = document.getElementById('localSearchInput');
+        const localSearchButton = document.getElementById('localSearchButton');
+        const booksContainer = document.getElementById('booksContainer');
+        const resultsCount = document.getElementById('resultsCount');
+        const noResultsMsg = document.getElementById('noResults');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const languageFilter = document.getElementById('languageFilter');
+
+        // تحميل الفهرس الحقيقي (في التطبيق الحقيقي)
+        function loadBookIndex() {
+            // في التطبيق الحقيقي، سيتم جلب البيانات من search-index.json
+            // fetch('search-index.json')
+            //   .then(response => response.json())
+            //   .then(data => {
+            //       bookIndex = data;
+            //       displayBooks(bookIndex);
+            //   })
+            //   .catch(error => console.error('Error loading book index:', error));
+            
+            displayBooks(bookIndex);
+        }
+
+        // عرض الكتب
+        function displayBooks(books) {
+            booksContainer.innerHTML = '';
+            
+            if (books.length === 0) {
+                noResultsMsg.style.display = 'block';
+                resultsCount.textContent = '0 كتاب متاح';
+                return;
+            }
+            
+            noResultsMsg.style.display = 'none';
+            resultsCount.textContent = `${books.length} كتاب متاح`;
+            
+            books.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                const language = getLanguageText(book.metadata.language_ar);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">${book.titles.ar}</h3>
+                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                        </div>
+                        <div class="book-meta">
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${language}</span>
+                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
+                        </div>
+                    </div>
+                    <p class="book-description">${book.description.ar}</p>
+                    <div class="book-links">
+                        ${book.links.ar.pdf ? `<a href="${book.links.ar.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF عربي</a>` : ''}
+                        ${book.links.en.pdf ? `<a href="${book.links.en.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF English</a>` : ''}
+                        ${book.links.ar.text ? `<a href="${book.links.ar.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> نص عربي</a>` : ''}
+                        ${book.links.en.text ? `<a href="${book.links.en.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> Text English</a>` : ''}
+                    </div>
+                `;
+                
+                booksContainer.appendChild(bookCard);
+            });
+        }
+
+        // البحث المحلي
+        function performLocalSearch() {
+            const query = localSearchInput.value.trim().toLowerCase();
+            const category = categoryFilter.value;
+            const language = languageFilter.value;
+            
+            let filteredBooks = bookIndex;
+            
+            // تطبيق البحث النصي
+            if (query) {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.titles.ar.toLowerCase().includes(query) ||
+                    book.titles.en.toLowerCase().includes(query) ||
+                    book.description.ar.toLowerCase().includes(query) ||
+                    book.description.en.toLowerCase().includes(query) ||
+                    (book.metadata.topics && book.metadata.topics.some(topic => 
+                        topic.toLowerCase().includes(query)
+                    ))
+                );
+            }
+            
+            // تطبيق تصفية التصنيف
+            if (category !== 'all') {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.metadata.category === category
+                );
+            }
+            
+            // تطبيق تصفية اللغة
+            if (language !== 'all') {
+                filteredBooks = filteredBooks.filter(book => {
+                    if (language === 'ar') return book.metadata.language_ar === 'arabic';
+                    if (language === 'en') return book.metadata.language_en === 'english';
+                    return true;
+                });
+            }
+            
+            displayBooks(filteredBooks);
+        }
+
+        // دوال مساعدة
+        function getCategoryText(category) {
+            const categories = {
+                'quranic_studies': 'الدراسات القرآنية',
+                'faith_studies': 'الدراسات الإيمانية',
+                'digital_projects': 'المشاريع الرقمية'
+            };
+            return categories[category] || category;
         }
         
-        // مراقبة نتائج البحث
-        function checkSearchResults() {
+        function getCategoryClass(category) {
+            const classes = {
+                'quranic_studies': 'category-quranic',
+                'faith_studies': 'category-faith',
+                'digital_projects': 'category-digital'
+            };
+            return classes[category] || '';
+        }
+        
+        function getLanguageText(language) {
+            return language === 'arabic' ? 'عربي' : 'إنجليزي';
+        }
+        
+        function setSearchQuery(query) {
+            localSearchInput.value = query;
+            performLocalSearch();
+        }
+
+        // إعدادات البحث في جوجل CSE
+        function checkGoogleResults() {
             setTimeout(() => {
                 const results = document.querySelector('.gsc-results .gsc-result');
-                const noResultsMsg = document.getElementById('noResults');
-                
                 if (!results) {
-                    noResultsMsg.style.display = 'block';
-                } else {
-                    noResultsMsg.style.display = 'none';
+                    console.log('لا توجد نتائج من جوجل CSE');
                 }
-            }, 1500);
+            }, 2000);
         }
-        
-        // إضافة مستمع للأحداث للبحث
+
+        // مستمعات الأحداث
         document.addEventListener('DOMContentLoaded', function() {
             console.log('محرك البحث جاهز للاستخدام');
+            loadBookIndex();
             
-            // التحقق من النتائج عند تحميل الصفحة أول مرة
-            setTimeout(checkSearchResults, 2000);
+            // البحث المحلي
+            localSearchButton.addEventListener('click', performLocalSearch);
+            localSearchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performLocalSearch();
+                }
+            });
             
-            // إضافة مستمع لزر البحث
-            const searchButton = document.querySelector('.gsc-search-button');
-            if (searchButton) {
-                searchButton.addEventListener('click', function() {
-                    setTimeout(checkSearchResults, 1000);
-                });
-            }
+            // الفلاتر
+            categoryFilter.addEventListener('change', performLocalSearch);
+            languageFilter.addEventListener('change', performLocalSearch);
             
-            // أيضًا عند الضغط على Enter
-            const searchInput = document.querySelector('.gsc-input input');
-            if (searchInput) {
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        setTimeout(checkSearchResults, 1000);
-                    }
-                });
-            }
-        });
-        
-        // إعادة التحقق عند تغيير الصفحات في نتائج البحث
-        document.addEventListener('click', function(e) {
-            if (e.target.closest('.gsc-cursor-page')) {
-                setTimeout(checkSearchResults, 1500);
-            }
+            // مراقبة نتائج جوجل
+            setTimeout(checkGoogleResults, 3000);
         });
     </script>
 </body>
