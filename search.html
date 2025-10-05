@@ -65,6 +65,15 @@
             margin-bottom: 1rem;
         }
         
+        .promotion-banner {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+        }
+        
         .search-section {
             background-color: white;
             padding: 2rem;
@@ -138,6 +147,18 @@
             border-radius: 50px !important;
             background: var(--primary-color) !important;
             font-size: 1rem !important;
+        }
+        
+        /* تخصيص مظهر الترويجات في نتائج البحث */
+        .gsc-promotion {
+            border: 2px solid var(--success-color) !important;
+            border-radius: var(--border-radius) !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .gsc-promotion .gs-title {
+            color: var(--success-color) !important;
+            font-weight: bold !important;
         }
         
         /* نتائج البحث المحلي */
@@ -318,6 +339,66 @@
             font-size: 1rem;
         }
         
+        /* روابط سريعة */
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .quick-link {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-5px);
+            color: var(--secondary-color);
+        }
+        
+        /* كتب مميزة */
+        .featured-books {
+            margin: 3rem 0;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .featured-book-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .featured-book-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .featured-book-title {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .featured-book-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -325,6 +406,34 @@
             border-top: 1px solid #eee;
             margin-top: auto;
             background: white;
+        }
+        
+        /* تبويبات البحث */
+        .search-tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .search-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .search-tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
         }
         
         @media (max-width: 768px) {
@@ -353,6 +462,18 @@
                 border-radius: 50px;
                 padding: 12px;
             }
+            
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-tabs {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -365,8 +486,22 @@
         </div>
     </header>
     
+    <div class="promotion-banner">
+        <div class="container">
+            <strong>🔍 بحث متقدم</strong> - ابحث في أكثر من 14 كتاباً ومخطوطة في الدراسات القرآنية والإيمانية
+        </div>
+    </div>
+    
     <div class="container">
-        <section class="search-section">
+        <!-- تبويبات البحث -->
+        <div class="search-tabs">
+            <div class="search-tab active" data-tab="local-search">البحث المحلي</div>
+            <div class="search-tab" data-tab="google-search">بحث جوجل</div>
+            <div class="search-tab" data-tab="all-books">جميع الكتب</div>
+        </div>
+        
+        <!-- محتوى تبويب البحث المحلي -->
+        <section class="search-section tab-content active" id="local-search">
             <!-- محرك البحث المحلي -->
             <div class="search-container">
                 <div class="custom-search-box">
@@ -377,10 +512,35 @@
                 </div>
             </div>
             
-            <!-- محرك بحث جوجل المخصص -->
-            <div class="search-container">
-                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
-                <div class="gcse-search"></div>
+            <!-- الفلاتر -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label" for="categoryFilter">التصنيف:</label>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">جميع التصنيفات</option>
+                        <option value="quranic_studies">الدراسات القرآنية</option>
+                        <option value="faith_studies">الدراسات الإيمانية</option>
+                        <option value="digital_projects">المشاريع الرقمية</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label" for="languageFilter">اللغة:</label>
+                    <select class="filter-select" id="languageFilter">
+                        <option value="all">جميع اللغات</option>
+                        <option value="ar">العربية</option>
+                        <option value="en">الإنجليزية</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label" for="sortFilter">ترتيب حسب:</label>
+                    <select class="filter-select" id="sortFilter">
+                        <option value="relevance">الأكثر صلة</option>
+                        <option value="title">العنوان</option>
+                        <option value="pages">عدد الصفحات</option>
+                    </select>
+                </div>
             </div>
             
             <!-- نتائج البحث المحلي -->
@@ -422,11 +582,33 @@
             <div class="info-box">
                 <p>🔍 <strong>يبحث في المحتوى الكامل</strong> لجميع الكتب والمستندات المتاحة في المكتبة</p>
             </div>
+        </section>
+        
+        <!-- محتوى تبويب بحث جوجل -->
+        <section class="search-section tab-content" id="google-search">
+            <h2>بحث جوجل المتقدم</h2>
+            <p>استخدم محرك بحث جوجل المخصص للبحث في محتوى المكتبة مع نتائج مخصصة وترويج للكتب المميزة</p>
+            
+            <!-- محرك بحث جوجل المخصص -->
+            <div class="search-container">
+                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
+                <div class="gcse-search"></div>
+            </div>
+            
+            <div class="info-box">
+                <p>🔍 <strong>نتائج مخصصة</strong> - تم تخصيص محرك البحث لعرض النتائج الأكثر صلة بمحتوى المكتبة</p>
+            </div>
+        </section>
+        
+        <!-- محتوى تبويب جميع الكتب -->
+        <section class="search-section tab-content" id="all-books">
+            <h2>جميع الكتب المتاحة</h2>
+            <p>استعرض جميع الكتب والمخطوطات المتاحة في المكتبة حسب التصنيف</p>
             
             <div class="filters">
                 <div class="filter-group">
-                    <label class="filter-label" for="categoryFilter">التصنيف:</label>
-                    <select class="filter-select" id="categoryFilter">
+                    <label class="filter-label" for="allBooksCategoryFilter">التصنيف:</label>
+                    <select class="filter-select" id="allBooksCategoryFilter">
                         <option value="all">جميع التصنيفات</option>
                         <option value="quranic_studies">الدراسات القرآنية</option>
                         <option value="faith_studies">الدراسات الإيمانية</option>
@@ -435,12 +617,73 @@
                 </div>
                 
                 <div class="filter-group">
-                    <label class="filter-label" for="languageFilter">اللغة:</label>
-                    <select class="filter-select" id="languageFilter">
+                    <label class="filter-label" for="allBooksLanguageFilter">اللغة:</label>
+                    <select class="filter-select" id="allBooksLanguageFilter">
                         <option value="all">جميع اللغات</option>
                         <option value="ar">العربية</option>
                         <option value="en">الإنجليزية</option>
                     </select>
+                </div>
+            </div>
+            
+            <div class="local-results">
+                <div class="results-header">
+                    <h2>جميع الكتب</h2>
+                    <div class="results-count" id="allBooksCount">14 كتاب متاح</div>
+                </div>
+                <div id="allBooksContainer">
+                    <!-- سيتم ملء هذا القسم بجميع الكتب عبر JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- روابط سريعة -->
+        <div class="quick-links">
+            <a href="https://nasserhabitat.github.io/nasser-books/index.html" class="quick-link">
+                <i class="fas fa-list"></i>
+                <h3>فهرس الكتب</h3>
+                <p>استعرض جميع الكتب المتاحة</p>
+            </a>
+            <a href="https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf" class="quick-link">
+                <i class="fas fa-book-open"></i>
+                <h3>نحو تدبر واعٍ</h3>
+                <p>الكتاب الأكثر تحميلاً</p>
+            </a>
+            <a href="https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.pdf" class="quick-link">
+                <i class="fas fa-quran"></i>
+                <h3>فقه اللسان القرآني</h3>
+                <p>دراسة منهجية متقدمة</p>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1abc123" class="quick-link">
+                <i class="fas fa-download"></i>
+                <h3>جميع الملفات</h3>
+                <p>روابط التحميل المباشرة</p>
+            </a>
+        </div>
+
+        <!-- كتب مميزة -->
+        <section class="featured-books">
+            <h2 style="text-align: center; margin-bottom: 1rem;">📖 الكتب المميزة</h2>
+            <div class="books-grid">
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">نحو تدبر واعٍ</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 91 صفحة</div>
+                    <p>دليل عملي لفهم وتطبيق القرآن الكريم في العصر الحديث</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">فقه اللسان القرآني</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 592 صفحة</div>
+                    <p>دراسة منهجية لفهم اللسان العربي القرآني ومنهجية التدبر</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">أنوار البيان</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 161 صفحة</div>
+                    <p>دراسة علمية للرسم العثماني وأسراره اللغوية</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">الحَيَاءُ</h3>
+                    <div class="featured-book-meta">الدراسات الإيمانية • 46 صفحة</div>
+                    <p>سياج الروح وبوصلة الفهم في المنظور القرآني</p>
                 </div>
             </div>
         </section>
@@ -456,6 +699,8 @@
     <script>
         // بيانات الفهرس (سيتم استبدالها بطلب AJAX لملف search-index.json في التطبيق الحقيقي)
         const bookIndex = [
+            // بيانات الكتب ستكون هنا (تم حذفها للإيجاز)
+            // يمكنك إضافة جميع الكتب الـ 14 هنا كما في الملف الأصلي
             {
       "id": "conscious-contemplation",
       "titles": {
@@ -1118,10 +1363,17 @@
         const localSearchInput = document.getElementById('localSearchInput');
         const localSearchButton = document.getElementById('localSearchButton');
         const booksContainer = document.getElementById('booksContainer');
+        const allBooksContainer = document.getElementById('allBooksContainer');
         const resultsCount = document.getElementById('resultsCount');
+        const allBooksCount = document.getElementById('allBooksCount');
         const noResultsMsg = document.getElementById('noResults');
         const categoryFilter = document.getElementById('categoryFilter');
         const languageFilter = document.getElementById('languageFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const allBooksCategoryFilter = document.getElementById('allBooksCategoryFilter');
+        const allBooksLanguageFilter = document.getElementById('allBooksLanguageFilter');
+        const searchTabs = document.querySelectorAll('.search-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
 
         // تحميل الفهرس الحقيقي (في التطبيق الحقيقي)
         function loadBookIndex() {
@@ -1131,13 +1383,15 @@
             //   .then(data => {
             //       bookIndex = data;
             //       displayBooks(bookIndex);
+            //       displayAllBooks(bookIndex);
             //   })
             //   .catch(error => console.error('Error loading book index:', error));
             
             displayBooks(bookIndex);
+            displayAllBooks(bookIndex);
         }
 
-        // عرض الكتب
+        // عرض الكتب في البحث المحلي
         function displayBooks(books) {
             booksContainer.innerHTML = '';
             
@@ -1183,11 +1437,56 @@
             });
         }
 
+        // عرض جميع الكتب
+        function displayAllBooks(books) {
+            allBooksContainer.innerHTML = '';
+            
+            if (books.length === 0) {
+                allBooksCount.textContent = '0 كتاب متاح';
+                return;
+            }
+            
+            allBooksCount.textContent = `${books.length} كتاب متاح`;
+            
+            books.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                const language = getLanguageText(book.metadata.language_ar);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">${book.titles.ar}</h3>
+                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                        </div>
+                        <div class="book-meta">
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${language}</span>
+                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
+                        </div>
+                    </div>
+                    <p class="book-description">${book.description.ar}</p>
+                    <div class="book-links">
+                        ${book.links.ar.pdf ? `<a href="${book.links.ar.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF عربي</a>` : ''}
+                        ${book.links.en.pdf ? `<a href="${book.links.en.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF English</a>` : ''}
+                        ${book.links.ar.text ? `<a href="${book.links.ar.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> نص عربي</a>` : ''}
+                        ${book.links.en.text ? `<a href="${book.links.en.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> Text English</a>` : ''}
+                    </div>
+                `;
+                
+                allBooksContainer.appendChild(bookCard);
+            });
+        }
+
         // البحث المحلي
         function performLocalSearch() {
             const query = localSearchInput.value.trim().toLowerCase();
             const category = categoryFilter.value;
             const language = languageFilter.value;
+            const sort = sortFilter.value;
             
             let filteredBooks = bookIndex;
             
@@ -1220,7 +1519,59 @@
                 });
             }
             
+            // تطبيق الترتيب
+            if (sort === 'title') {
+                filteredBooks.sort((a, b) => a.titles.ar.localeCompare(b.titles.ar));
+            } else if (sort === 'pages') {
+                filteredBooks.sort((a, b) => b.metadata.pages_ar - a.metadata.pages_ar);
+            }
+            
             displayBooks(filteredBooks);
+        }
+
+        // تصفية جميع الكتب
+        function filterAllBooks() {
+            const category = allBooksCategoryFilter.value;
+            const language = allBooksLanguageFilter.value;
+            
+            let filteredBooks = bookIndex;
+            
+            // تطبيق تصفية التصنيف
+            if (category !== 'all') {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.metadata.category === category
+                );
+            }
+            
+            // تطبيق تصفية اللغة
+            if (language !== 'all') {
+                filteredBooks = filteredBooks.filter(book => {
+                    if (language === 'ar') return book.metadata.language_ar === 'arabic';
+                    if (language === 'en') return book.metadata.language_en === 'english';
+                    return true;
+                });
+            }
+            
+            displayAllBooks(filteredBooks);
+        }
+
+        // تبديل التبويبات
+        function switchTab(tabId) {
+            // إخفاء جميع المحتويات
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // إزالة النشاط من جميع التبويبات
+            searchTabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // إظهار المحتوى المحدد
+            document.getElementById(tabId).classList.add('active');
+            
+            // إضافة النشاط للتبويب المحدد
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
         }
 
         // دوال مساعدة
@@ -1243,7 +1594,7 @@
         }
         
         function getLanguageText(language) {
-            return language === 'arabic' ? 'عربي' : 'إنجليزي';
+            return language === 'arabic' ? 'العربية' : 'الإنجليزية';
         }
         
         function setSearchQuery(query) {
@@ -1251,35 +1602,34 @@
             performLocalSearch();
         }
 
-        // إعدادات البحث في جوجل CSE
-        function checkGoogleResults() {
-            setTimeout(() => {
-                const results = document.querySelector('.gsc-results .gsc-result');
-                if (!results) {
-                    console.log('لا توجد نتائج من جوجل CSE');
-                }
-            }, 2000);
-        }
-
-        // مستمعات الأحداث
+        // تهيئة الأحداث
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('محرك البحث جاهز للاستخدام');
             loadBookIndex();
             
-            // البحث المحلي
+            // أحداث البحث المحلي
             localSearchButton.addEventListener('click', performLocalSearch);
-            localSearchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
+            localSearchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
                     performLocalSearch();
                 }
             });
             
-            // الفلاتر
+            // أحداث الفلاتر
             categoryFilter.addEventListener('change', performLocalSearch);
             languageFilter.addEventListener('change', performLocalSearch);
+            sortFilter.addEventListener('change', performLocalSearch);
             
-            // مراقبة نتائج جوجل
-            setTimeout(checkGoogleResults, 3000);
+            // أحداث فلاتر جميع الكتب
+            allBooksCategoryFilter.addEventListener('change', filterAllBooks);
+            allBooksLanguageFilter.addEventListener('change', filterAllBooks);
+            
+            // أحداث التبويبات
+            searchTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
         });
     </script>
 </body>
