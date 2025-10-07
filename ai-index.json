@@ -1,4 +1,17 @@
 {
+  "site_info": {
+    "name": "مكتبة ناصر ابن داوود",
+    "schema_type": "WebSite",
+    "description": "مكتبة رقمية شاملة لمؤلفات الدكتور ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية، متوافقة مع الذكاء الاصطناعي.",
+    "url": "https://nasserhabitat.github.io/nasser-books/",
+    "inLanguage": ["ar", "en"],
+    "author": {
+      "schema_type": "Person",
+      "name": "الدكتور ناصر ابن داوود",
+      "email": "nasserhabitat@gmail.com"
+    }
+  },
+  {
   "library": {
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
