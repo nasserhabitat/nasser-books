@@ -18,7 +18,7 @@
 
   <!-- صفحة البحث -->
   <url>
-    <loc>https://nasserhabitat.github.io/nasser-books/api/search.html</loc>
+    <loc>https://nasserhabitat.github.io/nasser-books/search.html</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
