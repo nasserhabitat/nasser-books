@@ -23,29 +23,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- <url>
+  
+  <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books-index.html</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-</url>
-  <!-- ملف البيانات (أقل أولوية) -->
-  <url>
-    <loc>https://nasserhabitat.github.io/nasser-books/assets/data/index.json</loc>
-    <lastmod>2025-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
 
-  <!-- صفحة شروط الاستخدام -->
-  <url>
-    <loc>https://nasserhabitat.github.io/nasser-books/terms.html</loc>
-    <lastmod>2023-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- صفحات الكتب الفردية - النسخة المعدلة -->
+  <!-- صفحات الكتب الفردية -->
   <!-- نحو تدبر واع -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/index.html</loc>
@@ -60,7 +46,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- باقي صفحات الكتب (يجب الحفاظ على نفس الهيكل لجميع الكتب) -->
   <!-- أنوار البيان -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/index.html</loc>
@@ -75,8 +60,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- باقي صفحات الكتب هنا بنفس النمط... -->
-<!-- "تغيير المفاهيم القرآنية (إصدار 2025)" -->
+  <!-- تغيير المفاهيم القرآنية -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -90,7 +74,7 @@
     <priority>0.8</priority>
   </url>
 
-<!-- "التدبر في مرآة الرسوم (إصدار 2025)"-->
+  <!-- التدبر في مرآة الرسوم -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -103,7 +87,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-<!--"مشروع رقمنة القرآن الكريم -->
+
+  <!-- مشروع رقمنة القرآن الكريم -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -117,7 +102,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!--" الحياء في العصر الرقمي (2025)"-->
+  <!-- الحياء في العصر الرقمي -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/modesty/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -130,7 +115,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <!--" "الأسماء الحسنى في ضوء الدراسات الحديثة (2025)"-->
+
+  <!-- الأسماء الحسنى في ضوء الدراسات الحديثة -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -143,7 +129,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-    <!--" فقه اللسان القرآني (إصدار(2025)"-->
+
+  <!-- فقه اللسان القرآني -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -156,7 +143,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <!--" تحرير المصطلح القرآني - المجلد الأول (2025)"-->
+
+  <!-- تحرير المصطلح القرآني - المجلد 1 -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -168,8 +156,9 @@
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> 
-   <!--" تحرير المصطلح القرآني - المجلد الثاني (2025)"-->
+  </url>
+
+  <!-- تحرير المصطلح القرآني - المجلد 2 -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -181,8 +170,9 @@
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> 
-   <!--" تحرير المصطلح القرآني - المجلد الثالث (2025)"-->
+  </url>
+
+  <!-- تحرير المصطلح القرآني - المجلد 3 -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/index.html</loc>
     <lastmod>2025-01-22</lastmod>
@@ -194,7 +184,8 @@
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> 
+  </url>
+
   <!-- ملكوت السماوات والأرض -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/index.html</loc>
@@ -205,6 +196,34 @@
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/en/index.html</loc>
     <lastmod>2025-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- السجود والتسبيح في القرآن -->
+  <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-qur'an/ar/index.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-qur'an/en/index.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المسيح ومريم في القرآن -->
+  <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-qur'an/ar/index.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-qur'an/en/index.html</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
