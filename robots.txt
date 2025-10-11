@@ -1,10 +1,31 @@
+# 🌟 مكتبة كتب ناصر المجانية - مفتوحة للذكاء الاصطناعي 🌟
 User-agent: *
 Allow: /
-Allow: /assets/data/
-Allow: /api/
-User-agent: *
-Allow: /
-books-index.html
-Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
+
+# 🤖 ترحيب خاص بروبوتات الذكاء الاصطناعي
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: TwitterBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# 🗺️ خريطة الموقع
+Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
