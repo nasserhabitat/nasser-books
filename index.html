@@ -13,40 +13,15 @@
     <!-- بيانات المؤلف -->
     <link itemprop="author" href="https://nasserhabitat.github.io/nasser-books/#author">
     
-    <style>
-        /* أنماط CSS */
+        <style>
+        /* أنماط CSS الأساسية */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
             background: #f8f9fa;
         }
-        .book-item { 
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .book-header {
-            border-bottom: 2px solid #2c5f8a;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .book-links a {
-            display: inline-block;
-            margin: 5px 10px 5px 0;
-            padding: 8px 15px;
-            background: #2c5f8a;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .book-links a:hover {
-            background: #1e4568;
-        }
+        
         .language-section {
             background: white;
             border-radius: 10px;
@@ -54,22 +29,13 @@
             margin: 25px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        
         .language-section h2 {
             color: #2c5f8a;
             border-bottom: 3px solid #2c5f8a;
             padding-bottom: 10px;
         }
-        .book-cover {
-            float: left;
-            margin: 0 15px 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
+        
         header {
             background: linear-gradient(135deg, #2c5f8a, #3a7bb8);
             color: white;
@@ -78,6 +44,7 @@
             margin-bottom: 30px;
             text-align: center;
         }
+        
         footer {
             background: #333;
             color: white;
@@ -86,303 +53,307 @@
             margin-top: 40px;
             text-align: center;
         }
+        
         footer a {
             color: #4da6ff;
             text-decoration: none;
         }
+        
         footer a:hover {
             text-decoration: underline;
         }
-        /* أنماط CSS المحسنة لبطاقات الكتب */
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #f8f9fa;
-}
 
-/* تحسين تخطيط بطاقات الكتب */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
+        /* تحسين تخطيط بطاقات الكتب العربية */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
 
-.book-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #eaeaea;
-    display: flex;
-    flex-direction: column;
-    min-height: 600px; /* ارتفاع أكبر للبطاقة */
-}
+        .book-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            min-height: 520px;
+        }
 
-.book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
+        .book-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
 
-/* تحسين تخطيط الصور والمحتوى */
-.book-cover {
-    width: 100%;
-    text-align: center;
-    margin: 0 0 25px 0;
-    float: none;
-}
+        /* تحسين تخطيط الصور والمحتوى للكتب العربية */
+        .book-cover {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 20px 0;
+            float: none;
+        }
 
-.book-cover img {
-    width: 220px; /* حجم صورة أكبر */
-    height: 308px; /* نسبة 1:1.4 تقريباً */
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    border: 1px solid #eee;
-    background: #f8f9fa; /* خلفية للصور الشفافة */
-}
+        .book-cover img {
+            width: 180px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            background: #f8f9fa;
+        }
 
-.book-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+        .book-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-.book-info h2 {
-    color: #2c5f8a;
-    margin: 0 0 15px 0;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    min-height: 3.8em;
-}
+        .book-info h2 {
+            color: #2c5f8a;
+            margin: 0 0 12px 0;
+            font-size: 1.3rem;
+            line-height: 1.3;
+            min-height: 3.2em;
+        }
 
-.book-meta {
-    color: #666;
-    margin: 8px 0;
-    font-size: 1rem;
-}
+        .book-meta {
+            color: #666;
+            margin: 6px 0;
+            font-size: 0.95rem;
+        }
 
-.book-desc {
-    color: #555;
-    line-height: 1.6;
-    margin: 15px 0 20px 0;
-    flex: 1;
-    font-size: 1rem;
-}
+        .book-desc {
+            color: #555;
+            line-height: 1.5;
+            margin: 12px 0 16px 0;
+            flex: 1;
+            font-size: 0.95rem;
+        }
 
-/* تحسين أزرار التحميل */
-.download-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-}
+        /* تحسين أزرار التحميل */
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
 
-.download-link {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #2c5f8a;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    border: 1px solid #2c5f8a;
-}
+        .download-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #2c5f8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid #2c5f8a;
+        }
 
-.download-link:hover {
-    background: #1e4568;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 95, 138, 0.3);
-}
+        .download-link:hover {
+            background: #1e4568;
+            transform: translateY(-1px);
+        }
 
-.book-actions {
-    margin: 20px 0;
-}
+        .book-actions {
+            margin: 16px 0;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #3a7bb8;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3a7bb8;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
 
-.btn:hover {
-    background: #2c5f8a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(58, 123, 184, 0.3);
-}
+        .btn:hover {
+            background: #2c5f8a;
+            transform: translateY(-1px);
+        }
 
-/* تحسين عرض الكتب الإنجليزية */
-.book-item {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 25px 0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    min-height: 320px;
-}
+        /* تحسين بطاقات الكتب الإنجليزية لتكون مثل العربية */
+        .english-books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
 
-.book-item .book-cover img {
-    width: 180px; /* حجم أكبر للكتب الإنجليزية */
-    height: 252px;
-    object-fit: contain;
-}
+        .english-book-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            min-height: 520px;
+        }
 
-.book-content {
-    flex: 1;
-}
+        .english-book-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
 
-.book-header h3 {
-    color: #2c5f8a;
-    margin: 0 0 20px 0;
-    font-size: 1.4rem;
-    line-height: 1.4;
-}
+        .english-book-cover {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
 
-.book-links a {
-    display: inline-block;
-    margin: 8px 12px 8px 0;
-    padding: 10px 18px;
-    background: #2c5f8a;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
+        .english-book-cover img {
+            width: 180px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            background: #f8f9fa;
+        }
 
-.book-links a:hover {
-    background: #1e4568;
-    transform: translateY(-2px);
-}
+        .english-book-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* تحسين responsive */
-@media (max-width: 1200px) {
-    .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 25px;
-    }
-}
+        .english-book-info h3 {
+            color: #2c5f8a;
+            margin: 0 0 12px 0;
+            font-size: 1.3rem;
+            line-height: 1.3;
+            min-height: 3.2em;
+        }
 
-@media (max-width: 768px) {
-    .book-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .book-card {
-        min-height: auto;
-        padding: 25px;
-    }
-    
-    .book-cover img {
-        width: 180px;
-        height: 252px;
-    }
-    
-    .book-item {
-        flex-direction: column;
-        text-align: center;
-        min-height: auto;
-        padding: 25px;
-    }
-    
-    .book-item .book-cover img {
-        width: 150px;
-        height: 210px;
-    }
-    
-    .download-links {
-        justify-content: center;
-    }
-    
-    .book-links {
-        text-align: center;
-    }
-}
+        .english-book-meta {
+            color: #666;
+            margin: 6px 0;
+            font-size: 0.95rem;
+        }
 
-@media (max-width: 480px) {
-    body {
-        padding: 15px;
-    }
-    
-    .book-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .book-card {
-        padding: 20px;
-    }
-    
-    .book-cover img {
-        width: 150px;
-        height: 210px;
-    }
-    
-    .book-info h2 {
-        font-size: 1.3rem;
-    }
-    
-    .book-item {
-        padding: 20px;
-    }
-}
+        .english-book-desc {
+            color: #555;
+            line-height: 1.5;
+            margin: 12px 0 16px 0;
+            flex: 1;
+            font-size: 0.95rem;
+        }
 
-/* تحسين أداء الصور */
-.book-cover img[loading="lazy"] {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
+        .english-book-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
 
-.book-cover img:not([loading]) {
-    opacity: 1;
-}
+        .english-book-links a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #2c5f8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
 
-/* بقية الأنماط الموجودة مسبقاً تبقى كما هي */
-.language-section {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 30px 0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
+        .english-book-links a:hover {
+            background: #1e4568;
+            transform: translateY(-1px);
+        }
 
-.language-section h2 {
-    color: #2c5f8a;
-    border-bottom: 3px solid #2c5f8a;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-}
+        .english-book-actions {
+            margin: 16px 0;
+        }
 
-header {
-    background: linear-gradient(135deg, #2c5f8a, #3a7bb8);
-    color: white;
-    padding: 35px;
-    border-radius: 15px;
-    margin-bottom: 35px;
-    text-align: center;
-}
+        /* إزالة الأنماط القديمة للكتب الإنجليزية */
+        .book-item {
+            display: none; /* إخفاء النمط القديم */
+        }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-top: 45px;
-    text-align: center;
-}
+        /* تحسين responsive */
+        @media (max-width: 1200px) {
+            .book-grid,
+            .english-books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .book-grid,
+            .english-books-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .book-card,
+            .english-book-card {
+                min-height: auto;
+                padding: 20px;
+            }
+            
+            .book-cover img,
+            .english-book-cover img {
+                width: 150px;
+                height: 210px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .book-grid,
+            .english-books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-card,
+            .english-book-card {
+                padding: 18px;
+            }
+            
+            .book-cover img,
+            .english-book-cover img {
+                width: 140px;
+                height: 196px;
+            }
+            
+            .book-info h2,
+            .english-book-info h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* تحسين أداء الصور */
+        .book-cover img[loading="lazy"],
+        .english-book-cover img[loading="lazy"] {
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .book-cover img:not([loading]),
+        .english-book-cover img:not([loading]) {
+            opacity: 1;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
     </style>
 </head>
 <body itemscope itemtype="https://schema.org/CollectionPage">
@@ -1671,6 +1642,7 @@ footer {
     </script>
 </body>
 </html>
+
 
 
 
