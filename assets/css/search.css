@@ -15,6 +15,39 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: opacity 0.3s ease; /* تأثير ناعم عند التحميل */
 }
+/* توحيد أحجام الصور في نتائج البحث */
+.search-results .book-result-cover {
+    width: 120px;
+    height: 160px; /* ارتفاع ثابت */
+    object-fit: contain; /* يحافظ على التناسب دون تشويه */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #f8f8f8; /* خلفية فاتحة للصور الشفافة */
+    border: 1px solid #eee; /* إطار خفيف */
+}
+
+/* حاوية الصورة لضمان الحفاظ على النسبة */
+.book-result-header .cover-container {
+    width: 120px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* تحسين العرض على الجوال */
+@media (max-width: 768px) {
+    .search-results .book-result-cover {
+        width: 80px;
+        height: 120px;
+    }
+    
+    .book-result-header .cover-container {
+        width: 80px;
+        height: 120px;
+    }
+}
 
 .book-result-cover[loading="lazy"] {
   opacity: 0.5; /* خفيف قبل التحميل */
