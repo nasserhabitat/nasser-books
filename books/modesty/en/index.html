@@ -5,11 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modesty: The Fence of the Soul and the Compass of Understanding | Dr. Nasser Ibn Dawood</title>
     <meta name="description" content="An exploration of modesty as a cognitive tool for Quranic understanding - By Dr. Nasser Ibn Dawood">
+
+    <!-- Schema.org markup for the book -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Modesty: The Fence of the Soul and the Compass of Understanding",
+    "author": {
+        "@type": "Person",
+        "name": "Dr. Nasser Ibn Dawood",
+        "email": "nasserhabitat@gmail.com",
+        "jobTitle": "Islamic Researcher and Engineer",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dr. Nasser Ibn Dawood Library",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "datePublished": "2025",
+    "bookEdition": "First Edition",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "en",
+    "description": "A comprehensive study that presents modesty as a cognitive tool and a prerequisite for understanding the Quran, with a new vision for its role in contemplation and Islamic civilization.",
+    "genre": ["Quranic Studies", "Islamic Ethics", "Contemplation"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "numberOfPages": 220,
+    "url": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/",
+    "image": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/cover-en.png",
+    "keywords": "Modesty, Quran, Contemplation, Islamic Ethics, Islamic Civilization",
+    "workExample": [
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "name": "DOCX Version - Modesty: The Fence of the Soul and the Compass of Understanding",
+            "url": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/pdf",
+            "name": "PDF Version - Modesty: The Fence of the Soul and the Compass of Understanding",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.pdf"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "text/plain",
+            "name": "Text Version - Modesty: The Fence of the Soul and the Compass of Understanding",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.txt"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "name": "Archive.org Version - Modesty: The Fence of the Soul and the Compass of Understanding",
+            "url": "https://archive.org/details/modesty-the-fence-of-the-soul-and-the-compass-of-understanding"
+        }
+    ],
+    "translationOfWork": {
+        "@type": "Book",
+        "name": "الحياء: سياج الروح وبوصلة الفهم",
+        "inLanguage": "ar",
+        "url": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Modesty in the Quran"
+    },
+    "mentions": [
+        {
+            "@type": "Thing",
+            "name": "Quranic Contemplation"
+        },
+        {
+            "@type": "Thing",
+            "name": "Islamic Ethics"
+        },
+        {
+            "@type": "Thing",
+            "name": "Islamic Civilization"
+        }
+    ]
+}
+</script>
+
     <style>
         :root {
             --primary-color: #1a5f7a;
-            --secondary-color: #57C5B6;
-            --accent-color: #159895;
+            --secondary-color: #159895;
+            --accent-color: #57C5B6;
             --light-color: #f8f9fa;
             --dark-color: #212529;
             --gray-color: #6c757d;
@@ -34,8 +121,9 @@
             margin: 0 auto;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         h2 {
             color: var(--primary-color);
@@ -48,7 +136,7 @@
             margin-top: 1.5rem;
         }
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             opacity: 0.9;
             font-weight: 300;
         }
@@ -70,6 +158,7 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         .book-details {
             flex: 2;
@@ -98,6 +187,35 @@
             transform: translateY(-2px);
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
+        .download-links {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .download-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 0.6rem 1rem;
+            margin: 0.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .download-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
         .book-meta {
             margin: 1.5rem 0;
             background: rgba(255,255,255,0.8);
@@ -111,6 +229,9 @@
         }
         .book-description {
             margin: 2rem 0;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
         }
         .book-description p {
             margin-bottom: 1.5rem;
@@ -134,11 +255,38 @@
         }
         .book-features li {
             margin-bottom: 0.8rem;
-            line-height: 1.6;
             position: relative;
             padding-left: 1.5rem;
         }
         .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .toc {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+        .toc-chapter {
+            margin-left: 1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .toc-chapter::before {
             content: "•";
             color: var(--primary-color);
             position: absolute;
@@ -154,34 +302,23 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
-        .download-section {
-            background: #ffffff;
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
-            border: 1px solid #ddd;
-            text-align: center;
+            border-left: 4px solid var(--accent-color);
         }
-        .download-section h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 1rem;
-            border-bottom: none;
-        }
-        .download-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .download-links .btn {
-            flex-grow: 1;
-            min-width: 150px;
-        }
-        .book-section {
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px dashed var(--gray-color);
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -196,14 +333,19 @@
             .hero {
                 padding: 2.5rem 1rem;
             }
+            .download-link {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>MODESTY</h1>
-            <p class="subtitle">The Fence of the Soul and the Compass of Understanding</p>
+            <h1>Modesty: The Fence of the Soul and the Compass of Understanding</h1>
+            <p class="subtitle">By: Dr. Nasser Ibn Dawood</p>
         </div>
     </header>
     
@@ -211,7 +353,7 @@
         <section class="book-cover">
             <div class="cover-container">
                 <img src="cover-en.png"
-                     alt="Book Cover: Modesty: The Fence of the Soul and the Compass of Understanding by Dr. Nasser Ibn Dawood"
+                     alt="Book Cover: Modesty: The Fence of the Soul and the Compass of Understanding - By Dr. Nasser Ibn Dawood"
                      loading="lazy"
                      width="300"
                      height="400"
@@ -233,66 +375,120 @@
                 </a>
             </div>
             
+            <div class="download-links">
+                <h4>📥 Direct Download Links</h4>
+                <a href="https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📄 DOCX</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.pdf" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📖 PDF</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/modesty/en/content.txt" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📝 Plain Text</a>
+                <a href="https://archive.org/details/modesty-the-fence-of-the-soul-and-the-compass-of-understanding" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">🌐 Archive.org</a>
+            </div>
+            
             <div class="book-meta">
                 <p><strong>Author:</strong> Dr. Nasser Ibn Dawood</p>
                 <p><strong>Edition:</strong> First Edition - 2025</p>
                 <p><strong>Pages:</strong> 220</p>
-                <p><strong>Category:</strong> Islamic Studies, Quranic Exegesis</p>
+                <p><strong>Category:</strong> Quranic Studies, Islamic Ethics</p>
+                <p><strong>Language:</strong> English</p>
             </div>
         </section>
         
         <section class="book-details">
-            <div class="download-section">
-                <h3>Download Formats</h3>
-                <div class="download-links">
-                    <a href="https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2" class="btn" target="_blank" rel="noopener noreferrer">DOCX</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE" class="btn" target="_blank" rel="noopener noreferrer">HTML</a>
-                    <a href="books/modesty/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">PDF</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1i5__DOFOeEH8XhaL2vKlsK6JIgnQq7Vp" class="btn" target="_blank" rel="noopener noreferrer">External PDF</a>
-                    <a href="books/modesty/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">TEXT</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY" class="btn" target="_blank" rel="noopener noreferrer">External TEXT</a>
-                    <a href="https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
-                    <a href="https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
-                </div>
-            </div>
-            
             <div class="book-description">
                 <h2>About This Book</h2>
-                <p>This groundbreaking work attempts to transform our understanding of "modesty" from static moral concept to dynamic cognitive tool for Quranic comprehension. Dr. Nasser Ibn Dawood presents a revolutionary approach that reveals modesty as both a spiritual compass and intellectual methodology.</p>
-                
-                <p>The book explores:</p>
-                <ul>
-                    <li>The linguistic and conceptual foundations of modesty in Islamic thought</li>
-                    <li>Divine modesty as reflected in Quranic revelation</li>
-                    <li>Prophetic models of modesty as pathways to understanding</li>
-                    <li>Practical applications for contemporary Quranic study</li>
-                </ul>
-                
-                <p>More than just ethical guidance, this work demonstrates how modesty serves as:</p>
-                <ul>
-                    <li>The compass that orients contemplative processes</li>
-                    <li>The antidote to superficial interpretation</li>
-                    <li>The key unlocking divine wisdom in Quranic discourse</li>
-                </ul>
-                
-                <p>Through the innovative "Jurisprudence of Quranic Terminology" methodology, Dr. Ibn Dawood provides readers with powerful new tools for engaging with the Divine Text.</p>
+                <p>This groundbreaking work attempts to transform our understanding of "modesty" from a static moral concept to a dynamic cognitive tool for Quranic comprehension. Dr. Nasser Ibn Dawood presents a revolutionary approach that reveals modesty as both a spiritual compass and an intellectual methodology.</p>
+                <p>Through Quranic and historical analysis, the book examines the manifestations of modesty in Quranic texts and the Prophetic biography, focusing on its role in building individuals and society, and confronting ethical challenges in the digital age.</p>
+            </div>
+
+            <div class="volume-description">
+                <h3>Methodological Vision</h3>
+                <p>The book adopts an analytical methodology combining Quranic exegesis and ethical studies, presenting modesty as a cognitive tool that aids in deeply understanding Quranic texts. It connects modesty as a spiritual quality to its role as a key to contemplation, offering a civilizational vision for its application in contemporary life.</p>
             </div>
             
             <div class="book-features">
                 <h3>Key Features:</h3>
                 <ul>
-                    <li>Original research on Quranic concepts of modesty</li>
-                    <li>Integration of classical scholarship with contemporary approaches</li>
-                    <li>Practical exercises for developing contemplative skills</li>
-                    <li>Case studies of modesty in Quranic narratives</li>
-                    <li>Comprehensive glossary of Arabic terms</li>
+                    <li>Presents a new vision for modesty as a cognitive tool for understanding the Quran</li>
+                    <li>Connects ethics with Quranic contemplation</li>
+                    <li>Examines the manifestations of modesty in the Quran and Sunnah</li>
+                    <li>Addresses the challenges of modesty in the digital age</li>
+                    <li>Establishes the role of modesty in building Islamic society</li>
+                </ul>
+            </div>
+
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                
+                <div class="toc-section">
+                    <h3>Introduction</h3>
+                    <div class="toc-chapter">Book Introduction: Modesty: The Fence of the Soul and the Compass of Understanding</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Introduction to the Jurisprudence of Quranic Terminology</h3>
+                    <div class="toc-chapter">A New Methodology for Text Comprehension</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Part One: Deconstructing the Code</h3>
+                    <div class="toc-chapter">Chapter One: In the Realm of the Root - H.Y.Y.</div>
+                    <div class="toc-chapter">Chapter Two: Modesty in Lexicons and Heritage - Comparison and Integration</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Part Two: Manifestations of Modesty in the Quranic Scene</h3>
+                    <div class="toc-chapter">Chapter One: Divine Modesty - ﴿And Allah is not ashamed of the truth﴾</div>
+                    <div class="toc-chapter">Chapter Two: Prophetic Modesty - Perfection in Character</div>
+                    <div class="toc-chapter">Chapter Three: Modesty in Women - The Title of Chastity and Beauty</div>
+                    <div class="toc-chapter">Chapter Four: The Modesty of Yusuf (AS) - The Strength of Chastity and the Beauty of Forgiveness</div>
+                    <div class="toc-chapter">Chapter Five: The Modesty of Maryam (AS) - Manifestation of Pure Nature</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Part Three: From Ethics to Cognition</h3>
+                    <div class="toc-chapter">Chapter One: The Traditional Platform - Understanding Parables within the Framework of the Grandeur of Creation</div>
+                    <div class="toc-chapter">Chapter Two: New Horizons - Interpretive Readings of Parables</div>
+                    <div class="toc-chapter">Chapter Three: The Integrated Theory - Modesty as an Antidote to the "Mosquito Syndrome"</div>
+                    <div class="toc-chapter">Chapter Four: The Compass of Modesty - How Character Becomes a Key to Contemplation?</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Part Four: Modesty and Civilizational Impact</h3>
+                    <div class="toc-chapter">Chapter One: The Individual Between the Compass of Modesty and the Prison of Shame</div>
+                    <div class="toc-chapter">Chapter Two: Modesty in Building Society - The Nation's Fortress Against its Enemies</div>
+                    <div class="toc-chapter">Chapter Three: The Maladies and Limits of Modesty - Between Incapacity and Shamelessness</div>
+                    <div class="toc-chapter">Chapter Four: Challenges of Modesty in the Digital Age - An Ethical Compass for a Changing World</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Conclusion and References</h3>
+                    <div class="toc-chapter">Book Conclusion: Towards a "Modest" Generation</div>
+                    <div class="toc-chapter">Sources and References</div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <h3>Conclusion: Modesty as a Way of Life</h3>
+                <p>This book aims to revive modesty as an ethical and cognitive value, presenting a comprehensive vision of its role in enhancing Quranic contemplation and building society. It calls on readers to adopt modesty as a compass guiding their lives, enabling them to gain a deeper understanding of Allah's words and apply them in contemporary reality.</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>Who is this book for?</h3>
+                <ul>
+                    <li><strong>Researchers in Quranic Studies:</strong> Those interested in deeply understanding Quranic texts.</li>
+                    <li><strong>Those Interested in Islamic Ethics:</strong> Seekers of strengthening ethical values.</li>
+                    <li><strong>Teachers and Preachers:</strong> Those wishing to teach Quranic values in a modern way.</li>
+                    <li><strong>General Readers:</strong> Those wishing to deepen their connection with the Quran and Islamic ethics.</li>
                 </ul>
             </div>
         </section>
     </main>
-    
+
     <footer class="site-footer">
-        <p>© 2025 Dr. Nasser Ibn Dawood Library. All rights reserved.</p>
+        <p>© 2025 Dr. Nasser Ibn Dawood Library - All rights reserved</p>
         <p>Islamic Researcher and Engineer specializing in Digital Quranic Studies</p>
     </footer>
 </body>
