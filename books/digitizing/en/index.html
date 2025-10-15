@@ -1,6 +1,3 @@
-Based on your previous request and the provided JSON data, here is the updated HTML for the "Digitizing the Original Manuscripts of the Holy Qur'an" page. I've added the new download links to a new section, following the structure from the "Changing the Concepts" example.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +5,101 @@ Based on your previous request and the provided JSON data, here is the updated H
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Project of Digitizing the Original Manuscripts of the Holy Qur'an | Dr. Nasser Ibn Dawood</title>
     <meta name="description" content="The Light of Reason and Authentic Contemplation: Towards a Digital Qur'anic Renaissance - A scholarly initiative for Quranic manuscript studies">
+
+    <!-- Schema.org markup for the book -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Project of Digitizing the Original Manuscripts of the Holy Qur'an: The Light of Reason and Authentic Contemplation",
+    "author": {
+        "@type": "Person",
+        "name": "Dr. Nasser Ibn Dawood",
+        "email": "nasserhabitat@gmail.com",
+        "jobTitle": "Islamic Researcher and Engineer",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dr. Nasser Ibn Dawood Library",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "datePublished": "2025",
+    "bookEdition": "First Edition",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "en",
+    "description": "A scholarly initiative for digitizing and studying original Quranic manuscripts, aiming to preserve Islamic heritage and develop advanced digital tools for Quranic analysis",
+    "genre": ["Quranic Studies", "Digitization", "Quranic Manuscripts", "Islamic Technology"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "numberOfPages": 320,
+    "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/",
+    "image": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/cover-en.png",
+    "keywords": "Qur'an, Quranic Manuscripts, Digitization, Contemplation, Artificial Intelligence",
+    "workExample": [
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "name": "DOCX Version - Digitizing the Original Manuscripts",
+            "url": "https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/pdf",
+            "name": "PDF Version - Digitizing the Original Manuscripts",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/content.pdf"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "text/plain",
+            "name": "Text Version - Digitizing the Original Manuscripts",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/content.txt"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "name": "Archive.org Version - Digitizing the Original Manuscripts",
+            "url": "https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505"
+        }
+    ],
+    "translationOfWork": {
+        "@type": "Book",
+        "name": "مشروع رقمنة المخطوطات الأصلية للقرآن الكريم",
+        "inLanguage": "ar",
+        "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Quranic Manuscripts Digitization"
+    },
+    "mentions": [
+        {
+            "@type": "Thing",
+            "name": "Authentic Contemplation"
+        },
+        {
+            "@type": "Thing",
+            "name": "Artificial Intelligence"
+        },
+        {
+            "@type": "Thing",
+            "name": "Islamic Heritage"
+        }
+    ]
+}
+</script>
+
     <style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
+            --accent-color: #57C5B6;
             --light-color: #f8f9fa;
             --dark-color: #212529;
-            --accent-color: #57C5B6;
+            --gray-color: #6c757d;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,6 +158,7 @@ Based on your previous request and the provided JSON data, here is the updated H
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         .book-details {
             flex: 2;
@@ -99,7 +185,36 @@ Based on your previous request and the provided JSON data, here is the updated H
         .btn:hover {
             opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .download-links {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .download-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 0.6rem 1rem;
+            margin: 0.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .download-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
         .book-meta {
             margin: 1.5rem 0;
@@ -137,7 +252,6 @@ Based on your previous request and the provided JSON data, here is the updated H
         }
         .book-features li {
             margin-bottom: 0.8rem;
-            line-height: 1.6;
             position: relative;
             padding-left: 1.5rem;
         }
@@ -156,11 +270,38 @@ Based on your previous request and the provided JSON data, here is the updated H
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .component-card h4 {
             color: var(--primary-color);
             margin-top: 0;
+        }
+        .toc {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+        .toc-chapter {
+            margin-left: 1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .toc-chapter::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         .series-item {
             margin-bottom: 1.5rem;
@@ -168,32 +309,6 @@ Based on your previous request and the provided JSON data, here is the updated H
             background: #f9f9f9;
             border-left: 4px solid var(--primary-color);
         }
-        /* START: Added Styles for Download Section */
-        .download-section {
-            background: #ffffff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        .download-section h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 1rem;
-            border-bottom: none; /* Override default h3 style */
-        }
-        .download-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .download-links .btn {
-            flex-grow: 1;
-            min-width: 150px;
-        }
-        /* END: Added Styles */
         .site-footer {
             text-align: center;
             padding: 2rem;
@@ -202,6 +317,24 @@ Based on your previous request and the provided JSON data, here is the updated H
             color: white;
             font-size: 0.9rem;
             line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -215,6 +348,11 @@ Based on your previous request and the provided JSON data, here is the updated H
             }
             .hero {
                 padding: 2.5rem 1rem;
+            }
+            .download-link {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
             }
         }
     </style>
@@ -239,9 +377,9 @@ Based on your previous request and the provided JSON data, here is the updated H
             </div>
             
             <div class="book-actions">
-                <a href="https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505"
-                   class="btn"
-                   target="_blank"
+                <a href="https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505" 
+                   class="btn" 
+                   target="_blank" 
                    rel="noopener noreferrer">
                     Read on Archive.org
                 </a>
@@ -253,44 +391,97 @@ Based on your previous request and the provided JSON data, here is the updated H
                 </a>
             </div>
             
+            <div class="download-links">
+                <h4>📥 Direct Download Links</h4>
+                <a href="https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📄 DOCX</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/content.pdf" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📖 PDF</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/content.txt" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📝 Plain Text</a>
+                <a href="https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">🌐 Archive.org</a>
+            </div>
+            
             <div class="book-meta">
                 <p><strong>Author:</strong> Dr. Nasser Ibn Dawood</p>
                 <p><strong>Edition:</strong> First Edition - 2025</p>
                 <p><strong>Pages:</strong> 320</p>
+                <p><strong>Category:</strong> Quranic Studies, Digitization, Quranic Manuscripts</p>
                 <p><strong>Language:</strong> English</p>
             </div>
         </section>
         
         <section class="book-details">
-            <div class="download-section">
-                <h3>Download Formats</h3>
-                <div class="download-links">
-                    <a href="https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA" class="btn" target="_blank" rel="noopener noreferrer">Download DOCX</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1Y_LEMVudlj8jKSe1WG4zTG2jsWsSwmnm" class="btn" target="_blank" rel="noopener noreferrer">Download HTML</a>
-                    <a href="books/digitizing/en/content.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS" class="btn" target="_blank" rel="noopener noreferrer">Download External PDF</a>
-                    <a href="books/digitizing/en/content.txt" class="btn" target="_blank" rel="noopener noreferrer">Download TEXT</a>
-                    <a href="https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng" class="btn" target="_blank" rel="noopener noreferrer">Download External TEXT</a>
-                    <a href="https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt" class="btn" target="_blank" rel="noopener noreferrer">Archive TEXT</a>
-                    <a href="https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf" class="btn" target="_blank" rel="noopener noreferrer">Archive PDF</a>
-                </div>
-            </div>
             <div class="book-description">
                 <h2>About This Project</h2>
                 <p>This initiative represents far more than a technical digitization effort - it is a comprehensive scholarly movement to reconnect with the Qur'an in its most authentic form through cutting-edge digital technologies combined with traditional Islamic scholarship.</p>
+                <p>The project aims to:</p>
+                <ul>
+                    <li>Return to the earliest Quranic manuscripts to understand the text's historical development</li>
+                    <li>Provide a research platform for Quranic studies</li>
+                    <li>Revive Islamic understanding through primary sources</li>
+                    <li>Preserve the Quranic heritage for future generations</li>
+                </ul>
+                <p>It integrates Islamic authenticity with advanced digital technologies, enabling researchers and enthusiasts to access and analyze rare manuscripts with ease and precision.</p>
+            </div>
+
+            <div class="volume-description">
+                <h3>Methodological Vision</h3>
+                <p>The project adopts a rigorous scientific methodology that combines traditional Quranic studies with modern technology, focusing on analyzing Quranic manuscripts using AI and digital analysis tools. It aims to create a comprehensive database and interactive platform to support authentic contemplation.</p>
+                <p>It provides advanced analytical tools for studying the Quranic text, maintaining Islamic scholarly standards and transparency in presenting results, making it a reliable resource for researchers worldwide.</p>
             </div>
             
             <div class="book-features">
-                <h3>The Project's Multidimensional Nature:</h3>
+                <h3>Core Objectives:</h3>
                 <ul>
-                    <li><strong>Academic Revival:</strong> Returning to the earliest Quranic manuscripts as primary sources</li>
-                    <li><strong>Technological Integration:</strong> Applying digital tools to Quranic studies</li>
-                    <li><strong>Community Building:</strong> Creating global networks of Quranic researchers</li>
-                    <li><strong>Educational Resource:</strong> Developing accessible platforms for deep Quranic study</li>
-                    <li><strong>Preservation Mission:</strong> Safeguarding Islamic manuscript heritage digitally</li>
+                    <li>Preserve the Quranic manuscript heritage digitally for future generations</li>
+                    <li>Provide access to rare Quranic manuscripts for researchers</li>
+                    <li>Study variations among early Quranic manuscripts</li>
+                    <li>Develop advanced digital tools for Quranic text analysis</li>
+                    <li>Build a comprehensive database of Quranic manuscripts</li>
                 </ul>
             </div>
-            
+
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                
+                <div class="toc-section">
+                    <h3>Introduction and Methodological Foundations</h3>
+                    <div class="toc-chapter">Introduction: Towards a Digital Qur'anic Renaissance</div>
+                    <div class="toc-chapter">Scientific and Islamic Foundations of Digitization</div>
+                    <div class="toc-chapter">Importance of Quranic Manuscripts in Modern Studies</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Digital Manuscript Library</h3>
+                    <div class="toc-chapter">Creating a Comprehensive Digital Archive</div>
+                    <div class="toc-chapter">Advanced Search and Text Comparison Techniques</div>
+                    <div class="toc-chapter">Digitally Preserving Rare Manuscripts</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Interactive Contemplation Platform</h3>
+                    <div class="toc-chapter">Designing a Digital Environment for Quranic Study</div>
+                    <div class="toc-chapter">Integrating Manuscript Commentaries and Comparative Exegesis</div>
+                    <div class="toc-chapter">Applications of Authentic Contemplation</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Quranic Research Laboratory</h3>
+                    <div class="toc-chapter">Analyzing Manuscripts with Artificial Intelligence</div>
+                    <div class="toc-chapter">Studying Textual Variations in Manuscripts</div>
+                    <div class="toc-chapter">Developing Advanced Analytical Tools</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>Global Scholars Network</h3>
+                    <div class="toc-chapter">Connecting Quranic Studies Specialists</div>
+                    <div class="toc-chapter">Collaborative Research Projects</div>
+                    <div class="toc-chapter">Global Knowledge and Expertise Exchange</div>
+                </div>
+            </div>
+
             <div class="project-components">
                 <h3>Core Project Components:</h3>
                 
@@ -314,7 +505,7 @@ Based on your previous request and the provided JSON data, here is the updated H
                     <p>An international collaborative platform connecting Quranic studies specialists worldwide for joint research initiatives.</p>
                 </div>
             </div>
-            
+
             <div class="book-features">
                 <h3>Why Original Manuscripts Matter:</h3>
                 <ul>
@@ -325,7 +516,7 @@ Based on your previous request and the provided JSON data, here is the updated H
                     <li><strong>Cultural Heritage:</strong> Represent an invaluable part of Islamic civilization</li>
                 </ul>
             </div>
-            
+
             <div class="book-description">
                 <h3>The Five-Book Series: "The Light of Reason and Authentic Contemplation"</h3>
                 <p>This comprehensive series provides both theoretical foundations and practical guidance for Quranic study in the digital age:</p>
@@ -355,10 +546,22 @@ Based on your previous request and the provided JSON data, here is the updated H
                     <p>Presenting the technical and scholarly framework of this ambitious preservation project.</p>
                 </div>
             </div>
+
+            <div class="conclusion">
+                <h3>Conclusion: Towards a Digital Qur'anic Renaissance</h3>
+                <p>This project seeks to revive the Quranic heritage through digitization, not only as a means of preservation but as a bridge between authenticity and modernity. It aims to empower the Muslim community to engage with the Qur'an in a scholarly and technological manner while adhering to Islamic scholarly standards.</p>
+                <p>This work is a call for every researcher and enthusiast to participate in this digital Qur'anic renaissance, creating a future that blends knowledge and faith, reviving the Quranic heritage with modern tools.</p>
+            </div>
             
-            <div class="book-description">
-                <h3>Project Vision</h3>
-                <p>This initiative aims to revolutionize how the Muslim community engages with the Qur'an by combining cutting-edge digital technologies with authentic Islamic scholarship, creating bridges between traditional Quranic sciences and contemporary research methodologies while maintaining strict academic and Islamic scholarly standards.</p>
+            <div class="book-features">
+                <h3>Who Is This Project For?</h3>
+                <ul>
+                    <li><strong>Quranic Studies Researchers:</strong> Those interested in studying Quranic manuscripts</li>
+                    <li><strong>Technology Experts:</strong> Specialists in AI and digital analysis</li>
+                    <li><strong>Historians:</strong> Those interested in the history of the Quranic text</li>
+                    <li><strong>Islamic Heritage Enthusiasts:</strong> Those committed to preserving Quranic heritage</li>
+                    <li><strong>General Readers:</strong> Those seeking to understand the Qur'an through its original sources</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -369,4 +572,3 @@ Based on your previous request and the provided JSON data, here is the updated H
     </footer>
 </body>
 </html>
-```
