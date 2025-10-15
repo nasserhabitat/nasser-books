@@ -5,12 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>التدبر في مرآة الرسوم | مكتبة ناصر ابن داوود</title>
     <meta name="description" content="تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن - منهجية جديدة لفهم النص القرآني">
+
+    <!-- Schema.org markup for the book -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "التدبر في مرآة الرسوم: تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن",
+    "author": {
+        "@type": "Person",
+        "name": "الدكتور ناصر ابن داوود",
+        "email": "nasserhabitat@gmail.com",
+        "jobTitle": "باحث إسلامي ومهندس",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "مكتبة ناصر ابن داوود",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "datePublished": "2025",
+    "bookEdition": "الطبعة الأولى",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "ar",
+    "description": "منهجية جديدة لفهم القرآن الكريم من خلال دراسة المخطوطات القرآنية الرقمية، مع التركيز على دلالات الرسم العثماني وتطبيقات التدبر العملية",
+    "genre": ["الدراسات القرآنية", "التدبر", "المخطوطات القرآنية", "الرقمنة"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "numberOfPages": 253,
+    "url": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/",
+    "image": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/cover-ar.png",
+    "keywords": "القرآن, التدبر, الرسم العثماني, فقه السبع المثاني, الرقمنة",
+    "workExample": [
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "name": "نسخة DOCX - التدبر في مرآة الرسوم",
+            "url": "https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/pdf",
+            "name": "نسخة PDF - التدبر في مرآة الرسوم",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/content.pdf"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "text/plain",
+            "name": "نسخة نصية - التدبر في مرآة الرسوم",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/content.txt"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "name": "نسخة Archive.org - التدبر في مرآة الرسوم",
+            "url": "https://archive.org/details/20250529_20250529_2006"
+        }
+    ],
+    "translationOfWork": {
+        "@type": "Book",
+        "name": "Contemplation in the Mirror of Scripts",
+        "inLanguage": "en",
+        "url": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/en/"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "التدبر في المخطوطات القرآنية"
+    },
+    "mentions": [
+        {
+            "@type": "Thing",
+            "name": "الرسم العثماني"
+        },
+        {
+            "@type": "Thing",
+            "name": "فقه السبع المثاني"
+        },
+        {
+            "@type": "Thing",
+            "name": "الرقمنة"
+        }
+    ]
+}
+</script>
+
     <style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
+            --accent-color: #57C5B6;
             --light-color: #f8f9fa;
             --dark-color: #212529;
+            --gray-color: #6c757d;
         }
         body {
             font-family: 'Tajawal', sans-serif;
@@ -34,10 +123,22 @@
         h1 {
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
         }
         .subtitle {
             font-size: 1.4rem;
             opacity: 0.9;
+            font-weight: 300;
         }
         .container {
             max-width: 1200px;
@@ -57,6 +158,7 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         .book-details {
             flex: 2;
@@ -72,16 +174,58 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
         }
         .btn:hover {
-            background: var(--secondary-color);
+            opacity: 0.9;
             transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .download-links {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .download-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 0.6rem 1rem;
+            margin: 0.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .download-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
         .book-meta {
             margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
+            font-size: 1.1rem;
         }
         .book-description {
             margin: 2rem 0;
@@ -89,36 +233,41 @@
         .book-description p {
             margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.8;
         }
         .book-features {
-            background: #f0f0f0;
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
         }
         .book-features h3 {
             color: var(--primary-color);
             margin-top: 0;
+            font-size: 1.4rem;
         }
         .book-features ul {
             padding-right: 20px;
         }
         .book-features li {
             margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
         }
-        .chapter {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
         }
         .toc-container {
             background: white;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .toc-columns {
             column-count: 2;
@@ -139,8 +288,28 @@
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
-            background: #eee;
+            background: var(--dark-color);
+            color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
+        }
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--primary-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -155,8 +324,17 @@
             .subtitle {
                 font-size: 1.2rem;
             }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+            .download-link {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
@@ -184,18 +362,31 @@
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
                 </a>
-                <a href="../en/" class="btn">
+                <a href="../en/" class="btn btn-secondary">
                     النسخة الإنجليزية
                 </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
                     العودة إلى الكتب
                 </a>
+            </div>
+            
+            <div class="download-links">
+                <h4>📥 روابط التحميل المباشر</h4>
+                <a href="https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📄 DOCX</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/content.pdf" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📖 PDF</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror-of-scripts/ar/content.txt" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">📝 نص خام</a>
+                <a href="https://archive.org/details/20250529_20250529_2006" 
+                   class="download-link" target="_blank" rel="noopener noreferrer">🌐 Archive.org</a>
             </div>
             
             <div class="book-meta">
                 <p><strong>تأليف:</strong> ناصر ابن داوود</p>
                 <p><strong>الطبعة:</strong> الأولى - 2025</p>
-                <p><strong>الصفحات:</strong> 253</p>
+                <p><strong>الصفحات:</strong> 253 صفحة</p>
+                <p><strong>التصنيف:</strong> الدراسات القرآنية، التدبر، المخطوطات القرآنية</p>
                 <p><strong>اللغة:</strong> العربية</p>
             </div>
         </section>
@@ -204,8 +395,13 @@
             <div class="book-description">
                 <h2>وصف الكتاب</h2>
                 <p>يقدم هذا الكتاب منهجية جديدة لفهم القرآن الكريم من خلال دراسة المخطوطات القرآنية القديمة وتحليلها رقمياً، مع التركيز على دلالات الرسم العثماني وعلاقته بتدبر المعاني القرآنية.</p>
-                
-                <p>يستند الكتاب إلى مفهوم "فقه السبع المثاني" كأساس لفهم البنية اللغوية العميقة للنص القرآني، مع تطبيقات عملية في عصر الرقمنة.</p>
+                <p>يستند الكتاب إلى مفهوم "فقه السبع المثاني" كأساس لفهم البنية اللغوية العميقة للنص القرآني، مع تطبيقات عملية في عصر الرقمنة. يهدف إلى تمكين القارئ من التفاعل مع النص القرآني بطريقة تجمع بين الأصالة والحداثة.</p>
+            </div>
+
+            <div class="volume-description">
+                <h3>الرؤية المنهجية</h3>
+                <p>يعتمد الكتاب على منهجية "فقه السبع المثاني" لتحليل النص القرآني، مع التركيز على الرسم العثماني كأداة لفهم أعمق للمعاني القرآنية. يقدم الكتاب أدوات تحليلية رقمية حديثة لدراسة المخطوطات، مع أمثلة تطبيقية تجعل التدبر تجربة حية وعملية.</p>
+                <p>يجمع الكتاب بين التراث الإسلامي والتقنيات الحديثة، مقدمًا نهجًا شاملاً يساعد القارئ على استيعاب النص القرآني في سياقه التاريخي واللغوي، مع تطبيقات معاصرة.</p>
             </div>
             
             <div class="book-features">
@@ -218,9 +414,9 @@
                     <li>رؤية جديدة للتعامل مع القرآن في العصر الرقمي</li>
                 </ul>
             </div>
-            
+
             <div class="toc-container">
-                <h3>فهرس المحتويات</h3>
+                <h2>فهرس المحتويات</h2>
                 <div class="toc-columns">
                     <div class="toc-item"><a href="#">مقدمة الكتاب: "التدبر في مرآة الرسوم" (ص3)</a></div>
                     <div class="toc-item"><a href="#">مقدمة مشروع رقمنة المخطوطات (ص5)</a></div>
@@ -340,9 +536,21 @@
                 </div>
             </div>
 
-            <div class="book-description">
-                <h3>هدف الكتاب</h3>
-                <p>يهدف هذا العمل إلى تقديم منهجية متكاملة للتعامل مع القرآن الكريم في ضوء المخطوطات القديمة والتقنيات الحديثة، لإحياء علاقة الأمة بكتابها عبر فهم أعمق يستلهم التراث ويتجاوزه باستخدام أدوات العصر.</p>
+            <div class="conclusion">
+                <h3>خاتمة: التدبر كمنهج حياة</h3>
+                <p>في ختام هذا الكتاب، يهدف العمل إلى إحياء التدبر كمنهج حياة يربط الأمة بكتابها الكريم، من خلال الاستفادة من المخطوطات القرآنية الرقمية وتطبيقاتها العملية. يدعو الكتاب إلى نهضة فكرية تجمع بين الأصالة والمعاصرة، مما يمكن الأفراد من فهم أعمق للقرآن وتطبيقه في حياتهم اليومية.</p>
+                <p>هذا العمل دعوة لكل قارئ أن يجعل التدبر جزءًا لا يتجزأ من حياته، مستلهمًا من التراث ومستفيدًا من أدوات العصر الحديث للوصول إلى فهم حقيقي ومثمر للقرآن الكريم.</p>
+            </div>
+            
+            <div class="book-features">
+                <h3>لمن هذا الكتاب؟</h3>
+                <ul>
+                    <li><strong>الباحثون في الدراسات القرآنية:</strong> المهتمون بفهم النص القرآني عبر المخطوطات</li>
+                    <li><strong>المهتمون بالتكنولوجيا:</strong> الراغبون في تطبيق التقنيات الرقمية في الدراسات القرآنية</li>
+                    <li><strong>علماء اللغة:</strong> المهتمون بتحليل اللسان القرآني</li>
+                    <li><strong>المعلمون والدعاة:</strong> الراغبون في تقديم القرآن بطريقة معاصرة</li>
+                    <li><strong>عموم القراء:</strong> الراغبون في تعميق علاقتهم بالقرآن الكريم</li>
+                </ul>
             </div>
         </section>
     </main>
