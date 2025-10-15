@@ -4,13 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نحو تدبر واع | مكتبة ناصر ابن داوود</title>
-    <meta name="description" content="كتاب نحو تدبر واع - دليل عملي لفهم وتطبيق القرآن الكريم">
+    <meta name="description" content="كتاب نحو تدبر واع - دليل عملي لفهم وتطبيق القرآن الكريم - تأليف ناصر ابن داوود">
+
+    <!-- Schema.org markup for the book -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "نحو تدبر واع: دليل عملي لفهم وتطبيق القرآن الكريم",
+    "author": {
+        "@type": "Person",
+        "name": "الدكتور ناصر ابن داوود",
+        "email": "nasserhabitat@gmail.com",
+        "jobTitle": "باحث إسلامي ومهندس",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "مكتبة ناصر ابن داوود",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "datePublished": "2025",
+    "bookEdition": "الطبعة الأولى",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "ar",
+    "description": "دليل عملي لفهم وتطبيق القرآن الكريم من خلال منهجية فقه اللسان القرآني، يقدم أدوات تدبرية للانتقال من التلاوة السطحية إلى الفهم العميق",
+    "genre": ["الدراسات الإسلامية", "التفسير القرآني", "التدبر العملي", "فقه اللسان القرآني"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "numberOfPages": 350,
+    "url": "https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/",
+    "image": "https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/cover-ar.png",
+    "keywords": "القرآن, التدبر, فقه اللسان القرآني, الفهم العميق, التطبيق العملي",
+    "workExample": [
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "name": "نسخة DOCX - نحو تدبر واع",
+            "url": "https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/pdf",
+            "name": "نسخة PDF - نحو تدبر واع",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/content.pdf"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "text/plain",
+            "name": "نسخة نصية - نحو تدبر واع",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/content.txt"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "name": "نسخة Archive.org - نحو تدبر واع",
+            "url": "https://archive.org/details/20250529_20250529_2132"
+        }
+    ],
+    "translationOfWork": {
+        "@type": "Book",
+        "name": "Towards Conscious Tadabbur",
+        "inLanguage": "en",
+        "url": "https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/en/"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "فقه اللسان القرآني"
+    },
+    "mentions": [
+        {
+            "@type": "Thing",
+            "name": "التدبر العملي"
+        },
+        {
+            "@type": "Thing",
+            "name": "الرسم العثماني"
+        },
+        {
+            "@type": "Thing",
+            "name": "النظام المفاهيمي القرآني"
+        }
+    ]
+}
+</script>
+
     <style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
+            --accent-color: #57C5B6;
             --light-color: #f8f9fa;
             --dark-color: #212529;
+            --gray-color: #6c757d;
         }
         body {
             font-family: 'Tajawal', sans-serif;
@@ -35,6 +124,16 @@
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
         .subtitle {
             font-size: 1.4rem;
             opacity: 0.9;
@@ -57,6 +156,7 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         .book-details {
             flex: 2;
@@ -72,13 +172,54 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
         }
         .btn:hover {
-            background: var(--secondary-color);
+            opacity: 0.9;
             transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .download-links {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .download-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 0.6rem 1rem;
+            margin: 0.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .download-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
         .book-meta {
             margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
@@ -91,10 +232,11 @@
             text-align: justify;
         }
         .book-features {
-            background: #f0f0f0;
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
         }
         .book-features h3 {
             color: var(--primary-color);
@@ -105,30 +247,69 @@
         }
         .book-features li {
             margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
         }
-        .article-series {
-            margin: 2rem 0;
-        }
-        .series-item {
-            margin-bottom: 1.5rem;
-        }
-        .series-title {
+        .book-features li::before {
+            content: "•";
             color: var(--primary-color);
+            position: absolute;
+            right: 0;
             font-weight: bold;
         }
-        .chapter {
-            margin-bottom: 2rem;
-            padding: 1rem;
+        .toc {
             background: white;
+            padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+        .toc-chapter {
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .toc-chapter::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
         }
         .site-footer {
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
-            background: #eee;
+            background: var(--dark-color);
+            color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--primary-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -140,8 +321,17 @@
             .subtitle {
                 font-size: 1.2rem;
             }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+            .download-link {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
@@ -169,18 +359,31 @@
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
                 </a>
-                <a href="../en/" class="btn">
+                <a href="../en/" class="btn btn-secondary">
                     النسخة الإنجليزية
                 </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
                     العودة إلى الكتب
                 </a>
+            </div>
+            
+            <div class="download-links">
+                <h4>📥 روابط التحميل المباشر</h4>
+                <a href="https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX" 
+                   class="download-link" target="_blank">📄 DOCX</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/content.pdf" 
+                   class="download-link" target="_blank">📖 PDF</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/towards-conscious-tadabbur/ar/content.txt" 
+                   class="download-link" target="_blank">📝 نص خام</a>
+                <a href="https://archive.org/details/20250529_20250529_2132" 
+                   class="download-link" target="_blank">🌐 Archive.org</a>
             </div>
             
             <div class="book-meta">
                 <p><strong>تأليف:</strong> ناصر ابن داوود</p>
                 <p><strong>الطبعة:</strong> الأولى - 2025</p>
-                <p><strong>الصفحات:</strong> 350</p>
+                <p><strong>الصفحات:</strong> 350 صفحة</p>
+                <p><strong>التصنيف:</strong> الدراسات الإسلامية، التفسير القرآني، التدبر العملي</p>
                 <p><strong>اللغة:</strong> العربية</p>
             </div>
         </section>
@@ -189,8 +392,14 @@
             <div class="book-description">
                 <h2>وصف الكتاب</h2>
                 <p>يأخذك هذا الكتاب في رحلة تعلم منهجية التدبر العميق للقرآن الكريم، ويقدم أدوات عملية لتطبيق هذه المنهجية في الحياة المعاصرة، من خلال الانتقال من التلاوة السطحية إلى الفهم العميق والتطبيق العملي لتعاليم القرآن.</p>
-                
-                <p>يستند الكتاب إلى منهجية "فقه اللسان القرآني" التي تم تفصيلها في أعمال المؤلف السابقة، مع التركيز على الجانب التطبيقي العملي.</p>
+                <p>يستند الكتاب إلى منهجية "فقه اللسان القرآني" التي تم تفصيلها في أعمال المؤلف السابقة، مع التركيز على الجانب التطبيقي العملي. إنه دعوة لتحويل تدبر القرآن إلى مشروع حياة يساهم في بناء وعي مستنير وقادر على مواجهة تحديات العصر الحديث.</p>
+                <p>من خلال هذا العمل، يسعى المؤلف إلى تمكين القارئ من فهم النص القرآني في سياقه الشامل، وربط الآيات ببعضها البعض لاستخلاص معاني متكاملة، مع تقديم أدوات تحليلية حديثة وتمارين عملية تجعل التدبر تجربة حية ومثمرة.</p>
+            </div>
+
+            <div class="volume-description">
+                <h3>الرؤية المنهجية للكتاب</h3>
+                <p>يقدم الكتاب منهجية "فقه اللسان القرآني" كإطار شامل لفهم النص القرآني وتطبيقه. يركز على تحليل النظام المفاهيمي للقرآن، مع تقديم خطوات عملية للتدبر الفعال، ويدمج بين الأصالة الإسلامية والأدوات المعاصرة لتحقيق فهم عميق وتطبيق عملي.</p>
+                <p>يمثل الكتاب دليلاً عملياً للقارئ، حيث ينتقل من النظرية إلى التطبيق من خلال أمثلة وتمارين تفاعلية، مما يجعله أداة فعالة لكل من يسعى لبناء علاقة حية مع القرآن الكريم.</p>
             </div>
             
             <div class="book-features">
@@ -201,58 +410,67 @@
                     <li>تمارين وأنشطة عملية للقارئ</li>
                     <li>دمج بين الأصالة والمعاصرة</li>
                     <li>استخدام أدوات تحليلية حديثة</li>
-                </ul>
-            </div>
-            
-            <div class="chapter">
-                <h3>الفصل الأول: اللسان العربي القرآني</h3>
-                <ul>
-                    <li>الفرق بين اللغة العربية واللسان القرآني</li>
-                    <li>خصائص اللسان القرآني الفريدة</li>
-                    <li>أهمية فهم النظام المفاهيمي القرآني</li>
-                </ul>
-            </div>
-            
-            <div class="chapter">
-                <h3>الفصل الثاني: الرسم العثماني ودلالاته</h3>
-                <ul>
-                    <li>المخطوطات القرآنية كمصادر للفهم</li>
-                    <li>دلالات الرسم العثماني في التدبر</li>
-                    <li>دراسة حالات تطبيقية</li>
-                </ul>
-            </div>
-            
-            <div class="chapter">
-                <h3>الفصل الثالث: منهجية التدبر العملي</h3>
-                <ul>
-                    <li>خطوات عملية للتدبر الفعال</li>
-                    <li>أدوات تحليل النص القرآني</li>
-                    <li>كيفية الربط بين الآيات</li>
-                </ul>
-            </div>
-            
-            <div class="chapter">
-                <h3>الفصل الرابع: تصحيح المفاهيم</h3>
-                <ul>
-                    <li>نماذج لمفاهيم تحتاج تصحيحًا</li>
-                    <li>منهجية التعامل مع القضايا الخلافية</li>
-                    <li>التركيز على القواسم المشتركة</li>
-                </ul>
-            </div>
-            
-            <div class="book-features">
-                <h3>الإضافات العملية:</h3>
-                <ul>
                     <li>ورش عمل تفاعلية مع القارئ</li>
                     <li>جداول ورسوم بيانية توضيحية</li>
-                    <li>استشهادات بأقوال المفسرين</li>
                     <li>حلول لتحديات العصر الحديث</li>
                 </ul>
             </div>
+
+            <div class="toc">
+                <h2>فهرس المحتويات</h2>
+                
+                <div class="toc-section">
+                    <h3>المقدمة والأسس المنهجية</h3>
+                    <div class="toc-chapter">مقدمة الكتاب: نحو تدبر واع</div>
+                    <div class="toc-chapter">أسس منهجية فقه اللسان القرآني</div>
+                    <div class="toc-chapter">الفرق بين اللغة العربية واللسان القرآني</div>
+                    <div class="toc-chapter">أهمية النظام المفاهيمي القرآني</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>الرسم العثماني ودلالاته</h3>
+                    <div class="toc-chapter">المخطوطات القرآنية كمصادر للفهم</div>
+                    <div class="toc-chapter">دلالات الرسم العثماني في التدبر</div>
+                    <div class="toc-chapter">دراسة حالات تطبيقية للرسم العثماني</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>منهجية التدبر العملي</h3>
+                    <div class="toc-chapter">خطوات عملية للتدبر الفعال</div>
+                    <div class="toc-chapter">أدوات تحليل النص القرآني</div>
+                    <div class="toc-chapter">كيفية الربط بين الآيات</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>تصحيح المفاهيم</h3>
+                    <div class="toc-chapter">نماذج لمفاهيم تحتاج تصحيحًا</div>
+                    <div class="toc-chapter">منهجية التعامل مع القضايا الخلافية</div>
+                    <div class="toc-chapter">التركيز على القواسم المشتركة</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>التطبيقات العملية</h3>
+                    <div class="toc-chapter">ورش عمل تدبرية تفاعلية</div>
+                    <div class="toc-chapter">تطبيق التدبر في الحياة المعاصرة</div>
+                    <div class="toc-chapter">جداول ورسوم بيانية لفهم النص</div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <h3>خاتمة: التدبر كمشروع حياة</h3>
+                <p>في ختام هذا الكتاب، لا يكون الهدف مجرد قراءة النص القرآني، بل تحويله إلى مشروع حياة يعيشه القارئ. من خلال منهجية فقه اللسان القرآني، يصبح التدبر تجربة حية تربط بين النص والواقع، مما يمكن الفرد من بناء وعي مستنير يسهم في إحياء القيم الإسلامية في المجتمع.</p>
+                <p>إن هذا العمل دعوة لكل قارئ ليصبح شريكًا في إحياء القرآن، من خلال تطبيق تعاليمه في الحياة اليومية، والمساهمة في بناء حضارة إسلامية مستنيرة تحترم الأصالة وتواجه تحديات العصر الحديث بثقة وإبداع.</p>
+            </div>
             
-            <div class="book-description">
-                <h3>الهدف من الكتاب</h3>
-                <p>يهدف هذا العمل إلى جعل تدبر القرآن مشروع حياة، من خلال تقديم منهجية واضحة تساعد القارئ على فهم كلام الله في سياقه الشامل، وتطبيق تعاليمه في الواقع المعاصر، والمساهمة في بناء حضارة إسلامية مستنيرة.</p>
+            <div class="book-features">
+                <h3>لمن هذا الكتاب؟</h3>
+                <ul>
+                    <li><strong>الباحثون في الدراسات القرآنية:</strong> المهتمون بمناهج التدبر العملي</li>
+                    <li><strong>طلاب المعرفة الإسلامية:</strong> الباحثون عن فهم عميق للنص القرآني</li>
+                    <li><strong>المفكرون الإسلاميون:</strong> المهتمون بتجديد الخطاب الديني</li>
+                    <li><strong>عموم القراء:</strong> الراغبون في بناء علاقة حية مع القرآن</li>
+                    <li><strong>المعلمون والدعاة:</strong> الذين يسعون لتقديم القرآن بأسلوب معاصر</li>
+                </ul>
             </div>
         </section>
     </main>
