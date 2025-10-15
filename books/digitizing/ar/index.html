@@ -5,12 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مشروع رقمنة المخطوطات الأصلية للقرآن الكريم | مكتبة ناصر ابن داوود</title>
     <meta name="description" content="نور العقل والتدبر الأصيل: نحو نهضة قرآنية رقمية - مشروع علمي لدراسة المخطوطات القرآنية">
+
+    <!-- Schema.org markup for the book -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "مشروع رقمنة المخطوطات الأصلية للقرآن الكريم: نور العقل والتدبر الأصيل",
+    "author": {
+        "@type": "Person",
+        "name": "الدكتور ناصر ابن داوود",
+        "email": "nasserhabitat@gmail.com",
+        "jobTitle": "باحث إسلامي ومهندس",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "مكتبة ناصر ابن داوود",
+        "url": "https://nasserhabitat.github.io/nasser-books/"
+    },
+    "datePublished": "2025",
+    "bookEdition": "الطبعة الأولى",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "ar",
+    "description": "مشروع علمي لدراسة ورقمنة المخطوطات القرآنية الأصلية، يهدف إلى حفظ التراث القرآني وتطوير أدوات رقمية لتحليل النص القرآني",
+    "genre": ["الدراسات القرآنية", "الرقمنة", "المخطوطات القرآنية", "التكنولوجيا الإسلامية"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "numberOfPages": 320,
+    "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/",
+    "image": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/cover-ar.png",
+    "keywords": "القرآن, المخطوطات القرآنية, الرقمنة, التدبر, الذكاء الاصطناعي",
+    "workExample": [
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "name": "نسخة DOCX - مشروع رقمنة المخطوطات الأصلية",
+            "url": "https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "application/pdf",
+            "name": "نسخة PDF - مشروع رقمنة المخطوطات الأصلية",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/content.pdf"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "encodingFormat": "text/plain",
+            "name": "نسخة نصية - مشروع رقمنة المخطوطات الأصلية",
+            "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/content.txt"
+        },
+        {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "name": "نسخة Archive.org - مشروع رقمنة المخطوطات الأصلية",
+            "url": "https://archive.org/details/20250529_20250529_2128"
+        }
+    ],
+    "translationOfWork": {
+        "@type": "Book",
+        "name": "Quranic Manuscripts Digitization Project",
+        "inLanguage": "en",
+        "url": "https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/en/"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "رقمنة المخطوطات القرآنية"
+    },
+    "mentions": [
+        {
+            "@type": "Thing",
+            "name": "التدبر الأصيل"
+        },
+        {
+            "@type": "Thing",
+            "name": "الذكاء الاصطناعي"
+        },
+        {
+            "@type": "Thing",
+            "name": "التراث القرآني"
+        }
+    ]
+}
+</script>
+
     <style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
+            --accent-color: #57C5B6;
             --light-color: #f8f9fa;
             --dark-color: #212529;
+            --gray-color: #6c757d;
         }
         body {
             font-family: 'Tajawal', sans-serif;
@@ -35,6 +124,16 @@
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
         .subtitle {
             font-size: 1.4rem;
             opacity: 0.9;
@@ -57,6 +156,7 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         .book-details {
             flex: 2;
@@ -72,13 +172,54 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        .btn-accent {
+            background: var(--accent-color);
         }
         .btn:hover {
-            background: var(--secondary-color);
+            opacity: 0.9;
             transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .download-links {
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .download-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 0.6rem 1rem;
+            margin: 0.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .download-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
         .book-meta {
             margin: 1.5rem 0;
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .book-meta p {
             margin: 0.5rem 0;
@@ -91,10 +232,11 @@
             text-align: justify;
         }
         .book-features {
-            background: #f0f0f0;
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
+            border-right: 4px solid var(--accent-color);
         }
         .book-features h3 {
             color: var(--primary-color);
@@ -105,6 +247,42 @@
         }
         .book-features li {
             margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .book-features li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        .toc {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+        .toc-chapter {
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        .toc-chapter::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
         }
         .project-goals {
             margin: 2rem 0;
@@ -114,7 +292,7 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .goal-card h4 {
             color: var(--primary-color);
@@ -124,8 +302,28 @@
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
-            background: #eee;
+            background: var(--dark-color);
+            color: white;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .section-divider {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        .volume-description {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        .conclusion {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 4px solid var(--primary-color);
         }
         @media (max-width: 768px) {
             .container {
@@ -137,8 +335,17 @@
             .subtitle {
                 font-size: 1.2rem;
             }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+            .download-link {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
@@ -166,18 +373,31 @@
                    rel="noopener noreferrer">
                     قراءة على الأرشيف
                 </a>
-                <a href="../en/" class="btn">
+                <a href="../en/" class="btn btn-secondary">
                     النسخة الإنجليزية
                 </a>
-                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn">
+                <a href="https://nasserhabitat.github.io/nasser-books/" class="btn btn-accent">
                     العودة إلى الكتب
                 </a>
+            </div>
+            
+            <div class="download-links">
+                <h4>📥 روابط التحميل المباشر</h4>
+                <a href="https://drive.google.com/uc?export=download&id=1XXXXXXXXXXXXXXXXXXXXXX" 
+                   class="download-link" target="_blank">📄 DOCX</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/content.pdf" 
+                   class="download-link" target="_blank">📖 PDF</a>
+                <a href="https://nasserhabitat.github.io/nasser-books/books/quranic-manuscripts-digitization/ar/content.txt" 
+                   class="download-link" target="_blank">📝 نص خام</a>
+                <a href="https://archive.org/details/20250529_20250529_2128" 
+                   class="download-link" target="_blank">🌐 Archive.org</a>
             </div>
             
             <div class="book-meta">
                 <p><strong>تأليف:</strong> ناصر ابن داوود</p>
                 <p><strong>الطبعة:</strong> الأولى - 2025</p>
-                <p><strong>الصفحات:</strong> 320</p>
+                <p><strong>الصفحات:</strong> 320 صفحة</p>
+                <p><strong>التصنيف:</strong> الدراسات القرآنية، الرقمنة، المخطوطات القرآنية</p>
                 <p><strong>اللغة:</strong> العربية</p>
             </div>
         </section>
@@ -185,13 +405,20 @@
         <section class="book-details">
             <div class="book-description">
                 <h2>وصف المشروع</h2>
-                <p>هذا المشروع ليس مجرد عملية تقنية لتحويل المخطوطات القديمة إلى صيغ رقمية، بل هو:</p>
+                <p>هذا المشروع ليس مجرد عملية تقنية لتحويل المخطوطات القديمة إلى صيغ رقمية، بل هو رحلة علمية تهدف إلى إحياء التراث القرآني من خلال توظيف التكنولوجيا الحديثة. يسعى المشروع إلى:</p>
                 <ul>
-                    <li>رحلة علمية للعودة إلى أقدم النسخ القرآنية</li>
-                    <li>جهد أكاديمي لفهم تطور النص القرآني عبر التاريخ</li>
-                    <li>منصة للبحث العلمي في مجال الدراسات القرآنية</li>
-                    <li>أداة لتجديد الفهم الإسلامي من خلال المصادر الأصلية</li>
+                    <li>العودة إلى أقدم النسخ القرآنية لفهم تطور النص عبر التاريخ</li>
+                    <li>إتاحة منصة بحثية للدراسات القرآنية</li>
+                    <li>تجديد الفهم الإسلامي من خلال المصادر الأصلية</li>
+                    <li>حفظ التراث القرآني للأجيال القادمة</li>
                 </ul>
+                <p>يجمع المشروع بين الأصالة الإسلامية والتقنيات الرقمية المتقدمة، مما يتيح للباحثين والمهتمين الوصول إلى المخطوطات النادرة وتحليلها بسهولة ودقة.</p>
+            </div>
+
+            <div class="volume-description">
+                <h3>الرؤية المنهجية للمشروع</h3>
+                <p>يعتمد المشروع على منهجية علمية دقيقة تجمع بين الدراسات القرآنية التقليدية والتكنولوجيا الحديثة، مع التركيز على تحليل المخطوطات القرآنية باستخدام أدوات الذكاء الاصطناعي والتحليل الرقمي. يهدف إلى بناء قاعدة بيانات شاملة ومنصة تفاعلية تدعم التدبر الأصيل.</p>
+                <p>يوفر المشروع أدوات تحليلية متقدمة لدراسة النص القرآني، مع الحفاظ على الضوابط الشرعية والشفافية في عرض النتائج، مما يجعله مرجعًا موثوقًا للباحثين في جميع أنحاء العالم.</p>
             </div>
             
             <div class="book-features">
@@ -204,7 +431,46 @@
                     <li>بناء قاعدة بيانات شاملة للمخطوطات القرآنية</li>
                 </ul>
             </div>
-            
+
+            <div class="toc">
+                <h2>فهرس المحتويات</h2>
+                
+                <div class="toc-section">
+                    <h3>المقدمة والأسس المنهجية</h3>
+                    <div class="toc-chapter">مقدمة المشروع: نحو نهضة قرآنية رقمية</div>
+                    <div class="toc-chapter">الأسس العلمية والشرعية للرقمنة</div>
+                    <div class="toc-chapter">أهمية المخطوطات القرآنية في الدراسات الحديثة</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>المكتبة الرقمية للمخطوطات</h3>
+                    <div class="toc-chapter">إنشاء أرشيف رقمي شامل</div>
+                    <div class="toc-chapter">تقنيات البحث المتقدم ومقارنة النصوص</div>
+                    <div class="toc-chapter">حفظ المخطوطات النادرة رقمياً</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>منصة التدبر التفاعلي</h3>
+                    <div class="toc-chapter">تصميم بيئة رقمية لدراسة القرآن</div>
+                    <div class="toc-chapter">دمج شروح المخطوطات والتفاسير المقارنة</div>
+                    <div class="toc-chapter">تطبيقات التدبر الأصيل في المنصة</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>معمل الدراسات القرآنية</h3>
+                    <div class="toc-chapter">تحليل المخطوطات باستخدام الذكاء الاصطناعي</div>
+                    <div class="toc-chapter">دراسة الاختلافات النصية في المخطوطات</div>
+                    <div class="toc-chapter">تطوير أدوات تحليلية متقدمة</div>
+                </div>
+                
+                <div class="toc-section">
+                    <h3>شبكة الباحثين العالميين</h3>
+                    <div class="toc-chapter">ربط المتخصصين في الدراسات القرآنية</div>
+                    <div class="toc-chapter">مشاريع بحثية مشتركة</div>
+                    <div class="toc-chapter">تبادل المعرفة والخبرات عالمياً</div>
+                </div>
+            </div>
+
             <div class="project-goals">
                 <h3>مكونات المشروع:</h3>
                 
@@ -228,7 +494,7 @@
                     <p>ربط المتخصصين في الدراسات القرآنية من مختلف أنحاء العالم للتعاون في مشاريع بحثية مشتركة.</p>
                 </div>
             </div>
-            
+
             <div class="book-features">
                 <h3>مميزات المنهجية:</h3>
                 <ul>
@@ -239,10 +505,22 @@
                     <li>الاهتمام بجميع القراءات القرآنية الموثوقة</li>
                 </ul>
             </div>
+
+            <div class="conclusion">
+                <h3>خاتمة: نحو نهضة قرآنية رقمية</h3>
+                <p>في ختام هذا المشروع، نسعى إلى إعادة إحياء التراث القرآني من خلال الرقمنة، ليس فقط كوسيلة لحفظ النصوص، بل كجسر يربط بين الأصالة والمعاصرة. يهدف المشروع إلى تمكين الأمة من التفاعل مع كتابها الكريم بطريقة علمية وتكنولوجية، مع الحفاظ على الضوابط الشرعية.</p>
+                <p>إن هذا العمل دعوة لكل باحث ومهتم أن يشارك في هذه النهضة القرآنية الرقمية، لنصنع معًا مستقبلًا يجمع بين العلم والإيمان، ويحيي التراث القرآني بأدوات العصر الحديث.</p>
+            </div>
             
-            <div class="book-description">
-                <h3>الرؤية المستقبلية</h3>
-                <p>يسعى هذا المشروع إلى إحداث نقلة نوعية في طريقة تعامل الأمة مع كتابها الكريم، من خلال توظيف التقنيات الرقمية لخدمة فهم أعمق للقرآن، مع الحفاظ على الأصول العلمية والضوابط الشرعية.</p>
+            <div class="book-features">
+                <h3>لمن هذا المشروع؟</h3>
+                <ul>
+                    <li><strong>الباحثون في الدراسات القرآنية:</strong> المهتمون بدراسة المخطوطات القرآنية</li>
+                    <li><strong>علماء التكنولوجيا:</strong> المتخصصون في الذكاء الاصطناعي والتحليل الرقمي</li>
+                    <li><strong>المؤرخون:</strong> المهتمون بتاريخ النص القرآني</li>
+                    <li><strong>المهتمون بالتراث الإسلامي:</strong> الراغبون في حفظ التراث القرآني</li>
+                    <li><strong>عموم القراء:</strong> الراغبون في فهم القرآن من خلال مصادره الأصلية</li>
+                </ul>
             </div>
         </section>
     </main>
