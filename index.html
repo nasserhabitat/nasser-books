@@ -13,7 +13,7 @@
     <!-- بيانات المؤلف -->
     <link itemprop="author" href="https://nasserhabitat.github.io/nasser-books/#author">
     
-        <style>
+    <style>
         /* أنماط CSS الأساسية */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -63,7 +63,7 @@
             text-decoration: underline;
         }
 
-        /* تحسين تخطيط بطاقات الكتب العربية */
+        /* تخطيط بطاقات الكتب */
         .book-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -88,7 +88,6 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
-        /* تحسين تخطيط الصور والمحتوى للكتب العربية */
         .book-cover {
             width: 100%;
             text-align: center;
@@ -134,7 +133,7 @@
             font-size: 0.95rem;
         }
 
-        /* تحسين أزرار التحميل */
+        /* أزرار التحميل */
         .download-links {
             display: flex;
             flex-wrap: wrap;
@@ -180,131 +179,31 @@
             transform: translateY(-1px);
         }
 
-        /* تحسين بطاقات الكتب الإنجليزية لتكون مثل العربية */
-        .english-books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .english-book-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #eaeaea;
-            display: flex;
-            flex-direction: column;
-            min-height: 520px;
-        }
-
-        .english-book-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .english-book-cover {
-            width: 100%;
-            text-align: center;
-            margin: 0 0 20px 0;
-        }
-
-        .english-book-cover img {
-            width: 180px;
-            height: 250px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-            background: #f8f9fa;
-        }
-
-        .english-book-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .english-book-info h3 {
-            color: #2c5f8a;
-            margin: 0 0 12px 0;
-            font-size: 1.3rem;
-            line-height: 1.3;
-            min-height: 3.2em;
-        }
-
-        .english-book-meta {
-            color: #666;
-            margin: 6px 0;
-            font-size: 0.95rem;
-        }
-
-        .english-book-desc {
-            color: #555;
-            line-height: 1.5;
-            margin: 12px 0 16px 0;
-            flex: 1;
-            font-size: 0.95rem;
-        }
-
-        .english-book-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 16px 0;
-        }
-
-        .english-book-links a {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #2c5f8a;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .english-book-links a:hover {
-            background: #1e4568;
-            transform: translateY(-1px);
-        }
-
-        .english-book-actions {
-            margin: 16px 0;
-        }
-
-        /* إزالة الأنماط القديمة للكتب الإنجليزية */
+        /* إزالة الأنماط القديمة */
         .book-item {
-            display: none; /* إخفاء النمط القديم */
+            display: none;
         }
 
         /* تحسين responsive */
         @media (max-width: 1200px) {
-            .book-grid,
-            .english-books-grid {
+            .book-grid {
                 grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
                 gap: 20px;
             }
         }
 
         @media (max-width: 768px) {
-            .book-grid,
-            .english-books-grid {
+            .book-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
             
-            .book-card,
-            .english-book-card {
+            .book-card {
                 min-height: auto;
                 padding: 20px;
             }
             
-            .book-cover img,
-            .english-book-cover img {
+            .book-cover img {
                 width: 150px;
                 height: 210px;
             }
@@ -315,44 +214,22 @@
                 padding: 15px;
             }
             
-            .book-grid,
-            .english-books-grid {
+            .book-grid {
                 grid-template-columns: 1fr;
             }
             
-            .book-card,
-            .english-book-card {
+            .book-card {
                 padding: 18px;
             }
             
-            .book-cover img,
-            .english-book-cover img {
+            .book-cover img {
                 width: 140px;
                 height: 196px;
             }
             
-            .book-info h2,
-            .english-book-info h3 {
+            .book-info h2 {
                 font-size: 1.2rem;
             }
-        }
-
-        /* تحسين أداء الصور */
-        .book-cover img[loading="lazy"],
-        .english-book-cover img[loading="lazy"] {
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        .book-cover img:not([loading]),
-        .english-book-cover img:not([loading]) {
-            opacity: 1;
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
         }
     </style>
 </head>
@@ -378,7 +255,7 @@
         </p>
     </section>
 
-<!-- قسم الكتب العربية - الدراسات القرآنية -->
+    <!-- قسم الكتب العربية - الدراسات القرآنية -->
     <section class="language-section" itemscope itemtype="https://schema.org/Collection">
         <h2 itemprop="name">📚 الدراسات القرآنية - العربية</h2>
         <meta itemprop="inLanguage" content="ar">
@@ -540,9 +417,9 @@
                     <div class="download-links">
                         <a href="https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh" 
                            class="download-link" target="_blank">📄 DOCX</a>
-                        <a href="https://nasserhabitat.github.io/nasser-books/books/ editing-the-quranic-terminology-tome1/ar/content.pdf" 
+                        <a href="https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.pdf" 
                            class="download-link" target="_blank">📖 PDF</a>
-                        <a href="https://nasserhabitat.github.io/nasser-books/books/ editing-the-quranic-terminology-tome1/ar/content.txt" 
+                        <a href="https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/content.txt" 
                            class="download-link" target="_blank">📝 نص خام</a>
                         <a href="https://archive.org/stream/1_20250722_20250722_1041" 
                            class="download-link" target="_blank">🌐 Archive.org</a>
@@ -579,13 +456,13 @@
         
         <!-- روابط التحميل المباشرة -->
         <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1zxjbEztgVd5u34ddWIjHSu5DH1-jKkCE" 
+            <a href="https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu" 
                class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/editing-the-quranic-terminology-tome2/ar/content.pdf" 
+            <a href="https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.pdf" 
                class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/editing-the-quranic-terminology-tome2/ar/content.txt" 
+            <a href="https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/content.txt" 
                class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/2_20250724_20250724_0836" 
+            <a href="https://archive.org/stream/20250529_20250529_2033" 
                class="download-link" target="_blank">🌐 Archive.org</a>
         </div>
     </div>
@@ -596,1026 +473,475 @@
     <meta itemprop="isAccessibleForFree" content="true">
     <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
 </div>
+        </div>
+    </section>
 
-<!-- كتاب 6: تحرير المصطلح القرآني - المجلد 3 -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/editing-the-quranic-terminology-tome3/ar/cover-ar.png" 
-             alt="غلاف كتاب تحرير المصطلح القرآني - المجلد 3"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">تحرير المصطلح القرآني - المجلد 3</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">دراسة تطبيقية في فقه اللسان القرآني - المجلد الثالث</p>
-        
-        <div class="book-actions">
-            <a href="books/editing-the-quranic-terminology-tome3/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/editing-the-quranic-terminology-tome3/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/editing-the-quranic-terminology-tome3/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/3_20250724" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 7: التدبر في مرآة الرسوم -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/contemplation-in-the-mirror/ar/cover-ar.png" 
-             alt="غلاف كتاب التدبر في مرآة الرسوم"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">التدبر في مرآة الرسوم</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن</p>
-        
-        <div class="book-actions">
-            <a href="books/contemplation-in-the-mirror/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/contemplation-in-the-mirror/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/contemplation-in-the-mirror/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250529_20250529_2006" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 8: مقدمة مشروع رقمنة المخطوطات -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/digitizing/ar/cover-ar.png" 
-             alt="غلاف كتاب مقدمة مشروع رقمنة المخطوطات"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">مقدمة مشروع رقمنة المخطوطات</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">مشروع رقمنة المخطوطات الأصلية للقرآن الكريم والكتب الستة</p>
-        
-        <div class="book-actions">
-            <a href="books/digitizing/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1AQ1jE7w2F4k9wHR6J8sW_VhC1n7nV8pP" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/digitizing/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/digitizing/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250529_20250529_2128" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-<!-- كتاب 9: فقه اللسان القرآني -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/the-jurisprudence/ar/cover-ar.png" 
-             alt="غلاف كتاب فقه اللسان القرآني"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">فقه اللسان القرآني</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">منهج جديد لفهم النص والمخطوط القرآني</p>
-        
-        <div class="book-actions">
-            <a href="books/the-jurisprudence/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/the-jurisprudence/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/the-jurisprudence/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250529_20250529_2057" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 10: الحياء -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/modesty/ar/cover-ar.png" 
-             alt="غلاف كتاب الحياء"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">الحياء</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">سياج الروح وبوصلة الفهم في المنهج القرآني</p>
-        
-        <div class="book-actions">
-            <a href="books/modesty/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/modesty/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/modesty/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250707_20250707_0929" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 11: وليكون من الموقنين -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/malakoot/ar/cover-ar.png" 
-             alt="غلاف كتاب وليكون من الموقنين"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">وليكون من الموقنين</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">رحلة برهانية في ملكوت السماوات والأرض</p>
-        
-        <div class="book-actions">
-            <a href="books/malakoot/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/malakoot/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/malakoot/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250624_20250624_0823" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 12: السجود والتسبيح -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/prostration-and-glorification-in-the-quran/ar/cover-ar.png" 
-             alt="غلاف كتاب السجود والتسبيح"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">السجود والتسبيح</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">من التنزيه القلبي إلى الخضوع العملي في القرآن</p>
-        
-        <div class="book-actions">
-            <a href="books/prostration-and-glorification-in-the-quran/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/prostration-and-glorification-in-the-quran/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/prostration-and-glorification-in-the-quran/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/content_20250929" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div><!-- كتاب 13: المسيح ومريم -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/christ-and-mary-in-the-quran/ar/cover-ar.png" 
-             alt="غلاف كتاب المسيح ومريم"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">المسيح ومريم في القرآن</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">من الرمز الباطني إلى النموذج الإنساني في القرآن</p>
-        
-        <div class="book-actions">
-            <a href="books/christ-and-mary-in-the-qur'an/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/christ-and-mary-in-the-quran/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/christ-and-mary-in-the-quran/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/content_20250929" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 14: الأسماء الحسنى -->
-<div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/names-in-the-holy/ar/cover-ar.png" 
-             alt="غلاف كتاب الأسماء الحسنى"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">الأسماء الحسنى الوظيفية</h2>
-        <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">الدكتور ناصر ابن داوود</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">دراسة توقيفية تحليلية لدلالات التدبير الإلهي</p>
-        
-        <div class="book-actions">
-            <a href="books/names-in-the-holy/ar/" 
-               itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/names-in-the-holy/ar/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/names-in-the-holy/ar/content.txt" 
-               class="download-link" target="_blank">📝 نص خام</a>
-            <a href="https://archive.org/stream/20250529_20250529_2125" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="ar">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 15: Towards Conscious Contemplation -->
-<div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/conscious-contemplation/en/cover-en.png" 
-             alt="Cover of Towards Conscious Contemplation"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">Towards Conscious Contemplation</h2>
-        <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">A practical guide to understanding and applying the Noble Qur'an in the modern era</p>
-        
-        <div class="book-actions">
-            <a href="books/conscious-contemplation/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/conscious-contemplation/en/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/conscious-contemplation/en/content.txt" 
-               class="download-link" target="_blank">📝 Plain Text</a>
-            <a href="https://archive.org/stream/towards-conscious-contemplation" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="en">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 16: Anwar Al-Bayan -->
-<div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/anwar-al-bayan/en/cover-en.png" 
-             alt="Cover of Anwar Al-Bayan"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">Anwar Al-Bayan</h2>
-        <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">Unveiling the Secrets of the Tongue in Ottoman Quranic Script</p>
-        
-        <div class="book-actions">
-            <a href="books/anwar-al-bayan/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/anwar-al-bayan/en/content.pdf" 
-               class="download-link" target="_blank">📖 PDF</a>
-            <a href="books/anwar-al-bayan/en/content.txt" 
-               class="download-link" target="_blank">📝 Plain Text</a>
-            <a href="https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue" 
-               class="download-link" target="_blank">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="en">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div><!-- قسم الكتب الإنجليزية -->
-        <section class="language-section" itemscope itemtype="https://schema.org/Collection">
-            <h2 itemprop="name">🌟 Faith Studies - English</h2>
-            <meta itemprop="inLanguage" content="en">
-            <meta itemprop="collectionSize" content="5">
-
-            <!-- كتاب 17: Changing the Concepts -->
-<div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/changing-the-concepts/en/cover-en.png" 
-             alt="Cover of Changing the Concepts"
-             loading="lazy"
-             width="250"
-             height="350">
-    </div>
-    <div class="book-info">
-        <h2 itemprop="name">Changing the Concepts</h2>
-        <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </span></p>
-        <p class="book-desc" itemprop="description">Changing the Concepts of Quranic Terminology as an Application of the Jurisprudence of the Qur'anic Tongue</p>
-        
-        <div class="book-actions">
-            <a href="books/changing-the-concepts/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div>
-        
-        <!-- روابط التحميل المباشرة -->
-        <div class="download-links">
-            <a href="https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm" 
-               class="download-link" target="_blank">📄 DOCX</a>
-            <a href="books/changing-the-concepts/en/content.pdf" 
-               class="download-link" target="_blank">📖 PDF (Direct)</a>
-            <a href="https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU" 
-               class="download-link" target="_blank">📖 PDF (External)</a>
-            <a href="https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX" 
-               class="download-link" target="_blank">🌐 HTML</a>
-            <a href="https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh" 
-               class="download-link" target="_blank">📝 Plain Text (External)</a>
-            <a href="books/changing-the-concepts/en/content.txt" 
-               class="download-link" target="_blank">📝 Plain Text (Direct)</a>
-            <a href="https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt" 
-               class="download-link" target="_blank">🌐 Archive.org Text</a>
-            <a href="https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf" 
-               class="download-link" target="_blank">📖 Archive.org PDF</a>
-        </div>
-    </div>
-    
-    <meta itemprop="datePublished" content="2024">
-    <meta itemprop="inLanguage" content="en">
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-<!-- كتاب 18: Clarifying the Qur'anic Terminology - Tome 2 -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/editing-the-quranic-terminology-tome2/en/cover-en.png" 
-             alt="Cover of Clarifying the Qur'anic Terminology - Tome 2" 
-            alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-        <div class="book-actions">
-            <a href="books/editing-the-quranic-terminology-tome2/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div>
-        <meta itemprop="datePublished" content="2024">
+    <!-- قسم الكتب الإنجليزية - الدراسات الإيمانية -->
+    <section class="language-section" itemscope itemtype="https://schema.org/Collection">
+        <h2 itemprop="name">🌟 Faith Studies - English</h2>
         <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J">📄 DOCX</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome2/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome2/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/clarifying-the-qur-anic-terminology-an-applied-study-in-the-jurisprudence-of-the-2">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
+        <meta itemprop="collectionSize" content="19">
+        <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
+        <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
 
-<!-- كتاب 19: Clarifying the Qur'anic Terminology - Tome 1 -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/editing-the-quranic-terminology-tome1/en/cover-en.png" 
-             alt="Cover of Clarifying the Qur'anic Terminology - Tome 1" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1</h3>
-        </div>
-        
-        <div class="book-actions">
-            <a href="books/editing-the-quranic-terminology-tome2/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-        
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J">📄 DOCX</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome1/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome1/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/clarifying-the-qur-anic-terminology-an-applied-study-in-the-jurisprudence-of-the">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 20: The Functional Beautiful Names in the Holy Quran -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/names-in-the-holy/en/cover-en.png" 
-             alt="Cover of The Functional Beautiful Names in the Holy Quran" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management</h3>
-        </div>
-        
-        <div class="book-actions">
-            <a href="books/names-in-the-holy/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-        
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy">📄 DOCX</a>
-            <a itemprop="url" href="books/names-in-the-holy/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/names-in-the-holy/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 21: Christ and Mary in the Quran -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/christ-and-mary-in-the-quran/en/cover-en.png" 
-             alt="Cover of Christ and Mary in the Qur'an" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-
-         <div class="book-actions">
-            <a href="books/christ-and-mary-in-the-quran/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4">📄 DOCX</a>
-            <a itemprop="url" href="books/christ-and-mary-in-the-quran/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/christ-and-mary-in-the-quran/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/context_202509">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 22: Prostration and Glorification in the Qur'an -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/prostration-and-glorification-in-the-quran/en/cover-en.png" 
-             alt="Cover of Prostration and Glorification in the Qur'an" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-
-        <div class="book-actions">
-            <a href="books/prostration-and-glorification-in-the-quran/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo">📄 DOCX</a>
-            <a itemprop="url" href="books/prostration-and-glorification-in-the-quran/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/prostration-and-glorification-in-the-quran/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://ia902803.us.archive.org/23/items/context_20250929">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 23: And So That He May Be of the Certain Ones -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/malakoot/en/cover-en.png" 
-             alt="Cover of And So That He May Be of the Certain Ones" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-
-        <div class="book-actions">
-            <a href="books/malakoot/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT">📄 DOCX</a>
-            <a itemprop="url" href="books/malakoot/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/malakoot/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>            <!-- كتاب 24: MODESTY -->
-            <div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+        <div class="book-grid">
+            <!-- كتاب 15: Towards Conscious Contemplation -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
                 <div class="book-cover">
-                    <img itemprop="image" src="books/modesty/en/cover-en.png" 
-                         alt="Cover of MODESTY" 
-                         alt="غلاف كتاب تغيير المفاهيم"
+                    <img itemprop="image" src="books/conscious-contemplation/en/cover-en.png" 
+                         alt="Cover of Towards Conscious Contemplation"
                          loading="lazy"
                          width="250"
                          height="350">
                 </div>
-                
-                <div class="book-content">
-                    <div class="book-header">
-                        <h3 itemprop="name">MODESTY: The Fence of the Soul and the Compass of Understanding</h3>
-                    </div>
-                    
-                    <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <strong>Author:</strong> 
+                <div class="book-info">
+                    <h2 itemprop="name">Towards Conscious Contemplation</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-                    </div>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">A practical guide to understanding and applying the Noble Qur'an in the modern era</p>
                     
                     <div class="book-actions">
-            <a href="books/modesty/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-                    <meta itemprop="datePublished" content="2024">
-                    <meta itemprop="inLanguage" content="en">
+                        <a href="books/conscious-contemplation/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
                     
-                    <p class="book-desc" itemprop="description"><strong>Description:</strong> The Fence of the Soul and the Compass of Understanding in the Quranic Methodology</p>
-                    
-                    <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Faith Studies</span></div>
-                    
-                    <div class="book-links">
-                        <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2">📄 DOCX</a>
-                        <a itemprop="url" href="books/modesty/en/content.pdf">📖 PDF</a>
-                        <a itemprop="url" href="books/modesty/en/content.txt">📝 Plain Text</a>
-                        <a itemprop="url" href="https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding">🌐 Archive.org</a>
-
-<!-- كتاب 25: Clarifying the Qur'anic Terminology - Tome 3 -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/editing-the-quranic-terminology-tome3/en/cover-en.png" 
-             alt="Cover of Clarifying the Qur'anic Terminology - Tome 3" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-
-        <div class="book-actions">
-            <a href="books/editing-the-quranic-terminology-tome3/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J">📄 DOCX</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome3/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/editing-the-quranic-terminology-tome3/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/clarifying-the-qur-anic-terminology-an-applied-study-in-the-jurisprudence-of-the-3">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 26: Contemplation in the Mirror of Drawings -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/contemplation-in-the-mirror/en/cover-en.png" 
-             alt="Cover of Contemplation in the Mirror of Drawings" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Contemplation in the Mirror of Drawings</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-        
-        <div class="book-actions">
-            <a href="books/contemplation-in-the-mirror/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-                <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Contemplation in the Mirror of Drawings - Practical Applications of Digital Manuscripts in Contemplating the Qur'an</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J">📄 DOCX</a>
-            <a itemprop="url" href="books/contemplation-in-the-mirror/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/contemplation-in-the-mirror/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manus">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 27: The Jurisprudence of the Quranic Tongue -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/the-jurisprudence/en/cover-en.png" 
-             alt="Cover of The Jurisprudence of the Quranic Tongue" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">The Jurisprudence of the Quranic Tongue</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-        
-        <div class="book-actions">
-            <a href="books/the-jurisprudence/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-        
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> The Jurisprudence of the Quranic Tongue - A New Approach to Understanding the Text and Manuscript</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK">📄 DOCX</a>
-            <a itemprop="url" href="books/the-jurisprudence/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/the-jurisprudence/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
-
-<!-- كتاب 28: Introduction to the Project of Digitizing the Original Manuscripts -->
-<div class="book-item" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-    <div class="book-cover">
-        <img itemprop="image" src="books/digitizing/en/cover-en.png" 
-             alt="Cover of Introduction to the Project of Digitizing the Original Manuscripts" 
-             alt="غلاف كتاب تغيير المفاهيم"
-                         loading="lazy"
-                         width="250"
-                         height="350">
-    </div>
-    
-    <div class="book-content">
-        <div class="book-header">
-            <h3 itemprop="name">Introduction to the Project of Digitizing the Original Manuscripts of the Holy Quran and the Six Books Series</h3>
-        </div>
-        
-        <div class="book-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <strong>Author:</strong> 
-            <span itemprop="name">Dr. Nasser Ibn Dawood</span>
-        </div>
-
-         <div class="book-actions">
-            <a href="books/digitizing/en/" 
-               itemprop="url" class="btn">📖 Home Page</a>
-        </div
-            
-        <meta itemprop="datePublished" content="2024">
-        <meta itemprop="inLanguage" content="en">
-        
-        <p class="book-desc" itemprop="description"><strong>Description:</strong> Introduction to the Project of Digitizing the Original Manuscripts of the Holy Quran and the Six Books Series</p>
-        
-        <div class="book-meta"><strong>Genre:</strong> <span itemprop="genre">Quranic Studies</span></div>
-        
-        <div class="book-links">
-            <a itemprop="url" href="https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA">📄 DOCX</a>
-            <a itemprop="url" href="books/digitizing/en/content.pdf">📖 PDF</a>
-            <a itemprop="url" href="books/digitizing/en/content.txt">📝 Plain Text</a>
-            <a itemprop="url" href="https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505">🌐 Archive.org</a>
-        </div>
-    </div>
-    
-    <meta itemprop="bookFormat" content="https://schema.org/EBook">
-    <meta itemprop="isAccessibleForFree" content="true">
-    <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-</div>
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/conscious-contemplation/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/conscious-contemplation/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/towards-conscious-contemplation" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
                 </div>
                 
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
                 <meta itemprop="bookFormat" content="https://schema.org/EBook">
                 <meta itemprop="isAccessibleForFree" content="true">
                 <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
             </div>
-            
 
-        </section>
-
-        <!-- روابط هامة -->
-        <footer>
-            <h3>روابط هامة:</h3>
-            <ul>
-                <li><a href="books-index.html" itemprop="significantLink">📚 فهرس الكتب الشامل</a></li>
-                <li><a href="search.html" itemprop="significantLink">🔍 محرك البحث</a></li>
-                <li><a href="ai-recommendations.html" itemprop="significantLink">🤖 توصيات الذكاء الاصطناعي</a></li>
-                <li><a href="microdata-books.html" itemprop="significantLink">🏷️ البيانات المنظمة</a></li>
-            </ul>
-            
-            <!-- بيانات حقوق النشر -->
-            <div class="copyright" itemprop="copyrightNotice">
-                &copy; 2024 مكتبة ناصر ابن داوود - Nasser Ibn Dawood Library. جميع الحقوق محفوظة.
+            <!-- كتاب 16: Anwar Al-Bayan -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/anwar-al-bayan/en/cover-en.png" 
+                         alt="Cover of Anwar Al-Bayan"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Anwar Al-Bayan</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">Unveiling the Secrets of the Tongue in Ottoman Quranic Script</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/anwar-al-bayan/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/anwar-al-bayan/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/anwar-al-bayan/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
             </div>
-        </footer>
-    </div>
+
+            <!-- كتاب 20: The Functional Beautiful Names in the Holy Quran -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/names-in-the-holy/en/cover-en.png" 
+                         alt="Cover of The Functional Beautiful Names in the Holy Quran"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">The Functional Beautiful Names in the Holy Quran</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">An Analytical Discretionary Study of the Connotations of Divine Management</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/names-in-the-holy/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/names-in-the-holy/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/names-in-the-holy/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 21: Christ and Mary in the Quran -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/christ-and-mary-in-the-quran/en/cover-en.png" 
+                         alt="Cover of Christ and Mary in the Qur'an"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Christ and Mary in the Qur'an</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">From the Esoteric Symbol to the Human Model</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/christ-and-mary-in-the-quran/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/christ-and-mary-in-the-quran/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/christ-and-mary-in-the-quran/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/context_202509" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 22: Prostration and Glorification in the Qur'an -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/prostration-and-glorification-in-the-quran/en/cover-en.png" 
+                         alt="Cover of Prostration and Glorification in the Qur'an"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Prostration and Glorification in the Qur'an</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">From Heartfelt Purification to Practical Submission</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/prostration-and-glorification-in-the-quran/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/prostration-and-glorification-in-the-quran/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/prostration-and-glorification-in-the-quran/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://ia902803.us.archive.org/23/items/context_20250929" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 23: And So That He May Be of the Certain Ones -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/malakoot/en/cover-en.png" 
+                         alt="Cover of And So That He May Be of the Certain Ones"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">And So That He May Be of the Certain Ones</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/malakoot/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/malakoot/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/malakoot/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 24: MODESTY -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/modesty/en/cover-en.png" 
+                         alt="Cover of MODESTY"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">MODESTY</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">The Fence of the Soul and the Compass of Understanding in the Quranic Methodology</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/modesty/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/modesty/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/modesty/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 25: Clarifying the Qur'anic Terminology - Tome 3 -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/editing-the-quranic-terminology-tome3/en/cover-en.png" 
+                         alt="Cover of Clarifying the Qur'anic Terminology - Tome 3"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Clarifying the Qur'anic Terminology</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/editing-the-quranic-terminology-tome3/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/editing-the-quranic-terminology-tome3/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/editing-the-quranic-terminology-tome3/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/clarifying-the-qur-anic-terminology-an-applied-study-in-the-jurisprudence-of-the-3" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 26: Contemplation in the Mirror of Drawings -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/contemplation-in-the-mirror/en/cover-en.png" 
+                         alt="Cover of Contemplation in the Mirror of Drawings"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Contemplation in the Mirror of Drawings</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">Practical Applications of Digital Manuscripts in Contemplating the Qur'an</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/contemplation-in-the-mirror/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1qfP_Yr3Z8x2w7iH1K2M1d5M5rJ1q0u5J" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/contemplation-in-the-mirror/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/contemplation-in-the-mirror/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manus" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 27: The Jurisprudence of the Quranic Tongue -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/the-jurisprudence/en/cover-en.png" 
+                         alt="Cover of The Jurisprudence of the Quranic Tongue"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">The Jurisprudence of the Quranic Tongue</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">A New Approach to Understanding the Text and Manuscript</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/the-jurisprudence/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/the-jurisprudence/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/the-jurisprudence/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+
+            <!-- كتاب 28: Introduction to the Project of Digitizing the Original Manuscripts -->
+            <div class="book-card" data-lang="en" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
+                <div class="book-cover">
+                    <img itemprop="image" src="books/digitizing/en/cover-en.png" 
+                         alt="Cover of Introduction to the Project of Digitizing the Original Manuscripts"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+                </div>
+                <div class="book-info">
+                    <h2 itemprop="name">Introduction to the Project of Digitizing the Original Manuscripts</h2>
+                    <p class="book-meta">Author: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Dr. Nasser Ibn Dawood</span>
+                    </span></p>
+                    <p class="book-desc" itemprop="description">of the Holy Quran and the Six Books Series</p>
+                    
+                    <div class="book-actions">
+                        <a href="books/digitizing/en/" 
+                           itemprop="url" class="btn">📖 Home Page</a>
+                    </div>
+                    
+                    <div class="download-links">
+                        <a href="https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA" 
+                           class="download-link" target="_blank">📄 DOCX</a>
+                        <a href="books/digitizing/en/content.pdf" 
+                           class="download-link" target="_blank">📖 PDF</a>
+                        <a href="books/digitizing/en/content.txt" 
+                           class="download-link" target="_blank">📝 Plain Text</a>
+                        <a href="https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505" 
+                           class="download-link" target="_blank">🌐 Archive.org</a>
+                    </div>
+                </div>
+                
+                <meta itemprop="datePublished" content="2024">
+                <meta itemprop="inLanguage" content="en">
+                <meta itemprop="bookFormat" content="https://schema.org/EBook">
+                <meta itemprop="isAccessibleForFree" content="true">
+                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            </div>
+        </div>
+    </section>
+
+    <!-- روابط هامة -->
+    <footer>
+        <h3>روابط هامة:</h3>
+        <ul>
+            <li><a href="books-index.html" itemprop="significantLink">📚 فهرس الكتب الشامل</a></li>
+            <li><a href="search.html" itemprop="significantLink">🔍 محرك البحث</a></li>
+            <li><a href="ai-recommendations.html" itemprop="significantLink">🤖 توصيات الذكاء الاصطناعي</a></li>
+            <li><a href="microdata-books.html" itemprop="significantLink">🏷️ البيانات المنظمة</a></li>
+        </ul>
+        
+        <!-- بيانات حقوق النشر -->
+        <div class="copyright" itemprop="copyrightNotice">
+            &copy; 2024 مكتبة ناصر ابن داوود - Nasser Ibn Dawood Library. جميع الحقوق محفوظة.
+        </div>
+    </footer>
 
     <!-- Structured Data للصفحة ككل -->
     <script type="application/ld+json">
@@ -1642,12 +968,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
