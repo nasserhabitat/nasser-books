@@ -699,7 +699,7 @@
           "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
           "pdf": "books/the-code-of-the-quran/en/content.pdf",
           "pdf_external": 
-"https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
+             "https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
           "text": "books/the-code-of-the-quran/en/content.txt",
           "text_external": "https://drive.google.com/uc?export=download&id=1qGGETH0dyGOHvPWJhlygXQw9Lcs-poeU",
           "archive_text": "https://archive.org/stream/content_20251016_1955/content_djvu.txt ",
@@ -769,3 +769,4 @@
 }
 ]
 }
+
