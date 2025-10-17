@@ -674,11 +674,11 @@
   {
       "id": "the-code-of-the-quran",
       "titles": {
-        "ar"شفرة القرآن",
+        "ar": "شفرة القرآن",
         "en": "THE CODE OF THE QUR’AN "
       },
       "description": {
-        "ar"دليل التشغيل لعصر جديد",
+        "ar": "دليل التشغيل لعصر جديد",
         "en": "AN OPERATING MANUAL FOR A NEW AGE"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/cover-ar.png",
@@ -769,6 +769,3 @@
 }
 ]
 }
-
-
-
