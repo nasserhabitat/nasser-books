@@ -479,7 +479,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ Cover](books/names-in-the-holy/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf)
-6. ** Blood - the code of existence that we neglected l
+6. ** Blood - the code of existence that we neglected **
 
 •	DOCX
 •	HTML
@@ -490,7 +490,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
 •	Archive Text
 •	Archive PDF
 
-7. ** THE CODE OF THE QUR’AN - AN OPERATING MANUAL FOR A NEW AGE
+7. ** THE CODE OF THE QUR’AN - AN OPERATING MANUAL FOR A NEW AGE **
 
 •	DOCX
 •	HTML
