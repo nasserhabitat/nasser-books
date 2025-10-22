@@ -1,67 +1,33 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" itemscope itemtype="https://schema.org/SearchResultsPage">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="محرك بحث متخصص في مكتبة ناصر ابن داوود - ابحث في 32 كتاباً من الدراسات القرآنية واللغوية">
-    <meta name="keywords" content="بحث, كتب, قرآن, دراسات قرآنية, لغة عربية, ناصر ابن داوود">
-    <title>محرك البحث المتخصص - مكتبة ناصر ابن داوود</title>
-    
-    <!-- بيانات Schema.org لمحرك البحث -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "محرك البحث المتخصص - مكتبة ناصر ابن داوود",
-        "url": "https://nasserhabitat.github.io/nasser-books/search.html",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://nasserhabitat.github.io/nasser-books/search.html?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "description": "محرك بحث متخصص في المؤلفات القرآنية واللغوية للدكتور ناصر ابن داوود",
-        "inLanguage": "ar"
-    }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>بحث متخصص - مكتبة ناصر ابن داوود</title>
     <style>
         :root {
             --primary-color: #1a5276;
             --secondary-color: #2980b9;
             --accent-color: #e74c3c;
-            --light-color: #f5f5f5;
-            --dark-color: #333;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --border-radius: 10px;
         }
         
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f9f9f9;
-            color: var(--dark-color);
+            background: #f5f7fa;
+            color: #333;
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
-            flex: 1;
+            padding: 20px;
         }
         
         header {
@@ -69,44 +35,38 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
+            border-radius: 0 0 20px 20px;
             margin-bottom: 2rem;
         }
         
-        .logo {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-        
         .search-section {
-            background-color: white;
+            background: white;
             padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
         
         .search-tabs {
             display: flex;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #ddd;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 2rem;
         }
         
         .search-tab {
-            padding: 10px 20px;
+            flex: 1;
+            padding: 12px 20px;
+            text-align: center;
             cursor: pointer;
-            border-bottom: 3px solid transparent;
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
         
         .search-tab.active {
-            border-bottom-color: var(--primary-color);
-            color: var(--primary-color);
-            font-weight: bold;
+            background: var(--primary-color);
+            color: white;
         }
         
         .tab-content {
@@ -117,49 +77,36 @@
             display: block;
         }
         
-        /* محرك البحث المحلي */
-        .search-container {
-            position: relative;
-            margin-bottom: 1.5rem;
-        }
-        
         .search-box {
             display: flex;
             gap: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .search-input {
             flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e1e8ed;
             border-radius: 50px;
-            padding: 15px 25px;
-            border: 2px solid #e2e8f0;
-            transition: all 0.3s;
             font-size: 1.1rem;
+            transition: all 0.3s ease;
         }
         
         .search-input:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+            border-color: var(--primary-color);
             outline: none;
-        }
-        
-        .lang-select {
-            border-radius: 50px;
-            border: 2px solid #e2e8f0;
-            padding: 0 15px;
-            width: 130px;
+            box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
         }
         
         .search-btn {
-            border-radius: 50px;
-            padding: 0 25px;
+            padding: 15px 30px;
             background: var(--accent-color);
-            border: none;
-            font-weight: 600;
-            transition: all 0.3s;
             color: white;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
         }
         
         .search-btn:hover {
@@ -167,379 +114,43 @@
             transform: translateY(-2px);
         }
         
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .filter-group {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .filter-label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        
-        .filter-select {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .filter-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f1f5f9;
-            border-radius: 12px;
-        }
-        
-        .filter-title {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-        
-        .filter-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .filter-badge {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 50px;
-            padding: 5px 15px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .filter-badge:hover, .filter-badge.active {
-            background: var(--accent-color);
-            color: white;
-            border-color: var(--accent-color);
-        }
-        
-        /* تخصيصات إضافية لمحرك بحث جوجل */
-.google-search-box {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.google-search-box .search-input {
-    flex: 1;
-}
-
-#googleResults {
-    margin-top: 20px;
-}
-
-.google-result-item {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid var(--secondary-color);
-}
-
-.google-result-title {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-}
-
-.google-result-title a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.google-result-title a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
-}
-
-.google-result-snippet {
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-.google-result-url {
-    color: var(--success-color);
-    font-size: 0.85rem;
-    font-style: italic;
-}
-
-/* تخصيص مظهر GCSE */
-.gsc-control-cse {
-    direction: rtl !important;
-    text-align: right !important;
-    font-family: 'Tajawal', sans-serif !important;
-    padding: 0 !important;
-    border: none !important;
-    background: transparent !important;
-}
-
-.gsc-input-box {
-    border: 2px solid var(--primary-color) !important;
-    border-radius: 50px !important;
-    padding: 5px !important;
-    height: auto !important;
-}
-
-.gsc-input {
-    padding: 10px 15px !important;
-    font-size: 1.1rem !important;
-    font-family: 'Tajawal', sans-serif !important;
-}
-
-.gsc-search-button-v2 {
-    padding: 10px 20px !important;
-    border: none !important;
-    border-radius: 50px !important;
-    background: var(--primary-color) !important;
-    font-size: 1rem !important;
-    font-family: 'Tajawal', sans-serif !important;
-}
-
-.gsc-search-button-v2:hover {
-    background: var(--secondary-color) !important;
-}
-
-.gsc-results-wrapper-overlay {
-    direction: rtl !important;
-}
-
-.gsc-webResult .gs-snippet, .gsc-fileFormatIdentifier {
-    font-family: 'Tajawal', sans-serif !important;
-}
-
-.gs-spelling {
-    direction: rtl !important;
-    text-align: right !important;
-}
-        /* نتائج البحث المحلي */
-        .results-section {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 2rem auto;
-            box-shadow: var(--shadow);
-        }
-        
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .results-count {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        
-        .book-card {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .book-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-        
-        .book-title {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .book-meta {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .meta-badge {
-            background: #e3f2fd;
-            color: var(--primary-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-        
-        .book-description {
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
-        
-        .book-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .book-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: var(--light-color);
-            color: var(--dark-color);
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        
-        .book-link:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #64748b;
-        }
-        
-        .no-results i {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #cbd5e1;
-        }
-        
-        /* تخصيص محرك بحث جوجل */
         .gcse-search {
             width: 100%;
         }
         
-        .gsc-control-cse {
-            padding: 0 !important;
-            border: none !important;
-            background: transparent !important;
-            font-family: 'Tajawal', sans-serif !important;
-        }
-        
-        .gsc-input-box {
-            border: 2px solid var(--primary-color) !important;
-            border-radius: 50px !important;
-            padding: 5px !important;
-            height: auto !important;
-        }
-        
-        .gsc-input {
-            padding: 10px 15px !important;
-            font-size: 1.1rem !important;
-        }
-        
-        .gsc-search-button-v2 {
-            padding: 10px 20px !important;
-            border: none !important;
-            border-radius: 50px !important;
-            background: var(--primary-color) !important;
-            font-size: 1rem !important;
-        }
-        
-        .gsc-search-button-v2:hover {
-            background: var(--secondary-color) !important;
-        }
-        
-        /* تخصيص مظهر الترويجات في نتائج البحث */
-        .gsc-promotion {
-            border: 2px solid var(--success-color) !important;
-            border-radius: var(--border-radius) !important;
-            margin-bottom: 1rem !important;
-        }
-        
-        .gsc-promotion .gs-title {
-            color: var(--success-color) !important;
-            font-weight: bold !important;
+        .info-box {
+            background: #e8f4fd;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border-right: 4px solid var(--primary-color);
         }
         
         .schema-types {
-            background: #e3f2fd;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        
-        .schema-types h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
         }
         
         .schema-types-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 10px;
         }
         
         .schema-type {
             background: var(--primary-color);
             color: white;
-            padding: 5px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #777;
-            border-top: 1px solid #eee;
-            margin-top: auto;
-            background: white;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
-            .filters {
-                flex-direction: column;
-            }
-            
-            .book-header {
-                flex-direction: column;
-            }
-            
-            .book-links {
-                flex-direction: column;
-            }
-            
             .search-box {
                 flex-direction: column;
-            }
-            
-            .lang-select, .search-btn {
-                width: 100%;
-                border-radius: 50px;
-                margin-top: 10px;
             }
             
             .search-tabs {
@@ -548,212 +159,97 @@
         }
     </style>
 </head>
-<body itemscope itemtype="https://schema.org/WebPage">
+<body>
     <header>
         <div class="container">
-            <div class="logo">🔍</div>
-            <h1 itemprop="name">محرك البحث المتخصص - مكتبة ناصر ابن داوود</h1>
-            <p itemprop="description">ابحث في 32 كتاباً من المؤلفات القرآنية واللغوية باستخدام Schema.org</p>
+            <h1>🔍 محرك البحث المتخصص</h1>
+            <p>مكتبة ناصر ابن داوود - بحث متقدم باستخدام Schema.org</p>
         </div>
     </header>
-    
+
     <div class="container">
         <!-- تبويبات البحث -->
         <div class="search-tabs">
-            <div class="search-tab active" data-tab="local-search">البحث المحلي</div>
-            <div class="search-tab" data-tab="google-search">بحث جوجل المتخصص</div>
+            <div class="search-tab active" data-tab="google-search">بحث جوجل المتخصص</div>
+            <div class="search-tab" data-tab="local-search">البحث المحلي</div>
             <div class="search-tab" data-tab="all-books">جميع الكتب</div>
         </div>
-        
-        <!-- محتوى تبويب البحث المحلي -->
-        <section class="search-section tab-content active" id="local-search">
-            <h2>البحث المحلي في المكتبة</h2>
-            <p>ابحث في جميع الكتب والمحتوى المحلي للمكتبة باستخدام نظام البحث المدمج</p>
+
+        <!-- بحث جوجل المتخصص -->
+        <section class="search-section tab-content active" id="google-search">
+            <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
+            <p>ابحث في محتوى المكتبة مع نتائج مخصصة باستخدام أنواع Schema.org</p>
             
-            <!-- محرك البحث المحلي المدمج -->
+            <div class="info-box">
+                <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
+            </div>
+
+            <!-- محرك بحث جوجل المخصص -->
             <div class="search-container">
+                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
+                <div class="gcse-search" 
+                     data-enableImageSearch="false"
+                     data-enableOrderBy="true"
+                     data-autoSearchOnLoad="false"
+                     data-disableWebSearch="true">
+                </div>
+            </div>
+
+            <!-- بحث يدوي دقيق -->
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
+                <h3>بحث يدوي دقيق</h3>
+                <p>للبحث الدقيق بدون مصطلحات إضافية:</p>
                 <div class="search-box">
-                    <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن كتاب أو موضوع..." value="">
-                    <select id="languageSelect" class="lang-select">
-                        <option value="all">جميع اللغات</option>
-                        <option value="ar">العربية</option>
-                        <option value="en">الإنجليزية</option>
-                    </select>
-                    <button class="search-btn" type="button" onclick="searchBooks()">
-                        <i class="fas fa-search me-1"></i> بحث
+                    <input type="text" id="exactQuery" class="search-input" placeholder="أدخل المصطلح بدقة...">
+                    <button class="search-btn" onclick="performExactSearch()">
+                        بحث دقيق
                     </button>
                 </div>
             </div>
-            
-            <!-- الفلاتر -->
-            <div class="filters">
-                <div class="filter-group">
-                    <label class="filter-label" for="categoryFilter">التصنيف:</label>
-                    <select class="filter-select" id="categoryFilter">
-                        <option value="all">جميع التصنيفات</option>
-                        <option value="quranic_studies">الدراسات القرآنية</option>
-                        <option value="faith_studies">الدراسات الإيمانية</option>
-                        <option value="digital_projects">المشاريع الرقمية</option>
-                    </select>
+
+            <!-- أنواع Schema.org -->
+            <div class="schema-types">
+                <h3>أنواع Schema.org المستخدمة:</h3>
+                <div class="schema-types-list">
+                    <span class="schema-type">Book</span>
+                    <span class="schema-type">Article</span>
+                    <span class="schema-type">ScholarlyArticle</span>
+                    <span class="schema-type">CreativeWork</span>
+                    <span class="schema-type">CollectionPage</span>
+                    <span class="schema-type">WebPage</span>
+                    <span class="schema-type">PublicationIssue</span>
+                    <span class="schema-type">Chapter</span>
+                    <span class="schema-type">Review</span>
+                    <span class="schema-type">Person</span>
                 </div>
-                
-                <div class="filter-group">
-                    <label class="filter-label" for="languageFilter">اللغة:</label>
-                    <select class="filter-select" id="languageFilter">
-                        <option value="all">جميع اللغات</option>
-                        <option value="ar">العربية</option>
-                        <option value="en">الإنجليزية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label class="filter-label" for="sortFilter">ترتيب حسب:</label>
-                    <select class="filter-select" id="sortFilter">
-                        <option value="relevance">الأكثر صلة</option>
-                        <option value="title">العنوان</option>
-                        <option value="pages">عدد الصفحات</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- فلاتر الفئات -->
-            <div class="filter-section">
-                <div class="filter-title">الفئات:</div>
-                <div class="filter-badges">
-                    <div class="filter-badge active" onclick="toggleFilter('all')">الكل</div>
-                    <div class="filter-badge" onclick="toggleFilter('quranic_studies')">دراسات قرآنية</div>
-                    <div class="filter-badge" onclick="toggleFilter('faith_studies')">دراسات إيمانية</div>
-                    <div class="filter-badge" onclick="toggleFilter('digital_projects')">مشاريع رقمية</div>
-                </div>
-            </div>
-            
-            <!-- نتائج البحث المحلي -->
-            <div class="results-section" id="localResults" style="display: none;">
-                <div class="results-header">
-                    <h2>نتائج البحث من المكتبة</h2>
-                    <div class="results-count" id="resultsCount">0 كتاب متاح</div>
-                </div>
-                <div id="booksContainer">
-                    <!-- سيتم ملء هذا القسم بالكتب عبر JavaScript -->
-                </div>
-            </div>
-            
-            <!-- رسالة عدم وجود نتائج -->
-            <div class="no-results" id="noResults" style="display: none;">
-                <i class="fas fa-search"></i>
-                <h3>لم يتم العثور على نتائج</h3>
-                <p>جرب استخدام كلمات بحث مختلفة أو استعرض جميع الكتب</p>
             </div>
         </section>
-        
-       <!-- محتوى تبويب بحث جوجل -->
-<section class="search-section tab-content" id="google-search">
-    <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
-    <p>استخدم محرك بحث جوجل المخصص للبحث في محتوى المكتبة مع نتائج مخصصة باستخدام Schema.org</p>
-    
-    <!-- محرك بحث جوجل المخصص -->
-    <div class="search-container">
-        <div class="google-search-box">
-            <input type="text" id="googleSearchInput" class="search-input" placeholder="ابحث في المكتبة باستخدام جوجل..." />
-            <button class="search-btn" onclick="performGoogleSearch()">
-                <i class="fas fa-search me-1"></i> بحث جوجل
-            </button>
-        </div>
-        
-        <!-- نتائج بحث جوجل -->
-        <div id="googleResultsContainer" style="display: none;">
-            <div class="results-header">
-                <h2>نتائج بحث جوجل</h2>
-                <div class="results-count" id="googleResultsCount">جارٍ تحميل النتائج...</div>
+
+        <!-- البحث المحلي -->
+        <section class="search-section tab-content" id="local-search">
+            <h2>البحث المحلي في المكتبة</h2>
+            <p>ابحث في جميع الكتب باستخدام نظام البحث المدمج</p>
+            
+            <div class="search-box">
+                <input type="text" id="localSearch" class="search-input" placeholder="ابحث في العناوين والمحتوى...">
+                <button class="search-btn" onclick="performLocalSearch()">
+                    بحث محلي
+                </button>
             </div>
-            <div id="googleResults"></div>
-        </div>
-        
-        <!-- عنصر GCSE الأصلي (مخفي) -->
-        <div id="gcseContainer" style="display: none;">
-            <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
-            <div class="gcse-search" 
-                 data-enableImageSearch="false"
-                 data-enableOrderBy="true"
-                 data-filter="0"
-                 data-autoSearchOnLoad="false">
-            </div>
-        </div>
-    </div>
-    
-    <!-- أنواع Schema.org المستخدمة -->
-    <div class="schema-types">
-        <h3>أنواع Schema.org المستخدمة في هذا المحرك:</h3>
-        <div class="schema-types-list">
-            <span class="schema-type">Book</span>
-            <span class="schema-type">Article</span>
-            <span class="schema-type">ScholarlyArticle</span>
-            <span class="schema-type">CreativeWork</span>
-            <span class="schema-type">CollectionPage</span>
-            <span class="schema-type">WebPage</span>
-            <span class="schema-type">PublicationIssue</span>
-            <span class="schema-type">Chapter</span>
-            <span class="schema-type">Review</span>
-            <span class="schema-type">Person</span>
-        </div>
-    </div>
-    
-    <div class="info-box" style="background: #e8f5e8; padding: 15px; border-radius: 8px; margin-top: 20px;">
-        <p>🔍 <strong>نتائج مخصصة</strong> - تم تخصيص محرك البحث لعرض النتائج الأكثر صلة بمحتوى المكتبة باستخدام Schema.org</p>
-        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
-            <strong>ملاحظة:</strong> بحث جوجل يعمل بشكل أفضل مع الاتصال بالإنترنت ويقدم نتائج من جميع أنحاء المكتبة بما في ذلك المحتوى الموجود على أرشيف الإنترنت وجوجل درايف.
-        </p>
-    </div>
-</section>
-        
-        <!-- محتوى تبويب جميع الكتب -->
+            
+            <div id="localResults"></div>
+        </section>
+
+        <!-- جميع الكتب -->
         <section class="search-section tab-content" id="all-books">
             <h2>جميع الكتب المتاحة</h2>
-            <p>استعرض جميع الكتب والمخطوطات المتاحة في المكتبة حسب التصنيف</p>
-            
-            <div class="filters">
-                <div class="filter-group">
-                    <label class="filter-label" for="allBooksCategoryFilter">التصنيف:</label>
-                    <select class="filter-select" id="allBooksCategoryFilter">
-                        <option value="all">جميع التصنيفات</option>
-                        <option value="quranic_studies">الدراسات القرآنية</option>
-                        <option value="faith_studies">الدراسات الإيمانية</option>
-                        <option value="digital_projects">المشاريع الرقمية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label class="filter-label" for="allBooksLanguageFilter">اللغة:</label>
-                    <select class="filter-select" id="allBooksLanguageFilter">
-                        <option value="all">جميع اللغات</option>
-                        <option value="ar">العربية</option>
-                        <option value="en">الإنجليزية</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="results-section">
-                <div class="results-header">
-                    <h2>جميع الكتب</h2>
-                    <div class="results-count" id="allBooksCount">32 كتاب متاح</div>
-                </div>
-                <div id="allBooksContainer">
-                    <!-- سيتم ملء هذا القسم بجميع الكتب عبر JavaScript -->
-                </div>
-            </div>
+            <p>استعرض جميع الكتب في المكتبة</p>
+            <div id="allBooksList"></div>
         </section>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>مكتبة ناصر ابن داوود © 2025 - جميع الحقوق محفوظة</p>
-            <p>الترخيص: CC BY-SA 4.0 - متوافق مع الذكاء الاصطناعي</p>
-            <p><a href="index.html" style="color: #4da6ff;">← العودة إلى الصفحة الرئيسية</a></p>
-        </div>
-    </footer>
 
     <script>
-        // بيانات الكتب (32 كتاب 16 بالعربية و16 مترجمة بالإنجليزية  16 id من index.json)
+       // بيانات الكتب (32 كتاب 16 بالعربية و16 مترجمة بالإنجليزية  16 id من index.json)
         const booksData = [
              {
         "id": "conscious-contemplation",
@@ -1490,407 +986,110 @@
         }
       }
     ];
-        // عناصر DOM
-        const booksContainer = document.getElementById('booksContainer');
-        const allBooksContainer = document.getElementById('allBooksContainer');
-        const resultsCount = document.getElementById('resultsCount');
-        const allBooksCount = document.getElementById('allBooksCount');
-        const noResultsMsg = document.getElementById('noResults');
-        const localResults = document.getElementById('localResults');
-        const categoryFilter = document.getElementById('categoryFilter');
-        const languageFilter = document.getElementById('languageFilter');
-        const sortFilter = document.getElementById('sortFilter');
-        const allBooksCategoryFilter = document.getElementById('allBooksCategoryFilter');
-        const allBooksLanguageFilter = document.getElementById('allBooksLanguageFilter');
-        const searchTabs = document.querySelectorAll('.search-tab');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const searchInput = document.getElementById('searchInput');
-        const languageSelect = document.getElementById('languageSelect');
-
-        let currentFilter = 'all';
-
-        // دالة لإنشاء زر القراءة
-        function createReadButton(book, lang) {
-            const buttonContainer = document.createElement('div');
-            let bookUrl = null;
-
-            if (book.links && book.links[lang]) {
-                const langLinks = book.links[lang];
-                // تحديد الأولوية: أرشيف الإنترنت ثم جوجل درايف
-                if (langLinks.archive_pdf) {
-                    bookUrl = langLinks.archive_pdf;
-                } else if (langLinks.pdf) {
-                    bookUrl = book.links[lang].pdf;
-                }
-            }
-
-            if (bookUrl) {
-                buttonContainer.innerHTML = `
-                    <a href="${bookUrl}" target="_blank" class="book-link">
-                        <i class="fas fa-book me-1"></i> اقرأ الآن
-                    </a>
-                `;
-            } else {
-                buttonContainer.innerHTML = `
-                    <span class="book-link" style="background: #ccc; color: #666; cursor: not-allowed;">
-                        <i class="fas fa-exclamation-circle me-1"></i> غير متاح
-                    </span>
-                `;
-            }
-            return buttonContainer;
-        }
-
-        // بحث جوجل المتخصص
-let googleSearchInitialized = false;
-
-function initializeGoogleSearch() {
-    if (googleSearchInitialized) return;
-    
-    // إعادة تحميل سكريبت GCSE إذا لزم الأمر
-    const existingScript = document.querySelector('script[src*="cse.google.com"]');
-    if (existingScript) {
-        existingScript.remove();
-    }
-    
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://cse.google.com/cse.js?cx=87a2ea74c56054f92';
-    document.head.appendChild(script);
-    
-    googleSearchInitialized = true;
-    console.log('Google CSE initialized');
-}
-
-function performGoogleSearch() {
-    const searchInput = document.getElementById('googleSearchInput');
-    const query = searchInput.value.trim();
-    
-    if (!query) {
-        alert('يرجى إدخال كلمة البحث');
-        return;
-    }
-    
-    // التبديل إلى محرك جوجل الأصلي
-    document.getElementById('googleResultsContainer').style.display = 'block';
-    document.getElementById('googleResults').innerHTML = '<div style="text-align: center; padding: 20px;">جارٍ تحميل نتائج بحث جوجل...</div>';
-    
-    // تهيئة بحث جوجل إذا لم تكن معينة
-    if (!googleSearchInitialized) {
-        initializeGoogleSearch();
-        
-        // الانتظار قليلاً لتحميل السكريبت ثم تنفيذ البحث
-        setTimeout(() => {
-            executeGoogleSearch(query);
-        }, 1000);
-    } else {
-        executeGoogleSearch(query);
-    }
-}
-
-function executeGoogleSearch(query) {
-    try {
-        // استخدام GCSE المدمج إذا كان متاحاً
-        const searchBox = document.querySelector('.gsc-input');
-        const searchButton = document.querySelector('.gsc-search-button');
-        
-        if (searchBox && searchButton) {
-            searchBox.value = query;
-            searchButton.click();
-        } else {
-            // حل بديل: فتح بحث جوجل في صفحة جديدة
-            const googleSearchUrl = `https://www.google.com/search?q=site:nasserhabitat.github.io+nasser-books+${encodeURIComponent(query)}`;
-            window.open(googleSearchUrl, '_blank');
-            
-            document.getElementById('googleResults').innerHTML = `
-                <div class="no-results">
-                    <i class="fas fa-external-link-alt"></i>
-                    <h3>سيتم فتح نتائج البحث في نافذة جديدة</h3>
-                    <p>جارٍ توجيهك إلى نتائج بحث جوجل المتخصصة بمكتبة ناصر ابن داوود</p>
-                    <p style="margin-top: 15px;">
-                        <a href="${googleSearchUrl}" target="_blank" class="search-btn" style="display: inline-block; text-decoration: none;">
-                            <i class="fas fa-external-link-alt me-1"></i> فتح نتائج البحث
-                        </a>
-                    </p>
-                </div>
-            `;
-        }
-    } catch (error) {
-        console.error('Error executing Google search:', error);
-        document.getElementById('googleResults').innerHTML = `
-            <div class="no-results">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h3>حدث خطأ في بحث جوجل</h3>
-                <p>يرجى المحاولة مرة أخرى أو استخدام البحث المحلي</p>
-            </div>
-        `;
-    }
-}
-
-// تحديث وظيفة switchTab لدعم بحث جوجل
-function switchTab(tabId) {
-    // إخفاء جميع المحتويات
-    tabContents.forEach(content => {
-        content.classList.remove('active');
-    });
-    
-    // إزالة النشاط من جميع التبويبات
-    searchTabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
-    // إظهار المحتوى المحدد
-    document.getElementById(tabId).classList.add('active');
-    
-    // إضافة النشاط للتبويب المحدد
-    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-    
-    // تهيئة بحث جوجل عند التبديل إلى تبويبه
-    if (tabId === 'google-search' && !googleSearchInitialized) {
-        setTimeout(initializeGoogleSearch, 500);
-    }
-}
-
-// إضافة حدث لإدخال البحث في حقل جوجل
-document.addEventListener('DOMContentLoaded', function() {
-    const googleSearchInput = document.getElementById('googleSearchInput');
-    if (googleSearchInput) {
-        googleSearchInput.addEventListener('keyup', function(event) {
-            if (event.key === 'Enter') {
-                performGoogleSearch();
-            }
-        });
-    }
-    
-    // التهيئة الأولية
-    displayAllBooks();
-    
-    
-});
-        
-        // البحث وعرض النتائج
-        function searchBooks() {
-            const query = searchInput.value.toLowerCase().trim();
-            const lang = languageSelect.value;
-            const category = categoryFilter.value;
-            const language = languageFilter.value;
-            const sort = sortFilter.value;
-            
-            booksContainer.innerHTML = '';
-            localResults.style.display = 'none';
-            noResultsMsg.style.display = 'none';
-
-            // فلترة الكتب
-            let filteredBooks = booksData.filter(book => {
-                const title = book.titles[lang === 'all' ? 'ar' : lang]?.toLowerCase() || '';
-                const description = book.description[lang === 'all' ? 'ar' : lang]?.toLowerCase() || '';
-                const bookCategory = book.metadata?.category || '';
+        // تبديل التبويبات
+        document.querySelectorAll('.search-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // إزالة النشاط من جميع التبويبات
+                document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
                 
-                // تطبيق تصفية الفئة من الفلاتر الجانبية
-                const categoryMatch = category === 'all' || bookCategory === category;
-                
-                // تطبيق تصفية الفئة من badges
-                const filterMatch = currentFilter === 'all' || bookCategory === currentFilter;
-                
-                // تطبيق البحث النصي
-                const queryMatch = !query ||
-                                 title.includes(query) ||
-                                 description.includes(query);
-                
-                // تطبيق تصفية اللغة
-                let languageMatch = true;
-                if (language !== 'all') {
-                    if (language === 'ar') languageMatch = book.metadata?.language_ar === 'arabic';
-                    if (language === 'en') languageMatch = book.metadata?.language_en === 'english';
-                }
-                
-                return categoryMatch && filterMatch && queryMatch && languageMatch;
+                // تفعيل التبويب المحدد
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
             });
+        });
 
-            // تطبيق الترتيب
-            if (sort === 'title') {
-                filteredBooks.sort((a, b) => a.titles[lang === 'all' ? 'ar' : lang].localeCompare(b.titles[lang === 'all' ? 'ar' : lang]));
-            } else if (sort === 'pages') {
-                const pagesField = lang === 'ar' ? 'pages_ar' : 'pages_en';
-                filteredBooks.sort((a, b) => (b.metadata[pagesField] || 0) - (a.metadata[pagesField] || 0));
-            }
-
-            resultsCount.textContent = `${filteredBooks.length} نتيجة لبحثك`;
-
-            // عرض النتائج
-            if (filteredBooks.length === 0) {
-                noResultsMsg.style.display = 'block';
-            } else {
-                localResults.style.display = 'block';
-                filteredBooks.forEach(book => {
-                    displayBookCard(book, lang === 'all' ? 'ar' : lang, booksContainer);
-                });
+        // البحث الدقيق
+        function performExactSearch() {
+            const query = document.getElementById('exactQuery').value.trim();
+            if (!query) return;
+            
+            // استخدام البحث المباشر مع علامات الاقتباس للدقة
+            const exactQuery = `"${query}"`;
+            const searchInput = document.querySelector('.gsc-input input');
+            
+            if (searchInput) {
+                searchInput.value = exactQuery;
+                // تشغيل البحث
+                const searchButton = document.querySelector('.gsc-search-button');
+                if (searchButton) {
+                    searchButton.click();
+                }
             }
         }
 
-        // عرض بطاقة كتاب
-        function displayBookCard(book, lang, container) {
-            const bookCard = document.createElement('div');
-            bookCard.className = 'book-card';
-            bookCard.itemscope = '';
-            bookCard.itemtype = 'https://schema.org/Book';
+        // البحث المحلي
+        function performLocalSearch() {
+            const query = document.getElementById('localSearch').value.toLowerCase();
+            const resultsDiv = document.getElementById('localResults');
             
-            const categoryClass = getCategoryClass(book.metadata.category);
-            const languageText = getLanguageText(book.metadata.language_ar);
-            const pagesField = lang === 'ar' ? 'pages_ar' : 'pages_en';
-            const pages = book.metadata[pagesField] || '';
+            if (!query) {
+                resultsDiv.innerHTML = '<p>الرجاء إدخال مصطلح للبحث</p>';
+                return;
+            }
             
-            const readButton = createReadButton(book, lang);
+            const filteredBooks = booksData.filter(book => 
+                book.title.toLowerCase().includes(query) || 
+                book.description.toLowerCase().includes(query) ||
+                book.category.toLowerCase().includes(query)
+            );
             
-            bookCard.innerHTML = `
-                <div class="book-header">
-                    <div>
-                        <h3 class="book-title" itemprop="name">${book.titles[lang] || 'لا يوجد عنوان'}</h3>
-                        <p style="color: #666; font-style: italic;">${book.titles[lang === 'ar' ? 'en' : 'ar'] || ''}</p>
+            if (filteredBooks.length === 0) {
+                resultsDiv.innerHTML = '<p>⚠️ لم يتم العثور على نتائج</p>';
+                return;
+            }
+            
+            resultsDiv.innerHTML = `
+                <h3>نتائج البحث (${filteredBooks.length})</h3>
+                ${filteredBooks.map(book => `
+                    <div style="background: #f8f9fa; padding: 1rem; margin: 1rem 0; border-radius: 8px; border-right: 4px solid var(--primary-color);">
+                        <h4>${book.title}</h4>
+                        <p>${book.description}</p>
+                        <div style="color: #666; font-size: 0.9rem;">
+                            <span>${book.category}</span> • 
+                            <span>${book.pages} صفحة</span>
+                        </div>
+                        <a href="${book.link}" target="_blank" style="display: inline-block; margin-top: 10px; padding: 8px 15px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px;">
+                            📖 قراءة الكتاب
+                        </a>
                     </div>
-                    <div class="book-meta">
-                        <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
-                        <span class="meta-badge">${languageText}</span>
-                        ${pages ? `<span class="meta-badge">${pages} صفحة</span>` : ''}
-                        <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
-                    </div>
-                </div>
-                <p class="book-description" itemprop="description">${book.description[lang] || 'لا يوجد وصف'}</p>
-                <div class="book-links"></div>
-                <meta itemprop="inLanguage" content="${lang}">
-                <meta itemprop="bookFormat" content="EBook">
-                <meta itemprop="isAccessibleForFree" content="true">
+                `).join('')}
             `;
-            
-            bookCard.querySelector('.book-links').appendChild(readButton);
-            container.appendChild(bookCard);
         }
 
         // عرض جميع الكتب
         function displayAllBooks() {
-            allBooksContainer.innerHTML = '';
-            allBooksCount.textContent = `${booksData.length} كتاب متاح`;
-            
-            const lang = 'ar'; // اللغة الافتراضية لعرض جميع الكتب
-            
-            booksData.forEach(book => {
-                displayBookCard(book, lang, allBooksContainer);
-            });
+            const booksList = document.getElementById('allBooksList');
+            booksList.innerHTML = `
+                <h3>جميع الكتب المتاحة (${booksData.length})</h3>
+                ${booksData.map(book => `
+                    <div style="background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h4>${book.title}</h4>
+                        <p style="color: #555;">${book.description}</p>
+                        <div style="color: #777; font-size: 0.9rem; margin: 10px 0;">
+                            <strong>التصنيف:</strong> ${book.category} • 
+                            <strong>الصفحات:</strong> ${book.pages}
+                        </div>
+                        <a href="${book.link}" target="_blank" style="display: inline-block; padding: 10px 20px; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s;">
+                            📚 عرض الكتاب
+                        </a>
+                    </div>
+                `).join('')}
+            `;
         }
 
-        // تصفية جميع الكتب
-        function filterAllBooks() {
-            const category = allBooksCategoryFilter.value;
-            const language = allBooksLanguageFilter.value;
-            
-            let filteredBooks = booksData;
-            
-            // تطبيق تصفية التصنيف
-            if (category !== 'all') {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.metadata.category === category
-                );
-            }
-            
-            // تطبيق تصفية اللغة
-            if (language !== 'all') {
-                filteredBooks = filteredBooks.filter(book => {
-                    if (language === 'ar') return book.metadata.language_ar === 'arabic';
-                    if (language === 'en') return book.metadata.language_en === 'english';
-                    return true;
-                });
-            }
-            
-            allBooksContainer.innerHTML = '';
-            allBooksCount.textContent = `${filteredBooks.length} كتاب متاح`;
-            
-            const lang = 'ar';
-            filteredBooks.forEach(book => {
-                displayBookCard(book, lang, allBooksContainer);
-            });
-        }
-
-        // تبديل الفلاتر
-        function toggleFilter(filter) {
-            const currentBadge = document.querySelector(`.filter-badge[onclick="toggleFilter('${currentFilter}')"]`);
-            if(currentBadge) currentBadge.classList.remove('active');
-            
-            currentFilter = filter;
-            
-            const newBadge = document.querySelector(`.filter-badge[onclick="toggleFilter('${currentFilter}')"]`);
-            if(newBadge) newBadge.classList.add('active');
-            
-            searchBooks();
-        }
-
-        // تبديل التبويبات
-        function switchTab(tabId) {
-            // إخفاء جميع المحتويات
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // إزالة النشاط من جميع التبويبات
-            searchTabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // إظهار المحتوى المحدد
-            document.getElementById(tabId).classList.add('active');
-            
-            // إضافة النشاط للتبويب المحدد
-            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-        }
-
-        // دوال مساعدة
-        function getCategoryText(category) {
-            const categories = {
-                'quranic_studies': 'الدراسات القرآنية',
-                'faith_studies': 'الدراسات الإيمانية',
-                'digital_projects': 'المشاريع الرقمية'
-            };
-            return categories[category] || category;
-        }
-        
-        function getCategoryClass(category) {
-            const classes = {
-                'quranic_studies': 'category-quranic',
-                'faith_studies': 'category-faith',
-                'digital_projects': 'category-digital'
-            };
-            return classes[category] || '';
-        }
-        
-        function getLanguageText(language) {
-            return language === 'arabic' ? 'العربية' : 'الإنجليزية';
-        }
-
-        // تهيئة الأحداث
+        // تهيئة الصفحة
         document.addEventListener('DOMContentLoaded', function() {
             displayAllBooks();
             
-            // أحداث البحث المحلي
-            searchInput.addEventListener('keyup', function(event) {
-                if (event.key === 'Enter') {
-                    searchBooks();
-                }
+            // تفعيل البحث عند الضغط على Enter
+            document.getElementById('exactQuery').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performExactSearch();
             });
             
-            // أحداث الفلاتر
-            categoryFilter.addEventListener('change', searchBooks);
-            languageFilter.addEventListener('change', searchBooks);
-            sortFilter.addEventListener('change', searchBooks);
-            languageSelect.addEventListener('change', searchBooks);
-            
-            // أحداث فلاتر جميع الكتب
-            allBooksCategoryFilter.addEventListener('change', filterAllBooks);
-            allBooksLanguageFilter.addEventListener('change', filterAllBooks);
-            
-            // أحداث التبويبات
-            searchTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    switchTab(tabId);
-                });
+            document.getElementById('localSearch').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performLocalSearch();
             });
         });
     </script>
