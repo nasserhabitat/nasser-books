@@ -229,6 +229,106 @@
             border-color: var(--accent-color);
         }
         
+        /* تخصيصات إضافية لمحرك بحث جوجل */
+.google-search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.google-search-box .search-input {
+    flex: 1;
+}
+
+#googleResults {
+    margin-top: 20px;
+}
+
+.google-result-item {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.google-result-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.google-result-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.google-result-title a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.google-result-snippet {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.google-result-url {
+    color: var(--success-color);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* تخصيص مظهر GCSE */
+.gsc-control-cse {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Tajawal', sans-serif !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.gsc-input-box {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 50px !important;
+    padding: 5px !important;
+    height: auto !important;
+}
+
+.gsc-input {
+    padding: 10px 15px !important;
+    font-size: 1.1rem !important;
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+.gsc-search-button-v2 {
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    background: var(--primary-color) !important;
+    font-size: 1rem !important;
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+.gsc-search-button-v2:hover {
+    background: var(--secondary-color) !important;
+}
+
+.gsc-results-wrapper-overlay {
+    direction: rtl !important;
+}
+
+.gsc-webResult .gs-snippet, .gsc-fileFormatIdentifier {
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+.gs-spelling {
+    direction: rtl !important;
+    text-align: right !important;
+}
         /* نتائج البحث المحلي */
         .results-section {
             background: white;
@@ -546,44 +646,65 @@
             </div>
         </section>
         
-        <!-- محتوى تبويب بحث جوجل -->
-        <section class="search-section tab-content" id="google-search">
-            <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
-            <p>استخدم محرك بحث جوجل المخصص للبحث في محتوى المكتبة مع نتائج مخصصة باستخدام Schema.org</p>
-            
-            <!-- محرك بحث جوجل المخصص -->
-            <div class="search-container">
-                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92">
-                </script>
-                <div class="gcse-search" 
-                     data-enableImageSearch="false"
-                     data-enableOrderBy="true"
-                     data-filter="0"
-                     data-autoSearchOnLoad="true">
-                </div>
+       <!-- محتوى تبويب بحث جوجل -->
+<section class="search-section tab-content" id="google-search">
+    <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
+    <p>استخدم محرك بحث جوجل المخصص للبحث في محتوى المكتبة مع نتائج مخصصة باستخدام Schema.org</p>
+    
+    <!-- محرك بحث جوجل المخصص -->
+    <div class="search-container">
+        <div class="google-search-box">
+            <input type="text" id="googleSearchInput" class="search-input" placeholder="ابحث في المكتبة باستخدام جوجل..." />
+            <button class="search-btn" onclick="performGoogleSearch()">
+                <i class="fas fa-search me-1"></i> بحث جوجل
+            </button>
+        </div>
+        
+        <!-- نتائج بحث جوجل -->
+        <div id="googleResultsContainer" style="display: none;">
+            <div class="results-header">
+                <h2>نتائج بحث جوجل</h2>
+                <div class="results-count" id="googleResultsCount">جارٍ تحميل النتائج...</div>
             </div>
-            
-            <!-- أنواع Schema.org المستخدمة -->
-            <div class="schema-types">
-                <h3>أنواع Schema.org المستخدمة في هذا المحرك:</h3>
-                <div class="schema-types-list">
-                    <span class="schema-type">Book</span>
-                    <span class="schema-type">Article</span>
-                    <span class="schema-type">ScholarlyArticle</span>
-                    <span class="schema-type">CreativeWork</span>
-                    <span class="schema-type">CollectionPage</span>
-                    <span class="schema-type">WebPage</span>
-                    <span class="schema-type">PublicationIssue</span>
-                    <span class="schema-type">Chapter</span>
-                    <span class="schema-type">Review</span>
-                    <span class="schema-type">Person</span>
-                </div>
+            <div id="googleResults"></div>
+        </div>
+        
+        <!-- عنصر GCSE الأصلي (مخفي) -->
+        <div id="gcseContainer" style="display: none;">
+            <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
+            <div class="gcse-search" 
+                 data-enableImageSearch="false"
+                 data-enableOrderBy="true"
+                 data-filter="0"
+                 data-autoSearchOnLoad="false">
             </div>
-            
-            <div class="info-box">
-                <p>🔍 <strong>نتائج مخصصة</strong> - تم تخصيص محرك البحث لعرض النتائج الأكثر صلة بمحتوى المكتبة باستخدام Schema.org</p>
-            </div>
-        </section>
+        </div>
+    </div>
+    
+    <!-- أنواع Schema.org المستخدمة -->
+    <div class="schema-types">
+        <h3>أنواع Schema.org المستخدمة في هذا المحرك:</h3>
+        <div class="schema-types-list">
+            <span class="schema-type">Book</span>
+            <span class="schema-type">Article</span>
+            <span class="schema-type">ScholarlyArticle</span>
+            <span class="schema-type">CreativeWork</span>
+            <span class="schema-type">CollectionPage</span>
+            <span class="schema-type">WebPage</span>
+            <span class="schema-type">PublicationIssue</span>
+            <span class="schema-type">Chapter</span>
+            <span class="schema-type">Review</span>
+            <span class="schema-type">Person</span>
+        </div>
+    </div>
+    
+    <div class="info-box" style="background: #e8f5e8; padding: 15px; border-radius: 8px; margin-top: 20px;">
+        <p>🔍 <strong>نتائج مخصصة</strong> - تم تخصيص محرك البحث لعرض النتائج الأكثر صلة بمحتوى المكتبة باستخدام Schema.org</p>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+            <strong>ملاحظة:</strong> بحث جوجل يعمل بشكل أفضل مع الاتصال بالإنترنت ويقدم نتائج من جميع أنحاء المكتبة بما في ذلك المحتوى الموجود على أرشيف الإنترنت وجوجل درايف.
+        </p>
+    </div>
+</section>
         
         <!-- محتوى تبويب جميع الكتب -->
         <section class="search-section tab-content" id="all-books">
@@ -1419,6 +1540,133 @@
             return buttonContainer;
         }
 
+        // بحث جوجل المتخصص
+let googleSearchInitialized = false;
+
+function initializeGoogleSearch() {
+    if (googleSearchInitialized) return;
+    
+    // إعادة تحميل سكريبت GCSE إذا لزم الأمر
+    const existingScript = document.querySelector('script[src*="cse.google.com"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://cse.google.com/cse.js?cx=87a2ea74c56054f92';
+    document.head.appendChild(script);
+    
+    googleSearchInitialized = true;
+    console.log('Google CSE initialized');
+}
+
+function performGoogleSearch() {
+    const searchInput = document.getElementById('googleSearchInput');
+    const query = searchInput.value.trim();
+    
+    if (!query) {
+        alert('يرجى إدخال كلمة البحث');
+        return;
+    }
+    
+    // التبديل إلى محرك جوجل الأصلي
+    document.getElementById('googleResultsContainer').style.display = 'block';
+    document.getElementById('googleResults').innerHTML = '<div style="text-align: center; padding: 20px;">جارٍ تحميل نتائج بحث جوجل...</div>';
+    
+    // تهيئة بحث جوجل إذا لم تكن معينة
+    if (!googleSearchInitialized) {
+        initializeGoogleSearch();
+        
+        // الانتظار قليلاً لتحميل السكريبت ثم تنفيذ البحث
+        setTimeout(() => {
+            executeGoogleSearch(query);
+        }, 1000);
+    } else {
+        executeGoogleSearch(query);
+    }
+}
+
+function executeGoogleSearch(query) {
+    try {
+        // استخدام GCSE المدمج إذا كان متاحاً
+        const searchBox = document.querySelector('.gsc-input');
+        const searchButton = document.querySelector('.gsc-search-button');
+        
+        if (searchBox && searchButton) {
+            searchBox.value = query;
+            searchButton.click();
+        } else {
+            // حل بديل: فتح بحث جوجل في صفحة جديدة
+            const googleSearchUrl = `https://www.google.com/search?q=site:nasserhabitat.github.io+nasser-books+${encodeURIComponent(query)}`;
+            window.open(googleSearchUrl, '_blank');
+            
+            document.getElementById('googleResults').innerHTML = `
+                <div class="no-results">
+                    <i class="fas fa-external-link-alt"></i>
+                    <h3>سيتم فتح نتائج البحث في نافذة جديدة</h3>
+                    <p>جارٍ توجيهك إلى نتائج بحث جوجل المتخصصة بمكتبة ناصر ابن داوود</p>
+                    <p style="margin-top: 15px;">
+                        <a href="${googleSearchUrl}" target="_blank" class="search-btn" style="display: inline-block; text-decoration: none;">
+                            <i class="fas fa-external-link-alt me-1"></i> فتح نتائج البحث
+                        </a>
+                    </p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error('Error executing Google search:', error);
+        document.getElementById('googleResults').innerHTML = `
+            <div class="no-results">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>حدث خطأ في بحث جوجل</h3>
+                <p>يرجى المحاولة مرة أخرى أو استخدام البحث المحلي</p>
+            </div>
+        `;
+    }
+}
+
+// تحديث وظيفة switchTab لدعم بحث جوجل
+function switchTab(tabId) {
+    // إخفاء جميع المحتويات
+    tabContents.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // إزالة النشاط من جميع التبويبات
+    searchTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // إظهار المحتوى المحدد
+    document.getElementById(tabId).classList.add('active');
+    
+    // إضافة النشاط للتبويب المحدد
+    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+    
+    // تهيئة بحث جوجل عند التبديل إلى تبويبه
+    if (tabId === 'google-search' && !googleSearchInitialized) {
+        setTimeout(initializeGoogleSearch, 500);
+    }
+}
+
+// إضافة حدث لإدخال البحث في حقل جوجل
+document.addEventListener('DOMContentLoaded', function() {
+    const googleSearchInput = document.getElementById('googleSearchInput');
+    if (googleSearchInput) {
+        googleSearchInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                performGoogleSearch();
+            }
+        });
+    }
+    
+    // التهيئة الأولية
+    displayAllBooks();
+    
+    
+});
+        
         // البحث وعرض النتائج
         function searchBooks() {
             const query = searchInput.value.toLowerCase().trim();
