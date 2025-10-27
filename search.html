@@ -148,6 +148,45 @@
             font-size: 0.9rem;
         }
         
+        .book-card {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #e1e8ed;
+        }
+        
+        .book-title {
+            color: #2c5f8a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-description {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-meta {
+            color: #777;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        
+        .book-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .book-link:hover {
+            background: var(--primary-color);
+        }
+        
         @media (max-width: 768px) {
             .search-box {
                 flex-direction: column;
@@ -182,76 +221,62 @@
             
             <div class="info-box">
                 <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
+                <br>
+                <strong>🔧 حالة المحرك:</strong> <span id="search-engine-status">مفعل - جاهز للاستخدام</span>
             </div>
 
-        <!-- محرك بحث جوجل المتخصص المحسن -->
-<section class="search-section tab-content active" id="google-search">
-    <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
-    <p>ابحث في محتوى المكتبة مع نتائج مخصصة باستخدام أنواع Schema.org</p>
-    
-    <div class="info-box">
-        <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
-        <br>
-        <strong>🔧 حالة المحرك:</strong> <span id="search-engine-status">مفعل - جاهز للاستخدام</span>
-    </div>
+            <!-- محرك بحث جوجل المخصص مع إعدادات محسنة -->
+            <div class="search-container">
+                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92">
+                </script>
+                <div class="gcse-searchbox" data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search-results.html"></div>
+                <div class="gcse-searchresults" data-queryParameterName="search" 
+                     data-enableImageSearch="false" 
+                     data-enableOrderBy="true"
+                     data-autoSearchOnLoad="false"
+                     data-disableWebSearch="true"
+                     data-enableHistory="true"
+                     data-refinementStyle="link">
+                </div>
+            </div>
 
-    <!-- محرك بحث جوجل المخصص مع إعدادات محسنة -->
-    <div class="search-container">
-        <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92">
-        </script>
-        <div class="gcse-searchbox" data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search-results.html"></div>
-        <div class="gcse-searchresults" data-queryParameterName="search" 
-             data-enableImageSearch="false" 
-             data-enableOrderBy="true"
-             data-autoSearchOnLoad="false"
-             data-disableWebSearch="true"
-             data-enableHistory="true"
-             data-refinementStyle="link">
-        </div>
-    </div>
+            <!-- صفحة نتائج البحث المنفصلة -->
+            <div style="margin-top: 1rem; text-align: center;">
+                <a href="search-results.html" style="color: var(--primary-color); text-decoration: none;">
+                    📄 عرض صفحة نتائج البحث المنفصلة
+                </a>
+            </div>
 
-    <!-- صفحة نتائج البحث المنفصلة (اختياري) -->
-    <div style="margin-top: 1rem; text-align: center;">
-        <a href="search-results.html" style="color: var(--primary-color); text-decoration: none;">
-            📄 عرض صفحة نتائج البحث المنفصلة
-        </a>
-    </div>
+            <!-- بحث يدوي دقيق -->
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
+                <h3>بحث يدوي دقيق</h3>
+                <p>للبحث الدقيق بدون مصطلحات إضافية:</p>
+                <div class="search-box">
+                    <input type="text" id="exactQuery" class="search-input" placeholder="أدخل المصطلح بدقة...">
+                    <button class="search-btn" onclick="performExactSearch()">
+                        بحث دقيق
+                    </button>
+                </div>
+            </div>
 
-    <!-- بحث يدوي دقيق -->
-    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
-        <h3>بحث يدوي دقيق</h3>
-        <p>للبحث الدقيق بدون مصطلحات إضافية:</p>
-        <div class="search-box">
-            <input type="text" id="exactQuery" class="search-input" placeholder="أدخل المصطلح بدقة...">
-            <button class="search-btn" onclick="performExactSearch()">
-                بحث دقيق
-            </button>
-        </div>
-    </div>
+            <!-- أنواع Schema.org -->
+            <div class="schema-types">
+                <h3>أنواع Schema.org المستخدمة:</h3>
+                <div class="schema-types-list">
+                    <span class="schema-type">Book</span>
+                    <span class="schema-type">Article</span>
+                    <span class="schema-type">ScholarlyArticle</span>
+                    <span class="schema-type">CreativeWork</span>
+                    <span class="schema-type">CollectionPage</span>
+                    <span class="schema-type">WebPage</span>
+                    <span class="schema-type">PublicationIssue</span>
+                    <span class="schema-type">Chapter</span>
+                    <span class="schema-type">Review</span>
+                    <span class="schema-type">Person</span>
+                </div>
+            </div>
+        </section>
 
-    <!-- نظام المراقبة والتحقق -->
-    <div id="search-monitor" style="margin-top: 1rem; padding: 1rem; background: #e8f5e8; border-radius: 8px; display: none;">
-        <h4>📊 مراقبة محرك البحث</h4>
-        <div id="search-stats"></div>
-    </div>
-
-    <!-- أنواع Schema.org -->
-    <div class="schema-types">
-        <h3>أنواع Schema.org المستخدمة:</h3>
-        <div class="schema-types-list">
-            <span class="schema-type">Book</span>
-            <span class="schema-type">Article</span>
-            <span class="schema-type">ScholarlyArticle</span>
-            <span class="schema-type">CreativeWork</span>
-            <span class="schema-type">CollectionPage</span>
-            <span class="schema-type">WebPage</span>
-            <span class="schema-type">PublicationIssue</span>
-            <span class="schema-type">Chapter</span>
-            <span class="schema-type">Review</span>
-            <span class="schema-type">Person</span>
-        </div>
-    </div>
-</section>
         <!-- البحث المحلي -->
         <section class="search-section tab-content" id="local-search">
             <h2>البحث المحلي في المكتبة</h2>
@@ -276,7 +301,7 @@
     </div>
 
     <script>
-       // بيانات الكتب (32 كتاب 16 بالعربية و16 مترجمة بالإنجليزية  16 id من index.json)
+           // بيانات الكتب (32 كتاب 16 بالعربية و16 مترجمة بالإنجليزية  16 id من index.json)
         const booksData = [
              {
         "id": "conscious-contemplation",
@@ -1013,122 +1038,167 @@
         }
       }
     ];
-       // تبديل التبويبات
-    document.querySelectorAll('.search-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-            document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+        // === الدوال الرئيسية ===
+
+        // تبديل التبويبات
+        function initializeTabs() {
+            const tabs = document.querySelectorAll('.search-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // إزالة النشاط من جميع التبويبات
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // تفعيل التبويب المحدد
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    const targetSection = document.getElementById(tabId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // البحث المحلي
+        function performLocalSearch() {
+            console.log('🔍 تشغيل البحث المحلي...');
+            const query = document.getElementById('localSearch').value.toLowerCase().trim();
+            const resultsDiv = document.getElementById('localResults');
             
-            this.classList.add('active');
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-
-    // البحث المحلي - إصلاح الدالة
-    window.performLocalSearch = function() {
-        console.log('البحث المحلي يعمل!'); // للتأكد من تشغيل الدالة
-        const query = document.getElementById('localSearch').value.toLowerCase().trim();
-        const resultsDiv = document.getElementById('localResults');
-        
-        if (!query) {
-            resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
-            return;
-        }
-        
-        const filteredBooks = booksData.filter(book => 
-            book.titles.ar.toLowerCase().includes(query) || 
-            book.titles.en.toLowerCase().includes(query) ||
-            book.description.ar.toLowerCase().includes(query) ||
-            book.description.en.toLowerCase().includes(query) ||
-            (book.metadata.category && book.metadata.category.toLowerCase().includes(query)) ||
-            (book.metadata.topics && book.metadata.topics.some(topic => topic.toLowerCase().includes(query)))
-        );
-        
-        if (filteredBooks.length === 0) {
+            if (!query) {
+                resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
+                return;
+            }
+            
+            const filteredBooks = booksData.filter(book => {
+                const searchIn = [
+                    book.titles.ar?.toLowerCase(),
+                    book.titles.en?.toLowerCase(),
+                    book.description.ar?.toLowerCase(),
+                    book.description.en?.toLowerCase(),
+                    book.metadata.category?.toLowerCase(),
+                    ...(book.metadata.topics || []).map(topic => topic.toLowerCase())
+                ].filter(Boolean);
+                
+                return searchIn.some(text => text.includes(query));
+            });
+            
+            if (filteredBooks.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: #666;">
+                        <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
+                        <p>جرب استخدام مصطلحات بحث مختلفة</p>
+                    </div>
+                `;
+                return;
+            }
+            
             resultsDiv.innerHTML = `
-                <div style="text-align: center; padding: 2rem; color: #666;">
-                    <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
-                    <p>جرب استخدام مصطلحات بحث مختلفة</p>
-                </div>
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">نتائج البحث (${filteredBooks.length})</h3>
+                ${filteredBooks.map(book => `
+                    <div class="book-card">
+                        <h4 class="book-title">${book.titles.ar}</h4>
+                        <p class="book-description">${book.description.ar}</p>
+                        <div class="book-meta">
+                            <strong>التصنيف:</strong> ${book.metadata.category} • 
+                            <strong>الصفحات:</strong> ${book.metadata.pages_ar}
+                        </div>
+                        <a href="books/${book.id}/ar/" target="_blank" class="book-link">
+                            📖 قراءة الكتاب
+                        </a>
+                    </div>
+                `).join('')}
             `;
-            return;
+            
+            console.log(`✅ تم العثور على ${filteredBooks.length} نتيجة`);
         }
-        
-        resultsDiv.innerHTML = `
-            <h3 style="margin-bottom: 1rem; color: var(--primary-color);">نتائج البحث (${filteredBooks.length})</h3>
-            ${filteredBooks.map(book => `
-                <div style="background: #f8f9fa; padding: 1.5rem; margin: 1rem 0; border-radius: 10px; border-right: 4px solid var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <h4 style="color: #2c5f8a; margin-bottom: 0.5rem;">${book.titles.ar}</h4>
-                    <p style="color: #555; margin-bottom: 0.5rem;">${book.description.ar}</p>
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">
-                        <span>${book.metadata.category}</span> • 
-                        <span>${book.metadata.pages_ar} صفحة</span>
-                    </div>
-                    <a href="books/${book.id}/ar/" target="_blank" style="display: inline-block; padding: 8px 15px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s;">
-                        📖 قراءة الكتاب
-                    </a>
-                </div>
-            `).join('')}
-        `;
-    };
 
-    // عرض جميع الكتب - إصلاح الدالة
-    window.displayAllBooks = function() {
-        console.log('عرض الكتب يعمل!'); // للتأكد من تشغيل الدالة
-        const booksList = document.getElementById('allBooksList');
-        
-        booksList.innerHTML = `
-            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">جميع الكتب المتاحة (${booksData.length})</h3>
-            ${booksData.map(book => `
-                <div style="background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #e1e8ed;">
-                    <h4 style="color: #2c5f8a; margin-bottom: 0.5rem;">${book.titles.ar}</h4>
-                    <p style="color: #555; margin-bottom: 0.5rem;">${book.description.ar}</p>
-                    <div style="color: #777; font-size: 0.9rem; margin: 10px 0;">
-                        <strong>التصنيف:</strong> ${book.metadata.category} • 
-                        <strong>الصفحات:</strong> ${book.metadata.pages_ar}
+        // عرض جميع الكتب
+        function displayAllBooks() {
+            console.log('📚 عرض جميع الكتب...');
+            const booksList = document.getElementById('allBooksList');
+            
+            booksList.innerHTML = `
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">جميع الكتب المتاحة (${booksData.length})</h3>
+                ${booksData.map(book => `
+                    <div class="book-card">
+                        <h4 class="book-title">${book.titles.ar}</h4>
+                        <p class="book-description">${book.description.ar}</p>
+                        <div class="book-meta">
+                            <strong>التصنيف:</strong> ${book.metadata.category} • 
+                            <strong>الصفحات:</strong> ${book.metadata.pages_ar}
+                        </div>
+                        <a href="books/${book.id}/ar/" target="_blank" class="book-link">
+                            📚 عرض الكتاب
+                        </a>
                     </div>
-                    <a href="books/${book.id}/ar/" target="_blank" style="display: inline-block; padding: 10px 20px; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s;">
-                        📚 عرض الكتاب
-                    </a>
-                </div>
-            `).join('')}
-        `;
-    };
+                `).join('')}
+            `;
+            
+            console.log('✅ تم عرض جميع الكتب');
+        }
 
-    // البحث الدقيق - إصلاح الدالة
-    window.performExactSearch = function() {
-        const query = document.getElementById('exactQuery').value.trim();
-        if (!query) return;
-        
-        const exactQuery = `"${query}"`;
-        const searchInput = document.querySelector('.gsc-input input');
-        
-        if (searchInput) {
-            searchInput.value = exactQuery;
-            const searchButton = document.querySelector('.gsc-search-button');
-            if (searchButton) {
-                searchButton.click();
+        // البحث الدقيق في جوجل
+        function performExactSearch() {
+            console.log('🎯 تشغيل البحث الدقيق...');
+            const query = document.getElementById('exactQuery').value.trim();
+            if (!query) {
+                alert('الرجاء إدخال مصطلح البحث');
+                return;
+            }
+            
+            const exactQuery = `"${query}"`;
+            const searchInput = document.querySelector('.gsc-input input');
+            
+            if (searchInput) {
+                searchInput.value = exactQuery;
+                const searchButton = document.querySelector('.gsc-search-button');
+                if (searchButton) {
+                    searchButton.click();
+                    console.log('✅ تم تشغيل البحث في جوجل');
+                } else {
+                    console.log('❌ لم يتم العثور على زر البحث في جوجل');
+                }
+            } else {
+                console.log('❌ لم يتم تحميل محرك بحث جوجل بعد');
+                alert('محرك البحث جوجل غير جاهز بعد. يرجى المحاولة مرة أخرى بعد ثوانٍ.');
             }
         }
-    };
 
-    // تهيئة الصفحة
-    document.addEventListener('DOMContentLoaded', function() {
-        // عرض جميع الكتب تلقائياً
-        displayAllBooks();
-        
-        // تفعيل البحث عند الضغط على Enter
-        document.getElementById('exactQuery').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') performExactSearch();
+        // === تهيئة الصفحة ===
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 تهيئة الصفحة...');
+            
+            // تهيئة التبويبات
+            initializeTabs();
+            
+            // عرض جميع الكتب تلقائياً
+            displayAllBooks();
+            
+            // تفعيل البحث عند الضغط على Enter
+            document.getElementById('exactQuery')?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performExactSearch();
+            });
+            
+            document.getElementById('localSearch')?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performLocalSearch();
+            });
+            
+            // جعل الدوال متاحة عالمياً
+            window.performLocalSearch = performLocalSearch;
+            window.performExactSearch = performExactSearch;
+            window.displayAllBooks = displayAllBooks;
+            
+            console.log('✅ الصفحة جاهزة!');
+            console.log('📖 عدد الكتب المتاحة:', booksData.length);
         });
-        
-        document.getElementById('localSearch').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') performLocalSearch();
+
+        // التحقق من أخطاء JavaScript
+        window.addEventListener('error', function(e) {
+            console.error('❌ خطأ في JavaScript:', e.error);
         });
-        
-        console.log('الصفحة جاهزة!'); // للتأكد من تحميل الصفحة
-    });
- </script>
+    </script>
 </body>
 </html>
