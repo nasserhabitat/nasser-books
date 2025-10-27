@@ -184,68 +184,74 @@
                 <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
             </div>
 
-                      <!-- محرك بحث جوجل المتخصص المحسن -->
-<div class="search-container">
-    <!-- إضافة تحليل أكثر تفصيلاً -->
+        <!-- محرك بحث جوجل المتخصص المحسن -->
+<section class="search-section tab-content active" id="google-search">
+    <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
+    <p>ابحث في محتوى المكتبة مع نتائج مخصصة باستخدام أنواع Schema.org</p>
+    
     <div class="info-box">
-        <strong>🔧 حالة محرك البحث:</strong> 
-        <span id="search-status">جارِ التحميل...</span>
+        <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
+        <br>
+        <strong>🔧 حالة المحرك:</strong> <span id="search-engine-status">مفعل - جاهز للاستخدام</span>
     </div>
 
-    <!-- بحث Google المخصص مع خيارات محسنة -->
-    <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
-    <div class="gcse-search" 
-         data-enableImageSearch="false"
-         data-enableOrderBy="true"
-         data-autoSearchOnLoad="false"
-         data-disableWebSearch="true"
-         data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search.html"
-         data-queryParameterName="search"
-         data-gname="nasserlibrary">
-    </div>
-
-    <!-- بديل إذا فشل تحميل بحث جوجل -->
-    <div id="google-search-fallback" style="display: none; margin-top: 20px; padding: 20px; background: #fff3cd; border-radius: 8px;">
-        <h4>🔍 بحث يدوي بديل</h4>
-        <p>استخدم البحث المحلي أدناه للعثور على الكتب:</p>
-        <div class="search-box">
-            <input type="text" id="fallbackSearch" class="search-input" placeholder="ابحث في عناوين ومحتوى الكتب...">
-            <button class="search-btn" onclick="performFallbackSearch()">بحث بديل</button>
+    <!-- محرك بحث جوجل المخصص مع إعدادات محسنة -->
+    <div class="search-container">
+        <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92">
+        </script>
+        <div class="gcse-searchbox" data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search-results.html"></div>
+        <div class="gcse-searchresults" data-queryParameterName="search" 
+             data-enableImageSearch="false" 
+             data-enableOrderBy="true"
+             data-autoSearchOnLoad="false"
+             data-disableWebSearch="true"
+             data-enableHistory="true"
+             data-refinementStyle="link">
         </div>
-        <div id="fallbackResults"></div>
     </div>
-</div>
 
-            <!-- بحث يدوي دقيق -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
-                <h3>بحث يدوي دقيق</h3>
-                <p>للبحث الدقيق بدون مصطلحات إضافية:</p>
-                <div class="search-box">
-                    <input type="text" id="exactQuery" class="search-input" placeholder="أدخل المصطلح بدقة...">
-                    <button class="search-btn" onclick="performExactSearch()">
-                        بحث دقيق
-                    </button>
-                </div>
-            </div>
+    <!-- صفحة نتائج البحث المنفصلة (اختياري) -->
+    <div style="margin-top: 1rem; text-align: center;">
+        <a href="search-results.html" style="color: var(--primary-color); text-decoration: none;">
+            📄 عرض صفحة نتائج البحث المنفصلة
+        </a>
+    </div>
 
-            <!-- أنواع Schema.org -->
-            <div class="schema-types">
-                <h3>أنواع Schema.org المستخدمة:</h3>
-                <div class="schema-types-list">
-                    <span class="schema-type">Book</span>
-                    <span class="schema-type">Article</span>
-                    <span class="schema-type">ScholarlyArticle</span>
-                    <span class="schema-type">CreativeWork</span>
-                    <span class="schema-type">CollectionPage</span>
-                    <span class="schema-type">WebPage</span>
-                    <span class="schema-type">PublicationIssue</span>
-                    <span class="schema-type">Chapter</span>
-                    <span class="schema-type">Review</span>
-                    <span class="schema-type">Person</span>
-                </div>
-            </div>
-        </section>
+    <!-- بحث يدوي دقيق -->
+    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
+        <h3>بحث يدوي دقيق</h3>
+        <p>للبحث الدقيق بدون مصطلحات إضافية:</p>
+        <div class="search-box">
+            <input type="text" id="exactQuery" class="search-input" placeholder="أدخل المصطلح بدقة...">
+            <button class="search-btn" onclick="performExactSearch()">
+                بحث دقيق
+            </button>
+        </div>
+    </div>
 
+    <!-- نظام المراقبة والتحقق -->
+    <div id="search-monitor" style="margin-top: 1rem; padding: 1rem; background: #e8f5e8; border-radius: 8px; display: none;">
+        <h4>📊 مراقبة محرك البحث</h4>
+        <div id="search-stats"></div>
+    </div>
+
+    <!-- أنواع Schema.org -->
+    <div class="schema-types">
+        <h3>أنواع Schema.org المستخدمة:</h3>
+        <div class="schema-types-list">
+            <span class="schema-type">Book</span>
+            <span class="schema-type">Article</span>
+            <span class="schema-type">ScholarlyArticle</span>
+            <span class="schema-type">CreativeWork</span>
+            <span class="schema-type">CollectionPage</span>
+            <span class="schema-type">WebPage</span>
+            <span class="schema-type">PublicationIssue</span>
+            <span class="schema-type">Chapter</span>
+            <span class="schema-type">Review</span>
+            <span class="schema-type">Person</span>
+        </div>
+    </div>
+</section>
         <!-- البحث المحلي -->
         <section class="search-section tab-content" id="local-search">
             <h2>البحث المحلي في المكتبة</h2>
