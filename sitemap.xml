@@ -1,64 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
+  
+  <!-- صفحات الفهرس والبحث -->
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books-index.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/search.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/ai-recommendations.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/microdata-books.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/modesty/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-quran/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-quran/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/blood/ar/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
+  <!-- الكتب العربية -->
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/modesty/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-quran/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-quran/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/blood/ar/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-quran/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-quran/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/modesty/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/blood/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://nasserhabitat.github.io/nasser-books/books/digitizing/en/</loc><lastmod>2025-10-22</lastmod><priority>0.6</priority></url>
+  <!-- الكتب الإنجليزية -->
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-quran/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-quran/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/malakoot/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/modesty/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/blood/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nasserhabitat.github.io/nasser-books/books/digitizing/en/</loc><lastmod>2025-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>
