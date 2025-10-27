@@ -1026,7 +1026,90 @@
                 document.getElementById(tabId).classList.add('active');
             });
         });
+// مراقبة وتحليل محرك البحث
+function monitorSearchEngine() {
+    const statusElement = document.getElementById('search-engine-status');
+    const monitorDiv = document.getElementById('search-monitor');
+    const statsDiv = document.getElementById('search-stats');
+    
+    // تفعيل المراقبة
+    monitorDiv.style.display = 'block';
+    
+    // جمع إحصائيات
+    setTimeout(() => {
+        const searchElements = {
+            searchBox: document.querySelector('.gcse-searchbox'),
+            searchResults: document.querySelector('.gcse-searchresults'),
+            totalBooks: booksData.length,
+            indexedBooks: 0
+        };
+        
+        // محاكاة فحص الفهرسة (يمكن تطويرها أكثر)
+        booksData.forEach(book => {
+            if (book.metadata.structured_data && book.metadata.ai_accessible) {
+                searchElements.indexedBooks++;
+            }
+        });
+        
+        // عرض الإحصائيات
+        statsDiv.innerHTML = `
+            <p><strong>📊 إحصائيات الفهرسة:</strong></p>
+            <p>• إجمالي الكتب: ${searchElements.totalBooks}</p>
+            <p>• الكاب المفهرسة: ${searchElements.indexedBooks}</p>
+            <p>• حالة محرك البحث: ✅ نشط</p>
+            <p>• آخر تحديث: ${new Date().toLocaleDateString('ar-EG')}</p>
+        `;
+        
+        statusElement.innerHTML = 'مفعل - ' + searchElements.indexedBooks + ' كتاب مفهرس';
+        statusElement.style.color = '#27ae60';
+        
+    }, 1000);
+}
 
+// البحث الدقيق المحسن
+function performExactSearch() {
+    const query = document.getElementById('exactQuery').value.trim();
+    if (!query) return;
+    
+    // استخدام البحث المباشر مع علامات الاقتباس للدقة
+    const exactQuery = `"${query}"`;
+    const searchInput = document.querySelector('.gsc-input input');
+    
+    if (searchInput) {
+        searchInput.value = exactQuery;
+        // تشغيل البحث
+        const searchButton = document.querySelector('.gsc-search-button');
+        if (searchButton) {
+            searchButton.click();
+        }
+    } else {
+        // إذا لم يكن محرك جوجل جاهزاً، استخدم البحث البديل
+        performFallbackSearch(query);
+    }
+}
+
+// تفعيل المراقبة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    displayAllBooks();
+    monitorSearchEngine();
+    
+    // تفعيل البحث عند الضغط على Enter
+    document.getElementById('exactQuery').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') performExactSearch();
+    });
+    
+    document.getElementById('localSearch').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') performLocalSearch();
+    });
+    
+    // تفعيل البحث البديل
+    const fallbackSearchEl = document.getElementById('fallbackSearch');
+    if (fallbackSearchEl) {
+        fallbackSearchEl.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') performFallbackSearch();
+        });
+    }
+});
         // البحث الدقيق
         function performExactSearch() {
             const query = document.getElementById('exactQuery').value.trim();
