@@ -184,17 +184,37 @@
                 <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
             </div>
 
-            <!-- محرك بحث جوجل المخصص -->
-            <div class="search-container">
-                <div class="gcse-searchbox-only" 
-     data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search.html"
-     data-newWindow="true"
-     data-queryParameterName="q"
-     data-enableHistory="true"
-     data-enableOrderBy="true"
-     data-autoSearchOnLoad="false">
+                      <!-- محرك بحث جوجل المتخصص المحسن -->
+<div class="search-container">
+    <!-- إضافة تحليل أكثر تفصيلاً -->
+    <div class="info-box">
+        <strong>🔧 حالة محرك البحث:</strong> 
+        <span id="search-status">جارِ التحميل...</span>
+    </div>
+
+    <!-- بحث Google المخصص مع خيارات محسنة -->
+    <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
+    <div class="gcse-search" 
+         data-enableImageSearch="false"
+         data-enableOrderBy="true"
+         data-autoSearchOnLoad="false"
+         data-disableWebSearch="true"
+         data-resultsUrl="https://nasserhabitat.github.io/nasser-books/search.html"
+         data-queryParameterName="search"
+         data-gname="nasserlibrary">
+    </div>
+
+    <!-- بديل إذا فشل تحميل بحث جوجل -->
+    <div id="google-search-fallback" style="display: none; margin-top: 20px; padding: 20px; background: #fff3cd; border-radius: 8px;">
+        <h4>🔍 بحث يدوي بديل</h4>
+        <p>استخدم البحث المحلي أدناه للعثور على الكتب:</p>
+        <div class="search-box">
+            <input type="text" id="fallbackSearch" class="search-input" placeholder="ابحث في عناوين ومحتوى الكتب...">
+            <button class="search-btn" onclick="performFallbackSearch()">بحث بديل</button>
+        </div>
+        <div id="fallbackResults"></div>
+    </div>
 </div>
-            </div>
 
             <!-- بحث يدوي دقيق -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
