@@ -14,10 +14,16 @@
   
   <!-- صفحات الفهرس والبحث -->
   <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/index.html</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://nasserhabitat.github.io/nasser-books/books-index.html</loc>
     <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://nasserhabitat.github.io/nasser-books/search.html</loc>
@@ -36,6 +42,14 @@
     <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
+  </url>
+  
+  <!-- صفحة عن المكتبة -->
+  <url>
+    <loc>https://nasserhabitat.github.io/nasser-books/about.html</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
   </url>
 
   <!-- الكتب العربية -->
