@@ -1,0 +1,9 @@
+# _config.yml
+include:
+  - *.xml
+  - *.txt
+
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+plugins:
+  - jekyll-sitemap
