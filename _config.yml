@@ -1,19 +1,13 @@
 # _config.yml
-include:
-  - ".xml"
-  - ".txt"
+title: "مكتبة ناصر ابن داوود"
+description: "مكتبة رقمية شاملة للدراسات القرآنية"
+baseurl: ""
+url: "https://nasserhabitat.github.io/nasser-books"
 
-plugins:
-  - jekyll-sitemap
+# تعطيل معالجة Jekyll للملفات الثابتة
+include: ['.xml', '.txt', '.html']
+exclude: ['_site', 'Gemfile', 'Gemfile.lock']
 
-# إعدادات المحتوى
-defaults:
-  - scope:
-      path: "*.xml"
-    values:
-      layout: null
-      sitemap: true
-  - scope:
-      path: "*.txt"
-    values:
-      layout: null
+# لا تستخدم أي theme
+theme: null
+plugins: []
