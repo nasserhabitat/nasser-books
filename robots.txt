@@ -154,7 +154,7 @@ Comment: روبوت زحف تجاري
 Allow: / 
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-books.xml
-plan du site : https://a520098.sitemaphosting7.com/4624346/sitemap_4624346.xml
+Sitemap: https://a520098.sitemaphosting7.com/4624346/sitemap_4624346.xml
 
 # ==============================================
 # 💡 معلومات إضافية
