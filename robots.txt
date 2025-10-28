@@ -151,10 +151,10 @@ Comment: روبوت زحف تجاري
 # ==============================================
 # 🗺️ خرائط الموقع
 # ==============================================
-
+Allow: / 
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-books.xml
-Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-pages.xml
+
 
 # ==============================================
 # 💡 معلومات إضافية
