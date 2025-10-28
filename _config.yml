@@ -1,9 +1,19 @@
 # _config.yml
 include:
-  - *.xml
-  - *.txt
-
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+  - ".xml"
+  - ".txt"
 
 plugins:
   - jekyll-sitemap
+
+# إعدادات المحتوى
+defaults:
+  - scope:
+      path: "*.xml"
+    values:
+      layout: null
+      sitemap: true
+  - scope:
+      path: "*.txt"
+    values:
+      layout: null
