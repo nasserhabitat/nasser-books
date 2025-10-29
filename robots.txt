@@ -155,6 +155,7 @@ Allow: /
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-books.xml
 Sitemap: https://a520098.sitemaphosting7.com/4624346/sitemap_4624346.xml
+itemap: https://nasserhabitat.github.io/nasser-books/sitemap-bing.xml
 
 # ==============================================
 # 💡 معلومات إضافية
