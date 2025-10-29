@@ -343,7 +343,7 @@
         <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
         <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
 
-        div class="book-grid">
+         div class="book-grid">
 
     <div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="[https://schema.org/Book](https://schema.org/Book)">
         <div class="book-cover">
@@ -1604,82 +1604,40 @@
     </section>
 
     <footer>
-        <h3>روابط هامة:</h3>
-        <ul>
-            <li><a href="books-index.html" itemprop="significantLink">📚 فهرس الكتب الشامل</a></li>
-            <li><a href="search.html" itemprop="significantLink">🔍 محرك البحث المتخصص</a></li>
-            <li><a href="ai-recommendations.html" itemprop="significantLink">🤖 توصيات الذكاء الاصطناعي</a></li>
-            <li><a href="microdata-books.html" itemprop="significantLink">🏷️ البيانات المنظمة</a></li>
-        </ul>
-        
-        <div class="copyright" itemprop="copyrightNotice">
-            &copy; 2024 مكتبة ناصر ابن داوود - Nasser Ibn Dawood Library. جميع الحقوق محفوظة.
-        </div>
+        <p>© 2025 مكتبة ناصر ابن داوود. جميع الحقوق محفوظة.</p>
+        <p>تم التطوير باستخدام تقنيات الويب الحديثة والذكاء الاصطناعي.</p>
+        <p>
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons License</a> |
+            <a href="privacy.html">سياسة الخصوصية</a> |
+            <a href="terms.html">شروط الاستخدام</a>
+        </p>
     </footer>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "مكتبة ناصر ابن داوود - Nasser Ibn Dawood Library",
-        "url": "https://nasserhabitat.github.io/nasser-books/",
-        "description": "مكتبة رقمية شاملة لمؤلفات الدكتور ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية",
-        "inLanguage": ["ar", "en"],
-        "author": {
-            "@type": "Person",
-            "name": "الدكتور ناصر ابن داوود | Dr. Nasser Ibn Dawood",
-            "jobTitle": "باحث إسلامي ومهندس | Islamic Researcher and Engineer",
-            "email": "nasserhabitat@gmail.com",
-            "description": "متخصص في الدراسات القرآنية واللسان القرآني والدراسات الرقمية للمخطوطات القرآنية"
-        },
-        "about": {
-            "@type": "Thing",
-            "name": "الدراسات القرآنية واللسان القرآني | Quranic Studies and Quranic Linguistics"
-        },
-        "keywords": "القرآن, الدراسات القرآنية, اللسان القرآني, فقه اللسان, تدبر, مخطوطات, Quran, Quranic studies, Quranic tongue, digital manuscripts"
-    }
-    </script>
-       <script>
-        function filterBooks(lang, clickedButton) {
-            // جلب أقسام الكتب بواسطة الـ ID
+    <script>
+        function filterBooks(lang, element) {
+            // إزالة الفعال من جميع الأزرار
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // إضافة الفعال للزر المحدد
+            element.classList.add('active');
+            
+            // إظهار/إخفاء الأقسام بناءً على الاختيار
             const arabicSection = document.getElementById('arabic-books');
             const englishSection = document.getElementById('english-books');
             
-            // جلب جميع الأزرار لإدارة الحالة "النشطة"
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // إزالة "active" من جميع الأزرار
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // إضافة "active" للزر المضغوط حالياً
-            clickedButton.classList.add('active');
-
-            // تطبيق منطق الإظهار والإخفاء
-            if (lang === 'ar') {
+            if (lang === 'all') {
+                arabicSection.style.display = 'block';
+                englishSection.style.display = 'block';
+            } else if (lang === 'ar') {
                 arabicSection.style.display = 'block';
                 englishSection.style.display = 'none';
             } else if (lang === 'en') {
                 arabicSection.style.display = 'none';
-                englishSection.style.display = 'block';
-            } else { // lang === 'all'
-                arabicSection.style.display = 'block';
                 englishSection.style.display = 'block';
             }
         }
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
