@@ -290,7 +290,35 @@
             box-shadow: 0 4px 10px rgba(44, 95, 138, 0.2);
         }
         /* === نهاية الأنماط المضافة === */
+/* === أنماط شبكة الكتب (Grid) === */
+.book-grid {
+    /* هذا هو السطر الرئيسي الذي يحدد 3 أعمدة متساوية */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* لضمان تناسق العرض على الأجهزة اللوحية (Tablet) */
+@media (max-width: 1024px) {
+    .book-grid {
+        /* تحويل العرض إلى عمودين */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+/* لضمان تناسق العرض على شاشات الهواتف (Mobile) */
+@media (max-width: 600px) {
+    .book-grid {
+        /* تحويل العرض إلى عمود واحد */
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding: 10px;
+    }
+}
         </style>
 </head>
 </head>
@@ -330,53 +358,48 @@
         <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
         <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
 
-        <div class="book-grid">
+        div class="book-grid">
 
-            <div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
-                <div class="book-cover">
-                    <img itemprop="image" src="books/conscious-contemplation/ar/cover-ar.png" 
-                             alt="غلاف كتاب نحو تدبر واعٍ"
-                             loading="lazy"
-                             width="250"
-                             height="350">
-                </div>
-                ```
-
-
-
-<div class="book-grid">
-    <div class="book-grid">  <div class="book-card"...>
-                <div class="book-info">
-                    <h2 itemprop="name">نحو تدبر واعٍ</h2>
-                    <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <span itemprop="name"> ناصر ابن داوود</span>
-                    </span></p>
-                    <p class="book-desc" itemprop="description">دليل عملي لفهم وتطبيق القرآن الكريم في العصر الحديث</p>
-                    
-                    <div class="book-actions">
-                        <a href="books/conscious-contemplation/ar/" 
-                           itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
-                    </div>
-                    
-                    <div class="download-links">
-                        <a href="https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2" 
-                           class="download-link" target="_blank">📄 DOCX</a>
-                        <a href="https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf" 
-                           class="download-link" target="_blank">📖 PDF</a>
-                        <a href="https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.txt" 
-                           class="download-link" target="_blank">📝 نص خام</a>
-                        <a href="https://archive.org/stream/20250529_20250529_2132" 
-                           class="download-link" target="_blank">🌐 Archive.org</a>
-                    </div>
-                </div>
-                
-                <meta itemprop="datePublished" content="2025">
-                <meta itemprop="inLanguage" content="ar">
-                <meta itemprop="bookFormat" content="https://schema.org/EBook">
-                <meta itemprop="isAccessibleForFree" content="true">
-                <link itemprop="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+    <div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="[https://schema.org/Book](https://schema.org/Book)">
+        <div class="book-cover">
+            <img itemprop="image" src="books/conscious-contemplation/ar/cover-ar.png" 
+                         alt="غلاف كتاب نحو تدبر واعٍ"
+                         loading="lazy"
+                         width="250"
+                         height="350">
+        </div>
+        <div class="book-info">
+            <h2 itemprop="name">نحو تدبر واعٍ</h2>
+            <p class="book-meta">تأليف: <span itemprop="author" itemscope itemtype="[https://schema.org/Person](https://schema.org/Person)">
+                <span itemprop="name"> ناصر ابن داوود</span>
+            </span></p>
+            <p class="book-desc" itemprop="description">دليل عملي لفهم وتطبيق القرآن الكريم في العصر الحديث</p>
+            
+            <div class="book-actions">
+                <a href="books/conscious-contemplation/ar/" 
+                    itemprop="url" class="btn">📖 الصفحة الرئيسية</a>
             </div>
-
+            
+            <div class="download-links">
+                <a href="[https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2](https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2)" 
+                    class="download-link" target="_blank">📄 DOCX</a>
+                <a href="[https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf](https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf)" 
+                    class="download-link" target="_blank">📖 PDF</a>
+                <a href="[https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.txt](https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.txt)" 
+                    class="download-link" target="_blank">📝 نص خام</a>
+                <a href="[https://archive.org/stream/20250529_20250529_2132](https://archive.org/stream/20250529_20250529_2132)" 
+                    class="download-link" target="_blank">🌐 Archive.org</a>
+            </div>
+        </div>
+        
+        <meta itemprop="datePublished" content="2025">
+        <meta itemprop="inLanguage" content="ar">
+        <meta itemprop="bookFormat" content="[https://schema.org/EBook](https://schema.org/EBook)">
+        <meta itemprop="isAccessibleForFree" content="true">
+        <link itemprop="license" href="[https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)">
+    </div>
+    <div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="[https://schema.org/Book](https://schema.org/Book)">
+        </div>
             <div class="book-card" data-lang="ar" itemprop="hasPart" itemscope itemtype="https://schema.org/Book">
                 <div class="book-cover">
                     <img itemprop="image" src="books/anwar-al-bayan/ar/cover-ar.png" 
@@ -1661,6 +1684,7 @@
     </script>
 </body>
 </html>
+
 
 
 
