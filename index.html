@@ -253,25 +253,83 @@
 </head>
 <body itemscope itemtype="https://schema.org/CollectionPage">
     <header itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
-        <h1 itemprop="name"> ناصر ابن داوود</h1>
-        <p itemprop="jobTitle">باحث إسلامي ومهندس | Islamic Researcher and Engineer</p>
+        <h1 itemprop="name">مكتبة ناصر ابن داوود - باحث إسلامي ومهندس</h1>
+        <p itemprop="jobTitle" style="font-size: 1.2rem; opacity: 0.9;">Nasser Ibn Dawood Library - Islamic Researcher and Engineer</p>
+        
+        <meta itemprop="name" content="ناصر ابن داوود">
         <meta itemprop="description" content="متخصص في الدراسات القرآنية واللسان القرآني والدراسات الرقمية للمخطوطات القرآنية">
         
         <div>
             <strong>التواصل:</strong>
             <a itemprop="email" href="mailto:nasserhabitat@gmail.com">nasserhabitat@gmail.com</a>
         </div>
-    </header>
+    </header>>
 
     <section itemprop="description" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="color: #2c5f8a;">مكتبة رقمية شاملة للدراسات القرآنية</h2>
-        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
-            مكتبة الدكتور ناصر ابن داوود تقدم 32 عملاً بحثياً رائداً في مجال الدراسات القرآنية، التدبر، فقه اللسان القرآني، 
-            . كتب والدراسات الرقمية للمخطوطات. جميع الكتب متاحة بنسختين: العربية والإنجليزية
+        <h2 style="color: #2c5f8a; font-size: 1.5rem; line-height: 1.5;">
+            مكتبة رقمية شاملة لمؤلفات ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية، متوافقة مع الذكاء الاصطناعي.
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; max-width: 800px; margin: 10px auto 0 auto; opacity: 0.9;">
+            A comprehensive digital library of Nasser Ibn Dawood's works on Quranic sciences, contemplation, and digital Quranic studies, with AI compatibility.
         </p>
-    </section>
+    </section>>
+<section itemprop="description" style="text-align: center; margin-bottom: 40px;">
+        </section>
 
+    <section class="filter-controls" style="text-align: center; margin-bottom: 30px; padding: 10px 0;">
+        <button class="filter-btn active" onclick="filterBooks('all', this)">عرض الكل (32)</button>
+        <button class="filter-btn" onclick="filterBooks('ar', this)">📚 الكتب العربية (16)</button>
+        <button class="filter-btn" onclick="filterBooks('en', this)">🌟 الكتب الإنجليزية (16)</button>
+    </section>
     <section class="language-section" itemscope itemtype="https://schema.org/Collection">
+        ```
+
+---
+
+### ثانياً: إضافة الأنماط (CSS) للأزرار
+
+أضف كود CSS التالي داخل الوسم `<style>` الموجود في `<head>` لضمان ظهور الأزرار بشكل أنيق وتفاعلي.
+
+```css
+        /* ... الأنماط الموجودة حالياً ... */
+        @media (max-width: 480px) {
+            /* ... الأنماط الموجودة حالياً ... */
+        }
+
+        /* === بداية الأنماط المضافة: أزرار الفلترة === */
+        .filter-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* لضمان تطابق الخط */
+            font-weight: 500;
+            cursor: pointer;
+            border: 2px solid #2c5f8a;
+            background-color: #ffffff;
+            color: #2c5f8a;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            background-color: #f0f4f8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .filter-btn.active {
+            background-color: #2c5f8a;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(44, 95, 138, 0.2);
+        }
+        /* === نهاية الأنماط المضافة === */
+
+    </style>
+</head>
+    <section id="arabic-books" class="language-section" itemscope itemtype="https://schema.org/Collection">
         <h2 itemprop="name">📚 الدراسات القرآنية - العربية</h2>
         <meta itemprop="inLanguage" content="ar">
         <meta itemprop="collectionSize" content="16"> <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
@@ -902,7 +960,7 @@
         </div>
     </section>
 
-    <section class="language-section" itemscope itemtype="https://schema.org/Collection">
+    <section id="english-books" class="language-section" itemscope itemtype="https://schema.org/Collection">
         <h2 itemprop="name">🌟 Faith Studies - English</h2>
         <meta itemprop="inLanguage" content="en">
         <meta itemprop="collectionSize" content="16"> <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
@@ -1571,8 +1629,37 @@
         "keywords": "القرآن, الدراسات القرآنية, اللسان القرآني, فقه اللسان, تدبر, مخطوطات, Quran, Quranic studies, Quranic tongue, digital manuscripts"
     }
     </script>
+       <script>
+        function filterBooks(lang, clickedButton) {
+            // جلب أقسام الكتب بواسطة الـ ID
+            const arabicSection = document.getElementById('arabic-books');
+            const englishSection = document.getElementById('english-books');
+            
+            // جلب جميع الأزرار لإدارة الحالة "النشطة"
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // إزالة "active" من جميع الأزرار
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // إضافة "active" للزر المضغوط حالياً
+            clickedButton.classList.add('active');
+
+            // تطبيق منطق الإظهار والإخفاء
+            if (lang === 'ar') {
+                arabicSection.style.display = 'block';
+                englishSection.style.display = 'none';
+            } else if (lang === 'en') {
+                arabicSection.style.display = 'none';
+                englishSection.style.display = 'block';
+            } else { // lang === 'all'
+                arabicSection.style.display = 'block';
+                englishSection.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
+
 
 
 
