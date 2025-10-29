@@ -249,47 +249,17 @@
                 font-size: 1.2rem;
             }
         }
-    </style>
-</head>
-<body itemscope itemtype="https://schema.org/CollectionPage">
-    <header itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
-        <h1 itemprop="name">مكتبة ناصر ابن داوود - باحث إسلامي ومهندس</h1>
-        <p itemprop="jobTitle" style="font-size: 1.2rem; opacity: 0.9;">Nasser Ibn Dawood Library - Islamic Researcher and Engineer</p>
-        
-        <meta itemprop="name" content="ناصر ابن داوود">
-        <meta itemprop="description" content="متخصص في الدراسات القرآنية واللسان القرآني والدراسات الرقمية للمخطوطات القرآنية">
-        
-        <div>
-            <strong>التواصل:</strong>
-            <a itemprop="email" href="mailto:nasserhabitat@gmail.com">nasserhabitat@gmail.com</a>
-        </div>
-    </header>>
-
-    <section itemprop="description" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="color: #2c5f8a; font-size: 1.5rem; line-height: 1.5;">
-            مكتبة رقمية شاملة لمؤلفات ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية، متوافقة مع الذكاء الاصطناعي.
-        </h2>
-        <p style="font-size: 1.1rem; line-height: 1.6; max-width: 800px; margin: 10px auto 0 auto; opacity: 0.9;">
-            A comprehensive digital library of Nasser Ibn Dawood's works on Quranic sciences, contemplation, and digital Quranic studies, with AI compatibility.
-        </p>
-    </section>>
- style="text-align: center; margin-bottom: 40px;">
-        </section>
-
-    <section class="filter-controls" style="text-align: center; margin-bottom: 30px; padding: 10px 0;">
+       </section> <section class="filter-controls" style="text-align: center; margin-bottom: 30px; padding: 10px 0;">
         <button class="filter-btn active" onclick="filterBooks('all', this)">عرض الكل (32)</button>
         <button class="filter-btn" onclick="filterBooks('ar', this)">📚 الكتب العربية (16)</button>
         <button class="filter-btn" onclick="filterBooks('en', this)">🌟 الكتب الإنجليزية (16)</button>
     </section>
-    <section class="language-section" itemscope itemtype="https://schema.org/Collection">
-    ```
+    
+    <section id="arabic-books" class="language-section" itemscope itemtype="https://schema.org/Collection">
+        <h2 itemprop="name">📚 الدراسات القرآنية - العربية</h2>
+        ```
 
 ```css
-        /* ... الأنماط الموجودة حالياً ... */
-        @media (max-width: 480px) {
-            /* ... الأنماط الموجودة حالياً ... */
-        }
-
         /* === بداية الأنماط المضافة: أزرار الفلترة === */
         .filter-controls {
             display: flex;
@@ -321,9 +291,39 @@
         }
         /* === نهاية الأنماط المضافة === */
 
-    </style>
+        </style>
 </head>
+<body itemscope itemtype="https://schema.org/CollectionPage">
+    <header itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
+        <h1 itemprop="name">مكتبة ناصر ابن داوود - باحث إسلامي ومهندس</h1>
+        <p itemprop="jobTitle" style="font-size: 1.2rem; opacity: 0.9;">Nasser Ibn Dawood Library - Islamic Researcher and Engineer</p>
+        
+        <meta itemprop="name" content="ناصر ابن داوود">
+        <meta itemprop="description" content="متخصص في الدراسات القرآنية واللسان القرآني والدراسات الرقمية للمخطوطات القرآنية">
+        
+        <div>
+            <strong>التواصل:</strong>
+            <a itemprop="email" href="mailto:nasserhabitat@gmail.com">nasserhabitat@gmail.com</a>
+        </div>
+    </header>>
+
+    <section itemprop="description" style="text-align: center; margin-bottom: 40px;">
+        <h2 style="color: #2c5f8a; font-size: 1.5rem; line-height: 1.5;">
+            مكتبة رقمية شاملة لمؤلفات ناصر ابن داوود في علوم القرآن والتدبر والدراسات القرآنية الرقمية، متوافقة مع الذكاء الاصطناعي.
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; max-width: 800px; margin: 10px auto 0 auto; opacity: 0.9;">
+            A comprehensive digital library of Nasser Ibn Dawood's works on Quranic sciences, contemplation, and digital Quranic studies, with AI compatibility.
+        </p>
+   </section> <section class="filter-controls" style="text-align: center; margin-bottom: 30px; padding: 10px 0;">
+        <button class="filter-btn active" onclick="filterBooks('all', this)">عرض الكل (32)</button>
+        <button class="filter-btn" onclick="filterBooks('ar', this)">📚 الكتب العربية (16)</button>
+        <button class="filter-btn" onclick="filterBooks('en', this)">🌟 الكتب الإنجليزية (16)</button>
+    </section>
+    
     <section id="arabic-books" class="language-section" itemscope itemtype="https://schema.org/Collection">
+        <h2 itemprop="name">📚 الدراسات القرآنية - العربية</h2>
+        ```
+
         <h2 itemprop="name">📚 الدراسات القرآنية - العربية</h2>
         <meta itemprop="inLanguage" content="ar">
         <meta itemprop="collectionSize" content="16"> <link itemprop="url" href="https://nasserhabitat.github.io/nasser-books/">
@@ -1653,6 +1653,7 @@
     </script>
 </body>
 </html>
+
 
 
 
