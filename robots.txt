@@ -65,6 +65,10 @@ Allow: /
 Crawl-delay: 1
 Comment: محرك بحث جوجل الرئيسي
 
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /books/*/cover-*.png
+
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
