@@ -382,6 +382,254 @@
                 font-size: 1.2rem;
             }
         }
+       
+/* === أنماط قسم عن المؤلف المحسن === */
+.about-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    margin: 40px 0;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    color: #2c5f8a;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.about-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #2c5f8a, #3a7bb8);
+    border-radius: 2px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.author-profile {
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.author-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2c5f8a, #3a7bb8);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4.5rem;
+    box-shadow: 0 8px 20px rgba(44, 95, 138, 0.3);
+    border: 5px solid white;
+}
+
+.author-name {
+    color: #2c5f8a;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.author-title {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.author-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.author-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #f0f4f8;
+    border-radius: 8px;
+    color: #2c5f8a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.author-link:hover {
+    background: #e1e8f0;
+    transform: translateY(-2px);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #2c5f8a;
+}
+
+.info-card h3 {
+    color: #2c5f8a;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-card ul {
+    color: #555;
+    line-height: 1.7;
+    padding-right: 20px;
+}
+
+.info-card li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.info-card li::before {
+    content: '•';
+    color: #2c5f8a;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #2c5f8a, #3a7bb8);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(44, 95, 138, 0.3);
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: white;
+    color: #2c5f8a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-email:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* تحسينات استجابة إضافية */
+@media (max-width: 768px) {
+    .about-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .author-profile {
+        position: static;
+    }
+    
+    .author-avatar {
+        width: 150px;
+        height: 150px;
+        font-size: 3.5rem;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+    
+    .about-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .author-avatar {
+        width: 130px;
+        height: 130px;
+        font-size: 3rem;
+    }
+    
+    .contact-email {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body itemscope itemtype="https://schema.org/CollectionPage">
@@ -1682,42 +1930,42 @@
             </div>
         </div>
     </section>
-<section id="about-author" class="language-section" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
-    <div style="max-width: 1000px; margin: 0 auto; padding: 30px;">
-        <h2 style="text-align: center; color: #2c5f8a; margin-bottom: 40px; font-size: 2rem;">
-            عن المؤلف | About the Author
-        </h2>
+<!-- قسم عن المؤلف المحسن -->
+<section id="about-author" class="about-section">
+    <div class="about-container">
+        <div class="about-header">
+            <h2>عن المؤلف | About the Author</h2>
+        </div>
         
-        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
-            <!-- الصورة الشخصية -->
-            <div style="text-align: center;">
-                <div style="width: 200px; height: 200px; border-radius: 50%; background: #2c5f8a; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+        <div class="about-content">
+            <!-- الملف الشخصي -->
+            <div class="author-profile">
+                <div class="author-avatar">
                     👨‍🎓
                 </div>
-                <h3 style="color: #2c5f8a; margin-bottom: 10px;">ناصر ابن داوود</h3>
-                <p style="color: #666; font-size: 0.9rem;">Nasser Ibn Dawood</p>
+                <h3 class="author-name">ناصر ابن داوود</h3>
+                <p class="author-title">Nasser Ibn Dawood</p>
+                
+                <div class="author-links">
+                    <a href="https://nasserhabitat.github.io/nasser-books" class="author-link" target="_blank">
+                        🌐 زيارة الموقع
+                    </a>
+                </div>
             </div>
             
-            <!-- المعلومات -->
-            <div>
+            <!-- المعلومات التفصيلية -->
+            <div class="author-info">
                 <!-- المعلومات بالعربية -->
-                <div style="margin-bottom: 30px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h4 style="color: #2c5f8a; margin-bottom: 15px; font-size: 1.3rem;">📖 السيرة الذاتية</h4>
-                    <p style="line-height: 1.8; color: #555; margin-bottom: 15px;">
+                <div class="info-card">
+                    <h3>📖 السيرة الذاتية</h3>
+                    <p>
                         ناصر ابن داوود مهندس مدني للمعادن وباحث اسلامي خريج كلية البوليتكنيك في جامعة مونس بلجيكا، 
                         مزداد في المغرب بتاريخ 27 ابريل 1960. موظف متقاعد بوزارة الاسكان.
                     </p>
-                    <p style="line-height: 1.8; color: #555; margin-bottom: 15px;">
-                        موقعي: 
-                        <a href="https://nasserhabitat.github.io/nasser-books" 
-                           style="color: #3a7bb8; text-decoration: none; font-weight: bold;">
-                           https://nasserhabitat.github.io/nasser-books
-                        </a>
-                    </p>
-                    <p style="line-height: 1.8; color: #555;">
+                    <p>
                         متخصص حالياً في الدراسات القرآنية. يركز عمله على:
                     </p>
-                    <ul style="color: #555; line-height: 1.8; padding-right: 20px;">
+                    <ul>
                         <li>لغويات القرآن</li>
                         <li>تحليل المخطوطات الرقمية</li>
                         <li>مناهج معاصرة للتدبر القرآني</li>
@@ -1725,15 +1973,15 @@
                 </div>
                 
                 <!-- المعلومات بالإنجليزية -->
-                <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h4 style="color: #2c5f8a; margin-bottom: 15px; font-size: 1.3rem;">📖 Biography</h4>
-                    <p style="line-height: 1.8; color: #555; margin-bottom: 15px;">
+                <div class="info-card">
+                    <h3>📖 Biography</h3>
+                    <p>
                         Nasser Ibn Dawood is an Islamic researcher and engineer specializing in digital Quranic studies.
                     </p>
-                    <p style="line-height: 1.8; color: #555;">
+                    <p>
                         His works focus on:
                     </p>
-                    <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                    <ul>
                         <li>Quranic linguistics</li>
                         <li>Digital manuscript analysis</li>
                         <li>Contemporary approaches to Quranic contemplation</li>
@@ -1741,16 +1989,13 @@
                 </div>
                 
                 <!-- معلومات التواصل -->
-                <div style="margin-top: 25px; text-align: center; padding: 20px; background: #2c5f8a; border-radius: 10px; color: white;">
-                    <h4 style="margin-bottom: 15px; font-size: 1.3rem;">📬 التواصل | Contact</h4>
-                    <p style="margin-bottom: 10px; opacity: 0.9;">
+                <div class="contact-card">
+                    <h3>📬 التواصل | Contact</h3>
+                    <p>
                         للاستفسارات والتعاون البحثي | For inquiries and research collaboration
                     </p>
-                    <a href="mailto:nasserhabitat@gmail.com" 
-                       style="display: inline-block; padding: 12px 25px; background: white; color: #2c5f8a; 
-                              text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px;
-                              transition: all 0.3s ease;">
-                       ✉️ nasserhabitat@gmail.com
+                    <a href="mailto:nasserhabitat@gmail.com" class="contact-email">
+                        ✉️ nasserhabitat@gmail.com
                     </a>
                 </div>
             </div>
@@ -1986,6 +2231,7 @@ document.addEventListener('DOMContentLoaded', addLinkCheckerButton);
 </script>
 </body>
 </html>
+
 
 
 
