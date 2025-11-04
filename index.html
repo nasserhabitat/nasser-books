@@ -387,15 +387,43 @@
             top: 20px;
         }
 
-      .author-photo {
-    width: 180px;
-    height: 180px;
+     .author-photo {
+    width: 90px; /* كان 180px */
+    height: 90px; /* كان 180px */
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 8px 20px rgba(44, 95, 138, 0.3);
+    border: 4px solid white; /* خففنا من سمك الإطار */
+    box-shadow: 0 4px 15px rgba(44, 95, 138, 0.3); /* خففنا الظل */
+}
+       
+.author-avatar {
+    width: 90px; /* كان 180px */
+    height: 90px; /* كان 180px */
+    border-radius: 50%;
+    margin: 0 auto 15px; /* خففنا الهامش السفلي */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(44, 95, 138, 0.3);
+    border: 4px solid white;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2c5f8a, #3a7bb8); /* خلفية احتياطية */
 }
 
+   .author-avatar {
+    width: 90px; /* كان 180px */
+    height: 90px; /* كان 180px */
+    border-radius: 50%;
+    margin: 0 auto 15px; /* خففنا الهامش السفلي */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(44, 95, 138, 0.3);
+    border: 4px solid white;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2c5f8a, #3a7bb8); /* خلفية احتياطية */
+}
+    
         .author-name {
             color: #2c5f8a;
             margin-bottom: 8px;
@@ -2250,5 +2278,6 @@ document.addEventListener('DOMContentLoaded', addLinkCheckerButton);
 </script>
 </body>
 </html>
+
 
 
