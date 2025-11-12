@@ -2092,193 +2092,355 @@
             }
         }
     </script>
-    <script>
-// أداة فحص الروابط المكسورة
-class LinkChecker {
-    constructor() {
-        this.brokenLinks = [];
-        this.checkedLinks = 0;
-        this.totalLinks = 0;
-    }
-
-    async checkAllLinks() {
-        const links = document.querySelectorAll('a[href]');
-        this.totalLinks = links.length;
-        
-        const resultsContainer = this.createResultsContainer();
-        
-        for (let link of links) {
-            await this.checkLink(link, resultsContainer);
+   <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة فحص الروابط المحسنة</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        
-        this.showSummary();
-    }
-
-    async checkLink(link, container) {
-        const href = link.href;
-        
-        // تخطي الروابط الخاصة (mailto, tel, etc.)
-        if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
-            return;
-        }
-
-        try {
-            const response = await fetch(href, { 
-                method: 'HEAD',
-                mode: 'no-cors',
-                cache: 'no-cache'
-            });
-            
-            this.checkedLinks++;
-            this.updateProgress();
-            
-            // إذا وصلنا هنا، الرابط يعمل (مع بعض التحفظات بسبب no-cors)
-            this.addLinkResult(container, href, '✅ يعمل', 'success');
-            
-        } catch (error) {
-            this.checkedLinks++;
-            this.brokenLinks.push(href);
-            this.addLinkResult(container, href, '❌ مكسور', 'error');
-            this.updateProgress();
-        }
-    }
-
-    createResultsContainer() {
-        const container = document.createElement('div');
-        container.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            z-index: 10000;
-            max-width: 90%;
-            max-height: 80%;
-            overflow-y: auto;
-            direction: ltr;
-        `;
-
-        const header = document.createElement('h3');
-        header.textContent = '🔍 فحص الروابط';
-        header.style.textAlign = 'center';
-        header.style.color = '#2c5f8a';
-        container.appendChild(header);
-
-        const progress = document.createElement('div');
-        progress.id = 'linkCheckProgress';
-        progress.style.margin = '10px 0';
-        progress.style.padding = '10px';
-        progress.style.background = '#f0f0f0';
-        progress.style.borderRadius = '5px';
-        progress.style.textAlign = 'center';
-        container.appendChild(progress);
-
-        const results = document.createElement('div');
-        results.id = 'linkCheckResults';
-        results.style.maxHeight = '300px';
-        results.style.overflowY = 'auto';
-        container.appendChild(results);
-
-        const closeBtn = document.createElement('button');
-        closeBtn.textContent = 'إغلاق';
-        closeBtn.style.cssText = `
-            display: block;
-            margin: 10px auto 0;
-            padding: 8px 16px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5f8a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .button {
             background: #2c5f8a;
             color: white;
             border: none;
+            padding: 12px 20px;
             border-radius: 5px;
             cursor: pointer;
-        `;
-        closeBtn.onclick = () => container.remove();
-        container.appendChild(closeBtn);
-
-        document.body.appendChild(container);
-        return container;
-    }
-
-    addLinkResult(container, href, status, type) {
-        const results = container.querySelector('#linkCheckResults');
-        const resultDiv = document.createElement('div');
-        resultDiv.style.cssText = `
-            padding: 8px;
-            margin: 5px 0;
-            background: ${type === 'success' ? '#e8f5e8' : '#ffe8e8'};
-            border-left: 4px solid ${type === 'success' ? '#4CAF50' : '#f44336'};
-            border-radius: 3px;
-            font-size: 12px;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #1e4568;
+        }
+        .results {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .link-result {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .link-result.success {
+            background: #e8f5e8;
+            border-left: 4px solid #4CAF50;
+        }
+        .link-result.error {
+            background: #ffe8e8;
+            border-left: 4px solid #f44336;
+        }
+        .link-result.warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .status-icon {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        .link-url {
+            flex: 1;
             word-break: break-all;
-        `;
-        
-        resultDiv.innerHTML = `
-            <strong>${status}</strong><br>
-            <small>${href}</small>
-        `;
-        
-        results.appendChild(resultDiv);
-    }
-
-    updateProgress() {
-        const progress = document.querySelector('#linkCheckProgress');
-        if (progress) {
-            const percentage = ((this.checkedLinks / this.totalLinks) * 100).toFixed(1);
-            progress.innerHTML = `
-                <strong>التقدم:</strong> ${this.checkedLinks}/${this.totalLinks} (${percentage}%)<br>
-                <progress value="${this.checkedLinks}" max="${this.totalLinks}" style="width: 100%"></progress>
-            `;
+            font-size: 14px;
         }
-    }
-
-    showSummary() {
-        const progress = document.querySelector('#linkCheckProgress');
-        if (progress) {
-            progress.innerHTML += `
-                <div style="margin-top: 10px; padding: 10px; background: ${this.brokenLinks.length > 0 ? '#fff3cd' : '#d4edda'}; border-radius: 5px;">
-                    <strong>النتيجة النهائية:</strong><br>
-                    ✅ الروابط السليمة: ${this.checkedLinks - this.brokenLinks.length}<br>
-                    ❌ الروابط المكسورة: ${this.brokenLinks.length}
-                </div>
-            `;
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
         }
-    }
-}
+        .summary.success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .summary.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .summary.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .progress-container {
+            margin: 20px 0;
+            background: #f0f0f0;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .progress-bar {
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 أداة فحص الروابط المحسنة</h1>
+        
+        <button id="checkLinks" class="button">بدء فحص الروابط</button>
+        
+        <div class="progress-container" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+            <div id="progressText" style="text-align: center; margin-top: 5px;"></div>
+        </div>
+        
+        <div id="results" class="results" style="display: none;"></div>
+        <div id="summary" class="summary" style="display: none;"></div>
+    </div>
 
-// إضافة زر الفحص إلى الصفحة
-function addLinkCheckerButton() {
-    const button = document.createElement('button');
-    button.innerHTML = '🔍 فحص الروابط';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        padding: 12px 16px;
-        background: #2c5f8a;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        z-index: 9999;
-        font-size: 14px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    `;
-    
-    button.onclick = () => {
-        const checker = new LinkChecker();
-        checker.checkAllLinks();
-    };
-    
-    document.body.appendChild(button);
-}
+    <script>
+        class ImprovedLinkChecker {
+            constructor() {
+                this.brokenLinks = [];
+                this.checkedLinks = 0;
+                this.totalLinks = 0;
+                this.timeout = 10000; // مهلة 10 ثواني لكل رابط
+            }
 
-// تشغيل الأداة عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', addLinkCheckerButton);
-</script>
+            async checkAllLinks() {
+                const links = Array.from(document.querySelectorAll('a[href]'));
+                this.totalLinks = links.length;
+                
+                if (this.totalLinks === 0) {
+                    this.showMessage('لم يتم العثور على أي روابط للفحص', 'warning');
+                    return;
+                }
+                
+                this.resetUI();
+                this.showProgress();
+                
+                // استخدام Promise.allSettled للتحقق من جميع الروابط بشكل متوازي
+                const results = await Promise.allSettled(
+                    links.map(link => this.checkLink(link))
+                );
+                
+                this.hideProgress();
+                this.showSummary();
+            }
+
+            async checkLink(link) {
+                const href = link.href;
+                
+                // تخطي الروابط الخاصة
+                if (this.isSpecialLink(href)) {
+                    this.checkedLinks++;
+                    this.updateProgress();
+                    return { href, status: 'special', valid: true };
+                }
+
+                try {
+                    // محاولة استخدام fetch أولاً
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), this.timeout);
+                    
+                    const response = await fetch(href, {
+                        method: 'HEAD',
+                        signal: controller.signal,
+                        cache: 'no-cache'
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    
+                    this.checkedLinks++;
+                    this.updateProgress();
+                    
+                    if (response.ok) {
+                        this.addLinkResult(href, '✅ الرابط يعمل', 'success');
+                        return { href, status: 'working', valid: true };
+                    } else {
+                        this.brokenLinks.push(href);
+                        this.addLinkResult(href, `❌ الرابط معطل (الحالة: ${response.status})`, 'error');
+                        return { href, status: 'broken', valid: false };
+                    }
+                } catch (error) {
+                    clearTimeout(timeoutId);
+                    
+                    // إذا فشل fetch بسبب CORS، جرب طريقة بديلة
+                    if (error.name === 'TypeError' || error.name === 'AbortError') {
+                        const isValid = await this.checkLinkAlternative(href);
+                        this.checkedLinks++;
+                        this.updateProgress();
+                        
+                        if (isValid) {
+                            this.addLinkResult(href, '⚠️ الرابط قد يعمل (تم التحقق بطريقة بديلة)', 'warning');
+                            return { href, status: 'maybe', valid: true };
+                        } else {
+                            this.brokenLinks.push(href);
+                            this.addLinkResult(href, '❌ الرابط معطل', 'error');
+                            return { href, status: 'broken', valid: false };
+                        }
+                    } else {
+                        this.checkedLinks++;
+                        this.updateProgress();
+                        this.brokenLinks.push(href);
+                        this.addLinkResult(href, `❌ الرابط معطل (خطأ: ${error.name})`, 'error');
+                        return { href, status: 'broken', valid: false };
+                    }
+                }
+            }
+
+            // طريقة بديلة للتحقق من الروابط باستخدام Image أو XMLHttpRequest
+            async checkLinkAlternative(url) {
+                return new Promise((resolve) => {
+                    // محاولة استخدام Image للتحقق من الصور
+                    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)) {
+                        const img = new Image();
+                        img.onload = () => resolve(true);
+                        img.onerror = () => resolve(false);
+                        img.src = url;
+                        setTimeout(() => resolve(false), 5000); // مهلة 5 ثواني
+                    } else {
+                        // استخدام XMLHttpRequest للتحقق من الروابط الأخرى
+                        const xhr = new XMLHttpRequest();
+                        xhr.timeout = 5000;
+                        xhr.onreadystatechange = () => {
+                            if (xhr.readyState === 4) {
+                                resolve(xhr.status === 200);
+                            }
+                        };
+                        xhr.ontimeout = () => resolve(false);
+                        xhr.onerror = () => resolve(false);
+                        
+                        try {
+                            xhr.open('HEAD', url, true);
+                            xhr.send();
+                        } catch (e) {
+                            resolve(false);
+                        }
+                    }
+                });
+            }
+
+            isSpecialLink(href) {
+                return href.startsWith('mailto:') || 
+                       href.startsWith('tel:') || 
+                       href.startsWith('javascript:') || 
+                       href.startsWith('#');
+            }
+
+            resetUI() {
+                this.brokenLinks = [];
+                this.checkedLinks = 0;
+                document.getElementById('results').innerHTML = '';
+                document.getElementById('summary').innerHTML = '';
+                document.getElementById('results').style.display = 'none';
+                document.getElementById('summary').style.display = 'none';
+            }
+
+            showProgress() {
+                document.querySelector('.progress-container').style.display = 'block';
+                this.updateProgress();
+            }
+
+            hideProgress() {
+                document.querySelector('.progress-container').style.display = 'none';
+            }
+
+            updateProgress() {
+                const percentage = ((this.checkedLinks / this.totalLinks) * 100).toFixed(1);
+                document.getElementById('progressBar').style.width = `${percentage}%`;
+                document.getElementById('progressText').textContent = 
+                    `تم فحص ${this.checkedLinks} من ${this.totalLinks} رابط (${percentage}%)`;
+            }
+
+            addLinkResult(href, message, type) {
+                const results = document.getElementById('results');
+                results.style.display = 'block';
+                
+                const resultDiv = document.createElement('div');
+                resultDiv.className = `link-result ${type}`;
+                
+                resultDiv.innerHTML = `
+                    <span class="status-icon">${type === 'success' ? '✅' : type === 'warning' ? '⚠️' : '❌'}</span>
+                    <span class="link-url">${href}</span>
+                    <span>${message}</span>
+                `;
+                
+                results.appendChild(resultDiv);
+            }
+
+            showSummary() {
+                const summary = document.getElementById('summary');
+                const workingLinks = this.checkedLinks - this.brokenLinks.length;
+                
+                let summaryClass = 'success';
+                let summaryMessage = '';
+                
+                if (this.brokenLinks.length === 0) {
+                    summaryMessage = `جميع الروابط (${this.checkedLinks}) تعمل بشكل صحيح!`;
+                } else if (this.brokenLinks.length <= 2) {
+                    summaryClass = 'warning';
+                    summaryMessage = `تم العثور على ${this.brokenLinks.length} روابط معطلة من أصل ${this.checkedLinks}`;
+                } else {
+                    summaryClass = 'error';
+                    summaryMessage = `تم العثور على ${this.brokenLinks.length} روابط معطلة من أصل ${this.checkedLinks}`;
+                }
+                
+                summary.className = `summary ${summaryClass}`;
+                summary.innerHTML = `
+                    <div>${summaryMessage}</div>
+                    ${this.brokenLinks.length > 0 ? 
+                        `<div style="margin-top: 10px;">الروابط المعطلة:<br>${this.brokenLinks.map(link => `• ${link}`).join('<br>')}</div>` : 
+                        ''
+                    }
+                `;
+                summary.style.display = 'block';
+            }
+
+            showMessage(message, type) {
+                const summary = document.getElementById('summary');
+                summary.className = `summary ${type}`;
+                summary.innerHTML = message;
+                summary.style.display = 'block';
+            }
+        }
+
+        // إضافة زر الفحص إلى الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkButton = document.getElementById('checkLinks');
+            checkButton.addEventListener('click', function() {
+                const checker = new ImprovedLinkChecker();
+                checker.checkAllLinks();
+            });
+        });
+    </script>
 </body>
 </html>
+</body>
+</html>
+
 
 
 
