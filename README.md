@@ -23,7 +23,7 @@
 4.	**منصة Noor-Book**  
    **Noor-Book Platform**  
    📍 `https://www.noor-book.com`  
-   💾 تحميل الكتب بصيغة PDF (14 كتابًا متاحًا)
+   💾 تحميل الكتب بصيغة PDF (44 كتابًا متاحًا)
 
 5.	**منصة Scribd**  
    **Scribd Platform**  
@@ -140,7 +140,6 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
 
 ## 📚 الكتب المتاحة | Available Books
 
-### 📖 الدراسات القرآنية | Quranic Studies
 
 #### العربية | Arabic
 
@@ -242,6 +241,83 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/the-jurisprudence/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt)  
    - [📖 تحميل PDF من Archive.org](https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf)
+10	**الحَيَاءُ - سياج الروح وبوصلة الفهم**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb)  
+   - [📖 تحميل PDF (مباشر)](books/modesty/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1_eMZ1jwOChzjZBKZsS5V1uwrZJvddk5u)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_)  
+   - [📝 النص الخام (مباشر)](books/modesty/ar/content.txt)  
+   - [🖼️ الغلاف](books/modesty/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org](https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt)
+
+11.	**وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP)  
+   - [📖 تحميل PDF (مباشر)](books/malakoot/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=13nlGntfmvlgozUIGF1GcT0RA-VEGSQ-P)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0)  
+   - [📝 النص الخام (مباشر)](books/malakoot/ar/content.txt)  
+   - [🖼️ الغلاف](books/malakoot/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org](https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%90%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf)
+
+12.	**السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV)  
+   - [📖 تحميل PDF (مباشر)](books/prostration-and-glorification-in-the-quran/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx)  
+   - [📝 النص الخام (مباشر)](books/prostration-and-glorification-in-the-quran/ar/content.txt)  
+   - [🖼️ الغلاف](books/prostration-and-glorification-in-the-quran/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org] (https://archive.org/stream/content_20250929/content_djvu.txt)
+   - [📖 تحميل PDF من Archive.org] (https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf) 
+
+13.	**المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0)  
+   - [📖 تحميل PDF (مباشر)](books/christ-and-mary-in-the-quran/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ)  
+   - [📝 النص الخام (مباشر)](books/christ-and-mary-in-the-quran/ar/content.txt)  
+   - [🖼️ الغلاف](books/christ-and-mary-in-the-quran/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]  (https://archive.org/stream/content_20250929/content_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org]( https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf)
+
+14.	**الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz)  
+   - [📖 تحميل PDF (مباشر)](books/names-in-the-holy/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD)  
+   - [📝 النص الخام (مباشر)](books/names-in-the-holy/ar/content.txt)  
+   - [🖼️ الغلاف](books/names-in-the-holy/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83_djvu.txt)  
+   - [📖 تحميل PDF من Archive.org](https://dn721500.ca.archive.org/0/items/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83.pdf)
+15.	الدم - شفرة الوجود التي أهملناها
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png",
+      "links": {
+        "ar": {
+          "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
+          "html": "https://drive.google.com/uc?export=download&id=1XbcwS_Fd-4Nsc7Z3zCCa4hjYWJWYH8WB",
+          "pdf": "books/blood/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1k0iB4fd-UntvLN1ilgBTzwYNm0_K7uwx",
+          "text": "books/blood/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1MVLKRtTXWWznmFzsmWHcqtxcabld7P4J",
+          "archive_text": "https://archive.org/stream/content_202510/content_djvu.txt",
+          "archive_pdf": "https://ia601302.us.archive.org/20/items/content_202510/content.pdf",
+
+16.	**ا شفرة القرآن - دليل التشغيل لعصر جديد **  
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/cover-ar.png",
+          "docx": "https://drive.google.com/uc?export=download&id=112916783205231143810&rtpof",
+          "html": "https://drive.google.com/uc?export=download&id=18DplqeILB0TPjyI3SleicZl2rkNOLk_L",
+          "pdf": "books/the-code-of-the-quran/ar/content.pdf",
+          "pdf_external": "https://drive.google.com/uc?export=download&id=1Qrq2wCg54qU_XZYa3sx9CaJU8GqtYGEE",
+          "text": "nasser-books/books/the-code-of-the-quran/ar/content.txt",
+          "text_external": "https://drive.google.com/uc?export=download&id=1VHl1GET6K2Xlj1PcBWFybKw-VtjqPbMp",
+          "archive_text": "https://archive.org/stream/content_20251016_1944/content_djvu.txt",
+          "archive_pdf": "https://ia902806.us.archive.org/12/items/content_20251016_1944/content.pdf"
 
 #### الإنجليزية | English
 
@@ -344,91 +420,8 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf)
 
-### ✨ الدراسات الإيمانية | Faith Studies
 
-#### العربية | Arabic
-
-1.	**الحَيَاءُ - سياج الروح وبوصلة الفهم**  
-   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb)  
-   - [📖 تحميل PDF (مباشر)](books/modesty/ar/content.pdf)  
-   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj)  
-   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1_eMZ1jwOChzjZBKZsS5V1uwrZJvddk5u)  
-   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_)  
-   - [📝 النص الخام (مباشر)](books/modesty/ar/content.txt)  
-   - [🖼️ الغلاف](books/modesty/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt)  
-   - [📖 تحميل PDF من Archive.org](https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt)
-
-2.	**وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما**  
-   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP)  
-   - [📖 تحميل PDF (مباشر)](books/malakoot/ar/content.pdf)  
-   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH)  
-   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=13nlGntfmvlgozUIGF1GcT0RA-VEGSQ-P)  
-   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0)  
-   - [📝 النص الخام (مباشر)](books/malakoot/ar/content.txt)  
-   - [🖼️ الغلاف](books/malakoot/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt)  
-   - [📖 تحميل PDF من Archive.org](https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%90%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf)
-
-3.	**السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي**  
-   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV)  
-   - [📖 تحميل PDF (مباشر)](books/prostration-and-glorification-in-the-quran/ar/content.pdf)  
-   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB)  
-   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe)  
-   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx)  
-   - [📝 النص الخام (مباشر)](books/prostration-and-glorification-in-the-quran/ar/content.txt)  
-   - [🖼️ الغلاف](books/prostration-and-glorification-in-the-quran/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org] (https://archive.org/stream/content_20250929/content_djvu.txt)
-   - [📖 تحميل PDF من Archive.org] (https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf) 
-
-4.	**المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني**  
-   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0)  
-   - [📖 تحميل PDF (مباشر)](books/christ-and-mary-in-the-quran/ar/content.pdf)  
-   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ)  
-   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni)  
-   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ)  
-   - [📝 النص الخام (مباشر)](books/christ-and-mary-in-the-quran/ar/content.txt)  
-   - [🖼️ الغلاف](books/christ-and-mary-in-the-quran/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org]  (https://archive.org/stream/content_20250929/content_djvu.txt)  
-   - [📖 تحميل PDF من Archive.org]( https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf)
-
-5.	**الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي**  
-   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz)  
-   - [📖 تحميل PDF (مباشر)](books/names-in-the-holy/ar/content.pdf)  
-   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o)  
-   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc)  
-   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD)  
-   - [📝 النص الخام (مباشر)](books/names-in-the-holy/ar/content.txt)  
-   - [🖼️ الغلاف](books/names-in-the-holy/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](https://archive.org/stream/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83_djvu.txt)  
-   - [📖 تحميل PDF من Archive.org](https://dn721500.ca.archive.org/0/items/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83.pdf)
-6.	الدم - شفرة الوجود التي أهملناها
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
-          "html": "https://drive.google.com/uc?export=download&id=1XbcwS_Fd-4Nsc7Z3zCCa4hjYWJWYH8WB",
-          "pdf": "books/blood/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1k0iB4fd-UntvLN1ilgBTzwYNm0_K7uwx",
-          "text": "books/blood/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1MVLKRtTXWWznmFzsmWHcqtxcabld7P4J",
-          "archive_text": "https://archive.org/stream/content_202510/content_djvu.txt",
-          "archive_pdf": "https://ia601302.us.archive.org/20/items/content_202510/content.pdf",
-
-7.	**ا شفرة القرآن - دليل التشغيل لعصر جديد **  
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/cover-ar.png",
-          "docx": "https://drive.google.com/uc?export=download&id=112916783205231143810&rtpof",
-          "html": "https://drive.google.com/uc?export=download&id=18DplqeILB0TPjyI3SleicZl2rkNOLk_L",
-          "pdf": "books/the-code-of-the-quran/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Qrq2wCg54qU_XZYa3sx9CaJU8GqtYGEE",
-          "text": "nasser-books/books/the-code-of-the-quran/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1VHl1GET6K2Xlj1PcBWFybKw-VtjqPbMp",
-          "archive_text": "https://archive.org/stream/content_20251016_1944/content_djvu.txt",
-          "archive_pdf": "https://ia902806.us.archive.org/12/items/content_20251016_1944/content.pdf"
-
-#### الإنجليزية | English
-
-1.	**MODESTY: The Fence of the Soul and the Compass of Understanding**  
+10.	**MODESTY: The Fence of the Soul and the Compass of Understanding**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2)  
    - [📖 Download PDF (direct)](books/modesty/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo)  
@@ -439,7 +432,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf)
 
-2.	**And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them**  
+11.	**And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT)  
    - [📖 Download PDF (direct)](books/malakoot/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N)  
@@ -450,7 +443,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://ia801600.us.archive.org/10/items/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM.pdf)
 
-3.	**Prostration and Glorification in the Quran: From Heartfelt Purification to Practical Submission**  
+12.	**Prostration and Glorification in the Quran: From Heartfelt Purification to Practical Submission**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo)  
    - [📖 Download PDF (direct)](books/prostration-and-glorification-in-the-quran/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd)  
@@ -461,7 +454,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://ia902803.us.archive.org/23/items/context_20250929/context.txt)  
    - [📖 Download PDF from Archive.org](https://ia902803.us.archive.org/23/items/context_20250929/context.pdf)
 
-4.	**Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model**  
+13.	**Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4)  
    - [📖 Download PDF (direct)](books/christ-and-mary-in-the-quran/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t)  
@@ -472,7 +465,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org]( https://archive.org/stream/context_202509/content_djvu.txt)  
    - [📖 Download PDF from Archive.org]( https://ia801003.us.archive.org/24/items/context_202509/content.pdf)
 
-5.	**The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management**  
+14.	**The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management**  
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy)  
    - [📖 Download PDF (direct)](books/names-in-the-holy/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu)  
@@ -482,7 +475,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ Cover](books/names-in-the-holy/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt)  
    - [📖 Download PDF from Archive.org](https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf)
-6.	Blood - the code of existence that we neglected
+15.	Blood - the code of existence that we neglected
           "docx": "https://drive.google.com/uc?export=download&id=1fBPcsCu_jI8ofN4yDnzVwNkVI7e4sovA",
           "html": "https://drive.google.com/uc?export=download&id=1zyy6ODjoXVlv7HitLJULKplYNkdyDob5",
           "pdf": "books/blood/en/content.pdf",
@@ -493,7 +486,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
           "archive_pdf": "https://ia801004.us.archive.org/5/items/content_20251016/content.pdf",
           "cover": "books/blood/en/cover-en.png"
 
-7.	** THE CODE OF THE QUR’AN - AN OPERATING MANUAL FOR A NEW AGE **
+16.	** THE CODE OF THE QUR’AN - AN OPERATING MANUAL FOR A NEW AGE **
         "en": "AN OPERATING MANUAL FOR A NEW AGE"
           "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
           "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
