@@ -3209,324 +3209,11 @@ class="download-link" target="_blank">🌐 Archive.org</a>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أداة فحص الروابط المحسنة</title>
-    <style>
-        :root {
-            --primary: #2c5f8a;
-            --success: #28a745;
-            --warning: #ffc107;
-            --danger: #dc3545;
-            --light: #f8f9fa;
-            --dark: #343a40;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-        }
-        
-        .controls {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-        
-        .button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .button:hover {
-            background: #1e4568;
-            transform: translateY(-2px);
-        }
-        
-        .button:disabled {
-            background: #6c757d;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .button.secondary {
-            background: #6c757d;
-        }
-        
-        .button.secondary:hover {
-            background: #545b62;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        
-        .stat-card {
-            background: var(--light);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            border-left: 4px solid var(--primary);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        
-        .stat-success { border-left-color: var(--success); }
-        .stat-warning { border-left-color: var(--warning); }
-        .stat-danger { border-left-color: var(--danger); }
-        
-        .progress-container {
-            margin: 25px 0;
-            background: #e9ecef;
-            border-radius: 8px;
-            padding: 15px;
-            display: none;
-        }
-        
-        .progress-header {
-            display: flex;
-            justify-content: between;
-            margin-bottom: 10px;
-        }
-        
-        .progress-bar {
-            height: 20px;
-            background: var(--primary);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.5s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        .results {
-            margin-top: 20px;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 20px;
-            max-height: 500px;
-            overflow-y: auto;
-            display: none;
-        }
-        
-        .filter-controls {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 8px 16px;
-            border: 1px solid #dee2e6;
-            background: white;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .link-result {
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s;
-        }
-        
-        .link-result:hover {
-            transform: translateX(5px);
-        }
-        
-        .link-result.success {
-            background: #d4edda;
-            border-left: 4px solid var(--success);
-        }
-        
-        .link-result.error {
-            background: #f8d7da;
-            border-left: 4px solid var(--danger);
-        }
-        
-        .link-result.warning {
-            background: #fff3cd;
-            border-left: 4px solid var(--warning);
-        }
-        
-        .link-result.skipped {
-            background: #e2e3e5;
-            border-left: 4px solid #6c757d;
-        }
-        
-        .status-icon {
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-        
-        .link-info {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .link-url {
-            word-break: break-all;
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-        
-        .link-message {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .link-actions {
-            display: flex;
-            gap: 8px;
-            flex-shrink: 0;
-        }
-        
-        .action-btn {
-            padding: 6px 12px;
-            border: 1px solid #dee2e6;
-            background: white;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s;
-        }
-        
-        .action-btn:hover {
-            background: #f8f9fa;
-        }
-        
-        .summary {
-            margin-top: 25px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            display: none;
-        }
-        
-        .summary.success {
-            background: #d4edda;
-            color: #155724;
-        }
-        
-        .summary.warning {
-            background: #fff3cd;
-            color: #856404;
-        }
-        
-        .summary.error {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        
-        .broken-links {
-            margin-top: 15px;
-            text-align: right;
-        }
-        
-        .broken-link {
-            padding: 8px;
-            margin: 5px 0;
-            background: rgba(220, 53, 69, 0.1);
-            border-radius: 4px;
-            word-break: break-all;
-        }
-        
-        @media (max-width: 768px) {
-            .controls {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .button {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .link-result {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            
-            .link-actions {
-                align-self: flex-end;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🔍 أداة فحص الروابط المحسنة</h1>
-        
+<!-- أداة فحص الروابط المحسنة -->
+<section id="link-checker" class="language-section" style="margin-top: 40px;">
+    <h2>🔍 أداة فحص الروابط الذكية</h2>
+    
+    <div class="link-checker-container">
         <div class="controls">
             <button id="checkLinks" class="button">
                 <span>بدء فحص الروابط</span>
@@ -3548,13 +3235,13 @@ class="download-link" target="_blank">🌐 Archive.org</a>
                 <div>الروابط السليمة</div>
                 <div class="stat-number" id="workingLinks">0</div>
             </div>
+            <div class="stat-card stat-warning">
+                <div>مجلدات بدون index</div>
+                <div class="stat-number" id="folderLinks">0</div>
+            </div>
             <div class="stat-card stat-danger">
                 <div>الروابط المعطلة</div>
                 <div class="stat-number" id="brokenLinks">0</div>
-            </div>
-            <div class="stat-card stat-warning">
-                <div>الروابط المشبوهة</div>
-                <div class="stat-number" id="warningLinks">0</div>
             </div>
         </div>
         
@@ -3572,451 +3259,806 @@ class="download-link" target="_blank">🌐 Archive.org</a>
         <div class="filter-controls">
             <button class="filter-btn active" data-filter="all">الكل</button>
             <button class="filter-btn" data-filter="success">السليمة</button>
+            <button class="filter-btn" data-filter="folder">المجلدات</button>
             <button class="filter-btn" data-filter="error">المعطلة</button>
-            <button class="filter-btn" data-filter="warning">المشبوهة</button>
         </div>
         
-        <div id="results" class="results"></div>
+        <div id="linkResults" class="results"></div>
         
-        <div id="summary" class="summary"></div>
+        <div id="linkSummary" class="summary"></div>
     </div>
+</section>
 
-    <script>
-        class EnhancedLinkChecker {
-            constructor() {
-                this.links = [];
-                this.results = new Map();
-                this.isChecking = false;
-                this.abortController = null;
-                this.concurrentRequests = 5;
-                this.timeout = 15000;
-                
-                this.initializeElements();
-                this.bindEvents();
+<style>
+/* أنماط أداة فحص الروابط */
+.link-checker-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.link-checker-container .controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.link-checker-container .button {
+    background: #2c5f8a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-checker-container .button:hover {
+    background: #1e4568;
+    transform: translateY(-2px);
+}
+
+.link-checker-container .button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.link-checker-container .button.secondary {
+    background: #6c757d;
+}
+
+.link-checker-container .button.secondary:hover {
+    background: #545b62;
+}
+
+.link-checker-container .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.link-checker-container .stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #2c5f8a;
+}
+
+.link-checker-container .stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.link-checker-container .stat-success { border-left-color: #28a745; }
+.link-checker-container .stat-warning { border-left-color: #ffc107; }
+.link-checker-container .stat-danger { border-left-color: #dc3545; }
+
+.link-checker-container .progress-container {
+    margin: 25px 0;
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    display: none;
+}
+
+.link-checker-container .progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.link-checker-container .progress-bar {
+    height: 20px;
+    background: #2c5f8a;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-checker-container .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.link-checker-container .results {
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: none;
+}
+
+.link-checker-container .filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.link-checker-container .filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.link-checker-container .filter-btn.active {
+    background: #2c5f8a;
+    color: white;
+    border-color: #2c5f8a;
+}
+
+.link-checker-container .link-result {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.link-checker-container .link-result:hover {
+    transform: translateX(5px);
+}
+
+.link-checker-container .link-result.success {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.link-checker-container .link-result.error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.link-checker-container .link-result.folder {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.link-checker-container .link-result.skipped {
+    background: #e2e3e5;
+    border-left: 4px solid #6c757d;
+}
+
+.link-checker-container .status-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.link-checker-container .link-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.link-checker-container .link-url {
+    word-break: break-all;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.link-checker-container .link-message {
+    font-size: 13px;
+    color: #666;
+}
+
+.link-checker-container .link-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.link-checker-container .action-btn {
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.link-checker-container .action-btn:hover {
+    background: #f8f9fa;
+}
+
+.link-checker-container .summary {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.link-checker-container .summary.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.link-checker-container .summary.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.link-checker-container .summary.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.link-checker-container .broken-links {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.link-checker-container .broken-link {
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(220, 53, 69, 0.1);
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+.link-checker-container .folder-info {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff3cd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .link-checker-container .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .link-checker-container .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .link-checker-container .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .link-checker-container .link-result {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .link-checker-container .link-actions {
+        align-self: flex-end;
+    }
+}
+</style>
+
+<script>
+class SmartLinkChecker {
+    constructor() {
+        this.links = [];
+        this.results = new Map();
+        this.isChecking = false;
+        this.abortController = null;
+        this.concurrentRequests = 3; // تقليل الطلبات المتزامنة
+        this.timeout = 10000;
+        
+        this.initializeElements();
+        this.bindEvents();
+    }
+    
+    initializeElements() {
+        this.elements = {
+            checkBtn: document.getElementById('checkLinks'),
+            stopBtn: document.getElementById('stopCheck'),
+            exportBtn: document.getElementById('exportResults'),
+            progressContainer: document.getElementById('progressContainer'),
+            progressBar: document.getElementById('progressBar'),
+            progressText: document.getElementById('progressText'),
+            currentLink: document.getElementById('currentLink'),
+            results: document.getElementById('linkResults'),
+            summary: document.getElementById('linkSummary'),
+            stats: {
+                total: document.getElementById('totalLinks'),
+                working: document.getElementById('workingLinks'),
+                folder: document.getElementById('folderLinks'),
+                broken: document.getElementById('brokenLinks')
             }
+        };
+    }
+    
+    bindEvents() {
+        this.elements.checkBtn.addEventListener('click', () => this.startCheck());
+        this.elements.stopBtn.addEventListener('click', () => this.stopCheck());
+        this.elements.exportBtn.addEventListener('click', () => this.exportResults());
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => this.filterResults(e.target));
+        });
+    }
+    
+    async startCheck() {
+        if (this.isChecking) return;
+        
+        this.links = Array.from(document.querySelectorAll('a[href]'));
+        
+        if (this.links.length === 0) {
+            this.showMessage('لم يتم العثور على أي روابط للفحص', 'warning');
+            return;
+        }
+        
+        this.resetUI();
+        this.isChecking = true;
+        this.updateButtons();
+        this.showProgress();
+        
+        this.elements.stats.total.textContent = this.links.length;
+        
+        const batches = this.chunkArray(this.links, this.concurrentRequests);
+        this.abortController = new AbortController();
+        
+        try {
+            for (let i = 0; i < batches.length; i++) {
+                if (this.abortController.signal.aborted) break;
+                
+                const batch = batches[i];
+                const promises = batch.map(link => this.checkLink(link));
+                
+                await Promise.allSettled(promises);
+                this.updateProgress();
+            }
+        } catch (error) {
+            console.error('Error during link checking:', error);
+        }
+        
+        this.completeCheck();
+    }
+    
+    stopCheck() {
+        if (this.abortController) {
+            this.abortController.abort();
+        }
+        this.isChecking = false;
+        this.updateButtons();
+        this.showMessage('تم إيقاف الفحص', 'warning');
+    }
+    
+    async checkLink(linkElement) {
+        const href = linkElement.href;
+        const linkKey = href + '|' + (linkElement.textContent || '').substring(0, 50);
+        
+        if (this.results.has(linkKey)) return;
+        
+        this.elements.currentLink.textContent = this.truncateUrl(href, 60);
+        
+        // تخطي الروابط الخاصة
+        if (this.isSpecialLink(href)) {
+            this.results.set(linkKey, {
+                element: linkElement,
+                href: href,
+                status: 'skipped',
+                valid: true,
+                message: 'رابط خاص (تم تخطيه)'
+            });
+            this.updateStats();
+            return;
+        }
+        
+        try {
+            // التحقق من نوع الرابط
+            const linkType = this.analyzeLinkType(href);
             
-            initializeElements() {
-                this.elements = {
-                    checkBtn: document.getElementById('checkLinks'),
-                    stopBtn: document.getElementById('stopCheck'),
-                    exportBtn: document.getElementById('exportResults'),
-                    progressContainer: document.getElementById('progressContainer'),
-                    progressBar: document.getElementById('progressBar'),
-                    progressText: document.getElementById('progressText'),
-                    currentLink: document.getElementById('currentLink'),
-                    results: document.getElementById('results'),
-                    summary: document.getElementById('summary'),
-                    stats: {
-                        total: document.getElementById('totalLinks'),
-                        working: document.getElementById('workingLinks'),
-                        broken: document.getElementById('brokenLinks'),
-                        warning: document.getElementById('warningLinks')
-                    }
+            if (linkType === 'folder') {
+                // للمجلدات: نتحقق من وجود أي ملفات بداخلها
+                const folderResult = await this.checkFolderLink(href);
+                this.results.set(linkKey, folderResult);
+            } else {
+                // للملفات: التحقق العادي
+                const fileResult = await this.checkFileLink(href);
+                this.results.set(linkKey, fileResult);
+            }
+        } catch (error) {
+            this.results.set(linkKey, {
+                element: linkElement,
+                href: href,
+                status: 'error',
+                valid: false,
+                message: `خطأ في الفحص: ${error.message}`
+            });
+        }
+        
+        this.updateStats();
+        this.displayResult(this.results.get(linkKey));
+    }
+    
+    analyzeLinkType(url) {
+        // تحليل نوع الرابط
+        if (url.endsWith('/')) {
+            return 'folder';
+        } else if (url.match(/\.(html|htm|php|asp|aspx)$/i)) {
+            return 'page';
+        } else if (url.match(/\.(pdf|docx?|xlsx?|pptx?|txt)$/i)) {
+            return 'file';
+        } else if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)) {
+            return 'image';
+        } else {
+            return 'unknown';
+        }
+    }
+    
+    async checkFolderLink(url) {
+        // للمجلدات: نتحقق من وجود ملفات مشتركة
+        const commonFiles = ['index.html', 'index.htm', 'default.html', 'content.pdf', 'content.txt'];
+        
+        for (const file of commonFiles) {
+            const fileUrl = url + file;
+            const result = await this.tryFetch(fileUrl, 'HEAD');
+            
+            if (result.success && result.status === 200) {
+                return {
+                    element: null,
+                    href: url,
+                    status: 'folder',
+                    valid: true,
+                    message: `📁 مجلد - يوجد ${file} بداخله`,
+                    detectedFile: file
                 };
-            }
-            
-            bindEvents() {
-                this.elements.checkBtn.addEventListener('click', () => this.startCheck());
-                this.elements.stopBtn.addEventListener('click', () => this.stopCheck());
-                this.elements.exportBtn.addEventListener('click', () => this.exportResults());
-                
-                // إضافة أحداث الفلترة
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.addEventListener('click', (e) => this.filterResults(e.target));
-                });
-            }
-            
-            async startCheck() {
-                if (this.isChecking) return;
-                
-                this.links = Array.from(document.querySelectorAll('a[href]'));
-                
-                if (this.links.length === 0) {
-                    this.showMessage('لم يتم العثور على أي روابط للفحص', 'warning');
-                    return;
-                }
-                
-                this.resetUI();
-                this.isChecking = true;
-                this.updateButtons();
-                this.showProgress();
-                
-                this.elements.stats.total.textContent = this.links.length;
-                
-                // تقسيم الروابط إلى مجموعات للمعالجة المتوازية
-                const batches = this.chunkArray(this.links, this.concurrentRequests);
-                this.abortController = new AbortController();
-                
-                try {
-                    for (let i = 0; i < batches.length; i++) {
-                        if (this.abortController.signal.aborted) break;
-                        
-                        const batch = batches[i];
-                        const promises = batch.map(link => this.checkLink(link));
-                        
-                        await Promise.allSettled(promises);
-                        this.updateProgress();
-                    }
-                } catch (error) {
-                    console.error('Error during link checking:', error);
-                }
-                
-                this.completeCheck();
-            }
-            
-            stopCheck() {
-                if (this.abortController) {
-                    this.abortController.abort();
-                }
-                this.isChecking = false;
-                this.updateButtons();
-                this.showMessage('تم إيقاف الفحص', 'warning');
-            }
-            
-            async checkLink(linkElement) {
-                const href = linkElement.href;
-                const linkKey = href + '|' + (linkElement.textContent || '').substring(0, 50);
-                
-                if (this.results.has(linkKey)) return;
-                
-                // تحديث الرابط الحالي
-                this.elements.currentLink.textContent = this.truncateUrl(href, 60);
-                
-                // تخطي الروابط الخاصة
-                if (this.isSpecialLink(href)) {
-                    this.results.set(linkKey, {
-                        element: linkElement,
-                        href: href,
-                        status: 'skipped',
-                        valid: true,
-                        message: 'رابط خاص (تم تخطيه)'
-                    });
-                    this.updateStats();
-                    return;
-                }
-                
-                try {
-                    // المحاولة الأولى: استخدام fetch مع HEAD
-                    const result = await this.tryFetch(href, 'HEAD');
-                    
-                    if (result.success) {
-                        this.results.set(linkKey, {
-                            element: linkElement,
-                            href: href,
-                            status: result.status === 200 ? 'success' : 'error',
-                            valid: result.status === 200,
-                            message: result.status === 200 ? 'الرابط يعمل' : `الرابط معطل (الحالة: ${result.status})`,
-                            statusCode: result.status
-                        });
-                    } else {
-                        // المحاولة الثانية: استخدام fetch مع GET
-                        const getResult = await this.tryFetch(href, 'GET');
-                        
-                        if (getResult.success) {
-                            this.results.set(linkKey, {
-                                element: linkElement,
-                                href: href,
-                                status: getResult.status === 200 ? 'success' : 'error',
-                                valid: getResult.status === 200,
-                                message: getResult.status === 200 ? 'الرابط يعمل' : `الرابط معطل (الحالة: ${getResult.status})`,
-                                statusCode: getResult.status
-                            });
-                        } else {
-                            // المحاولة الثالثة: استخدام الطرق البديلة
-                            const altResult = await this.tryAlternativeMethods(href);
-                            
-                            this.results.set(linkKey, {
-                                element: linkElement,
-                                href: href,
-                                status: altResult.valid ? 'warning' : 'error',
-                                valid: altResult.valid,
-                                message: altResult.message
-                            });
-                        }
-                    }
-                } catch (error) {
-                    this.results.set(linkKey, {
-                        element: linkElement,
-                        href: href,
-                        status: 'error',
-                        valid: false,
-                        message: `خطأ في الفحص: ${error.message}`
-                    });
-                }
-                
-                this.updateStats();
-                this.displayResult(this.results.get(linkKey));
-            }
-            
-            async tryFetch(url, method = 'HEAD') {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), this.timeout);
-                
-                try {
-                    const response = await fetch(url, {
-                        method: method,
-                        signal: controller.signal,
-                        cache: 'no-cache',
-                        mode: 'no-cors'
-                    });
-                    
-                    clearTimeout(timeoutId);
-                    return { success: true, status: response.status };
-                } catch (error) {
-                    clearTimeout(timeoutId);
-                    return { success: false, error: error };
-                }
-            }
-            
-            async tryAlternativeMethods(url) {
-                return new Promise((resolve) => {
-                    // طريقة Image للصور
-                    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i)) {
-                        const img = new Image();
-                        img.onload = () => resolve({ valid: true, message: 'الصورة موجودة (التحقق البديل)' });
-                        img.onerror = () => resolve({ valid: false, message: 'الصورة غير موجودة' });
-                        img.src = url;
-                        setTimeout(() => resolve({ valid: false, message: 'انتهت مهلة تحقق الصورة' }), 8000);
-                    } 
-                    // طريقة XMLHttpRequest
-                    else {
-                        const xhr = new XMLHttpRequest();
-                        xhr.timeout = 8000;
-                        
-                        xhr.onreadystatechange = () => {
-                            if (xhr.readyState === 4) {
-                                resolve({ 
-                                    valid: xhr.status === 200, 
-                                    message: xhr.status === 200 ? 
-                                        'الرابط يعمل (التحقق البديل)' : 
-                                        `الرابط معطل (الحالة: ${xhr.status})` 
-                                });
-                            }
-                        };
-                        
-                        xhr.ontimeout = () => resolve({ valid: false, message: 'انتهت مهلة التحقق البديل' });
-                        xhr.onerror = () => resolve({ valid: false, message: 'خطأ في التحقق البديل' });
-                        
-                        try {
-                            xhr.open('GET', url, true);
-                            xhr.send();
-                        } catch (e) {
-                            resolve({ valid: false, message: 'فشل التحقق البديل' });
-                        }
-                    }
-                });
-            }
-            
-            isSpecialLink(href) {
-                return href.startsWith('mailto:') || 
-                       href.startsWith('tel:') || 
-                       href.startsWith('javascript:') || 
-                       href.startsWith('#') ||
-                       href.includes('archive.org') ||
-                       href.includes('drive.google.com');
-            }
-            
-            chunkArray(array, size) {
-                const chunks = [];
-                for (let i = 0; i < array.length; i += size) {
-                    chunks.push(array.slice(i, i + size));
-                }
-                return chunks;
-            }
-            
-            truncateUrl(url, maxLength) {
-                if (url.length <= maxLength) return url;
-                return url.substring(0, maxLength - 3) + '...';
-            }
-            
-            updateProgress() {
-                const percentage = ((this.results.size / this.links.length) * 100).toFixed(1);
-                this.elements.progressBar.style.width = `${percentage}%`;
-                this.elements.progressText.textContent = `${percentage}%`;
-            }
-            
-            updateStats() {
-                const stats = {
-                    working: 0,
-                    broken: 0,
-                    warning: 0
-                };
-                
-                this.results.forEach(result => {
-                    if (result.status === 'success') stats.working++;
-                    else if (result.status === 'error') stats.broken++;
-                    else if (result.status === 'warning') stats.warning++;
-                });
-                
-                this.elements.stats.working.textContent = stats.working;
-                this.elements.stats.broken.textContent = stats.broken;
-                this.elements.stats.warning.textContent = stats.warning;
-            }
-            
-            displayResult(result) {
-                const resultDiv = document.createElement('div');
-                resultDiv.className = `link-result ${result.status}`;
-                resultDiv.dataset.status = result.status;
-                
-                const statusIcon = result.status === 'success' ? '✅' : 
-                                 result.status === 'error' ? '❌' : 
-                                 result.status === 'warning' ? '⚠️' : '⚪';
-                
-                resultDiv.innerHTML = `
-                    <span class="status-icon">${statusIcon}</span>
-                    <div class="link-info">
-                        <div class="link-url" title="${result.href}">${this.truncateUrl(result.href, 80)}</div>
-                        <div class="link-message">${result.message}</div>
-                    </div>
-                    <div class="link-actions">
-                        <button class="action-btn" onclick="window.open('${result.href}', '_blank')">فتح</button>
-                        <button class="action-btn" onclick="navigator.clipboard.writeText('${result.href}')">نسخ</button>
-                    </div>
-                `;
-                
-                this.elements.results.appendChild(resultDiv);
-                this.elements.results.style.display = 'block';
-            }
-            
-            filterResults(button) {
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                button.classList.add('active');
-                
-                const filter = button.dataset.filter;
-                const results = this.elements.results.querySelectorAll('.link-result');
-                
-                results.forEach(result => {
-                    if (filter === 'all' || result.dataset.status === filter) {
-                        result.style.display = 'flex';
-                    } else {
-                        result.style.display = 'none';
-                    }
-                });
-            }
-            
-            completeCheck() {
-                this.isChecking = false;
-                this.updateButtons();
-                this.hideProgress();
-                this.showSummary();
-            }
-            
-            showSummary() {
-                const total = this.links.length;
-                const working = parseInt(this.elements.stats.working.textContent);
-                const broken = parseInt(this.elements.stats.broken.textContent);
-                const warning = parseInt(this.elements.stats.warning.textContent);
-                
-                let summaryClass = 'success';
-                let summaryMessage = '';
-                
-                if (broken === 0 && warning === 0) {
-                    summaryMessage = `✅ جميع الروابط (${total}) تعمل بشكل صحيح!`;
-                } else if (broken <= 3) {
-                    summaryClass = 'warning';
-                    summaryMessage = `⚠️ تم العثور على ${broken} روابط معطلة و ${warning} روابط مشبوهة من أصل ${total}`;
-                } else {
-                    summaryClass = 'error';
-                    summaryMessage = `❌ تم العثور على ${broken} روابط معطلة و ${warning} روابط مشبوهة من أصل ${total}`;
-                }
-                
-                // جمع الروابط المعطلة
-                const brokenLinks = [];
-                this.results.forEach(result => {
-                    if (result.status === 'error') {
-                        brokenLinks.push(result.href);
-                    }
-                });
-                
-                this.elements.summary.className = `summary ${summaryClass}`;
-                this.elements.summary.innerHTML = `
-                    <div>${summaryMessage}</div>
-                    ${brokenLinks.length > 0 ? `
-                        <div class="broken-links">
-                            <strong>الروابط المعطلة:</strong>
-                            ${brokenLinks.map(link => `
-                                <div class="broken-link">${link}</div>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-                `;
-                this.elements.summary.style.display = 'block';
-            }
-            
-            exportResults() {
-                const results = Array.from(this.results.values());
-                const csvContent = this.convertToCSV(results);
-                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                
-                link.setAttribute('href', url);
-                link.setAttribute('download', 'نتائج_فحص_الروابط.csv');
-                link.style.visibility = 'hidden';
-                
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-            
-            convertToCSV(results) {
-                const headers = ['الرابط', 'الحالة', 'الرسالة', 'الكود'];
-                const rows = results.map(result => [
-                    result.href,
-                    result.status === 'success' ? 'سليم' : result.status === 'error' ? 'معطل' : 'مشبوه',
-                    result.message,
-                    result.statusCode || 'N/A'
-                ]);
-                
-                return [headers, ...rows]
-                    .map(row => row.map(cell => `"${cell}"`).join(','))
-                    .join('\n');
-            }
-            
-            resetUI() {
-                this.results.clear();
-                this.elements.results.innerHTML = '';
-                this.elements.summary.innerHTML = '';
-                this.elements.results.style.display = 'none';
-                this.elements.summary.style.display = 'none';
-                
-                this.elements.stats.working.textContent = '0';
-                this.elements.stats.broken.textContent = '0';
-                this.elements.stats.warning.textContent = '0';
-            }
-            
-            showProgress() {
-                this.elements.progressContainer.style.display = 'block';
-                this.elements.progressBar.style.width = '0%';
-                this.elements.progressText.textContent = '0%';
-            }
-            
-            hideProgress() {
-                this.elements.progressContainer.style.display = 'none';
-                this.elements.currentLink.textContent = '-';
-            }
-            
-            updateButtons() {
-                this.elements.checkBtn.disabled = this.isChecking;
-                this.elements.stopBtn.disabled = !this.isChecking;
-            }
-            
-            showMessage(message, type) {
-                alert(message);
             }
         }
         
-        // تهيئة الأداة عند تحميل الصفحة
-        document.addEventListener('DOMContentLoaded', function() {
-            window.linkChecker = new EnhancedLinkChecker();
+        // إذا لم نجد أي ملفات، نعتبره مجلدًا بدون index
+        return {
+            element: null,
+            href: url,
+            status: 'folder',
+            valid: false,
+            message: '📁 مجلد - لا توجد صفحة افتراضية (index.html)'
+        };
+    }
+    
+    async checkFileLink(url) {
+        const result = await this.tryFetch(url, 'HEAD');
+        
+        if (result.success) {
+            return {
+                element: null,
+                href: url,
+                status: result.status === 200 ? 'success' : 'error',
+                valid: result.status === 200,
+                message: result.status === 200 ? '✅ الرابط يعمل' : `❌ الرابط معطل (الحالة: ${result.status})`,
+                statusCode: result.status
+            };
+        } else {
+            // المحاولة بطريقة بديلة
+            const altResult = await this.tryAlternativeMethods(url);
+            
+            return {
+                element: null,
+                href: url,
+                status: altResult.valid ? 'success' : 'error',
+                valid: altResult.valid,
+                message: altResult.message
+            };
+        }
+    }
+    
+    async tryFetch(url, method = 'HEAD') {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), this.timeout);
+        
+        try {
+            const response = await fetch(url, {
+                method: method,
+                signal: controller.signal,
+                cache: 'no-cache',
+                mode: 'no-cors'
+            });
+            
+            clearTimeout(timeoutId);
+            return { success: true, status: response.status };
+        } catch (error) {
+            clearTimeout(timeoutId);
+            return { success: false, error: error };
+        }
+    }
+    
+    async tryAlternativeMethods(url) {
+        return new Promise((resolve) => {
+            if (url.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i)) {
+                const img = new Image();
+                img.onload = () => resolve({ valid: true, message: '✅ الصورة موجودة' });
+                img.onerror = () => resolve({ valid: false, message: '❌ الصورة غير موجودة' });
+                img.src = url;
+                setTimeout(() => resolve({ valid: false, message: '❌ انتهت مهلة تحقق الصورة' }), 5000);
+            } else {
+                const xhr = new XMLHttpRequest();
+                xhr.timeout = 5000;
+                
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4) {
+                        resolve({ 
+                            valid: xhr.status === 200, 
+                            message: xhr.status === 200 ? 
+                                '✅ الرابط يعمل (التحقق البديل)' : 
+                                `❌ الرابط معطل (الحالة: ${xhr.status})` 
+                        });
+                    }
+                };
+                
+                xhr.ontimeout = () => resolve({ valid: false, message: '❌ انتهت مهلة التحقق البديل' });
+                xhr.onerror = () => resolve({ valid: false, message: '❌ خطأ في التحقق البديل' });
+                
+                try {
+                    xhr.open('GET', url, true);
+                    xhr.send();
+                } catch (e) {
+                    resolve({ valid: false, message: '❌ فشل التحقق البديل' });
+                }
+            }
         });
-    </script>
+    }
+    
+    isSpecialLink(href) {
+        return href.startsWith('mailto:') || 
+               href.startsWith('tel:') || 
+               href.startsWith('javascript:') || 
+               href.startsWith('#') ||
+               href.includes('archive.org') ||
+               href.includes('drive.google.com');
+    }
+    
+    chunkArray(array, size) {
+        const chunks = [];
+        for (let i = 0; i < array.length; i += size) {
+            chunks.push(array.slice(i, i + size));
+        }
+        return chunks;
+    }
+    
+    truncateUrl(url, maxLength) {
+        if (url.length <= maxLength) return url;
+        return url.substring(0, maxLength - 3) + '...';
+    }
+    
+    updateProgress() {
+        const percentage = ((this.results.size / this.links.length) * 100).toFixed(1);
+        this.elements.progressBar.style.width = `${percentage}%`;
+        this.elements.progressText.textContent = `${percentage}%`;
+    }
+    
+    updateStats() {
+        const stats = {
+            working: 0,
+            folder: 0,
+            broken: 0
+        };
+        
+        this.results.forEach(result => {
+            if (result.status === 'success') stats.working++;
+            else if (result.status === 'folder') stats.folder++;
+            else if (result.status === 'error') stats.broken++;
+        });
+        
+        this.elements.stats.working.textContent = stats.working;
+        this.elements.stats.folder.textContent = stats.folder;
+        this.elements.stats.broken.textContent = stats.broken;
+    }
+    
+    displayResult(result) {
+        const resultDiv = document.createElement('div');
+        resultDiv.className = `link-result ${result.status}`;
+        resultDiv.dataset.status = result.status;
+        
+        const statusIcon = result.status === 'success' ? '✅' : 
+                         result.status === 'error' ? '❌' : 
+                         result.status === 'folder' ? '📁' : '⚪';
+        
+        resultDiv.innerHTML = `
+            <span class="status-icon">${statusIcon}</span>
+            <div class="link-info">
+                <div class="link-url" title="${result.href}">${this.truncateUrl(result.href, 80)}</div>
+                <div class="link-message">${result.message}</div>
+                ${result.detectedFile ? `
+                    <div class="folder-info">
+                        <strong>ملف مكتشف:</strong> ${result.detectedFile}
+                    </div>
+                ` : ''}
+            </div>
+            <div class="link-actions">
+                <button class="action-btn" onclick="window.open('${result.href}', '_blank')">فتح</button>
+                <button class="action-btn" onclick="navigator.clipboard.writeText('${result.href}')">نسخ</button>
+            </div>
+        `;
+        
+        this.elements.results.appendChild(resultDiv);
+        this.elements.results.style.display = 'block';
+    }
+    
+    filterResults(button) {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+        
+        const filter = button.dataset.filter;
+        const results = this.elements.results.querySelectorAll('.link-result');
+        
+        results.forEach(result => {
+            if (filter === 'all' || result.dataset.status === filter) {
+                result.style.display = 'flex';
+            } else {
+                result.style.display = 'none';
+            }
+        });
+    }
+    
+    completeCheck() {
+        this.isChecking = false;
+        this.updateButtons();
+        this.hideProgress();
+        this.showSummary();
+    }
+    
+    showSummary() {
+        const total = this.links.length;
+        const working = parseInt(this.elements.stats.working.textContent);
+        const folder = parseInt(this.elements.stats.folder.textContent);
+        const broken = parseInt(this.elements.stats.broken.textContent);
+        
+        let summaryClass = 'success';
+        let summaryMessage = '';
+        
+        if (broken === 0) {
+            summaryMessage = `✅ جميع الروابط تعمل بشكل صحيح! (${working} ملفات + ${folder} مجلدات)`;
+        } else if (broken <= 5) {
+            summaryClass = 'warning';
+            summaryMessage = `⚠️ تم العثور على ${broken} روابط معطلة من أصل ${total}`;
+        } else {
+            summaryClass = 'error';
+            summaryMessage = `❌ تم العثور على ${broken} روابط معطلة من أصل ${total}`;
+        }
+        
+        // جمع الروابط المعطلة
+        const brokenLinks = [];
+        const folderLinks = [];
+        
+        this.results.forEach(result => {
+            if (result.status === 'error') {
+                brokenLinks.push(result.href);
+            } else if (result.status === 'folder' && !result.valid) {
+                folderLinks.push(result.href);
+            }
+        });
+        
+        this.elements.summary.className = `summary ${summaryClass}`;
+        this.elements.summary.innerHTML = `
+            <div>${summaryMessage}</div>
+            ${brokenLinks.length > 0 ? `
+                <div class="broken-links">
+                    <strong>الروابط المعطلة الحقيقية:</strong>
+                    ${brokenLinks.map(link => `
+                        <div class="broken-link">${link}</div>
+                    `).join('')}
+                </div>
+            ` : ''}
+            ${folderLinks.length > 0 ? `
+                <div class="broken-links" style="margin-top: 10px;">
+                    <strong>المجلدات بدون صفحات افتراضية:</strong>
+                    <div style="font-size: 14px; color: #666; margin-bottom: 8px;">
+                        هذه المجلدات موجودة ولكنها تحتاج إلى صفحة index.html
+                    </div>
+                    ${folderLinks.map(link => `
+                        <div class="broken-link">${link}</div>
+                    `).join('')}
+                </div>
+            ` : ''}
+        `;
+        this.elements.summary.style.display = 'block';
+    }
+    
+    exportResults() {
+        const results = Array.from(this.results.values());
+        const csvContent = this.convertToCSV(results);
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'نتائج_فحص_الروابط.csv');
+        link.style.visibility = 'hidden';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
+    convertToCSV(results) {
+        const headers = ['الرابط', 'النوع', 'الحالة', 'الرسالة', 'الكود'];
+        const rows = results.map(result => [
+            result.href,
+            result.status === 'folder' ? 'مجلد' : 'ملف',
+            result.status === 'success' ? 'سليم' : result.status === 'error' ? 'معطل' : 'مجلد',
+            result.message,
+            result.statusCode || 'N/A'
+        ]);
+        
+        return [headers, ...rows]
+            .map(row => row.map(cell => `"${cell}"`).join(','))
+            .join('\n');
+    }
+    
+    resetUI() {
+        this.results.clear();
+        this.elements.results.innerHTML = '';
+        this.elements.summary.innerHTML = '';
+        this.elements.results.style.display = 'none';
+        this.elements.summary.style.display = 'none';
+        
+        this.elements.stats.working.textContent = '0';
+        this.elements.stats.folder.textContent = '0';
+        this.elements.stats.broken.textContent = '0';
+    }
+    
+    showProgress() {
+        this.elements.progressContainer.style.display = 'block';
+        this.elements.progressBar.style.width = '0%';
+        this.elements.progressText.textContent = '0%';
+    }
+    
+    hideProgress() {
+        this.elements.progressContainer.style.display = 'none';
+        this.elements.currentLink.textContent = '-';
+    }
+    
+    updateButtons() {
+        this.elements.checkBtn.disabled = this.isChecking;
+        this.elements.stopBtn.disabled = !this.isChecking;
+    }
+    
+    showMessage(message, type) {
+        alert(message);
+    }
+}
+
+// تهيئة الأداة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    window.linkChecker = new SmartLinkChecker();
+});
+</script>
 </body>
 </html>
 </body>
 </html>
+
 
 
 
