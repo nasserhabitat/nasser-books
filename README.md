@@ -698,7 +698,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org](https://archive.org/details/20251111_20251111_2033)  
 
 21.	**THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD**  
-   - [📄 Download DOCX](https://drive.google.com/uc?export=11S6GcaazsQ65zIHE6VmfjYOsr7ROSJWu)  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=11S6GcaazsQ65zIHE6VmfjYOsr7ROSJWu)  
    - [📖 Download PDF (direct)](books/the-universe/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a)  
    - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1FNkEgRLOPW-WfX8sL2H7svz4yNwUTZ20)  
