@@ -30,27 +30,27 @@
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png",
       "links": {
         "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz",
-          "pdf": "books/names-in-the-holy/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o",
-          "html": "https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc",
-          "text": "books/names-in-the-holy/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD",
-          "cover": "books/names-in-the-holy/ar/cover-ar.png",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83_djvu.txt",
-          "archive_pdf": "https://dn721500.ca.archive.org/0/items/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83.pdf"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu",
-          "html": "https://drive.google.com/uc?export=download&id=12cV5qFDaZ-0SzQGInIn9cP9vOONVzY9-",
-          "text_external": "https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE",
-          "pdf": "books/names-in-the-holy/en/content.pdf",
-          "text": "books/names-in-the-holy/en/content.txt",
-          "cover": "books/names-in-the-holy/en/cover-en.png",
-          "archive_text": "https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt",
-          "archive_pdf": "https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf"
-        }
+                "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1vm4f-wf0X7VA3GFzMeWntSeV5qOs3crQ",
+        "pdf_direct": "books/names-in-the-holy/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o",
+        "html": "https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD",
+        "txt_direct": "books/names-in-the-holy/ar/content.txt",
+        "cover": "books/names-in-the-holy/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2125"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy",
+        "pdf_direct": "books/names-in-the-holy/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu",
+        "html": "https://drive.google.com/uc?export=download&id=12cV5qFDaZ-0SzQGInIn9cP9vOONVzY9-",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE",
+        "txt_direct": "books/names-in-the-holy/en/content.txt",
+        "cover": "books/names-in-the-holy/en/cover-en.png",
+        "archive": "https://archive.org/details/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s"
+      }
+
       },
       "metadata": {
         "author": "ناصر ابن داوود",
