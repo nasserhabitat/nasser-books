@@ -27,26 +27,24 @@
     },
     "links": {
       "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
-        "html": "https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni",
-        "pdf": "books/christ-and-mary-in-the-quran/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
-        "text": "books/christ-and-mary-in-the-quran/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
-        "archive_text": null,
-        "archive_pdf": null,
-        "cover": "books/christ-and-mary-in-the-quran/ar/cover-ar.png"
+               "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
+        "pdf_direct": "books/changing-the-concepts/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
+        "html": "https://drive.google.com/uc?export=download&id=1sOuXA8sA8a0vVU8betDkJvIZeNA6EjCB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
+        "txt_direct": "books/changing-the-concepts/ar/content.txt",
+        "cover": "books/changing-the-concepts/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2050"
       },
       "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4",
-        "html": "https://drive.google.com/uc?export=download&id=1tNy2hUQvoEDFLaj9kOm-mGzuzp1Q_Uzt",
-        "pdf": "books/christ-and-mary-in-the-quran/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t",
-        "text": "books/christ-and-mary-in-the-quran/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
-        "archive_text": null,
-        "archive_pdf": null,
-        "cover": "books/christ-and-mary-in-the-quran/en/cover-en.png"
+        "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
+        "pdf_direct": "books/changing-the-concepts/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
+        "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+        "txt_direct": "books/changing-the-concepts/en/content.txt",
+        "cover": "books/changing-the-concepts/en/cover-en.png",
+        "archive": "https://archive.org/details/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude"
       }
     },
     "metadata": {
