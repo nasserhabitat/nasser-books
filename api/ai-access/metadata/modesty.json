@@ -29,27 +29,30 @@
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
       "links": {
         "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
-          "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
-          "pdf": "books/modesty/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
-          "text": "books/modesty/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
-          "archive_text": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "archive_pdf": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "cover": "books/modesty/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
-          "html": "https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE",
-          "pdf": "books/modesty/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
-          "text": "books/modesty/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
-          "archive_text": "https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt",
-          "archive_pdf": "https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf",
-          "cover": "books/modesty/en/cover-en.png"
-        }
+                  "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
+        "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
+        "pdf_direct": "books/modesty/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
+        "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
+        "txt_direct": "books/modesty/ar/content.txt",
+        "cover": "books/modesty/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250707_20250707_0929/page/n2/mode/1up"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
+        "pdf_direct": "books/modesty/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1i5__DOFOeEH8XhaL2vKlsK6JIgnQq7Vp",
+        "html": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
+        "txt_direct": "books/modesty/en/content.txt",
+        "cover": "books/modesty/en/cover-en.png",
+        "archive": "https://archive.org/details/modesty-the-fence-of-the-soul-and-the-compass-of-understanding"
+      }
       },
       "metadata": {
         "author": "ناصر ابن داوود",
