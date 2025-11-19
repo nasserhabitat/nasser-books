@@ -14,11 +14,18 @@
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
   },
+
     "books": [
-        {
-            "slug": "conscious-contemplation",
-            "title_ar": "نحو تدبر واعٍ",
-            "title_en": "Towards Conscious Contemplation",
+ {
+            "id": "conscious-contemplation",
+      "titles": {
+        "ar": "نحو تدبر واعٍ",
+        "en": "Towards Conscious Contemplation"
+      },
+      "description": {
+        "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+        "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
+      },
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
                 "pdf_direct": "books/conscious-contemplation/ar/content.pdf",
@@ -39,7 +46,7 @@
                 "cover": "books/conscious-contemplation/en/cover-en.png",
                 "archive": "https://archive.org/details/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-"
             }
-        },
+ 
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "quranic_studies",
@@ -51,11 +58,19 @@
         "structured_data": true,
         "topics": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"]
       }
-    },
-        {
-            "slug": "anwar-al-bayan",
-            "title_ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
-            "title_en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue",
+  },
+            {
+      "id": "anwar-al-bayan",
+      "titles": {
+        "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
+        "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
+      },
+      "description": {
+        "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم",
+        "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png",
+
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
                 "pdf_direct": "books/anwar-al-bayan/ar/content.pdf",
@@ -89,10 +104,18 @@
         "topics": ["الرسم العثماني", "المصحف العثماني", "أسرار اللسان", "أنوار البيان", "تدبر القرآن", "المخطوطات الرقمية", "اللغة العربية", "علوم القرآن", "القرآن الكريم", "الفهم العميق", "الدراسات القرآنية", "التفسير", "الخط العربي", "الكتابة القرآنية"]
       }
     },
-        {
-            "slug": "changing-the-concepts",
-            "title_ar": "تغيير المفاهيم",
-            "title_en": "Changing the Concepts",
+            {
+      "id": "changing-the-concepts",
+      "titles": {
+        "ar": "تغيير المفاهيم",
+        "en": "Changing the Concepts"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
+        "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png",
+
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
                 "pdf_direct": "books/changing-the-concepts/ar/content.pdf",
@@ -126,10 +149,18 @@
         "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
       }
     },
-        {
-            "slug": "editing-the-quranic-terminology-tome1",
-            "title_ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
-            "title_en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1",
+            {
+      "id": "editing-the-quranic-terminology-tome1",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
+        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الأول",
+        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
                 "pdf_direct": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
@@ -163,11 +194,18 @@
         "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
       }
     },
-        {
-            "slug": "editing-the-quranic-terminology-tome2",
-            "title_ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
-            "title_en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2",
-            "ar": {
+           {
+      "id": "editing-the-quranic-terminology-tome2",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
+        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثاني",
+        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 2"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
+  "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1qlDfBSgbzqm-YW9PKKERKsIlqL-Gy1CU",
                 "pdf_direct": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
                 "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
@@ -200,10 +238,17 @@
         "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
       }
     },
-        {
-            "slug": "editing-the-quranic-terminology-tome3",
-            "title_ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
-            "title_en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3",
+            {
+      "id": "editing-the-quranic-terminology-tome3",
+      "titles": {
+        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
+        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
+      },
+      "description": {
+        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثالث",
+        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 3"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
                 "pdf_direct": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
@@ -237,10 +282,17 @@
         "topics": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"]
       }
     },
-        {
-            "slug": "contemplation-in-the-mirror",
-            "title_ar": "التدبر في مرآة الرسوم",
-            "title_en": "Contemplation in the Mirror of Drawings",
+            {
+      "id": "contemplation-in-the-mirror",
+      "titles": {
+        "ar": "التدبر في مرآة الرسوم",
+        "en": "Contemplation in the Mirror of Drawings"
+      },
+      "description": {
+        "ar": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن الكريم",
+        "en": "Practical applications of digital manuscripts in the contemplation of the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
                 "pdf_direct": "books/contemplation-in-the-mirror/ar/content.pdf",
@@ -274,10 +326,17 @@
         "topics": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"]
       }
     },
-        {
-            "slug": "digitizing",
-            "title_ar": "مقدمة مشروع رقمنة المخطوطات الأصلية للقرآن الكريم وسلسلة الكتب الستة",
-            "title_en": "Introduction to the Project of Digitizing the Original Manuscripts of the Holy Quran and the Six Books Series",
+            {
+      "id": "digitizing",
+      "titles": {
+        "ar": "رقمنة المخطوطات القرآنية",
+        "en": "Digitization of Quranic Manuscripts"
+      },
+      "description": {
+        "ar": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
+        "en": "A methodological study for the digital preservation of the Quranic text and its applications"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
                 "pdf_direct": "books/digitizing/ar/content.pdf",
@@ -311,10 +370,17 @@
         "topics": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"]
       }
     },
-        {
-            "slug": "the-jurisprudence",
-            "title_ar": "فقه اللسان القرآني",
-            "title_en": "The Jurisprudence of the Quranic Tongue",
+           {
+      "id": "the-jurisprudence",
+      "titles": {
+        "ar": "فقه اللسان القرآني",
+        "en": "The Jurisprudence of the Quranic Tongue"
+      },
+      "description": {
+        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
+        "en": "A new approach to understanding the text and manuscript of the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
                 "pdf_direct": "books/the-jurisprudence/ar/content.pdf",
@@ -348,10 +414,17 @@
         "topics": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"]
       }
     },
-        {
-            "slug": "modesty",
-            "title_ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-            "title_en": "MODESTY: The Fence of the Soul and the Compass of Understanding",
+            {
+      "id": "modesty",
+      "titles": {
+        "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+        "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
+      },
+      "description": {
+        "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
+        "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
                 "pdf_direct": "books/modesty/ar/content.pdf",
@@ -385,10 +458,16 @@
         "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"]
       }
     },
-        {
-            "slug": "malakoot",
-            "title_ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-            "title_en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them",
+            {
+      "id": "malakoot",
+      "titles": {
+        "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
+        "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
+      },
+      "description": {
+        "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
+        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
+      },
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
                 "pdf_direct": "books/malakoot/ar/content.pdf",
@@ -422,10 +501,12 @@
         "topics": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"]
       }
     },
-        {
-            "slug": "prostration-and-glorification-in-the-quran",
-            "title_ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
-            "title_en": "Prostration and Glorification in the Quran: From Heartfelt Purification to Practical Submission",
+            {
+      "id": "prostration-and-glorification-in-the-qur'an",
+      "titles": {
+        "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
+        "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
+      },
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
                 "pdf_direct": "books/prostration-and-glorification-in-the-quran/ar/content.pdf",
@@ -459,10 +540,16 @@
         "topics": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"]
       }
     },
-        {
-            "slug": "christ-and-mary-in-the-quran",
-            "title_ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
-            "title_en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model",
+            {
+      "id": "christ-and-mary-in-the-qur'an",
+      "titles": {
+        "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
+        "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
+      },
+      "description": {
+        "ar": "من الرمز الباطني إلى النموذج الإنساني",
+        "en": "From the esoteric symbol to the human model"
+      },
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
                 "pdf_direct": "books/christ-and-mary-in-the-quran/ar/content.pdf",
@@ -496,10 +583,16 @@
         "topics": ["المسيح", "مريم", "القرآن", "التدبر الباطني", "الرمز الباطني", "النموذج الإنساني", "نماذج الوعي", "التفسير الرمزي", "فقه اللسان القرآني", "نظام المثاني", "الكلمة", "برنامج إحيائي", "الوعي الجديد", "التحرر الفكري", "أسماء الله الحسنى", "الرفع الإلهي", "الولادة العذرية", "مريم الثائرة", "تحليل نفسي لمريم", "المحراب", "النصارى في القرآن", "قراءة علمية معاصرة"]
       }
     },
-        {
-            "slug": "names-in-the-holy",
-            "title_ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
-            "title_en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management",
+            {
+      "id": "names-in-the-holy",
+      "titles": {
+        "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
+        "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
+      },
+      "description": {
+        "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
+        "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
+      },
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1vm4f-wf0X7VA3GFzMeWntSeV5qOs3crQ",
                 "pdf_direct": "books/names-in-the-holy/ar/content.pdf",
@@ -533,10 +626,17 @@
         "topics": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"]
       }
     },
-        {
-            "slug": "blood",
-            "title_ar": "الدم - شفرة الوجود التي أهملناها",
-            "title_en": "Blood - the code of existence that we neglected",
+           {
+      "id": "blood",
+      "titles": {
+        "ar": "الدم",
+        "en": "Blood - the code of existence that we neglected"
+      },
+      "description": {
+        "ar": "الدم - شفرة الوجود التي أهملناها",
+        "en": "the code of existence that we neglected"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
                 "pdf_direct": "books/blood/ar/content.pdf",
@@ -570,10 +670,17 @@
         "topics": ["شفرة القرآن", "نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "الدم – المحور الرئيسي للكتاب", "اللسان القرآني – المنهجية المعتمدة في التحليل", "المثاني (الأزواج الحرفية) – النظام الخفي للكلمات في القرآن", "الحروف المقطعة – رموز ودلالات في فواتح السور", "المعنى الحركي – الدلالة الديناميكية للكلمات القرآنية", "التدبر الجماعي – أسلوب فهم القرآن", "الشفرة القرآنية – تفسير الرموز والحروف", "التحريم والتذكية – الدم بين الحكم الشرعي والرمز الكوني", "الذكاة والتزكية – التطهير الروحي والفكري", "الضرب في الأرض – منهج التغيير والخروج من الجمود", "أسماء الحروف – دلالاتها الكونية والقرآنية", "الرمز الكوني – الدم كنموذج للنظام الكوني", "الوعي الإنساني – المسؤولية تجاه الدم كمسار حيوي", "التبرع بالدم – من منظور روحي وإنساني", "يأجوج ومأجوج – رمز للفوضى والعبث بالأنظمة الحيوية", "فقه اللسان العربي القرآني – المنهجية الشاملة لفهم النص", "الرمز الكوني في التشريع القرآني", "سفك الدماء والاستخلاف الإنساني", "الدم بين الحكم الشرعي والمعنى الروحي", "الشيفرة اللسانية لكلمة دم (د + م)", "المعراج النبوي ودورة النور الإلهي", "فقه اللسان القرآني", "التدبر القرآني المعاصر", "البنية اللغوية العميقة للحروف العربية", "المثاني القرآنية والمعنى الحركي", "العلاقة بين المادة والروح في القرآن", "الدم كبوابة روحية ومسار وعي إنساني", "فن التبرع بالدم ونهج الرحمة", "الدم في المجتمعات الحديثة – قراءة قرآنية علمية", "مكتبة ناصر ابن داوود – المعرفة المفتوحة والذكاء الاصطناعي"]
       }
     },
-        {
-            "slug": "the-code-of-the-quran",
-            "title_ar": "شفرة القرآن - دليل التشغيل لعصر جديد",
-            "title_en": "THE CODE OF THE QUR'AN - AN OPERATING MANUAL FOR A NEW AGE",
+            {
+      "id": "the-code-of-the-quran",
+      "titles": {
+        "ar": "شفرة القرآن",
+        "en": "THE CODE OF THE QUR'AN"
+      },
+      "description": {
+        "ar": "دليل التشغيل لعصر جديد",
+        "en": "AN OPERATING MANUAL FOR A NEW AGE"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
                 "pdf_direct": "books/the-code-of-the-quran/ar/content.pdf",
@@ -607,10 +714,17 @@
         "topics": ["نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "السيمات", "فقه اللسان القرآني", "نظرية الصفر اللغوي", "أسماء الحروف", "دلالات الحروف", "أسرار الحروف العربية", "التشغيل العملي للقرآن", "القرآن في العصر الرقمي", "الذكاء الاصطناعي والقرآن", "منهجية التدبر", "تحطيم الأصنام الفكرية", "التصوير الذاتي", "بناء الرب الداخلي", "الجنة الدنيوية", "ناصر ابن داوود", "مكتبة ناصر ابن داوود", "التدبر"]
       }
     },
-        {
-            "slug": "the-spirit",
-            "title_ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
-            "title_en": "The Spirit: From the Realm of Command to the Illumination of Perception",
+            {
+      "id": "the-spirit",
+      "titles": {
+        "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
+        "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
+      },
+      "description": {
+        "ar": "دراسة معمقة للروح في القرآن الكريم ودورها في الإدراك والوعي",
+        "en": "An in-depth study of the spirit in the Holy Quran and its role in perception and consciousness"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-spirit/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1vffDhNH8ueEDgKF1iJhBQH5uRKm7RoD6",
                 "pdf_direct": "books/the-spirit/ar/content.pdf",
@@ -644,10 +758,17 @@
         "topics": ["الروح", "عالم الأمر", "الإدراك", "الوعي", "القرآن الكريم", "التدبر", "الفطرة", "النفس", "القلب", "العقل", "البصيرة", "الإشراق", "المعرفة", "الفهم", "التأمل", "البحث الروحي", "الوجود", "الخلق", "التكوين", "الفيض الإلهي"]
       }
     },
-        {
-            "slug": "numbers-as-Legislation",
-            "title_ar": "الأعداد في القرآن",
-            "title_en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious AGE",
+            {
+      "id": "numbers-as-legislation",
+      "titles": {
+        "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
+        "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
+      },
+      "description": {
+        "ar": "دراسة تحليلية للأعداد في القرآن الكريم ودلالاتها التشريعية والكونية",
+        "en": "An analytical study of numbers in the Holy Quran and their legislative and cosmic implications"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/numbers-as-legislation/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=174J_5To6m4vQGn7mt7RBLRvhFE7YDA0a",
                 "pdf_direct": "books/numbers-as-Legislation/ar/content.pdf",
@@ -681,10 +802,17 @@
         "topics": ["الأعداد", "الكم والكيف", "الوعي", "التشريع", "القرآن الكريم", "المنهج العددي", "الدلالات الرقمية", "الإحصاء", "النظام العددي", "الرقم سبعة", "الرقم تسعة عشر", "الأعداد الأولية", "الرياضيات القرآنية", "الإعجاز العددي", "التحليل الكمي", "التحليل النوعي", "الرموز العددية", "السنن الكونية", "القوانين الإلهية"]
       }
     },
-        {
-            "slug": "from-the-letter-to-consciousness",
-            "title_ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
-            "title_en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language",
+           {
+      "id": "from-the-letter-to-consciousness",
+      "titles": {
+        "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
+        "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+      },
+      "description": {
+        "ar": "رحلة الإنسان في مرآة القرآن بين النفس والروح والبيان - قراءة رمزية لفقه اللسان القرآني",
+        "en": "The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/from-the-letter-to-consciousness/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1xNFrqZjsypDd1IqW7yEbc-m72zhNVTyG",
                 "pdf_direct": "books/from-the-letter-to-consciousness/ar/content.pdf",
@@ -718,10 +846,17 @@
         "topics": ["الحرف", "الوعي", "رحلة الإنسان", "النفس", "الروح", "البيان", "القراءة الرمزية", "فقه اللسان القرآني", "التدبر", "المعرفة", "البصيرة", "الإدراك", "الفهم", "التأمل", "الرمز", "الدلالة", "المعنى", "البعد الإنساني", "البعد الكوني"]
       }
     },
-        {
-            "slug": "the-quranic-consciousness-trinity-project",
-            "title_ar": "ثالوث الوعي القرآني -  التسبيح، الحمد، والشكر",
-            "title_en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness",
+            {
+      "id": "the-quranic-consciousness-trinity-project",
+      "titles": {
+        "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
+        "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
+      },
+      "description": {
+        "ar": "من النظام الكوني إلى الوعي الإنساني",
+        "en": "From the Cosmic Order to Human Consciousness"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-quranic-consciousness-trinity-project/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
                 "pdf_direct": "books/the-quranic-consciousness-trinity-project/ar/content.pdf",
@@ -755,10 +890,17 @@
         "topics": ["ثالوث الوعي", "التسبيح", "الحمد", "الشكر", "النظام الكوني", "الوعي الإنساني", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "العبادة", "المنهج", "الرحلة", "التكامل", "الترابط", "النظام", "التوازن"]
       }
     },
-        {
-            "slug": "the-universe",
-            "title_ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
-            "title_en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD",
+            {
+      "id": "the-universe",
+      "titles": {
+        "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
+        "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+      },
+      "description": {
+        "ar": "الموجودات تتكلم بلسان الله",
+        "en": "ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-universe/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1TjMyEw6kY8QDNQBnctdSt_bLa90DSgQF",
                 "pdf_direct": "books/the-universe/ar/content.pdf",
@@ -792,10 +934,17 @@
         "topics": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"]
       }
     },
-        {
-            "slug": "the-self",
-            "title_ar": "النفس: من الحرف إلى الوعي",
-            "title_en": "The Self: From Letter to Consciousness",
+           {
+      "id": "the-self",
+      "titles": {
+        "ar": "النفس: من الحرف إلى الوعي",
+        "en": "The Self: From Letter to Consciousness"
+      },
+      "description": {
+        "ar": "دراسة تحليلية للنفس الإنسانية في ضوء القرآن الكريم",
+        "en": "An analytical study of the human self in the light of the Holy Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-self/ar/cover-ar.png",
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=1AqOzFIoFcrK0Cz4UMTymomQQKZJwT0tG",
                 "pdf_direct": "books/the-self/ar/content.pdf",
@@ -831,4 +980,5 @@
     }
     ]
 }
+
 
