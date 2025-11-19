@@ -436,6 +436,85 @@
             display: block;
         }
         
+        /* تحسينات للبحث المحلي */
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .topics-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .topic-tag {
+            background: #e8f4fd;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #b3d9ff;
+        }
+        
+        .match-line {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-right: 3px solid var(--accent-color);
+            margin: 0.5rem 0;
+        }
+        
+        .line-number {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+        
+        .context-line {
+            margin: 0.2rem 0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+        
+        .context-line.match {
+            background: #fff3cd;
+        }
+        
+        .search-highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .language-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        
         @media (max-width: 768px) {
             .filters {
                 flex-direction: column;
@@ -502,7 +581,16 @@
         
         <!-- محتوى تبويب البحث المحلي -->
         <section class="search-section tab-content active" id="local-search">
-            <!-- محرك البحث المحلي -->
+            <h2>البحث المحلي في المكتبة</h2>
+            <p>ابحث في جميع الكتب باستخدام نظام البحث المدمج - يدعم العربية والإنجليزية</p>
+            
+            <!-- تبديل اللغة -->
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="both">اللغتان معًا</button>
+                <button class="lang-btn" data-lang="ar">العربية فقط</button>
+                <button class="lang-btn" data-lang="en">الإنجليزية فقط</button>
+            </div>
+            
             <div class="search-container">
                 <div class="custom-search-box">
                     <input type="text" class="custom-search-input" id="localSearchInput" placeholder="ابحث في عناوين الكتب ومحتواها...">
@@ -521,15 +609,6 @@
                         <option value="quranic_studies">الدراسات القرآنية</option>
                         <option value="faith_studies">الدراسات الإيمانية</option>
                         <option value="digital_projects">المشاريع الرقمية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label class="filter-label" for="languageFilter">اللغة:</label>
-                    <select class="filter-select" id="languageFilter">
-                        <option value="all">جميع اللغات</option>
-                        <option value="ar">العربية</option>
-                        <option value="en">الإنجليزية</option>
                     </select>
                 </div>
                 
@@ -605,6 +684,12 @@
             <h2>جميع الكتب المتاحة</h2>
             <p>استعرض جميع الكتب والمخطوطات المتاحة في المكتبة حسب التصنيف</p>
             
+            <!-- تبديل اللغة للعرض -->
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang-display="ar">عرض بالعربية</button>
+                <button class="lang-btn" data-lang-display="en">عرض بالإنجليزية</button>
+            </div>
+            
             <div class="filters">
                 <div class="filter-group">
                     <label class="filter-label" for="allBooksCategoryFilter">التصنيف:</label>
@@ -613,15 +698,6 @@
                         <option value="quranic_studies">الدراسات القرآنية</option>
                         <option value="faith_studies">الدراسات الإيمانية</option>
                         <option value="digital_projects">المشاريع الرقمية</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label class="filter-label" for="allBooksLanguageFilter">اللغة:</label>
-                    <select class="filter-select" id="allBooksLanguageFilter">
-                        <option value="all">جميع اللغات</option>
-                        <option value="ar">العربية</option>
-                        <option value="en">الإنجليزية</option>
                     </select>
                 </div>
             </div>
@@ -696,12 +772,10 @@
         </div>
     </footer>
 
-    <script>
-        // بيانات الفهرس (سيتم استبدالها بطلب AJAX لملف search-index.json في التطبيق الحقيقي)
-        const bookIndex = [
-            // بيانات الكتب ستكون هنا (تم حذفها للإيجاز)
-            // يمكنك إضافة جميع الكتب الـ 14 هنا كما في الملف الأصلي
-            {
+   <script>
+        // بيانات الكتب (22 كتاب بالعربية و22 مترجمة بالإنجليزية)
+        const booksData = [
+    {
       "id": "conscious-contemplation",
       "titles": {
         "ar": "نحو تدبر واعٍ",
@@ -711,30 +785,25 @@
         "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
         "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
-          "html": "https://drive.google.com/uc?export=download&id=1CjD4C5WZBg6Nl7JTHMdvrgMbHI1GRVem",
-          "pdf": "books/conscious-contemplation/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1rMSGwIltsrPSjT4RLoX8ds21MyB633i7",
-          "text": "books/conscious-contemplation/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ZjCEi5V3dye2T0fwpAExfnM9haDKhnQF",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB_djvu.txt",
-          "archive_pdf": "https://dn720702.ca.archive.org/0/items/20250529_20250529_2132/%D9%86%D8%AD%D9%88%20%D8%AA%D8%AF%D8%A8%D8%B1%D9%8D%20%D9%88%D8%A7%D8%B9%D9%8D%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%81%D9%87%D9%85%20%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB.pdf",
-          "cover": "books/conscious-contemplation/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX",
-          "html": "https://drive.google.com/uc?export=download&id=11gaZUgs7DkUBe_8OABu1remHgaEfZmnn",
-          "pdf": "books/conscious-contemplation/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1yKPdEMoAMHXLmKlhaSVhy61tjWoVEVbv",
-          "text": "books/conscious-contemplation/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1sWN_QZ-Ovmam3g2Y-I_a1OXkV4wFiqYb",
-          "archive_text": "https://archive.org/stream/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA_djvu.txt",
-          "archive_pdf": "https://ia800602.us.archive.org/9/items/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-/TOWARDS%20CONSCIOUS%20CONTEMPLATION%20%20%20A%20PRACTICAL%20GUIDE%20TO%20UNDERSTANDING%20AND%20APPLYING%20THE%20NOBLE%20QUR%27AN%20IN%20THE%20MODERN%20ERA.pdf",
-          "cover": "books/conscious-contemplation/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
+        "pdf_direct": "books/conscious-contemplation/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1rMSGwIltsrPSjT4RLoX8ds21MyB633i7",
+        "html": "https://drive.google.com/uc?export=download&id=1rRZCswBazvlWS_AqhkuLjskmJ248qm7U",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1ZjCEi5V3dye2T0fwpAExfnM9haDKhnQF",
+        "txt_direct": "books/conscious-contemplation/ar/content.txt",
+        "cover": "books/conscious-contemplation/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2132"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=18FP0NmPM1CHSCZs0UDLnLBGSrqfEJWlX",
+        "pdf_direct": "books/conscious-contemplation/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1yKPdEMoAMHXLmKlhaSVhy61tjWoVEVbv",
+        "html": "https://drive.google.com/uc?export=download&id=11gaZUgs7DkUBe_8OABu1remHgaEfZmnn",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1sWN_QZ-Ovmam3g2Y-I_a1OXkV4wFiqYb",
+        "txt_direct": "books/conscious-contemplation/en/content.txt",
+        "cover": "books/conscious-contemplation/en/cover-en.png",
+        "archive": "https://archive.org/details/towards-conscious-contemplation-a-practical-guide-to-understanding-and-applying-"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -759,29 +828,25 @@
         "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/anwar-al-bayan/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
-          "html": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "pdf": "books/anwar-al-bayan/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "text": "books/anwar-al-bayan/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
-          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi",
-          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
-          "pdf": "books/anwar-al-bayan/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kyDrHDpYAWA1G0KE8Ow5e5VIk-lbM6zZ",
-          "text": "books/anwar-al-bayan/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1vo44VX03M_ZR-ISriWgqAteOrvG8HMu2",
-          "archive_text": "https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE_djvu.txt",
-          "archive_pdf": "https://dn721503.ca.archive.org/0/items/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE.pdf",
-          "cover": "books/anwar-al-bayan/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
+        "pdf_direct": "books/anwar-al-bayan/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1rMSGwIltsrPSjT4RLoX8ds21MyB633i7",
+        "html": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
+        "txt_direct": "books/anwar-al-bayan/ar/content.txt",
+        "cover": "books/anwar-al-bayan/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2033"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi",
+        "pdf_direct": "books/anwar-al-bayan/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1kyDrHDpYAWA1G0KE8Ow5e5VIk-lbM6zZ",
+        "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1vo44VX03M_ZR-ISriWgqAteOrvG8HMu2",
+        "txt_direct": "books/anwar-al-bayan/en/content.txt",
+        "cover": "books/anwar-al-bayan/en/cover-en.png",
+        "archive": "https://archive.org/details/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -806,29 +871,25 @@
         "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/changing-the-concepts/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
-          "html": "https://drive.google.com/uc?export=download&id=1sOuXA8sA8a0vVU8betDkJvIZeNA6EjCB",
-          "pdf": "books/changing-the-concepts/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
-          "text": "books/changing-the-concepts/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A_djvu.txt",
-          "archive_pdf": "https://ia801709.us.archive.org/33/items/20250529_20250529_2050/%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85%20%D9%84%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%D8%A9%20%D9%83%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A.pdf",
-          "cover": "books/changing-the-concepts/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
-          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
-          "pdf": "books/changing-the-concepts/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
-          "text": "books/changing-the-concepts/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-          "archive_text": "https://archive.org/stream/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue_djvu.txt",
-          "archive_pdf": "https://ia800101.us.archive.org/15/items/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude/Changing%20the%20Concepts%20of%20Quranic%20Terminology%20as%20an%20Application%20of%20the%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue.pdf",
-          "cover": "books/changing-the-concepts/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1k2y2b8QCvcoBa-9Bn8qz7xPmSPN8P_oe",
+        "pdf_direct": "books/changing-the-concepts/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1xws8rEosYU6dbjPrI8wLxubBOCXMqiwZ",
+        "html": "https://drive.google.com/uc?export=download&id=1sOuXA8sA8a0vVU8betDkJvIZeNA6EjCB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=11JcMS0au6I2EbZtsZPPnNdPNcwSJN43M",
+        "txt_direct": "books/changing-the-concepts/ar/content.txt",
+        "cover": "books/changing-the-concepts/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2050"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1rPiu81Dy2DwXc0ziQ1jEgYvH5ot6qzjm",
+        "pdf_direct": "books/changing-the-concepts/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1JdG4UcH_EYjHDKcM7fvJqh_FlYKAhBEU",
+        "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
+        "txt_direct": "books/changing-the-concepts/en/content.txt",
+        "cover": "books/changing-the-concepts/en/cover-en.png",
+        "archive": "https://archive.org/details/changing-the-concepts-of-quranic-terminology-as-an-application-of-the-jurisprude"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -853,29 +914,25 @@
         "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-          "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
-          "pdf": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
-          "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
-          "archive_text": "https://archive.org/stream/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201_djvu.txt",
-          "archive_pdf": "https://dn721201.ca.archive.org/0/items/1_20250722_20250722_1041/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%201.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1E5rvAlBpiJ5zEAK8uE8J95dhTbWs7CIh",
-          "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
-          "pdf": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
-          "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=16yt6Xnbp3SO6rKML8nA3_1bbhBHvHGVp",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://ia801502.us.archive.org/7/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%201%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome1/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1kPbpmqAYpnGQj4gaxuBQqtxUABCYlEAq",
+        "html": "https://drive.google.com/uc?export=download&id=1uFA3PRPrVliIUHiFwWyc1xMYLpC5QuJD",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1leUIatsgsHLVlNw2mjnMpI_p6b3P-ooe",
+        "txt_direct": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png",
+        "archive": "https://archive.org/details/1_20250722_20250722_1041"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1MMH6LDY1TI6F91WIykKUi7onuq_uQz3i",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome1/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1p56FRilL8WZ8x_sRgwY_IIUJzbkfekmh",
+        "html": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
+        "txt_external": "https://drive.google.com/uc?export=download&id=132bmU_feu8c39w-agz_QMBZ6eaB1qM-U",
+        "txt_direct": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png",
+        "archive": "https://archive.org/details/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -900,29 +957,25 @@
         "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 2"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1zxjbEztgVd5u34ddWIjHSu5DH1-jKkCE",
-          "html": "https://drive.google.com/uc?export=download&id=1_a5rQoHcQjG9SMOlza8-z_GDjpHf8qFw",
-          "pdf": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-          "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
-          "archive_text": "https://archive.org/stream/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202_djvu.txt",
-          "archive_pdf": "https://dn721506.ca.archive.org/0/items/2_20250724_20250724_0836/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%202.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1qVJJHYcRLFxQ1i08iiJ0oj8dL0D_JBu-",
-          "html": "https://drive.google.com/uc?export=download&id=1PGDe1-UdiA4BzTyFE4k06ati_AxegBo3",
-          "pdf": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1OZjyDOBnxQoeahD1P7D-BCjqbuDnKS53",
-          "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ceHbTYwL1eVy_cuSPIZtU10u_IxXW9cU",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://dn721608.ca.archive.org/0/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%202%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1qlDfBSgbzqm-YW9PKKERKsIlqL-Gy1CU",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome2/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
+        "html": "https://drive.google.com/uc?export=download&id=1_a5rQoHcQjG9SMOlza8-z_GDjpHf8qFw",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1FB_k6Gr-zoqJhlt8t5ZaN8DWuhnHmJrW",
+        "txt_direct": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png",
+        "archive": "https://archive.org/details/2_20250724_20250724_0836"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1qVJJHYcRLFxQ1i08iiJ0oj8dL0D_JBu-",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome2/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1OZjyDOBnxQoeahD1P7D-BCjqbuDnKS53",
+        "html": "https://drive.google.com/uc?export=download&id=1PGDe1-UdiA4BzTyFE4k06ati_AxegBo3",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1ceHbTYwL1eVy_cuSPIZtU10u_IxXW9cU",
+        "txt_direct": "books/editing-the-quranic-terminology-tome2/en/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png",
+        "archive": "https://archive.org/details/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_202508"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -947,29 +1000,25 @@
         "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 3"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
-          "html": "https://drive.google.com/uc?export=download&id=1hzPkLEVEZ_ejzUsHoiPlpPp0BkBnxTO2",
-          "pdf": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
-          "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
-          "archive_text": "https://archive.org/stream/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203_djvu.txt",
-          "archive_pdf": "https://dn721606.ca.archive.org/0/items/3_20250724/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B5%D8%B7%D9%84%D8%AD%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF%203.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-          "html": "https://drive.google.com/uc?export=download&id=1Z90u-iP4lQo0kJMQ5H1KVe58CF5oZJi9",
-          "pdf": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kkyCPmhapQytzAwWB3LnCVmekxSgb4-K",
-          "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1IKotg4vp51VIqjdmasl7nAt_LiXFRSWc",
-          "archive_text": "https://archive.org/stream/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google_djvu.txt",
-          "archive_pdf": "https://ia801005.us.archive.org/24/items/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802/EDITING%20THE%20QUR%27ANIC%20TERM%20-%20AN%20APPLIED%20STUDY%20IN%20THE%20JURISPRUDENCE%20OF%20THE%20QUR%27ANIC%20TONGUE%20Tome%203%20translate%20by%20google.pdf",
-          "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome3/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
+        "html": "https://drive.google.com/uc?export=download&id=1hzPkLEVEZ_ejzUsHoiPlpPp0BkBnxTO2",
+        "txt_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
+        "txt_direct": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png",
+        "archive": "https://archive.org/details/3_20250724"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1ZBfjTTkFKQqhYYTYslNgHYQ0hcLxFCcp",
+        "pdf_direct": "books/editing-the-quranic-terminology-tome3/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1AxcDCaF3eko71MMh9DFvWMkXACEBRIyh",
+        "html": "https://drive.google.com/uc?export=download&id=1hzPkLEVEZ_ejzUsHoiPlpPp0BkBnxTO2",
+        "txt_external": "https://drive.google.com/uc?export=download&id=19VRBRp30lVRbl8mp1gUuKeJFLc6DFs9I",
+        "txt_direct": "books/editing-the-quranic-terminology-tome3/en/content.txt",
+        "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png",
+        "archive": "https://archive.org/details/editing-the-qur-anic-term-an-applied-study-in-the-jurisprudence-of-the-qur-anic-_20250802"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -994,29 +1043,25 @@
         "en": "Practical applications of digital manuscripts in the contemplation of the Quran"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
-          "html": "https://drive.google.com/uc?export=download&id=1GYo1Qabj6ZoRIX_x4E8hf4_iZ0StNS1Y",
-          "pdf": "books/contemplation-in-the-mirror/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
-          "text": "books/contemplation-in-the-mirror/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
-          "archive_pdf": "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
-          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1odCjX8iTsk4Kr3EZvvIDWFJgc45LHXIM",
-          "html": "https://drive.google.com/uc?export=download&id=1XDF6eAHoC4WbZXygZZzf_dMD4L2u3VPp",
-          "pdf": "books/contemplation-in-the-mirror/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
-          "text": "books/contemplation-in-the-mirror/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
-          "archive_text": "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
-          "archive_pdf": "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
-          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
+        "pdf_direct": "books/contemplation-in-the-mirror/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
+        "html": "https://drive.google.com/uc?export=download&id=1GYo1Qabj6ZoRIX_x4E8hf4_iZ0StNS1Y",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
+        "txt_direct": "books/contemplation-in-the-mirror/ar/content.txt",
+        "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2006"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1Tgzt70R-az2BPBKlvz_Xu9Kzb_Sx8aFi",
+        "pdf_direct": "books/contemplation-in-the-mirror/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
+        "html": "https://drive.google.com/uc?export=download&id=1XDF6eAHoC4WbZXygZZzf_dMD4L2u3VPp",
+        "txt_external": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
+        "txt_direct": "books/contemplation-in-the-mirror/en/content.txt",
+        "cover": "books/contemplation-in-the-mirror/en/cover-en.png",
+        "archive": "https://archive.org/details/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1031,53 +1076,6 @@
       }
     },
     {
-      "id": "the-jurisprudence",
-      "titles": {
-        "ar": "فقه اللسان القرآني",
-        "en": "The Jurisprudence of the Quranic Tongue"
-      },
-      "description": {
-        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
-        "en": "A new approach to understanding the text and manuscript of the Quran"
-      },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
-          "html": "https://drive.google.com/uc?export=download&id=1EVBgXQivnuE8NmlCeFTDuNfSUfjBZlMQ",
-          "pdf": "books/the-jurisprudence/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
-          "text": "books/the-jurisprudence/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20_djvu.txt",
-          "archive_pdf": "https://ia800703.us.archive.org/20/items/20250529_20250529_2057/%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%D9%8A%20%20%D9%85%D9%86%D9%87%D8%AC%D9%8C%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D9%87%D9%85%20%D8%A7%D9%84%D9%86%D8%B5%20%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%20.pdf",
-          "cover": "books/the-jurisprudence/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
-          "html": "https://drive.google.com/uc?export=download&id=1FXmnM4toB3DUinTLvmMovtnlihz4hHN5",
-          "pdf": "books/the-jurisprudence/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
-          "text": "books/the-jurisprudence/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
-          "archive_text": "https://archive.org/stream/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript_djvu.txt",
-          "archive_pdf": "https://dn721205.ca.archive.org/0/items/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript/The%20Jurisprudence%20of%20the%20Qur%27anic%20Tongue%20%20%20%20A%20New%20Approach%20to%20Understanding%20the%20Text%20and%20Manuscript.pdf",
-          "cover": "books/the-jurisprudence/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 592,
-        "pages_en": 416,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"]
-      }
-    },
-    {
       "id": "digitizing",
       "titles": {
         "ar": "رقمنة المخطوطات القرآنية",
@@ -1088,29 +1086,25 @@
         "en": "A methodological study for the digital preservation of the Quranic text and its applications"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/digitizing/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
-          "html": "https://drive.google.com/uc?export=download&id=18vLE3iJJ3KHUT0AFOr_YFTXgIIMeaU8i",
-          "pdf": "books/digitizing/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1IJ2FneZK2jB3ur5ZYrTU08EXFwWw9hvs",
-          "text": "books/digitizing/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1JkXjPUssUOeC9Qbt7eKNUj4xfl2aCtR_",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9_djvu.txt",
-          "archive_pdf": "https://dn721503.ca.archive.org/0/items/20250529_20250529_2128/%D9%85%D9%82%D8%AF%D9%85%D8%A9%20%D9%85%D8%B4%D8%B1%D9%80%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%88%D8%B3%D9%84%D8%B3%D9%84%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B3%D8%AA%D8%A9.pdf",
-          "cover": "books/digitizing/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA",
-          "html": "https://drive.google.com/uc?export=download&id=1sp_GiMD7ArS8Cg-kFPnKp_c0yXh7gYbf",
-          "pdf": "books/digitizing/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS",
-          "text": "books/digitizing/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng",
-          "archive_text": "https://archive.org/stream/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505/The%20project%20of%20digitizing%20the%20original%20manuscripts%20of%20the%20Holy%20Quran.pdf",
-          "cover": "books/digitizing/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1ypThTzXrRhfh-gs9OS5GXBqzAvUwkWdS",
+        "pdf_direct": "books/digitizing/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1IJ2FneZK2jB3ur5ZYrTU08EXFwWw9hvs",
+        "html": "https://drive.google.com/uc?export=download&id=18vLE3iJJ3KHUT0AFOr_YFTXgIIMeaU8i",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1JkXjPUssUOeC9Qbt7eKNUj4xfl2aCtR_",
+        "txt_direct": "books/digitizing/ar/content.txt",
+        "cover": "books/digitizing/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2128"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1lYAVqfSfni-yPWBevh9_K0cveY-Zl9MA",
+        "pdf_direct": "books/digitizing/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1zIw6MTJcOa2wEhbmTngwFTcxIBcbcLYS",
+        "html": "https://drive.google.com/uc?export=download&id=1sp_GiMD7ArS8Cg-kFPnKp_c0yXh7gYbf",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1pQixa3HYKKSrDLNcOgQJ5rupR90mflng",
+        "txt_direct": "books/digitizing/en/content.txt",
+        "cover": "books/digitizing/en/cover-en.png",
+        "archive": "https://archive.org/details/the-project-of-digitizing-the-original-manuscripts-of-the-holy-quran_202505"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1125,6 +1119,49 @@
       }
     },
     {
+      "id": "the-jurisprudence",
+      "titles": {
+        "ar": "فقه اللسان القرآني",
+        "en": "The Jurisprudence of the Quranic Tongue"
+      },
+      "description": {
+        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
+        "en": "A new approach to understanding the text and manuscript of the Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
+        "pdf_direct": "books/the-jurisprudence/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1_kXmO-UwpEflBx3VQsuH2DOhkYgxE0pk",
+        "html": "https://drive.google.com/uc?export=download&id=1EVBgXQivnuE8NmlCeFTDuNfSUfjBZlMQ",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1ot2XILFBHDS3lom62mKvZIBCFooPkLI6",
+        "txt_direct": "books/the-jurisprudence/ar/content.txt",
+        "cover": "books/the-jurisprudence/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2057"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1eX1M7BRUdVPjiIzzFoOifQqtf93IWEoK",
+        "pdf_direct": "books/the-jurisprudence/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1Ac2pctiufnAzN2-0yCLLrNA9gBsYC-lB",
+        "html": "https://drive.google.com/uc?export=download&id=1FXmnM4toB3DUinTLvmMovtnlihz4hHN5",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1ohXcnyc7F1xCkGynpdh-GB2ayRJlpVfV",
+        "txt_direct": "books/the-jurisprudence/en/content.txt",
+        "cover": "books/the-jurisprudence/en/cover-en.png",
+        "archive": "https://archive.org/details/the-jurisprudence-of-the-quranic-tongue-a-new-approach-to-understanding-the-text-and-manuscript"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 592,
+        "pages_en": 416,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"]
+      }
+    },
+    {
       "id": "modesty",
       "titles": {
         "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
@@ -1135,29 +1172,25 @@
         "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/modesty/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
-          "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
-          "pdf": "books/modesty/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
-          "text": "books/modesty/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
-          "archive_text": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "archive_pdf": "https://archive.org/stream/20250707_20250707_0929/%D8%A7%D9%84%D8%AD%D9%8E%D9%8A%D9%8E%D8%A7%D8%A1%D9%8F%20-%20%D9%85%D9%86%20%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A5%D9%84%D9%89%20%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9_djvu.txt",
-          "cover": "books/modesty/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
-          "html": "https://drive.google.com/uc?export=download&id=1WDXepBtKSxuSU7azthrs2zGo77OAruNE",
-          "pdf": "books/modesty/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
-          "text": "books/modesty/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
-          "archive_text": "https://archive.org/stream/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20_djvu.txt",
-          "archive_pdf": "https://dn720703.ca.archive.org/0/items/modesty-the-fence-of-the-soul-and-the-compass-of-understanding/MODESTY-%20THE%20FENCE%20OF%20THE%20SOUL%20AND%20THE%20COMPASS%20OF%20UNDERSTANDING%20.pdf",
-          "cover": "books/modesty/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=10VgKHsC1lLNPoaOkuvYzdRFVeRsGIiDb",
+        "pdf_direct": "books/modesty/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1u6AfgQ8cgj-4e3e_zf43p76d6hxnWoXj",
+        "html": "https://drive.google.com/uc?export=download&id=10D9QpVbrmGP-kDCSp4ZP7rbB-KPdfcn-",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1aRFyozeTPUJz551g9V_mYKIwJDs5a7e_",
+        "txt_direct": "books/modesty/ar/content.txt",
+        "cover": "books/modesty/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250707_20250707_0929/page/n2/mode/1up"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1tK5YW7-FqI5b4OilsA3fxvPl-7VOO-a2",
+        "pdf_direct": "books/modesty/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1i5__DOFOeEH8XhaL2vKlsK6JIgnQq7Vp",
+        "html": "https://drive.google.com/uc?export=download&id=1jEmkYkCaAnwHyz2SBc9OS9d9kFpCqAjo",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Mz8VUKNtIR0w_ob-1FxrVOFGKK2rFpVY",
+        "txt_direct": "books/modesty/en/content.txt",
+        "cover": "books/modesty/en/cover-en.png",
+        "archive": "https://archive.org/details/modesty-the-fence-of-the-soul-and-the-compass-of-understanding"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1181,28 +1214,25 @@
         "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
         "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
-          "html": "https://drive.google.com/uc?export=download&id=13nlGntfmvlgozUIGF1GcT0RA-VEGSQ-P",
-          "pdf": "books/malakoot/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH",
-          "text": "books/malakoot/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
-          "archive_text": "https://archive.org/stream/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%90%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B5%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7_djvu.txt",
-          "archive_pdf": "https://dn721702.ca.archive.org/0/items/20250624_20250624_0823/%D9%88%D9%8E%D9%84%D9%8A%D9%8E%D9%83%D9%8F%D9%88%D9%86%D9%8E%20%D9%85%D9%90%D9%86%D9%8E%20%D8%A7%D9%84%D9%92%D9%85%D9%8F%D9%88%D9%82%D9%90%D9%86%D9%8A%D9%86%D9%8E%20%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B1%D9%87%D8%A7%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%84%D9%83%D9%88%D8%AA%20%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D9%88%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%20%D9%88%D9%85%D8%A7%20%D8%A8%D9%8A%D9%86%D9%87%D9%85%D8%A7.pdf",
-          "cover": "books/malakoot/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
-          "html": "https://drive.google.com/uc?export=download&id=1U0qsfnSg-AVEVFrGkNCtY7TqC-EuFDkh",
-          "pdf": "books/malakoot/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N",
-          "text": "books/malakoot/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg",
-          "archive_text": "https://archive.org/stream/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom/AND%20SO%20THAT%20HE%20MAY%20BE%20OF%20THE%20CERTAIN%20ONES%20-%20A%20DEMONSTRATIVE%20JOURNEY%20IN%20THE%20KINGDOM%20OF%20THE%20HEAVENS%20AND%20THE%20EARTH%20AND%20WHAT%20IS%20BETWEEN%20THEM_djvu.txt"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
+        "pdf_direct": "books/malakoot/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1XRFXQhnqIpeGc_TgEduZmNnJW1BMK_cH",
+        "html": "https://drive.google.com/uc?export=download&id=13nlGntfmvlgozUIGF1GcT0RA-VEGSQ-P",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1vosJndUPs6glX6cwu4-81ScG_vdOxgi0",
+        "txt_direct": "books/malakoot/ar/content.txt",
+        "cover": "books/malakoot/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250624_20250624_0823"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1Fry44fWXw6apxYERhrVgmIdJjOk3NddT",
+        "pdf_direct": "books/malakoot/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1Cv7n-xO9J7Of8i5KuTObjtl2JWbd8l4N",
+        "html": "https://drive.google.com/uc?export=download&id=1U0qsfnSg-AVEVFrGkNCtY7TqC-EuFDkh",
+        "txt_external": "https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg",
+        "txt_direct": "books/malakoot/en/content.txt",
+        "cover": "books/malakoot/en/cover-en.png",
+        "archive": "https://archive.org/details/and-so-that-he-may-be-of-the-certain-ones-a-demonstrative-journey-in-the-kingdom"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1217,39 +1247,30 @@
       }
     },
     {
-      "id": "prostration-and-glorification-in-the-qur’an",
+      "id": "prostration-and-glorification-in-the-qur'an",
       "titles": {
         "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
-        "en": "Prostration and Glorification in the Qur’an: From Heartfelt Purification to Practical Submission"
+        "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
       },
-      "description": {
-        "ar": "من التنزيه القلبي إلى الخضوع العملي",
-        "en": "FROM HEARTFELT PURIFICATION TO PRACTICAL SUBMISSION"
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
+        "pdf_direct": "books/prostration-and-glorification-in-the-quran/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
+        "html": "https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
+        "txt_direct": "books/prostration-and-glorification-in-the-quran/ar/content.txt",
+        "cover": "books/prostration-and-glorification-in-the-quran/ar/cover-ar.png",
+        "archive": "https://archive.org/details/content_20250929_1646"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
-          "html": "https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe",
-          "pdf": "books/prostration-and-glorification-in-the-qur’an/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
-          "text": "books/prostration-and-glorification-in-the-qur’an/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
-          "archive_text": "https://archive.org/stream/content_20250929_1646/content_djvu.txt",
-          "archive_pdf": "https://dn721505.ca.archive.org/0/items/content_20250929_1646/content.pdf",
-          "cover": "books/prostration-and-glorification-in-the-qur’an/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo",
-          "html": "https://drive.google.com/uc?export=download&id=1sDxqVx_D8NvO1q0CGrQs25_-CxW_Wsi0",
-          "pdf": "books/prostration-and-glorification-in-the-qur’an/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
-          "text": "books/prostration-and-glorification-in-the-qur’an/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
-          "archive_text": "https://ia902803.us.archive.org/23/items/context_20250929/context.txt",
-          "archive_pdf": "https://ia902803.us.archive.org/23/items/context_20250929/context.pdf",
-          "cover": "books/prostration-and-glorification-in-the-qur’an/en/cover-en.png"
-        }
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo",
+        "pdf_direct": "books/prostration-and-glorification-in-the-quran/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
+        "html": "https://drive.google.com/uc?export=download&id=1sDxqVx_D8NvO1q0CGrQs25_-CxW_Wsi0",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
+        "txt_direct": "books/prostration-and-glorification-in-the-quran/en/content.txt",
+        "cover": "books/prostration-and-glorification-in-the-quran/en/cover-en.png",
+        "archive": "https://archive.org/details/context_20250929"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1264,39 +1285,34 @@
       }
     },
     {
-      "id": "christ-and-mary-in-the-qur’an",
+      "id": "christ-and-mary-in-the-qur'an",
       "titles": {
         "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
-        "en": "Christ and Mary in the Qur’an: From the Esoteric Symbol to the Human Model"
+        "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
       },
       "description": {
         "ar": "من الرمز الباطني إلى النموذج الإنساني",
         "en": "From the esoteric symbol to the human model"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-qur’an/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
-          "html": "https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni",
-          "pdf": "books/christ-and-mary-in-the-qur’an/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
-          "text": "books/christ-and-mary-in-the-qur’an/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
-          "archive_text": "https://archive.org/stream/content_20250929/content_djvu.txt",
-          "archive_pdf": "https://dn720700.ca.archive.org/0/items/content_20250929/content.pdf",
-          "cover": "books/christ-and-mary-in-the-qur’an/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4",
-          "html": "https://drive.google.com/uc?export=download&id=1tNy2hUQvoEDFLaj9kOm-mGzuzp1Q_Uzt",
-          "pdf": "books/christ-and-mary-in-the-qur’an/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=16r8XSPcI5ShgIvX_7ReHJ7cmFscJ6v_t",
-          "text": "books/christ-and-mary-in-the-qur’an/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
-          "archive_text": "https://archive.org/stream/context_20250929/context_djvu.txt",
-          "archive_pdf": "https://ia902803.us.archive.org/23/items/context_20250929/context.pdf",
-          "cover": "books/christ-and-mary-in-the-qur’an/en/cover-en.png"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
+        "pdf_direct": "books/christ-and-mary-in-the-quran/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1tg6hiu3rJs1AClr-rfT732y2zN6-cHmJ",
+        "html": "https://drive.google.com/uc?export=download&id=126o_Pn8Z5HEUQl3OVy4Tjo0dGcPEp4Ni",
+        "txt_external": "https://drive.google.com/uc?export=download&id=12xfvS3lrXzU5EPijQGWWThmxoRPOdMDZ",
+        "txt_direct": "books/christ-and-mary-in-the-quran/ar/content.txt",
+        "cover": "books/christ-and-mary-in-the-quran/ar/cover-ar.png",
+        "archive": "https://archive.org/details/content_20250929"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4",
+        "pdf_direct": "books/christ-and-mary-in-the-quran/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1PU2hPmTCn6GnFJzZ0sxHhdSgYrfg9jC4",
+        "html": "https://drive.google.com/uc?export=download&id=1tNy2hUQvoEDFLaj9kOm-mGzuzp1Q_Uzt",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1YtX1Q9rjzo-qL6UXCDeklHUcjuKe9m6w",
+        "txt_direct": "books/christ-and-mary-in-the-quran/en/content.txt",
+        "cover": "books/christ-and-mary-in-the-quran/en/cover-en.png",
+        "archive": "https://archive.org/details/context_202509"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1320,30 +1336,25 @@
         "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
         "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png",
-      "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1bP9LhKW_KUmh8pD5L2DROKMJSHEsU1Bz",
-          "pdf": "books/names-in-the-holy/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o",
-          "html": "https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc",
-          "text": "books/names-in-the-holy/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD",
-          "cover": "books/names-in-the-holy/ar/cover-ar.png",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83_djvu.txt",
-          "archive_pdf": "https://dn721500.ca.archive.org/0/items/20250529_20250529_2125/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89%20%D8%A7%D9%84%D9%88%D8%B8%D9%8A%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%20%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%AA%D9%88%D9%82%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A%E2%80%83.pdf"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu",
-          "html": "https://drive.google.com/uc?export=download&id=12cV5qFDaZ-0SzQGInIn9cP9vOONVzY9-",
-          "text_external": "https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE",
-          "pdf": "books/names-in-the-holy/en/content.pdf",
-          "text": "books/names-in-the-holy/en/content.txt",
-          "cover": "books/names-in-the-holy/en/cover-en.png",
-          "archive_text": "https://archive.org/stream/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT_djvu.txt",
-          "archive_pdf": "https://dn721208.ca.archive.org/0/items/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s/THE%20MOST%20BEAUTIFUL%20FUNCTIONAL%20NAMES%20IN%20THE%20HOLY%20QUR%27AN%20-%20%20AN%20ANALYTICAL%20ENDOWMENT%20STUDY%20OF%20THE%20IMPLICATIONS%20OF%20DIVINE%20MANAGEMENT.pdf"
-        }
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1vm4f-wf0X7VA3GFzMeWntSeV5qOs3crQ",
+        "pdf_direct": "books/names-in-the-holy/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1hX1pyjB-AMZipBO7goySnXLAO1Yb5j0o",
+        "html": "https://drive.google.com/uc?export=download&id=1nOdYzAUMz7HR0NeHrOfACEMwRGHu87Uc",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1yzexcZFd9MKtcyR_a-6EpFkjsmp2RPJD",
+        "txt_direct": "books/names-in-the-holy/ar/content.txt",
+        "cover": "books/names-in-the-holy/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2125"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1wm69kiHQygYC8_hecev39pKfNFdMnuiy",
+        "pdf_direct": "books/names-in-the-holy/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1UiOYSda3JvMBzHqoX9B3Tg5dzU56A9nu",
+        "html": "https://drive.google.com/uc?export=download&id=12cV5qFDaZ-0SzQGInIn9cP9vOONVzY9-",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1MYa0vWDb1vBI5R7Ojq1bloO45txsVkdE",
+        "txt_direct": "books/names-in-the-holy/en/content.txt",
+        "cover": "books/names-in-the-holy/en/cover-en.png",
+        "archive": "https://archive.org/details/the-most-beautiful-functional-names-in-the-holy-qur-an-an-analytical-endowment-s"
       },
       "metadata": {
         "author": "ناصر ابن داوود",
@@ -1356,8 +1367,357 @@
         "structured_data": true,
         "topics": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"]
       }
+    },
+    {
+      "id": "blood",
+      "titles": {
+        "ar": "الدم",
+        "en": "Blood - the code of existence that we neglected"
+      },
+      "description": {
+        "ar": "الدم - شفرة الوجود التي أهملناها",
+        "en": "the code of existence that we neglected"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
+        "pdf_direct": "books/blood/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1k0iB4fd-UntvLN1ilgBTzwYNm0_K7uwx",
+        "html": "https://drive.google.com/uc?export=download&id=1XbcwS_Fd-4Nsc7Z3zCCa4hjYWJWYH8WB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1MVLKRtTXWWznmFzsmWHcqtxcabld7P4J",
+        "txt_direct": "books/blood/ar/content.txt",
+        "cover": "books/blood/ar/cover-ar.png",
+        "archive": "https://archive.org/stream/content_202510"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
+        "pdf_direct": "books/blood/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
+        "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1qGGETH0dyGOHvPWJhlygXQw9Lcs-poeU",
+        "txt_direct": "books/blood/en/content.txt",
+        "cover": "books/blood/en/cover-en.png",
+        "archive": "https://archive.org/details/content_20251016"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 119,
+        "pages_en": 162,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["شفرة القرآن", "نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "الدم – المحور الرئيسي للكتاب", "اللسان القرآني – المنهجية المعتمدة في التحليل", "المثاني (الأزواج الحرفية) – النظام الخفي للكلمات في القرآن", "الحروف المقطعة – رموز ودلالات في فواتح السور", "المعنى الحركي – الدلالة الديناميكية للكلمات القرآنية", "التدبر الجماعي – أسلوب فهم القرآن", "الشفرة القرآنية – تفسير الرموز والحروف", "التحريم والتذكية – الدم بين الحكم الشرعي والرمز الكوني", "الذكاة والتزكية – التطهير الروحي والفكري", "الضرب في الأرض – منهج التغيير والخروج من الجمود", "أسماء الحروف – دلالاتها الكونية والقرآنية", "الرمز الكوني – الدم كنموذج للنظام الكوني", "الوعي الإنساني – المسؤولية تجاه الدم كمسار حيوي", "التبرع بالدم – من منظور روحي وإنساني", "يأجوج ومأجوج – رمز للفوضى والعبث بالأنظمة الحيوية", "فقه اللسان العربي القرآني – المنهجية الشاملة لفهم النص", "الرمز الكوني في التشريع القرآني", "سفك الدماء والاستخلاف الإنساني", "الدم بين الحكم الشرعي والمعنى الروحي", "الشيفرة اللسانية لكلمة دم (د + م)", "المعراج النبوي ودورة النور الإلهي", "فقه اللسان القرآني", "التدبر القرآني المعاصر", "البنية اللغوية العميقة للحروف العربية", "المثاني القرآنية والمعنى الحركي", "العلاقة بين المادة والروح في القرآن", "الدم كبوابة روحية ومسار وعي إنساني", "فن التبرع بالدم ونهج الرحمة", "الدم في المجتمعات الحديثة – قراءة قرآنية علمية", "مكتبة ناصر ابن داوود – المعرفة المفتوحة والذكاء الاصطناعي"]
+      }
+    },
+    {
+      "id": "the-code-of-the-quran",
+      "titles": {
+        "ar": "شفرة القرآن",
+        "en": "THE CODE OF THE QUR'AN"
+      },
+      "description": {
+        "ar": "دليل التشغيل لعصر جديد",
+        "en": "AN OPERATING MANUAL FOR A NEW AGE"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-code-of-the-quran/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
+        "pdf_direct": "books/the-code-of-the-quran/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=18DplqeILB0TPjyI3SleicZl2rkNOLk_L",
+        "html": "https://drive.google.com/uc?export=download&id=1Qrq2wCg54qU_XZYa3sx9CaJU8GqtYGEE",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1VHl1GET6K2Xlj1PcBWFybKw-VtjqPbMp",
+        "txt_direct": "books/the-code-of-the-quran/ar/content.txt",
+        "cover": "books/the-code-of-the-quran/ar/cover-ar.png",
+        "archive": "https://archive.org/details/content_20251016_1944"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
+        "pdf_direct": "books/the-code-of-the-quran/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
+        "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1qGGETH0dyGOHvPWJhlygXQw9Lcs-poeU",
+        "txt_direct": "books/the-code-of-the-quran/en/content.txt",
+        "cover": "books/the-code-of-the-quran/en/cover-en.png",
+        "archive": "https://archive.org/stream/content_20251016_1955"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 353,
+        "pages_en": 72,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "السيمات", "فقه اللسان القرآني", "نظرية الصفر اللغوي", "أسماء الحروف", "دلالات الحروف", "أسرار الحروف العربية", "التشغيل العملي للقرآن", "القرآن في العصر الرقمي", "الذكاء الاصطناعي والقرآن", "منهجية التدبر", "تحطيم الأصنام الفكرية", "التصوير الذاتي", "بناء الرب الداخلي", "الجنة الدنيوية", "ناصر ابن داوود", "مكتبة ناصر ابن داوود", "التدبر"]
+      }
+    },
+    {
+      "id": "the-spirit",
+      "titles": {
+        "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
+        "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
+      },
+      "description": {
+        "ar": "دراسة معمقة للروح في القرآن الكريم ودورها في الإدراك والوعي",
+        "en": "An in-depth study of the spirit in the Holy Quran and its role in perception and consciousness"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-spirit/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1vffDhNH8ueEDgKF1iJhBQH5uRKm7RoD6",
+        "pdf_direct": "books/the-spirit/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1AKUAeYHs_cB-U58WAPUSmmqMdarIgiRj",
+        "html": "https://drive.google.com/uc?export=download&id=1mUxhenE3u-BcT_c6ycV_ociM81jtJ6IX",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1FfVz4QpMGkknbdUkUFjQZsTa3gIQ-erj",
+        "txt_direct": "books/the-spirit/ar/content.txt",
+        "cover": "books/the-spirit/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2041"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
+        "pdf_direct": "books/the-spirit/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
+        "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1qGGETH0dyGOHvPWJhlygXQw9Lcs-poeU",
+        "txt_direct": "books/the-spirit/en/content.txt",
+        "cover": "books/the-spirit/en/cover-en.png",
+        "archive": "https://archive.org/stream/content_20251016_1955"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 215,
+        "pages_en": 280,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الروح", "عالم الأمر", "الإدراك", "الوعي", "القرآن الكريم", "التدبر", "الفطرة", "النفس", "القلب", "العقل", "البصيرة", "الإشراق", "المعرفة", "الفهم", "التأمل", "البحث الروحي", "الوجود", "الخلق", "التكوين", "الفيض الإلهي"]
+      }
+    },
+    {
+      "id": "numbers-as-legislation",
+      "titles": {
+        "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
+        "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
+      },
+      "description": {
+        "ar": "دراسة تحليلية للأعداد في القرآن الكريم ودلالاتها التشريعية والكونية",
+        "en": "An analytical study of numbers in the Holy Quran and their legislative and cosmic implications"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/numbers-as-legislation/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=174J_5To6m4vQGn7mt7RBLRvhFE7YDA0a",
+        "pdf_direct": "books/numbers-as-Legislation/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1_4iL8F_KH5bSdrYIyvI5eCxDZ8UssEwl",
+        "html": "https://drive.google.com/uc?export=download&id=1Hj2fJS3f3bD52YIdE7qKzwY97ByusieN",
+        "txt_external": "https://drive.google.com/uc?export=download&id=16hnypignaujO9at5pe7dO_jI6SzlwVHL",
+        "txt_direct": "books/numbers-as-Legislation/ar/content.txt",
+        "cover": "books/numbers-as-Legislation/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2049"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
+        "pdf_direct": "books/numbers-as-Legislation/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1_4iL8F_KH5bSdrYIyvI5eCxDZ8UssEwl",
+        "html": "https://drive.google.com/uc?export=download&id=1Hj2fJS3f3bD52YIdE7qKzwY97ByusieN",
+        "txt_external": "https://drive.google.com/uc?export=download&id=16hnypignaujO9at5pe7dO_jI6SzlwVHL",
+        "txt_direct": "books/numbers-as-Legislation/en/content.txt",
+        "cover": "books/numbers-as-Legislation/en/cover-en.png",
+        "archive": "https://archive.org/details/20251111_20251111_2029"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 178,
+        "pages_en": 235,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الأعداد", "الكم والكيف", "الوعي", "التشريع", "القرآن الكريم", "المنهج العددي", "الدلالات الرقمية", "الإحصاء", "النظام العددي", "الرقم سبعة", "الرقم تسعة عشر", "الأعداد الأولية", "الرياضيات القرآنية", "الإعجاز العددي", "التحليل الكمي", "التحليل النوعي", "الرموز العددية", "السنن الكونية", "القوانين الإلهية"]
+      }
+    },
+    {
+      "id": "from-the-letter-to-consciousness",
+      "titles": {
+        "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
+        "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+      },
+      "description": {
+        "ar": "رحلة الإنسان في مرآة القرآن بين النفس والروح والبيان - قراءة رمزية لفقه اللسان القرآني",
+        "en": "The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/from-the-letter-to-consciousness/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1xNFrqZjsypDd1IqW7yEbc-m72zhNVTyG",
+        "pdf_direct": "books/from-the-letter-to-consciousness/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1qdBl4FRtrUkomGObePr6qKY6Y6Qdct6H",
+        "html": "https://drive.google.com/uc?export=download&id=1NNSTSNGxBfwvFSVPJaCygBSh50tbR67S",
+        "txt_external": "https://drive.google.com/uc?export=download&id=11jndZKslD_W5kJ5SrnCtweKqcGVNcU7p",
+        "txt_direct": "books/from-the-letter-to-consciousness/ar/content.txt",
+        "cover": "books/from-the-letter-to-consciousness/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2115"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=13kWSwu6hqkQu_4LrWectTQeDQBZZDi1K",
+        "pdf_direct": "books/from-the-letter-to-consciousness/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1u0JS2WHY-qzOGMBmMf9HdmqGT66sipqI",
+        "html": "https://drive.google.com/uc?export=download&id=19I2QgKcNKKhOxCWxKKiWzLaBB69CzbC1",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1BcBQNiaX_qi_neit19x26kdLKoqzTPZZ",
+        "txt_direct": "books/from-the-letter-to-consciousness/en/content.txt",
+        "cover": "books/from-the-letter-to-consciousness/en/cover-en.png",
+        "archive": "https://archive.org/details/from-letter-to-consciousness"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 198,
+        "pages_en": 265,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الحرف", "الوعي", "رحلة الإنسان", "النفس", "الروح", "البيان", "القراءة الرمزية", "فقه اللسان القرآني", "التدبر", "المعرفة", "البصيرة", "الإدراك", "الفهم", "التأمل", "الرمز", "الدلالة", "المعنى", "البعد الإنساني", "البعد الكوني"]
+      }
+    },
+    {
+      "id": "the-quranic-consciousness-trinity-project",
+      "titles": {
+        "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
+        "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
+      },
+      "description": {
+        "ar": "من النظام الكوني إلى الوعي الإنساني",
+        "en": "From the Cosmic Order to Human Consciousness"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-quranic-consciousness-trinity-project/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
+        "pdf_direct": "books/the-quranic-consciousness-trinity-project/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1GZmBrOshDqi2bOiJT18u0ZF8pJ-XouNb",
+        "html": "https://drive.google.com/uc?export=download&id=1gzJnJW6Zs5cDb_7uqZ1gGFsNoS3SGKAk",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1erMaFq1MKtOI4-ef0h_LattBKOzzes2t",
+        "txt_direct": "books/the-quranic-consciousness-trinity-project/ar/content.txt",
+        "cover": "books/the-quranic-consciousness-trinity-project/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2053"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1rdloJf2vSnRwxpHCFHmuczpdALQpeCli",
+        "pdf_direct": "books/the-quranic-consciousness-trinity-project/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1zRPEPuL7gdC46YYIMiSXMCmjGSZ3124C",
+        "html": "https://drive.google.com/uc?export=download&id=10ra48Sx7GLSe0gTmqMxSq6Fw_dBnr3mH",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1lk7wEwj8TGEKj28m1dX4TCQmxQ0YiC5P",
+        "txt_direct": "books/the-quranic-consciousness-trinity-project/en/content.txt",
+        "cover": "books/the-quranic-consciousness-trinity-project/en/cover-en.png",
+        "archive": "https://archive.org/details/20251111_20251111_2033"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 142,
+        "pages_en": 188,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["ثالوث الوعي", "التسبيح", "الحمد", "الشكر", "النظام الكوني", "الوعي الإنساني", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "العبادة", "المنهج", "الرحلة", "التكامل", "الترابط", "النظام", "التوازن"]
+      }
+    },
+    {
+      "id": "the-universe",
+      "titles": {
+        "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
+        "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+      },
+      "description": {
+        "ar": "الموجودات تتكلم بلسان الله",
+        "en": "ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-universe/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1TjMyEw6kY8QDNQBnctdSt_bLa90DSgQF",
+        "pdf_direct": "books/the-universe/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1PmIKdoRkn0iIJZNmjTnRBIeS7oufaY9Z",
+        "html": "https://drive.google.com/uc?export=download&id=1uRubnGBenWRTIzmZdR8POToPm8_8skCL",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1sLfXOWeVTYqEx7t0h-EDOM4NUpXtvACW",
+        "txt_direct": "books/the-universe/ar/content.txt",
+        "cover": "books/the-universe/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2037"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=11S6GcaazsQ65zIHE6VmfjYOsr7ROSJWu",
+        "pdf_direct": "books/the-universe/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
+        "html": "https://drive.google.com/uc?export=download&id=1FNkEgRLOPW-WfX8sL2H7svz4yNwUTZ20",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Wk9ATBYGUlA_b6PW-NU6rO-ndl4gA05r",
+        "txt_direct": "books/the-universe/en/content.txt",
+        "cover": "books/the-universe/en/cover-en.png",
+        "archive": "https://archive.org/details/20251111_20251111_2024"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 188,
+        "pages_en": 245,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"]
+      }
+    },
+    {
+      "id": "the-self",
+      "titles": {
+        "ar": "النفس: من الحرف إلى الوعي",
+        "en": "The Self: From Letter to Consciousness"
+      },
+      "description": {
+        "ar": "دراسة تحليلية للنفس الإنسانية في ضوء القرآن الكريم",
+        "en": "An analytical study of the human self in the light of the Holy Quran"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-self/ar/cover-ar.png",
+      "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1AqOzFIoFcrK0Cz4UMTymomQQKZJwT0tG",
+        "pdf_direct": "books/the-self/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1MeHXwXpiCMmIN9esbfTvAyEF8io5ONM-",
+        "html": "https://drive.google.com/uc?export=download&id=1HtFrMbZBUDBeitQfzSidJW4RGVqatFK2",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1tyBgIsYIlm4FZ2x4ieL9nXDiOpGHt2Ji",
+        "txt_direct": "books/the-self/ar/content.txt",
+        "cover": "books/the-self/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20251111_20251111_2045"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1Xeph18KiC-ggCbbMwhakM-oykj4uWgPT",
+        "pdf_direct": "books/the-self/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1mogwIkCylozFP_QDv8PpmEbsAlx5dv_Z",
+        "html": "https://drive.google.com/uc?export=download&id=1ZYAsNhH8PKiYTDPiGzSzJ-fGkMx07J_y",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Tbx5HUpHY_dAM5rtSx6QqFz94-TVYTpw",
+        "txt_direct": "books/the-self/en/content.txt",
+        "cover": "books/the-self/en/cover-en.png",
+        "archive": "https://archive.org/details/20251111_20251111_2029"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 165,
+        "pages_en": 220,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["النفس", "الحرف", "الوعي", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الروح", "القلب", "العقل", "البعد الإنساني", "التكامل", "التربية", "التزكية", "التطهير", "السمو", "الارتقاء"]
+      }
     }
-        ];
+  ]
+
+        // إعدادات البحث
+        let currentSearchLanguage = 'both';
+        let currentDisplayLanguage = 'ar';
+        const bookContentCache = new Map();
 
         // عناصر DOM
         const localSearchInput = document.getElementById('localSearchInput');
@@ -1368,68 +1728,188 @@
         const allBooksCount = document.getElementById('allBooksCount');
         const noResultsMsg = document.getElementById('noResults');
         const categoryFilter = document.getElementById('categoryFilter');
-        const languageFilter = document.getElementById('languageFilter');
         const sortFilter = document.getElementById('sortFilter');
         const allBooksCategoryFilter = document.getElementById('allBooksCategoryFilter');
-        const allBooksLanguageFilter = document.getElementById('allBooksLanguageFilter');
         const searchTabs = document.querySelectorAll('.search-tab');
         const tabContents = document.querySelectorAll('.tab-content');
 
-        // تحميل الفهرس الحقيقي (في التطبيق الحقيقي)
-        function loadBookIndex() {
-            // في التطبيق الحقيقي، سيتم جلب البيانات من search-index.json
-            // fetch('search-index.json')
-            //   .then(response => response.json())
-            //   .then(data => {
-            //       bookIndex = data;
-            //       displayBooks(bookIndex);
-            //       displayAllBooks(bookIndex);
-            //   })
-            //   .catch(error => console.error('Error loading book index:', error));
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTabs();
+            initializeLanguageButtons();
+            displayAllBooks();
             
-            displayBooks(bookIndex);
-            displayAllBooks(bookIndex);
+            // أحداث البحث
+            localSearchButton.addEventListener('click', performLocalSearch);
+            localSearchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performLocalSearch();
+                }
+            });
+            
+            // أحداث الفلاتر
+            categoryFilter.addEventListener('change', performLocalSearch);
+            sortFilter.addEventListener('change', performLocalSearch);
+            allBooksCategoryFilter.addEventListener('change', displayAllBooks);
+        });
+
+        // تبديل التبويبات
+        function initializeTabs() {
+            searchTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
         }
 
-        // عرض الكتب في البحث المحلي
-        function displayBooks(books) {
+        function switchTab(tabId) {
+            tabContents.forEach(content => content.classList.remove('active'));
+            searchTabs.forEach(tab => tab.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+        }
+
+        // تهيئة أزرار اللغة
+        function initializeLanguageButtons() {
+            const langButtons = document.querySelectorAll('.lang-btn[data-lang]');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    langButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentSearchLanguage = this.getAttribute('data-lang');
+                });
+            });
+
+            const displayButtons = document.querySelectorAll('.lang-btn[data-lang-display]');
+            displayButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    displayButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentDisplayLanguage = this.getAttribute('data-lang-display');
+                    displayAllBooks();
+                });
+            });
+        }
+
+        // البحث المحلي
+        async function performLocalSearch() {
+            const query = localSearchInput.value.trim();
+            const category = categoryFilter.value;
+            const sort = sortFilter.value;
+            
+            if (!query) {
+                displayBooks(booksData);
+                return;
+            }
+            
+            // عرض رسالة تحميل
+            booksContainer.innerHTML = `
+                <div class="search-status search-help">
+                    <p>🔍 جاري البحث في نصوص الكتب...</p>
+                </div>
+            `;
+            
+            const searchResults = [];
+            
+            for (const book of booksData) {
+                let matches = false;
+                let textMatches = [];
+                
+                // البحث حسب اللغة المحددة
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                    if (book.titles.ar.toLowerCase().includes(query.toLowerCase()) ||
+                        book.description.ar.toLowerCase().includes(query.toLowerCase()) ||
+                        book.metadata.topics.some(topic => topic.toLowerCase().includes(query.toLowerCase()))) {
+                        matches = true;
+                    }
+                }
+                
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                    if (book.titles.en.toLowerCase().includes(query.toLowerCase()) ||
+                        book.description.en.toLowerCase().includes(query.toLowerCase())) {
+                        matches = true;
+                    }
+                }
+                
+                if (matches) {
+                    searchResults.push({
+                        book: book,
+                        score: 1 // يمكن تحسين نظام التقييم
+                    });
+                }
+            }
+            
+            // تطبيق تصفية التصنيف
+            let filteredResults = searchResults;
+            if (category !== 'all') {
+                filteredResults = filteredResults.filter(result => 
+                    result.book.metadata.category === category
+                );
+            }
+            
+            // تطبيق الترتيب
+            if (sort === 'title') {
+                filteredResults.sort((a, b) => a.book.titles.ar.localeCompare(b.book.titles.ar));
+            } else if (sort === 'pages') {
+                filteredResults.sort((a, b) => b.book.metadata.pages_ar - a.book.metadata.pages_ar);
+            }
+            
+            displaySearchResults(filteredResults, query);
+        }
+
+        // عرض نتائج البحث
+        function displaySearchResults(results, query) {
             booksContainer.innerHTML = '';
             
-            if (books.length === 0) {
+            if (results.length === 0) {
                 noResultsMsg.style.display = 'block';
                 resultsCount.textContent = '0 كتاب متاح';
                 return;
             }
             
             noResultsMsg.style.display = 'none';
-            resultsCount.textContent = `${books.length} كتاب متاح`;
+            resultsCount.textContent = `${results.length} كتاب متاح`;
             
-            books.forEach(book => {
+            results.forEach(result => {
+                const book = result.book;
                 const bookCard = document.createElement('div');
                 bookCard.className = 'book-card';
                 
                 const categoryClass = getCategoryClass(book.metadata.category);
-                const language = getLanguageText(book.metadata.language_ar);
                 
                 bookCard.innerHTML = `
                     <div class="book-header">
                         <div>
-                            <h3 class="book-title">${book.titles.ar}</h3>
-                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                            <h3 class="book-title">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.ar : book.titles.en}
+                            </h3>
+                            <p style="color: #666; font-style: italic;">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.en : book.titles.ar}
+                            </p>
                         </div>
                         <div class="book-meta">
                             <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
-                            <span class="meta-badge">${language}</span>
-                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${currentDisplayLanguage === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
                             <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
                         </div>
                     </div>
-                    <p class="book-description">${book.description.ar}</p>
+                    <p class="book-description">
+                        ${currentDisplayLanguage === 'ar' ? book.description.ar : book.description.en}
+                    </p>
+                    <div class="topics-list">
+                        ${book.metadata.topics.slice(0, 5).map(topic => `
+                            <span class="topic-tag">${topic}</span>
+                        `).join('')}
+                    </div>
                     <div class="book-links">
-                        ${book.links.ar.pdf ? `<a href="${book.links.ar.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF عربي</a>` : ''}
-                        ${book.links.en.pdf ? `<a href="${book.links.en.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF English</a>` : ''}
-                        ${book.links.ar.text ? `<a href="${book.links.ar.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> نص عربي</a>` : ''}
-                        ${book.links.en.text ? `<a href="${book.links.en.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> Text English</a>` : ''}
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
                     </div>
                 `;
                 
@@ -1438,140 +1918,61 @@
         }
 
         // عرض جميع الكتب
-        function displayAllBooks(books) {
-            allBooksContainer.innerHTML = '';
+        function displayAllBooks() {
+            const category = allBooksCategoryFilter.value;
             
-            if (books.length === 0) {
-                allBooksCount.textContent = '0 كتاب متاح';
-                return;
+            let filteredBooks = booksData;
+            if (category !== 'all') {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.metadata.category === category
+                );
             }
             
-            allBooksCount.textContent = `${books.length} كتاب متاح`;
+            allBooksContainer.innerHTML = '';
+            allBooksCount.textContent = `${filteredBooks.length} كتاب متاح`;
             
-            books.forEach(book => {
+            filteredBooks.forEach(book => {
                 const bookCard = document.createElement('div');
                 bookCard.className = 'book-card';
                 
                 const categoryClass = getCategoryClass(book.metadata.category);
-                const language = getLanguageText(book.metadata.language_ar);
                 
                 bookCard.innerHTML = `
                     <div class="book-header">
                         <div>
-                            <h3 class="book-title">${book.titles.ar}</h3>
-                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                            <h3 class="book-title">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.ar : book.titles.en}
+                            </h3>
+                            <p style="color: #666; font-style: italic;">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.en : book.titles.ar}
+                            </p>
                         </div>
                         <div class="book-meta">
                             <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
-                            <span class="meta-badge">${language}</span>
-                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${currentDisplayLanguage === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
                             <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
                         </div>
                     </div>
-                    <p class="book-description">${book.description.ar}</p>
+                    <p class="book-description">
+                        ${currentDisplayLanguage === 'ar' ? book.description.ar : book.description.en}
+                    </p>
+                    <div class="topics-list">
+                        ${book.metadata.topics.slice(0, 8).map(topic => `
+                            <span class="topic-tag">${topic}</span>
+                        `).join('')}
+                    </div>
                     <div class="book-links">
-                        ${book.links.ar.pdf ? `<a href="${book.links.ar.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF عربي</a>` : ''}
-                        ${book.links.en.pdf ? `<a href="${book.links.en.pdf}" class="book-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF English</a>` : ''}
-                        ${book.links.ar.text ? `<a href="${book.links.ar.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> نص عربي</a>` : ''}
-                        ${book.links.en.text ? `<a href="${book.links.en.text}" class="book-link" target="_blank"><i class="fas fa-file-alt"></i> Text English</a>` : ''}
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
                     </div>
                 `;
                 
                 allBooksContainer.appendChild(bookCard);
             });
-        }
-
-        // البحث المحلي
-        function performLocalSearch() {
-            const query = localSearchInput.value.trim().toLowerCase();
-            const category = categoryFilter.value;
-            const language = languageFilter.value;
-            const sort = sortFilter.value;
-            
-            let filteredBooks = bookIndex;
-            
-            // تطبيق البحث النصي
-            if (query) {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.titles.ar.toLowerCase().includes(query) ||
-                    book.titles.en.toLowerCase().includes(query) ||
-                    book.description.ar.toLowerCase().includes(query) ||
-                    book.description.en.toLowerCase().includes(query) ||
-                    (book.metadata.topics && book.metadata.topics.some(topic => 
-                        topic.toLowerCase().includes(query)
-                    ))
-                );
-            }
-            
-            // تطبيق تصفية التصنيف
-            if (category !== 'all') {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.metadata.category === category
-                );
-            }
-            
-            // تطبيق تصفية اللغة
-            if (language !== 'all') {
-                filteredBooks = filteredBooks.filter(book => {
-                    if (language === 'ar') return book.metadata.language_ar === 'arabic';
-                    if (language === 'en') return book.metadata.language_en === 'english';
-                    return true;
-                });
-            }
-            
-            // تطبيق الترتيب
-            if (sort === 'title') {
-                filteredBooks.sort((a, b) => a.titles.ar.localeCompare(b.titles.ar));
-            } else if (sort === 'pages') {
-                filteredBooks.sort((a, b) => b.metadata.pages_ar - a.metadata.pages_ar);
-            }
-            
-            displayBooks(filteredBooks);
-        }
-
-        // تصفية جميع الكتب
-        function filterAllBooks() {
-            const category = allBooksCategoryFilter.value;
-            const language = allBooksLanguageFilter.value;
-            
-            let filteredBooks = bookIndex;
-            
-            // تطبيق تصفية التصنيف
-            if (category !== 'all') {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.metadata.category === category
-                );
-            }
-            
-            // تطبيق تصفية اللغة
-            if (language !== 'all') {
-                filteredBooks = filteredBooks.filter(book => {
-                    if (language === 'ar') return book.metadata.language_ar === 'arabic';
-                    if (language === 'en') return book.metadata.language_en === 'english';
-                    return true;
-                });
-            }
-            
-            displayAllBooks(filteredBooks);
-        }
-
-        // تبديل التبويبات
-        function switchTab(tabId) {
-            // إخفاء جميع المحتويات
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // إزالة النشاط من جميع التبويبات
-            searchTabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // إظهار المحتوى المحدد
-            document.getElementById(tabId).classList.add('active');
-            
-            // إضافة النشاط للتبويب المحدد
-            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
         }
 
         // دوال مساعدة
@@ -1593,44 +1994,51 @@
             return classes[category] || '';
         }
         
-        function getLanguageText(language) {
-            return language === 'arabic' ? 'العربية' : 'الإنجليزية';
-        }
-        
         function setSearchQuery(query) {
             localSearchInput.value = query;
             performLocalSearch();
         }
 
-        // تهيئة الأحداث
-        document.addEventListener('DOMContentLoaded', function() {
-            loadBookIndex();
+        // عرض الكتب الأولي
+        function displayBooks(books) {
+            booksContainer.innerHTML = '';
+            resultsCount.textContent = `${books.length} كتاب متاح`;
             
-            // أحداث البحث المحلي
-            localSearchButton.addEventListener('click', performLocalSearch);
-            localSearchInput.addEventListener('keyup', function(event) {
-                if (event.key === 'Enter') {
-                    performLocalSearch();
-                }
+            books.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">${book.titles.ar}</h3>
+                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                        </div>
+                        <div class="book-meta">
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
+                        </div>
+                    </div>
+                    <p class="book-description">${book.description.ar}</p>
+                    <div class="book-links">
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
+                    </div>
+                `;
+                
+                booksContainer.appendChild(bookCard);
             });
-            
-            // أحداث الفلاتر
-            categoryFilter.addEventListener('change', performLocalSearch);
-            languageFilter.addEventListener('change', performLocalSearch);
-            sortFilter.addEventListener('change', performLocalSearch);
-            
-            // أحداث فلاتر جميع الكتب
-            allBooksCategoryFilter.addEventListener('change', filterAllBooks);
-            allBooksLanguageFilter.addEventListener('change', filterAllBooks);
-            
-            // أحداث التبويبات
-            searchTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    switchTab(tabId);
-                });
-            });
-        });
+        }
+
+        // تهيئة العرض الأولي
+        displayBooks(booksData);
     </script>
 </body>
 </html>
