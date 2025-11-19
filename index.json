@@ -380,7 +380,7 @@
         "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
         "en": "A new approach to understanding the text and manuscript of the Quran"
       },
-      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/cover-ar.png"
             "ar": {
                 "docx": "https://drive.google.com/uc?export=download&id=10sqSU7RAVHnrQff6onfiBqxCgDaMnUKP",
                 "pdf_direct": "books/the-jurisprudence/ar/content.pdf",
@@ -980,5 +980,6 @@
     }
     ]
 }
+
 
 
