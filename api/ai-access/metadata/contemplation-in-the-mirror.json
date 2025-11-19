@@ -30,27 +30,25 @@
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/contemplation-in-the-mirror/ar/cover-ar.png",
       "links": {
         "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
-          "html": "https://drive.google.com/uc?export=download&id=1GYo1Qabj6ZoRIX_x4E8hf4_iZ0StNS1Y",
-          "pdf": "books/contemplation-in-the-mirror/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
-          "text": "books/contemplation-in-the-mirror/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_djvu.txt",
-          "archive_pdf": "https://dn720708.ca.archive.org/0/items/20250529_20250529_2006/%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B1%D8%A2%D8%A9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%AE%D8%B7%D9%88%D8%B7%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%AA%D8%AF%D8%A8%D8%B1%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86.pdf",
-          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1odCjX8iTsk4Kr3EZvvIDWFJgc45LHXIM",
-          "html": "https://drive.google.com/uc?export=download&id=1XDF6eAHoC4WbZXygZZzf_dMD4L2u3VPp",
-          "pdf": "books/contemplation-in-the-mirror/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
-          "text": "books/contemplation-in-the-mirror/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
-          "archive_text": "https://archive.org/stream/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN_djvu.txt",
-          "archive_pdf": "https://ia600707.us.archive.org/17/items/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc/CONTEMPLATION%20IN%20THE%20MIRROR%20OF%20DRAWINGS%20%20%20%20PRACTICAL%20APPLICATIONS%20OF%20DIGITAL%20MANUSCRIPTS%20IN%20THE%20CONTEMPLATION%20OF%20THE%20QUR%27AN.pdf",
-          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
-        }
+                 "docx": "https://drive.google.com/uc?export=download&id=1tcl8cfKV58JbCmZ4iMJ92YpkMW12l7f1",
+        "pdf_direct": "books/contemplation-in-the-mirror/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1Ag4-dwddc2EqVV8ijZBmvOiLc_pmZPGZ",
+        "html": "https://drive.google.com/uc?export=download&id=1GYo1Qabj6ZoRIX_x4E8hf4_iZ0StNS1Y",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1xXMuTe5wXd1gi9sMxSKZXX2oYcpX5EfW",
+        "txt_direct": "books/contemplation-in-the-mirror/ar/content.txt",
+        "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2006"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1Tgzt70R-az2BPBKlvz_Xu9Kzb_Sx8aFi",
+        "pdf_direct": "books/contemplation-in-the-mirror/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1bz3GlhzT-arP_5hsu_EUMJfksSQ5AOGc",
+        "html": "https://drive.google.com/uc?export=download&id=1XDF6eAHoC4WbZXygZZzf_dMD4L2u3VPp",
+        "txt_external": "https://drive.google.com/uc?export=download&id=125pGBM7XANEUErNS8ROKKh_P2Gqo2AcU",
+        "txt_direct": "books/contemplation-in-the-mirror/en/content.txt",
+        "cover": "books/contemplation-in-the-mirror/en/cover-en.png",
+        "archive": "https://archive.org/details/contemplation-in-the-mirror-of-drawings-practical-applications-of-digital-manusc"
+      }
       },
       "metadata": {
         "author": "ناصر ابن داوود",
