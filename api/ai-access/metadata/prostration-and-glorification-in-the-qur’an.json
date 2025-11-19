@@ -26,27 +26,24 @@
       "en": "Glorification (Tasbih) and prostration (Sujud) are the two wings of servitude in Islam, combining the purification of Allah Almighty from any imperfection with complete submission to Him in heart and body. This book explores the dimensions of prostration and glorification in the Holy Qur’an through the 'jurisprudence of the Qur’anic tongue' approach, which deconstructs the linguistic and symbolic connotations of the texts to reveal the deep meanings that link glorification (heartfelt and intellectual purification) with prostration (practical submission)."
     },
     "links": {
-      "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
-        "html": "https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe",
-        "pdf": "books/prostration-and-glorification-in-the-quran/ar/content.pdf",
+     xv0NXWlrDLV",
+        "pdf_direct": "books/prostration-and-glorification-in-the-quran/ar/content.pdf",
         "pdf_external": "https://drive.google.com/uc?export=download&id=1SMFzP3qbsclWGaYJH_idtBPC2HOlZBuB",
-        "text": "books/prostration-and-glorification-in-the-quran/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
-        "archive_text": null,
-        "archive_pdf": null,
-        "cover": "books/prostration-and-glorification-in-the-quran/ar/cover-ar.png"
+        "html": "https://drive.google.com/uc?export=download&id=1DV-6QP-LbkLlIbEKmhTV54iSUzcdGYHe",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1Ic6Us2cmPScuJPOYUzShq-GERNdXO-gx",
+        "txt_direct": "books/prostration-and-glorification-in-the-quran/ar/content.txt",
+        "cover": "books/prostration-and-glorification-in-the-quran/ar/cover-ar.png",
+        "archive": "https://archive.org/details/content_20250929_1646"
       },
       "en": {
         "docx": "https://drive.google.com/uc?export=download&id=1N8d5YlzSU9nLBnUkekLefTlskisPa1Qo",
-        "html": "https://drive.google.com/uc?export=download&id=1sDxqVx_D8NvO1q0CGrQs25_-CxW_Wsi0",
-        "pdf": "books/prostration-and-glorification-in-the-quran/en/content.pdf",
+        "pdf_direct": "books/prostration-and-glorification-in-the-quran/en/content.pdf",
         "pdf_external": "https://drive.google.com/uc?export=download&id=1LgKEAcmmtIql5jFdRF4kZc0Xow-dPWjd",
-        "text": "books/prostration-and-glorification-in-the-quran/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
-        "archive_text": null,
-        "archive_pdf": null,
-        "cover": "books/prostration-and-glorification-in-the-quran/en/cover-en.png"
+        "html": "https://drive.google.com/uc?export=download&id=1sDxqVx_D8NvO1q0CGrQs25_-CxW_Wsi0",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1-4pwIbiwFemrRSoMqGDGCgmPtEkiTlXD",
+        "txt_direct": "books/prostration-and-glorification-in-the-quran/en/content.txt",
+        "cover": "books/prostration-and-glorification-in-the-quran/en/cover-en.png",
+        "archive": "https://archive.org/details/context_20250929"
       }
     },
     "metadata": {
