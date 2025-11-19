@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بحث متخصص - مكتبة ناصر ابن داوود</title>
     <style>
-        :root {
+:root {
             --primary-color: #1a5276;
             --secondary-color: #2980b9;
             --accent-color: #e74c3c;
@@ -286,11 +286,45 @@
             .search-tabs {
                 flex-direction: column;
             }
+        }        /* إضافة تحسينات للعرض */
+        .loading-dots {
+            display: inline-block;
+        }
+        .loading-dots span {
+            animation: loading 1.4s ease-in-out infinite both;
+        }
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loading {
+            0%, 80%, 100% { opacity: 0.3; }
+            40% { opacity: 1; }
+        }
+        
+        .search-status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .search-status.loading {
+            background: #e8f4fd;
+            color: #1a5276;
+        }
+        
+        .search-status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .search-status.error {
+            background: #f8d7da;
+            color: #721c24;
         }
     </style>
 </head>
-<body>
-    <header>
+<header>
         <div class="container">
             <h1>🔍 محرك البحث المتخصص</h1>
             <p>مكتبة ناصر ابن داوود - بحث متقدم في اللغتين العربية والإنجليزية</p>
@@ -1346,13 +1380,12 @@
       }
     }
   ]
-}
-        // ذاكرة تخزين مؤقت لمحتوى الكتب
+}        // ذاكرة تخزين مؤقت لمحتوى الكتب
         const bookContentCache = new Map();
 
         // إعدادات البحث
-        let currentSearchLanguage = 'both'; // 'both', 'ar', 'en'
-        let currentDisplayLanguage = 'ar'; // 'ar', 'en'
+        let currentSearchLanguage = 'both';
+        let currentDisplayLanguage = 'ar';
 
         // === الدوال الرئيسية ===
 
@@ -1444,16 +1477,12 @@
             
             // عرض رسالة تحميل
             resultsDiv.innerHTML = `
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
-                        <p>🔍 جاري البحث في نصوص الكتب...</p>
-                        <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                            <div class="loading-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
+                <div class="search-status loading">
+                    <p>🔍 جاري البحث في نصوص الكتب...</p>
+                    <div class="loading-dots">
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
                     </div>
                 </div>
             `;
@@ -1492,7 +1521,8 @@
                 
                 // تحميل محتوى النص والبحث فيه (العربية)
                 if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
-                    const arabicTextUrl = book.links.ar.text;
+                    // استخدام المسار الصحيح للملف النصي
+                    const arabicTextUrl = book.ar.txt_direct || book.ar.txt_external;
                     if (arabicTextUrl) {
                         const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
                         if (content) {
@@ -1504,7 +1534,8 @@
                 
                 // تحميل محتوى النص والبحث فيه (الإنجليزية)
                 if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
-                    const englishTextUrl = book.links.en.text;
+                    // استخدام المسار الصحيح للملف النصي
+                    const englishTextUrl = book.en.txt_direct || book.en.txt_external;
                     if (englishTextUrl) {
                         const content = await loadBookContent(book.id + '_en', englishTextUrl);
                         if (content) {
@@ -1533,7 +1564,7 @@
             
             if (searchResults.length === 0) {
                 resultsDiv.innerHTML = `
-                    <div style="text-align: center; padding: 2rem; color: #666;">
+                    <div class="search-status error">
                         <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
                         <p>جرب استخدام مصطلحات بحث مختلفة أو تغيير لغة البحث</p>
                     </div>
@@ -1543,10 +1574,10 @@
             
             // عرض النتائج
             resultsDiv.innerHTML = `
-                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
-                    نتائج البحث لـ "<span style="color: var(--accent-color);">${query}</span>" (${searchResults.length})
-                    <span style="font-size: 0.8em; color: #666;">- البحث في: ${getLanguageText(currentSearchLanguage)}</span>
-                </h3>
+                <div class="search-status success">
+                    <p>✅ تم العثور على ${searchResults.length} نتيجة لـ "<strong>${query}</strong>"</p>
+                    <p>البحث في: ${getLanguageText(currentSearchLanguage)}</p>
+                </div>
                 ${searchResults.map(result => {
                     const book = result.book;
                     const displayLang = currentDisplayLanguage;
@@ -1641,7 +1672,11 @@
 
             try {
                 console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
-                const response = await fetch(textUrl);
+                
+                // إضافة علامة زمنية لمنع التخزين المؤقت
+                const urlWithTimestamp = textUrl + (textUrl.includes('?') ? '&' : '?') + 't=' + Date.now();
+                
+                const response = await fetch(urlWithTimestamp);
                 
                 if (!response.ok) {
                     throw new Error(`فشل في تحميل الملف: ${response.status}`);
