@@ -27,28 +27,37 @@
     },
    
       "links": {
-        "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
-          "html": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "pdf": "books/anwar-al-bayan/ar/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
-          "text": "books/anwar-al-bayan/ar/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
-          "archive_text": "https://archive.org/stream/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86_djvu.txt",
-          "archive_pdf": "https://dn721701.ca.archive.org/0/items/20250529_20250529_2033/%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%20%D9%81%D9%8A%20%D8%B1%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20%D8%B9%D%86%20%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.pdf",
-          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
-        },
-        "en": {
-          "docx": "https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi",
-          "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
-          "pdf": "books/anwar-al-bayan/en/content.pdf",
-          "pdf_external": "https://drive.google.com/uc?export=download&id=1kyDrHDpYAWA1G0KE8Ow5e5VIk-lbM6zZ",
-          "text": "books/anwar-al-bayan/en/content.txt",
-          "text_external": "https://drive.google.com/uc?export=download&id=1vo44VX03M_ZR-ISriWgqAteOrvG8HMu2",
-          "archive_text": "https://archive.org/stream/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE_djvu.txt",
-          "archive_pdf": "https://dn721503.ca.archive.org/0/items/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue/ANWAR%20AL-BAYAN%20IN%20THE%20DRAWING%20OF%20THE%20OTTOMAN%20QUR%27AN%20%20%20REVEALING%20THE%20SECRETS%20OF%20THE%20TONGUE.pdf",
-          "cover": "books/anwar-al-bayan/en/cover-en.png"
-        }
+              "ar": {
+        "docx": "https://drive.google.com/uc?export=download&id=1VjEJEjjrJbM7glhR2lHEsqB1L94t2XCu",
+        "pdf_direct": "books/anwar-al-bayan/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1rMSGwIltsrPSjT4RLoX8ds21MyB633i7",
+        "html": "https://drive.google.com/uc?export=download&id=1OuuQzbqrCW9blAvWc2AIpHdM9sl4bYUB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1O0uafxgb-EXpmiOZaNnLEx73okvilKZl",
+        "txt_direct": "books/anwar-al-bayan/ar/content.txt",
+        "cover": "books/anwar-al-bayan/ar/cover-ar.png",
+        "archive": "https://archive.org/details/20250529_20250529_2033"
+      },
+      "en": {
+        "docx": "https://drive.google.com/uc?export=download&id=1TVOxURf1EI8Oq774aUANI7WRqbg5MbOi",
+        "pdf_direct": "books/anwar-al-bayan/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1kyDrHDpYAWA1G0KE8Ow5e5VIk-lbM6zZ",
+        "html": "https://drive.google.com/uc?export=download&id=1s0x6gR0p7zfHuQIN7C8mpYT82NyHysEX",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1vo44VX03M_ZR-ISriWgqAteOrvG8HMu2",
+        "txt_direct": "books/anwar-al-bayan/en/content.txt",
+        "cover": "books/anwar-al-bayan/en/cover-en.png",
+        "archive": "https://archive.org/details/anwar-al-bayan-in-the-drawing-of-the-ottoman-qur-an-revealing-the-secrets-of-the-tongue"
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "quranic_studies",
+        "pages_ar": 161,
+        "pages_en": 215,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics": ["الرسم العثماني", "المصحف العثماني", "أسرار اللسان", "أنوار البيان", "تدبر القرآن", "المخطوطات الرقمية", "اللغة العربية", "علوم القرآن", "القرآن الكريم", "الفهم العميق", "الدراسات القرآنية", "التفسير", "الخط العربي", "الكتابة القرآنية"]
+      }
       },
       "metadata": {
         "author": "ناصر ابن داوود",
