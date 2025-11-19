@@ -28,26 +28,24 @@
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png",
     "links": {
       "ar": {
-        "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
-        "html": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/content.html",
-        "pdf": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
-        "text": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
-        "archive_text": "https://archive.org/stream/content_202510/content_djvu.txt",
-        "archive_pdf": "https://archive.org/stream/content_202510/content.pdf",
-        "cover": "https://nasserhabitat.github.io/nasser-books/books/blood/ar/cover-ar.png"
+               "docx": "https://drive.google.com/uc?export=download&id=1h0g0y8brAnCuiANk9uCpqeSAm_DsBHem",
+        "pdf_direct": "books/blood/ar/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1k0iB4fd-UntvLN1ilgBTzwYNm0_K7uwx",
+        "html": "https://drive.google.com/uc?export=download&id=1XbcwS_Fd-4Nsc7Z3zCCa4hjYWJWYH8WB",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1MVLKRtTXWWznmFzsmWHcqtxcabld7P4J",
+        "txt_direct": "books/blood/ar/content.txt",
+        "cover": "books/blood/ar/cover-ar.png",
+        "archive": "https://archive.org/stream/content_202510"
       },
       "en": {
-        "docx": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-        "html": "https://drive.google.com/uc?export=download&id=1zyy6ODjoXVlv7HitLJULKplYNkdyDob5",
-        "pdf": "https://nasserhabitat.github.io/nasser-books/books/blood/en/content.pdf",
-        "pdf_external": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-        "text": "https://nasserhabitat.github.io/nasser-books/books/blood/en/content.txt",
-        "text_external": "https://drive.google.com/uc?export=download&id=1PYNGnn0lxRO40fia_FLUYg9iaKjocuAh",
-        "archive_text": "https://archive.org/stream/content_202510/content_djvu.txt",
-        "archive_pdf": "https://archive.org/stream/content_202510/content.pdf",
-        "cover": "https://nasserhabitat.github.io/nasser-books/books/blood/en/cover-en.png"
+        "docx": "https://drive.google.com/uc?export=download&id=1MbKQNs4yvRQoY3bH3NoNBM2fKM57gwcn",
+        "pdf_direct": "books/blood/en/content.pdf",
+        "pdf_external": "https://drive.google.com/uc?export=download&id=1RaYvaZFNLwWnWZV99eYtkh984kpHZOBU",
+        "html": "https://drive.google.com/uc?export=download&id=1tElavrfT-FMNWHFXHlIUXn84bXpamr_a",
+        "txt_external": "https://drive.google.com/uc?export=download&id=1qGGETH0dyGOHvPWJhlygXQw9Lcs-poeU",
+        "txt_direct": "books/blood/en/content.txt",
+        "cover": "books/blood/en/cover-en.png",
+        "archive": "https://archive.org/details/content_20251016"
       }
     },
     "metadata": {
