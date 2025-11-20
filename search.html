@@ -3,70 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بحث متخصص - مكتبة ناصر ابن داوود</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="ابحث في مكتبة ناصر ابن داوود الرقمية - المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي">
+    <meta name="keywords" content="مكتبة, كتب, قرآن, لغة عربية, ذكاء اصطناعي, بحث, ناصر ابن داوود">
+    <title>بحث متقدم - مكتبة ناصر ابن داوود</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-color: #1a5276;
             --secondary-color: #2980b9;
             --accent-color: #e74c3c;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
         }
         
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Tajawal', sans-serif;
         }
         
         body {
-            background: #f5f7fa;
-            color: #333;
+            background-color: #f9f9f9;
+            color: var(--dark-color);
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 1rem;
+            flex: 1;
         }
-
+        
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 2rem 0;
             text-align: center;
-            border-radius: 0 0 20px 20px;
             margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .promotion-banner {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
         }
         
         .search-section {
-            background: white;
+            background-color: white;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
         }
         
+        .search-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* محرك البحث المخصص */
+        .custom-search-box {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .custom-search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px 0 0 50px;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        
+        .custom-search-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            padding: 0 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .custom-search-button:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* تخصيص محرك بحث جوجل */
+        .gcse-search {
+            width: 100%;
+        }
+        
+        .gsc-control-cse {
+            padding: 0 !important;
+            border: none !important;
+            background: transparent !important;
+            font-family: 'Tajawal', sans-serif !important;
+        }
+        
+        .gsc-input-box {
+            border: 2px solid var(--primary-color) !important;
+            border-radius: 50px !important;
+            padding: 5px !important;
+            height: auto !important;
+        }
+        
+        .gsc-input {
+            padding: 10px 15px !important;
+            font-size: 1.1rem !important;
+        }
+        
+        .gsc-search-button-v2 {
+            padding: 10px 20px !important;
+            border: none !important;
+            border-radius: 50px !important;
+            background: var(--primary-color) !important;
+            font-size: 1rem !important;
+        }
+        
+        /* تخصيص مظهر الترويجات في نتائج البحث */
+        .gsc-promotion {
+            border: 2px solid var(--success-color) !important;
+            border-radius: var(--border-radius) !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .gsc-promotion .gs-title {
+            color: var(--success-color) !important;
+            font-weight: bold !important;
+        }
+        
+        /* نتائج البحث المحلي */
+        .local-results {
+            margin-top: 2rem;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .results-count {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .book-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-badge {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .book-description {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .book-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .book-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--light-color);
+            color: var(--dark-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .book-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* رسائل حالة البحث */
+        .search-status {
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .no-results {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        
+        .search-help {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            color: var(--primary-color);
+        }
+        
+        .suggestions {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+        }
+        
+        .suggestions h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .suggestions-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .suggestion-item {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .suggestion-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .filter-select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* روابط سريعة */
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .quick-link {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-5px);
+            color: var(--secondary-color);
+        }
+        
+        /* كتب مميزة */
+        .featured-books {
+            margin: 3rem 0;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .featured-book-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .featured-book-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .featured-book-title {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .featured-book-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #777;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+            background: white;
+        }
+        
+        /* تبويبات البحث */
         .search-tabs {
             display: flex;
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
         }
         
         .search-tab {
-            flex: 1;
-            padding: 12px 20px;
-            text-align: center;
+            padding: 10px 20px;
             cursor: pointer;
-            border-radius: 8px;
+            border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
         }
         
         .search-tab.active {
-            background: var(--primary-color);
-            color: white;
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
         }
         
         .tab-content {
@@ -77,43 +436,7 @@
             display: block;
         }
         
-        .search-box {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .search-input {
-            flex: 1;
-            padding: 15px 20px;
-            border: 2px solid #e1e8ed;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .search-input:focus {
-            border-color: var(--primary-color);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
-        }
-        
-        .search-btn {
-            padding: 15px 30px;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .search-btn:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
-        }
-        
+        /* تحسينات للبحث المحلي */
         .language-toggle {
             display: flex;
             justify-content: center;
@@ -134,96 +457,6 @@
         .lang-btn.active {
             background: var(--primary-color);
             color: white;
-        }
-        
-        .gcse-search {
-            width: 100%;
-        }
-        
-        .info-box {
-            background: #e8f4fd;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-            border-right: 4px solid var(--primary-color);
-        }
-        
-        .schema-types {
-            background: #f0f7ff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-        }
-        
-        .schema-types-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .schema-type {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .book-card {
-            background: white;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 1px solid #e1e8ed;
-        }
-        
-        .book-title {
-            color: #2c5f8a;
-            margin-bottom: 0.5rem;
-        }
-        
-        .book-description {
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-        
-        .book-meta {
-            color: #777;
-            font-size: 0.9rem;
-            margin: 10px 0;
-        }
-        
-        .book-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--secondary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        
-        .book-link:hover {
-            background: var(--primary-color);
-        }
-        
-        .search-highlight {
-            background-color: #fff3cd;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-        
-        .language-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            background: #e74c3c;
-            color: white;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 5px;
-            vertical-align: middle;
         }
         
         .topics-list {
@@ -265,45 +498,56 @@
             background: #fff3cd;
         }
         
-        .loading-dots {
+        .search-highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .language-badge {
             display: inline-block;
-        }
-        .loading-dots span {
-            animation: loading 1.4s ease-in-out infinite both;
-        }
-        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes loading {
-            0%, 80%, 100% { opacity: 0.3; }
-            40% { opacity: 1; }
-        }
-        
-        .search-status {
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        .search-status.loading {
-            background: #e8f4fd;
-            color: #1a5276;
-        }
-        
-        .search-status.success {
-            background: #d4edda;
-            color: #155724;
-        }
-        
-        .search-status.error {
-            background: #f8d7da;
-            color: #721c24;
+            padding: 2px 8px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 5px;
+            vertical-align: middle;
         }
         
         @media (max-width: 768px) {
-            .search-box {
+            .filters {
                 flex-direction: column;
+            }
+            
+            .book-header {
+                flex-direction: column;
+            }
+            
+            .book-links {
+                flex-direction: column;
+            }
+            
+            .custom-search-box {
+                flex-direction: column;
+            }
+            
+            .custom-search-input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .custom-search-button {
+                border-radius: 50px;
+                padding: 12px;
+            }
+            
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
             }
             
             .search-tabs {
@@ -315,52 +559,28 @@
 <body>
     <header>
         <div class="container">
-            <h1>🔍 محرك البحث المتخصص</h1>
-            <p>مكتبة ناصر ابن داوود - بحث متقدم في اللغتين العربية والإنجليزية</p>
+            <div class="logo">📚</div>
+            <h1>بحث متقدم في مكتبة ناصر ابن داوود</h1>
+            <p>ابحث في المؤلفات القرآنية واللغوية المتوافقة مع الذكاء الاصطناعي</p>
         </div>
     </header>
-
+    
+    <div class="promotion-banner">
+        <div class="container">
+            <strong>🔍 بحث متقدم</strong> - ابحث في أكثر من 14 كتاباً ومخطوطة في الدراسات القرآنية والإيمانية
+        </div>
+    </div>
+    
     <div class="container">
         <!-- تبويبات البحث -->
         <div class="search-tabs">
-            <div class="search-tab active" data-tab="google-search">بحث جوجل المتخصص</div>
-            <div class="search-tab" data-tab="local-search">البحث المحلي</div>
+            <div class="search-tab active" data-tab="local-search">البحث المحلي</div>
+            <div class="search-tab" data-tab="google-search">بحث جوجل</div>
             <div class="search-tab" data-tab="all-books">جميع الكتب</div>
         </div>
-
-        <!-- بحث جوجل المتخصص -->
-        <section class="search-section tab-content active" id="google-search">
-            <h2>بحث جوجل المتخصص باستخدام Schema.org</h2>
-            <p>ابحث في محتوى المكتبة مع نتائج مخصصة باستخدام أنواع Schema.org</p>
-            
-            <div class="info-box">
-                <strong>💡 معلومة:</strong> هذا المحرك مخصص للبحث في الكتب والمواد الأكاديمية فقط
-                <br>
-                <strong>🔧 حالة المحرك:</strong> <span id="search-engine-status">مفعل - جاهز للاستخدام</span>
-            </div>
-
-            <!-- محرك بحث جوجل المخصص مع إعدادات محسنة -->
-            <div class="search-container">
-                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
-                <div class="gcse-search"></div>
-            </div>
-
-            <!-- أنواع Schema.org -->
-            <div class="schema-types">
-                <h3>أنواع Schema.org المستخدمة:</h3>
-                <div class="schema-types-list">
-                    <span class="schema-type">Book</span>
-                    <span class="schema-type">Article</span>
-                    <span class="schema-type">ScholarlyArticle</span>
-                    <span class="schema-type">CreativeWork</span>
-                    <span class="schema-type">CollectionPage</span>
-                    <span class="schema-type">WebPage</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- البحث المحلي -->
-        <section class="search-section tab-content" id="local-search">
+        
+        <!-- محتوى تبويب البحث المحلي -->
+        <section class="search-section tab-content active" id="local-search">
             <h2>البحث المحلي في المكتبة</h2>
             <p>ابحث في جميع الكتب باستخدام نظام البحث المدمج - يدعم العربية والإنجليزية</p>
             
@@ -371,33 +591,190 @@
                 <button class="lang-btn" data-lang="en">الإنجليزية فقط</button>
             </div>
             
-            <div class="search-box">
-                <input type="text" id="localSearch" class="search-input" placeholder="ابحث في العناوين والمحتوي والكلمات المفتاحية...">
-                <button class="search-btn" onclick="performLocalSearch()">بحث محلي</button>
+            <div class="search-container">
+                <div class="custom-search-box">
+                    <input type="text" class="custom-search-input" id="localSearchInput" placeholder="ابحث في عناوين الكتب ومحتواها...">
+                    <button class="custom-search-button" id="localSearchButton">
+                        <i class="fas fa-search"></i> بحث
+                    </button>
+                </div>
             </div>
             
-            <div id="localResults"></div>
+            <!-- الفلاتر -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label" for="categoryFilter">التصنيف:</label>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">جميع التصنيفات</option>
+                        <option value="quranic_studies">الدراسات القرآنية</option>
+                        <option value="faith_studies">الدراسات الإيمانية</option>
+                        <option value="digital_projects">المشاريع الرقمية</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label" for="sortFilter">ترتيب حسب:</label>
+                    <select class="filter-select" id="sortFilter">
+                        <option value="relevance">الأكثر صلة</option>
+                        <option value="title">العنوان</option>
+                        <option value="pages">عدد الصفحات</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- نتائج البحث المحلي -->
+            <div class="local-results" id="localResults">
+                <div class="results-header">
+                    <h2>نتائج البحث من المكتبة</h2>
+                    <div class="results-count" id="resultsCount">14 كتاب متاح</div>
+                </div>
+                <div id="booksContainer">
+                    <!-- سيتم ملء هذا القسم بالكتب عبر JavaScript -->
+                </div>
+            </div>
+            
+            <!-- رسائل حالة البحث -->
+            <div class="search-status no-results" id="noResults" style="display: none;">
+                <h3>⚠️ لم يتم العثور على نتائج</h3>
+                <p>جرب استخدام كلمات بحث مختلفة أو تصفح الاقتراحات أدناه</p>
+            </div>
+            
+            <div class="search-status search-help">
+                <p>🔍 <strong>نصيحة:</strong> جرب البحث بكلمات مفتاحية بسيطة مثل "القرآن" أو "اللغة"</p>
+            </div>
+            
+            <!-- اقتراحات بحث -->
+            <div class="suggestions">
+                <h3>🔍 اقتراحات للبحث:</h3>
+                <div class="suggestions-list">
+                    <div class="suggestion-item" onclick="setSearchQuery('القرآن الكريم')">القرآن الكريم</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('اللغة العربية')">اللغة العربية</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('التفسير')">التفسير</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('الحديث')">الحديث</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('الفقه')">الفقه</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('العقيدة')">العقيدة</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('أدب')">أدب</div>
+                    <div class="suggestion-item" onclick="setSearchQuery('بلاغة')">بلاغة</div>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <p>🔍 <strong>يبحث في المحتوى الكامل</strong> لجميع الكتب والمستندات المتاحة في المكتبة</p>
+            </div>
         </section>
-
-        <!-- جميع الكتب -->
+        
+        <!-- محتوى تبويب بحث جوجل -->
+        <section class="search-section tab-content" id="google-search">
+            <h2>بحث جوجل المتقدم</h2>
+            <p>استخدم محرك بحث جوجل المخصص للبحث في محتوى المكتبة مع نتائج مخصصة وترويج للكتب المميزة</p>
+            
+            <!-- محرك بحث جوجل المخصص -->
+            <div class="search-container">
+                <script async src="https://cse.google.com/cse.js?cx=87a2ea74c56054f92"></script>
+                <div class="gcse-search"></div>
+            </div>
+            
+            <div class="info-box">
+                <p>🔍 <strong>نتائج مخصصة</strong> - تم تخصيص محرك البحث لعرض النتائج الأكثر صلة بمحتوى المكتبة</p>
+            </div>
+        </section>
+        
+        <!-- محتوى تبويب جميع الكتب -->
         <section class="search-section tab-content" id="all-books">
             <h2>جميع الكتب المتاحة</h2>
-            <p>استعرض جميع الكتب في المكتبة</p>
+            <p>استعرض جميع الكتب والمخطوطات المتاحة في المكتبة حسب التصنيف</p>
             
             <!-- تبديل اللغة للعرض -->
             <div class="language-toggle">
-                <button class="lang-btn active" data-lang-display="both">جميع اللغات</button>
-                <button class="lang-btn" data-lang-display="ar">العربية فقط</button>
-                <button class="lang-btn" data-lang-display="en">الإنجليزية فقط</button>
+                <button class="lang-btn active" data-lang-display="ar">عرض بالعربية</button>
+                <button class="lang-btn" data-lang-display="en">عرض بالإنجليزية</button>
             </div>
             
-            <div id="allBooksList"></div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label" for="allBooksCategoryFilter">التصنيف:</label>
+                    <select class="filter-select" id="allBooksCategoryFilter">
+                        <option value="all">جميع التصنيفات</option>
+                        <option value="quranic_studies">الدراسات القرآنية</option>
+                        <option value="faith_studies">الدراسات الإيمانية</option>
+                        <option value="digital_projects">المشاريع الرقمية</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="local-results">
+                <div class="results-header">
+                    <h2>جميع الكتب</h2>
+                    <div class="results-count" id="allBooksCount">14 كتاب متاح</div>
+                </div>
+                <div id="allBooksContainer">
+                    <!-- سيتم ملء هذا القسم بجميع الكتب عبر JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- روابط سريعة -->
+        <div class="quick-links">
+            <a href="https://nasserhabitat.github.io/nasser-books/index.html" class="quick-link">
+                <i class="fas fa-list"></i>
+                <h3>فهرس الكتب</h3>
+                <p>استعرض جميع الكتب المتاحة</p>
+            </a>
+            <a href="https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/content.pdf" class="quick-link">
+                <i class="fas fa-book-open"></i>
+                <h3>نحو تدبر واعٍ</h3>
+                <p>الكتاب الأكثر تحميلاً</p>
+            </a>
+            <a href="https://nasserhabitat.github.io/nasser-books/books/the-jurisprudence/ar/content.pdf" class="quick-link">
+                <i class="fas fa-quran"></i>
+                <h3>فقه اللسان القرآني</h3>
+                <p>دراسة منهجية متقدمة</p>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1abc123" class="quick-link">
+                <i class="fas fa-download"></i>
+                <h3>جميع الملفات</h3>
+                <p>روابط التحميل المباشرة</p>
+            </a>
+        </div>
+
+        <!-- كتب مميزة -->
+        <section class="featured-books">
+            <h2 style="text-align: center; margin-bottom: 1rem;">📖 الكتب المميزة</h2>
+            <div class="books-grid">
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">نحو تدبر واعٍ</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 91 صفحة</div>
+                    <p>دليل عملي لفهم وتطبيق القرآن الكريم في العصر الحديث</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">فقه اللسان القرآني</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 592 صفحة</div>
+                    <p>دراسة منهجية لفهم اللسان العربي القرآني ومنهجية التدبر</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">أنوار البيان</h3>
+                    <div class="featured-book-meta">الدراسات القرآنية • 161 صفحة</div>
+                    <p>دراسة علمية للرسم العثماني وأسراره اللغوية</p>
+                </div>
+                <div class="featured-book-card">
+                    <h3 class="featured-book-title">الحَيَاءُ</h3>
+                    <div class="featured-book-meta">الدراسات الإيمانية • 46 صفحة</div>
+                    <p>سياج الروح وبوصلة الفهم في المنظور القرآني</p>
+                </div>
+            </div>
         </section>
     </div>
+    
+    <footer>
+        <div class="container">
+            <p>مكتبة ناصر ابن داوود © 2025 - جميع الحقوق محفوظة</p>
+            <p>الترخيص: CC BY-SA 4.0 - متوافق مع الذكاء الاصطناعي</p>
+        </div>
+    </footer>
 
     <script>
-        // بيانات الكتب الأساسية
-        const booksData = [
+        // بيانات الكتب (نفس البيانات من search.html)
+const booksData = [
     {
       "id": "conscious-contemplation",
       "titles": {
@@ -1100,36 +1477,68 @@
         "structured_data": true,
         "topics": ["النفس", "الحرف", "الوعي", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الروح", "القلب", "العقل", "البعد الإنساني", "التكامل", "التربية", "التزكية", "التطهير", "السمو", "الارتقاء"]
       }
-    }
-  ] ;
+    }   
+     ];
 
         // إعدادات البحث
         let currentSearchLanguage = 'both';
-        let currentDisplayLanguage = 'both';
+        let currentDisplayLanguage = 'ar';
+        const bookContentCache = new Map();
 
-        // === الدوال الرئيسية ===
+        // عناصر DOM
+        const localSearchInput = document.getElementById('localSearchInput');
+        const localSearchButton = document.getElementById('localSearchButton');
+        const booksContainer = document.getElementById('booksContainer');
+        const allBooksContainer = document.getElementById('allBooksContainer');
+        const resultsCount = document.getElementById('resultsCount');
+        const allBooksCount = document.getElementById('allBooksCount');
+        const noResultsMsg = document.getElementById('noResults');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const allBooksCategoryFilter = document.getElementById('allBooksCategoryFilter');
+        const searchTabs = document.querySelectorAll('.search-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTabs();
+            initializeLanguageButtons();
+            displayAllBooks();
+            
+            // أحداث البحث
+            localSearchButton.addEventListener('click', performLocalSearch);
+            localSearchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performLocalSearch();
+                }
+            });
+            
+            // أحداث الفلاتر
+            categoryFilter.addEventListener('change', performLocalSearch);
+            sortFilter.addEventListener('change', performLocalSearch);
+            allBooksCategoryFilter.addEventListener('change', displayAllBooks);
+        });
 
         // تبديل التبويبات
         function initializeTabs() {
-            const tabs = document.querySelectorAll('.search-tab');
-            tabs.forEach(tab => {
+            searchTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                    
-                    this.classList.add('active');
                     const tabId = this.getAttribute('data-tab');
-                    const targetSection = document.getElementById(tabId);
-                    if (targetSection) {
-                        targetSection.classList.add('active');
-                    }
+                    switchTab(tabId);
                 });
             });
         }
 
+        function switchTab(tabId) {
+            tabContents.forEach(content => content.classList.remove('active'));
+            searchTabs.forEach(tab => tab.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+        }
+
         // تهيئة أزرار اللغة
         function initializeLanguageButtons() {
-            // أزرار لغة البحث
             const langButtons = document.querySelectorAll('.lang-btn[data-lang]');
             langButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -1139,7 +1548,6 @@
                 });
             });
 
-            // أزرار لغة العرض
             const displayButtons = document.querySelectorAll('.lang-btn[data-lang-display]');
             displayButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -1152,147 +1560,251 @@
         }
 
         // البحث المحلي
-        function performLocalSearch() {
-            const query = document.getElementById('localSearch').value.trim();
-            const resultsDiv = document.getElementById('localResults');
+        async function performLocalSearch() {
+            const query = localSearchInput.value.trim();
+            const category = categoryFilter.value;
+            const sort = sortFilter.value;
             
             if (!query) {
-                resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
+                displayBooks(booksData);
                 return;
             }
             
             // عرض رسالة تحميل
-            resultsDiv.innerHTML = `
-                <div class="search-status loading">
-                    <p>🔍 جاري البحث في المكتبة...</p>
-                    <div class="loading-dots">
-                        <span>●</span>
-                        <span>●</span>
-                        <span>●</span>
-                    </div>
+            booksContainer.innerHTML = `
+                <div class="search-status search-help">
+                    <p>🔍 جاري البحث في نصوص الكتب...</p>
                 </div>
             `;
             
-            // محاكاة البحث (في التطبيق الحقيقي سيتم البحث الفعلي)
-            setTimeout(() => {
-                const searchResults = booksData.filter(book => {
-                    if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
-                        if (book.titles.ar.includes(query) || 
-                            book.description.ar.includes(query) ||
-                            book.metadata.topics.some(topic => topic.includes(query))) {
-                            return true;
-                        }
-                    }
-                    if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
-                        if (book.titles.en.includes(query) || 
-                            book.description.en.includes(query)) {
-                            return true;
-                        }
-                    }
-                    return false;
-                });
+            const searchResults = [];
+            
+            for (const book of booksData) {
+                let matches = false;
+                let textMatches = [];
                 
-                displaySearchResults(searchResults, query, resultsDiv);
-            }, 1000);
+                // البحث حسب اللغة المحددة
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                    if (book.titles.ar.toLowerCase().includes(query.toLowerCase()) ||
+                        book.description.ar.toLowerCase().includes(query.toLowerCase()) ||
+                        book.metadata.topics.some(topic => topic.toLowerCase().includes(query.toLowerCase()))) {
+                        matches = true;
+                    }
+                }
+                
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                    if (book.titles.en.toLowerCase().includes(query.toLowerCase()) ||
+                        book.description.en.toLowerCase().includes(query.toLowerCase())) {
+                        matches = true;
+                    }
+                }
+                
+                if (matches) {
+                    searchResults.push({
+                        book: book,
+                        score: 1 // يمكن تحسين نظام التقييم
+                    });
+                }
+            }
+            
+            // تطبيق تصفية التصنيف
+            let filteredResults = searchResults;
+            if (category !== 'all') {
+                filteredResults = filteredResults.filter(result => 
+                    result.book.metadata.category === category
+                );
+            }
+            
+            // تطبيق الترتيب
+            if (sort === 'title') {
+                filteredResults.sort((a, b) => a.book.titles.ar.localeCompare(b.book.titles.ar));
+            } else if (sort === 'pages') {
+                filteredResults.sort((a, b) => b.book.metadata.pages_ar - a.book.metadata.pages_ar);
+            }
+            
+            displaySearchResults(filteredResults, query);
         }
 
         // عرض نتائج البحث
-        function displaySearchResults(results, query, container) {
+        function displaySearchResults(results, query) {
+            booksContainer.innerHTML = '';
+            
             if (results.length === 0) {
-                container.innerHTML = `
-                    <div class="search-status error">
-                        <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
-                        <p>جرب استخدام مصطلحات بحث مختلفة</p>
-                    </div>
-                `;
+                noResultsMsg.style.display = 'block';
+                resultsCount.textContent = '0 كتاب متاح';
                 return;
             }
             
-            container.innerHTML = `
-                <div class="search-status success">
-                    <p>✅ تم العثور على ${results.length} نتيجة لـ "<strong>${query}</strong>"</p>
-                </div>
-                ${results.map(book => `
-                    <div class="book-card">
-                        <h3 class="book-title">${book.titles.ar}</h3>
-                        <p class="book-description">${book.description.ar}</p>
+            noResultsMsg.style.display = 'none';
+            resultsCount.textContent = `${results.length} كتاب متاح`;
+            
+            results.forEach(result => {
+                const book = result.book;
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.ar : book.titles.en}
+                            </h3>
+                            <p style="color: #666; font-style: italic;">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.en : book.titles.ar}
+                            </p>
+                        </div>
                         <div class="book-meta">
-                            <strong>التصنيف:</strong> ${book.metadata.category} • 
-                            <strong>الصفحات:</strong> ${book.metadata.pages_ar}
-                        </div>
-                        <div class="topics-list">
-                            ${book.metadata.topics.map(topic => `
-                                <span class="topic-tag">${topic}</span>
-                            `).join('')}
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">📚 عرض الكتاب</a>
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${currentDisplayLanguage === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
                         </div>
                     </div>
-                `).join('')}
-            `;
+                    <p class="book-description">
+                        ${currentDisplayLanguage === 'ar' ? book.description.ar : book.description.en}
+                    </p>
+                    <div class="topics-list">
+                        ${book.metadata.topics.slice(0, 5).map(topic => `
+                            <span class="topic-tag">${topic}</span>
+                        `).join('')}
+                    </div>
+                    <div class="book-links">
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
+                    </div>
+                `;
+                
+                booksContainer.appendChild(bookCard);
+            });
         }
 
         // عرض جميع الكتب
         function displayAllBooks() {
-            const booksList = document.getElementById('allBooksList');
-            let filteredBooks = booksData;
+            const category = allBooksCategoryFilter.value;
             
-            // تطبيق تصفية اللغة
-            if (currentDisplayLanguage === 'ar') {
-                filteredBooks = booksData.filter(book => book.metadata.language_ar === 'arabic');
-            } else if (currentDisplayLanguage === 'en') {
-                filteredBooks = booksData.filter(book => book.metadata.language_en === 'english');
+            let filteredBooks = booksData;
+            if (category !== 'all') {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.metadata.category === category
+                );
             }
             
-            booksList.innerHTML = `
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">
-                    جميع الكتب المتاحة (${filteredBooks.length})
-                </h3>
-                ${filteredBooks.map(book => `
-                    <div class="book-card">
-                        <h3 class="book-title">${book.titles.ar}</h3>
-                        <p class="book-description">${book.description.ar}</p>
+            allBooksContainer.innerHTML = '';
+            allBooksCount.textContent = `${filteredBooks.length} كتاب متاح`;
+            
+            filteredBooks.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.ar : book.titles.en}
+                            </h3>
+                            <p style="color: #666; font-style: italic;">
+                                ${currentDisplayLanguage === 'ar' ? book.titles.en : book.titles.ar}
+                            </p>
+                        </div>
                         <div class="book-meta">
-                            <strong>التصنيف:</strong> ${book.metadata.category} • 
-                            <strong>الصفحات:</strong> ${book.metadata.pages_ar} •
-                            <strong>اللغة:</strong> ${book.metadata.language_ar === 'arabic' ? 'العربية' : 'الإنجليزية'}
-                        </div>
-                        <div class="topics-list">
-                            ${book.metadata.topics.slice(0, 5).map(topic => `
-                                <span class="topic-tag">${topic}</span>
-                            `).join('')}
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">📚 عرض الكتاب (العربية)</a>
-                            ${book.en.pdf_direct ? `<a href="${book.en.pdf_direct}" class="book-link" style="background: #e74c3c; margin-right: 10px;" target="_blank">📘 عرض الكتاب (English)</a>` : ''}
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${currentDisplayLanguage === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
                         </div>
                     </div>
-                `).join('')}
-            `;
+                    <p class="book-description">
+                        ${currentDisplayLanguage === 'ar' ? book.description.ar : book.description.en}
+                    </p>
+                    <div class="topics-list">
+                        ${book.metadata.topics.slice(0, 8).map(topic => `
+                            <span class="topic-tag">${topic}</span>
+                        `).join('')}
+                    </div>
+                    <div class="book-links">
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
+                    </div>
+                `;
+                
+                allBooksContainer.appendChild(bookCard);
+            });
         }
 
-        // === تهيئة الصفحة ===
-        document.addEventListener('DOMContentLoaded', function() {
-            // تهيئة التبويبات
-            initializeTabs();
+        // دوال مساعدة
+        function getCategoryText(category) {
+            const categories = {
+                'quranic_studies': 'الدراسات القرآنية',
+                'faith_studies': 'الدراسات الإيمانية',
+                'digital_projects': 'المشاريع الرقمية'
+            };
+            return categories[category] || category;
+        }
+        
+        function getCategoryClass(category) {
+            const classes = {
+                'quranic_studies': 'category-quranic',
+                'faith_studies': 'category-faith',
+                'digital_projects': 'category-digital'
+            };
+            return classes[category] || '';
+        }
+        
+        function setSearchQuery(query) {
+            localSearchInput.value = query;
+            performLocalSearch();
+        }
+
+        // عرض الكتب الأولي
+        function displayBooks(books) {
+            booksContainer.innerHTML = '';
+            resultsCount.textContent = `${books.length} كتاب متاح`;
             
-            // تهيئة أزرار اللغة
-            initializeLanguageButtons();
-            
-            // عرض جميع الكتب تلقائياً
-            displayAllBooks();
-            
-            // تفعيل البحث عند الضغط على Enter
-            document.getElementById('localSearch')?.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') performLocalSearch();
+            books.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                
+                const categoryClass = getCategoryClass(book.metadata.category);
+                
+                bookCard.innerHTML = `
+                    <div class="book-header">
+                        <div>
+                            <h3 class="book-title">${book.titles.ar}</h3>
+                            <p style="color: #666; font-style: italic;">${book.titles.en}</p>
+                        </div>
+                        <div class="book-meta">
+                            <span class="meta-badge ${categoryClass}">${getCategoryText(book.metadata.category)}</span>
+                            <span class="meta-badge">${book.metadata.pages_ar} صفحة</span>
+                            <span class="meta-badge">${book.metadata.ai_accessible ? 'متوافق مع الذكاء الاصطناعي' : ''}</span>
+                        </div>
+                    </div>
+                    <p class="book-description">${book.description.ar}</p>
+                    <div class="book-links">
+                        <a href="${book.ar.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF عربي
+                        </a>
+                        <a href="${book.en.pdf_direct}" class="book-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF English
+                        </a>
+                    </div>
+                `;
+                
+                booksContainer.appendChild(bookCard);
             });
-            
-            // جعل الدوال متاحة عالمياً
-            window.performLocalSearch = performLocalSearch;
-            window.displayAllBooks = displayAllBooks;
-        });
+        }
+
+        // تهيئة العرض الأولي
+        displayBooks(booksData);
     </script>
 </body>
 </html>
-
