@@ -11,12 +11,11 @@
       "email": "nasserhabitat@gmail.com"
     }
   },
-  {
-  "library": {
+  "library_info": {
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-11-9",
+    "last_updated": "2025-11-09",
     "total_books": 44,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
@@ -27,7 +26,6 @@
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
   },
-  {
   "pages": {
     "main": "https://nasserhabitat.github.io/nasser-books/",
     "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
@@ -35,8 +33,7 @@
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
   },
   "books_count": 44,
-  "last_updated": "2025-11-9"
-},
+  "last_updated": "2025-11-09",
   "books": [
     {
       "id": "conscious-contemplation",
@@ -48,6 +45,7 @@
         "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
         "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
       },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/conscious-contemplation/ar/cover-ar.png",
       "ar": {
         "docx": "https://drive.google.com/uc?export=download&id=17AkqVDGa9GOoGEpCHmk1yfQ9t9uIgUV2",
         "pdf_direct": "books/conscious-contemplation/ar/content.pdf",
@@ -477,6 +475,7 @@
         "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
         "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
       },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/malakoot/ar/cover-ar.png",
       "ar": {
         "docx": "https://drive.google.com/uc?export=download&id=1qq6AYqnC-eOT750cNSUUFHTZ55LtZUkP",
         "pdf_direct": "books/malakoot/ar/content.pdf",
@@ -515,6 +514,11 @@
         "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
         "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
       },
+      "description": {
+        "ar": "من التنزيه القلبي إلى الخضوع العملي",
+        "en": "From Heartfelt Purification to Practical Submission"
+      },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/prostration-and-glorification-in-the-quran/ar/cover-ar.png",
       "ar": {
         "docx": "https://drive.google.com/uc?export=download&id=1_J5BwdF5xgKoXJM7WzRFxxv0NXWlrDLV",
         "pdf_direct": "books/prostration-and-glorification-in-the-quran/ar/content.pdf",
@@ -557,6 +561,7 @@
         "ar": "من الرمز الباطني إلى النموذج الإنساني",
         "en": "From the esoteric symbol to the human model"
       },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/christ-and-mary-in-the-quran/ar/cover-ar.png",
       "ar": {
         "docx": "https://drive.google.com/uc?export=download&id=1f-RnPsgoj2SWgpUKGqXfXXloZaQPfPo0",
         "pdf_direct": "books/christ-and-mary-in-the-quran/ar/content.pdf",
@@ -599,6 +604,7 @@
         "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
         "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
       },
+      "cover_image": "https://nasserhabitat.github.io/nasser-books/books/names-in-the-holy/ar/cover-ar.png",
       "ar": {
         "docx": "https://drive.google.com/uc?export=download&id=1vm4f-wf0X7VA3GFzMeWntSeV5qOs3crQ",
         "pdf_direct": "books/names-in-the-holy/ar/content.pdf",
