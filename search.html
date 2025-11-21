@@ -1237,8 +1237,11 @@ async function performLocalSearch() {
     
     const searchResults = [];
     
-    // البحث في كل كتاب
-    for (const book of booksData) {
+    // البحث في كل كتاب مع مؤشر التقدم
+    for (let i = 0; i < booksData.length; i++) {
+        const book = booksData[i];
+        updateSearchProgress(i + 1, booksData.length);
+        
         console.log(`🔎 البحث في كتاب: ${book.titles.ar}`);
         
         let inTitle = false;
@@ -1275,7 +1278,7 @@ async function performLocalSearch() {
                     try {
                         const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
                         if (content) {
-                            const matches = searchInText(content, query, 2); // تقليل عدد النتائج
+                            const matches = searchInText(content, query, 2);
                             textMatches = textMatches.concat(matches);
                         }
                     } catch (error) {
@@ -1291,7 +1294,7 @@ async function performLocalSearch() {
                     try {
                         const content = await loadBookContent(book.id + '_en', englishTextUrl);
                         if (content) {
-                            const matches = searchInText(content, query, 2); // تقليل عدد النتائج
+                            const matches = searchInText(content, query, 2);
                             textMatches = textMatches.concat(matches);
                         }
                     } catch (error) {
@@ -1307,109 +1310,108 @@ async function performLocalSearch() {
                 inTitle: inTitle,
                 inDescription: inDescription,
                 inTopics: inAnyTopics,
+                inArabicTopics: inTopics,
+                inEnglishTopics: inEnglishTopics,
                 textMatches: textMatches,
                 score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
             });
         }
     }
     
-  }
+    // ترتيب النتائج حسب الأهمية
+    searchResults.sort((a, b) => b.score - a.score);
+    
+    if (searchResults.length === 0) {
+        resultsDiv.innerHTML = `
+            <div style="text-align: center; padding: 2rem; color: #666;">
+                <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
+                <p>جرب استخدام مصطلحات بحث مختلفة أو تغيير لغة البحث</p>
+            </div>
+        `;
+        return;
+    }
+    
+    // عرض النتائج
+    resultsDiv.innerHTML = `
+        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
+            نتائج البحث لـ "<span style="color: var(--accent-color);">${query}</span>" (${searchResults.length})
+            <span style="font-size: 0.8em; color: #666;">- البحث في: ${getLanguageText(currentSearchLanguage)}</span>
+        </h3>
+        ${searchResults.map(result => {
+            const book = result.book;
+            const displayLang = currentDisplayLanguage;
             
-            // ترتيب النتائج حسب الأهمية
-            searchResults.sort((a, b) => b.score - a.score);
-            
-            if (searchResults.length === 0) {
-                resultsDiv.innerHTML = `
-                    <div style="text-align: center; padding: 2rem; color: #666;">
-                        <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
-                        <p>جرب استخدام مصطلحات بحث مختلفة أو تغيير لغة البحث</p>
+            return `
+                <div class="book-card">
+                    <h4 class="book-title">
+                        ${displayLang === 'ar' ? book.titles.ar : book.titles.en}
+                        ${result.inTitle ? '<span class="language-badge">العنوان</span>' : ''}
+                    </h4>
+                    <p class="book-description">
+                        ${displayLang === 'ar' ? book.description.ar : book.description.en}
+                        ${result.inDescription ? '<span class="language-badge">الوصف</span>' : ''}
+                    </p>
+                    <div class="book-meta">
+                        <strong>التصنيف:</strong> ${book.metadata.category} • 
+                        <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en}
                     </div>
-                `;
-                return;
-            }
-            
-            // عرض النتائج
-            resultsDiv.innerHTML = `
-                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
-                    نتائج البحث لـ "<span style="color: var(--accent-color);">${query}</span>" (${searchResults.length})
-                    <span style="font-size: 0.8em; color: #666;">- البحث في: ${getLanguageText(currentSearchLanguage)}</span>
-                </h3>
-                ${searchResults.map(result => {
-                    const book = result.book;
-                    const displayLang = currentDisplayLanguage;
                     
-                    return `
-                        <div class="book-card">
-                            <h4 class="book-title">
-                                ${displayLang === 'ar' ? book.titles.ar : book.titles.en}
-                                ${result.inTitle ? '<span class="language-badge">العنوان</span>' : ''}
-                            </h4>
-                            <p class="book-description">
-                                ${displayLang === 'ar' ? book.description.ar : book.description.en}
-                                ${result.inDescription ? '<span class="language-badge">الوصف</span>' : ''}
-                            </p>
-                            <div class="book-meta">
-                                <strong>التصنيف:</strong> ${book.metadata.category} • 
-                                <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en}
-                            </div>
-                            
-                            <!-- عرض الكلمات المفتاحية -->
-                            <div class="topics-list">
-                                ${book.metadata.topics.slice(0, 5).map(topic => `
-                                    <span class="topic-tag">${topic}</span>
-                                `).join('')}
-                                ${book.metadata.topics_en && book.metadata.topics_en.slice(0, 3).map(topic => `
-                                    <span class="topic-tag" style="background: #fff0f0; border-color: #ffcccc;">${topic}</span>
-                                `).join('')}
-                            </div>
-                            
-                            ${result.inArabicTopics || result.inEnglishTopics ? `
-                                <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f8ff; border-radius: 5px; font-size: 0.9em;">
-                                    <strong>موجود في الكلمات المفتاحية:</strong> 
-                                    ${result.inArabicTopics ? '<span style="color: #1a5276;">العربية</span>' : ''}
-                                    ${result.inArabicTopics && result.inEnglishTopics ? ' و ' : ''}
-                                    ${result.inEnglishTopics ? '<span style="color: #e74c3c;">الإنجليزية</span>' : ''}
-                                </div>
-                            ` : ''}
-                            
-                            ${result.textMatches.length > 0 ? `
-                                <div style="margin-top: 1.5rem;">
-                                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">
-                                        📖 المواضع التي وردت فيها الكلمة:
-                                    </h5>
-                                    ${result.textMatches.map(match => `
-                                        <div class="match-line">
-                                            <div class="line-number">
-                                                السطر ${match.lineNumber}
-                                            </div>
-                                            <div style="line-height: 1.6;">
-                                                ${match.context.map(ctx => `
-                                                    <div class="context-line ${ctx.isMatch ? 'match' : ''}">
-                                                        ${ctx.isMatch ? '→ ' : ''}${highlightText(ctx.text, query)}
-                                                    </div>
-                                                `).join('')}
-                                            </div>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            ` : ''}
-                            
-                            <div style="margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap;">
-                                <a href="books/${book.id}/ar/" target="_blank" class="book-link">
-                                    📚 عرض الكتاب (العربية)
-                                </a>
-                                <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
-                                    📘 عرض الكتاب (English)
-                                </a>
-                            </div>
+                    <!-- عرض الكلمات المفتاحية -->
+                    <div class="topics-list">
+                        ${book.metadata.topics_ar.slice(0, 5).map(topic => `
+                            <span class="topic-tag">${topic}</span>
+                        `).join('')}
+                        ${book.metadata.topics_en && book.metadata.topics_en.slice(0, 3).map(topic => `
+                            <span class="topic-tag" style="background: #fff0f0; border-color: #ffcccc;">${topic}</span>
+                        `).join('')}
+                    </div>
+                    
+                    ${result.inArabicTopics || result.inEnglishTopics ? `
+                        <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f8ff; border-radius: 5px; font-size: 0.9em;">
+                            <strong>موجود في الكلمات المفتاحية:</strong> 
+                            ${result.inArabicTopics ? '<span style="color: #1a5276;">العربية</span>' : ''}
+                            ${result.inArabicTopics && result.inEnglishTopics ? ' و ' : ''}
+                            ${result.inEnglishTopics ? '<span style="color: #e74c3c;">الإنجليزية</span>' : ''}
                         </div>
-                    `;
-                }).join('')}
+                    ` : ''}
+                    
+                    ${result.textMatches.length > 0 ? `
+                        <div style="margin-top: 1.5rem;">
+                            <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                                📖 المواضع التي وردت فيها الكلمة:
+                            </h5>
+                            ${result.textMatches.map(match => `
+                                <div class="match-line">
+                                    <div class="line-number">
+                                        السطر ${match.lineNumber}
+                                    </div>
+                                    <div style="line-height: 1.6;">
+                                        ${match.context.map(ctx => `
+                                            <div class="context-line ${ctx.isMatch ? 'match' : ''}">
+                                                ${ctx.isMatch ? '→ ' : ''}${highlightText(ctx.text, query)}
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                    
+                    <div style="margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="books/${book.id}/ar/" target="_blank" class="book-link">
+                            📚 عرض الكتاب (العربية)
+                        </a>
+                        <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
+                            📘 عرض الكتاب (English)
+                        </a>
+                    </div>
+                </div>
             `;
-            
-            console.log(`✅ تم العثور على ${searchResults.length} نتيجة`);
-        }
-
+        }).join('')}
+    `;
+    
+    console.log(`✅ تم العثور على ${searchResults.length} نتيجة`);
+}
         // دالة مساعدة للحصول على نص اللغة
         function getLanguageText(lang) {
             switch(lang) {
@@ -1620,6 +1622,28 @@ for (let i = 0; i < booksData.length; i++) {
     const book = booksData[i];
     updateSearchProgress(i + 1, booksData.length);
     // ... كود البحث الحالي
+}  
+      // دالة تحديث مؤشر التقدم
+function updateSearchProgress(current, total) {
+    const resultsDiv = document.getElementById('localResults');
+    if (resultsDiv) {
+        const progress = Math.round((current / total) * 100);
+        resultsDiv.innerHTML = `
+            <div style="text-align: center; padding: 2rem;">
+                <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                    <p>🔍 جاري البحث في الكتب...</p>
+                    <div style="margin-top: 10px;">
+                        <div style="background: #ddd; border-radius: 10px; height: 20px; width: 300px; margin: 0 auto;">
+                            <div style="background: var(--primary-color); height: 100%; border-radius: 10px; width: ${progress}%; transition: width 0.3s;"></div>
+                        </div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;">
+                            ${current} من ${total} كتاب (${progress}%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
 }  
     </script>
 </body>
