@@ -1422,31 +1422,187 @@ async function performLocalSearch() {
             }
         }
 
-        // تحميل محتوى الكتاب
-        async function loadBookContent(bookId, textUrl) {
-            if (bookContentCache.has(bookId)) {
-                return bookContentCache.get(bookId);
+        // استبدل دالة loadBookContent الحالية بهذه الدالة المحسنة
+async function loadBookContent(bookId, textUrl) {
+    // التحقق أولاً من الذاكرة المؤقتة
+    if (bookContentCache.has(bookId)) {
+        console.log(`✅ استخدام المحتوى المخبأ للكتاب: ${bookId}`);
+        return bookContentCache.get(bookId);
+    }
+
+    try {
+        console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
+        
+        // إضافة مهلة زمنية أطول (15 ثانية)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => {
+            console.warn(`⏰ مهلة تحميل الكتاب: ${bookId}`);
+            controller.abort();
+        }, 15000);
+        
+        const response = await fetch(textUrl, { 
+            signal: controller.signal,
+            cache: 'no-cache' // منع التخزين المؤقت للمتصفح
+        });
+        
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+            throw new Error(`فشل في تحميل الملف: ${response.status} ${response.statusText}`);
+        }
+        
+        const content = await response.text();
+        
+        // التحقق من أن المحتوى غير فارغ
+        if (!content || content.trim().length === 0) {
+            throw new Error('المحتوى فارغ أو غير صالح');
+        }
+        
+        // تخزين المحتوى في الذاكرة المؤقتة
+        bookContentCache.set(bookId, content);
+        console.log(`✅ تم تحميل محتوى الكتاب: ${bookId} (${content.length} حرف)`);
+        return content;
+        
+    } catch (error) {
+        console.error(`❌ خطأ في تحميل محتوى الكتاب ${bookId}:`, error.message);
+        
+        // تخزين قيمة null في الذاكرة المؤقتة لمنع إعادة المحاولة
+        bookContentCache.set(bookId, null);
+        return null;
+    }
+}
+
+// أضف هذه الدالة لتنظيف الذاكرة المؤقتة
+function clearBookCache() {
+    bookContentCache.clear();
+    console.log('🧹 تم تنظيف الذاكرة المؤقتة للكتب');
+}
+
+// استبدل حلقة البحث في performLocalSearch بهذا الكود المحسن:
+async function performLocalSearch() {
+    console.log('🔍 تشغيل البحث المحلي...');
+    const query = document.getElementById('localSearch').value.trim();
+    const fastSearch = document.getElementById('fastSearch').checked;
+    const resultsDiv = document.getElementById('localResults');
+    
+    if (!query) {
+        resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
+        return;
+    }
+    
+    // عرض رسالة تحميل
+    resultsDiv.innerHTML = `
+        <div style="text-align: center; padding: 2rem;">
+            <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                <p>${fastSearch ? '🔍 جاري البحث السريع...' : '📖 جاري البحث في النص الكامل...'}</p>
+                <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    ${fastSearch ? 'البحث في العناوين والوصف والكلمات المفتاحية' : 'قد يستغرق بعض الوقت لتحميل النصوص الكاملة'}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    const searchResults = [];
+    let failedBooks = 0;
+    
+    try {
+        // البحث في كل كتاب مع مؤشر التقدم ومعالجة الأخطاء
+        for (let i = 0; i < booksData.length; i++) {
+            const book = booksData[i];
+            updateSearchProgress(i + 1, booksData.length, failedBooks);
+            
+            console.log(`🔎 البحث في كتاب: ${book.titles.ar} (${i + 1}/${booksData.length})`);
+            
+            let inTitle = false;
+            let inDescription = false;
+            let inTopics = false;
+            let inEnglishTopics = false;
+
+            // البحث في البيانات الأساسية (سريع)
+            if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                inTitle = book.titles.ar.toLowerCase().includes(query.toLowerCase());
+                inDescription = book.description.ar.toLowerCase().includes(query.toLowerCase());
+                inTopics = book.metadata.topics_ar.some(topic => 
+                    topic.toLowerCase().includes(query.toLowerCase())
+                );
             }
 
-            try {
-                console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
-                const response = await fetch(textUrl);
+            if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                inTitle = inTitle || book.titles.en.toLowerCase().includes(query.toLowerCase());
+                inDescription = inDescription || book.description.en.toLowerCase().includes(query.toLowerCase());
+                inEnglishTopics = book.metadata.topics_en.some(topic => 
+                    topic.toLowerCase().includes(query.toLowerCase())
+                );
+            }
+
+            const inAnyTopics = inTopics || inEnglishTopics;
+            let textMatches = [];
+            
+            // البحث في النص الكامل (فقط إذا لم يكن البحث سريع)
+            if (!fastSearch) {
+                let arabicContent = null;
+                let englishContent = null;
                 
-                if (!response.ok) {
-                    throw new Error(`فشل في تحميل الملف: ${response.status}`);
+                // تحميل محتوى النص والبحث فيه (العربية)
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                    const arabicTextUrl = book.links.ar.text;
+                    if (arabicTextUrl) {
+                        try {
+                            arabicContent = await loadBookContent(book.id + '_ar', arabicTextUrl);
+                            if (arabicContent) {
+                                const matches = searchInText(arabicContent, query, 2);
+                                textMatches = textMatches.concat(matches);
+                            }
+                        } catch (error) {
+                            console.warn(`⚠️ تعذر تحميل النص العربي للكتاب: ${book.titles.ar}`);
+                            failedBooks++;
+                        }
+                    }
                 }
                 
-                const content = await response.text();
-                bookContentCache.set(bookId, content);
-                console.log(`✅ تم تحميل محتوى الكتاب: ${bookId}`);
-                return content;
-                
-            } catch (error) {
-                console.error(`❌ خطأ في تحميل محتوى الكتاب ${bookId}:`, error);
-                return null;
+                // تحميل محتوى النص والبحث فيه (الإنجليزية)
+                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                    const englishTextUrl = book.links.en.text;
+                    if (englishTextUrl) {
+                        try {
+                            englishContent = await loadBookContent(book.id + '_en', englishTextUrl);
+                            if (englishContent) {
+                                const matches = searchInText(englishContent, query, 2);
+                                textMatches = textMatches.concat(matches);
+                            }
+                        } catch (error) {
+                            console.warn(`⚠️ تعذر تحميل النص الإنجليزي للكتاب: ${book.titles.en}`);
+                            failedBooks++;
+                        }
+                    }
+                }
+            }
+            
+            if (inTitle || inDescription || inAnyTopics || textMatches.length > 0) {
+                searchResults.push({
+                    book: book,
+                    inTitle: inTitle,
+                    inDescription: inDescription,
+                    inTopics: inAnyTopics,
+                    inArabicTopics: inTopics,
+                    inEnglishTopics: inEnglishTopics,
+                    textMatches: textMatches,
+                    score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
+                });
+            }
+            
+            // إضافة تأخير بسيط بين الطلبات لتجنب الحمل الزائد
+            if (!fastSearch) {
+                await new Promise(resolve => setTimeout(resolve, 100));
             }
         }
-
+    } catch (error) {
+        console.error('❌ خطأ غير متوقع في عملية البحث:', error);
+    }
+    
+    // باقي الكود يبقى كما هو...
+    // [الكود الحالي لعرض النتائج...]
+}
         // تظليل النص المطابق
         function highlightText(text, query) {
             const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
@@ -1594,8 +1750,8 @@ async function performLocalSearch() {
     }
 }
 
-      // أضف هذه الدالة
-function updateSearchProgress(current, total) {
+      // استبدل دالة updateSearchProgress بهذه النسخة المحسنة
+function updateSearchProgress(current, total, failed = 0) {
     const resultsDiv = document.getElementById('localResults');
     if (resultsDiv) {
         const progress = Math.round((current / total) * 100);
@@ -1609,6 +1765,7 @@ function updateSearchProgress(current, total) {
                         </div>
                         <div style="margin-top: 5px; font-size: 0.9em; color: #666;">
                             ${current} من ${total} كتاب (${progress}%)
+                            ${failed > 0 ? `<br><span style="color: #e74c3c;">⚠️ فشل في تحميل ${failed} كتاب</span>` : ''}
                         </div>
                     </div>
                 </div>
@@ -1617,6 +1774,26 @@ function updateSearchProgress(current, total) {
     }
 }
 
+// أضف زراً لتنظيف الذاكرة المؤقتة في واجهة البحث المحلي
+// أضف هذا الكود في قسم البحث المحلي بعد حقل البحث:
+document.querySelector('#local-search .search-box').insertAdjacentHTML('afterend', `
+    <div style="margin: 10px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+        <label style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="fastSearch" checked>
+            🔍 البحث السريع (في العناوين والوصف والكلمات المفتاحية فقط)
+        </label>
+        <button onclick="clearBookCache()" style="padding: 5px 10px; background: #95a5a6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.8em;">
+            🧹 تنظيف الذاكرة المؤقتة
+        </button>
+    </div>
+    <small style="color: #666; display: block; margin-top: 5px;">
+        إلغاء التحديد للبحث في النص الكامل (قد يستغرق وقتاً أطول) - 
+        <em>استخدم زر التنظيف إذا واجهت مشاكل في التحميل</em>
+    </small>
+`);
+
+// اجعل الدوال الجديدة متاحة عالمياً
+window.clearBookCache = clearBookCache;
 // ثم استخدمها في حلقة البحث:
 for (let i = 0; i < booksData.length; i++) {
     const book = booksData[i];
