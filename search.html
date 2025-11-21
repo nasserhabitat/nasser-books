@@ -373,7 +373,16 @@
                     بحث محلي
                 </button>
             </div>
-            
+            <!-- بعد حقل البحث المحلي مباشرة -->
+<div style="margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 8px;">
+    <label style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="fastSearch" checked>
+        🔍 البحث السريع (في العناوين والوصف والكلمات المفتاحية فقط)
+    </label>
+    <small style="color: #666; display: block; margin-top: 5px;">
+        إلغاء التحديد للبحث في النص الكامل (قد يستغرق وقتاً أطول)
+    </small>
+</div>
             <div id="localResults"></div>
         </section>
 
@@ -1203,103 +1212,108 @@ const booksData = [
             
             return matchingLines;
         }
-
-        // البحث المحلي المحسن مع دعم اللغتين
-        async function performLocalSearch() {
-            console.log('🔍 تشغيل البحث المحلي...');
-            const query = document.getElementById('localSearch').value.trim();
-            const resultsDiv = document.getElementById('localResults');
-            
-            if (!query) {
-                resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
-                return;
-            }
-            
-            // عرض رسالة تحميل
-            resultsDiv.innerHTML = `
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
-                        <p>🔍 جاري البحث في نصوص الكتب...</p>
-                        <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                            <div class="loading-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+async function performLocalSearch() {
+    console.log('🔍 تشغيل البحث المحلي...');
+    const query = document.getElementById('localSearch').value.trim();
+    const fastSearch = document.getElementById('fastSearch').checked;
+    const resultsDiv = document.getElementById('localResults');
+    
+    if (!query) {
+        resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
+        return;
+    }
+    
+    // عرض رسالة تحميل
+    resultsDiv.innerHTML = `
+        <div style="text-align: center; padding: 2rem;">
+            <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                <p>${fastSearch ? '🔍 جاري البحث السريع...' : '📖 جاري البحث في النص الكامل...'}</p>
+                <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    ${fastSearch ? 'البحث في العناوين والوصف والكلمات المفتاحية' : 'قد يستغرق بعض الوقت لتحميل النصوص الكاملة'}
                 </div>
-            `;
-            
-            const searchResults = [];
-            
-            // البحث في كل كتاب
-            for (const book of booksData) {
-                console.log(`🔎 البحث في كتاب: ${book.titles.ar}`);
-                
-                // البحث حسب اللغة المحددة
-                let inTitle = false;
-                let inDescription = false;
-                let inTopics = false;
-                let inEnglishTopics = false;
+            </div>
+        </div>
+    `;
+    
+    const searchResults = [];
+    
+    // البحث في كل كتاب
+    for (const book of booksData) {
+        console.log(`🔎 البحث في كتاب: ${book.titles.ar}`);
+        
+        let inTitle = false;
+        let inDescription = false;
+        let inTopics = false;
+        let inEnglishTopics = false;
 
-                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
-                    inTitle = inTitle || book.titles.ar.toLowerCase().includes(query.toLowerCase());
-                    inDescription = inDescription || book.description.ar.toLowerCase().includes(query.toLowerCase());
-                    inTopics = inTopics || book.metadata.topics.some(topic => 
-                        topic.toLowerCase().includes(query.toLowerCase())
-                    );
-                }
+        // البحث في البيانات الأساسية (سريع)
+        if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+            inTitle = book.titles.ar.toLowerCase().includes(query.toLowerCase());
+            inDescription = book.description.ar.toLowerCase().includes(query.toLowerCase());
+            inTopics = book.metadata.topics_ar.some(topic => 
+                topic.toLowerCase().includes(query.toLowerCase())
+            );
+        }
 
-                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
-                    inTitle = inTitle || book.titles.en.toLowerCase().includes(query.toLowerCase());
-                    inDescription = inDescription || book.description.en.toLowerCase().includes(query.toLowerCase());
-                    inEnglishTopics = inEnglishTopics || (book.metadata.topics_en && book.metadata.topics_en.some(topic => 
-                        topic.toLowerCase().includes(query.toLowerCase())
-                    ));
-                }
+        if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+            inTitle = inTitle || book.titles.en.toLowerCase().includes(query.toLowerCase());
+            inDescription = inDescription || book.description.en.toLowerCase().includes(query.toLowerCase());
+            inEnglishTopics = book.metadata.topics_en.some(topic => 
+                topic.toLowerCase().includes(query.toLowerCase())
+            );
+        }
 
-                const inAnyTopics = inTopics || inEnglishTopics;
-                
-                let textMatches = [];
-                
-                // تحميل محتوى النص والبحث فيه (العربية)
-                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
-                    const arabicTextUrl = book.links.ar.text;
-                    if (arabicTextUrl) {
+        const inAnyTopics = inTopics || inEnglishTopics;
+        let textMatches = [];
+        
+        // البحث في النص الكامل (فقط إذا لم يكن البحث سريع)
+        if (!fastSearch) {
+            // تحميل محتوى النص والبحث فيه (العربية)
+            if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                const arabicTextUrl = book.links.ar.text;
+                if (arabicTextUrl) {
+                    try {
                         const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
                         if (content) {
-                            const matches = searchInText(content, query, 3);
+                            const matches = searchInText(content, query, 2); // تقليل عدد النتائج
                             textMatches = textMatches.concat(matches);
                         }
+                    } catch (error) {
+                        console.warn(`⚠️ تعذر تحميل النص العربي للكتاب: ${book.titles.ar}`);
                     }
-                }
-                
-                // تحميل محتوى النص والبحث فيه (الإنجليزية)
-                if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
-                    const englishTextUrl = book.links.en.text;
-                    if (englishTextUrl) {
-                        const content = await loadBookContent(book.id + '_en', englishTextUrl);
-                        if (content) {
-                            const matches = searchInText(content, query, 3);
-                            textMatches = textMatches.concat(matches);
-                        }
-                    }
-                }
-                
-                if (inTitle || inDescription || inAnyTopics || textMatches.length > 0) {
-                    searchResults.push({
-                        book: book,
-                        inTitle: inTitle,
-                        inDescription: inDescription,
-                        inTopics: inAnyTopics,
-                        inArabicTopics: inTopics,
-                        inEnglishTopics: inEnglishTopics,
-                        textMatches: textMatches,
-                        score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
-                    });
                 }
             }
+            
+            // تحميل محتوى النص والبحث فيه (الإنجليزية)
+            if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                const englishTextUrl = book.links.en.text;
+                if (englishTextUrl) {
+                    try {
+                        const content = await loadBookContent(book.id + '_en', englishTextUrl);
+                        if (content) {
+                            const matches = searchInText(content, query, 2); // تقليل عدد النتائج
+                            textMatches = textMatches.concat(matches);
+                        }
+                    } catch (error) {
+                        console.warn(`⚠️ تعذر تحميل النص الإنجليزي للكتاب: ${book.titles.en}`);
+                    }
+                }
+            }
+        }
+        
+        if (inTitle || inDescription || inAnyTopics || textMatches.length > 0) {
+            searchResults.push({
+                book: book,
+                inTitle: inTitle,
+                inDescription: inDescription,
+                inTopics: inAnyTopics,
+                textMatches: textMatches,
+                score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
+            });
+        }
+    }
+    
+  }
             
             // ترتيب النتائج حسب الأهمية
             searchResults.sort((a, b) => b.score - a.score);
