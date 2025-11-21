@@ -1134,6 +1134,511 @@ const booksData = [
       }
     }
 ];
-     </script>
+        // ذاكرة تخزين مؤقت لمحتوى الكتب
+        const bookContentCache = new Map();
+
+        // إعدادات البحث
+        let currentSearchLanguage = 'both'; // 'both', 'ar', 'en'
+        let currentDisplayLanguage = 'ar'; // 'ar', 'en'
+
+        // === الدوال الرئيسية ===
+
+        // تبديل التبويبات
+        function initializeTabs() {
+            const tabs = document.querySelectorAll('.search-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    const targetSection = document.getElementById(tabId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // تهيئة أزرار اللغة
+        function initializeLanguageButtons() {
+            // أزرار لغة البحث
+            const langButtons = document.querySelectorAll('.lang-btn[data-lang]');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    langButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentSearchLanguage = this.getAttribute('data-lang');
+                });
+            });
+
+            // أزرار لغة العرض
+            const displayButtons = document.querySelectorAll('.lang-btn[data-lang-display]');
+            displayButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    displayButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentDisplayLanguage = this.getAttribute('data-lang-display');
+                    displayAllBooks();
+                });
+            });
+        }
+
+        // البحث في النص مع إظهار السطور
+        function searchInText(content, query, maxLines = 5) {
+            if (!content) return [];
+            
+            const lines = content.split('\n');
+            const matchingLines = [];
+            const queryLower = query.toLowerCase();
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.toLowerCase().includes(queryLower)) {
+                    // إضافة سياق السطور
+                    const start = Math.max(0, i - 1);
+                    const end = Math.min(lines.length, i + 2);
+                    const context = lines.slice(start, end).map((l, idx) => ({
+                        text: l.trim(),
+                        isMatch: (start + idx) === i,
+                        lineNumber: start + idx + 1
+                    }));
+                    
+                    matchingLines.push({
+                        lineNumber: i + 1,
+                        text: line,
+                        context: context
+                    });
+                    
+                    if (matchingLines.length >= maxLines) break;
+                }
+            }
+            
+            return matchingLines;
+        }
+
+        // دالة مساعدة للحصول على نص اللغة
+        function getLanguageText(lang) {
+            switch(lang) {
+                case 'both': return 'اللغتان العربية والإنجليزية';
+                case 'ar': return 'العربية فقط';
+                case 'en': return 'الإنجليزية فقط';
+                default: return 'اللغتان';
+            }
+        }
+
+        // تحميل محتوى الكتاب المحسنة
+        async function loadBookContent(bookId, textUrl) {
+            // التحقق أولاً من الذاكرة المؤقتة
+            if (bookContentCache.has(bookId)) {
+                console.log(`✅ استخدام المحتوى المخبأ للكتاب: ${bookId}`);
+                return bookContentCache.get(bookId);
+            }
+
+            try {
+                console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
+                
+                // إضافة مهلة زمنية أطول (15 ثانية)
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => {
+                    console.warn(`⏰ مهلة تحميل الكتاب: ${bookId}`);
+                    controller.abort();
+                }, 15000);
+                
+                const response = await fetch(textUrl, { 
+                    signal: controller.signal,
+                    cache: 'no-cache'
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`فشل في تحميل الملف: ${response.status} ${response.statusText}`);
+                }
+                
+                const content = await response.text();
+                
+                // التحقق من أن المحتوى غير فارغ
+                if (!content || content.trim().length === 0) {
+                    throw new Error('المحتوى فارغ أو غير صالح');
+                }
+                
+                // تخزين المحتوى في الذاكرة المؤقتة
+                bookContentCache.set(bookId, content);
+                console.log(`✅ تم تحميل محتوى الكتاب: ${bookId} (${content.length} حرف)`);
+                return content;
+                
+            } catch (error) {
+                console.error(`❌ خطأ في تحميل محتوى الكتاب ${bookId}:`, error.message);
+                
+                // تخزين قيمة null في الذاكرة المؤقتة لمنع إعادة المحاولة
+                bookContentCache.set(bookId, null);
+                return null;
+            }
+        }
+
+        // دالة تحديث مؤشر التقدم المحسنة
+        function updateSearchProgress(current, total, failed = 0) {
+            const resultsDiv = document.getElementById('localResults');
+            if (resultsDiv) {
+                const progress = Math.round((current / total) * 100);
+                resultsDiv.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                            <p>🔍 جاري البحث في الكتب...</p>
+                            <div style="margin-top: 10px;">
+                                <div style="background: #ddd; border-radius: 10px; height: 20px; width: 300px; margin: 0 auto;">
+                                    <div style="background: var(--primary-color); height: 100%; border-radius: 10px; width: ${progress}%; transition: width 0.3s;"></div>
+                                </div>
+                                <div style="margin-top: 5px; font-size: 0.9em; color: #666;">
+                                    ${current} من ${total} كتاب (${progress}%)
+                                    ${failed > 0 ? `<br><span style="color: #e74c3c;">⚠️ فشل في تحميل ${failed} كتاب</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // دالة تنظيف الذاكرة المؤقتة
+        function clearBookCache() {
+            bookContentCache.clear();
+            console.log('🧹 تم تنظيف الذاكرة المؤقتة للكتب');
+            alert('✅ تم تنظيف الذاكرة المؤقتة بنجاح');
+        }
+
+        // البحث المحلي المحسن
+        async function performLocalSearch() {
+            console.log('🔍 تشغيل البحث المحلي...');
+            const query = document.getElementById('localSearch').value.trim();
+            const fastSearch = document.getElementById('fastSearch').checked;
+            const resultsDiv = document.getElementById('localResults');
+            
+            if (!query) {
+                resultsDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">الرجاء إدخال مصطلح للبحث</p>';
+                return;
+            }
+            
+            // عرض رسالة تحميل
+            resultsDiv.innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                        <p>${fastSearch ? '🔍 جاري البحث السريع...' : '📖 جاري البحث في النص الكامل...'}</p>
+                        <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                            ${fastSearch ? 'البحث في العناوين والوصف والكلمات المفتاحية' : 'قد يستغرق بعض الوقت لتحميل النصوص الكاملة'}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const searchResults = [];
+            let failedBooks = 0;
+            
+            try {
+                // البحث في كل كتاب مع مؤشر التقدم ومعالجة الأخطاء
+                for (let i = 0; i < booksData.length; i++) {
+                    const book = booksData[i];
+                    updateSearchProgress(i + 1, booksData.length, failedBooks);
+                    
+                    console.log(`🔎 البحث في كتاب: ${book.titles.ar} (${i + 1}/${booksData.length})`);
+                    
+                    let inTitle = false;
+                    let inDescription = false;
+                    let inTopics = false;
+                    let inEnglishTopics = false;
+
+                    // البحث في البيانات الأساسية (سريع)
+                    if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                        inTitle = book.titles.ar.toLowerCase().includes(query.toLowerCase());
+                        inDescription = book.description.ar.toLowerCase().includes(query.toLowerCase());
+                        inTopics = book.metadata.topics_ar.some(topic => 
+                            topic.toLowerCase().includes(query.toLowerCase())
+                        );
+                    }
+
+                    if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                        inTitle = inTitle || book.titles.en.toLowerCase().includes(query.toLowerCase());
+                        inDescription = inDescription || book.description.en.toLowerCase().includes(query.toLowerCase());
+                        inEnglishTopics = book.metadata.topics_en.some(topic => 
+                            topic.toLowerCase().includes(query.toLowerCase())
+                        );
+                    }
+
+                    const inAnyTopics = inTopics || inEnglishTopics;
+                    let textMatches = [];
+                    
+                    // البحث في النص الكامل (فقط إذا لم يكن البحث سريع)
+                    if (!fastSearch) {
+                        // تحميل محتوى النص والبحث فيه (العربية)
+                        if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
+                            const arabicTextUrl = book.links.ar.text;
+                            if (arabicTextUrl) {
+                                try {
+                                    const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
+                                    if (content) {
+                                        const matches = searchInText(content, query, 2);
+                                        textMatches = textMatches.concat(matches);
+                                    }
+                                } catch (error) {
+                                    console.warn(`⚠️ تعذر تحميل النص العربي للكتاب: ${book.titles.ar}`);
+                                    failedBooks++;
+                                }
+                            }
+                        }
+                        
+                        // تحميل محتوى النص والبحث فيه (الإنجليزية)
+                        if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
+                            const englishTextUrl = book.links.en.text;
+                            if (englishTextUrl) {
+                                try {
+                                    const content = await loadBookContent(book.id + '_en', englishTextUrl);
+                                    if (content) {
+                                        const matches = searchInText(content, query, 2);
+                                        textMatches = textMatches.concat(matches);
+                                    }
+                                } catch (error) {
+                                    console.warn(`⚠️ تعذر تحميل النص الإنجليزي للكتاب: ${book.titles.en}`);
+                                    failedBooks++;
+                                }
+                            }
+                        }
+                        
+                        // إضافة تأخير بسيط بين الطلبات لتجنب الحمل الزائد
+                        await new Promise(resolve => setTimeout(resolve, 50));
+                    }
+                    
+                    if (inTitle || inDescription || inAnyTopics || textMatches.length > 0) {
+                        searchResults.push({
+                            book: book,
+                            inTitle: inTitle,
+                            inDescription: inDescription,
+                            inTopics: inAnyTopics,
+                            inArabicTopics: inTopics,
+                            inEnglishTopics: inEnglishTopics,
+                            textMatches: textMatches,
+                            score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('❌ خطأ غير متوقع في عملية البحث:', error);
+            }
+            
+            // ترتيب النتائج حسب الأهمية
+            searchResults.sort((a, b) => b.score - a.score);
+            
+            if (searchResults.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: #666;">
+                        <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
+                        <p>جرب استخدام مصطلحات بحث مختلفة أو تغيير لغة البحث</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // عرض النتائج
+            resultsDiv.innerHTML = `
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
+                    نتائج البحث لـ "<span style="color: var(--accent-color);">${query}</span>" (${searchResults.length})
+                    <span style="font-size: 0.8em; color: #666;">- البحث في: ${getLanguageText(currentSearchLanguage)}</span>
+                </h3>
+                ${searchResults.map(result => {
+                    const book = result.book;
+                    const displayLang = currentDisplayLanguage;
+                    
+                    return `
+                        <div class="book-card">
+                            <h4 class="book-title">
+                                ${displayLang === 'ar' ? book.titles.ar : book.titles.en}
+                                ${result.inTitle ? '<span class="language-badge">العنوان</span>' : ''}
+                            </h4>
+                            <p class="book-description">
+                                ${displayLang === 'ar' ? book.description.ar : book.description.en}
+                                ${result.inDescription ? '<span class="language-badge">الوصف</span>' : ''}
+                            </p>
+                            <div class="book-meta">
+                                <strong>التصنيف:</strong> ${book.metadata.category} • 
+                                <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en}
+                            </div>
+                            
+                            <!-- عرض الكلمات المفتاحية -->
+                            <div class="topics-list">
+                                ${book.metadata.topics_ar.slice(0, 5).map(topic => `
+                                    <span class="topic-tag">${topic}</span>
+                                `).join('')}
+                                ${book.metadata.topics_en && book.metadata.topics_en.slice(0, 3).map(topic => `
+                                    <span class="topic-tag" style="background: #fff0f0; border-color: #ffcccc;">${topic}</span>
+                                `).join('')}
+                            </div>
+                            
+                            ${result.inArabicTopics || result.inEnglishTopics ? `
+                                <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f8ff; border-radius: 5px; font-size: 0.9em;">
+                                    <strong>موجود في الكلمات المفتاحية:</strong> 
+                                    ${result.inArabicTopics ? '<span style="color: #1a5276;">العربية</span>' : ''}
+                                    ${result.inArabicTopics && result.inEnglishTopics ? ' و ' : ''}
+                                    ${result.inEnglishTopics ? '<span style="color: #e74c3c;">الإنجليزية</span>' : ''}
+                                </div>
+                            ` : ''}
+                            
+                            ${result.textMatches.length > 0 ? `
+                                <div style="margin-top: 1.5rem;">
+                                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                                        📖 المواضع التي وردت فيها الكلمة:
+                                    </h5>
+                                    ${result.textMatches.map(match => `
+                                        <div class="match-line">
+                                            <div class="line-number">
+                                                السطر ${match.lineNumber}
+                                            </div>
+                                            <div style="line-height: 1.6;">
+                                                ${match.context.map(ctx => `
+                                                    <div class="context-line ${ctx.isMatch ? 'match' : ''}">
+                                                        ${ctx.isMatch ? '→ ' : ''}${highlightText(ctx.text, query)}
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            <div style="margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="books/${book.id}/ar/" target="_blank" class="book-link">
+                                    📚 عرض الكتاب (العربية)
+                                </a>
+                                <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
+                                    📘 عرض الكتاب (English)
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            `;
+            
+            console.log(`✅ تم العثور على ${searchResults.length} نتيجة`);
+        }
+
+        // تظليل النص المطابق
+        function highlightText(text, query) {
+            const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+            return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+        }
+
+        // تهريب الأحرف الخاصة في regex
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // عرض جميع الكتب مع دعم اللغتين
+        function displayAllBooks() {
+            console.log('📚 عرض جميع الكتب...');
+            const booksList = document.getElementById('allBooksList');
+            const displayLang = currentDisplayLanguage;
+            
+            booksList.innerHTML = `
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">
+                    جميع الكتب المتاحة (${booksData.length})
+                    <span style="font-size: 0.8em; color: #666;">- العرض باللغة: ${displayLang === 'ar' ? 'العربية' : 'الإنجليزية'}</span>
+                </h3>
+                ${booksData.map(book => `
+                    <div class="book-card">
+                        <h4 class="book-title">${displayLang === 'ar' ? book.titles.ar : book.titles.en}</h4>
+                        <p class="book-description">${displayLang === 'ar' ? book.description.ar : book.description.en}</p>
+                        <div class="book-meta">
+                            <strong>التصنيف:</strong> ${book.metadata.category} • 
+                            <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} •
+                            <strong>اللغة:</strong> ${displayLang === 'ar' ? 'العربية' : 'الإنجليزية'}
+                        </div>
+                        
+                        <!-- عرض الكلمات المفتاحية -->
+                        <div style="margin: 10px 0;">
+                            <strong>الكلمات المفتاحية:</strong>
+                            <div class="topics-list">
+                                ${(displayLang === 'ar' ? book.metadata.topics_ar : book.metadata.topics_en)
+                                    .slice(0, 8).map(topic => `
+                                    <span class="topic-tag">${topic}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="books/${book.id}/ar/" target="_blank" class="book-link">
+                                📚 عرض الكتاب (العربية)
+                            </a>
+                            <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
+                                📘 عرض الكتاب (English)
+                            </a>
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+            
+            console.log('✅ تم عرض جميع الكتب');
+        }
+
+        // البحث الدقيق في جوجل
+        function performExactSearch() {
+            console.log('🎯 تشغيل البحث الدقيق...');
+            const query = document.getElementById('exactQuery').value.trim();
+            if (!query) {
+                alert('الرجاء إدخال مصطلح البحث');
+                return;
+            }
+            
+            const exactQuery = `"${query}"`;
+            const searchInput = document.querySelector('.gsc-input input');
+            
+            if (searchInput) {
+                searchInput.value = exactQuery;
+                const searchButton = document.querySelector('.gsc-search-button');
+                if (searchButton) {
+                    searchButton.click();
+                    console.log('✅ تم تشغيل البحث في جوجل');
+                }
+            } else {
+                alert('محرك البحث جوجل غير جاهز بعد. يرجى المحاولة مرة أخرى بعد ثوانٍ.');
+            }
+        }
+
+        // === تهيئة الصفحة ===
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 تهيئة الصفحة...');
+            
+            // تهيئة التبويبات
+            initializeTabs();
+            
+            // تهيئة أزرار اللغة
+            initializeLanguageButtons();
+            
+            // عرض جميع الكتب تلقائياً
+            displayAllBooks();
+            
+            // تفعيل البحث عند الضغط على Enter
+            document.getElementById('exactQuery')?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performExactSearch();
+            });
+            
+            document.getElementById('localSearch')?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performLocalSearch();
+            });
+            
+            // جعل الدوال متاحة عالمياً
+            window.performLocalSearch = performLocalSearch;
+            window.performExactSearch = performExactSearch;
+            window.displayAllBooks = displayAllBooks;
+            window.clearBookCache = clearBookCache;
+            
+            console.log('✅ الصفحة جاهزة!');
+            console.log('📖 عدد الكتب المتاحة:', booksData.length);
+        });
+
+        // التحقق من أخطاء JavaScript
+        window.addEventListener('error', function(e) {
+            console.error('❌ خطأ في JavaScript:', e.error);
+        });
+       </script>
 </body>
 </html>
