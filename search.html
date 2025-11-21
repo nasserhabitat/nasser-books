@@ -1562,6 +1562,65 @@ async function performLocalSearch() {
         window.addEventListener('error', function(e) {
             console.error('❌ خطأ في JavaScript:', e.error);
         });
+        async function loadBookContent(bookId, textUrl) {
+    if (bookContentCache.has(bookId)) {
+        return bookContentCache.get(bookId);
+    }
+
+    try {
+        console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
+        
+        // إضافة مهلة زمنية (10 ثوانٍ)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+        
+        const response = await fetch(textUrl, { signal: controller.signal });
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+            throw new Error(`فشل في تحميل الملف: ${response.status}`);
+        }
+        
+        const content = await response.text();
+        bookContentCache.set(bookId, content);
+        console.log(`✅ تم تحميل محتوى الكتاب: ${bookId}`);
+        return content;
+        
+    } catch (error) {
+        console.error(`❌ خطأ في تحميل محتوى الكتاب ${bookId}:`, error);
+        return null;
+    }
+}
+
+      // أضف هذه الدالة
+function updateSearchProgress(current, total) {
+    const resultsDiv = document.getElementById('localResults');
+    if (resultsDiv) {
+        const progress = Math.round((current / total) * 100);
+        resultsDiv.innerHTML = `
+            <div style="text-align: center; padding: 2rem;">
+                <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                    <p>🔍 جاري البحث في الكتب...</p>
+                    <div style="margin-top: 10px;">
+                        <div style="background: #ddd; border-radius: 10px; height: 20px; width: 300px; margin: 0 auto;">
+                            <div style="background: var(--primary-color); height: 100%; border-radius: 10px; width: ${progress}%; transition: width 0.3s;"></div>
+                        </div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;">
+                            ${current} من ${total} كتاب (${progress}%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+// ثم استخدمها في حلقة البحث:
+for (let i = 0; i < booksData.length; i++) {
+    const book = booksData[i];
+    updateSearchProgress(i + 1, booksData.length);
+    // ... كود البحث الحالي
+}  
     </script>
 </body>
 </html>
