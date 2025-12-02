@@ -493,7 +493,18 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1sLfXOWeVTYqEx7t0h-EDOM4NUpXtvACW)  
    - [📝 النص الخام (مباشر)](books/the-universe/ar/content.txt)  
    - [🖼️ الغلاف](books/the-universe/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org](https://archive.org/details/20251111_20251111_2037)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/20251111_20251111_2037)
+   
+
+23.	**السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1PWUnGUEXz_-QkCPMEsjbuRW3JvCtXLoa)  
+   - [📖 تحميل PDF (مباشر)](books/the-seven-mathani/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1yHWJTLsModUU_Yr5XNhEU4AXzCKVX-3H)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1IYi9Qy63XuMoYs8TQCLdPcCCP5cVJPFY)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1bQLX8OVq6tAw_QP7YWbuw-0WcJx95AC0)  
+   - [📝 النص الخام (مباشر)](books/the-seven-mathani/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-seven-mathani/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_202512)
 
 #### الإنجليزية | English
 
@@ -715,7 +726,18 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1Tbx5HUpHY_dAM5rtSx6QqFz94-TVYTpw)  
    - [📝 Plain Text (direct)](books/the-self/en/content.txt)  
    - [🖼️ Cover](books/the-self/en/cover-en.png)  
-   - [📝 Plain Text on Archive.org](https://archive.org/details/20251111_20251111_2029)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/20251111_20251111_2029)
+ 23.	**The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning**
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1Ju02f4YVhDqXNWERPFT1dNSycW3Wukqj)  
+   - [📖 Download PDF (direct)](books/the-seven-mathani/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1_oBA1fBJFfzt87X7SKTT8crEWhv5Pz9p)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1XkUfrHfgwxpcnvTSoWaqi_V0ART_8EGx)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1lKvlpYSOYxf-lhulsEy_7XkY0p6TeRjK)  
+   - [📝 Plain Text (direct)](books/the-seven-mathani/en/content.txt)  
+   - [🖼️ Cover](books/the-seven-mathani/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_202512
+
+  
 
 ---
 
