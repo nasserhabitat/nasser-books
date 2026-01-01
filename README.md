@@ -541,7 +541,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/shattering-the-false-mountains/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20260101)
 
-.26	**السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى**  
+.26	** التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء **  
    - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1b5udEUb2iu8GQMD6Pg1Q09lf5c5OLFev)  
    - [📖 تحميل PDF (مباشر)](books/tasbeeh/ar/content.pdf)  
    - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1Ybpue0ZDlhR7AgTDabQP2fXkOjE5SyvO)  
