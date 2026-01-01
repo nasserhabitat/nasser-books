@@ -521,6 +521,38 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/the-seven-mathani/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org]( https://archive.org/details/content_202512)
 
+24	** الملائكة: البنية الخفية التي تُدير الوجود **  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1X4HCjmtPVtoda5xlFnQCJm6cs-FQwUNy)  
+   - [📖 تحميل PDF (مباشر)](books/angels/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1qCWn7efKbImHAOIgcoy6SJ8X_IGEvuGC)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1ZvhhC1hzkEV6jRC-mBxK1Blkt629dVj4)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1H-DfviO8ztlS-aB1hDzqIQhWautwHH4i)  
+   - [📝 النص الخام (مباشر)](books/angels/ar/content.txt)  
+   - [🖼️ الغلاف](books/angels/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20251231)
+
+.25	** نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=16NgM27SOSPZL5sk8MJaiKVTvhqlEp1YB)  
+   - [📖 تحميل PDF (مباشر)](books/shattering-the-false-mountains/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1Ik4w0sYBWoy1x2nExT0r5jMgsegwvRiD)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1JUGX5fcsuucgmLr66krl-iYXEprmh0s5)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1WXBy6PNlelep8I_vaY_VlP83fb8SMsVd)  
+   - [📝 النص الخام (مباشر)](books/shattering-the-false-mountains/ar/content.txt)  
+   - [🖼️ الغلاف](books/shattering-the-false-mountains/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20260101)
+
+.26	**السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1b5udEUb2iu8GQMD6Pg1Q09lf5c5OLFev)  
+   - [📖 تحميل PDF (مباشر)](books/tasbeeh/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1Ybpue0ZDlhR7AgTDabQP2fXkOjE5SyvO)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1wVa7zAsKqRbjCYGxAizr_xJzVfsH4rba)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12QcxZ2DCAEJqXLHwKGvANiS0P3MDh_NT)  
+   - [📝 النص الخام (مباشر)](books/tasbeeh/ar/content.txt)  
+   - [🖼️ الغلاف](books/tasbeeh/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20251231_1245)
+
+
+
 #### الإنجليزية | English
 
 1.	**Towards Conscious Contemplation**  
@@ -742,7 +774,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (direct)](books/the-self/en/content.txt)  
    - [🖼️ Cover](books/the-self/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/details/20251111_20251111_2029)
- 23.	**The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning**
+ 23.	** The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning**
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1Ju02f4YVhDqXNWERPFT1dNSycW3Wukqj)  
    - [📖 Download PDF (direct)](books/the-seven-mathani/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1_oBA1fBJFfzt87X7SKTT8crEWhv5Pz9p)  
@@ -750,9 +782,43 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1lKvlpYSOYxf-lhulsEy_7XkY0p6TeRjK)  
    - [📝 Plain Text (direct)](books/the-seven-mathani/en/content.txt)  
    - [🖼️ Cover](books/the-seven-mathani/en/cover-en.png)  
-   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_202512
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20251201)
+
+
+
+24.	** Angels: The Hidden Structure That Governs Existence**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1VBK8rKG8IS1SnTcRHNjA62eCD7E7ZOvh)  
+   - [📖 Download PDF (direct)](books/angels/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1f1aU1XZOAgqS_XEEFO5VX1K_XUwd8IP-)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1ZLPFUtGM3T1h2bmzlCwdZL8gh2lS-tB7)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1-xZp64ONLyG6QwMSNgkGrMl2UJmmwUQu)  
+   - [📝 Plain Text (direct)](books/angels/en/content.txt)  
+   - [🖼️ Cover](books/angels/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20251231_0935)
+
+
+25.	**Shattering the False Mountains A Qur’anic Unmasking of Sacred Illusions **  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1moIai_xqwnS8U1e452gAGxgjwmNcxMOD)  
+   - [📖 Download PDF (direct)](books/shattering-the-false-mountains/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=17zNYP48FHbxDpWCmkQD9bONmSPBzlv2i)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=11ppZK4SOav8xebky5mOkyx8kxI3TDdRm)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1FT93tvO8-0Mglb0xyUsUaDruwze5jH73)  
+   - [📝 Plain Text (direct)](books/shattering-the-false-mountains/en/content.txt)  
+   - [🖼️ Cover](books/shattering-the-false-mountains/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260101_1857)
+
+26.	** Tasbeeh: Swimming in the Guided Path :From Inner Transcendence to Lived Submission**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1f27NcQHtwl4eK4GppKbvKBG1Atd6WQ5X)  
+   - [📖 Download PDF (direct)](books/tasbeeh/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1IPUS7svTd1RSKRZEsRHnvWnquTo6Nyyk)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1yuMVbs1Bzn7l7ootuPdRlLDHAfoStGjs)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1TAMznBKdG000yAnbZUyqZ55yxG5uNFj5)  
+   - [📝 Plain Text (direct)](books/tasbeeh/en/content.txt)  
+   - [🖼️ Cover](books/tasbeeh/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_202601)
 
   
+
 
 ---
 
