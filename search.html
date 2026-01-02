@@ -265,123 +265,6 @@
             background: #fff3cd;
         }
         
-        /* تنسيق نتائج البحث بسطرين */
-        .search-result-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .search-result-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.8rem;
-        }
-        
-        .result-title {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-        
-        .result-meta {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 0.8rem;
-        }
-        
-        .meta-badge {
-            background: #e3f2fd;
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-        
-        .result-snippet {
-            background: #f9f9f9;
-            padding: 0.8rem;
-            border-radius: 6px;
-            margin-bottom: 0.8rem;
-            border-right: 3px solid #e1e8ed;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .snippet-text {
-            color: #444;
-        }
-        
-        .match-count {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-        
-        .result-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .action-btn {
-            padding: 6px 15px;
-            background: #f0f7ff;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        
-        .action-btn:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .quick-view-btn {
-            background: #e8f4fd;
-            color: #2c5f8a;
-            border: 1px solid #b3d9ff;
-        }
-        
-        .quick-view-btn:hover {
-            background: #2c5f8a;
-            color: white;
-        }
-        
-        .search-stats {
-            background: #e8f4fd;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .stats-text {
-            font-size: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 3rem;
-            color: #666;
-        }
-        
-        .no-results-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #ccc;
-        }
-        
         @media (max-width: 768px) {
             .search-box {
                 flex-direction: column;
@@ -389,14 +272,6 @@
             
             .search-tabs {
                 flex-direction: column;
-            }
-            
-            .search-result-header {
-                flex-direction: column;
-            }
-            
-            .result-meta {
-                margin-top: 0.5rem;
             }
         }
     </style>
@@ -499,7 +374,6 @@
                 </button>
             </div>
             
-            <!-- خيارات البحث السريع -->
             <div style="margin: 10px 0; display: flex; gap: 10px; flex-wrap: wrap;">
                 <label style="display: flex; align-items: center; gap: 8px;">
                     <input type="checkbox" id="fastSearch" checked>
@@ -514,7 +388,6 @@
                 <em>استخدم زر التنظيف إذا واجهت مشاكل في التحميل</em>
             </small>
             
-            <!-- عرض نتائج البحث -->
             <div id="localResults"></div>
         </section>
 
@@ -534,861 +407,871 @@
     </div>
 
     <script>
-       // بيانات الكتب مع الروابط الأساسية فقط (text و cover)
-const booksData = [
-    {
-      "id": "conscious-contemplation",
-      "titles": {
-        "ar": "نحو تدبر واعٍ",
-        "en": "Towards Conscious Contemplation"
-      },
-      "description": {
-        "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
-        "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
-      },
-      "links": {
-        "ar": {
-          "text": "books/conscious-contemplation/ar/content.txt",
-          "cover": "books/conscious-contemplation/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/conscious-contemplation/en/content.txt",
-          "cover": "books/conscious-contemplation/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 91,
-        "pages_en": 126,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"],
-        "topics_en": ["Contemplating the Qur'an", "Understanding the Qur'an", "Applying the Qur'an", "Methodology of Contemplation", "The Qur'an in the Modern Age", "Light of Reason", "Digitization of Qur'anic Manuscripts", "Ottoman Script", "Original Qur'anic Manuscripts", "A Way of Life", "Conscious Understanding of the Qur'an", "Verses of the Qur'an", "The Holy Qur'an", "Practical Contemplation", "Nasser Ibn Dawood"]
-      }
-    },
-    {
-      "id": "anwar-al-bayan",
-      "titles": {
-        "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
-        "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
-      },
-      "description": {
-        "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم",
-        "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
-      },
-      "links": {
-        "ar": {
-          "text": "books/anwar-al-bayan/ar/content.txt",
-          "cover": "books/anwar-al-bayan/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/anwar-al-bayan/en/content.txt",
-          "cover": "books/anwar-al-bayan/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 161,
-        "pages_en": 215,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الرسم العثماني", "المصحف العثماني", "أسرار اللسان", "أنوار البيان", "تدبر القرآن", "المخطوطات الرقمية", "اللغة العربية", "علوم القرآن", "القرآن الكريم", "الفهم العميق", "الدراسات القرآنية", "التفسير", "الخط العربي", "الكتابة القرآنية"],
-        "topics_en": ["Uthmanic Script", "Qur'anic Orthography", "Qur'an", "Holy Quran", "Digital Manuscripts", "Linguistic Secrets", "Language", "Contemplation (Tadabbur)", "Quranic Understanding", "Arabic Language", "Islamic Studies", "Quranic Sciences", "Script Variations", "Quranic Meanings", "Arabic Calligraphy", "Orthography", "Manuscript Studies", "Unveiling Secrets", "Deeper Understanding"]
-      }
-    },
-    {
-      "id": "changing-the-concepts",
-      "titles": {
-        "ar": "تغيير المفاهيم",
-        "en": "Changing the Concepts"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
-        "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
-      },
-      "links": {
-        "ar": {
-          "text": "books/changing-the-concepts/ar/content.txt",
-          "cover": "books/changing-the-concepts/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/changing-the-concepts/en/content.txt",
-          "cover": "books/changing-the-concepts/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 569,
-        "pages_en": 829,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome1",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الأول",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
-      },
-      "links": {
-        "ar": {
-          "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 376,
-        "pages_en": 486,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome2",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثاني",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 2"
-      },
-      "links": {
-        "ar": {
-          "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 333,
-        "pages_en": 473,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
-      }
-    },
-    {
-      "id": "editing-the-quranic-terminology-tome3",
-      "titles": {
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
-        "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
-      },
-      "description": {
-        "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثالث",
-        "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 3"
-      },
-      "links": {
-        "ar": {
-          "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
-          "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 229,
-        "pages_en": 315,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
-      }
-    },
-    {
-      "id": "contemplation-in-the-mirror",
-      "titles": {
-        "ar": "التدبر في مرآة الرسوم",
-        "en": "Contemplation in the Mirror of Drawings"
-      },
-      "description": {
-        "ar": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن الكريم",
-        "en": "Practical applications of digital manuscripts in the contemplation of the Quran"
-      },
-      "links": {
-        "ar": {
-          "text": "books/contemplation-in-the-mirror/ar/content.txt",
-          "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/contemplation-in-the-mirror/en/content.txt",
-          "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 251,
-        "pages_en": 254,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"],
-        "topics_en": ["Reflecting on the Mirror of Drawings", "Digital Manuscripts", "Reflecting on the Qur'an", "Ottoman Calligraphy", "Practical Applications of the Qur'an", "Understanding the Qur'an", "Secrets of Ottoman Calligraphy", "Light of Digital Manuscripts", "Lights of Explanation", "Tables of Meanings", "Nasser Ibn Dawood"]
-      }
-    },
-    {
-      "id": "digitizing",
-      "titles": {
-        "ar": "رقمنة المخطوطات القرآنية",
-        "en": "Digitization of Quranic Manuscripts"
-      },
-      "description": {
-        "ar": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
-        "en": "A methodological study for the digital preservation of the Quranic text and its applications"
-      },
-      "links": {
-        "ar": {
-          "text": "books/digitizing/ar/content.txt",
-          "cover": "books/digitizing/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/digitizing/en/content.txt",
-          "cover": "books/digitizing/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "digital_projects",
-        "pages_ar": 177,
-        "pages_en": 227,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"],
-        "topics_en": ["Digitization of Qur'anic manuscripts", "Qur'anic contemplation", "a digital Qur'anic renaissance", "understanding the Qur'an", "technology and the Qur'an", "the personal digital manuscript", "authenticity and modernity", "Islamic scientific heritage", "artificial intelligence and the Qur'an", "a Qur'anic project", "challenges of digitizing manuscripts", "marketing the Qur'anic project", "the future of Qur'anic contemplation", "disseminating contemplations", "building trust and partnerships", "awareness and education"]
-      }
-    },
-    {
-      "id": "the-jurisprudence",
-      "titles": {
-        "ar": "فقه اللسان القرآني",
-        "en": "The Jurisprudence of the Quranic Tongue"
-      },
-      "description": {
-        "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
-        "en": "A new approach to understanding the text and manuscript of the Quran"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-jurisprudence/ar/content.txt",
-          "cover": "books/the-jurisprudence/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-jurisprudence/en/content.txt",
-          "cover": "books/the-jurisprudence/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 592,
-        "pages_en": 416,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"],
-        "topics_en": ["Quranic Linguistics", "Understanding the Quranic Text", "Quranic Manuscripts", "Quranic Drawings/Illustrations", "Contemplation (Tadabbur)", "Digital Manuscripts", "New Concepts", "Interactive Contemplation", "Digitization of Original Manuscripts", "Uthmanic Mushafs", "Understanding the Quran", "Applying the Quran", "Rules of the Arabic Quranic Language", "Deriving Rules from the Quranic Text", "Evidence from Original Manuscripts", "Connotations of Letters", "Seven Oft-Repeated (Sab'a min al-Mathani)", "Pairs (Al-Azwaj)", "Synonymy (Al-Taraduf)", "Lexical Methodology", "Clear and Ambiguous (Muhkam and Mutashabih)", "Linguistic Context", "Quranic Terminology", "Abrogating and Abrogated (Nasikh and Mansukh)", "Renewal of Religious Discourse", "Reality", "The Book", "The Quran"]
-      }
-    },
-    {
-      "id": "modesty",
-      "titles": {
-        "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
-        "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
-      },
-      "description": {
-        "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
-        "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
-      },
-      "links": {
-        "ar": {
-          "text": "books/modesty/ar/content.txt",
-          "cover": "books/modesty/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/modesty/en/content.txt",
-          "cover": "books/modesty/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 46,
-        "pages_en": 40,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"],
-        "topics_en": ["Modesty", "Islamic Ethics", "Spiritual Education", "The Holy Quran"]
-      }
-    },
-    {
-      "id": "malakoot",
-      "titles": {
-        "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
-      },
-      "description": {
-        "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
-        "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
-      },
-      "links": {
-        "ar": {
-          "text": "books/malakoot/ar/content.txt",
-          "cover": "books/malakoot/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/malakoot/en/content.txt",
-          "cover": "books/malakoot/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 610,
-        "pages_en": 797,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"],
-        "topics_en": ["Certainty", "Kingdom of Heaven and Earth", "Evidence", "Seeing the Truth", "Quran", "Scientific Facts", "Revelation", "Nature", "Universe", "Creation", "Creator", "Flat Earth", "Fixed Earth", "Contemplation", "Reflection", "Islamic Theories", "Shape of the Universe", "Sun", "Moon", "Planets", "Astronomy", "Nasser Ibn Dawood", "Reflection in the Mirror of Drawings"]
-      }
-    },
-    {
-      "id": "prostration-and-glorification-in-the-qur'an",
-      "titles": {
-        "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
-        "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
-      },
-      "links": {
-        "ar": {
-          "text": "books/prostration-and-glorification-in-the-quran/ar/content.txt",
-          "cover": "books/prostration-and-glorification-in-the-quran/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/prostration-and-glorification-in-the-quran/en/content.txt",
-          "cover": "books/prostration-and-glorification-in-the-quran/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 131,
-        "pages_en": 189,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"],
-        "topics_en": ["Prostration", "glorification", "the Holy Quran", "purification of the heart", "practical submission", "a way of life", "Muhammadan praise", "understanding of the Quranic language", "servitude"]
-      }
-    },
-    {
-      "id": "christ-and-mary-in-the-qur'an",
-      "titles": {
-        "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
-        "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
-      },
-      "description": {
-        "ar": "من الرمز الباطني إلى النموذج الإنساني",
-        "en": "From the esoteric symbol to the human model"
-      },
-      "links": {
-        "ar": {
-          "text": "books/christ-and-mary-in-the-quran/ar/content.txt",
-          "cover": "books/christ-and-mary-in-the-quran/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/christ-and-mary-in-the-quran/en/content.txt",
-          "cover": "books/christ-and-mary-in-the-quran/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 69,
-        "pages_en": 94,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["المسيح", "مريم", "القرآن", "التدبر الباطني", "الرمز الباطني", "النموذج الإنساني", "نماذج الوعي", "التفسير الرمزي", "فقه اللسان القرآني", "نظام المثاني", "الكلمة", "برنامج إحيائي", "الوعي الجديد", "التحرر الفكري", "أسماء الله الحسنى", "الرفع الإلهي", "الولادة العذرية", "مريم الثائرة", "تحليل نفسي لمريم", "المحراب", "النصارى في القرآن", "قراءة علمية معاصرة"],
-        "topics_en": ["Christ", "Mary", "the Qur'an", "inner contemplation", "inner symbol", "human model", "models of consciousness", "symbolic interpretation", "Qur'anic linguistics", "the Mathani system", "the word", "revival program", "new consciousness", "intellectual liberation", "the beautiful names of God", "divine ascension", "the virgin birth", "the rebellious Mary", "a psychoanalysis of Mary", "the mihrab", "Christians in the Qur'an", "a contemporary scientific reading"]
-      }
-    },
-    {
-      "id": "names-in-the-holy",
-      "titles": {
-        "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
-        "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
-      },
-      "description": {
-        "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
-        "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
-      },
-      "links": {
-        "ar": {
-          "text": "books/names-in-the-holy/ar/content.txt",
-          "cover": "books/names-in-the-holy/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/names-in-the-holy/en/content.txt",
-          "cover": "books/names-in-the-holy/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 193,
-        "pages_en": 248,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"],
-        "topics_en": ["Divine Names", "Functional Divine Names", "Divine Providence", "Holy Quran", "Documentary Study", "Meanings of Divine Names", "Enumeration", "Understanding Universal Laws", "Certainty", "Tranquility", "Problem Solving", "Supplication (Dua)", "Trust in God (Tawakkul)", "Application of Divine Names", "Knowledge of God", "Secrets of Divine Names", "Relationship with God", "Contemplation of the Quran"]
-      }
-    },
-    {
-      "id": "blood",
-      "titles": {
-        "ar": "الدم",
-        "en": "Blood - the code of existence that we neglected"
-      },
-      "description": {
-        "ar": "الدم - شفرة الوجود التي أهملناها",
-        "en": "the code of existence that we neglected"
-      },
-      "links": {
-        "ar": {
-          "text": "books/blood/ar/content.txt",
-          "cover": "books/blood/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/blood/en/content.txt",
-          "cover": "books/blood/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 119,
-        "pages_en": 162,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["شفرة القرآن", "نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "الدم – المحور الرئيسي للكتاب", "اللسان القرآني – المنهجية المعتمدة في التحليل", "المثاني (الأزواج الحرفية) – النظام الخفي للكلمات في القرآن", "الحروف المقطعة – رموز ودلالات في فواتح السور", "المعنى الحركي – الدلالة الديناميكية للكلمات القرآنية", "التدبر الجماعي – أسلوب فهم القرآن", "الشفرة القرآنية – تفسير الرموز والحروف", "التحريم والتذكية – الدم بين الحكم الشرعي والرمز الكوني", "الذكاة والتزكية – التطهير الروحي والفكري", "الضرب في الأرض – منهج التغيير والخروج من الجمود", "أسماء الحروف – دلالاتها الكونية والقرآنية", "الرمز الكوني – الدم كنموذج للنظام الكوني", "الوعي الإنساني – المسؤولية تجاه الدم كمسار حيوي", "التبرع بالدم – من منظور روحي وإنساني", "يأجوج ومأجوج – رمز للفوضى والعبث بالأنظمة الحيوية", "فقه اللسان العربي القرآني – المنهجية الشاملة لفهم النص", "الرمز الكوني في التشريع القرآني", "سفك الدماء والاستخلاف الإنساني", "الدم بين الحكم الشرعي والمعنى الروحي", "الشيفرة اللسانية لكلمة دم (د + م)", "المعراج النبوي ودورة النور الإلهي", "فقه اللسان القرآني", "التدبر القرآني المعاصر", "البنية اللغوية العميقة للحروف العربية", "المثاني القرآنية والمعنى الحركي", "العلاقة بين المادة والروح في القرآن", "الدم كبوابة روحية ومسار وعي إنساني", "فن التبرع بالدم ونهج الرحمة", "الدم في المجتمعات الحديثة – قراءة قرآنية علمية", "مكتبة ناصر ابن داوود – المعرفة المفتوحة والذكاء الاصطناعي"],
-        "topics_en": ["Quranic Code", "Quranic Operating System", "Quranic Arabic Tongue", "Jurisprudence of the Seven Pairs", "Quranic Pairs", "Uthmani Script", "Quranic Contemplation", "Quranic System", "Activation of the Quranic Text", "Coupling (Al-Iqtiran)", "Blood -- The Main Axis of the Book", "Quranic Tongue -- The Adopted Methodology in Analysis", "Pairs (Letter Pairs) -- The Hidden System of Words in the Quran", "Disjoined Letters -- Symbols and Indications in Surah Openings", "Kinetic Meaning -- The Dynamic Indication of Quranic Words", "Collective Contemplation -- A Method of Understanding the Quran", "Quranic Code -- Interpretation of Symbols and Letters", "Prohibition and Purification -- Blood Between Sharia Ruling and Cosmic Symbol", "Dhikah and Tazkiyah -- Spiritual and Intellectual Purification", "Traveling in the Land -- Method of Change and Exit from Stagnation", "Names of Letters -- Their Cosmic and Quranic Indications", "Cosmic Symbol -- Blood as a Model for the Cosmic System", "Human Consciousness -- Responsibility Towards Blood as a Vital Path", "Blood Donation -- From a Spiritual and Human Perspective", "Gog and Magog -- Symbol for Chaos and Tampering with Vital Systems", "Jurisprudence of the Quranic Arabic Tongue -- The Comprehensive Methodology for Understanding the Text", "The Cosmic Symbol in Quranic Legislation", "Shedding Blood and Human Succession", "Blood Between Sharia Ruling and Spiritual Meaning", "Linguistic Code for the Word Blood (D + M)", "Prophetic Mi'raj and Cycle of Divine Light", "Jurisprudence of the Quranic Tongue", "Contemporary Quranic Contemplation", "Deep Linguistic Structure of Arabic Letters", "Quranic Pairs and Kinetic Meaning", "Relationship Between Matter and Spirit in the Quran", "Blood as a Spiritual Gateway and Path of Human Consciousness", "Art of Blood Donation and Path of Mercy", "Blood in Modern Societies -- Scientific Quranic Reading", "Nasser Ibn Dawood Library -- Open Knowledge and Artificial Intelligence"]
-      }
-    },
-    {
-      "id": "the-code-of-the-quran",
-      "titles": {
-        "ar": "شفرة القرآن",
-        "en": "THE CODE OF THE QUR'AN"
-      },
-      "description": {
-        "ar": "دليل التشغيل لعصر جديد",
-        "en": "AN OPERATING MANUAL FOR A NEW AGE"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-code-of-the-quran/ar/content.txt",
-          "cover": "books/the-code-of-the-quran/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-code-of-the-quran/en/content.txt",
-          "cover": "books/the-code-of-the-quran/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 353,
-        "pages_en": 72,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "السيمات", "فقه اللسان القرآني", "نظرية الصفر اللغوي", "أسماء الحروف", "دلالات الحروف", "أسرار الحروف العربية", "التشغيل العملي للقرآن", "القرآن في العصر الرقمي", "الذكاء الاصطناعي والقرآن", "منهجية التدبر", "تحطيم الأصنام الفكرية", "التصوير الذاتي", "بناء الرب الداخلي", "الجنة الدنيوية", "ناصر ابن داوود", "مكتبة ناصر ابن داوود", "التدبر"],
-        "topics_en": ["Quranic Code", "Quranic Operating System", "Quranic Arabic Language", "Jurisprudence of the Seven Mathani", "Quranic Mathani", "Ottoman Script", "Quranic Contemplation", "Quranic System", "Quranic Text Activation", "Conjunction (Quran)", "Semantics", "Quranic Language Jurisprudence", "Linguistic Zero Theory", "Letter Names", "Letter Semantics", "Secrets of Arabic Letters", "Practical Operation of the Quran", "Quran in the Digital Age", "Artificial Intelligence and the Quran", "Methodology of Contemplation", "Smashing Intellectual Idols", "Self-Portrait", "Building the Inner Lord", "Earthly Paradise", "Nasser Ibn Dawood", "Nasser Ibn Dawood Library", "Contemplation"]
-      }
-    },
-    {
-      "id": "the-spirit",
-      "titles": {
-        "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
-        "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
-      },
-      "description": {
-        "ar": "دراسة معمقة للروح في القرآن الكريم ودورها في الإدراك والوعي",
-        "en": "An in-depth study of the spirit in the Holy Quran and its role in perception and consciousness"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-spirit/ar/content.txt",
-          "cover": "books/the-spirit/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-spirit/en/content.txt",
-          "cover": "books/the-spirit/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 215,
-        "pages_en": 280,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الروح", "عالم الأمر", "الإدراك", "الوعي", "القرآن الكريم", "التدبر", "الفطرة", "النفس", "القلب", "العقل", "البصيرة", "الإشراق", "المعرفة", "الفهم", "التأمل", "البحث الروحي", "الوجود", "الخلق", "التكوين", "الفيض الإلهي"],
-        "topics_en": ["Spirit", "Soul", "Consciousness", "Quran", "Contemplation", "Purification", "Heart", "Core-Heart", "Insight", "Cosmos", "Divine Commands", "The Command World", "The Creation World", "Revelation", "Inspiration", "Divine Law", "Divine Decree and Destiny", "Night of Decree", "Gnosis", "Ibn Arabi", "Knowledge", "Certainty", "Serenity", "Silence", "Secrecy", "Remembrance", "Memory", "Symbolic Anatomy", "Quranic Linguistic Jurisprudence", "Jinn", "Humans", "Human Duality", "Reality Creation", "The Symbolic Tree", "Inner Struggle", "Story of Adam", "Quranic Geometry", "Reprogramming", "Mind and Heart", "Spiritual Energy", "Thought and Feeling", "Nation", "Community", "Inner Change", "Return to the Self", "Inner Journey", "Existence", "Oneness", "Meaning", "From Letter to Consciousness", "From Soul to Cosmos", "From Thought to Consciousness", "The Soul's Journey in the Mirrors of Quranic Perception", "The Architecture of Quranic Consciousness", "Complete Consciousness", "The Return of the Letter to Purified Being", "Completing the Circle", "From the Soul to God"]
-      }
-    },
-    {
-      "id": "numbers-as-legislation",
-      "titles": {
-        "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
-        "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
-      },
-      "description": {
-        "ar": "دراسة تحليلية للأعداد في القرآن الكريم ودلالاتها التشريعية والكونية",
-        "en": "An analytical study of numbers in the Holy Quran and their legislative and cosmic implications"
-      },
-      "links": {
-        "ar": {
-          "text": "books/numbers-as-Legislation/ar/content.txt",
-          "cover": "books/numbers-as-Legislation/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/numbers-as-Legislation/en/content.txt",
-          "cover": "books/numbers-as-Legislation/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 178,
-        "pages_en": 235,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الأعداد", "الكم والكيف", "الوعي", "التشريع", "القرآن الكريم", "المنهج العددي", "الدلالات الرقمية", "الإحصاء", "النظام العددي", "الرقم سبعة", "الرقم تسعة عشر", "الأعداد الأولية", "الرياضيات القرآنية", "الإعجاز العددي", "التحليل الكمي", "التحليل النوعي", "الرموز العددية", "السنن الكونية", "القوانين الإلهية"],
-        "topics_en": ["Numbers in the Quran", "Jurisprudence of Numbers", "Numerical Consciousness", "Qualitative Number", "Quantitative Number", "Elucidation and Balance", "Quantity and Quality", "Apparent and Hidden", "Numerical Symbolism", "Speaking Existence", "Divine Balance", "Legislation and Creation", "Number as Spiritual Consciousness", "Witnessing and Counting", "Cosmic System", "Language of Revelation", "Large Numbers", "Humanity and the Mirror of Balance", "The Hour and the Moment of Unveiling", "Return to the Center", "Letter and Number", "Enumeration and Comprehension", "Quranic Linguistic Analysis", "Contextual and Teleological Reading", "Existential and Spiritual Meditation", "Disciplined Contemplation", "Jurisprudence of Language and Number", "System and Consciousness", "Spiritual Rhythms", "Jurisprudence of Balance", "Organizing Worship", "Regulating Relationships", "Establishing Recompense", "Cultivating Time Consciousness", "Geometry of Creation", "Cosmic Time", "Ranks of Manifestation", "Light and System", "Jurisprudence of Existence", "Layers of Creation", "The Throne and Its Bearers", "Collective Consciousness", "From Individual to Community", "Community and Nation", "Order and Harmony", "Relationship and Integration", "Shared Human Experience", "From Counting to Witnessing", "Numerical Stations", "Journey to God", "Remembrance and Witnessing", "Annihilation and Permanence", "Cosmic Sound", "Mirror of the Balance", "The One and The Unique", "Two and Duality", "Three and Pillars", "Four and Directions", "Five and the Unseen-Manifest", "Six and Gradualism", "Seven and Completion", "Eight and Expansion", "Nine and the Threshold", "Ten and Perfection", "Twelve and Community", "Nineteen and Trial", "Forty and Maturity", "Seventy and Mercy", "One Thousand and Eternity", "Numerical Inimitability", "Quranic Subtleties", "Thematic Exegesis", "Quranic Contemplation", "Philosophy of Number", "Numbers in Islam", "Symbolism in the Quran", "Existence and Creation", "Numerology", "Islamic Spirituality", "Esoteric Dimension of the Quran"]
-      }
-    },
-    {
-      "id": "from-the-letter-to-consciousness",
-      "titles": {
-        "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
-        "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
-      },
-      "description": {
-        "ar": "رحلة الإنسان في مرآة القرآن بين النفس والروح والبيان - قراءة رمزية لفقه اللسان القرآني",
-        "en": "The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
-      },
-      "links": {
-        "ar": {
-          "text": "books/from-the-letter-to-consciousness/ar/content.txt",
-          "cover": "books/from-the-letter-to-consciousness/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/from-the-letter-to-consciousness/en/content.txt",
-          "cover": "books/from-the-letter-to-consciousness/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "quranic_studies",
-        "pages_ar": 198,
-        "pages_en": 265,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الحرف", "الوعي", "رحلة الإنسان", "النفس", "الروح", "البيان", "القراءة الرمزية", "فقه اللسان القرآني", "التدبر", "المعرفة", "البصيرة", "الإدراك", "الفهم", "التأمل", "الرمز", "الدلالة", "المعنى", "البعد الإنساني", "البعد الكوني"],
-        "topics_en": ["Soul", "Consciousness", "Spirit", "Quran", "Interpretation", "Contemplation", "Letter", "Meaning", "Purification", "Heart", "Core-Heart", "Human Entity", "Existence", "Destiny", "Barzakh", "Paradise", "Hell", "Divine Laws", "Revelation", "Understanding", "Personal Understanding", "Spiritual Journey", "Return Inwards", "Self-Awareness", "Cosmos", "Quranic Language", "Deep Structure", "Dualities", "Disjointed Letters", "Dynamic Meaning", "Quranic Linguistic Jurisprudence", "Prophets", "Intellectual Stations", "Cosmic Play", "Light", "Shadow", "Mask", "Illusion", "Remembrance", "The Path", "Piety", "Vicegerency", "The Perfect Human", "Quranic Anthropology", "Death", "Resurrection", "Reckoning", "Balance", "Witnessing", "Heart Purification", "Obedience", "Submission", "Righteous Deeds", "The Luminous House", "Social Light", "Inner Light", "Silent Prayer", "Uprightness", "Psychological Laws", "Cosmic Laws", "Unity", "Quranic Architecture", "The Seven Oft-Repeated", "Ottoman Script", "Manuscripts", "Theory of Linguistic Zero", "Imagery and Intonation", "Self-Clarification", "Context", "Higher Objectives", "Intellect", "Reality", "New Methodology", "Structural Inimitability", "Textual Interconnectedness", "Quranic Names", "Letter Analysis", "Binary Roots", "Letter Pairs", "Deconstructing Words", "Foreign Words", "Original Meaning", "Semantic Energy", "Dynamics of Existence", "Hidden System", "Total Unity", "The Great Quran", "Healing", "Mercy", "Criterion", "Spiritual Reception", "Collective Consciousness", "Civilizational Witnessing", "Intellectual Crisis", "Interconnective Method", "Cinematic Reading", "Continuous Revelation", "Heart Preparation", "Mental Preparation", "Practical Preparation"]
-      }
-    },
-    {
-      "id": "the-quranic-consciousness-trinity-project",
-      "titles": {
-        "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
-        "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
-      },
-      "description": {
-        "ar": "من النظام الكوني إلى الوعي الإنساني",
-        "en": "From the Cosmic Order to Human Consciousness"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-quranic-consciousness-trinity-project/ar/content.txt",
-          "cover": "books/the-quranic-consciousness-trinity-project/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-quranic-consciousness-trinity-project/en/content.txt",
-          "cover": "books/the-quranic-consciousness-trinity-project/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 142,
-        "pages_en": 188,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["ثالوث الوعي", "التسبيح", "الحمد", "الشكر", "النظام الكوني", "الوعي الإنساني", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "العبادة", "المنهج", "الرحلة", "التكامل", "الترابط", "النظام", "التوازن"],
-        "topics_en": ["Glorification", "Praise", "Gratitude", "Quranic Consciousness", "Quranic Linguistic Jurisprudence", "Cosmic System", "Consciousness Programming", "Cosmic Operating System", "Effusion and Expansion", "Gratitude as the Law of Increase", "Disbelief and Ingratitude", "Vision and the Electrifying Shock", "Divine Support and Existential Update", "Muhammad and Ahmad", "Overarching Concepts", "Divine Laws", "Cycle of Cosmic Consciousness", "Practical Activation", "Daily Consciousness", "Remembrance and Movement", "Science and Sufism", "Ibn Arabi", "Reformation", "Life Methodology", "Cosmic Code", "Conscious Servitude"]
-      }
-    },
-    {
-      "id": "the-universe",
-      "titles": {
-        "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
-        "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
-      },
-      "description": {
-        "ar": "الموجودات تتكلم بلسان الله",
-        "en": "ALL BEINGS SPEAK WITH THE VOICE OF GOD"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-universe/ar/content.txt",
-          "cover": "books/the-universe/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-universe/en/content.txt",
-          "cover": "books/the-universe/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 188,
-        "pages_en": 245,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"],
-        "topics_en": ["Cosmic contemplation of the Quran", "Symbolism in the Quran", "Cosmic Consciousness", "Quranic Linguistic Jurisprudence", "The Soul, Spirit and Cosmos", "Speaking Entities", "Stars and Guidance", "Livestock and Blessings", "The Seven Heavens and Consciousness", "Light and the Heart", "Symbolic Interpretation", "Existence and Perception", "Animal Symbolism", "Intellect and Contemplation", "Quranic Parables", "Symbolic Eating and Drinking", "Ascension and Heaven", "Gates of Heaven", "Symbolic Splitting of the Moon", "Quranic Contemplation Methodology", "Analysis of Dualities", "Symbolic Deconstruction", "Quran and Modern Consciousness", "Quranic Spirituality", "Islam and Sufism", "Quran and Existential Philosophy", "Quran and Spiritual Psychology", "Nasser Ibn Dawood Library"]
-      }
-    },
-    {
-      "id": "the-self",
-      "titles": {
-        "ar": "النفس: من الحرف إلى الوعي",
-        "en": "The Self: From Letter to Consciousness"
-      },
-      "description": {
-        "ar": "دراسة تحليلية للنفس الإنسانية في ضوء القرآن الكريم",
-        "en": "An analytical study of the human self in the light of the Holy Quran"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-self/ar/content.txt",
-          "cover": "books/the-self/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-self/en/content.txt",
-          "cover": "books/the-self/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 165,
-        "pages_en": 220,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["النفس", "الحرف", "الوعي", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الروح", "القلب", "العقل", "البعد الإنساني", "التكامل", "التربية", "التزكية", "التطهير", "السمو", "الارتقاء"],
-        "topics_en": ["Soul", "Consciousness", "Spirit", "Quran", "Interpretation", "Contemplation", "Letter", "Meaning", "Purification", "Heart", "Core-Heart", "Human Entity", "Existence", "Destiny", "Barzakh", "Paradise", "Hell", "Divine Laws", "Revelation", "Understanding", "Personal Understanding", "Spiritual Journey", "Return Inwards", "Self-Awareness", "Cosmos", "Quranic Language", "Deep Structure", "Dualities", "Disjointed Letters", "Dynamic Meaning", "Quranic Linguistic Jurisprudence", "Prophets", "Intellectual Stations", "Cosmic Play", "Light", "Shadow", "Mask", "Illusion", "Remembrance", "The Path", "Piety", "Vicegerency", "The Perfect Human", "Quranic Anthropology", "Death", "Resurrection", "Reckoning", "Balance", "Witnessing", "Heart Purification", "Obedience", "Submission", "Righteous Deeds", "The Luminous House", "Social Light", "Inner Light", "Silent Prayer", "Uprightness", "Psychological Laws", "Cosmic Laws", "Unity", "Quranic Architecture", "The Seven Oft-Repeated", "Ottoman Script", "Manuscripts", "Theory of Linguistic Zero", "Imagery and Intonation", "Self-Clarification", "Context", "Higher Objectives", "Intellect", "Reality", "New Methodology", "Structural Inimitability", "Textual Interconnectedness", "Quranic Names", "Letter Analysis", "Binary Roots", "Letter Pairs", "Deconstructing Words", "Foreign Words", "Original Meaning", "Semantic Energy", "Dynamics of Existence", "Hidden System", "Total Unity", "The Great Quran", "Healing", "Mercy", "Criterion", "Spiritual Reception", "Collective Consciousness", "Civilizational Witnessing", "Intellectual Crisis", "Interconnective Method", "Cinematic Reading", "Continuous Revelation", "Heart Preparation", "Mental Preparation", "Practical Preparation"]
-      }
-    },
-    {
-      "id": "the-seven-mathani",
-      "titles": {
-        "ar": "السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى",
-        "en": "The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning"
-      },
-      "description": {
-        "ar": "نحو وحدة الهندسة والمعنى",
-        "en": "Towards a Unity of Geometry and Meaning"
-      },
-      "links": {
-        "ar": {
-          "text": "books/the-seven-mathani/ar/content.txt",
-          "cover": "books/the-seven-mathani/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/the-seven-mathani/en/content.txt",
-          "cover": "books/the-seven-mathani/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 257,
-        "pages_en": 337,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["السبع المثاني", "البنية اللغوية", "البنية العددية", "الهندسة الإلهية", "القرآن الكريم", "المثاني", "الأزواج الحرفية", "النظام الثنائي", "فقه اللسان القرآني", "فقه الترتيب", "الحروف المقطعة", "التناظر البنائي", "المعنى الحركي", "الوحدة القرآنية", "الإعجاز العددي", "السبع الطوال", "الفاتحة", "دوائر القرآن", "الحواميم", "التدبر البنيوي", "التحليل الحرفي", "الاستقراء القرآني", "الوحي", "التثنية", "الترتيب المصحفي", "الهندسة الكلية"],
-        "topics_en": ["Quran", "Practical Preparation", "The Seven Mathani", "Quranic Linguistic Structure", "Quranic Numerical Structure", "Divine Design", "Quranic Paradigm", "Surah Pairs", "Binary System", "Quranic Philology", "Hermeneutical Methodology", "Disjointed Letters", "Paired Symmetry", "Kinetic Semantics", "Structural Unity", "Numerical Miracle", "Mathematical Miracle", "Al-Fatihah", "Quranic Architecture", "Al-Hawameem", "Structural Exegesis", "Linguistic-Numerical Integration", "Quranic Coherence", "Revelation", "Dualistic System", "Quranic Fabric", "Geometric Exegesis"]
-      }
-    },
-    {
-      "id": "angels",
-      "titles": {
-        "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
-        "en": "Angels: The Hidden Structure That Governs Existence"
-      },
-      "description": {
-        "ar": "البنية الخفية التي تُدير الوجود",
-        "en": "The Hidden Structure That Governs Existence"
-      },
-      "links": {
-        "ar": {
-          "text": "books/angels/ar/content.txt",
-          "cover": "books/angels/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/angels/en/content.txt",
-          "cover": "books/angels/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 232,
-        "pages_en": 24,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"]
-      }
-    },
-    {
-      "id": "shattering-the-false-mountains",
-      "titles": {
-        "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
-        "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
-      },
-      "description": {
-        "ar": "رحلة الرضا من ليلة القدر إلى يوم الكشف",
-        "en": "A Qur'anic Unmasking of Sacred Illusions"
-      },
-      "links": {
-        "ar": {
-          "text": "books/shattering-the-false-mountains/ar/content.txt",
-          "cover": "books/shattering-the-false-mountains/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/shattering-the-false-mountains/en/content.txt",
-          "cover": "books/shattering-the-false-mountains/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 147,
-        "pages_en": 56,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"]
-      }
-    },
-    {
-      "id": "tasbeeh",
-      "titles": {
-        "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
-        "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
-      },
-      "description": {
-        "ar": "السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
-        "en": "Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
-      },
-      "links": {
-        "ar": {
-          "text": "books/tasbeeh/ar/content.txt",
-          "cover": "books/tasbeeh/ar/cover-ar.png"
-        },
-        "en": {
-          "text": "books/tasbeeh/en/content.txt",
-          "cover": "books/tasbeeh/en/cover-en.png"
-        }
-      },
-      "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 75,
-        "pages_en": 39,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics_ar": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
-      }
-    }
-];
-         // ذاكرة تخزين مؤقت لمحتوى الكتب
+        // بيانات الكتب مع الروابط الداخلية فقط
+        const booksData = [
+            {
+                "id": "conscious-contemplation",
+                "titles": {
+                    "ar": "نحو تدبر واعٍ",
+                    "en": "Towards Conscious Contemplation"
+                },
+                "description": {
+                    "ar": "كتاب يشرح منهجية التدبر العميق للقرآن الكريم وتطبيقاته العصرية",
+                    "en": "A practical guide to deep understanding and applying the Noble Quran in the modern era"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/conscious-contemplation/ar/content.txt",
+                        "cover": "books/conscious-contemplation/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/conscious-contemplation/en/content.txt",
+                        "cover": "books/conscious-contemplation/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 91,
+                    "pages_en": 126,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"],
+                    "topics_en": ["Contemplating the Qur'an", "Understanding the Qur'an", "Applying the Qur'an", "Methodology of Contemplation", "The Qur'an in the Modern Age", "Light of Reason", "Digitization of Qur'anic Manuscripts", "Ottoman Script", "Original Qur'anic Manuscripts", "A Way of Life", "Conscious Understanding of the Qur'an", "Verses of the Qur'an", "The Holy Qur'an", "Practical Contemplation", "Nasser Ibn Dawood"]
+                }
+            },
+            {
+                "id": "anwar-al-bayan",
+                "titles": {
+                    "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
+                    "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
+                },
+                "description": {
+                    "ar": "دراسة علمية متعمقة للرسم العثماني وأسراره اللغوية في فهم القرآن الكريم",
+                    "en": "A scientific study revealing the linguistic secrets of the Ottoman Quranic script"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/anwar-al-bayan/ar/content.txt",
+                        "cover": "books/anwar-al-bayan/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/anwar-al-bayan/en/content.txt",
+                        "cover": "books/anwar-al-bayan/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 161,
+                    "pages_en": 215,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الرسم العثماني", "المصحف العثماني", "أسرار اللسان", "أنوار البيان", "تدبر القرآن", "المخطوطات الرقمية", "اللغة العربية", "علوم القرآن", "القرآن الكريم", "الفهم العميق", "الدراسات القرآنية", "التفسير", "الخط العربي", "الكتابة القرآنية"],
+                    "topics_en": ["Uthmanic Script", "Qur'anic Orthography", "Qur'an", "Holy Quran", "Digital Manuscripts", "Linguistic Secrets", "Language", "Contemplation (Tadabbur)", "Quranic Understanding", "Arabic Language", "Islamic Studies", "Quranic Sciences", "Script Variations", "Quranic Meanings", "Arabic Calligraphy", "Orthography", "Manuscript Studies", "Unveiling Secrets", "Deeper Understanding"]
+                }
+            },
+            {
+                "id": "changing-the-concepts",
+                "titles": {
+                    "ar": "تغيير المفاهيم",
+                    "en": "Changing the Concepts"
+                },
+                "description": {
+                    "ar": "دراسة تطبيقية لفقه اللسان القرآني وتحليل المصطلحات القرآنية",
+                    "en": "An applied study of the jurisprudence of the Quranic tongue and analysis of Quranic terminology"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/changing-the-concepts/ar/content.txt",
+                        "cover": "books/changing-the-concepts/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/changing-the-concepts/en/content.txt",
+                        "cover": "books/changing-the-concepts/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 569,
+                    "pages_en": 829,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
+                    "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+                }
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome1",
+                "titles": {
+                    "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
+                    "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
+                },
+                "description": {
+                    "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الأول",
+                    "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 1"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/editing-the-quranic-terminology-tome1/ar/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome1/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/editing-the-quranic-terminology-tome1/en/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome1/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 376,
+                    "pages_en": 486,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
+                    "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+                }
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome2",
+                "titles": {
+                    "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
+                    "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
+                },
+                "description": {
+                    "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثاني",
+                    "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 2"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/editing-the-quranic-terminology-tome2/ar/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome2/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/editing-the-quranic-terminology-tome2/en/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome2/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 333,
+                    "pages_en": 473,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
+                    "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+                }
+            },
+            {
+                "id": "editing-the-quranic-terminology-tome3",
+                "titles": {
+                    "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
+                    "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
+                },
+                "description": {
+                    "ar": "دراسة تطبيقية في فقه اللسان القرآني، المجلد الثالث",
+                    "en": "An applied study in the jurisprudence of the Qur'anic tongue, Tome 3"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/editing-the-quranic-terminology-tome3/ar/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome3/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/editing-the-quranic-terminology-tome3/en/content.txt",
+                        "cover": "books/editing-the-quranic-terminology-tome3/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 229,
+                    "pages_en": 315,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
+                    "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+                }
+            },
+            {
+                "id": "contemplation-in-the-mirror",
+                "titles": {
+                    "ar": "التدبر في مرآة الرسوم",
+                    "en": "Contemplation in the Mirror of Drawings"
+                },
+                "description": {
+                    "ar": "تطبيقات عملية للمخطوطات الرقمية في تدبر القرآن الكريم",
+                    "en": "Practical applications of digital manuscripts in the contemplation of the Quran"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/contemplation-in-the-mirror/ar/content.txt",
+                        "cover": "books/contemplation-in-the-mirror/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/contemplation-in-the-mirror/en/content.txt",
+                        "cover": "books/contemplation-in-the-mirror/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 251,
+                    "pages_en": 254,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"],
+                    "topics_en": ["Reflecting on the Mirror of Drawings", "Digital Manuscripts", "Reflecting on the Qur'an", "Ottoman Calligraphy", "Practical Applications of the Qur'an", "Understanding the Qur'an", "Secrets of Ottoman Calligraphy", "Light of Digital Manuscripts", "Lights of Explanation", "Tables of Meanings", "Nasser Ibn Dawood"]
+                }
+            },
+            {
+                "id": "digitizing",
+                "titles": {
+                    "ar": "رقمنة المخطوطات القرآنية",
+                    "en": "Digitization of Quranic Manuscripts"
+                },
+                "description": {
+                    "ar": "دراسة منهجية لحفظ النص القرآني رقمياً وتطبيقاته",
+                    "en": "A methodological study for the digital preservation of the Quranic text and its applications"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/digitizing/ar/content.txt",
+                        "cover": "books/digitizing/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/digitizing/en/content.txt",
+                        "cover": "books/digitizing/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "digital_projects",
+                    "pages_ar": 177,
+                    "pages_en": 227,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"],
+                    "topics_en": ["Digitization of Qur'anic manuscripts", "Qur'anic contemplation", "a digital Qur'anic renaissance", "understanding the Qur'an", "technology and the Qur'an", "the personal digital manuscript", "authenticity and modernity", "Islamic scientific heritage", "artificial intelligence and the Qur'an", "a Qur'anic project", "challenges of digitizing manuscripts", "marketing the Qur'anic project", "the future of Qur'anic contemplation", "disseminating contemplations", "building trust and partnerships", "awareness and education"]
+                }
+            },
+            {
+                "id": "the-jurisprudence",
+                "titles": {
+                    "ar": "فقه اللسان القرآني",
+                    "en": "The Jurisprudence of the Quranic Tongue"
+                },
+                "description": {
+                    "ar": "دراسة منهجية لفهم اللسان العربي القرآني ومنهجية تدبر النص الإلهي",
+                    "en": "A new approach to understanding the text and manuscript of the Quran"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/the-jurisprudence/ar/content.txt",
+                        "cover": "books/the-jurisprudence/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-jurisprudence/en/content.txt",
+                        "cover": "books/the-jurisprudence/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 592,
+                    "pages_en": 416,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["فقه اللسان القرآني", "فهم النص القرآني", "المخطوطات القرآنية", "الرسوم القرآنية", "التدبر", "المخطوطات الرقمية", "المفاهيم الجديدة", "التدبر التفاعلي", "رقمنة المخطوطات الأصلية", "المصاحف العثمانية", "فهم القرآن", "تطبيق القرآن", "قواعد اللسان العربي القرآني", "استنباط القواعد من النص القرآني", "الشواهد من المخطوطات الأصلية", "دلالات الحروف", "سبعا من المثاني", "الأزواج", "الترادف", "المنهج اللفظي", "المحكم والمتشابه", "السياق اللساني", "المصطلح القرآني", "الناسخ والمنسوخ", "تجديد الخطاب الديني", "الواقع المعاصر", "الكتابة القرآنية", "القرآن الكريم"],
+                    "topics_en": ["Quranic Linguistics", "Understanding the Quranic Text", "Quranic Manuscripts", "Quranic Drawings/Illustrations", "Contemplation (Tadabbur)", "Digital Manuscripts", "New Concepts", "Interactive Contemplation", "Digitization of Original Manuscripts", "Uthmanic Mushafs", "Understanding the Quran", "Applying the Quran", "Rules of the Arabic Quranic Language", "Deriving Rules from the Quranic Text", "Evidence from Original Manuscripts", "Connotations of Letters", "Seven Oft-Repeated (Sab'a min al-Mathani)", "Pairs (Al-Azwaj)", "Synonymy (Al-Taraduf)", "Lexical Methodology", "Clear and Ambiguous (Muhkam and Mutashabih)", "Linguistic Context", "Quranic Terminology", "Abrogating and Abrogated (Nasikh and Mansukh)", "Renewal of Religious Discourse", "Reality", "The Book", "The Quran"]
+                }
+            },
+            {
+                "id": "modesty",
+                "titles": {
+                    "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
+                    "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
+                },
+                "description": {
+                    "ar": "دراسة معمقة للحياء كأداة معرفية وأخلاقية في فهم القرآن الكريم",
+                    "en": "An in-depth study of modesty as a cognitive and ethical tool in understanding the Quran"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/modesty/ar/content.txt",
+                        "cover": "books/modesty/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/modesty/en/content.txt",
+                        "cover": "books/modesty/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 46,
+                    "pages_en": 40,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"],
+                    "topics_en": ["Modesty", "Islamic Ethics", "Spiritual Education", "The Holy Quran"]
+                }
+            },
+            {
+                "id": "malakoot",
+                "titles": {
+                    "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
+                    "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
+                },
+                "description": {
+                    "ar": "رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
+                    "en": "A DEMONSTRATIVE JOURNEY IN THE KINGDOM OF THE HEAVENS AND THE EARTH AND WHAT IS BETWEEN THEM"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/malakoot/ar/content.txt",
+                        "cover": "books/malakoot/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/malakoot/en/content.txt",
+                        "cover": "books/malakoot/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 610,
+                    "pages_en": 797,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"],
+                    "topics_en": ["Certainty", "Kingdom of Heaven and Earth", "Evidence", "Seeing the Truth", "Quran", "Scientific Facts", "Revelation", "Nature", "Universe", "Creation", "Creator", "Flat Earth", "Fixed Earth", "Contemplation", "Reflection", "Islamic Theories", "Shape of the Universe", "Sun", "Moon", "Planets", "Astronomy", "Nasser Ibn Dawood", "Reflection in the Mirror of Drawings"]
+                }
+            },
+            {
+                "id": "prostration-and-glorification-in-the-qur'an",
+                "titles": {
+                    "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
+                    "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
+                },
+                "description": {
+                    "ar": "من التنزيه القلبي إلى الخضوع العملي",
+                    "en": "From Heartfelt Purification to Practical Submission"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/prostration-and-glorification-in-the-quran/ar/content.txt",
+                        "cover": "books/prostration-and-glorification-in-the-quran/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/prostration-and-glorification-in-the-quran/en/content.txt",
+                        "cover": "books/prostration-and-glorification-in-the-quran/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 131,
+                    "pages_en": 189,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"],
+                    "topics_en": ["Prostration", "glorification", "the Holy Quran", "purification of the heart", "practical submission", "a way of life", "Muhammadan praise", "understanding of the Quranic language", "servitude"]
+                }
+            },
+            {
+                "id": "christ-and-mary-in-the-qur'an",
+                "titles": {
+                    "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
+                    "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
+                },
+                "description": {
+                    "ar": "من الرمز الباطني إلى النموذج الإنساني",
+                    "en": "From the esoteric symbol to the human model"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/christ-and-mary-in-the-quran/ar/content.txt",
+                        "cover": "books/christ-and-mary-in-the-quran/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/christ-and-mary-in-the-quran/en/content.txt",
+                        "cover": "books/christ-and-mary-in-the-quran/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 69,
+                    "pages_en": 94,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["المسيح", "مريم", "القرآن", "التدبر الباطني", "الرمز الباطني", "النموذج الإنساني", "نماذج الوعي", "التفسير الرمزي", "فقه اللسان القرآني", "نظام المثاني", "الكلمة", "برنامج إحيائي", "الوعي الجديد", "التحرر الفكري", "أسماء الله الحسنى", "الرفع الإلهي", "الولادة العذرية", "مريم الثائرة", "تحليل نفسي لمريم", "المحراب", "النصارى في القرآن", "قراءة علمية معاصرة"],
+                    "topics_en": ["Christ", "Mary", "the Qur'an", "inner contemplation", "inner symbol", "human model", "models of consciousness", "symbolic interpretation", "Qur'anic linguistics", "the Mathani system", "the word", "revival program", "new consciousness", "intellectual liberation", "the beautiful names of God", "divine ascension", "the virgin birth", "the rebellious Mary", "a psychoanalysis of Mary", "the mihrab", "Christians in the Qur'an", "a contemporary scientific reading"]
+                }
+            },
+            {
+                "id": "names-in-the-holy",
+                "titles": {
+                    "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
+                    "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
+                },
+                "description": {
+                    "ar": "دراسة توقيفية تحليلية لدلالات التدبير الإلهي من خلال الأسماء الحسنى",
+                    "en": "An analytical discretionary study of the connotations of divine management through the Beautiful Names"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/names-in-the-holy/ar/content.txt",
+                        "cover": "books/names-in-the-holy/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/names-in-the-holy/en/content.txt",
+                        "cover": "books/names-in-the-holy/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 193,
+                    "pages_en": 248,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"],
+                    "topics_en": ["Divine Names", "Functional Divine Names", "Divine Providence", "Holy Quran", "Documentary Study", "Meanings of Divine Names", "Enumeration", "Understanding Universal Laws", "Certainty", "Tranquility", "Problem Solving", "Supplication (Dua)", "Trust in God (Tawakkul)", "Application of Divine Names", "Knowledge of God", "Secrets of Divine Names", "Relationship with God", "Contemplation of the Quran"]
+                }
+            },
+            {
+                "id": "blood",
+                "titles": {
+                    "ar": "الدم",
+                    "en": "Blood - the code of existence that we neglected"
+                },
+                "description": {
+                    "ar": "الدم - شفرة الوجود التي أهملناها",
+                    "en": "the code of existence that we neglected"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/blood/ar/content.txt",
+                        "cover": "books/blood/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/blood/en/content.txt",
+                        "cover": "books/blood/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 119,
+                    "pages_en": 162,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["شفرة القرآن", "نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "الدم – المحور الرئيسي للكتاب", "اللسان القرآني – المنهجية المعتمدة في التحليل", "المثاني (الأزواج الحرفية) – النظام الخفي للكلمات في القرآن", "الحروف المقطعة – رموز ودلالات في فواتح السور", "المعنى الحركي – الدلالة الديناميكية للكلمات القرآنية", "التدبر الجماعي – أسلوب فهم القرآن", "الشفرة القرآنية – تفسير الرموز والحروف", "التحريم والتذكية – الدم بين الحكم الشرعي والرمز الكوني", "الذكاة والتزكية – التطهير الروحي والفكري", "الضرب في الأرض – منهج التغيير والخروج من الجمود", "أسماء الحروف – دلالاتها الكونية والقرآنية", "الرمز الكوني – الدم كنموذج للنظام الكوني", "الوعي الإنساني – المسؤولية تجاه الدم كمسار حيوي", "التبرع بالدم – من منظور روحي وإنساني", "يأجوج ومأجوج – رمز للفوضى والعبث بالأنظمة الحيوية", "فقه اللسان العربي القرآني – المنهجية الشاملة لفهم النص", "الرمز الكوني في التشريع القرآني", "سفك الدماء والاستخلاف الإنساني", "الدم بين الحكم الشرعي والمعنى الروحي", "الشيفرة اللسانية لكلمة دم (د + م)", "المعراج النبوي ودورة النور الإلهي", "فقه اللسان القرآني", "التدبر القرآني المعاصر", "البنية اللغوية العميقة للحروف العربية", "المثاني القرآنية والمعنى الحركي", "العلاقة بين المادة والروح في القرآن", "الدم كبوابة روحية ومسار وعي إنساني", "فن التبرع بالدم ونهج الرحمة", "الدم في المجتمعات الحديثة – قراءة قرآنية علمية", "مكتبة ناصر ابن داوود – المعرفة المفتوحة والذكاء الاصطناعي"],
+                    "topics_en": ["Quranic Code", "Quranic Operating System", "Quranic Arabic Tongue", "Jurisprudence of the Seven Pairs", "Quranic Pairs", "Uthmani Script", "Quranic Contemplation", "Quranic System", "Activation of the Quranic Text", "Coupling (Al-Iqtiran)", "Blood -- The Main Axis of the Book", "Quranic Tongue -- The Adopted Methodology in Analysis", "Pairs (Letter Pairs) -- The Hidden System of Words in the Quran", "Disjoined Letters -- Symbols and Indications in Surah Openings", "Kinetic Meaning -- The Dynamic Indication of Quranic Words", "Collective Contemplation -- A Method of Understanding the Quran", "Quranic Code -- Interpretation of Symbols and Letters", "Prohibition and Purification -- Blood Between Sharia Ruling and Cosmic Symbol", "Dhikah and Tazkiyah -- Spiritual and Intellectual Purification", "Traveling in the Land -- Method of Change and Exit from Stagnation", "Names of Letters -- Their Cosmic and Quranic Indications", "Cosmic Symbol -- Blood as a Model for the Cosmic System", "Human Consciousness -- Responsibility Towards Blood as a Vital Path", "Blood Donation -- From a Spiritual and Human Perspective", "Gog and Magog -- Symbol for Chaos and Tampering with Vital Systems", "Jurisprudence of the Quranic Arabic Tongue -- The Comprehensive Methodology for Understanding the Text", "The Cosmic Symbol in Quranic Legislation", "Shedding Blood and Human Succession", "Blood Between Sharia Ruling and Spiritual Meaning", "Linguistic Code for the Word Blood (D + M)", "Prophetic Mi'raj and Cycle of Divine Light", "Jurisprudence of the Quranic Tongue", "Contemporary Quranic Contemplation", "Deep Linguistic Structure of Arabic Letters", "Quranic Pairs and Kinetic Meaning", "Relationship Between Matter and Spirit in the Quran", "Blood as a Spiritual Gateway and Path of Human Consciousness", "Art of Blood Donation and Path of Mercy", "Blood in Modern Societies -- Scientific Quranic Reading", "Nasser Ibn Dawood Library -- Open Knowledge and Artificial Intelligence"]
+                }
+            },
+            {
+                "id": "the-code-of-the-quran",
+                "titles": {
+                    "ar": "شفرة القرآن",
+                    "en": "THE CODE OF THE QUR'AN"
+                },
+                "description": {
+                    "ar": "دليل التشغيل لعصر جديد",
+                    "en": "AN OPERATING MANUAL FOR A NEW AGE"
+                },
+                "links": {
+                    "ar": {
+                        "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
+                        "text": "books/the-code-of-the-quran/ar/content.txt",
+                        "cover": "books/the-code-of-the-quran/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-code-of-the-quran/en/content.txt",
+                        "cover": "books/the-code-of-the-quran/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 353,
+                    "pages_en": 72,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["نظام التشغيل القرآني", "اللسان العربي القرآني", "فقه السبع المثاني", "المثاني القرآنية", "الرسم العثماني", "تدبر القرآن", "المنظومة القرآنية", "تفعيل النص القرآني", "الاقتران (القران)", "السيمات", "فقه اللسان القرآني", "نظرية الصفر اللغوي", "أسماء الحروف", "دلالات الحروف", "أسرار الحروف العربية", "التشغيل العملي للقرآن", "القرآن في العصر الرقمي", "الذكاء الاصطناعي والقرآن", "منهجية التدبر", "تحطيم الأصنام الفكرية", "التصوير الذاتي", "بناء الرب الداخلي", "الجنة الدنيوية", "ناصر ابن داوود", "مكتبة ناصر ابن داوود", "التدبر"],
+                    "topics_en": ["Quranic Code", "Quranic Operating System", "Quranic Arabic Language", "Jurisprudence of the Seven Mathani", "Quranic Mathani", "Ottoman Script", "Quranic Contemplation", "Quranic System", "Quranic Text Activation", "Conjunction (Quran)", "Semantics", "Quranic Language Jurisprudence", "Linguistic Zero Theory", "Letter Names", "Letter Semantics", "Secrets of Arabic Letters", "Practical Operation of the Quran", "Quran in the Digital Age", "Artificial Intelligence and the Quran", "Methodology of Contemplation", "Smashing Intellectual Idols", "Self-Portrait", "Building the Inner Lord", "Earthly Paradise", "Nasser Ibn Dawood", "Nasser Ibn Dawood Library", "Contemplation"]
+                }
+            },
+            {
+                "id": "the-spirit",
+                "titles": {
+                    "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
+                    "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
+                },
+                "description": {
+                    "ar": "دراسة معمقة للروح في القرآن الكريم ودورها في الإدراك والوعي",
+                    "en": "An in-depth study of the spirit in the Holy Quran and its role in perception and consciousness"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/the-spirit/ar/content.txt",
+                        "cover": "books/the-spirit/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-spirit/en/content.txt",
+                        "cover": "books/the-spirit/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 215,
+                    "pages_en": 280,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الروح", "عالم الأمر", "الإدراك", "الوعي", "القرآن الكريم", "التدبر", "الفطرة", "النفس", "القلب", "العقل", "البصيرة", "الإشراق", "المعرفة", "الفهم", "التأمل", "البحث الروحي", "الوجود", "الخلق", "التكوين", "الفيض الإلهي"],
+                    "topics_en": ["Spirit", "Soul", "Consciousness", "Quran", "Contemplation", "Purification", "Heart", "Core-Heart", "Insight", "Cosmos", "Divine Commands", "The Command World", "The Creation World", "Revelation", "Inspiration", "Divine Law", "Divine Decree and Destiny", "Night of Decree", "Gnosis", "Ibn Arabi", "Knowledge", "Certainty", "Serenity", "Silence", "Secrecy", "Remembrance", "Memory", "Symbolic Anatomy", "Quranic Linguistic Jurisprudence", "Jinn", "Humans", "Human Duality", "Reality Creation", "The Symbolic Tree", "Inner Struggle", "Story of Adam", "Quranic Geometry", "Reprogramming", "Mind and Heart", "Spiritual Energy", "Thought and Feeling", "Nation", "Community", "Inner Change", "Return to the Self", "Inner Journey", "Existence", "Oneness", "Meaning", "From Letter to Consciousness", "From Soul to Cosmos", "From Thought to Consciousness", "The Soul's Journey in the Mirrors of Quranic Perception", "The Architecture of Quranic Consciousness", "Complete Consciousness", "The Return of the Letter to Purified Being", "Completing the Circle", "From the Soul to God"]
+                }
+            },
+            {
+                "id": "numbers-as-legislation",
+                "titles": {
+                    "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
+                    "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
+                },
+                "description": {
+                    "ar": "دراسة تحليلية للأعداد في القرآن الكريم ودلالاتها التشريعية والكونية",
+                    "en": "An analytical study of numbers in the Holy Quran and their legislative and cosmic implications"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/numbers-as-legislation/ar/content.txt",
+                        "cover": "books/numbers-as-legislation/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/numbers-as-legislation/en/content.txt",
+                        "cover": "books/numbers-as-legislation/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 178,
+                    "pages_en": 235,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الأعداد", "الكم والكيف", "الوعي", "التشريع", "القرآن الكريم", "المنهج العددي", "الدلالات الرقمية", "الإحصاء", "النظام العددي", "الرقم سبعة", "الرقم تسعة عشر", "الأعداد الأولية", "الرياضيات القرآنية", "الإعجاز العددي", "التحليل الكمي", "التحليل النوعي", "الرموز العددية", "السنن الكونية", "القوانين الإلهية"],
+                    "topics_en": ["Numbers in the Quran", "Jurisprudence of Numbers", "Numerical Consciousness", "Qualitative Number", "Quantitative Number", "Elucidation and Balance", "Quantity and Quality", "Apparent and Hidden", "Numerical Symbolism", "Speaking Existence", "Divine Balance", "Legislation and Creation", "Number as Spiritual Consciousness", "Witnessing and Counting", "Cosmic System", "Language of Revelation", "Large Numbers", "Humanity and the Mirror of Balance", "The Hour and the Moment of Unveiling", "Return to the Center", "Letter and Number", "Enumeration and Comprehension", "Quranic Linguistic Analysis", "Contextual and Teleological Reading", "Existential and Spiritual Meditation", "Disciplined Contemplation", "Jurisprudence of Language and Number", "System and Consciousness", "Spiritual Rhythms", "Jurisprudence of Balance", "Organizing Worship", "Regulating Relationships", "Establishing Recompense", "Cultivating Time Consciousness", "Geometry of Creation", "Cosmic Time", "Ranks of Manifestation", "Light and System", "Jurisprudence of Existence", "Layers of Creation", "The Throne and Its Bearers", "Collective Consciousness", "From Individual to Community", "Community and Nation", "Order and Harmony", "Relationship and Integration", "Shared Human Experience", "From Counting to Witnessing", "Numerical Stations", "Journey to God", "Remembrance and Witnessing", "Annihilation and Permanence", "Cosmic Sound", "Mirror of the Balance", "The One and The Unique", "Two and Duality", "Three and Pillars", "Four and Directions", "Five and the Unseen-Manifest", "Six and Gradualism", "Seven and Completion", "Eight and Expansion", "Nine and the Threshold", "Ten and Perfection", "Twelve and Community", "Nineteen and Trial", "Forty and Maturity", "Seventy and Mercy", "One Thousand and Eternity", "Numerical Inimitability", "Quranic Subtleties", "Thematic Exegesis", "Quranic Contemplation", "Philosophy of Number", "Numbers in Islam", "Symbolism in the Quran", "Existence and Creation", "Numerology", "Islamic Spirituality", "Esoteric Dimension of the Quran"]
+                }
+            },
+            {
+                "id": "from-the-letter-to-consciousness",
+                "titles": {
+                    "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
+                    "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+                },
+                "description": {
+                    "ar": "رحلة الإنسان في مرآة القرآن بين النفس والروح والبيان - قراءة رمزية لفقه اللسان القرآني",
+                    "en": "The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/from-the-letter-to-consciousness/ar/content.txt",
+                        "cover": "books/from-the-letter-to-consciousness/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/from-the-letter-to-consciousness/en/content.txt",
+                        "cover": "books/from-the-letter-to-consciousness/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "quranic_studies",
+                    "pages_ar": 198,
+                    "pages_en": 265,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الحرف", "الوعي", "رحلة الإنسان", "النفس", "الروح", "البيان", "القراءة الرمزية", "فقه اللسان القرآني", "التدبر", "المعرفة", "البصيرة", "الإدراك", "الفهم", "التأمل", "الرمز", "الدلالة", "المعنى", "البعد الإنساني", "البعد الكوني"],
+                    "topics_en": ["Soul", "Consciousness", "Spirit", "Quran", "Interpretation", "Contemplation", "Letter", "Meaning", "Purification", "Heart", "Core-Heart", "Human Entity", "Existence", "Destiny", "Barzakh", "Paradise", "Hell", "Divine Laws", "Revelation", "Understanding", "Personal Understanding", "Spiritual Journey", "Return Inwards", "Self-Awareness", "Cosmos", "Quranic Language", "Deep Structure", "Dualities", "Disjointed Letters", "Dynamic Meaning", "Quranic Linguistic Jurisprudence", "Prophets", "Intellectual Stations", "Cosmic Play", "Light", "Shadow", "Mask", "Illusion", "Remembrance", "The Path", "Piety", "Vicegerency", "The Perfect Human", "Quranic Anthropology", "Death", "Resurrection", "Reckoning", "Balance", "Witnessing", "Heart Purification", "Obedience", "Submission", "Righteous Deeds", "The Luminous House", "Social Light", "Inner Light", "Silent Prayer", "Uprightness", "Psychological Laws", "Cosmic Laws", "Unity", "Quranic Architecture", "The Seven Oft-Repeated", "Ottoman Script", "Manuscripts", "Theory of Linguistic Zero", "Imagery and Intonation", "Self-Clarification", "Context", "Higher Objectives", "Intellect", "Reality", "New Methodology", "Structural Inimitability", "Textual Interconnectedness", "Quranic Names", "Letter Analysis", "Binary Roots", "Letter Pairs", "Deconstructing Words", "Foreign Words", "Original Meaning", "Semantic Energy", "Dynamics of Existence", "Hidden System", "Total Unity", "The Great Quran", "Healing", "Mercy", "Criterion", "Spiritual Reception", "Collective Consciousness", "Civilizational Witnessing", "Intellectual Crisis", "Interconnective Method", "Cinematic Reading", "Continuous Revelation", "Heart Preparation", "Mental Preparation", "Practical Preparation"]
+                }
+            },
+            {
+                "id": "the-quranic-consciousness-trinity-project",
+                "titles": {
+                    "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
+                    "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
+                },
+                "description": {
+                    "ar": "من النظام الكوني إلى الوعي الإنساني",
+                    "en": "From the Cosmic Order to Human Consciousness"
+                },
+                "links": {
+                    "ar": {
+                        "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
+                        "text": "books/the-quranic-consciousness-trinity-project/ar/content.txt",
+                        "cover": "books/the-quranic-consciousness-trinity-project/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-quranic-consciousness-trinity-project/en/content.txt",
+                        "cover": "books/the-quranic-consciousness-trinity-project/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 142,
+                    "pages_en": 188,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["ثالوث الوعي", "التسبيح", "الحمد", "الشكر", "النظام الكوني", "الوعي الإنساني", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "العبادة", "المنهج", "الرحلة", "التكامل", "الترابط", "النظام", "التوازن"],
+                    "topics_en": ["Glorification", "Praise", "Gratitude", "Quranic Consciousness", "Quranic Linguistic Jurisprudence", "Cosmic System", "Consciousness Programming", "Cosmic Operating System", "Effusion and Expansion", "Gratitude as the Law of Increase", "Disbelief and Ingratitude", "Vision and the Electrifying Shock", "Divine Support and Existential Update", "Muhammad and Ahmad", "Overarching Concepts", "Divine Laws", "Cycle of Cosmic Consciousness", "Practical Activation", "Daily Consciousness", "Remembrance and Movement", "Science and Sufism", "Ibn Arabi", "Reformation", "Life Methodology", "Cosmic Code", "Conscious Servitude"]
+                }
+            },
+            {
+                "id": "the-universe",
+                "titles": {
+                    "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
+                    "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+                },
+                "description": {
+                    "ar": "الموجودات تتكلم بلسان الله",
+                    "en": "ALL BEINGS SPEAK WITH THE VOICE OF GOD"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/the-universe/ar/content.txt",
+                        "cover": "books/the-universe/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-universe/en/content.txt",
+                        "cover": "books/the-universe/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 188,
+                    "pages_en": 245,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"],
+                    "topics_en": ["Cosmic contemplation of the Quran", "Symbolism in the Quran", "Cosmic Consciousness", "Quranic Linguistic Jurisprudence", "The Soul, Spirit and Cosmos", "Speaking Entities", "Stars and Guidance", "Livestock and Blessings", "The Seven Heavens and Consciousness", "Light and the Heart", "Symbolic Interpretation", "Existence and Perception", "Animal Symbolism", "Intellect and Contemplation", "Quranic Parables", "Symbolic Eating and Drinking", "Ascension and Heaven", "Gates of Heaven", "Symbolic Splitting of the Moon", "Quranic Contemplation Methodology", "Analysis of Dualities", "Symbolic Deconstruction", "Quran and Modern Consciousness", "Quranic Spirituality", "Islam and Sufism", "Quran and Existential Philosophy", "Quran and Spiritual Psychology", "Nasser Ibn Dawood Library"]
+                }
+            },
+            {
+                "id": "the-self",
+                "titles": {
+                    "ar": "النفس: من الحرف إلى الوعي",
+                    "en": "The Self: From Letter to Consciousness"
+                },
+                "description": {
+                    "ar": "دراسة تحليلية للنفس الإنسانية في ضوء القرآن الكريم",
+                    "en": "An analytical study of the human self in the light of the Holy Quran"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/the-self/ar/content.txt",
+                        "cover": "books/the-self/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-self/en/content.txt",
+                        "cover": "books/the-self/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 165,
+                    "pages_en": 220,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["النفس", "الحرف", "الوعي", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الروح", "القلب", "العقل", "البعد الإنساني", "التكامل", "التربية", "التزكية", "التطهير", "السمو", "الارتقاء"],
+                    "topics_en": ["Soul", "Consciousness", "Spirit", "Quran", "Interpretation", "Contemplation", "Letter", "Meaning", "Purification", "Heart", "Core-Heart", "Human Entity", "Existence", "Destiny", "Barzakh", "Paradise", "Hell", "Divine Laws", "Revelation", "Understanding", "Personal Understanding", "Spiritual Journey", "Return Inwards", "Self-Awareness", "Cosmos", "Quranic Language", "Deep Structure", "Dualities", "Disjointed Letters", "Dynamic Meaning", "Quranic Linguistic Jurisprudence", "Prophets", "Intellectual Stations", "Cosmic Play", "Light", "Shadow", "Mask", "Illusion", "Remembrance", "The Path", "Piety", "Vicegerency", "The Perfect Human", "Quranic Anthropology", "Death", "Resurrection", "Reckoning", "Balance", "Witnessing", "Heart Purification", "Obedience", "Submission", "Righteous Deeds", "The Luminous House", "Social Light", "Inner Light", "Silent Prayer", "Uprightness", "Psychological Laws", "Cosmic Laws", "Unity", "Quranic Architecture", "The Seven Oft-Repeated", "Ottoman Script", "Manuscripts", "Theory of Linguistic Zero", "Imagery and Intonation", "Self-Clarification", "Context", "Higher Objectives", "Intellect", "Reality", "New Methodology", "Structural Inimitability", "Textual Interconnectedness", "Quranic Names", "Letter Analysis", "Binary Roots", "Letter Pairs", "Deconstructing Words", "Foreign Words", "Original Meaning", "Semantic Energy", "Dynamics of Existence", "Hidden System", "Total Unity", "The Great Quran", "Healing", "Mercy", "Criterion", "Spiritual Reception", "Collective Consciousness", "Civilizational Witnessing", "Intellectual Crisis", "Interconnective Method", "Cinematic Reading", "Continuous Revelation", "Heart Preparation", "Mental Preparation", "Practical Preparation"]
+                }
+            },
+            {
+                "id": "the-seven-mathani",
+                "titles": {
+                    "ar": "السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى",
+                    "en": "The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning"
+                },
+                "description": {
+                    "ar": "نحو وحدة الهندسة والمعنى",
+                    "en": "Towards a Unity of Geometry and Meaning"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/the-seven-mathani/ar/content.txt",
+                        "cover": "books/the-seven-mathani/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/the-seven-mathani/en/content.txt",
+                        "cover": "books/the-seven-mathani/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 257,
+                    "pages_en": 337,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["السبع المثاني", "البنية اللغوية", "البنية العددية", "الهندسة الإلهية", "القرآن الكريم", "المثاني", "الأزواج الحرفية", "النظام الثنائي", "فقه اللسان القرآني", "فقه الترتيب", "الحروف المقطعة", "التناظر البنائي", "المعنى الحركي", "الوحدة القرآنية", "الإعجاز العددي", "السبع الطوال", "الفاتحة", "دوائر القرآن", "الحواميم", "التدبر البنيوي", "التحليل الحرفي", "الاستقراء القرآني", "الوحي", "التثنية", "الترتيب المصحفي", "الهندسة الكلية"],
+                    "topics_en": ["Quran", "Practical Preparation", "The Seven Mathani", "Quranic Linguistic Structure", "Quranic Numerical Structure", "Divine Design", "Quranic Paradigm", "Surah Pairs", "Binary System", "Quranic Philology", "Hermeneutical Methodology", "Disjointed Letters", "Paired Symmetry", "Kinetic Semantics", "Structural Unity", "Numerical Miracle", "Mathematical Miracle", "Al-Fatihah", "Quranic Architecture", "Al-Hawameem", "Structural Exegesis", "Linguistic-Numerical Integration", "Quranic Coherence", "Revelation", "Dualistic System", "Quranic Fabric", "Geometric Exegesis"]
+                }
+            },
+            {
+                "id": "angels",
+                "titles": {
+                    "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
+                    "en": "Angels: The Hidden Structure That Governs Existence"
+                },
+                "description": {
+                    "ar": "البنية الخفية التي تُدير الوجود",
+                    "en": "The Hidden Structure That Governs Existence"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/angels/ar/content.txt",
+                        "cover": "books/angels/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/angels/en/content.txt",
+                        "cover": "books/angels/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 232,
+                    "pages_en": 24,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"],
+                    "topics_en": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"]
+                }
+            },
+            {
+                "id": "shattering-the-false-mountains",
+                "titles": {
+                    "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
+                    "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
+                },
+                "description": {
+                    "ar": "رحلة الرضا من ليلة القدر إلى يوم الكشف",
+                    "en": "A Qur'anic Unmasking of Sacred Illusions"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/shattering-the-false-mountains/ar/content.txt",
+                        "cover": "books/shattering-the-false-mountains/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/shattering-the-false-mountains/en/content.txt",
+                        "cover": "books/shattering-the-false-mountains/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 147,
+                    "pages_en": 56,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"],
+                    "topics_en": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"]
+                }
+            },
+            {
+                "id": "tasbeeh",
+                "titles": {
+                    "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+                    "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+                },
+                "description": {
+                    "ar": "السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+                    "en": "Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+                },
+                "links": {
+                    "ar": {
+                        "text": "books/tasbeeh/ar/content.txt",
+                        "cover": "books/tasbeeh/ar/cover-ar.png"
+                    },
+                    "en": {
+                        "text": "books/tasbeeh/en/content.txt",
+                        "cover": "books/tasbeeh/en/cover-en.png"
+                    }
+                },
+                "metadata": {
+                    "author": "ناصر ابن داوود",
+                    "category": "faith_studies",
+                    "pages_ar": 75,
+                    "pages_en": 39,
+                    "language_ar": "arabic",
+                    "language_en": "english",
+                    "ai_accessible": true,
+                    "structured_data": true,
+                    "topics_ar": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"],
+                    "topics_en": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
+                }
+            }
+        ];
+
+        // ذاكرة تخزين مؤقت لمحتوى الكتب
         const bookContentCache = new Map();
 
         // إعدادات البحث
@@ -1439,8 +1322,8 @@ const booksData = [
             });
         }
 
-        // البحث في النص مع إظهار سطرين فقط
-        function searchInText(content, query, maxMatches = 3) {
+        // البحث في النص مع إظهار السطور
+        function searchInText(content, query, maxLines = 5) {
             if (!content) return [];
             
             const lines = content.split('\n');
@@ -1450,45 +1333,22 @@ const booksData = [
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i].trim();
                 if (line.toLowerCase().includes(queryLower)) {
-                    // الحصول على السطرين المحيطين (سابق + تالي)
+                    // إضافة سياق السطور
                     const start = Math.max(0, i - 1);
-                    const end = Math.min(lines.length, i + 2); // i + 1 + 1 (السطر التالي)
-                    
-                    // تجميع سطرين فقط: السطر الحالي والسطر السابق أو التالي
-                    let contextLines = [];
-                    
-                    // إضافة السطر السابق إن وجد
-                    if (i > 0 && lines[i-1].trim()) {
-                        contextLines.push({
-                            text: lines[i-1].trim(),
-                            isMatch: false,
-                            lineNumber: i
-                        });
-                    }
-                    
-                    // إضافة السطر الحالي
-                    contextLines.push({
-                        text: line,
-                        isMatch: true,
-                        lineNumber: i + 1
-                    });
-                    
-                    // إضافة السطر التالي إن وجد ولم نتجاوز الحد
-                    if (i < lines.length - 1 && lines[i+1].trim() && contextLines.length < 3) {
-                        contextLines.push({
-                            text: lines[i+1].trim(),
-                            isMatch: false,
-                            lineNumber: i + 2
-                        });
-                    }
+                    const end = Math.min(lines.length, i + 2);
+                    const context = lines.slice(start, end).map((l, idx) => ({
+                        text: l.trim(),
+                        isMatch: (start + idx) === i,
+                        lineNumber: start + idx + 1
+                    }));
                     
                     matchingLines.push({
                         lineNumber: i + 1,
                         text: line,
-                        context: contextLines.slice(0, 2) // نأخذ سطرين فقط
+                        context: context
                     });
                     
-                    if (matchingLines.length >= maxMatches) break;
+                    if (matchingLines.length >= maxLines) break;
                 }
             }
             
@@ -1505,28 +1365,77 @@ const booksData = [
             }
         }
 
-        // تحميل محتوى الكتاب
+        // تحميل محتوى الكتاب المحسنة
         async function loadBookContent(bookId, textUrl) {
+            // التحقق أولاً من الذاكرة المؤقتة
             if (bookContentCache.has(bookId)) {
+                console.log(`✅ استخدام المحتوى المخبأ للكتاب: ${bookId}`);
                 return bookContentCache.get(bookId);
             }
 
             try {
+                console.log(`📥 جاري تحميل محتوى الكتاب: ${bookId}`);
+                
+                // إضافة مهلة زمنية أطول (15 ثانية)
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => {
+                    console.warn(`⏰ مهلة تحميل الكتاب: ${bookId}`);
+                    controller.abort();
+                }, 15000);
+                
                 const response = await fetch(textUrl, { 
+                    signal: controller.signal,
                     cache: 'no-cache'
                 });
                 
+                clearTimeout(timeoutId);
+                
                 if (!response.ok) {
-                    throw new Error(`فشل في تحميل الملف: ${response.status}`);
+                    throw new Error(`فشل في تحميل الملف: ${response.status} ${response.statusText}`);
                 }
                 
                 const content = await response.text();
+                
+                // التحقق من أن المحتوى غير فارغ
+                if (!content || content.trim().length === 0) {
+                    throw new Error('المحتوى فارغ أو غير صالح');
+                }
+                
+                // تخزين المحتوى في الذاكرة المؤقتة
                 bookContentCache.set(bookId, content);
+                console.log(`✅ تم تحميل محتوى الكتاب: ${bookId} (${content.length} حرف)`);
                 return content;
                 
             } catch (error) {
                 console.error(`❌ خطأ في تحميل محتوى الكتاب ${bookId}:`, error.message);
+                
+                // تخزين قيمة null في الذاكرة المؤقتة لمنع إعادة المحاولة
+                bookContentCache.set(bookId, null);
                 return null;
+            }
+        }
+
+        // دالة تحديث مؤشر التقدم المحسنة
+        function updateSearchProgress(current, total, failed = 0) {
+            const resultsDiv = document.getElementById('localResults');
+            if (resultsDiv) {
+                const progress = Math.round((current / total) * 100);
+                resultsDiv.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
+                            <p>🔍 جاري البحث في الكتب...</p>
+                            <div style="margin-top: 10px;">
+                                <div style="background: #ddd; border-radius: 10px; height: 20px; width: 300px; margin: 0 auto;">
+                                    <div style="background: var(--primary-color); height: 100%; border-radius: 10px; width: ${progress}%; transition: width 0.3s;"></div>
+                                </div>
+                                <div style="margin-top: 5px; font-size: 0.9em; color: #666;">
+                                    ${current} من ${total} كتاب (${progress}%)
+                                    ${failed > 0 ? `<br><span style="color: #e74c3c;">⚠️ فشل في تحميل ${failed} كتاب</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
         }
 
@@ -1537,7 +1446,7 @@ const booksData = [
             alert('✅ تم تنظيف الذاكرة المؤقتة بنجاح');
         }
 
-        // البحث المحلي المحسن مع عرض سطرين فقط
+        // البحث المحلي المحسن
         async function performLocalSearch() {
             console.log('🔍 تشغيل البحث المحلي...');
             const query = document.getElementById('localSearch').value.trim();
@@ -1555,19 +1464,20 @@ const booksData = [
                     <div style="display: inline-block; padding: 10px 20px; background: #e8f4fd; border-radius: 10px;">
                         <p>${fastSearch ? '🔍 جاري البحث السريع...' : '📖 جاري البحث في النص الكامل...'}</p>
                         <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                            ${fastSearch ? 'البحث في العناوين والوصف والكلمات المفتاحية' : 'جاري البحث في النصوص الكاملة...'}
+                            ${fastSearch ? 'البحث في العناوين والوصف والكلمات المفتاحية' : 'قد يستغرق بعض الوقت لتحميل النصوص الكاملة'}
                         </div>
                     </div>
                 </div>
             `;
             
             const searchResults = [];
-            let totalMatches = 0;
+            let failedBooks = 0;
             
             try {
-                // البحث في كل كتاب
+                // البحث في كل كتاب مع مؤشر التقدم ومعالجة الأخطاء
                 for (let i = 0; i < booksData.length; i++) {
                     const book = booksData[i];
+                    updateSearchProgress(i + 1, booksData.length, failedBooks);
                     
                     console.log(`🔎 البحث في كتاب: ${book.titles.ar} (${i + 1}/${booksData.length})`);
                     
@@ -1575,7 +1485,6 @@ const booksData = [
                     let inDescription = false;
                     let inTopics = false;
                     let inEnglishTopics = false;
-                    let textMatches = [];
 
                     // البحث في البيانات الأساسية (سريع)
                     if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
@@ -1594,16 +1503,24 @@ const booksData = [
                         );
                     }
 
+                    const inAnyTopics = inTopics || inEnglishTopics;
+                    let textMatches = [];
+                    
                     // البحث في النص الكامل (فقط إذا لم يكن البحث سريع)
                     if (!fastSearch) {
                         // تحميل محتوى النص والبحث فيه (العربية)
                         if (currentSearchLanguage === 'both' || currentSearchLanguage === 'ar') {
                             const arabicTextUrl = book.links.ar.text;
                             if (arabicTextUrl) {
-                                const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
-                                if (content) {
-                                    const matches = searchInText(content, query, 2); // 2 نتيجة فقط
-                                    textMatches = textMatches.concat(matches);
+                                try {
+                                    const content = await loadBookContent(book.id + '_ar', arabicTextUrl);
+                                    if (content) {
+                                        const matches = searchInText(content, query, 2);
+                                        textMatches = textMatches.concat(matches);
+                                    }
+                                } catch (error) {
+                                    console.warn(`⚠️ تعذر تحميل النص العربي للكتاب: ${book.titles.ar}`);
+                                    failedBooks++;
                                 }
                             }
                         }
@@ -1612,28 +1529,33 @@ const booksData = [
                         if (currentSearchLanguage === 'both' || currentSearchLanguage === 'en') {
                             const englishTextUrl = book.links.en.text;
                             if (englishTextUrl) {
-                                const content = await loadBookContent(book.id + '_en', englishTextUrl);
-                                if (content) {
-                                    const matches = searchInText(content, query, 2); // 2 نتيجة فقط
-                                    textMatches = textMatches.concat(matches);
+                                try {
+                                    const content = await loadBookContent(book.id + '_en', englishTextUrl);
+                                    if (content) {
+                                        const matches = searchInText(content, query, 2);
+                                        textMatches = textMatches.concat(matches);
+                                    }
+                                } catch (error) {
+                                    console.warn(`⚠️ تعذر تحميل النص الإنجليزي للكتاب: ${book.titles.en}`);
+                                    failedBooks++;
                                 }
                             }
                         }
+                        
+                        // إضافة تأخير بسيط بين الطلبات لتجنب الحمل الزائد
+                        await new Promise(resolve => setTimeout(resolve, 50));
                     }
                     
-                    if (inTitle || inDescription || inTopics || inEnglishTopics || textMatches.length > 0) {
-                        totalMatches += textMatches.length;
+                    if (inTitle || inDescription || inAnyTopics || textMatches.length > 0) {
                         searchResults.push({
                             book: book,
                             inTitle: inTitle,
                             inDescription: inDescription,
+                            inTopics: inAnyTopics,
                             inArabicTopics: inTopics,
                             inEnglishTopics: inEnglishTopics,
                             textMatches: textMatches,
-                            score: (inTitle ? 10 : 0) + 
-                                   (inDescription ? 5 : 0) + 
-                                   ((inTopics || inEnglishTopics) ? 3 : 0) + 
-                                   (textMatches.length * 2)
+                            score: (inTitle ? 3 : 0) + (inDescription ? 2 : 0) + (inAnyTopics ? 1 : 0) + (textMatches.length > 0 ? 2 : 0)
                         });
                     }
                 }
@@ -1646,83 +1568,87 @@ const booksData = [
             
             if (searchResults.length === 0) {
                 resultsDiv.innerHTML = `
-                    <div class="no-results">
-                        <div class="no-results-icon">🔍</div>
-                        <h3>لم يتم العثور على نتائج</h3>
+                    <div style="text-align: center; padding: 2rem; color: #666;">
+                        <p>⚠️ لم يتم العثور على نتائج لـ "<strong>${query}</strong>"</p>
                         <p>جرب استخدام مصطلحات بحث مختلفة أو تغيير لغة البحث</p>
                     </div>
                 `;
                 return;
             }
             
-            // عرض النتائج مع سطرين فقط
+            // عرض النتائج
             resultsDiv.innerHTML = `
-                <div class="search-stats">
-                    <div class="stats-text">
-                        📊 تم العثور على <strong>${searchResults.length}</strong> كتاب يحتوي على "<strong>${query}</strong>" 
-                        مع <strong>${totalMatches}</strong> مطابقة في النص
-                    </div>
-                </div>
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
+                    نتائج البحث لـ "<span style="color: var(--accent-color);">${query}</span>" (${searchResults.length})
+                    <span style="font-size: 0.8em; color: #666;">- البحث في: ${getLanguageText(currentSearchLanguage)}</span>
+                </h3>
                 ${searchResults.map(result => {
                     const book = result.book;
                     const displayLang = currentDisplayLanguage;
-                    const hasTextMatches = result.textMatches.length > 0;
                     
                     return `
-                        <div class="search-result-item">
-                            <div class="search-result-header">
-                                <div>
-                                    <h3 class="result-title">
-                                        ${displayLang === 'ar' ? book.titles.ar : book.titles.en}
-                                    </h3>
-                                    <p style="color: #666; margin-bottom: 0.5rem;">
-                                        ${displayLang === 'ar' ? book.description.ar : book.description.en}
-                                    </p>
-                                </div>
+                        <div class="book-card">
+                            <h4 class="book-title">
+                                ${displayLang === 'ar' ? book.titles.ar : book.titles.en}
+                                ${result.inTitle ? '<span class="language-badge">العنوان</span>' : ''}
+                            </h4>
+                            <p class="book-description">
+                                ${displayLang === 'ar' ? book.description.ar : book.description.en}
+                                ${result.inDescription ? '<span class="language-badge">الوصف</span>' : ''}
+                            </p>
+                            <div class="book-meta">
+                                <strong>التصنيف:</strong> ${book.metadata.category} • 
+                                <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en}
                             </div>
                             
-                            <div class="result-meta">
-                                ${result.inTitle ? '<span class="meta-badge">📍 موجود في العنوان</span>' : ''}
-                                ${result.inDescription ? '<span class="meta-badge">📝 موجود في الوصف</span>' : ''}
-                                ${result.inArabicTopics || result.inEnglishTopics ? '<span class="meta-badge">🏷️ موجود في الكلمات المفتاحية</span>' : ''}
-                                ${hasTextMatches ? `<span class="meta-badge">📖 ${result.textMatches.length} مطابقة في النص</span>` : ''}
-                                <span class="meta-badge">📚 ${book.metadata.category}</span>
-                                <span class="meta-badge">📄 ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
+                            <!-- عرض الكلمات المفتاحية -->
+                            <div class="topics-list">
+                                ${book.metadata.topics_ar.slice(0, 5).map(topic => `
+                                    <span class="topic-tag">${topic}</span>
+                                `).join('')}
+                                ${book.metadata.topics_en && book.metadata.topics_en.slice(0, 3).map(topic => `
+                                    <span class="topic-tag" style="background: #fff0f0; border-color: #ffcccc;">${topic}</span>
+                                `).join('')}
                             </div>
                             
-                            ${hasTextMatches ? `
-                                <div class="result-snippet">
-                                    ${result.textMatches.slice(0, 2).map(match => `
-                                        <div class="snippet-text" style="margin-bottom: 0.5rem;">
-                                            <small style="color: #888;">السطر ${match.lineNumber}:</small>
-                                            ${highlightText(match.text, query)}
-                                        </div>
-                                        ${match.context.length > 1 ? `
-                                            <div class="snippet-text" style="color: #666; font-style: italic; margin-left: 1rem;">
-                                                ${match.context[1] ? highlightText(match.context[1].text, query) : ''}
-                                            </div>
-                                        ` : ''}
-                                    `).join('')}
-                                    ${result.textMatches.length > 2 ? `
-                                        <div class="match-count">
-                                            + ${result.textMatches.length - 2} مطابقة إضافية في هذا الكتاب
-                                        </div>
-                                    ` : ''}
+                            ${result.inArabicTopics || result.inEnglishTopics ? `
+                                <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f8ff; border-radius: 5px; font-size: 0.9em;">
+                                    <strong>موجود في الكلمات المفتاحية:</strong> 
+                                    ${result.inArabicTopics ? '<span style="color: #1a5276;">العربية</span>' : ''}
+                                    ${result.inArabicTopics && result.inEnglishTopics ? ' و ' : ''}
+                                    ${result.inEnglishTopics ? '<span style="color: #e74c3c;">الإنجليزية</span>' : ''}
                                 </div>
                             ` : ''}
                             
-                            <div class="result-actions">
-                                <a href="books/${book.id}/ar/" target="_blank" class="action-btn">
+                            ${result.textMatches.length > 0 ? `
+                                <div style="margin-top: 1.5rem;">
+                                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                                        📖 المواضع التي وردت فيها الكلمة:
+                                    </h5>
+                                    ${result.textMatches.map(match => `
+                                        <div class="match-line">
+                                            <div class="line-number">
+                                                السطر ${match.lineNumber}
+                                            </div>
+                                            <div style="line-height: 1.6;">
+                                                ${match.context.map(ctx => `
+                                                    <div class="context-line ${ctx.isMatch ? 'match' : ''}">
+                                                        ${ctx.isMatch ? '→ ' : ''}${highlightText(ctx.text, query)}
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            <div style="margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="books/${book.id}/ar/" target="_blank" class="book-link">
                                     📚 عرض الكتاب (العربية)
                                 </a>
-                                <a href="books/${book.id}/en/" target="_blank" class="action-btn">
+                                <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
                                     📘 عرض الكتاب (English)
                                 </a>
-                                ${hasTextMatches ? `
-                                    <a href="#" onclick="viewAllMatches('${book.id}', '${query}'); return false;" class="action-btn quick-view-btn">
-                                        👁️ عرض جميع المطابقات
-                                    </a>
-                                ` : ''}
                             </div>
                         </div>
                     `;
@@ -1734,7 +1660,6 @@ const booksData = [
 
         // تظليل النص المطابق
         function highlightText(text, query) {
-            if (!text) return '';
             const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
             return text.replace(regex, '<mark class="search-highlight">$1</mark>');
         }
@@ -1744,108 +1669,9 @@ const booksData = [
             return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
 
-        // عرض جميع المطابقات للكتاب
-        function viewAllMatches(bookId, query) {
-            const book = booksData.find(b => b.id === bookId);
-            if (!book) return;
-            
-            const matchesWindow = window.open('', '_blank');
-            matchesWindow.document.write(`
-                <html dir="rtl">
-                <head>
-                    <title>جميع المطابقات - ${book.titles.ar}</title>
-                    <style>
-                        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background: #f5f7fa; }
-                        .container { max-width: 800px; margin: 0 auto; }
-                        h1 { color: #1a5276; }
-                        .match-item { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; border-right: 4px solid #e74c3c; }
-                        .line-number { color: #666; font-size: 0.9em; }
-                        .match-text { margin: 5px 0; }
-                        mark { background: #fff3cd; padding: 2px 4px; border-radius: 3px; }
-                    </style>
-                </head>
-                <body>
-                    <div class="container">
-                        <h1>📖 جميع المطابقات في "${book.titles.ar}"</h1>
-                        <p>الكلمة: <strong>${query}</strong></p>
-                        <div id="matchesContainer"></div>
-                    </div>
-                    <script>
-                        async function loadAllMatches() {
-                            try {
-                                // تحميل النص العربي
-                                const arResponse = await fetch("${book.links.ar.text}");
-                                const arText = await arResponse.text();
-                                
-                                // تحميل النص الإنجليزي
-                                const enResponse = await fetch("${book.links.en.text}");
-                                const enText = await enResponse.text();
-                                
-                                const query = "${query}";
-                                const allMatches = [];
-                                
-                                // البحث في النص العربي
-                                const arLines = arText.split('\\n');
-                                arLines.forEach((line, index) => {
-                                    if (line.toLowerCase().includes(query.toLowerCase())) {
-                                        allMatches.push({
-                                            language: 'العربية',
-                                            lineNumber: index + 1,
-                                            text: line.trim()
-                                        });
-                                    }
-                                });
-                                
-                                // البحث في النص الإنجليزي
-                                const enLines = enText.split('\\n');
-                                enLines.forEach((line, index) => {
-                                    if (line.toLowerCase().includes(query.toLowerCase())) {
-                                        allMatches.push({
-                                            language: 'الإنجليزية',
-                                            lineNumber: index + 1,
-                                            text: line.trim()
-                                        });
-                                    }
-                                });
-                                
-                                // عرض النتائج
-                                const container = document.getElementById('matchesContainer');
-                                if (allMatches.length === 0) {
-                                    container.innerHTML = '<p>لم يتم العثور على مطابقات إضافية.</p>';
-                                    return;
-                                }
-                                
-                                container.innerHTML = \`
-                                    <p>تم العثور على \${allMatches.length} مطابقة:</p>
-                                    \${allMatches.map(match => \`
-                                        <div class="match-item">
-                                            <div class="line-number">السطر \${match.lineNumber} (\${match.language})</div>
-                                            <div class="match-text">\${highlightText(match.text, query)}</div>
-                                        </div>
-                                    \`).join('')}
-                                \`;
-                                
-                            } catch (error) {
-                                document.getElementById('matchesContainer').innerHTML = 
-                                    '<p style="color: red;">خطأ في تحميل النتائج: ' + error.message + '</p>';
-                            }
-                        }
-                        
-                        function highlightText(text, query) {
-                            const regex = new RegExp(\`(\${query.replace(/[.*+?^\${}()|[\\]\\\\]/g, '\\\\$&')})\`, 'gi');
-                            return text.replace(regex, '<mark>$1</mark>');
-                        }
-                        
-                        // تحميل النتائج عند فتح الصفحة
-                        loadAllMatches();
-                    <\/script>
-                </body>
-                </html>
-            `);
-        }
-
-        // عرض جميع الكتب
+        // عرض جميع الكتب مع دعم اللغتين
         function displayAllBooks() {
+            console.log('📚 عرض جميع الكتب...');
             const booksList = document.getElementById('allBooksList');
             const displayLang = currentDisplayLanguage;
             
@@ -1855,47 +1681,44 @@ const booksData = [
                     <span style="font-size: 0.8em; color: #666;">- العرض باللغة: ${displayLang === 'ar' ? 'العربية' : 'الإنجليزية'}</span>
                 </h3>
                 ${booksData.map(book => `
-                    <div class="search-result-item">
-                        <div class="search-result-header">
-                            <div>
-                                <h3 class="result-title">${displayLang === 'ar' ? book.titles.ar : book.titles.en}</h3>
-                                <p style="color: #666; margin-bottom: 0.5rem;">
-                                    ${displayLang === 'ar' ? book.description.ar : book.description.en}
-                                </p>
-                            </div>
+                    <div class="book-card">
+                        <h4 class="book-title">${displayLang === 'ar' ? book.titles.ar : book.titles.en}</h4>
+                        <p class="book-description">${displayLang === 'ar' ? book.description.ar : book.description.en}</p>
+                        <div class="book-meta">
+                            <strong>التصنيف:</strong> ${book.metadata.category} • 
+                            <strong>الصفحات:</strong> ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} •
+                            <strong>اللغة:</strong> ${displayLang === 'ar' ? 'العربية' : 'الإنجليزية'}
                         </div>
                         
-                        <div class="result-meta">
-                            <span class="meta-badge">📚 ${book.metadata.category}</span>
-                            <span class="meta-badge">📄 ${displayLang === 'ar' ? book.metadata.pages_ar : book.metadata.pages_en} صفحة</span>
-                            <span class="meta-badge">👤 ${book.metadata.author}</span>
-                            ${book.metadata.ai_accessible ? '<span class="meta-badge">🤖 متوافق مع الذكاء الاصطناعي</span>' : ''}
-                        </div>
-                        
+                        <!-- عرض الكلمات المفتاحية -->
                         <div style="margin: 10px 0;">
+                            <strong>الكلمات المفتاحية:</strong>
                             <div class="topics-list">
                                 ${(displayLang === 'ar' ? book.metadata.topics_ar : book.metadata.topics_en)
-                                    .slice(0, 6).map(topic => `
+                                    .slice(0, 8).map(topic => `
                                     <span class="topic-tag">${topic}</span>
                                 `).join('')}
                             </div>
                         </div>
                         
-                        <div class="result-actions">
-                            <a href="books/${book.id}/ar/" target="_blank" class="action-btn">
+                        <div style="display: flex; gap: 10px; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="books/${book.id}/ar/" target="_blank" class="book-link">
                                 📚 عرض الكتاب (العربية)
                             </a>
-                            <a href="books/${book.id}/en/" target="_blank" class="action-btn">
+                            <a href="books/${book.id}/en/" target="_blank" class="book-link" style="background: #e74c3c;">
                                 📘 عرض الكتاب (English)
                             </a>
                         </div>
                     </div>
                 `).join('')}
             `;
+            
+            console.log('✅ تم عرض جميع الكتب');
         }
 
         // البحث الدقيق في جوجل
         function performExactSearch() {
+            console.log('🎯 تشغيل البحث الدقيق...');
             const query = document.getElementById('exactQuery').value.trim();
             if (!query) {
                 alert('الرجاء إدخال مصطلح البحث');
@@ -1910,6 +1733,7 @@ const booksData = [
                 const searchButton = document.querySelector('.gsc-search-button');
                 if (searchButton) {
                     searchButton.click();
+                    console.log('✅ تم تشغيل البحث في جوجل');
                 }
             } else {
                 alert('محرك البحث جوجل غير جاهز بعد. يرجى المحاولة مرة أخرى بعد ثوانٍ.');
@@ -1945,7 +1769,13 @@ const booksData = [
             window.clearBookCache = clearBookCache;
             
             console.log('✅ الصفحة جاهزة!');
+            console.log('📖 عدد الكتب المتاحة:', booksData.length);
         });
-       </script>
+
+        // التحقق من أخطاء JavaScript
+        window.addEventListener('error', function(e) {
+            console.error('❌ خطأ في JavaScript:', e.error);
+        });
+    </script>
 </body>
 </html>
