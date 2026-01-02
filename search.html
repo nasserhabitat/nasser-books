@@ -374,7 +374,6 @@
                 </button>
             </div>
             <!-- بعد حقل البحث المحلي مباشرة -->
-<!-- بعد حقل البحث المحلي مباشرة -->
 <div style="margin: 10px 0; display: flex; gap: 10px; flex-wrap: wrap;">
     <label style="display: flex; align-items: center; gap: 8px;">
         <input type="checkbox" id="fastSearch" checked>
@@ -407,7 +406,7 @@
     </div>
 
     <script>
-       // بيانات الكتب مع الروابط الداخلية فقط
+       // بيانات الكتب مع الروابط الأساسية فقط (text و cover)
 const booksData = [
     {
       "id": "conscious-contemplation",
@@ -505,7 +504,7 @@ const booksData = [
         "ai_accessible": true,
         "structured_data": true,
         "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
       }
     },
     {
@@ -538,7 +537,7 @@ const booksData = [
         "ai_accessible": true,
         "structured_data": true,
         "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
       }
     },
     {
@@ -571,7 +570,7 @@ const booksData = [
         "ai_accessible": true,
         "structured_data": true,
         "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
       }
     },
     {
@@ -604,7 +603,7 @@ const booksData = [
         "ai_accessible": true,
         "structured_data": true,
         "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an", "The Sunnah of the Prophet", "Lordship and Divinity", "The Soul in the Qur'an", "Worship", "Quranic Values", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data", "Quranic authentication", "broken letters", "abrogation", "jinn and demons", "numbers in the Qur'an", "Quranic stories", "killing and fighting", "children of Israel", "human succession", "husband and couples", "men and women", "qibla", "the Grand Mosque and the Al-Aqsa Mosque", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses, mules and donkeys", "King, Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
       }
     },
     {
@@ -912,7 +911,6 @@ const booksData = [
       },
       "links": {
         "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
           "text": "books/the-code-of-the-quran/ar/content.txt",
           "cover": "books/the-code-of-the-quran/ar/cover-ar.png"
         },
@@ -1045,7 +1043,6 @@ const booksData = [
       },
       "links": {
         "ar": {
-          "docx": "https://drive.google.com/uc?export=download&id=1DcQyqfzrgFyo4yAnBqFte0y0lJU2k-Uz",
           "text": "books/the-quranic-consciousness-trinity-project/ar/content.txt",
           "cover": "books/the-quranic-consciousness-trinity-project/ar/cover-ar.png"
         },
@@ -1162,107 +1159,105 @@ const booksData = [
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-       {
-  "topics_ar": ["السبع المثاني", "البنية اللغوية", "البنية العددية", "الهندسة الإلهية", "القرآن الكريم", "المثاني", "الأزواج الحرفية", "النظام الثنائي", "فقه اللسان القرآني", "فقه الترتيب", "الحروف المقطعة", "التناظر البنائي", "المعنى الحركي", "الوحدة القرآنية", "الإعجاز العددي", "السبع الطوال", "الفاتحة", "دوائر القرآن", "الحواميم", "التدبر البنيوي", "التحليل الحرفي", "الاستقراء القرآني", "الوحي", "التثنية", "الترتيب المصحفي", "الهندسة الكلية"]
-  "topics_en": ["Quran", "Practical Preparation", "The Seven Mathani", "Quranic Linguistic Structure", "Quranic Numerical Structure", "Divine Design", "Quranic Paradigm", "Surah Pairs", "Binary System", "Quranic Philology", "Hermeneutical Methodology", "Disjointed Letters", "Paired Symmetry", "Kinetic Semantics", "Structural Unity", "Numerical Miracle", "Mathematical Miracle", "Al-Fatihah", "Quranic Architecture", "Al-Hawameem", "Structural Exegesis", "Linguistic-Numerical Integration", "Quranic Coherence", "Revelation", "Dualistic System", "Quranic Fabric", "Geometric Exegesis"]
-}
+        "topics_ar": ["السبع المثاني", "البنية اللغوية", "البنية العددية", "الهندسة الإلهية", "القرآن الكريم", "المثاني", "الأزواج الحرفية", "النظام الثنائي", "فقه اللسان القرآني", "فقه الترتيب", "الحروف المقطعة", "التناظر البنائي", "المعنى الحركي", "الوحدة القرآنية", "الإعجاز العددي", "السبع الطوال", "الفاتحة", "دوائر القرآن", "الحواميم", "التدبر البنيوي", "التحليل الحرفي", "الاستقراء القرآني", "الوحي", "التثنية", "الترتيب المصحفي", "الهندسة الكلية"],
+        "topics_en": ["Quran", "Practical Preparation", "The Seven Mathani", "Quranic Linguistic Structure", "Quranic Numerical Structure", "Divine Design", "Quranic Paradigm", "Surah Pairs", "Binary System", "Quranic Philology", "Hermeneutical Methodology", "Disjointed Letters", "Paired Symmetry", "Kinetic Semantics", "Structural Unity", "Numerical Miracle", "Mathematical Miracle", "Al-Fatihah", "Quranic Architecture", "Al-Hawameem", "Structural Exegesis", "Linguistic-Numerical Integration", "Quranic Coherence", "Revelation", "Dualistic System", "Quranic Fabric", "Geometric Exegesis"]
+      }
+    },
+    {
+      "id": "angels",
+      "titles": {
+        "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
+        "en": "Angels: The Hidden Structure That Governs Existence"
       },
-
+      "description": {
+        "ar": "البنية الخفية التي تُدير الوجود",
+        "en": "The Hidden Structure That Governs Existence"
+      },
+      "links": {
+        "ar": {
+          "text": "books/angels/ar/content.txt",
+          "cover": "books/angels/ar/cover-ar.png"
+        },
+        "en": {
+          "text": "books/angels/en/content.txt",
+          "cover": "books/angels/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 232,
+        "pages_en": 24,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics_ar": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"]
+      }
+    },
     {
-  "id": "angels",
-  "titles": {
-    "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
-    "en": "Angels: The Hidden Structure That Governs Existence"
-  },
-  "description": {
-    "ar": "البنية الخفية التي تُدير الوجود",
-    "en": "The Hidden Structure That Governs Existence"
-  },
- 
-  "ar": {
-    "text": "books/angels/ar/content.txt",
-    "cover": "books/angels/ar/cover-ar.png"
-   
-  },
-  "en": {
-    "text": "books/angels/en/content.txt",
-    "cover": "books/angels/en/cover-en.png"
-     },
-  "metadata": {
-    "author": "ناصر ابن داوود",
-    "category": "faith_studies",
-    "pages_ar": 232,
-    "pages_en": 24,
-    "language_ar": "arabic",
-    "language_en": "english",
-    "ai_accessible": true,
-    "structured_data": true,
-    "topics": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"]
-  }
-},
+      "id": "shattering-the-false-mountains",
+      "titles": {
+        "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
+        "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
+      },
+      "description": {
+        "ar": "رحلة الرضا من ليلة القدر إلى يوم الكشف",
+        "en": "A Qur'anic Unmasking of Sacred Illusions"
+      },
+      "links": {
+        "ar": {
+          "text": "books/shattering-the-false-mountains/ar/content.txt",
+          "cover": "books/shattering-the-false-mountains/ar/cover-ar.png"
+        },
+        "en": {
+          "text": "books/shattering-the-false-mountains/en/content.txt",
+          "cover": "books/shattering-the-false-mountains/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 147,
+        "pages_en": 56,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics_ar": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"]
+      }
+    },
     {
-  "id": "shattering-the-false-mountains",
-  "titles": {
-    "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
-    "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
-  },
-  "description": {
-    "ar": "رحلة الرضا من ليلة القدر إلى يوم الكشف",
-    "en": "A Qur'anic Unmasking of Sacred Illusions"
-  },
-    "ar": {
-    
-    "text": "books/shattering-the-false-mountains/ar/content.txt",
-    "cover": "books/shattering-the-false-mountains/ar/cover-ar.png"
-  
-  },
-  "en": {
-     "text": "books/shattering-the-false-mountains/en/content.txt",
-    "cover": "books/shattering-the-false-mountains/en/cover-en.png"
-  },
-  "metadata": {
-    "author": "ناصر ابن داوود",
-    "category": "faith_studies",
-    "pages_ar": 147,
-    "pages_en": 56,
-    "language_ar": "arabic",
-    "language_en": "english",
-    "ai_accessible": true,
-    "structured_data": true,
-    "topics": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"]
-  }
-},
-    {
-  "id": "tasbeeh",
-  "titles": {
-    "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
-    "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
-  },
-  "description": {
-    "ar": "السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
-    "en": "Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
-  },
-    "ar": {
-    "text": "books/tasbeeh/ar/content.txt",
-    "cover": "books/tasbeeh/ar/cover-ar.png"
-    
-  },
-  "en": {
-    
-    "text": "books/tasbeeh/en/content.txt",
-    "cover": "books/tasbeeh/en/cover-en.png"
-  },
-  "metadata": {
-    "author": "ناصر ابن داوود",
-    "category": "faith_studies",
-    "pages_ar": 75,
-    "pages_en": 39,
-    "language_ar": "arabic",
-    "language_en": "english",
-    "ai_accessible": true,
-    "structured_data": true,
-    "topics": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
- }
+      "id": "tasbeeh",
+      "titles": {
+        "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+        "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+      },
+      "description": {
+        "ar": "السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+        "en": "Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+      },
+      "links": {
+        "ar": {
+          "text": "books/tasbeeh/ar/content.txt",
+          "cover": "books/tasbeeh/ar/cover-ar.png"
+        },
+        "en": {
+          "text": "books/tasbeeh/en/content.txt",
+          "cover": "books/tasbeeh/en/cover-en.png"
+        }
+      },
+      "metadata": {
+        "author": "ناصر ابن داوود",
+        "category": "faith_studies",
+        "pages_ar": 75,
+        "pages_en": 39,
+        "language_ar": "arabic",
+        "language_en": "english",
+        "ai_accessible": true,
+        "structured_data": true,
+        "topics_ar": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
+      }
     }
 ];
         // ذاكرة تخزين مؤقت لمحتوى الكتب
