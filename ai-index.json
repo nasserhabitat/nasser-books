@@ -980,6 +980,178 @@
         "structured_data": true,
         "topics": ["النفس", "الحرف", "الوعي", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الروح", "القلب", "العقل", "البعد الإنساني", "التكامل", "التربية", "التزكية", "التطهير", "السمو", "الارتقاء"]
       }
-    }
+    },
+    {
+  "id": "the-seven-mathani",
+  "titles": {
+    "ar": "السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى",
+    "en": "The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning"
+  },
+  "description": {
+    "ar": "نحو وحدة الهندسة والمعنى",
+    "en": "Towards a Unity of Geometry and Meaning"
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-seven-mathani/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=1PWUnGUEXz_-QkCPMEsjbuRW3JvCtXLoa",
+    "pdf_direct": "books/the-seven-mathani/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1yHWJTLsModUU_Yr5XNhEU4AXzCKVX-3H",
+    "html": "https://drive.google.com/uc?export=download&id=1IYi9Qy63XuMoYs8TQCLdPcCCP5cVJPFY",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1bQLX8OVq6tAw_QP7YWbuw-0WcJx95AC0",
+    "txt_direct": "books/the-seven-mathani/ar/content.txt",
+    "cover": "books/the-seven-mathani/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_202512"
+  },
+  "en": {
+    "docx": "https://drive.google.com/uc?export=download&id=1Ju02f4YVhDqXNWERPFT1dNSycW3Wukqj",
+    "pdf_direct": "books/the-seven-mathani/en/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1_oBA1fBJFfzt87X7SKTT8crEWhv5Pz9p",
+    "html": "https://drive.google.com/uc?export=download&id=1XkUfrHfgwxpcnvTSoWaqi_V0ART_8EGx",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1lKvlpYSOYxf-lhulsEy_7XkY0p6TeRjK",
+    "txt_direct": "books/the-seven-mathani/en/content.txt",
+    "cover": "books/the-seven-mathani/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20251201"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 268,
+    "pages_en": 387,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["السبع المثاني", "البنية اللغوية", "البنية العددية", "الهندسة الإلهية", "القرآن الكريم", "المثاني", "النظام الثنائي", "فقه اللسان القرآني", "الحروف المقطعة", "التناظر البنائي", "الوحدة القرآنية", "الإعجاز العددي", "السبع الطوال", "الفاتحة", "دوائر القرآن", "الحواميم", "الوحي", "التثنية", "الهندسة الكلية"]
+  }
+},
+    {
+  "id": "angels",
+  "titles": {
+    "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
+    "en": "Angels: The Hidden Structure That Governs Existence"
+  },
+  "description": {
+    "ar": "البنية الخفية التي تُدير الوجود",
+    "en": "The Hidden Structure That Governs Existence"
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/angels/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=1X4HCjmtPVtoda5xlFnQCJm6cs-FQwUNy",
+    "pdf_direct": "books/angels/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1qCWn7efKbImHAOIgcoy6SJ8X_IGEvuGC",
+    "html": "https://drive.google.com/uc?export=download&id=1ZvhhC1hzkEV6jRC-mBxK1Blkt629dVj4",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1H-DfviO8ztlS-aB1hDzqIQhWautwHH4i",
+    "txt_direct": "books/angels/ar/content.txt",
+    "cover": "books/angels/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20251231"
+  },
+  "en": {
+    "docx": "https://drive.google.com/uc?export=download&id=1VBK8rKG8IS1SnTcRHNjA62eCD7E7ZOvh",
+    "pdf_direct": "books/angels/en/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1f1aU1XZOAgqS_XEEFO5VX1K_XUwd8IP-",
+    "html": "https://drive.google.com/uc?export=download&id=1ZLPFUtGM3T1h2bmzlCwdZL8gh2lS-tB7",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1-xZp64ONLyG6QwMSNgkGrMl2UJmmwUQu",
+    "txt_direct": "books/angels/en/content.txt",
+    "cover": "books/angels/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20251231_0935"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 232,
+    "pages_en": 24,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["الملائكة", "الإعجاز العلمي", "الفيزياء الكمومية", "تفسير القرآن", "الوعي", "الروح", "المنهج السنني المعلوماتي", "الذكاء الاصطناعي في القرآن", "فلسفة الدين", "الإنتروبيا", "الطاقة", "الشفرة الجينية", "قصة آدم", "الخلق", "الميتافيزيقا", "تجديد الخطاب الديني", "الإلحاد والإيمان", "الدماغ البشري", "المبادئ الكونية", "جبريل", "ميكائيل", "إسرافيل", "ملك الموت", "الحياة الآخرة", "البرمجة الإلهية", "أسرار القرآن", "السنن الكونية", "شفرة المصدر", "نظام التشغيل", "الخلافة الإنسانية", "التسخير", "نظرية المعلومات", "اللسان القرآني", "التحديث الكوني", "الانهيار الابعادي", "السحابة الكونية الكمومية", "المتجهات والحقول"]
+  }
+},
+    {
+  "id": "shattering-the-false-mountains",
+  "titles": {
+    "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
+    "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
+  },
+  "description": {
+    "ar": "رحلة الرضا من ليلة القدر إلى يوم الكشف",
+    "en": "A Qur'anic Unmasking of Sacred Illusions"
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/shattering-the-false-mountains/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=16NgM27SOSPZL5sk8MJaiKVTvhqlEp1YB",
+    "pdf_direct": "books/shattering-the-false-mountains/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1Ik4w0sYBWoy1x2nExT0r5jMgsegwvRiD",
+    "html": "https://drive.google.com/uc?export=download&id=1JUGX5fcsuucgmLr66krl-iYXEprmh0s5",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1WXBy6PNlelep8I_vaY_VlP83fb8SMsVd",
+    "txt_direct": "books/shattering-the-false-mountains/ar/content.txt",
+    "cover": "books/shattering-the-false-mountains/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20260101"
+  },
+  "en": {
+    "docx": "https://drive.google.com/uc?export=download&id=1moIai_xqwnS8U1e452gAGxgjwmNcxMOD",
+    "pdf_direct": "books/shattering-the-false-mountains/en/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=17zNYP48FHbxDpWCmkQD9bONmSPBzlv2i",
+    "html": "https://drive.google.com/uc?export=download&id=11ppZK4SOav8xebky5mOkyx8kxI3TDdRm",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1FT93tvO8-0Mglb0xyUsUaDruwze5jH73",
+    "txt_direct": "books/shattering-the-false-mountains/en/content.txt",
+    "cover": "books/shattering-the-false-mountains/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20260101_1857"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 147,
+    "pages_en": 56,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"]
+  }
+},
+    {
+  "id": "tasbeeh",
+  "titles": {
+    "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+    "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+  },
+  "description": {
+    "ar": "السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
+    "en": "Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/tasbeeh/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=1b5udEUb2iu8GQMD6Pg1Q09lf5c5OLFev",
+    "pdf_direct": "books/tasbeeh/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1Ybpue0ZDlhR7AgTDabQP2fXkOjE5SyvO",
+    "html": "https://drive.google.com/uc?export=download&id=1wVa7zAsKqRbjCYGxAizr_xJzVfsH4rba",
+    "txt_external": "https://drive.google.com/uc?export=download&id=12QcxZ2DCAEJqXLHwKGvANiS0P3MDh_NT",
+    "txt_direct": "books/tasbeeh/ar/content.txt",
+    "cover": "books/tasbeeh/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20251231_1245"
+  },
+  "en": {
+    "docx": "https://drive.google.com/uc?export=download&id=1f27NcQHtwl4eK4GppKbvKBG1Atd6WQ5X",
+    "pdf_direct": "books/tasbeeh/en/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1IPUS7svTd1RSKRZEsRHnvWnquTo6Nyyk",
+    "html": "https://drive.google.com/uc?export=download&id=1yuMVbs1Bzn7l7ootuPdRlLDHAfoStGjs",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1TAMznBKdG000yAnbZUyqZ55yxG5uNFj5",
+    "txt_direct": "books/tasbeeh/en/content.txt",
+    "cover": "books/tasbeeh/en/cover-en.png",
+    "archive": "https://archive.org/details/content_202601"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 75,
+    "pages_en": 39,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
+  }
+}
   ]
 }
