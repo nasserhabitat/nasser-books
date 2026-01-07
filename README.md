@@ -144,7 +144,7 @@ Internal file paths are automatically derived from the cover image path. For exa
 }
 
 
-سأقوم بتحديث ملف `README.md` ليشمل جميع الكتب الـ44 (22 بالعربية و22 بالإنجليزية) بناءً على الروابط المحدثة من ملف `advanced_link_checker.bat`.
+سأقوم بتحديث ملف `README.md` ليشمل جميع الكتب الـ52 (26 بالعربية و26 بالإنجليزية) بناءً على الروابط المحدثة من ملف `advanced_link_checker.bat`.
 
 ```markdown
 ## 🌐 المواقع الإلكترونية للمكتبة والمحتوى | Library Websites & Content Platforms
@@ -171,7 +171,7 @@ Internal file paths are automatically derived from the cover image path. For exa
 4.	**منصة Noor-Book**  
    **Noor-Book Platform**  
    📍 `https://www.noor-book.com`  
-   💾 تحميل الكتب بصيغة PDF (44 كتابًا متاحًا)
+   💾 تحميل الكتب بصيغة PDF (26 كتابًا متاحًا)
 
 5.	**منصة Scribd**  
    **Scribd Platform**  
