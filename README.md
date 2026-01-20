@@ -549,9 +549,37 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12QcxZ2DCAEJqXLHwKGvANiS0P3MDh_NT)  
    - [📝 النص الخام (مباشر)](books/tasbeeh/ar/content.txt)  
    - [🖼️ الغلاف](books/tasbeeh/ar/cover-ar.png)  
-   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20251231_1245)
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20251231_1245)
 
+27	**الأنبياء من شخوص التاريخ إلى برامج الاستخلاف**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1Gk_udci0YudyH7Mozn4wiCd6HFhu8kTr)  
+   - [📖 تحميل PDF (مباشر)](books/prophets/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1TZlVIN7WwQCVubfTf2IICxm5m3wIsnzv)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1wXgdahJSc9C5aDGjx61d1i8SkNuHuSwE)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1c1ghMtGX5ahJ579zGnMHWnSPkqkyCqA0)  
+   - [📝 النص الخام (مباشر)](books/prophets/ar/content.txt)  
+   - [🖼️ الغلاف](books/prophets/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260120_1819 )
 
+28	** يأجوج ومأجوج - من قانون الدم إلى سنن الفساد**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=13FgsqFRI7lmtrCnHTZgPUdwUvSNEraZM)  
+   - [📖 تحميل PDF (مباشر)](books/magog/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1A06d-es2hU46qJtWsffNRbf3rUMD5cHP)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=19j3WqedOVq6MW1n1Z9ih3A8bP74ZTMkB)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1ayzrEHiJEFs-u5G5QAcC0mxltFg_2TCB)  
+   - [📝 النص الخام (مباشر)](books/magog/ar/content.txt)  
+   - [🖼️ الغلاف](books/magog/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20251231_1245 )
+
+29	** كتاب الإنسان والاستخلاف **  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1eDNSEwcJ-ZuFQozUd-K5EMET9V5areW4)  
+   - [📖 تحميل PDF (مباشر)](books/human/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=15gTIDov_n2qUtB5q9aGntvbcVCmkePoq)  https://drive.google.com/file/d/15gTIDov_n2qUtB5q9aGntvbcVCmkePoq/view?usp=sharing
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=19iCpkIBXfochcOl43mvpGujx_daC8pK9)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=10o9YRUDAZbSWQUXo6Fr-0uQKyuJfVrgB)  
+   - [📝 النص الخام (مباشر)](books/human/ar/content.txt)  
+   - [🖼️ الغلاف](books/human/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20260119)
 
 #### الإنجليزية | English
 
@@ -816,6 +844,39 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (direct)](books/tasbeeh/en/content.txt)  
    - [🖼️ Cover](books/tasbeeh/en/cover-en.png)  
    - [📝 Plain Text on Archive.org]( https://archive.org/details/content_202601)
+
+
+27.	** From Prophets as Historical Figures to Programs of Human Stewardship **  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1g-wBCoricsd45HNit1DQvk69CwMlC_2V)  
+   - [📖 Download PDF (direct)](books/prophets/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1bbVbYl_KKEHUqFTCX_R1XWbT70W53-Ui)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1-Pf91dLUs_WhdFFTcG1-t7E-sUBLiS8T)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1kP4Xgiaf2iNbHXqMy2TKo_KtL8im7SDp)  
+   - [📝 Plain Text (direct)](books/prophets/en/content.txt)  
+   - [🖼️ Cover](books/prophets/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260120_1824)
+
+28.	** Gog and Magog - From the Law of Blood to the Patterns of Corruption **  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1f27NcQHtwl4eK4GppKbvKBG1Atd6WQ5X)  
+   - [📖 Download PDF (direct)](books/magog/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1IPUS7svTd1RSKRZEsRHnvWnquTo6Nyyk)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1yuMVbs1Bzn7l7ootuPdRlLDHAfoStGjs)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1TAMznBKdG000yAnbZUyqZ55yxG5uNFj5)  
+   - [📝 Plain Text (direct)](books/magog/en/content.txt)  
+   - [🖼️ Cover](books/magog/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260120_1816)
+
+
+29.	** Human and Trusteeship -  From Clay to Divine Light **  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1_j10D1Xi7Vle5Ufe3lgmWDBcH39ZFvIb)  
+   - [📖 Download PDF (direct)](books/human/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1ivTyHcbSxTB01CpweFpXpkKFtqkyEqTA)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1ZQuS4johOizx4-asYy5bvKzXw8P1Ys5K)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1BgK1qFjHRcIifSEpFy8xHeRXmNQBSgeJ)  
+   - [📝 Plain Text (direct)](books/human/en/content.txt)  
+   - [🖼️ Cover](books/human/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260119_2230)
+
 
   
 
