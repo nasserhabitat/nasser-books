@@ -32,8 +32,8 @@
     "search": "https://nasserhabitat.github.io/nasser-books/search.html",
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
   },
-  "books_count": 44,
-  "last_updated": "2025-11-09",
+  "books_count": 58,
+  "last_updated": "2026-01-21",
   "books": [
     {
       "id": "conscious-contemplation",
@@ -1151,6 +1151,135 @@
     "ai_accessible": true,
     "structured_data": true,
     "topics": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"]
+  }
+},
+{
+  "id": "prophets",
+  "titles": {
+    "ar": "الأنبياء من شخوص التاريخ إلى برامج الاستخلاف",
+    "en": "From Prophets as Historical Figures to Programs of Human Stewardship"
+  },
+  "description": {
+    "ar": "دراسة في التأويل الوظيفي للقرآن وناموس الأسماء، تقدّم الأنبياء كنماذج تشغيلية لبرامج الاستخلاف الإنساني.",
+    "en": "A study in the functional interpretation of the Quran and the onomastic system, presenting prophets as operational models for human stewardship programs."
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/prophets/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=1Gk_udci0YudyH7Mozn4wiCd6HFhu8kTr",
+    "pdf_direct": "books/prophets/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1TZlVIN7WwQCVubfTf2IICxm5m3wIsnzv",
+    "html": "https://drive.google.com/uc?export=download&id=1wXgdahJSc9C5aDGjx61d1i8SkNuHuSwE",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1c1ghMtGX5ahJ579zGnMHWnSPkqkyCqA0",
+    "txt_direct": "books/prophets/ar/content.txt",
+    "cover": "books/prophets/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20260120_1819"
+  },
+  "en": {
+    "docx": "https://drive.google.com/uc?export=download&id=1g-wBCoricsd45HNit1DQvk69CwMlC_2V",
+    "pdf_direct": "books/prophets/en/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1bbVbYl_KKEHUqFTCX_R1XWbT70W53-Ui",
+    "html": "https://drive.google.com/uc?export=download&id=1-Pf91dLUs_WhdFFTcG1-t7E-sUBLiS8T",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1kP4Xgiaf2iNbHXqMy2TKo_KtL8im7SDp",
+    "txt_direct": "books/prophets/en/content.txt",
+    "cover": "books/prophets/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20260120_1824"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 94,
+    "pages_en": 23,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["التأويل الوظيفي", "ناموس الأسماء", "الأنبياء كبرامج استخلاف", "القرآن كنظام تشغيل", "التدبر البنيوي", "الاستخلاف الإنساني", "النبي بين التاريخ والوظيفة", "الأسماء النبوية كأكواد", "المثاني في القرآن", "الفطرة والوعي", "الخليفة الإنسان", "المسجد الحرام كبيئة آمنة", "السكينة واليقين", "الأنبياء كنماذج تشغيلية", "محمد كنظام شامل", "العقل الكلي", "الترميم الروحي", "التسخير الكوني", "المنهج الإبراهيمي", "التفعيل العملي للنبوة"]
+  }
+},
+{
+  "id": "magog",
+  "titles": {
+    "ar": "يأجوج ومأجوج - من قانون الدم إلى سنن الفساد",
+    "en": "Gog and Magog - From the Law of Blood to the Patterns of Corruption"
+  },
+  "description": {
+    "ar": "تحليل سنني ولساني لقصة يأجوج ومأجوج وذو القرنين، كاشفًا عن شفرة الدم وقوانين الفساد والردم في الزمن المعاصر.",
+    "en": "A linguistic and paradigmatic analysis of the story of Gog and Magog and Dhul-Qarnayn, revealing the code of blood and the laws of corruption and containment in the modern era."
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/magog/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=13FgsqFRI7lmtrCnHTZgPUdwUvSNEraZM",
+    "pdf_direct": "books/magog/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=1A06d-es2hU46qJtWsffNRbf3rUMD5cHP",
+    "html": "https://drive.google.com/uc?export=download&id=19j3WqedOVq6MW1n1Z9ih3A8bP74ZTMkB",
+    "txt_external": "https://drive.google.com/uc?export=download&id=1ayzrEHiJEFs-u5G5QAcC0mxltFg_2TCB",
+    "txt_direct": "books/magog/ar/content.txt",
+    "cover": "books/magog/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20251231_1245"
+  },
+  "en": {
+    "docx": " https://drive.google.com/uc?export=download&id=1f27NcQHtwl4eK4GppKbvKBG1Atd6WQ5X ",
+    "pdf_direct": "books/magog/en/content.pdf",
+    "pdf_external": " https://drive.google.com/uc?export=download&id=1IPUS7svTd1RSKRZEsRHnvWnquTo6Nyyk ",
+    "html": " https://drive.google.com/uc?export=download&id=1yuMVbs1Bzn7l7ootuPdRlLDHAfoStGjs ",
+    "txt_external": " https://drive.google.com/uc?export=download&id=1TAMznBKdG000yAnbZUyqZ55yxG5uNFj5",
+    "txt_direct": "books/magog/en/content.txt",
+    "cover": "books/magog/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20260120_1816"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 60,
+    "pages_en": 20,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["يأجوج ومأجوج", "ذو القرنين", "قانون الدم", "سنن الفساد", "الردم", "الاستخلاف", "فقه اللسان", "شفرة الوجود", "المسار الموجه", "التأجيج", "السيولة", "سفك الوعي", "الردم الرقمي", "هندسة المناعة الوجودية", "تدبر القرآن", "الوعي الوجودي", "خريطة القمر", "أطلنطس", "الجدار الجليدي", "ميزان الوحي", "التسييل", "التحول الرقمي", "الأمن القومي الفكري", "زبر الحديد", "كيمياء الحماية", "النظام الإلهي", "الفساد المنظومي", "المنهج السنني", "الإعجاز اللساني", "الفلسفة القرآنية", "العزل الفكري الواعي"]
+  }
+},
+{
+  "id": "human",
+  "titles": {
+    "ar": "كتاب الإنسان والاستخلاف",
+    "en": "The Book of Human and Stewardship"
+  },
+  "description": {
+    "ar": "رحلة في فقه الوعي والوجود تبحث في سر الأمانة والاستخلاف الإنساني من خلال التدبير القرآني والأسماء الحسنى.",
+    "en": "A journey into the jurisprudence of consciousness and existence, exploring the secret of the Trust and human stewardship through Quranic management and the Divine Names."
+  },
+  "cover_image": "https://nasserhabitat.github.io/nasser-books/books/human/ar/cover-ar.png",
+  "ar": {
+    "docx": "https://drive.google.com/uc?export=download&id=1eDNSEwcJ-ZuFQozUd-K5EMET9V5areW4",
+    "pdf_direct": "books/human/ar/content.pdf",
+    "pdf_external": "https://drive.google.com/uc?export=download&id=15gTIDov_n2qUtB5q9aGntvbcVCmkePoq",
+    "html": "https://drive.google.com/uc?export=download&id=19iCpkIBXfochcOl43mvpGujx_daC8pK9",
+    "txt_external": "https://drive.google.com/uc?export=download&id=10o9YRUDAZbSWQUXo6Fr-0uQKyuJfVrgB",
+    "txt_direct": "books/human/ar/content.txt",
+    "cover": "books/human/ar/cover-ar.png",
+    "archive": "https://archive.org/details/content_20260119"
+  },
+  "en": {
+    "docx": " https://drive.google.com/uc?export=download&id=1_j10D1Xi7Vle5Ufe3lgmWDBcH39ZFvIb ",
+    "pdf_direct": "books/human/en/content.pdf",
+    "pdf_external": " https://drive.google.com/uc?export=download&id=1ivTyHcbSxTB01CpweFpXpkKFtqkyEqTA ",
+    "html": " https://drive.google.com/uc?export=download&id=1ZQuS4johOizx4-asYy5bvKzXw8P1Ys5K ",
+    "txt_external": " https://drive.google.com/uc?export=download&id=1BgK1qFjHRcIifSEpFy8xHeRXmNQBSgeJ ",
+    "txt_direct": "books/human/en/content.txt",
+    "cover": "books/human/en/cover-en.png",
+    "archive": "https://archive.org/details/content_20260119_2230)"
+  },
+  "metadata": {
+    "author": "ناصر ابن داوود",
+    "category": "faith_studies",
+    "pages_ar": 75,
+    "pages_en": 35,
+    "language_ar": "arabic",
+    "language_en": "english",
+    "ai_accessible": true,
+    "structured_data": true,
+    "topics": ["الإنسان", "الاستخلاف", "الوعي", "الأمانة", "القرآن", "التدبير القرآني", "الأسماء الحسنى", "الوجود", "النفس", "الخلافة", "التأويل", "القيامة", "النية", "البرزخ", "الشفرة الإلهية", "البشر", "الروح", "الموت", "الحياة", "الفلسفة الإسلامية", "التدبر", "فقه اللسان", "الهندسة الوجودية", "التسليم", "الرضا", "الملكوت", "السقوط الوجودي", "وحدة الشهود", "الملائكة", "الأمر الإلهي", "النعمة", "الآن الوجودي", "التكليف", "الحرية", "المسؤولية"]
   }
 }
   ]
