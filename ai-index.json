@@ -16,7 +16,7 @@
     "version": "2.0",
     "ai_compatible": true,
     "last_updated": "2025-11-09",
-    "total_books": 44,
+    "total_books": 58,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -34,7 +34,7 @@
   },
   "books_count": 58,
   "last_updated": "2026-01-21",
-  "books": [
+  "books": 
     {
       "id": "conscious-contemplation",
       "titles": {
