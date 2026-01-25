@@ -14,7 +14,7 @@
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
   },  "last_updated": "2026-01-21",
- "books": [
+"books": [
     {
       "id": "conscious-contemplation",
       "titles": {
@@ -1155,8 +1155,8 @@
     "language_en": "english",
     "ai_accessible": true,
     "structured_data": true,
-    "topics_ar": ["التأويل الوظيفي", "ناموس الأسماء", "الأنبياء كبرامج استخلاف", "القرآن كنظام تشغيل", "التدبر البنيوي", "الاستخلاف الإنساني", "النبي بين التاريخ والوظيفة", "الأسماء النبوية كأكواد", "المثاني في القرآن", "الفطرة والوعي", "الخليفة الإنسان", "المسجد الحرام كبيئة آمنة", "السكينة واليقين", "الأنبياء كنماذج تشغيلية", "محمد كنظام شامل", "العقل الكلي", "الترميم الروحي", "التسخير الكوني", "المنهج الإبراهيمي", "التفعيل العملي للنبوة"],
-    "topics_en": ["Functional Interpretation", "The Law of Names", "Prophets as Succession Programs", "The Qur'an as an Operating System", "Structural Contemplation, Human Succession", "The Prophet Between History and Function", "Prophetic Names as Codes", "The Mathani in the Qur'an", "Innate Nature and Consciousness", "The Human Caliph", "The Sacred Mosque as a Safe Environmen", "Tranquility and Certainty", "Prophets as Operational Models", "Muhammad as a Comprehensive System", "The Universal Mind", "Spiritual Restoration", "Cosmic Subjugation", "The Abrahamic Methodology", "The Practical Activation of Prophethood"]
+     "topics_ar": ["التسبيح", "السباحة الكونية", "المسار الموجه", "شفرة الوجود", "التنزيه القلبي", "الخضوع العملي", "السجود", "النظام الكوني", "الفطرة الإنسانية", "الطاقة الحيوية", "البيوفوتونات", "الشفاء القرآني", "التناغم الوجودي", "اللسان القرآني", "سفك الدماء", "الفساد في الأرض", "الطريق المستقيم", "السكينة الإلهية", "الوعي الكوني", "الاتصال الباطني", "شفرة (أ ل م)", "الإصلاح", "السنن الإلهية", "التوازن الطاقي"],
+     "topics_en": ["Glorification", "Cosmic Swimming", "Guided Path", "Code of Existence", "Heartfelt Transcendence", "Practical Submission", "Prostration", "Cosmic System", "Human Nature", "Vital Energy", "Biophotons", "Quranic Healing", "Existential Harmony", "Quranic Tongue", "Shedding of Blood", "Corruption on Earth", "Straight Path", "Divine Tranquility", "Cosmic Consciousness", "Inner Connection", "Code (A L M)", "Reform", "Divine Laws", "Energy Balance"]
                 }
             },
 {
