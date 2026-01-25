@@ -59,8 +59,9 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"],
-      "content_overview": {
+        "topics_ar": ["التدبر في مرآة الرسوم", "المخطوطات الرقمية", "تدبر القرآن", "الرسم العثماني", "تطبيقات عملية للقرآن", "فهم القرآن", "أسرار الرسم العثماني", "نور المخطوطات الرقمية", "أنوار البيان", "جداول المعاني", "ناصر ابن داوود"],
+        "topics_en": ["Reflecting on the Mirror of Drawings", "Digital Manuscripts", "Reflecting on the Qur'an", "Ottoman Calligraphy", "Practical Applications of the Qur'an", "Understanding the Qur'an", "Secrets of Ottoman Calligraphy", "Light of Digital Manuscripts", "Lights of Explanation", "Tables of Meanings", "Nasser Ibn Dawood"],
+        "content_overview": {
         "methodology": "منهجية تجمع بين دراسة المخطوطات القرآنية القديمة والتحليل الرقمي الحديث لفهم أعمق للنص القرآني",
         "main_sections": [
           {
