@@ -34,7 +34,7 @@
   },
   "books_count": 58,
   "last_updated": "2026-01-21",
-  "books": {
+"books": [
     {
       "id": "conscious-contemplation",
       "titles": {
@@ -75,7 +75,7 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics_ar": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"]
+        "topics_ar": ["تدبر القرآن", "فهم القرآن", "تطبيق القرآن", "منهجية التدبر", "القرآن في العصر الحديث", "نور العقل", "رقمنة المخطوطات القرآنية", "الرسم العثماني", "المخطوطات القرآنية الأصلية", "منهج حياة", "الفهم الواعي للقرآن", "آيات القرآن", "القرآن الكريم", "تدبر عملي", "ناصر ابن داوود"],
         "topics_en":   ["Contemplating the Qur'an", "Understanding the Qur'an", "Applying the Qur'an", "Methodology of Contemplation", "The Qur'an in the Modern Age", "Light of Reason", "Digitization of Qur'anic Manuscripts", "Ottoman Script", "Original Qur'anic Manuscripts", "A Way of Life", "Conscious Understanding of the Qur'an", "Verses of the Qur'an", "The Holy Qur'an", "Practical Contemplation", "Nasser Ibn Dawood"]
       }
     },
@@ -1133,8 +1133,8 @@
     "structured_data": true,
     "topics_ar": ["تفكيك", "اليقين الموروث", "الجبال الزائفة", "الاتساق المعرفي", "المسؤولية الأخلاقية", "المنهج الإبراهيمي", "الاستخلاف", "النقد الذاتي", "التحرر من الوهم", "البناء المنهجي", "الحقيقة القرآنية", "المساءلة", "الطمأنينة المعرفية", "النظم السيميائي", "الأخلاق الهيكلية"],
     "topics_en": ["Deconstruction", "Inherited Certainty", "False Mountains", "Epistemological Consistency", "Ethical Responsibility", "The Abrahamic Method", "Succession", "Self-Criticism", "Liberation from Illusion", "Methodological Construction", "The Qur'anic Truth", "Accountability", "Epistemological Tranquility", "Semiotic Systems", "Structural Ethics"]
-
-     }
+            }
+            },
     {
   "id": "tasbeeh",
   "titles": {
@@ -1309,7 +1309,7 @@
     "structured_data": true,
     "topics_ar": ["الإنسان", "الاستخلاف", "الوعي", "الأمانة", "القرآن", "التدبير القرآني", "الأسماء الحسنى", "الوجود", "النفس", "الخلافة", "التأويل", "القيامة", "النية", "البرزخ", "الشفرة الإلهية", "البشر", "الروح", "الموت", "الحياة", "الفلسفة الإسلامية", "التدبر", "فقه اللسان", "الهندسة الوجودية", "التسليم", "الرضا", "الملكوت", "السقوط الوجودي", "وحدة الشهود", "الملائكة", "الأمر الإلهي", "النعمة", "الآن الوجودي", "التكليف", "الحرية", "المسؤولية"],
     "topics_en": ["Man", "Succession", "Consciousness", "Trust", "The Qur'an", "The Qur'anic Approach", "The Most Beautiful Names", "Existence", "The Soul", "Succession", "Interpretation", "Resurrection", "Intention", "The Intermediate Realm", "The Divine Code", "Humans", "The Spirit", "Death", "Life", "Islamic Philosophy", "Contemplation", "The Jurisprudence of Language", "Existential Geometry", "Submission", "Contentment", "The Kingdom", "Existential Fall", "Unity of Witnessing", "Angels", "The Divine Command", "Blessing", "The Existential Now", "Assignment", "Freedom", "Responsibility"]
-                   {
-         } 
-  }  
-} 
+                   }
+    }
+  ]
+}
