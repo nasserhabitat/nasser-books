@@ -61,7 +61,9 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"],
+        "topics_ar": ["الأسماء الحسنى", "الأسماء الحسنى الوظيفية", "التدبير الإلهي", "القرآن الكريم", "دراسة توقيفية", "دلالات الأسماء الحسنى", "الإحصاء", "فهم سنن الكون", "اليقين", "الطمأنينة", "حل المشكلات", "الدعاء", "التوكل", "تطبيق الأسماء الحسنى", "المعرفة بالله", "أسرار الأسماء", "العلاقة بالله", "التأمل في القرآن"],
+        "topics_en": ["Divine Names", "Functional Divine Names", "Divine Providence", "Holy Quran", "Documentary Study", "Meanings of Divine Names", "Enumeration", "Understanding Universal Laws", "Certainty", "Tranquility", "Problem Solving", "Supplication (Dua)", "Trust in God (Tawakkul)", "Application of Divine Names", "Knowledge of God", "Secrets of Divine Names", "Relationship with God", "Contemplation of the Quran"],
+
         "edition": "الأولى - 2025"
       },
       "key_features": [
