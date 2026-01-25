@@ -58,7 +58,8 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"],
+        "topics_ar": ["اليقين", "ملكوت السماوات والأرض", "برهان", "رؤية الحقيقة", "القرآن", "الحقائق العلمية", "الوحي", "الفطرة", "الكون", "الخلق", "الخالق", "الأرض المسطحة", "الأرض الثابتة", "التفكر", "التدبر", "نظريات إسلامية", "شكل الكون", "الشمس", "القمر", "الكواكب", "علم الفلك"],
+        "topics_en": ["Certainty", "Kingdom of Heaven and Earth", "Evidence", "Seeing the Truth", "Quran", "Scientific Facts", "Revelation", "Nature", "Universe", "Creation", "Creator", "Flat Earth", "Fixed Earth", "Contemplation", "Reflection", "Islamic Theories", "Shape of the Universe", "Sun", "Moon", "Planets", "Astronomy", "Nasser Ibn Dawood", "Reflection in the Mirror of Drawings"],
       "edition": "الأولى - 2025"
     },
     "key_features": [
