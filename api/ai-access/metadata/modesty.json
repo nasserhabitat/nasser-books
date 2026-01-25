@@ -63,7 +63,8 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"],
+        "topics_ar": ["الحياء", "الأخلاق الإسلامية", "التربية الروحية", "القرآن الكريم"],
+        "topics_en": ["Modesty", "Islamic Ethics", "Spiritual Education", "The Holy Quran"],
       "edition": "الأولى - 2025",
       "key_features": [
         "رؤية جديدة للحياء كأداة معرفية وليس فقط فضيلة أخلاقية",
