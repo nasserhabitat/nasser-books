@@ -47,18 +47,6 @@
         "archive": "https://archive.org/details/20251111_20251111_2024"
       },
       "metadata": {
-        "author": "ناصر ابن داوود",
-        "category": "faith_studies",
-        "pages_ar": 188,
-        "pages_en": 245,
-        "language_ar": "arabic",
-        "language_en": "english",
-        "ai_accessible": true,
-        "structured_data": true,
-        "topics": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"]
-      }
-    },
-    "metadata": {
       "author": "ناصر ابن داوود",
       "category": "faith_studies",
       "pages_ar": 188,
@@ -67,7 +55,8 @@
       "language_en": "english",
       "ai_accessible": true,
       "structured_data": true,
-      "topics": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"],
+      "topics_ar": ["الكون", "الكتاب الحي", "الموجودات", "لسان الله", "القرآن الكريم", "التدبر", "الفهم", "البصيرة", "الإدراك", "المعرفة", "الخلق", "التكوين", "النظام", "التوازن", "الإعجاز", "الآيات", "الدلائل", "البراهين", "الحكمة", "المشيئة"],
+      "topics_en": ["Cosmic contemplation of the Quran", "Symbolism in the Quran", "Cosmic Consciousness", "Quranic Linguistic Jurisprudence", "The Soul, Spirit and Cosmos", "Speaking Entities", "Stars and Guidance", "Livestock and Blessings", "The Seven Heavens and Consciousness", "Light and the Heart", "Symbolic Interpretation", "Existence and Perception", "Animal Symbolism", "Intellect and Contemplation", "Quranic Parables", "Symbolic Eating and Drinking", "Ascension and Heaven", "Gates of Heaven", "Symbolic Splitting of the Moon", "Quranic Contemplation Methodology", "Analysis of Dualities", "Symbolic Deconstruction", "Quran and Modern Consciousness", "Quranic Spirituality", "Islam and Sufism", "Quran and Existential Philosophy", "Quran and Spiritual Psychology", "Nasser Ibn Dawood Library"],
       "edition": "الأولى - 2025",
       "key_features": [
         "رؤية جديدة للكون ككتاب مفتوح يتكلم بلغة الخالق",
