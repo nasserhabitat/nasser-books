@@ -59,8 +59,10 @@
         "language_en": "english",
         "ai_accessible": true,
         "structured_data": true,
-        "topics": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"],
-      "content_overview": {
+        "topics_ar": ["رقمنة المخطوطات القرآنية", "تدبر القرآن", "نهضة قرآنية رقمية", "فهم القرآن", "التكنولوجيا والقرآن", "المخطوطة الرقمية الشخصية", "الأصالة والمعاصرة", "التراث العلمي الإسلامي", "الذكاء الاصطناعي والقرآن", "مشروع قرآني", "تحديات رقمنة المخطوطات", "تسويق المشروع القرآني", "مستقبل التدبر القرآني", "نشر التدبرات", "بناء الثقة والشراكات", "التوعية والتثقيف"],
+        "topics_en": ["Digitization of Qur'anic manuscripts", "Qur'anic contemplation", "a digital Qur'anic renaissance", "understanding the Qur'an", "technology and the Qur'an", "the personal digital manuscript", "authenticity and modernity", "Islamic scientific heritage", "artificial intelligence and the Qur'an", "a Qur'anic project", "challenges of digitizing manuscripts", "marketing the Qur'anic project", "the future of Qur'anic contemplation", "disseminating contemplations", "building trust and partnerships", "awareness and education"],
+
+        "content_overview": {
         "methodology": "دراسة تطبيقية تجمع بين تقنيات الرقمنة الحديثة والدراسات القرآنية لتطوير منهجية متكاملة لحفظ النص القرآني",
         "data_sources": [
           "المخطوطات القرآنية",
