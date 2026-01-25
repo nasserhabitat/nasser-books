@@ -55,7 +55,8 @@
       "language_en": "english",
       "ai_accessible": true,
       "structured_data": true,
-      "topics": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"],
+            "topics_ar": ["السجود", "التسبيح", "القرآن الكريم", "التنزيه القلبي", "الخضوع العملي", "منهج حياة", "الحمد المحمدي", "فقه اللسان القرآني", "العبودية"],
+        "topics_en": ["Prostration", "glorification", "the Holy Quran", "purification of the heart", "practical submission", "a way of life", "Muhammadan praise", "understanding of the Quranic language", "servitude"],
       "edition": "الأولى - 2025",
       "key_features": [
         "إعادة تعريف التسبيح والسجود كمنهج حياة متكامل",
