@@ -580,7 +580,59 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (مباشر)](books/human/ar/content.txt)  
    - [🖼️ الغلاف](books/human/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org]( https://archive.org/details/content_20260119)
+إليك القوائم المنسقة للكتب الخمسة بنفس النموذج المطلوب:
 
+**كتاب 30: وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الأول**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1wU-8RsWrsgzIJ4U_hJNFTGT2YEkHuLVc)  
+   - [📖 تحميل PDF (مباشر)](books/malakoot1/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1TUTOEHZPs0Guq02ZN7jhUasl9S6sM5nS)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1KzdiL-8i545cSLl4ypUuBqQmodv1Bi_C)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1MyLosyOpF4RzWGFK2PHlLrKCxEt8cwJc)  
+   - [📝 النص الخام (مباشر)](books/malakoot1/ar/content.txt)  
+   - [🖼️ الغلاف](books/malakoot1/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_202602)
+
+**كتاب 31: وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الثاني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1mUghRTiW6Bn1htMJ8M4_oafBmPHHsOuO)  
+   - [📖 تحميل PDF (مباشر)](books/malakoot2/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=194QzNFBQuMmLhpphVkzzcEsxiJz62gpR)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1rnfchMfiufWxS-NaBLT2pRDA5utq4yZG)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1NFenl00FriZH6MgMEz31Hgewb-rwQUgC)  
+   - [📝 النص الخام (مباشر)](books/malakoot2/ar/content.txt)  
+   - [🖼️ الغلاف](books/malakoot2/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260202)
+
+**كتاب 32: الإسلام والإيمان: نحو هندسة للأمن الوجودي ونقد صنمية التراث**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1BW3QiunUNt9j0zda4yPenT1mpzsmtTYP)  
+   - [📖 تحميل PDF (مباشر)](books/faith/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=12NUJmmmg1y8YrulZzTrq8rKcUq5js3qH)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1suaQO8F1r8IR1Sg1mIlULI5CwXMXx-O8)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1TUtjVTO2kfwoYIkHFW4qUWfZX-oX5qib)  
+   - [📝 النص الخام (مباشر)](books/faith/ar/content.txt)  
+   - [🖼️ الغلاف](books/faith/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260202_2031)
+
+**كتاب 33: الجن والشياطين في القرآن: من الخرافة إلى الوعي المعقلن**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1Db_N_KvQ-U6knjryPCB1MhyEJz6xsMtW)  
+   - [📖 تحميل PDF (مباشر)](books/jinn/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=16x-e2mmmL_wHaCiOxhHT8omq7GQDAv9A)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1MYGIaln5ImuEeMvN2DNjtvpvOIreasEg)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1nZ26iRPwaNCIg4nUd9FYys9dzzh_PKGx)  
+   - [📝 النص الخام (مباشر)](books/jinn/ar/content.txt)  
+   - [🖼️ الغلاف](books/jinn/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260202_2027)
+
+**كتاب 34: الزنا في ضوء الميزان الإلهي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1mUghRTiW6Bn1htMJ8M4_oafBmPHHsOuO)  
+   - [📖 تحميل PDF (مباشر)](books/adultery/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=194QzNFBQuMmLhpphVkzzcEsxiJz62gpR)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1rnfchMfiufWxS-NaBLT2pRDA5utq4yZG)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1NFenl00FriZH6MgMEz31Hgewb-rwQUgC)  
+   - [📝 النص الخام (مباشر)](books/adultery/ar/content.txt)  
+   - [🖼️ الغلاف](books/adultery/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260202_2045)
+
+**ملاحظة**: تم استخدام الروابط العربية لجميع الكتب من البيانات السابقة.
 #### الإنجليزية | English
 
 1.	**Towards Conscious Contemplation**  
@@ -876,6 +928,57 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text (direct)](books/human/en/content.txt)  
    - [🖼️ Cover](books/human/en/cover-en.png)  
    - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260119_2230)
+إليك القوائم المنسقة للكتب الخمسة باللغة الإنجليزية بنفس النموذج:
+
+30. So That He May Be Among the Certain - A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1OCL0q_Izc5E3c5RTVnWqP9yCKnwca9SR)  
+   - [📖 Download PDF (direct)](books/malakoot1/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1s9F5WVVBjjRYsI0zdfCBawa1EhU2FqSA)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1U0qsfnSg-AVEVFrGkNCtY7TqC-EuFDkh)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=10woJi7fjOZKTuG1Mt-E2n4NElhfMM8sg)  
+   - [📝 Plain Text (direct)](books/malakoot1/en/content.txt)  
+   - [🖼️ Cover](books/malakoot1/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260203)
+
+31. And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them 
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1mYFKGoTKERG-MrmrOZUkNZVJlVt7sQOg)  
+   - [📖 Download PDF (direct)](books/malakoot2/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=16FSLEaHnPyk2XYKWfqFeK5gvqaVKmT2e)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=17rYC89Oh4IFflSRKxynmbB-RIudKQso3)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1EV4yW6ydfyZRDOxpL2hx1v9nF3NYlj5M)  
+   - [📝 Plain Text (direct)](books/malakoot2/en/content.txt)  
+   - [🖼️ Cover](books/malakoot2/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/meaningful-english-summary-so-that-he-may-be-among-the-certain-volume-ii)
+
+32. Faith Between Text and Contemporary Interpretation: A Conceptual Reading of Belief, Meaning, and Responsibility
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=163g_q-G_DIcPZ1ksqzeFADX9DTlTpXag)  
+   - [📖 Download PDF (direct)](books/faith/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1UcAzm4hQord8ZF_0lYtB235FyuLY8LAy)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1TZphqM9UF19iRY77vZzVBUnmsys52SuX)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1LmAXvJdF8W-neKbTYAFlPzWQ-6y7p6Tm)  
+   - [📝 Plain Text (direct)](books/faith/en/content.txt)  
+   - [🖼️ Cover](books/faith/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260202_2123)
+
+33. Jinn and Demons in the Quran: From Myth to Rational Awareness 
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1fIXN0XljjaUZ4sZZ1Mi61ObxAktAFhww)  
+   - [📖 Download PDF (direct)](books/jinn/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1bj6jTUjK09000JqA5xtZFB-3JxfAADUZ)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1rYFg-8zpHNBXxOMrI8c-WXS3a1umw1FN)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1WtBgqVrSALHmDDaH7xc1JP2H9uYcjrfq)  
+   - [📝 Plain Text (direct)](books/jinn/en/content.txt)  
+   - [🖼️ Cover](books/jinn/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260202_2020)
+
+34. Adultery in the Light of Divine Balance
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1gDrVlG_NqTHYCKIegMpKj0eaYTQiiN_f)  
+   - [📖 Download PDF (direct)](books/adultery/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1VFt3KraPevozhteH4TMBKOk6SyQETV_b)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1VId6zM3k4wMpOZK2cptrfTm3J26EGShi)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1StZeAEZ2mQuzFQ0Dd7SLUq6csjofEJsB)  
+   - [📝 Plain Text (direct)](books/adultery/en/content.txt)  
+   - [🖼️ Cover](books/adultery/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260202_2034)
 
 
   
