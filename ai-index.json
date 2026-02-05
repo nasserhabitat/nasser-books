@@ -16,7 +16,7 @@
     "version": "2.0",
     "ai_compatible": true,
     "last_updated": "2025-11-09",
-    "total_books": 58,
+    "total_books": 68,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -32,8 +32,8 @@
     "search": "https://nasserhabitat.github.io/nasser-books/search.html",
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
   },
-  "books_count": 58,
-  "last_updated": "2026-01-21",
+  "books_count": 68,
+  "last_updated": "2026-02-05",
 "books": [
     {
       "id": "conscious-contemplation",
