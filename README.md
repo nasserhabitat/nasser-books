@@ -1037,7 +1037,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 Plain Text on Archive.org]( https://archive.org/details/content_20260119_2230)
 إليك القوائم المنسقة للكتب الخمسة باللغة الإنجليزية بنفس النموذج:
 
-30. So That He May Be Among the Certain - A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them
+30. So That He May Be Among the Certain - A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them  - tome 1
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1OCL0q_Izc5E3c5RTVnWqP9yCKnwca9SR)  
    - [📖 Download PDF (direct)](books/malakoot1/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1s9F5WVVBjjRYsI0zdfCBawa1EhU2FqSA)  
@@ -1047,7 +1047,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ Cover](books/malakoot1/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260203)
 
-31. And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them 
+31. And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them  - tome 2
    - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1mYFKGoTKERG-MrmrOZUkNZVJlVt7sQOg)  
    - [📖 Download PDF (direct)](books/malakoot2/en/content.pdf)  
    - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=16FSLEaHnPyk2XYKWfqFeK5gvqaVKmT2e)  
