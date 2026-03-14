@@ -1763,11 +1763,10 @@
     "id": "salat",
     "titles": {
       "ar": " موسوعة الصلاة -(الصلوة): نظام وصل سيادي مستمر ",
-      "en": "The Encyclopedia of Salah
-(Al-Salāt): A Sovereign and Continuous System of Interconnectivity"
+      "en": "The Encyclopedia of Salah - (Al-Salāt) - A Sovereign and Continuous System of Interconnectivity"
     },
     "description": {
-      "ar": " نحو هندسة استعادية لوعي "الصلاة" ",
+      "ar":  "نحو هندسة استعادية لوعي الصلاة ",
       "en": " Reconstructing the Universal System of Connection through Quranic Philology"
     },
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/salat/ar/cover-ar.png",
@@ -1837,7 +1836,7 @@
       "en": " The Earth in the Quran "
     },
     "description": {
-      "ar": " رحلة من الثنائية الوجودية إلى الشهادة النهائية – ضمن سلسلة "وَلِيَكُونَ مِنَ الْمُوقِنِينَ"",
+      "ar": " -  رحلة من الثنائية الوجودية إلى الشهادة النهائية – ضمن سلسلة -وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
       "en": " A Journey from Existential Duality to Final Testimony "
     },
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/earth/ar/cover-ar.png",
@@ -1928,13 +1927,10 @@
     "id": "cave",
     "titles": {
       "ar": " مرايا الكهف: الهندسة القرآنية لقانون الفتن ومسار الاستخلاف ",
-      "en": "Mirrors of the Cave
-A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
+      "en": "Mirrors of the Cave - A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
     },
     "description": {
-      "ar": " من الملجأ إلى الردم 
-رحلة في الوعي واللغة وسكينة الكتاب
- تدبر قصص السورة الأربع: من أصحاب الكهف إلى ذي القرنين ",
+      "ar": " من الملجأ إلى الردم رحلة في الوعي واللغة وسكينة الكتاب - تدبر قصص السورة الأربع: من أصحاب الكهف إلى ذي القرنين ",
       "en": "(Al-Salāt): A Sovereign and Continuous System of Interconnectivity "
     },
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/cave/ar/cover-ar.png",
@@ -2162,12 +2158,10 @@ A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
     "id": " fasting",
     "titles": {
       "ar": " موسوعة الصيام القرآني -من النُسك الجسدي إلى المنهج الوجودي ",
-      "en": " Encyclopedia of Qur’anic Fasting
-From Physical Ritual to Existential Method and the Architecture of Taqwa "    },
+      "en": " Encyclopedia of Qur’anic Fasting - From Physical Ritual to Existential Method and the Architecture of Taqwa "    },
     "description": {
       "ar": " موسوعة الصيام القرآني -قراءة بنيوية مقاصدية في هندسة التقوى",
-      "en": " Encyclopedia of Qur’anic Fasting
-From Ritual Practice to Existential Method: A Structural and Maqasid-Based Reading of the Fasting Verses and the Construction of Taqwa as a Way of Life "    },
+      "en": " Encyclopedia of Qur’anic Fasting - From Ritual Practice to Existential Method: A Structural and Maqasid-Based Reading of the Fasting Verses and the Construction of Taqwa as a Way of Life "    },
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/fasting/ar/cover-ar.png",
     "ar": {
       "docx": "https://drive.google.com/uc?export=download&id=1l8Zy_hbpWiKRKbbOeP0XuqXlWxSLOz9K ", 
@@ -2247,14 +2241,11 @@ From Ritual Practice to Existential Method: A Structural and Maqasid-Based Readi
   {
     "id": " youssef",
     "titles": {
-      "ar": " كتاب: يوسف فينا :
-رحلة الوعي من الكيد والفساد إلى التمكين",
-      "en": " YUSUF WITHIN US
-From Conspiracy and Corruption to Empowerment "    },
+      "ar": " كتاب: يوسف فينا - رحلة الوعي من الكيد والفساد إلى التمكين",
+      "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment "    },
     "description": {
       "ar": " يوسف فينا -رحلة الوعي من مخاض الكيد إلى تمكين الذات والواقع",
-      "en": " YUSUF WITHIN US
-From Conspiracy and Corruption to Empowerment - A Contemporary Quranic Framework of Consciousness "    },
+      "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment - A Contemporary Quranic Framework of Consciousness "    },
     "cover_image": "https://nasserhabitat.github.io/nasser-books/books/youssef/ar/cover-ar.png",
     "ar": {
       "docx": "https://drive.google.com/uc?export=download&id=1FX-dinmxySC5WSjS4C4U1Ml2_w0rmXpa ", 
