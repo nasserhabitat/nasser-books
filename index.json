@@ -2105,7 +2105,8 @@
       "pdf_direct": "books/shadaows-of-heaving/ar/content.pdf",
       "pdf_external": "https://drive.google.com/uc?export=download&id=1eaLMMxePGSV9EZ46fletvfUMb1_pVTkX ",
       "html": "https://drive.google.com/uc?export=download&id=1Ensk6-yjE1-3gzVuJ6J7vO9wovP3UiIr ",
-      "txt_external": "https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3      "txt_direct": "books/shadaows-of-heaving/en/content.txt",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3"   
+      "txt_direct": "books/shadaows-of-heaving/en/content.txt",
       "cover": "books/shadaows-of-heaving/en/cover-en.png",
       "archive": " https://archive.org/details/content_20260310_2236 "
     },
@@ -2322,7 +2323,7 @@
     "Moral leadership model"
 ]
 }
-  },
+  }
   ]
 }
 
