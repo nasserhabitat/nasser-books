@@ -3,8 +3,8 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-08-28",
-    "total_books": 68,
+    "last_updated": "2026-03-14",
+    "total_books": 82,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -13,7 +13,7 @@
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
-  },  "last_updated": "2026-01-21",
+  },  "last_updated": "2026-03-14",
 "books": [
     {
       "id": "conscious-contemplation",
