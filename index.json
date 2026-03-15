@@ -3,8 +3,8 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-08-28",
-    "total_books": 68,
+    "last_updated": "2026-03-14",
+    "total_books": 82,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -13,7 +13,7 @@
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
     }
-  },  "last_updated": "2026-01-21",
+  },  "last_updated": "2026-03-14",
 "books": [
     {
       "id": "conscious-contemplation",
@@ -1758,7 +1758,570 @@
         "Scientific Miracle"
       ]
     }
+  },
+    {
+    "id": "salat",
+    "titles": {
+      "ar": " موسوعة الصلاة -(الصلوة): نظام وصل سيادي مستمر ",
+      "en": "The Encyclopedia of Salah - (Al-Salāt) - A Sovereign and Continuous System of Interconnectivity"
+    },
+    "description": {
+      "ar":  "نحو هندسة استعادية لوعي الصلاة ",
+      "en": " Reconstructing the Universal System of Connection through Quranic Philology"
+    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/salat/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1FzALoXyjvXgLH4Bo0BLCAfegJIMlihlZ ",
+      "pdf_direct": "books/salat/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1EnFORQsiJOJzU1GdS8A1hRzFfJ11cljp ",
+      "html": "https://drive.google.com/uc?export=download&id=1Wu-sS3_Z_5SS3vqSfdtJaKFs7izV0H6G ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=115B6gVIofyfsiet4JPLebpINlQZi6x_g ",
+      "txt_direct": "books/salat/ar/content.txt",
+      "cover": "books/salat/ar/cover-ar.png",
+      "archive": "https://archive.org/details/content_20260310_1937 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1g1yoYqyO94OXnnGDYwwth3_64JdmQaqh ",
+      "pdf_direct": "books/salat/en/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1TAI7Xq6GYd7-onPTyaoJd1_y-HURfsY-",
+      "html": "https://drive.google.com/uc?export=download&id=11N1AxIowzCb8h8z3H71tEswAMTJBjfjV ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1NlDU34g7IyuopbZg0wJJX-SEfzrWDgaj ",
+      "txt_direct": "books/salat/en/content.txt",
+      "cover": "books/salat/en/cover-en.png",
+      "archive": "https://archive.org/details/content_20260310_1942 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 528,
+      "pages_en": 7,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "الصلاة",
+    "اللسان القرآني",
+    "فقه اللغة",
+    "التدبر",
+    "المنهج الحضاري",
+    "المقاصد الوجودية",
+    "الرسم العثماني",
+    "الإقامة السيادية",
+    "نظام الوصل",
+    "هندسة الوعي",
+    "الفكر الإسلامي",
+    "ناصر ابن داوود"
+  ],
+  "topics_en": [
+    "Salah",
+    "Quranic Linguistics",
+    "Philology",
+    "Contemplation",
+    "Civilization Methodology",
+    "Existential Purposes",
+    "Ottoman Script",
+    "Sovereign Establishment",
+    "Connection System",
+    "Consciousness Engineering",
+    "Islamic Thought",
+    "Nasser ibn Dawood"
+  ]
+}
+  },
+  {
+    "id": "earth",
+    "titles": {
+      "ar": " الأرض في القرآن ",
+      "en": " The Earth in the Quran "
+    },
+    "description": {
+      "ar": " -  رحلة من الثنائية الوجودية إلى الشهادة النهائية – ضمن سلسلة -وَلِيَكُونَ مِنَ الْمُوقِنِينَ",
+      "en": " A Journey from Existential Duality to Final Testimony "
+    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/earth/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1FjnTezt9iKLvt32BA6cmTKcMh8ayn3LQ ",
+      "pdf_direct": "books/earth/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1-W6n4PmTo3MVlKjblZS7k2p_PvxkFKN-",
+      "html": "https://drive.google.com/uc?export=download&id=17OWgl1znQMz80C8UQgj0WXKvI74B2l5X O8",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1XhgXJapFHj5ghH8euNmy1R-Y6PQ2Ale1",
+      "txt_direct": "books/earth/ar/content.txt",
+      "cover": "books/earth/ar/cover-ar.png",
+      "archive": "https://archive.org/details/content_20260228_1125 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1qqw7vkFRtJKk7O-ihm-XbdOLrXk0eaYg ",
+      "pdf_direct": "books/earth/en/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1GpfXA9b4DKAoKRY9PXpBvhhRCtdetINe ",
+      "html": "https://drive.google.com/uc?export=download&id=1kaGrZvZk93ONwD84nIEwVsINyER7TyHM ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1yMGj8oncaWrKXcqGExUkOaPf202YKC-U ",
+      "txt_direct": "books/earth/en/content.txt",
+      "cover": "books/earth/en/cover-en.png",
+      "archive": "https://archive.org/details/the-earth-in-the-quran-a-journey-from-existential-duality-to-final-testimony "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 94,
+      "pages_en": 15,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "الأرض",
+    "القرآن",
+    "السماء",
+    "الاستخلاف",
+    "الزلازل",
+    "الموت",
+    "البعث",
+    "القصص القرآنية",
+    "الدعاء",
+    "الصلاة",
+    "الصيام",
+    "الحج",
+    "الزكاة",
+    "الجهاد النفسي",
+    "الشهادة",
+    "التوبة",
+    "الفطرة",
+    "الذكر",
+    "الصبر",
+    "الشكر",
+    "العمل الصالح",
+    "يوم القيامة",
+    "الثنائية الوجودية",
+    "الشهادة النهائية"
+  ],
+  "topics_en": [
+    "Earth",
+    "Quran",
+    "Heaven",
+    "Caliphate",
+    "Earthquakes",
+    "Death",
+    "Resurrection",
+    "Quranic Stories",
+    "Supplication",
+    "Prayer",
+    "Fasting",
+    "Pilgrimage",
+    "Almsgiving",
+    "Self-Jihad",
+    "Testimony",
+    "Repentance",
+    "Fitrah",
+    "Remembrance",
+    "Patience",
+    "Gratitude",
+    "Good Deeds",
+    "Day of Judgment",
+    "Existential Duality",
+    "Final Testimony"
+  ]
+    }
+  },
+  {
+    "id": "cave",
+    "titles": {
+      "ar": " مرايا الكهف: الهندسة القرآنية لقانون الفتن ومسار الاستخلاف ",
+      "en": "Mirrors of the Cave - A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
+    },
+    "description": {
+      "ar": " من الملجأ إلى الردم رحلة في الوعي واللغة وسكينة الكتاب - تدبر قصص السورة الأربع: من أصحاب الكهف إلى ذي القرنين ",
+      "en": "(Al-Salāt): A Sovereign and Continuous System of Interconnectivity "
+    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/cave/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1FzALoXyjvXgLH4Bo0BLCAfegJIMlihlZ ",
+      "pdf_direct": "books/cave/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1EnFORQsiJOJzU1GdS8A1hRzFfJ11cljp ",
+      "html": "https://drive.google.com/uc?export=download&id=1Wu-sS3_Z_5SS3vqSfdtJaKFs7izV0H6G ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=115B6gVIofyfsiet4JPLebpINlQZi6x_g ",
+      "txt_direct": "books/cave/ar/content.txt",
+      "cover": "books/cave/ar/cover-ar.png",
+      "archive": "https://archive.org/details/content_20260310_1937 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1g1yoYqyO94OXnnGDYwwth3_64JdmQaqh ",
+      "pdf_direct": "books/cave/en/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1TAI7Xq6GYd7-onPTyaoJd1_y-HURfsY-",
+      "html": "https://drive.google.com/uc?export=download&id=11N1AxIowzCb8h8z3H71tEswAMTJBjfjV ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1LeUjN9lByzwaehZ4WLDF4QgluWiZZYE7",
+      "txt_direct": "books/cave/en/content.txt",
+      "cover": "books/cave/en/cover-en.png",
+      "archive": "https://archive.org/details/content_20260310_1942 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 528,
+      "pages_en": 8,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "أصحاب الكهف",
+    "التدبر القرآني",
+    "التحليل اللغوي",
+    "التفسير الرمزي",
+    "سورة الكهف",
+    "ناصر ابن داوود",
+    "العزلة النفسية",
+    "الرجم بالغيب",
+    "إعجاز القرآن",
+    "الدلالات المعنوية",
+    "فلسفة العدد",
+    "لغة القرآن",
+    "الرقيم",
+    "الوفاء",
+    "التجديد الديني",
+    "فقه البصيرة",
+    "الملازمة الإيمانية"
+  ],
+  "topics_en": [
+    "People of the Cave",
+    "Quranic Reflection",
+    "Linguistic Analysis",
+    "Symbolic Interpretation",
+    "Surah Al-Kahf",
+    "Nasser Ibn Dawood",
+    "Psychological Solitude",
+    "Intellectual Stoning",
+    "Quranic Miracles",
+    "Spiritual Semantics",
+    "Philosophy of Numbers",
+    "Quranic Language",
+    "Al-Raqim",
+    "Loyalty",
+    "Religious Reform",
+    "Jurisprudence of Insight",
+    "Spiritual Companionship"
+  ]
+}
+  },
+  {
+    "id": "salawat",
+    "titles": {
+      "ar": " الصلاة على النبي من الترديد الآلي إلى النصرة الوجودية ",
+      "en": " Salawat: From Automatic Ritual to Existential Presence "
+    },
+    "description": {
+      "ar": " الصلاة على النبي: من اللفظ إلى المعنى… ومن المعنى إلى الشهود ",
+      "en": " Reclaiming the Spiritual Reality of Honoring the Divine Messenger "
+    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/salawat/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1RYYnFjWC_NGtM7U5ARKMg4I864jNpMuY ", 
+      "pdf_direct": "books/salawat/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1W_CWrU2jtISMoJnNPD2D5yWQKVcZpwQD ",
+      "html": "https://drive.google.com/uc?export=download&id=1lunKVBJpSv9oJpPYhj0ALCfV7BXHGR7z ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1LJ9JpzjFpxUws8okrsJgEnZKypWz2Ys6 ",
+      "txt_direct": "books/salawat/ar/content.txt",
+      "cover": "books/salawat/ar/cover-ar.png",
+      "archive": " https://archive.org/details/content_202603 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1EFRb37hqKRM-9GgwEeafESTixCgU1oy8 ",
+      "pdf_direct": "books/salawat/en/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1jgZuOVedjrcm6YzkVuFOkfjGs8G9mQfI -",
+      "html": "https://drive.google.com/uc?export=download&id=1egjJtIVtKIZuP1_rtWJHh33OPYbUP2u8 ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1T5uu7TE2JSu5yhwd9rJpP3vRSLOKc-7X ",
+      "txt_direct": "books/salawat/en/content.txt",
+      "cover": "books/salawat/en/cover-en.png",
+      "archive": " https://archive.org/details/content_20260310 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 69,
+      "pages_en": 14,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "الصلاة على النبي",
+    "النصرة الوجودية",
+    "التدبر القرآني",
+    "الوعي الإسلامي",
+    "سورة الأحزاب",
+    "مقام النبوة",
+    "التجديد الديني",
+    "الترديد الآلي",
+    "القيم النبوية",
+    "الشهود الحضاري",
+    "فقه اللسان",
+    "الإصلاح الفكري",
+    "الأخلاق الإسلامية",
+    "الاتباع الواعي",
+    "الفلسفة الوجودية الإسلامية"
+  ],
+  "topics_en": [
+    "Salawat",
+    "Existential Victory",
+    "Quranic Contemplation",
+    "Islamic Consciousness",
+    "Surah Al-Ahzab",
+    "Prophetic Status",
+    "Religious Renewal",
+    "Mechanical Recitation",
+    "Prophetic Values",
+    "Civilizational Witnessing",
+    "Linguistic Jurisprudence",
+    "Intellectual Reform",
+    "Islamic Ethics",
+    "Conscious Following",
+    "Islamic Existentialism"
+  ]
+}
+  },
+  {
+    "id": " shadaows-of-heaving",
+    "titles": {
+      "ar": " ظلال الجنة والنار وجهنم: رحلة من الدنو المعرفي إلى اليقين الأخروي ",
+      "en": " The Comprehensive Conceptual Adaptation: Shadows of Heaven, Hell, and Jahannam "
+    },
+    "description": {
+      "ar": " ظلال الجنة والنار وجهنم: من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن ",
+      "en": " A Global Manifesto for Cognitive Sovereignty and the Restoration of Human Meaning "
+    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/shadaows-of-heaving/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1tSWabjc2m-_lH1Y0zzh-DhWqK19QSGnC ",
+      "pdf_direct": "books/shadaows-of-heaving/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1Boln7l_L3m4WIjU-GAEdZ04Zq_LhAt0i ",
+      "html": "https://drive.google.com/uc?export=download&id=1YDqf5Omhb8UUpeUZQkwr_h1OXUZR9HNz ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1SIF0EG3VgynS3a7gCQ7SoyPL0wsaYLM9 ",
+      "txt_direct": "books/shadaows-of-heaving/ar/content.txt",
+      "cover": "books/shadaows-of-heaving/ar/cover-ar.png",
+      "archive": " https://archive.org/details/20260310_20260310_2232 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1tUNwP4bi9RyYhfuk8cetwD8VWIWbZAem ", 
+      "pdf_direct": "books/shadaows-of-heaving/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1eaLMMxePGSV9EZ46fletvfUMb1_pVTkX ",
+      "html": "https://drive.google.com/uc?export=download&id=1Ensk6-yjE1-3gzVuJ6J7vO9wovP3UiIr ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3"   
+      "txt_direct": "books/shadaows-of-heaving/en/content.txt",
+      "cover": "books/shadaows-of-heaving/en/cover-en.png",
+      "archive": " https://archive.org/details/content_20260310_2236 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 148,
+      "pages_en": 12,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "التدبر البنائي",
+    "الرسم العثماني",
+    "الدنو المعرفي",
+    "ليلة القدر",
+    "الزلزلة النفسية",
+    "جهنم المتقين",
+    "المعيشة الضنك",
+    "الجنة الدنيوية",
+    "هندسة الوعي",
+    "ناصر ابن داوود",
+    "التزامن الوجودي",
+    "علم النفس القرآني",
+    "الحفريات النفسية",
+    "اليقين المعرفي",
+    "رموز التشريع"
+  ],
+  "topics_en": [
+    "Constructive Contemplation",
+    "Ottoman Script",
+    "Cognitive Lowliness",
+    "Laylat al-Qadr",
+    "Psychological Earthquake",
+    "Jahannam of the Pious",
+    "Distressed Life",
+    "Earthly Paradise",
+    "Consciousness Engineering",
+    "Nasser Ibn Dawoud",
+    "Existential Simultaneity",
+    "Quranic Psychology",
+    "Psychological Excavation",
+    "Cognitive Certainty",
+    "Legislative Symbols"
+  ]
+}
+  },
+  {
+    "id": " fasting",
+    "titles": {
+      "ar": " موسوعة الصيام القرآني -من النُسك الجسدي إلى المنهج الوجودي ",
+      "en": " Encyclopedia of Qur’anic Fasting - From Physical Ritual to Existential Method and the Architecture of Taqwa "    },
+    "description": {
+      "ar": " موسوعة الصيام القرآني -قراءة بنيوية مقاصدية في هندسة التقوى",
+      "en": " Encyclopedia of Qur’anic Fasting - From Ritual Practice to Existential Method: A Structural and Maqasid-Based Reading of the Fasting Verses and the Construction of Taqwa as a Way of Life "    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/fasting/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1l8Zy_hbpWiKRKbbOeP0XuqXlWxSLOz9K ", 
+      "pdf_direct": "books/fasting/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=14tjE8BpbvViu7oymIwFwEde7MkGOo4sE ",
+      "html": "https://drive.google.com/uc?export=download&id=15KlDUaOTiWHxztKVsIV7ZzAaUlicftEk ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1xjAgK_t_2NfyU4V_YYzGPUHNkud_0IDe ",
+      "txt_direct": "books/fasting/ar/content.txt",
+      "cover": "books/fasting/ar/cover-ar.png",
+      "archive": " https://archive.org/details/20260310_20260310_2232 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=12Mr5_YQ4-Ti5wel4qU0PDmChOOoK-3Pf ", 
+      "pdf_direct": "books/fasting/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1HslqFk5izRKvTxG_9617Xz0W3qGqtM9- ",
+      "html": "https://drive.google.com/uc?export=download&id=1dm-4h4ekVwt1rScyRwcX_BGB4E3zpjdp ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1UkfR4X17GTIdLnvHk8JgC1SQaQhbSLUg ",
+      "txt_direct": "books/fasting/en/content.txt",
+      "cover": "books/fasting/en/cover-en.png",
+      "archive": " https://archive.org/details/content_20260310_2236 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 600,
+      "pages_en": 6,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "الصيام الحقيقي",
+    "المنهج الفكري",
+    "التدبر القرآني",
+    "التزكية الشاملة",
+    "الصمام الداخلي",
+    "الجبال الضالة",
+    "الارتواء المعرفي",
+    "النسك الجسدي",
+    "إعادة قراءة النص",
+    "الميزان",
+    "الفطرة",
+    "التقوى الروحية",
+    "العبادة المعرفية",
+    "تكبير الله",
+    "التوحيد",
+    "التراكم المعرفي",
+    "التدبر الجماعي",
+    "إصلاح السريرة",
+    "الفرقان",
+    "السنن الكونية"
+  ],
+  "topics_en": [
+    "True Fasting",
+    "Intellectual Methodology",
+    "Quranic Tadabbur",
+    "Comprehensive Self-Purification",
+    "Internal Valve",
+    "Stray Mountains",
+    "Cognitive Satiation",
+    "Physical Ritualism",
+    "Textual Re-reading",
+    "The Balance (Al-Mizan)",
+    "Human Nature (Fitra)",
+    "Spiritual Taqwa",
+    "Intellectual Worship",
+    "Glorifying Allah",
+    "Monotheism (Tawhid)",
+    "Knowledge Accumulation",
+    "Collective Reflection",
+    "Inner Reform",
+    "Al-Furqan",
+    "Universal Laws"
+  ]
+}
+  },
+  {
+    "id": " youssef",
+    "titles": {
+      "ar": " كتاب: يوسف فينا - رحلة الوعي من الكيد والفساد إلى التمكين",
+      "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment "    },
+    "description": {
+      "ar": " يوسف فينا -رحلة الوعي من مخاض الكيد إلى تمكين الذات والواقع",
+      "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment - A Contemporary Quranic Framework of Consciousness "    },
+    "cover_image": "https://nasserhabitat.github.io/nasser-books/books/youssef/ar/cover-ar.png",
+    "ar": {
+      "docx": "https://drive.google.com/uc?export=download&id=1FX-dinmxySC5WSjS4C4U1Ml2_w0rmXpa ", 
+      "pdf_direct": "books/youssef/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1BZ37nOMsIoK6Zl3tHiyqVDWOlF5Odwyc ",
+      "html": "https://drive.google.com/uc?export=download&id=1JR7VQEfx1LPHIaTq2RJLkVixvWoj4JcF ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1JjE7yY68zkfc23AO7RrP-Cgxo-YuEusW ",
+      "txt_direct": "books/youssef/ar/content.txt",
+      "cover": "books/youssef/ar/cover-ar.png",
+      "archive": "https://archive.org/details/content_20260312_1928 "
+    },
+    "en": {
+      "docx": "https://drive.google.com/uc?export=download&id=1rAICDVgHcbALzTf-jBeTIM_-G1h676sW ", 
+      "pdf_direct": "books/youssef/ar/content.pdf",
+      "pdf_external": "https://drive.google.com/uc?export=download&id=1eYw4hM-AJDI3EqIj10TJAx68vuiK6Mz3- ",
+      "html": "https://drive.google.com/uc?export=download&id=1emL3OvM2CmL1i82Eps3ShakhLBvWAjXp ",
+      "txt_external": "https://drive.google.com/uc?export=download&id=17j6ePY-GPVy0GRAIYy7-QFoTd7Y4Bt8j ",
+      "txt_direct": "books/youssef/en/content.txt",
+      "cover": "books/youssef/en/cover-en.png",
+      "archive": "https://archive.org/details/content_20260312_1932 "
+    },
+    "metadata": {
+      "author": "ناصر ابن داوود",
+      "category": "faith_studies",
+      "pages_ar": 149,
+      "pages_en": 12,
+      "language_ar": "arabic",
+      "language_en": "english",
+      "ai_accessible": true,
+      "structured_data": true,
+  "topics_ar": [
+    "الوعي القرآني",
+    "تفسير سورة يوسف",
+    "اليقظة الروحية",
+    "التحول الداخلي",
+    "علم النفس القرآني",
+    "الفساد والسلطة في القرآن",
+    "الرمزية السياسية في القرآن",
+    "التحليل البنيوي للقرآن",
+    "نموذج يوسف",
+    "إدارة الأزمات في الإسلام",
+    "الصبر والتمكين",
+    "سيميائية القرآن",
+    "التدبر العميق",
+    "الإصلاح المعرفي الإسلامي",
+    "أخلاقيات الحكم في القرآن",
+    "الصمود الروحي",
+    "تزكية النفس",
+    "القراءة الرمزية للقرآن",
+    "التفكير النسقي القرآني",
+    "القيادة الأخلاقية"
+  ],
+  "topics_en": [
+    "Quranic consciousness",
+    "Surah Yusuf interpretation",
+    "Spiritual awakening",
+    "Inner transformation",
+    "Quranic psychology",
+    "Corruption and power in the Quran",
+    "Political symbolism in the Quran",
+    "Structural Quranic analysis",
+    "Joseph archetype",
+    "Crisis management in Islam",
+    "Patience and empowerment",
+    "Quranic semiotics",
+    "Deep interpretation (Tadabbur)",
+    "Cognitive reform in Islam",
+    "Quran and governance ethics",
+    "Spiritual resilience",
+    "Inner purification",
+    "Symbolic reading of the Quran",
+    "Quranic systemic thinking",
+    "Moral leadership model"
+ ]
+    }
   }
   ]
 }
-

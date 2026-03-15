@@ -144,7 +144,7 @@
 4.	**منصة Noor-Book**  
    **Noor-Book Platform**  
    📍 `https://www.noor-book.com`  
-   💾 تحميل الكتب بصيغة PDF (26 كتابًا متاحًا)
+   💾 تحميل الكتب بصيغة PDF
 
 5.	**منصة Scribd**  
    **Scribd Platform**  
@@ -739,6 +739,76 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/adultery/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260202_2045)
 
+**كتاب 35: موسوعة الصلاة -(الصلوة): نظام وصل سيادي مستمر**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1FzALoXyjvXgLH4Bo0BLCAfegJIMlihlZ)  
+   - [📖 تحميل PDF (مباشر)](books/salat/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1EnFORQsiJOJzU1GdS8A1hRzFfJ11cljp)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Wu-sS3_Z_5SS3vqSfdtJaKFs7izV0H6G)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=115B6gVIofyfsiet4JPLebpINlQZi6x_g)  
+   - [📝 النص الخام (مباشر)](books/salat/ar/content.txt)  
+   - [🖼️ الغلاف](books/salat/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260310_1937)
+
+**كتاب 36: الأرض في القرآن**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1FjnTezt9iKLvt32BA6cmTKcMh8ayn3LQ)  
+   - [📖 تحميل PDF (مباشر)](books/earth/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1-W6n4PmTo3MVlKjblZS7k2p_PvxkFKN-)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=17OWgl1znQMz80C8UQgj0WXKvI74B2l5X)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1XhgXJapFHj5ghH8euNmy1R-Y6PQ2Ale1)  
+   - [📝 النص الخام (مباشر)](books/earth/ar/content.txt)  
+   - [🖼️ الغلاف](books/earth/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260228_1125)
+
+*كتاب 37: مرايا الكهف: الهندسة القرآنية لقانون الفتن ومسار الاستخلاف**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1FzALoXyjvXgLH4Bo0BLCAfegJIMlihlZ)  
+   - [📖 تحميل PDF (مباشر)](books/cave/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1EnFORQsiJOJzU1GdS8A1hRzFfJ11cljp)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Wu-sS3_Z_5SS3vqSfdtJaKFs7izV0H6G)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=115B6gVIofyfsiet4JPLebpINlQZi6x_g)  
+   - [📝 النص الخام (مباشر)](books/cave/ar/content.txt)  
+   - [🖼️ الغلاف](books/cave/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260310_1937)
+
+*كتاب 38: الصلاة على النبي من الترديد الآلي إلى النصرة الوجودية**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1RYYnFjWC_NGtM7U5ARKMg4I864jNpMuY)  
+   - [📖 تحميل PDF (مباشر)](books/salawat/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1W_CWrU2jtISMoJnNPD2D5yWQKVcZpwQD)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1lunKVBJpSv9oJpPYhj0ALCfV7BXHGR7z)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1LJ9JpzjFpxUws8okrsJgEnZKypWz2Ys6)  
+   - [📝 النص الخام (مباشر)](books/salawat/ar/content.txt)  
+   - [🖼️ الغلاف](books/salawat/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_202603)
+
+*كتاب 39: ظلال الجنة والنار وجهنم: رحلة من الدنو المعرفي إلى اليقين الأخروي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1tSWabjc2m-_lH1Y0zzh-DhWqK19QSGnC)  
+   - [📖 تحميل PDF (مباشر)](books/shadaows-of-heaving/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1Boln7l_L3m4WIjU-GAEdZ04Zq_LhAt0i)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1YDqf5Omhb8UUpeUZQkwr_h1OXUZR9HNz)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1SIF0EG3VgynS3a7gCQ7SoyPL0wsaYLM9)  
+   - [📝 النص الخام (مباشر)](books/shadaows-of-heaving/ar/content.txt)  
+   - [🖼️ الغلاف](books/shadaows-of-heaving/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/20260310_20260310_2232)
+
+*كتاب 40: موسوعة الصيام القرآني - من النُسك الجسدي إلى المنهج الوجودي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1l8Zy_hbpWiKRKbbOeP0XuqXlWxSLOz9K)  
+   - [📖 تحميل PDF (مباشر)](books/fasting/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=14tjE8BpbvViu7oymIwFwEde7MkGOo4sE)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=15KlDUaOTiWHxztKVsIV7ZzAaUlicftEk)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1xjAgK_t_2NfyU4V_YYzGPUHNkud_0IDe)  
+   - [📝 النص الخام (مباشر)](books/fasting/ar/content.txt)  
+   - [🖼️ الغلاف](books/fasting/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/20260310_20260310_2232)
+
+ *كتاب 41: يوسف فينا - رحلة الوعي من الكيد والفساد إلى التمكين**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1FX-dinmxySC5WSjS4C4U1Ml2_w0rmXpa)  
+   - [📖 تحميل PDF (مباشر)](books/youssef/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1BZ37nOMsIoK6Zl3tHiyqVDWOlF5Odwyc)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1JR7VQEfx1LPHIaTq2RJLkVixvWoj4JcF)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1JjE7yY68zkfc23AO7RrP-Cgxo-YuEusW)  
+   - [📝 النص الخام (مباشر)](books/youssef/ar/content.txt)  
+   - [🖼️ الغلاف](books/youssef/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260312_1928)
+
 **ملاحظة**: تم استخدام الروابط العربية لجميع الكتب من البيانات السابقة.
 #### الإنجليزية | English
 
@@ -1087,10 +1157,65 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ Cover](books/adultery/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260202_2034)
 
-
+35: The Encyclopedia of Salah - (Al-Salāt) - A Sovereign and Continuous System of Interconnectivity  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1g1yoYqyO94OXnnGDYwwth3_64JdmQaqh)  
+   - [📖 Download PDF (direct)](books/salat/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1TAI7Xq6GYd7-onPTyaoJd1_y-HURfsY-)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=11N1AxIowzCb8h8z3H71tEswAMTJBjfjV)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1NlDU34g7IyuopbZg0wJJX-SEfzrWDgaj)  
+   - [📝 Plain Text (direct)](books/salat/en/content.txt)  
+   - [🖼️ Cover](books/salat/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260310_1942)
   
+36: The Earth in the Quran  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1qqw7vkFRtJKk7O-ihm-XbdOLrXk0eaYg)  
+   - [📖 Download PDF (direct)](books/earth/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1GpfXA9b4DKAoKRY9PXpBvhhRCtdetINe)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1kaGrZvZk93ONwD84nIEwVsINyER7TyHM)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1yMGj8oncaWrKXcqGExUkOaPf202YKC-U)  
+   - [📝 Plain Text (direct)](books/earth/en/content.txt)  
+   - [🖼️ Cover](books/earth/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/the-earth-in-the-quran-a-journey-from-existential-duality-to-final-testimony)
 
+Book 37: Mirrors of the Cave - A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1g1yoYqyO94OXnnGDYwwth3_64JdmQaqh)  
+   - [📖 Download PDF (direct)](books/cave/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1TAI7Xq6GYd7-onPTyaoJd1_y-HURfsY-)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=11N1AxIowzCb8h8z3H71tEswAMTJBjfjV)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1LeUjN9lByzwaehZ4WLDF4QgluWiZZYE7)  
+   - [📝 Plain Text (direct)](books/cave/en/content.txt)  
+   - [🖼️ Cover](books/cave/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260310_1942)
 
+Book 39: The Comprehensive Conceptual Adaptation: Shadows of Heaven, Hell, and Jahannam  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1tUNwP4bi9RyYhfuk8cetwD8VWIWbZAem)  
+   - [📖 Download PDF (direct)](books/shadaows-of-heaving/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1eaLMMxePGSV9EZ46fletvfUMb1_pVTkX)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1Ensk6-yjE1-3gzVuJ6J7vO9wovP3UiIr)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3)  
+   - [📝 Plain Text (direct)](books/shadaows-of-heaving/en/content.txt)  
+   - [🖼️ Cover](books/shadaows-of-heaving/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260310_2236)
+
+Book 40: Encyclopedia of Qur’anic Fasting - From Physical Ritual to Existential Method and the Architecture of Taqwa  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=12Mr5_YQ4-Ti5wel4qU0PDmChOOoK-3Pf)  
+   - [📖 Download PDF (direct)](books/fasting/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1HslqFk5izRKvTxG_9617Xz0W3qGqtM9-)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1dm-4h4ekVwt1rScyRwcX_BGB4E3zpjdp)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1UkfR4X17GTIdLnvHk8JgC1SQaQhbSLUg)  
+   - [📝 Plain Text (direct)](books/fasting/en/content.txt)  
+   - [🖼️ Cover](books/fasting/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260310_2236)
+
+Book 41: YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1rAICDVgHcbALzTf-jBeTIM_-G1h676sW)  
+   - [📖 Download PDF (direct)](books/youssef/ar/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1eYw4hM-AJDI3EqIj10TJAx68vuiK6Mz3)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1emL3OvM2CmL1i82Eps3ShakhLBvWAjXp)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=17j6ePY-GPVy0GRAIYy7-QFoTd7Y4Bt8j)  
+   - [📝 Plain Text (direct)](books/youssef/en/content.txt)  
+   - [🖼️ Cover](books/youssef/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260312_1932)
 ---
 
 ### 🌟 المميزات | Features
