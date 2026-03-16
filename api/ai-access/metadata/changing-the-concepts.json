@@ -4,23 +4,16 @@
     "version": "2.0",
     "ai_compatible": true,
     "last_updated": "2025-08-28",
-    "total_books": 24,
-    "languages": [
-      "ar",
-      "en"
-    ],
-    "formats": [
-      "html",
-      "pdf",
-      "txt"
-    ],
+    "total_books":82,
+    "languages": ["ar", "en"],
+    "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
     "author": {
       "name": "ناصر ابن داوود",
       "email": "nasserhabitat@gmail.com",
       "website": "https://nasserhabitat.github.io/nasser-books/"
     },
-    "description": "مكتبة تحتوي على 24 كتابًا (12 كتابًا باللغة العربية و12 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
+    "description": "مكتبة تحتوي على 82 كتابًا (41 كتابًا باللغة العربية و41 نسخة مترجمة باللغة الإنجليزية) تركز على الدراسات القرآنية والإيمانية والرقمنة، مع روابط خارجية بصيغ HTML، PDF، وText"
   },
   "book": {
    
