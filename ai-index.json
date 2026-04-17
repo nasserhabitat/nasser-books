@@ -15,8 +15,8 @@
     "name": "مكتبة ناصر ابن داوود",
     "version": "2.0",
     "ai_compatible": true,
-    "last_updated": "2025-11-09",
-    "total_books": 82,
+    "last_updated": "2026-04-17",
+    "total_books": 112,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
     "license": "CC BY-SA 4.0",
@@ -33,9 +33,9 @@
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
   },
   "books_count": 82,
-  "last_updated": "2026-03-14",
+  "last_updated": "2026-04-17",
 
-"books": [
+  "books": [
     {
       "id": "conscious-contemplation",
       "titles": {

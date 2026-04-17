@@ -809,6 +809,155 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/youssef/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260312_1928)
 
+**كتاب 42: موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة**  المجلد الاول
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=19muUXu7fzYezQebbePoBMNt31wdTmYQQ)  
+   - [📖 تحميل PDF (مباشر)](books/Breath1/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1PrXhw6EiresL3_0hWJE7gUleeAvRvUJ0)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1sBujeEYraRLKIj99c9fTwQyUd8KeiWFo)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1QUf5JliAf3SgUB3fSPwEgCyyn60Of6R1)  
+   - [📝 النص الخام (مباشر)](books/Breath1/ar/content.txt)  
+   - [🖼️ الغلاف](books/Breath1/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1051)
+
+**كتاب 43: موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة** المجلد الثاني  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1XJXW0DMS5bkQIgmkZZyOjg6o-kTmmas6)  
+   - [📖 تحميل PDF (مباشر)](books/Breath2/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1_615bppnm3Fg_OgInuvQ5DgUd2dSwYCd)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1uaJu9W7i4ZhBJLfUN5WEHLDD2cgMMqUP)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1vB8VG2BJ1ORuPKoGrkslEYuw3PaKaw3F)  
+   - [📝 النص الخام (مباشر)](books/Breath2/ar/content.txt)  
+   - [🖼️ الغلاف](books/Breath2/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1107)
+
+**كتاب 44: هندسة اللسان والارتقاء بالإنسان - دراسة تدبرية في سور (المسد، العصر، الفلق، الناس...)**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1nXxSdJYvAg_lKXKsaV0qzeZIheCEiju0)  
+   - [📖 تحميل PDF (مباشر)](books/linguistic-engineering/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1-GH-46pVJslSac5-wiL7o3kKBX2gnBuc)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1eOlXUTkEL4bYiZwRsmyZlIPzVLqt2X68)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1FnLW9MYKT59MsCLBtVcUs-e2c5BPTmXB)  
+   - [📝 النص الخام (مباشر)](books/linguistic-engineering/ar/content.txt)  
+   - [🖼️ الغلاف](books/linguistic-engineering/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1733)
+
+**كتاب 45: الميراث في القرآن: قراءة بنيوية في ضوء فقه اللسان القرآني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1pQLDHPdU2O05Ea47gmEs-Ord8khi3xft)  
+   - [📖 تحميل PDF (مباشر)](books/Inheritance/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1r3oy9RbcdKWDAQDOZP8fD5rAPirSzRk7)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=15Cu1PeDke05ElVRNEFS9vYfc0fmVDHpC)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=150Ptg981pw4agq2wJ2QsHrFMPnVyAm2i)  
+   - [📝 النص الخام (مباشر)](books/Inheritance/ar/content.txt)  
+   - [🖼️ الغلاف](books/Inheritance/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1852)
+
+**كتاب 46: إعادة تعريف "أحداث الغيب" بوصفها قوانين بنيوية فاعلة في الوعي والواقع**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1xdEtnyF2bMOBvX2jBpS21dWTXHY_tSS0)  
+   - [📖 تحميل PDF (مباشر)](books/ghaib/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1kVN96TkzagJ_LhSuMX_kBda7tVZwIwWA)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Sftrx39kdAfeqHyhgJ5LuPPLo99udaNt)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1TzEZ_uswDrSXMbBbzmSMEOCIkg2xDjwr)  
+   - [📝 النص الخام (مباشر)](books/ghaib/ar/content.txt)  
+   - [🖼️ الغلاف](books/ghaib/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1822)
+
+**كتاب 47: هندسة الابتلاء: دليل المُشغّل للإنسان القرآني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1KQVc2GED8L1lWy4y7QXscGunn-VmyuuP)  
+   - [📖 تحميل PDF (مباشر)](books/engineering-of-trials/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1At2p7HgavB9BtaDI8VMLC9q-aZlU8XM)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1M6XchaHY89vigtF1vaF8GnyGCfwBgMmS)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1pJNvWEjdt7E5uZGPfUoQfSeeIw2iRZYP)  
+   - [📝 النص الخام (مباشر)](books/engineering-of-trials/ar/content.txt)  
+   - [🖼️ الغلاف](books/engineering-of-trials/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1810)
+
+**كتاب 48: فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1uSsmJmFslW2bN_-ZK1-IajS1jdqSDnHE)  
+   - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome1/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1EXl8CBU_FqNWf_q1fQfQym_PT4IqcLy9)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1CNoAovXAGbfO4SELrF45dSNlYmmUi10n)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1fXDbcUAgWdivb3vgbQecpK0TIKAoodrH)  
+   - [📝 النص الخام (مباشر)](books/the-jurisprudence-tome1/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-jurisprudence-tome1/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260408)
+
+**كتاب 49: فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1pXVIVyZyICOoSrlrVAVGG1jnQrvFJmR8)  
+   - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome2/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1OkY8t4vSX_e71G5VbkPW8aATx8ngyHdo)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=121iuMQScy9WlSpiRXmiO4DG8OnfO4Kyu)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1GKJwrOiy0TwCVkbi2gm_ZC6eecjbk0SR)  
+   - [📝 النص الخام (مباشر)](books/the-jurisprudence-tome2/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-jurisprudence-tome2/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260408)
+
+**كتاب 50: فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1j32PQpQql7PE68bb27V-cFrMogXOtdIu)  
+   - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome3/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1_HKR0GiOJNBPaxpSDR4ALLtUOuGlEW_p)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Evb0iN_9yefBvUCS37I21qXWNCTfJ1-j)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1Ntipu0ib2gHwmD2mW3SJKtJVh_e0oYcc)  
+   - [📝 النص الخام (مباشر)](books/the-jurisprudence-tome3/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-jurisprudence-tome3/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409)
+
+**كتاب 51: فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1nca3YhKD906lxvokbtvx0mnqC26WZchZ)  
+   - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome4/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=13V4EMVUArs77SUQ2WqA_fHTsETm_LzFY)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1i5o2iJBBVcuTxj0obCLp5FOp9PDkFkJq)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=19zN-aVdayjifiXyHpAnDcrQTWLfJsi_d)  
+   - [📝 النص الخام (مباشر)](books/the-jurisprudence-tome4/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-jurisprudence-tome4/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/20260409_20260409_0857)
+
+**كتاب 52: موسوعة الاستخلاف: هندسة العبادات في اللسان القرآني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=13dgz3kJMN7agYCQP7gOYXdGWN03G-Yrp)  
+   - [📖 تحميل PDF (مباشر)](books/encyclopedia-of-succession/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1bLZvzQEWvtY-l1YMyGQDPNlM3Izmwppy)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1H28sABCa6wkohszr-e4KsiShDMJYpZDa)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1CNoAovXAGbfO4SELrF45dSNlYmmUi10n)  
+   - [📝 النص الخام (مباشر)](books/encyclopedia-of-succession/ar/content.txt)  
+   - [🖼️ الغلاف](books/encyclopedia-of-succession/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_202604)
+
+**كتاب 53: بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1NZLjrKBk8swQv1uCyFAQHLlLKcCMLKxg)  
+   - [📖 تحميل PDF (مباشر)](books/the-Balance-of-the-Tongue/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1l2fajhIAqwDpzuKK610x8PNJO3PqbxCBK)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=10DiKerDnxe_XnXrDT_wKnycuiDigD2L1)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1EevXreF7gEUHjgthNJ52wi5rxobwb1ym)  
+   - [📝 النص الخام (مباشر)](books/the-Balance-of-the-Tongue/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-Balance-of-the-Tongue/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260416_1140)
+
+**كتاب 54: سورة العلق والقلم - خوارزمية الوعي ومنهاج التحرر المعرفي (قراءة نظمية في فقه اللسان)**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=134vqHZIU_VKUGqLU08iHO_B0TClPFllu)  
+   - [📖 تحميل PDF (مباشر)](books/alaq-al-qalam/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1lQpeksvOFxfiBTOi_KrUim42IOuEcRVb)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1JVT4jxqYCBVVPLwPRnAbt6JgGgMSgiHg)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1-SNkmAm4qcmTYe5_LdyT05aLNmWCmP72)  
+   - [📝 النص الخام (مباشر)](books/alaq-al-qalam/ar/content.txt)  
+   - [🖼️ الغلاف](books/alaq-al-qalam/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260413)
+
+**كتاب 55: بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1mwym9lPb_ShkO-yhSLo-nT0pLz8DRyLA)  
+   - [📖 تحميل PDF (مباشر)](books/the-structure-of-guidance/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1g_Jstu4EspM7j3HuAAsjMt6imDsblI-K)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1mM3dCqb8ZJxp3zqTbhXlyXJxdR5qdFvU)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1etQdPBtPKQY1clBERL7AfAlQqvGX_nvP)  
+   - [📝 النص الخام (مباشر)](books/the-structure-of-guidance/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-structure-of-guidance/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260413_1945)
+
+**كتاب 56: سلطان البصيرة - بين القرآن المسطور والمنشور**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=11tYeNUU7qCt4M3zRPzc8S8J50Rar2Q5-)  
+   - [📖 تحميل PDF (مباشر)](books/sultan-of-insight/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1WMMFYwxnz75YeF0L9HZspEVDr7kQKpN3)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=10DiKerDnxe_XnXrDT_wKnycuiDigD2L1)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1ObDOoXFOMQULfddjjd1pc0ZKpkrKXnUz)  
+   - [📝 النص الخام (مباشر)](books/sultan-of-insight/ar/content.txt)  
+   - [🖼️ الغلاف](books/sultan-of-insight/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260417_1033)
 **ملاحظة**: تم استخدام الروابط العربية لجميع الكتب من البيانات السابقة.
 #### الإنجليزية | English
 
@@ -1216,6 +1365,171 @@ Book 41: YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment
    - [📝 Plain Text (direct)](books/youssef/en/content.txt)  
    - [🖼️ Cover](books/youssef/en/cover-en.png)  
    - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260312_1932)
+
+**Book 42: The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics** tome 1
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1RtV-0o4Dp02bM0w98WdycGuOn8zHDS3T)
+* [📖 Download PDF (direct)](books/Breath1/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1-udhka_Xe0BjdB4B2GPthVNify0q2k2r)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1CDhUtuUFyZudZUXz1BRcNiw8nrTcfPj1)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1hU1VQSsmK2ehkkwBWF4d8PXCOTkZSKRw)
+* [📝 Plain Text (direct)](books/Breath1/en/content.txt)
+* [🖼️ Cover](books/Breath1/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_1058)
+
+**Book 43: The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics** tome 2
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1ZAwwpPum1M2kT44G047SoGo6jKyD6rN0)
+* [📖 Download PDF (direct)](books/Breath2/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1wXFzubwkDQipm9DStuS5EwpPlFF0N_Eu)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=19qflwN7AmZzcpKadQxEtLs2mmVZ1oHkv)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1ImtlImOEnI9MDC3GUlRkSnAtM44RmZYP)
+* [📝 Plain Text (direct)](books/Breath2/en/content.txt)
+* [🖼️ Cover](books/Breath2/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/the-architecture-of-breath-consciousness)
+
+**Book 44: Linguistic Engineering and Human Elevation: A Strategic Concept for Self-Development**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1QmDWjmTFnJXVjp-iGtUO-kqNW8XHIZ93)
+* [📖 Download PDF (direct)](books/linguistic-engineering/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1ZY3vGG06G8ZMjhlGs8zzpiOmwIF72I5Z)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1Bk7hc5d1IWY8dB_byb93NWSSCwCUhaIE)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1k_WqFprMDkzE3MyBchz_iUxDFjGKoBbg)
+* [📝 Plain Text (direct)](books/linguistic-engineering/en/content.txt)
+* [🖼️ Cover](books/linguistic-engineering/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_1740)
+
+**Book 45: From Inheritance to Continuity: A Structural Reading Through Qur’anic Linguistic Jurisprudence and Reality**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1wRh-GYlEMG4ykfSU5kGNCc88LSYs2Ju_)
+* [📖 Download PDF (direct)](books/Inheritance/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1tICsze2sYrMU6uydN83jzcDD5hOTLzjz)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1ERqFq1_5YxajjrBRzbzt20EQx0bmFyYU)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1tEc8jrLw0VW-AuIZ4GYpNYECJN6o2wFK)
+* [📝 Plain Text (direct)](books/Inheritance/en/content.txt)
+* [🖼️ Cover](books/Inheritance/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_1905)
+
+**Book 46: Redefining "Ghaib Events" as Functional Structural Laws in Consciousness and Reality**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1NbA4Fhk4yEhmqK4vWa1YZBt8ybtItLB8)
+* [📖 Download PDF (direct)](books/ghaib/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1n3Qkx8Hjv_1Iz6KcJDwz8Dae42GiZts6)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1mgWkncMlsrZGw-_913_e6fSx5R05lpTB)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1SKB_TmP5pEIOYyDpqQDzdcqWVJtt14jy)
+* [📝 Plain Text (direct)](books/ghaib/en/content.txt)
+* [🖼️ Cover](books/ghaib/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260416)
+
+**Book 47: Engineering of Trials: The System Operator's Guide for the Quranic Human**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1xSFUjzQq0WsuOt0c41W_McsfQzGA3O-T)
+* [📖 Download PDF (direct)](books/engineering-of-trials/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=17a2GS8rw9eG_Xw38lfQngdjirCQwLrJZ)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1AFiJYp8r7DlgXY8TXjdxaNK4UHllf6FU)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=10RaB5oLzapHxajIh68s6Oym3-V6arvyp)
+* [📝 Plain Text (direct)](books/engineering-of-trials/en/content.txt)
+* [🖼️ Cover](books/engineering-of-trials/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_1817)
+
+**Book 48: Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1zG851oZ5oj8BG4F4sP7nmcXA7XBRETDU)
+* [📖 Download PDF (direct)](books/the-jurisprudence-tome1/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1svHXLTmJScgo6JBMw3ZqFdnNB5sv2DIj)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1Eo_YpeARbacXLFqnyEp6LYrRNxFuR073)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=128g58Po_Dyyx9emyBM9LpQMOv_3tqmEZ)
+* [📝 Plain Text (direct)](books/the-jurisprudence-tome1/en/content.txt)
+* [🖼️ Cover](books/the-jurisprudence-tome1/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260408_1757)
+
+**Book 49: Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1_U2P8wBCsAIPXTSL5hvU-4ALs0opi1dt)
+* [📖 Download PDF (direct)](books/the-jurisprudence-tome2/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1A6lZfmse2IsuPt5hnFGid85eD73-bObN)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1P0bVtUq_DtqY8D5LUzjsxsCsKRhrEq9d)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1xhCedueZNG6u8ZX9Ro3layFqX762TWPK)
+* [📝 Plain Text (direct)](books/the-jurisprudence-tome2/en/content.txt)
+* [🖼️ Cover](books/the-jurisprudence-tome2/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260408_1757)
+
+**Book 50: Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=168minc88UIDFFyiGW_ML9DdTDDVDV1KK)
+* [📖 Download PDF (direct)](books/the-jurisprudence-tome3/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1Y5YHFxlQ8k928HaVR13SXmn0vmsGaTgM)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1xYE3Lg6xH2fUcNc_b31b-xiC7HIlLOCw)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1SamXgWgChdjos5e19pzg7YaXCHnoSMc0)
+* [📝 Plain Text (direct)](books/the-jurisprudence-tome3/en/content.txt)
+* [🖼️ Cover](books/the-jurisprudence-tome3/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_0850)
+
+**Book 51: Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1ofEzm9lsav00I_YFLFbyp0vbRbHUJBc2)
+* [📖 Download PDF (direct)](books/the-jurisprudence-tome4/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1RwG_TpUKqufQiILALwZ-ZdDZA8jh_G_J)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1MykLvb9nh2VZsicONNBLtKyKk1xY0k4X)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=17bJWfiV3NhCt24qKpjzjSxVWWai1XvkF)
+* [📝 Plain Text (direct)](books/the-jurisprudence-tome4/en/content.txt)
+* [🖼️ Cover](books/the-jurisprudence-tome4/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_0900)
+
+**Book 52: Encyclopedia of Succession: The Design of Devotion in the Quranic Language**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=13HqD_1DK4J81kY_Jg819BBPjvNeSpykn)
+* [📖 Download PDF (direct)](books/encyclopedia-of-succession/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1N-dvV8iTX0CAxKm77CDbTLcLvwYUjGf0)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1emFHTmK7pL77frFTuyJm3ak3CyhbxGZy)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=11HleoSidC7g_bx58ZEmZzyaVVf6nJG3x)
+* [📝 Plain Text (direct)](books/encyclopedia-of-succession/en/content.txt)
+* [🖼️ Cover](books/encyclopedia-of-succession/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260403)
+
+**Book 53: The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1s-DVdPO0sc8pkkbpDmkU_UVuaLXF5wEc)
+* [📖 Download PDF (direct)](books/the-Balance-of-the-Tongue/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=15aotXWXhpGtb1GvqOhmdCiJZld-GYvR1-)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=18a4PHPB-bQTv7pnBDC-lpSdCscmxkuRE)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1gpv-Jd6Mpja82ZfZaOdP0cKgAsPiqJR1)
+* [📝 Plain Text (direct)](books/the-Balance-of-the-Tongue/en/content.txt)
+* [🖼️ Cover](books/the-Balance-of-the-Tongue/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260416_1148)
+
+**Book 54: The Algorithm of Consciousness: A conceptual reading of Surah Al-Alaq and Al-Qalam**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1UdtaPg83b8bsz0wvhfh395CUwwNKeUyg)
+* [📖 Download PDF (direct)](books/alaq-al-qalam/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1qA-1w4XDXYdUbBNtDmJEg17jaJBREtF-)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1P3t4MfN5Dz6FgvgKvO-CKwi0kun9Hm8u)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1zTR4QsRkH6uH1QiMxHQE5nCf40QZ9_fu)
+* [📝 Plain Text (direct)](books/alaq-al-qalam/en/content.txt)
+* [🖼️ Cover](books/alaq-al-qalam/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260409_1905)
+
+**Book 55: The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1maam5ux_A8RiB7yLn4TtPpu2RVlD5S9L)
+* [📖 Download PDF (direct)](books/the-structure-of-guidance/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1CCzQV4zpBD2nMiRlYt0JLSZSlzCvtD1H-)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1qwy4WWV_iMXcYTLDPCrtGWB-eSeNB4DW)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1AacaGr6nXdC1Z0oHzEzg7d9uoVEeKteY)
+* [📝 Plain Text (direct)](books/the-structure-of-guidance/en/content.txt)
+* [🖼️ Cover](books/the-structure-of-guidance/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260413_1950)
+
+**Book 56: Sultan of Insight: Between the Written Qur'an and the Manifest Universe**
+
+* [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1s-sC7PZFkLfZTa-jYk5-zyRzfUNouywX)
+* [📖 Download PDF (direct)](books/sultan-of-insight/en/content.pdf)
+* [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1tZaWC-pvo7DUftt4UbKh1RTnOjgXBH0Q)
+* [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=10zAiOUDvPrKVFDAFhlYB5coMAVH2WyFy)
+* [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1VO2hP2mHLqIhJZkeP4Bg9C2N7oHxdFN5)
+* [📝 Plain Text (direct)](books/sultan-of-insight/en/content.txt)
+* [🖼️ Cover](books/sultan-of-insight/en/cover-en.png)
+* [📝 Plain Text on Archive.org](https://archive.org/details/content_20260417_1037)
 ---
 
 ### 🌟 المميزات | Features
