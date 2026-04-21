@@ -18,6 +18,7 @@
 "books": [
     {
       "id": "conscious-contemplation",
+......"الكتاب 1"
       "titles": {
         "ar": "نحو تدبر واعٍ",
         "en": "Towards Conscious Contemplation"
@@ -62,6 +63,7 @@
     },
     {
       "id": "anwar-al-bayan",
+......"الكتاب 2"
       "titles": {
         "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
         "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
@@ -106,6 +108,7 @@
     },
     {
       "id": "changing-the-concepts",
+......"الكتاب 3"
       "titles": {
         "ar": "تغيير المفاهيم",
         "en": "Changing the Concepts"
@@ -150,6 +153,7 @@
             },
     {
       "id": "editing-the-quranic-terminology-tome1",
+......"الكتاب 4"
       "titles": {
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
@@ -195,6 +199,7 @@
     {
       "id": "editing-the-quranic-terminology-tome2",
       "titles": {
+......"الكتاب 5"
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
       },
@@ -233,11 +238,13 @@
         "ai_accessible": true,
         "structured_data": true,
         "topics_ar": ["تغيير المفاهيم", "المصطلحات القرآنية", "فقه اللسان القرآني", "التدبر القرآني", "المخطوطات القرآنية الأصلية", "الرقمنة", "الوعي", "الإصلاح والتجديد", "القرآن الكريم", "السنة النبوية", "الربوبية والألوهية", "النفس في القرآن", "العبادة", "القيم القرآنية", "التفكير النقدي", "الذكاء والفطرة", "الشرك والتوحيد", "الكون والإنسان", "القيامة واليوم الآخر", "الجنة والنار", "الآيات الكونية", "البيانات", "المصداق القرآني", "الحروف المقطعة", "النسخ", "الجن والشياطين", "الأعداد في القرآن", "القصص القرآني", "القتل والقتال", "بنو إسرائيل", "الخلافة الإنسانية", "الزوج والأزواج", "الرجال والنساء", "القبلة", "المسجد الحرام والمسجد الأقصى", "الكذب", "الحلال والحرام", "الضحك والبكاء", "الصيد", "حجر", "اليقين", "الذكر", "الدعاء", "الرزق", "الميزان", "الجلد والجلود", "البعوضة", "الاستغفار", "العرش والماء", "الخلق والتصوير", "البشر والإنسان", "الخيل والبغال والحمير", "المليكة والملائكة والروح", "الأمة الوسط", "السفه", "الشرق والغرب", "الصراط المستقيم", "اللغة العربية ولسان القرآن", "الفيل", "الرحيم", "إحياء البلد", "كلام الله", "رؤية الله", "التسليم", "الساعة", "الموتى والأموات", "الأصنام الفكرية", "الفجر", "القرآن نهر جارٍ", "استشعار معاني الحروف"],
-        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the letters"]
+        "topics_en": ["Changing Concepts", "Quranic Terminology", "Jurisprudence of the Qur'anic Tongue", "Quranic Contemplation", "Original Qur'anic Manuscripts", "Digitization", "Awareness", "Reform and Renewal", "The Holy Qur'an (as a One and Sufficient Source)", "The Sunnah of the Prophet (and the Methodology of Critical Dealing)", "Lordship and Divinity", "The Soul in the Qur'an", "Worship (Prayer", "Fasting", "Hajj", "Praise)", "Quranic Values (Justice", "Mercy", "Charity)", "Critical Thinking", "Intelligence and Instinct", "Shirk and Monotheism", "Universe and Man", "Resurrection and the Last Day", "Paradise and Hell", "Cosmic Verses", "Data (as a Quranic concept)", "Quranic authentication", "broken letters", "abrogation (in its new meaning)", "jinn and demons (correction of concepts)", "numbers in the Qur'an", "Quranic stories (sura Yusuf as a model)", "killing and fighting (deconstructing concepts)", "children of Israel (conceptual perspective)", "human succession", "husband and couples (functional understanding)", "men and women (functional understanding)", "qibla (compass of life)", "the Grand Mosque and the Al-Aqsa Mosque (symbols of consciousness)", "lying", "halal and haram", "laughing and crying", "hunting", "stone", "Certainty", "Dhikr", "Dua'a", "Livelihood", "Libra", "Skin and skins", "Mosquito (as a Quranic parable)", "Seeking forgiveness", "Throne and water", "Creation and photography", "Humans and man", "Horses", "mules and donkeys", "King", "Angels and Spirit", "The Middle Nation", "Foolishness", "East and West", "The Straight Path", "Arabic Language and the Tongue of the Qur'an", "The Elephant", "The Most Merciful (The Name of Allah)", "The Revival of the Country", "The Word of God", "The Vision of God", "Delivery", "The Hour", "The Dead and the Dead", "Intellectual Idols", "Fajr", "The Qur'an is a Running River", "Sensing the meanings of the 
++++++++++++++++++++++++++++++++++++++++++++++++++letters"]
                 }
             },
     {
       "id": "editing-the-quranic-terminology-tome3",
+......"الكتاب 6"
       "titles": {
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
@@ -282,6 +289,7 @@
             },
     {
       "id": "contemplation-in-the-mirror",
+......"الكتاب 7"
       "titles": {
         "ar": "التدبر في مرآة الرسوم",
         "en": "Contemplation in the Mirror of Drawings"
@@ -326,6 +334,7 @@
             },
     {
       "id": "digitizing",
+......"الكتاب 8"
       "titles": {
         "ar": "رقمنة المخطوطات القرآنية",
         "en": "Digitization of Quranic Manuscripts"
@@ -370,6 +379,7 @@
             },
     {
       "id": "the-jurisprudence",
+......"الكتاب 9"
       "titles": {
         "ar": "فقه اللسان القرآني",
         "en": "The Jurisprudence of the Quranic Tongue"
@@ -414,6 +424,7 @@
             },
     {
       "id": "modesty",
+......"الكتاب 10"
       "titles": {
         "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
         "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
@@ -458,6 +469,7 @@
             },
     {
       "id": "malakoot",
+......"الكتاب 11"
       "titles": {
         "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
         "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -502,6 +514,7 @@
             },
     {
       "id": "prostration-and-glorification-in-the-qur'an",
+......"الكتاب 12"
       "titles": {
         "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
         "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
@@ -546,6 +559,7 @@
             },
     {
       "id": "christ-and-mary-in-the-qur'an",
+......"الكتاب 13"
       "titles": {
         "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
         "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
@@ -590,6 +604,7 @@
             },
     {
       "id": "names-in-the-holy",
+......"الكتاب 14"
       "titles": {
         "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
         "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
@@ -634,6 +649,7 @@
             },
     {
       "id": "blood",
+......"الكتاب 15"
       "titles": {
         "ar": "الدم",
         "en": "Blood - the code of existence that we neglected"
@@ -678,6 +694,7 @@
             },
     {
       "id": "the-code-of-the-quran",
+......"الكتاب 16"
       "titles": {
         "ar": "شفرة القرآن",
         "en": "THE CODE OF THE QUR'AN"
@@ -722,6 +739,7 @@
             },
     {
       "id": "the-spirit",
+......"الكتاب 17"
       "titles": {
         "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
         "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
@@ -766,6 +784,7 @@
             },
     {
       "id": "numbers-as-legislation",
+......"الكتاب 18"
       "titles": {
         "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
         "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
@@ -810,6 +829,7 @@
             },
     {
       "id": "from-the-letter-to-consciousness",
+......"الكتاب 19"
       "titles": {
         "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
         "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
@@ -854,6 +874,7 @@
             },
     {
       "id": "the-quranic-consciousness-trinity-project",
+......"الكتاب 20"
       "titles": {
         "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
         "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
@@ -898,6 +919,7 @@
             },
     {
       "id": "the-universe",
+......"الكتاب 21"
       "titles": {
         "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
         "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
@@ -942,6 +964,7 @@
             },
     {
       "id": "the-self",
+......"الكتاب 22"
       "titles": {
         "ar": "النفس: من الحرف إلى الوعي",
         "en": "The Self: From Letter to Consciousness"
@@ -986,6 +1009,7 @@
             },
     {
   "id": "the-seven-mathani",
+......"الكتاب 23"
   "titles": {
     "ar": "السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى",
     "en": "The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning"
@@ -1030,6 +1054,7 @@
             },
     {
   "id": "angels",
+......"الكتاب 24"
   "titles": {
     "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
     "en": "Angels: The Hidden Structure That Governs Existence"
@@ -1074,6 +1099,7 @@
             },
     {
   "id": "shattering-the-false-mountains",
+......"الكتاب 25"
   "titles": {
     "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
     "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
@@ -1118,6 +1144,7 @@
             },
     {
   "id": "tasbeeh",
+......"الكتاب 26"
   "titles": {
     "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
     "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
@@ -1162,6 +1189,7 @@
             },
 {
   "id": "prophets",
+......"الكتاب 27"
   "titles": {
     "ar": "الأنبياء من شخوص التاريخ إلى برامج الاستخلاف",
     "en": "From Prophets as Historical Figures to Programs of Human Stewardship"
@@ -1206,6 +1234,7 @@
             },
 {
   "id": "magog",
+......"الكتاب 28"
   "titles": {
     "ar": "يأجوج ومأجوج - من قانون الدم إلى سنن الفساد",
     "en": "Gog and Magog - From the Law of Blood to the Patterns of Corruption"
@@ -1250,6 +1279,7 @@
             },
 {
   "id": "human",
+......"الكتاب 29"
   "titles": {
     "ar": "كتاب الإنسان والاستخلاف",
     "en": "The Book of Human and Stewardship"
@@ -1294,6 +1324,7 @@
     },
   {
     "id": "malakoot1",
+......"الكتاب 30"
     "titles": {
       "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الأول",
       "en": "So That He May Be Among the Certain - A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -1384,6 +1415,7 @@
   },
   {
     "id": "malakoot2",
+......"الكتاب 31"
     "titles": {
       "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الثاني",
       "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -1474,6 +1506,7 @@
   },
   {
     "id": "faith",
+......"الكتاب 32"
     "titles": {
       "ar": "الإسلام والإيمان: نحو هندسة للأمن الوجودي ونقد صنمية التراث",
       "en": "Faith Between Text and Contemporary Interpretation: A Conceptual Reading of Belief, Meaning, and Responsibility"
@@ -1586,6 +1619,7 @@
   },
   {
     "id": "jinn",
+......"الكتاب 33"
     "titles": {
       "ar": "الجن والشياطين في القرآن: من الخرافة إلى الوعي المعقلن",
       "en": "Jinn and Demons in the Quran: From Myth to Rational Awareness"
@@ -1676,6 +1710,7 @@
   },
   {
     "id": "adultery",
+......"الكتاب 34"
     "titles": {
       "ar": "الزنا في ضوء الميزان الإلهي",
       "en": "Adultery in the Light of Divine Balance"
@@ -1762,6 +1797,7 @@
   },
     {
     "id": "salat",
+......"الكتاب 35"
     "titles": {
       "ar": " موسوعة الصلاة -(الصلوة): نظام وصل سيادي مستمر ",
       "en": "The Encyclopedia of Salah - (Al-Salāt) - A Sovereign and Continuous System of Interconnectivity"
@@ -1832,6 +1868,7 @@
   },
   {
     "id": "earth",
+......"الكتاب 36"
     "titles": {
       "ar": " الأرض في القرآن ",
       "en": " The Earth in the Quran "
@@ -1926,6 +1963,7 @@
   },
   {
     "id": "cave",
+......"الكتاب 37"
     "titles": {
       "ar": " مرايا الكهف: الهندسة القرآنية لقانون الفتن ومسار الاستخلاف ",
       "en": "Mirrors of the Cave - A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
@@ -2006,6 +2044,7 @@
   },
   {
     "id": "salawat",
+......"الكتاب 38"
     "titles": {
       "ar": " الصلاة على النبي من الترديد الآلي إلى النصرة الوجودية ",
       "en": " Salawat: From Automatic Ritual to Existential Presence "
@@ -2082,6 +2121,7 @@
   },
   {
     "id": " shadaows-of-heaving",
+......"الكتاب 39"
     "titles": {
       "ar": " ظلال الجنة والنار وجهنم: رحلة من الدنو المعرفي إلى اليقين الأخروي ",
       "en": " The Comprehensive Conceptual Adaptation: Shadows of Heaven, Hell, and Jahannam "
@@ -2158,6 +2198,7 @@
   },
   {
     "id": " fasting",
+......"الكتاب 40"
     "titles": {
       "ar": " موسوعة الصيام القرآني -من النُسك الجسدي إلى المنهج الوجودي ",
       "en": " Encyclopedia of Qur’anic Fasting - From Physical Ritual to Existential Method and the Architecture of Taqwa "    },
@@ -2242,6 +2283,7 @@
   },
   {
     "id": " youssef",
+......"الكتاب 41"
     "titles": {
       "ar": " كتاب: يوسف فينا - رحلة الوعي من الكيد والفساد إلى التمكين",
       "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment "    },
@@ -2326,6 +2368,7 @@
   },
   {
 "id": "Breath1",
+......"الكتاب 42"
 "titles": {
 "ar": "موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة",
 "en": "The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics"
@@ -2453,6 +2496,7 @@
 },
 {
   "id": "Breath2",
+......"الكتاب 43"
   "titles": {
     "ar": "موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة",
     "en": "The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics"
@@ -2608,6 +2652,7 @@
 },
 {
   "id": "linguistic-engineering",
+......"الكتاب 44"
   "titles": {
     "ar": "هندسة اللسان والارتقاء بالإنسان - دراسة تدبرية في سور (المسد، العصر، الفلق، الناس...)",
     "en": "Linguistic Engineering and Human Elevation: A Strategic Concept for Self-Development"
@@ -2694,6 +2739,7 @@
 },
 {
   "id": "Inheritance",
+......"الكتاب 45"
   "titles": {
     "ar": " الميراث في القرآن: قراءة بنيوية في ضوء فقه اللسان القرآني",
     "en": " From Inheritance to Continuity: A Structural Reading Through Qur’anic Linguistic Jurisprudence and Reality"
@@ -2804,6 +2850,7 @@
 },
 {
   "id": "ghaib",
+......"الكتاب 46"
   "titles": {
     "ar": "إعادة تعريف \"أحداث الغيب\" بوصفها قوانين بنيوية فاعلة في الوعي والواقع",
     "en": "Redefining \"Ghaib Events\" as Functional Structural Laws in Consciousness and Reality"
@@ -2880,6 +2927,7 @@
 },
 {
   "id": "engineering-of-trials",
+......"الكتاب 47"
   "titles": {
     "ar": "هندسة الابتلاء: دليل المُشغّل للإنسان القرآني",
     "en": "Engineering of Trials: The System Operator's Guide for the Quranic Human"
@@ -2952,6 +3000,8 @@
 },
 {
   "id": "the-jurisprudence-tome1",
+......"الكتاب 48"
+
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3000,6 +3050,7 @@
 },
 {
   "id": "the-jurisprudence-tome2",
+......"الكتاب 49"
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3046,6 +3097,7 @@
 },
 {
   "id": "the-jurisprudence-tome3",
+......"الكتاب 50"
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3132,6 +3184,7 @@
 },
 {
   "id": "the-jurisprudence-tome4",
+......"الكتاب 51"
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3218,6 +3271,7 @@
  }, 
 {
   "id": "encyclopedia-of-succession",
+......"الكتاب 52"
   "titles": {
     "ar": "موسوعة الاستخلاف: هندسة العبادات في اللسان القرآني",
     "en": "Encyclopedia of Succession: The Design of Devotion in the Quranic Language"
@@ -3320,7 +3374,7 @@
 
  {
 "id": "the-Balance-of-the-Tongue",
-"titles": {
+......"الكتاب 53""titles": {
 "ar": "بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني",
 "en": "The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion"
 },
@@ -3406,6 +3460,7 @@
 },
 {
   "id": "alaq-al-qalam",
+......"الكتاب 54"
   "titles": {
     "ar": " سورة العلق والقلم - خوارزمية الوعي ومنهاج التحرر المعرفي (قراءة نظمية في فقه اللسان)",
     "en": " The Algorithm of Consciousness: A conceptual reading of Surah Al-Alaq and Al-Qalam"
@@ -3502,6 +3557,7 @@
 },
  {
   "id": " the-structure-of-guidance",
+......"الكتاب 55"
   "titles": {
     "ar": " بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني",
     "en": " The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion"
@@ -3588,6 +3644,7 @@
 },
 {
   "id": "sultan-of-insight",
+......"الكتاب 56"
   "titles": {
     "ar": "سلطان البصيرة - بين القرآن المسطور والمنشور",
     "en": "Sultan of Insight: Between the Written Qur'an and the Manifest Universe"
