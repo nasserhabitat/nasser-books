@@ -31,13 +31,10 @@
     "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
     "search": "https://nasserhabitat.github.io/nasser-books/search.html",
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
-  },
-  "books_count": 112,
-  "last_updated": "2026-04-14",
-
 "books": [
     {
       "id": "conscious-contemplation",
+"book_number": 1,
       "titles": {
         "ar": "نحو تدبر واعٍ",
         "en": "Towards Conscious Contemplation"
@@ -82,6 +79,7 @@
     },
     {
       "id": "anwar-al-bayan",
+       "book_number": 2,
       "titles": {
         "ar": "أنوار البيان في رسم المصحف العثماني: الكشف عن أسرار اللسان",
         "en": "Anwar Al-Bayan in the Drawing of the Ottoman Quran: Unveiling the Secrets of the Tongue"
@@ -126,6 +124,7 @@
     },
     {
       "id": "changing-the-concepts",
+       "book_number": 3,
       "titles": {
         "ar": "تغيير المفاهيم",
         "en": "Changing the Concepts"
@@ -170,6 +169,7 @@
             },
     {
       "id": "editing-the-quranic-terminology-tome1",
+       "book_number": 4,
       "titles": {
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 1",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 1"
@@ -215,6 +215,7 @@
     {
       "id": "editing-the-quranic-terminology-tome2",
       "titles": {
+       "book_number": 5 ,
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
       },
@@ -258,6 +259,7 @@
             },
     {
       "id": "editing-the-quranic-terminology-tome3",
+       "book_number": 6,
       "titles": {
         "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 3",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 3"
@@ -302,6 +304,7 @@
             },
     {
       "id": "contemplation-in-the-mirror",
+       "book_number": 7,
       "titles": {
         "ar": "التدبر في مرآة الرسوم",
         "en": "Contemplation in the Mirror of Drawings"
@@ -346,6 +349,7 @@
             },
     {
       "id": "digitizing",
+       "book_number": 8,
       "titles": {
         "ar": "رقمنة المخطوطات القرآنية",
         "en": "Digitization of Quranic Manuscripts"
@@ -390,6 +394,7 @@
             },
     {
       "id": "the-jurisprudence",
+       "book_number": 9,
       "titles": {
         "ar": "فقه اللسان القرآني",
         "en": "The Jurisprudence of the Quranic Tongue"
@@ -434,6 +439,7 @@
             },
     {
       "id": "modesty",
+       "book_number": 10,
       "titles": {
         "ar": "الحَيَاءُ - سياج الروح وبوصلة الفهم",
         "en": "Modesty: From the Energy of Modesty to the Key to Knowledge"
@@ -478,6 +484,7 @@
             },
     {
       "id": "malakoot",
+       "book_number": 11,
       "titles": {
         "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما",
         "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -522,6 +529,7 @@
             },
     {
       "id": "prostration-and-glorification-in-the-qur'an",
+       "book_number": 12,
       "titles": {
         "ar": "السجود والتسبيح في القرآن: من التنزيه القلبي إلى الخضوع العملي",
         "en": "Prostration and Glorification in the Qur'an: From Heartfelt Purification to Practical Submission"
@@ -566,6 +574,7 @@
             },
     {
       "id": "christ-and-mary-in-the-qur'an",
+      "book_number": 13,
       "titles": {
         "ar": "المسيح ومريم في القرآن: من الرمز الباطني إلى النموذج الإنساني",
         "en": "Christ and Mary in the Qur'an: From the Esoteric Symbol to the Human Model"
@@ -610,6 +619,7 @@
             },
     {
       "id": "names-in-the-holy",
+       "book_number": 14,
       "titles": {
         "ar": "الأسماء الحسنى الوظيفية في القرآن الكريم: دراسة توقيفية تحليلية لدلالات التدبير الإلهي",
         "en": "The Functional Beautiful Names in the Holy Quran: An Analytical Discretionary Study of the Connotations of Divine Management"
@@ -654,6 +664,7 @@
             },
     {
       "id": "blood",
+       "book_number": 15,
       "titles": {
         "ar": "الدم",
         "en": "Blood - the code of existence that we neglected"
@@ -698,6 +709,7 @@
             },
     {
       "id": "the-code-of-the-quran",
+       "book_number": 16,
       "titles": {
         "ar": "شفرة القرآن",
         "en": "THE CODE OF THE QUR'AN"
@@ -742,6 +754,7 @@
             },
     {
       "id": "the-spirit",
+      "book_number": 17,
       "titles": {
         "ar": "الروح: من عالم الأمر إلى إشراق الإدراك",
         "en": "The Spirit: From the Realm of Command to the Illumination of Perception"
@@ -786,6 +799,7 @@
             },
     {
       "id": "numbers-as-legislation",
+      "book_number": 18,
       "titles": {
         "ar": "الأعداد في القرآن: من الكم إلى الكيف، ومن الظاهر إلى الوعي",
         "en": "Numbers in the Quran: From Quantity to Quality, and from the Apparent to the Conscious"
@@ -830,6 +844,7 @@
             },
     {
       "id": "from-the-letter-to-consciousness",
+      "book_number": 19,
       "titles": {
         "ar": "من الحرف إلى الوعي – رحلة الإنسان في مرآة القرآن",
         "en": "From letter to consciousness The human journey in the mirror of the Qur'an Between the soul, the spirit, and the statement - a symbolic reading of the jurisprudence of the Quranic language"
@@ -874,6 +889,7 @@
             },
     {
       "id": "the-quranic-consciousness-trinity-project",
+      "book_number": 20,
       "titles": {
         "ar": "ثالوث الوعي القرآني - التسبيح، الحمد، والشكر",
         "en": "The Quranic Consciousness Trinity Project From the Cosmic Order to Human Consciousness"
@@ -918,6 +934,7 @@
             },
     {
       "id": "the-universe",
+      "book_number": 21,
       "titles": {
         "ar": "الكون كتاب حي — الموجودات تتكلم بلسان الله",
         "en": "THE UNIVERSE IS A LIVING BOOK — ALL BEINGS SPEAK WITH THE VOICE OF GOD"
@@ -962,6 +979,7 @@
             },
     {
       "id": "the-self",
+      "book_number": 22,
       "titles": {
         "ar": "النفس: من الحرف إلى الوعي",
         "en": "The Self: From Letter to Consciousness"
@@ -1006,6 +1024,7 @@
             },
     {
   "id": "the-seven-mathani",
+  "book_number": 23,
   "titles": {
     "ar": "السبع المثاني في ضوء البنية اللغوية والبنية العددية: نحو وحدة الهندسة والمعنى",
     "en": "The Seven Mathani in Light of Linguistic and Numerical Structure: Towards a Unity of Geometry and Meaning"
@@ -1050,6 +1069,7 @@
             },
     {
   "id": "angels",
+  "book_number": 24,
   "titles": {
     "ar": "الملائكة: البنية الخفية التي تُدير الوجود",
     "en": "Angels: The Hidden Structure That Governs Existence"
@@ -1094,6 +1114,7 @@
             },
     {
   "id": "shattering-the-false-mountains",
+  "book_number": 25,
   "titles": {
     "ar": "نسف الجبال الضالة: رحلة الرضا من ليلة القدر إلى يوم الكشف",
     "en": "Shattering the False Mountains: A Qur'anic Unmasking of Sacred Illusions"
@@ -1138,6 +1159,7 @@
             },
     {
   "id": "tasbeeh",
+  "book_number": 26,
   "titles": {
     "ar": "التسبيح: السباحة في المسار الموجَّه من حفظ النظام الكوني إلى منع سفك الدماء",
     "en": "Tasbeeh: Swimming in the Guided Path: From Inner Transcendence to Lived Submission"
@@ -1182,6 +1204,7 @@
             },
 {
   "id": "prophets",
+  "book_number": 27,
   "titles": {
     "ar": "الأنبياء من شخوص التاريخ إلى برامج الاستخلاف",
     "en": "From Prophets as Historical Figures to Programs of Human Stewardship"
@@ -1226,6 +1249,7 @@
             },
 {
   "id": "magog",
+  "book_number": 28,
   "titles": {
     "ar": "يأجوج ومأجوج - من قانون الدم إلى سنن الفساد",
     "en": "Gog and Magog - From the Law of Blood to the Patterns of Corruption"
@@ -1270,6 +1294,7 @@
             },
 {
   "id": "human",
+  "book_number": 29,
   "titles": {
     "ar": "كتاب الإنسان والاستخلاف",
     "en": "The Book of Human and Stewardship"
@@ -1314,6 +1339,7 @@
     },
   {
     "id": "malakoot1",
+    "book_number": 30,
     "titles": {
       "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الأول",
       "en": "So That He May Be Among the Certain - A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -1404,6 +1430,7 @@
   },
   {
     "id": "malakoot2",
+    "book_number": 31,
     "titles": {
       "ar": "وَلِيَكُونَ مِنَ الْمُوقِنِينَ: رحلة برهانية في ملكوت السماوات والأرض وما بينهما - المجلد الثاني",
       "en": "And So That He May Be of the Certain Ones: A Demonstrative Journey in the Kingdom of the Heavens and the Earth and What is Between Them"
@@ -1494,6 +1521,7 @@
   },
   {
     "id": "faith",
+    "book_number": 32,
     "titles": {
       "ar": "الإسلام والإيمان: نحو هندسة للأمن الوجودي ونقد صنمية التراث",
       "en": "Faith Between Text and Contemporary Interpretation: A Conceptual Reading of Belief, Meaning, and Responsibility"
@@ -1606,6 +1634,7 @@
   },
   {
     "id": "jinn",
+    "book_number": 33,
     "titles": {
       "ar": "الجن والشياطين في القرآن: من الخرافة إلى الوعي المعقلن",
       "en": "Jinn and Demons in the Quran: From Myth to Rational Awareness"
@@ -1696,6 +1725,7 @@
   },
   {
     "id": "adultery",
+    "book_number": 34,
     "titles": {
       "ar": "الزنا في ضوء الميزان الإلهي",
       "en": "Adultery in the Light of Divine Balance"
@@ -1782,6 +1812,7 @@
   },
     {
     "id": "salat",
+    "book_number": 35,
     "titles": {
       "ar": " موسوعة الصلاة -(الصلوة): نظام وصل سيادي مستمر ",
       "en": "The Encyclopedia of Salah - (Al-Salāt) - A Sovereign and Continuous System of Interconnectivity"
@@ -1852,6 +1883,7 @@
   },
   {
     "id": "earth",
+    "book_number": 36,
     "titles": {
       "ar": " الأرض في القرآن ",
       "en": " The Earth in the Quran "
@@ -1946,6 +1978,7 @@
   },
   {
     "id": "cave",
+    "book_number": 37,
     "titles": {
       "ar": " مرايا الكهف: الهندسة القرآنية لقانون الفتن ومسار الاستخلاف ",
       "en": "Mirrors of the Cave - A Conceptual Journey into the Soul, Language, and the Sanctuary of the Word "
@@ -2026,6 +2059,7 @@
   },
   {
     "id": "salawat",
+    "book_number": 38,
     "titles": {
       "ar": " الصلاة على النبي من الترديد الآلي إلى النصرة الوجودية ",
       "en": " Salawat: From Automatic Ritual to Existential Presence "
@@ -2102,6 +2136,7 @@
   },
   {
     "id": " shadaows-of-heaving",
+    "book_number": 39,
     "titles": {
       "ar": " ظلال الجنة والنار وجهنم: رحلة من الدنو المعرفي إلى اليقين الأخروي ",
       "en": " The Comprehensive Conceptual Adaptation: Shadows of Heaven, Hell, and Jahannam "
@@ -2126,8 +2161,8 @@
       "pdf_direct": "books/shadaows-of-heaving/ar/content.pdf",
       "pdf_external": "https://drive.google.com/uc?export=download&id=1eaLMMxePGSV9EZ46fletvfUMb1_pVTkX ",
       "html": "https://drive.google.com/uc?export=download&id=1Ensk6-yjE1-3gzVuJ6J7vO9wovP3UiIr ",
-      "txt_external": "https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3"   
-      "txt_direct": "books/shadaows-of-heaving/en/content.txt",
+      "txt_external": "https://drive.google.com/uc?export=download&id=1PAmbOsPpx94rmCW81OAdQAYSNOaCe7F3",   
+      "txt_external": "books/shadaows-of-heaving/en/content.txt",
       "cover": "books/shadaows-of-heaving/en/cover-en.png",
       "archive": " https://archive.org/details/content_20260310_2236 "
     },
@@ -2178,6 +2213,7 @@
   },
   {
     "id": " fasting",
+    "book_number": 39,
     "titles": {
       "ar": " موسوعة الصيام القرآني -من النُسك الجسدي إلى المنهج الوجودي ",
       "en": " Encyclopedia of Qur’anic Fasting - From Physical Ritual to Existential Method and the Architecture of Taqwa "    },
@@ -2262,6 +2298,7 @@
   },
   {
     "id": " youssef",
+    "book_number": 41,
     "titles": {
       "ar": " كتاب: يوسف فينا - رحلة الوعي من الكيد والفساد إلى التمكين",
       "en": " YUSUF WITHIN US - From Conspiracy and Corruption to Empowerment "    },
@@ -2346,6 +2383,7 @@
   },
   {
 "id": "Breath1",
+ "book_number": 42,
 "titles": {
 "ar": "موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة",
 "en": "The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics"
@@ -2473,6 +2511,7 @@
 },
 {
   "id": "Breath2",
+  "book_number": 43,
   "titles": {
     "ar": "موسوعة التنفس البنيوي: من ميكانيكا الجسد إلى هندسة البصيرة",
     "en": "The Architecture of Breath & Consciousness - A Structural Approach to Human Perception & Quranic Linguistics"
@@ -2628,6 +2667,7 @@
 },
 {
   "id": "linguistic-engineering",
+  "book_number": 44,
   "titles": {
     "ar": "هندسة اللسان والارتقاء بالإنسان - دراسة تدبرية في سور (المسد، العصر، الفلق، الناس...)",
     "en": "Linguistic Engineering and Human Elevation: A Strategic Concept for Self-Development"
@@ -2714,6 +2754,7 @@
 },
 {
   "id": "Inheritance",
+  "book_number": 45,
   "titles": {
     "ar": " الميراث في القرآن: قراءة بنيوية في ضوء فقه اللسان القرآني",
     "en": " From Inheritance to Continuity: A Structural Reading Through Qur’anic Linguistic Jurisprudence and Reality"
@@ -2824,6 +2865,7 @@
 },
 {
   "id": "ghaib",
+  "book_number": 46,
   "titles": {
     "ar": "إعادة تعريف \"أحداث الغيب\" بوصفها قوانين بنيوية فاعلة في الوعي والواقع",
     "en": "Redefining \"Ghaib Events\" as Functional Structural Laws in Consciousness and Reality"
@@ -2900,6 +2942,7 @@
 },
 {
   "id": "engineering-of-trials",
+  "book_number": 47,
   "titles": {
     "ar": "هندسة الابتلاء: دليل المُشغّل للإنسان القرآني",
     "en": "Engineering of Trials: The System Operator's Guide for the Quranic Human"
@@ -2972,6 +3015,7 @@
 },
 {
   "id": "the-jurisprudence-tome1",
+  "book_number": 48,
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3020,6 +3064,7 @@
 },
 {
   "id": "the-jurisprudence-tome2",
+  "book_number": 49,
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3066,6 +3111,7 @@
 },
 {
   "id": "the-jurisprudence-tome3",
+  "book_number": 50,
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3152,6 +3198,7 @@
 },
 {
   "id": "the-jurisprudence-tome4",
+  "book_number": 51,
   "titles": {
     "ar": "فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي",
     "en": "Encyclopedia: Fiqh Al-Lissan Al-Qur'ani -- The Engineering of Revelation"
@@ -3238,6 +3285,7 @@
  }, 
 {
   "id": "encyclopedia-of-succession",
+  "book_number": 52,
   "titles": {
     "ar": "موسوعة الاستخلاف: هندسة العبادات في اللسان القرآني",
     "en": "Encyclopedia of Succession: The Design of Devotion in the Quranic Language"
@@ -3340,6 +3388,7 @@
 
  {
 "id": "the-Balance-of-the-Tongue",
+"book_number": 39,
 "titles": {
 "ar": "بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني",
 "en": "The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion"
@@ -3426,6 +3475,7 @@
 },
 {
   "id": "alaq-al-qalam",
+  "book_number": 54,
   "titles": {
     "ar": " سورة العلق والقلم - خوارزمية الوعي ومنهاج التحرر المعرفي (قراءة نظمية في فقه اللسان)",
     "en": " The Algorithm of Consciousness: A conceptual reading of Surah Al-Alaq and Al-Qalam"
@@ -3522,6 +3572,7 @@
 },
  {
   "id": " the-structure-of-guidance",
+  "book_number": 55,
   "titles": {
     "ar": " بنية الهداية - من الفوضى الإدراكية إلى الفرقان العمراني",
     "en": " The Structure of Guidance: From Cognitive Chaos to Civilizational Criterion"
@@ -3608,6 +3659,7 @@
 },
 {
   "id": "sultan-of-insight",
+  "book_number": 56,
   "titles": {
     "ar": "سلطان البصيرة - بين القرآن المسطور والمنشور",
     "en": "Sultan of Insight: Between the Written Qur'an and the Manifest Universe"
