@@ -30,7 +30,7 @@
     "main": "https://nasserhabitat.github.io/nasser-books/",
     "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
     "search": "https://nasserhabitat.github.io/nasser-books/search.html",
-    "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html"
+    "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html",
 "books": [
     {
       "id": "conscious-contemplation",
