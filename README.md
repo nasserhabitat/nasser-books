@@ -958,7 +958,16 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (مباشر)](books/sultan-of-insight/ar/content.txt)  
    - [🖼️ الغلاف](books/sultan-of-insight/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260417_1033)
+57 الكتاب 57: كيف تفهم القرآن… فيتغير كل شيء - دليل عملي لاكتشاف المعنى وتفعيل الحياة
 
+📄 تحميل DOCX: https://drive.google.com/uc?export=download&id=1un6-3fQlKe8V9-AYxH2TUTPwhIlvKEnV
+📖 تحميل PDF (مباشر): books/how-to-understand-the-quran/ar/content.pdf
+📖 تحميل PDF (خارجي): https://drive.google.com/uc?export=download&id=1tS4F9hYc0sXIRCJpFHj5hnTIFbT5arS_
+🌐 قراءة HTML (خارجي): https://drive.google.com/uc?export=download&id=1fY-lNnyKi6V6QV1nMS_IdneisdIOjWK_
+📝 النص الخام (خارجي): https://drive.google.com/uc?export=download&id=12k3SRTFfKwvWLZ2y6m8IQTR2vlI_pp1T
+📝 النص الخام (مباشر): books/how-to-understand-the-quran/ar/content.txt
+🖼️ الغلاف: books/how-to-understand-the-quran/ar/cover-ar.png
+📝 النص الخام على Archive.org: https://archive.org/details/content_20260422
 
 
 
@@ -1544,6 +1553,19 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
 * [📝 Plain Text (direct)](books/sultan-of-insight/en/content.txt)
 * [🖼️ Cover](books/sultan-of-insight/en/cover-en.png)
 * [📝 Plain Text on Archive.org](https://archive.org/details/content_20260417_1037)
+
+57. Book 57: How to Understand the Qur’an… So Everything Changes
+
+📄 Download DOCX: https://drive.google.com/uc?export=download&id=1RdsspzWR2fekX92PZxAHfGcrsih5PEmu
+📖 Download PDF (direct): books/how-to-understand-the-quran/en/content.pdf
+📖 Download PDF (external): https://drive.google.com/uc?export=download&id=1eef3dBV77JpSh91HLhiOP1tjGLo1_j-R
+🌐 Read HTML (external): https://drive.google.com/uc?export=download&id=1HztAxfJycUScOv9HO1Vi5Cf8bR0imnYr
+📝 Plain Text (external): https://drive.google.com/uc?export=download&id=1EOcyZWV_crGymjjxB4TBHllIrx58r0Ec
+📝 Plain Text (direct): books/how-to-understand-the-quran/en/content.txt
+🖼️ Cover: books/how-to-understand-the-quran/en/cover-en.png
+📝 Plain Text on Archive.org: https://archive.org/details/content_20260420_2135
+
+
 ---
 
 ### 🌟 المميزات | Features
