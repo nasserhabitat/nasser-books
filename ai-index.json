@@ -31,7 +31,8 @@
     "books_index": "https://nasserhabitat.github.io/nasser-books/books-index.html",
     "search": "https://nasserhabitat.github.io/nasser-books/search.html",
     "ai_recommendations": "https://nasserhabitat.github.io/nasser-books/ai-recommendations.html",
-"books": [
+},
+  "books": [
     {
       "id": "conscious-contemplation",
 "book_number": 1,
@@ -214,9 +215,9 @@
             },
     {
       "id": "editing-the-quranic-terminology-tome2",
+        "book_number": 5 ,
       "titles": {
-       "book_number": 5 ,
-        "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
+             "ar": "تحرير المصطلح القرآني: دراسة تطبيقية في فقه اللسان القرآني - المجلد 2",
         "en": "Clarifying the Qur'anic Terminology: An Applied Study in the Jurisprudence of the Qur'anic Tongue - Tome 2"
       },
       "description": {
