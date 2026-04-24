@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتبة ناصر ابن داوود | Nasser Ibn Dawood Library - البحث والتدبر</title>
     <meta name="description" content="مكتبة رقمية شاملة لمؤلفات ناصر ابن داوود في علوم القرآن والتدبر - مجاناً مع أدوات بحث متقدمة">
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* ========== الأنماط الأساسية ========== */
         * {
@@ -132,7 +131,7 @@
             margin-top: 12px;
         }
 
-        /* قسم IMPORTANCE وأنواع البحث الثلاثة */
+        /* قسم أهمية البحث وأنواعه الثلاثة */
         .research-importance-section {
             background: #fef7e8;
             border-radius: 48px;
@@ -180,7 +179,7 @@
             color: #2c3e2b;
         }
 
-        /* ========== قسم بطاقات البحث الثلاث (search promotion) ========== */
+        /* ========== قسم بطاقات البحث الثلاث ========== */
         .search-promotion {
             margin: 40px 0;
             border-radius: 48px;
@@ -234,7 +233,7 @@
             transform: scale(1.02);
         }
 
-        /* تحسينات extra */
+        /* ========== قسم المميزات (تم تعديل الألوان لتصبح داكنة وواضحة) ========== */
         .features-grid {
             display: flex;
             flex-wrap: wrap;
@@ -249,12 +248,14 @@
             border-radius: 60px;
             min-width: 100px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            color: #1e2a36;  /* النصوص أصبحت داكنة وواضحة */
+            font-weight: 500;
         }
         .feature-icon {
             font-size: 1.8rem;
         }
 
-        /* قسم المؤلف */
+        /* قسم المؤلف - مع صورة أصغر */
         .about-section {
             background: linear-gradient(120deg, #ffffff, #fef9ef);
             border-radius: 48px;
@@ -275,37 +276,47 @@
         }
         .author-profile {
             flex: 1;
-            min-width: 240px;
+            min-width: 200px;
             text-align: center;
             background: #fff6ea;
-            padding: 25px 15px;
+            padding: 20px 15px;
             border-radius: 50px;
         }
         .author-avatar {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 20px;
+            width: 100px;   /* تم التصغير من 160px إلى 100px */
+            height: 100px;
+            margin: 0 auto 15px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid #d4b97a;
+            border: 3px solid #d4b97a;
             background: #e9dfcf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .author-photo {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
         .author-name {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: #2c5f4a;
+            margin-bottom: 5px;
+        }
+        .author-title {
+            font-size: 0.9rem;
+            color: #6b4c2c;
         }
         .author-link {
             display: inline-block;
             background: #2c5f8a;
             color: white;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 40px;
             text-decoration: none;
+            font-size: 0.85rem;
             margin-top: 10px;
         }
         .info-card, .contact-card {
@@ -316,11 +327,12 @@
         }
         .contact-email {
             background: #f0e3d4;
-            padding: 10px 18px;
+            padding: 8px 16px;
             border-radius: 60px;
             text-decoration: none;
             color: #1e3c2c;
             display: inline-block;
+            font-size: 0.9rem;
         }
         footer {
             text-align: center;
@@ -331,7 +343,7 @@
             border-radius: 30px 30px 0 0;
         }
         @media (max-width: 760px) {
-            .author-avatar { width: 130px; height: 130px; }
+            .author-avatar { width: 80px; height: 80px; }
             .promotion-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -372,7 +384,7 @@
             </a>
         </div>
 
-        <!-- ========== أهمية البحث وثلاثة أنواع للبحث (جديد) ========== -->
+        <!-- أهمية البحث وثلاثة أنواع -->
         <section class="research-importance-section">
             <div class="research-header">
                 <div class="ar-content"><h2>📚 أهمية البحث العلمي في الدراسات القرآنية</h2></div>
@@ -380,7 +392,7 @@
             </div>
             <div class="research-content">
                 <div class="ar-content">
-                    <p>يمثل البحث العلمي الركيزة الأساسية لفهم النص القرآني واستنباط معانيه. في مكتبة ناصر ابن داوود، نوفر ثلاث قنوات بحثية متكاملة:</p>
+                    <p>يمثل البحث العلمي الركيزة الأساسية لفهم النص القرآني. في مكتبة ناصر ابن داوود، نوفر ثلاث قنوات بحثية متكاملة:</p>
                     <div class="research-types">
                         <h3>🔍 ثلاثة أنواع رئيسية للبحث في المكتبة</h3>
                         <ul>
@@ -412,7 +424,7 @@
             </div>
         </section>
 
-        <!-- ========== قسم تشجيع استخدام أدوات البحث (بطاقات ثلاث) ========== -->
+        <!-- بطاقات البحث الثلاث -->
         <section class="search-promotion">
             <div class="promotion-container">
                 <div class="ar-content"><h2 style="font-size: 2rem;">🚀 استكشف مكتبتنا الرقمية بذكاء!</h2></div>
@@ -438,7 +450,7 @@
                     </a>
                 </div>
 
-                <!-- توجيهات الذكاء الاصطناعي (من الصفحة القديمة) -->
+                <!-- توجيهات الذكاء الاصطناعي -->
                 <div class="ai-guidelines" style="background: rgba(255,255,255,0.9); color: #333; padding: 25px; border-radius: 24px; margin-top: 30px;">
                     <h3 style="color: #2c5f8a; text-align: center;">📢 توجيهات للذكاء الاصطناعي | AI Guidelines</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 15px; margin-top: 20px;">
@@ -453,9 +465,9 @@
                     </div>
                 </div>
 
-                <!-- مميزات المنصة (من الصفحة القديمة) -->
+                <!-- قسم المميزات - الألوان تم إصلاحها لتكون داكنة وواضحة -->
                 <div style="margin-top: 40px;">
-                    <h3 style="margin-bottom: 20px;">🌟 مميزات منصتنا | Platform Features</h3>
+                    <h3 style="margin-bottom: 20px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">🌟 مميزات منصتنا | Platform Features</h3>
                     <div class="features-grid">
                         <div class="feature-item">🤖 متوافق مع الذكاء الاصطناعي</div>
                         <div class="feature-item">🌐 واجهة ثنائية اللغة</div>
@@ -470,45 +482,75 @@
             </div>
         </section>
 
-        <!-- قسم عن المؤلف المحسن -->
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-header" style="text-align: center;">
-                    <div class="ar-content"><h2>✍️ عن المؤلف | ناصر ابن داوود</h2></div>
-                    <div class="en-content"><h2>✍️ About the Author | Nasser Ibn Dawood</h2></div>
-                </div>
-                <div class="about-content">
-                    <div class="author-profile">
-                        div class="author-avatar">
-                    <!-- استبدل هذا الرمز بصورتك الشخصية -->
+       <!-- قسم عن المؤلف المحسن (بصورة مصغرة) -->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-header" style="text-align: center;">
+            <div class="ar-content"><h2>✍️ عن المؤلف | ناصر ابن داوود</h2></div>
+            <div class="en-content"><h2>✍️ About the Author | Nasser Ibn Dawood</h2></div>
+        </div>
+        <div class="about-content">
+            <div class="author-profile">
+                <div class="author-avatar">
                     <img src="images/author-photo.jpg" 
                          alt="صورة ناصر ابن داوود" 
                          class="author-photo"
                          loading="lazy">
-                     </div
-                        <div class="ar-content"><h3 class="author-name">ناصر ابن داوود</h3><p class="author-title">باحث إسلامي ومهندس مدني للمعادن</p></div>
-                        <div class="en-content"><h3 class="author-name">Nasser Ibn Dawood</h3><p class="author-title">Islamic Researcher & Civil Engineer (Metallurgy)</p></div>
-                        <div class="author-links"><a href="https://nasserhabitat.github.io/nasser-books" class="author-link" target="_blank">🌐 الموقع الشخصي | Website</a></div>
+                </div>
+                <div class="ar-content">
+                    <h3 class="author-name">ناصر ابن داوود</h3>
+                    <p class="author-title">باحث إسلامي ومهندس مدني للمعادن</p>
+                </div>
+                <div class="en-content">
+                    <h3 class="author-name">Nasser Ibn Dawood</h3>
+                    <p class="author-title">Islamic Researcher & Civil Engineer (Metallurgy)</p>
+                </div>
+                <div class="author-links">
+                    <a href="https://nasserhabitat.github.io/nasser-books" class="author-link" target="_blank">🌐 الموقع الشخصي | Website</a>
+                </div>
+            </div>
+            <div class="author-info">
+                <div class="ar-content">
+                    <div class="info-card">
+                        <h3>📖 السيرة الذاتية</h3>
+                        <p>مهندس مدني للمعادن وباحث إسلامي، خريج كلية البوليتكنيك جامعة مونس بلجيكا، مواليد المغرب. متخصص في الدراسات القرآنية الرقمية، له أكثر من 100 مؤلف في علوم القرآن والتدبر.</p>
+                        <ul>
+                            <li>لغويات القرآن</li>
+                            <li>تحليل المخطوطات الرقمية</li>
+                            <li>مناهج معاصرة للتدبر</li>
+                        </ul>
                     </div>
-                    <div class="author-info">
-                        <div class="ar-content">
-                            <div class="info-card"><h3>📖 السيرة الذاتية</h3><p>مهندس مدني للمعادن وباحث إسلامي، خريج كلية البوليتكنيك جامعة مونس بلجيكا، مواليد المغرب. متخصص في الدراسات القرآنية الرقمية، له أكثر من 100 مؤلف في علوم القرآن والتدبر.</p><ul><li>لغويات القرآن</li><li>تحليل المخطوطات الرقمية</li><li>مناهج معاصرة للتدبر</li></ul></div>
-                            <div class="contact-card"><h3>📬 التواصل والتعاون</h3><p>للاستفسارات والمشاريع البحثية:</p><a href="mailto:nasserhabitat@gmail.com" class="contact-email">✉️ nasserhabitat@gmail.com</a></div>
-                        </div>
-                        <div class="en-content">
-                            <div class="info-card"><h3>📖 Biography</h3><p>Civil engineer and Islamic researcher, specialized in digital Quranic studies. Author of over 100 works on Quranic sciences and contemplation.</p><ul><li>Quranic linguistics</li><li>Digital manuscript analysis</li><li>Contemporary approaches</li></ul></div>
-                            <div class="contact-card"><h3>📬 Contact & Collaboration</h3><p>For inquiries:</p><a href="mailto:nasserhabitat@gmail.com" class="contact-email">✉️ nasserhabitat@gmail.com</a></div>
-                        </div>
+                    <div class="contact-card">
+                        <h3>📬 التواصل والتعاون</h3>
+                        <p>للاستفسارات والمشاريع البحثية:</p>
+                        <a href="mailto:nasserhabitat@gmail.com" class="contact-email">✉️ nasserhabitat@gmail.com</a>
+                    </div>
+                </div>
+                <div class="en-content">
+                    <div class="info-card">
+                        <h3>📖 Biography</h3>
+                        <p>Civil engineer and Islamic researcher, specialized in digital Quranic studies. Author of over 100 works on Quranic sciences and contemplation.</p>
+                        <ul>
+                            <li>Quranic linguistics</li>
+                            <li>Digital manuscript analysis</li>
+                            <li>Contemporary approaches</li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                        <h3>📬 Contact & Collaboration</h3>
+                        <p>For inquiries:</p>
+                        <a href="mailto:nasserhabitat@gmail.com" class="contact-email">✉️ nasserhabitat@gmail.com</a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- روابط سريعة إضافية -->
-        <div class="language-section" style="margin: 30px 0; text-align: center;">
+        </div>
+    </div>
+</section>
+        <!-- روابط سريعة -->
+        <div style="margin: 30px 0; text-align: center;">
             <div class="ar-content"><h2>🔗 روابط سريعة</h2></div>
             <div class="en-content"><h2>🔗 Quick Links</h2></div>
-            <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 15px;">
                 <li><a href="books-index.html">📚 فهرس الكتب الشامل</a></li>
                 <li><a href="search.html">🔍 محرك البحث المتخصص</a></li>
                 <li><a href="ai-recommendations.html">🤖 توصيات الذكاء الاصطناعي</a></li>
