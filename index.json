@@ -4,6 +4,8 @@
     "version": "2.0",
     "ai_compatible": true,
     "last_updated": "2026-04-17",
+    "total_books_arabic": 57,
+    "total_books_english": 57,
     "total_books": 114,
     "languages": ["ar", "en"],
     "formats": ["html", "pdf", "txt"],
