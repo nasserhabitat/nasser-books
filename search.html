@@ -320,7 +320,6 @@
             <div id="allBooksList"></div>
         </section>
     </div>
-
     <script>
         //بيانات الكتب مع الروابط الداخلية فقط
 const booksData = [
@@ -3637,8 +3636,7 @@ const booksData = [
     }
 }
 ];              
-
-        // --------------------------------------------------------------
+ // --------------------------------------------------------------
         // المتغيرات العامة
         // --------------------------------------------------------------
         const bookContentCache = new Map();
@@ -3857,7 +3855,7 @@ const booksData = [
                                             <div class="line-number">السطر ${m.lineNumber}</div>
                                             ${m.context.map(ctx => `
                                                 <div class="context-line ${ctx.isMatch ? 'match' : ''}">
-                                                   ${ctx.isMatch ? '◄ ' : ''}${highlightText(ctx.text, query)}
+                                                    ${ctx.isMatch ? '→ ' : ''}${highlightText(ctx.text, query)}
                                                 </div>
                                             `).join('')}
                                         </div>
