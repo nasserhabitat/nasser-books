@@ -869,7 +869,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/engineering-of-trials/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260409_1810)
 
-48	الكتاب 48: ** فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+48	الكتاب 48: ** فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي - المجلد الاول  **
    - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1uSsmJmFslW2bN_-ZK1-IajS1jdqSDnHE)  
    - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome1/ar/content.pdf)  
    - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1EXl8CBU_FqNWf_q1fQfQym_PT4IqcLy9)  
@@ -889,7 +889,7 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [🖼️ الغلاف](books/the-jurisprudence-tome2/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260408)
 
-50	الكتاب 50: ** فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي**  
+50	الكتاب 50: ** فقه اللسان القرآني -- هندسة الوحي: مشروع إعادة بناء الفهم القرآني: من الحرف الأولي إلى التشغيل الوجودي - المجلد الثاني **  
    - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1j32PQpQql7PE68bb27V-cFrMogXOtdIu)  
    - [📖 تحميل PDF (مباشر)](books/the-jurisprudence-tome3/ar/content.pdf)  
    - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1_HKR0GiOJNBPaxpSDR4ALLtUOuGlEW_p)  
