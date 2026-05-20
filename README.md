@@ -958,18 +958,136 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
    - [📝 النص الخام (مباشر)](books/sultan-of-insight/ar/content.txt)  
    - [🖼️ الغلاف](books/sultan-of-insight/ar/cover-ar.png)  
    - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260417_1033)
-57 الكتاب 57: كيف تفهم القرآن… فيتغير كل شيء - دليل عملي لاكتشاف المعنى وتفعيل الحياة
 
-📄 تحميل DOCX: https://drive.google.com/uc?export=download&id=1un6-3fQlKe8V9-AYxH2TUTPwhIlvKEnV
-📖 تحميل PDF (مباشر): books/how-to-understand-the-quran/ar/content.pdf
-📖 تحميل PDF (خارجي): https://drive.google.com/uc?export=download&id=1tS4F9hYc0sXIRCJpFHj5hnTIFbT5arS_
-🌐 قراءة HTML (خارجي): https://drive.google.com/uc?export=download&id=1fY-lNnyKi6V6QV1nMS_IdneisdIOjWK_
-📝 النص الخام (خارجي): https://drive.google.com/uc?export=download&id=12k3SRTFfKwvWLZ2y6m8IQTR2vlI_pp1T
-📝 النص الخام (مباشر): books/how-to-understand-the-quran/ar/content.txt
-🖼️ الغلاف: books/how-to-understand-the-quran/ar/cover-ar.png
-📝 النص الخام على Archive.org: https://archive.org/details/content_20260422
+57.	الكتاب 57: **كيف تفهم القرآن… فيتغير كل شيء - دليل عملي لاكتشاف المعنى وتفعيل الحياة**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1un6-3fQlKe8V9-AYxH2TUTPwhIlvKEnV)  
+   - [📖 تحميل PDF (مباشر)](books/how-to-understand-the-quran/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1tS4F9hYc0sXIRCJpFHj5hnTIFbT5arS_)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1fY-lNnyKi6V6QV1nMS_IdneisdIOjWK_)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=12k3SRTFfKwvWLZ2y6m8IQTR2vlI_pp1T)  
+   - [📝 النص الخام (مباشر)](books/how-to-understand-the-quran/ar/content.txt)  
+   - [🖼️ الغلاف](books/how-to-understand-the-quran/ar/cover-ar.png)  
+   - [📝 النص الخام على Archive.org](https://archive.org/details/content_20260422)
 
+58.	الكتاب 58: **هندسة اللسان المبين: الكتالوج التشغيلي للوعي والواقع**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=12vrq2bKYnWjkaX8d1atvcyQb_yZcfaAP)  
+   - [📖 تحميل PDF (مباشر)](books/catalogue-of-consciousness/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1ovAGk7skrYGePhplWG1oRj0q3z3eNMwg)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1zwaFsGLTQzTwOx82xGCWBqKp3LXrNfUD)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1xK96glXvRV_LnYgPBg-jKeQT9RZ2C2ET)  
+   - [📝 النص الخام (مباشر)](books/catalogue-of-consciousness/ar/content.txt)  
+   - [🖼️ الغلاف](books/catalogue-of-consciousness/ar/cover-ar.png)  
+   - (لا يوجد رابط archive لهذا الكتاب)
 
+59.	الكتاب 59: **منظومة الحق: من ليلة التقدير إلى هندسة البلاء**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1UoMIqi2klQ-rcFmwp_Nwl90P8G_I4qV9)  
+   - [📖 تحميل PDF (مباشر)](books/system-of-truth/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=11g_vEDOLvn7IfiFHA_OKeR_HYITz2BId)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1GgJh7bn-S3WSksbVm0nKwAkOy6qY9Vz1)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1HMj3ZIjBDOGnH-Fnsa-gXSS08TVwktg-)  
+   - [📝 النص الخام (مباشر)](books/system-of-truth/ar/content.txt)  
+   - [🖼️ الغلاف](books/system-of-truth/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+60.	الكتاب 60: **عيد الأضحى - قراءة بنيوية في مقاصد الذبح والتضحية**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1Z3U2UkMjZZKS4io2RMWrK_rSuGTuVVfg)  
+   - [📖 تحميل PDF (مباشر)](books/eid-al-adha/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1qkEHV7ZoNdEuBGvKEohVbrujmCK91lXM)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1HbWJBdUj7rwqA_QicYsc04BH0uIZvTWe)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1CAG-34dtQlLKOPA5Z4A6lzjoGmWXpKh8)  
+   - [📝 النص الخام (مباشر)](books/eid-al-adha/ar/content.txt)  
+   - [🖼️ الغلاف](books/eid-al-adha/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+61.	الكتاب 61: **القرآن الحيّ: هندسة الذكر وتوليد البصيرة**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=13QXwpnMGLVrJbgh8QSzlV5QtJM9-hINb)  
+   - [📖 تحميل PDF (مباشر)](books/the-living-quran/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=10r34qTWla-G9T4ha1TS-Fev-WVC6svCA)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1ZXkz6dp3cPKbN1iLpk4jqSochGXJdcVm)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1l0EC73JW59Y7V3s4ElojpwotggzkOPvz)  
+   - [📝 النص الخام (مباشر)](books/the-living-quran/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-living-quran/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+62.	الكتاب 62: **Nutrition**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1UwJBSqi3F_jQWwjROaBA0hv1t_yYhZAT)  
+   - [📖 تحميل PDF (مباشر)](books/nutrition/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1yu1ENGJVdHaNBM_x7FwC8jC_hXIXhUBE)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1hL2iJZxZobCbCOGoNNoRikgn6RPtiC5Z)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1FAFm1kE9ZxYH51YSSsAelIoH0QLr0Hwv)  
+   - [📝 النص الخام (مباشر)](books/nutrition/ar/content.txt)  
+   - [🖼️ الغلاف](books/nutrition/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+63.	الكتاب 63: **Nutrition1**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1B3sB3mFy4ahrKHACiXXHAlfv1-SfOkEn)  
+   - [📖 تحميل PDF (مباشر)](books/nutrition1/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1vAt-zp5OYWJdLhmuGKClMzhT8Fai9TXv)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1or5N4xG8UlooXYwmo06PqDmjaYvFUh6X)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1HrJbZfwJYsbpeYN_Vux-snGvvgX6ZMNQ)  
+   - [📝 النص الخام (مباشر)](books/nutrition1/ar/content.txt)  
+   - [🖼️ الغلاف](books/nutrition1/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+64.	الكتاب 64: **Nutrition2**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1Ar7HaW9ZXha6lPqwUJZv8m2629HrIK5k)  
+   - [📖 تحميل PDF (مباشر)](books/nutrition2/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1cNVPwEAht5c3aoUpdolQeAb3n8ItzANJ)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1TqINRhFtfVfI4EbmwXNSynBJH7K--lPb)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1bosFd91E0AVSGyXGP_WUH80HGFNHR_5p)  
+   - [📝 النص الخام (مباشر)](books/nutrition2/ar/content.txt)  
+   - [🖼️ الغلاف](books/nutrition2/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+65.	الكتاب 65: **Nutrition3**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1bXhz-FkDZ8hmleVafKcbpKVtV-JHqWKj)  
+   - [📖 تحميل PDF (مباشر)](books/nutrition3/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1ou32KCGnvBQQgnrp_o1E5-Ed2RiD6KRY)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Athq45PwcUx1Xg7UHqBbSIx5ES1vwmZN)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1QqBd68dPHQYGWBwceaRRfjfvtzwMlub7)  
+   - [📝 النص الخام (مباشر)](books/nutrition3/ar/content.txt)  
+   - [🖼️ الغلاف](books/nutrition3/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+66.	الكتاب 66: **Resurrection**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1bPTFFnYbLwXoN3XD6mDvUgMMfTEQLMuL)  
+   - [📖 تحميل PDF (مباشر)](books/resurrection/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1CAZeRm7ys5GkVar3apIZYI_qiVvbAgJy)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1c7_hDtj-_yVa0L-UoRMd03hw0cNd8bih)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1RSchjRMD8AGycTwjWchdpqJh1Xt5EF4D)  
+   - [📝 النص الخام (مباشر)](books/resurrection/ar/content.txt)  
+   - [🖼️ الغلاف](books/resurrection/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+67.	الكتاب 67: **The Cow**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1PjCDwwjJYHwJfQuQbhK73zeLrCem0uPy)  
+   - [📖 تحميل PDF (مباشر)](books/the-cow/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1VvxQsWvuHeecGfKX885MxZS8mURHQGG-)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1n88sEvGDxYeNGUZ8OaJhiguuQFXlLnXn)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1E6zw-a5mHt166XndRQXezKWHDX7MNn4m)  
+   - [📝 النص الخام (مباشر)](books/the-cow/ar/content.txt)  
+   - [🖼️ الغلاف](books/the-cow/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+68.	الكتاب 68: **Hajj**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1gya6lIBXRoRbdAZileCBYVBbSGzW8tUA)  
+   - [📖 تحميل PDF (مباشر)](books/hajj/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=1CZqD0o2Nkt0Y2XzdkDim8GLbuVsx64Vo)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1Tca5Wn97H4CWhqkzBavHfB11lRlhQXfS)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=11t4uZsfbEQ3byn8zh-ZJnQ-Zzz2NL-aH)  
+   - [📝 النص الخام (مباشر)](books/hajj/ar/content.txt)  
+   - [🖼️ الغلاف](books/hajj/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
+
+69.	الكتاب 69: **Divorce**  
+   - [📄 تحميل DOCX](https://drive.google.com/uc?export=download&id=1Ed5KtAD1MByc2Tkm7On_JrkE0sBKWzAI)  
+   - [📖 تحميل PDF (مباشر)](books/divorce/ar/content.pdf)  
+   - [📖 تحميل PDF (خارجي)](https://drive.google.com/uc?export=download&id=10SgBgN922GJs3TqhECuWCGIpQIILVSa1)  
+   - [🌐 قراءة HTML (خارجي)](https://drive.google.com/uc?export=download&id=1k1kRqlB1G1ef_NQPHki7H0PkvHsy_AcD)  
+   - [📝 النص الخام (خارجي)](https://drive.google.com/uc?export=download&id=1teuD0oY0LXXMMQgs8RZHQAZRcSzpalOb)  
+   - [📝 النص الخام (مباشر)](books/divorce/ar/content.txt)  
+   - [🖼️ الغلاف](books/divorce/ar/cover-ar.png)  
+   - (لا يوجد رابط archive)
 
 
 #### الإنجليزية | English
@@ -1554,18 +1672,135 @@ We provide external links (via Google Drive and Archive.org) to access HTML cont
 * [🖼️ Cover](books/sultan-of-insight/en/cover-en.png)
 * [📝 Plain Text on Archive.org](https://archive.org/details/content_20260417_1037)
 
-57. Book 57: How to Understand the Qur’an… So Everything Changes
+57.	Book 57: **How to Understand the Qur’an… So Everything Changes**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1RdsspzWR2fekX92PZxAHfGcrsih5PEmu)  
+   - [📖 Download PDF (direct)](books/how-to-understand-the-quran/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1eef3dBV77JpSh91HLhiOP1tjGLo1_j-R)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1HztAxfJycUScOv9HO1Vi5Cf8bR0imnYr)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1EOcyZWV_crGymjjxB4TBHllIrx58r0Ec)  
+   - [📝 Plain Text (direct)](books/how-to-understand-the-quran/en/content.txt)  
+   - [🖼️ Cover](books/how-to-understand-the-quran/en/cover-en.png)  
+   - [📝 Plain Text on Archive.org](https://archive.org/details/content_20260420_2135)
 
-📄 Download DOCX: https://drive.google.com/uc?export=download&id=1RdsspzWR2fekX92PZxAHfGcrsih5PEmu
-📖 Download PDF (direct): books/how-to-understand-the-quran/en/content.pdf
-📖 Download PDF (external): https://drive.google.com/uc?export=download&id=1eef3dBV77JpSh91HLhiOP1tjGLo1_j-R
-🌐 Read HTML (external): https://drive.google.com/uc?export=download&id=1HztAxfJycUScOv9HO1Vi5Cf8bR0imnYr
-📝 Plain Text (external): https://drive.google.com/uc?export=download&id=1EOcyZWV_crGymjjxB4TBHllIrx58r0Ec
-📝 Plain Text (direct): books/how-to-understand-the-quran/en/content.txt
-🖼️ Cover: books/how-to-understand-the-quran/en/cover-en.png
-📝 Plain Text on Archive.org: https://archive.org/details/content_20260420_2135
+58.	Book 58: **THE SULTAN OF INSIGHT: The Operational Catalogue of Consciousness & Reality**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1-rzbtCbknvSFt2HQApil6_tfO-l351d8)  
+   - [📖 Download PDF (direct)](books/catalogue-of-consciousness/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1R_xI1MGtc_yVZ_hOiUy-5RnyCUXf1pvu)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1BVj42FI27tRISMHR17zZWRpDBX1Vl4jB)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1Z1Eed-JUFONZjg8XKabOMTi9mKbHPgXn)  
+   - [📝 Plain Text (direct)](books/catalogue-of-consciousness/en/content.txt)  
+   - [🖼️ Cover](books/catalogue-of-consciousness/en/cover-en.png)  
+   - (no archive link)
 
+59.	Book 59: **System Of Truth: From Appreciation Night to Disaster Engineering**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1QKGq_0Nyi89VadvvwkkzI4onGsDgflGn)  
+   - [📖 Download PDF (direct)](books/system-of-truth/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1iZ0ApdVaHb3g5pvDWsGxHG1yoBb4iC3_)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1msFk1g-rFyE_gRUFkcH8a0wXdN9CMLar)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1jNWaKra-FIXilZE-e4kWTT6O2q0y0S9Q)  
+   - [📝 Plain Text (direct)](books/system-of-truth/en/content.txt)  
+   - [🖼️ Cover](books/system-of-truth/en/cover-en.png)  
+   - (no archive link)
 
+60.	Book 60: **EID AL-ADHA: The Structural Theology of Sacrifice**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=10qalExuB1b7c-30du_2lLkloFW7opRDU)  
+   - [📖 Download PDF (direct)](books/eid-al-adha/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1VzNCWNxBWQhujnlljQWsT2jIrx325zLv)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=15OYkZTXe9iMrrZbjwssqDgi8xUKa9eiK)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1LP89y2QItBDSy3hU7Y66wzHwEXgcerNf)  
+   - [📝 Plain Text (direct)](books/eid-al-adha/en/content.txt)  
+   - [🖼️ Cover](books/eid-al-adha/en/cover-en.png)  
+   - (no archive link)
+
+61.	Book 61: **The Living Quran**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=18oAfweEJyYhjyLRGnukigWK5iFhWWEXQ)  
+   - [📖 Download PDF (direct)](books/the-living-quran/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1o9DjaxqgPjhJ317qDFaeQKXYB1ZMwnfn)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1-3woLxUHCAnJM_FttKfTzPSTd4pWCbpW)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1JZNKLyz5mzYSKQGVHJnX54nzo4hNwrhw)  
+   - [📝 Plain Text (direct)](books/the-living-quran/en/content.txt)  
+   - [🖼️ Cover](books/the-living-quran/en/cover-en.png)  
+   - (no archive link)
+
+62.	Book 62: **Nutrition**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1FSDSHE3PXe0__slkWQJJh0hZXMK4Mw7W)  
+   - [📖 Download PDF (direct)](books/nutrition/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=13S41SQMOSrl0Hf9kVtc3CMqp_Tbm2lL-)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1Gzqw-PuLruedPvuXPFQyJ476GpHVOf9l)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1vxnRqKonohfaWiT2wdny_zFmfJRbtvaJ)  
+   - [📝 Plain Text (direct)](books/nutrition/en/content.txt)  
+   - [🖼️ Cover](books/nutrition/en/cover-en.png)  
+   - (no archive link)
+
+63.	Book 63: **Nutrition1**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1ticVLNEo3kF3zytqpSaVTPC9K0CKcFdm)  
+   - [📖 Download PDF (direct)](books/nutrition1/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1OO52wkYNljMNHEExnjnAoQX-YEsXIW-z)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1qJaYQ_Ig18K9DkjIz9UWnyrjlPlz1R07)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1oSovqUhYrNKS9cAoiz0osO2a2nzzK1NE)  
+   - [📝 Plain Text (direct)](books/nutrition1/en/content.txt)  
+   - [🖼️ Cover](books/nutrition1/en/cover-en.png)  
+   - (no archive link)
+
+64.	Book 64: **Nutrition2**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1-pxoRCVsd0o2TDIH9_HI_rif7k7fOWFG)  
+   - [📖 Download PDF (direct)](books/nutrition2/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1gSknQaQ-z6eeNt8wnHk5OEEgwghnZzG_)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1gc9Ju7b5_sjwEABoaTXb7FCgfgwCPbUK)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1vlg91CC90fvI4JX4QLvwrn_vH4yEOHV0)  
+   - [📝 Plain Text (direct)](books/nutrition2/en/content.txt)  
+   - [🖼️ Cover](books/nutrition2/en/cover-en.png)  
+   - (no archive link)
+
+65.	Book 65: **Nutrition3**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1t_mNWSTlXYmTVPASGXrLsrZQM8AkK6AX)  
+   - [📖 Download PDF (direct)](books/nutrition3/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1MfCHyoDK7hEVJqvcYPG6l0Uc_X02A5Tb)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1etfOrcO8D51vADedk16aeQitdTaash5E)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1izR5lQ_ejzbcKQ5b9Q8F55IfAS0sBDBV)  
+   - [📝 Plain Text (direct)](books/nutrition3/en/content.txt)  
+   - [🖼️ Cover](books/nutrition3/en/cover-en.png)  
+   - (no archive link)
+
+66.	Book 66: **Resurrection**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1v3t7z9M0xFKdU9ql7s-tXGsih_InybAR)  
+   - [📖 Download PDF (direct)](books/resurrection/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=16WNbXFLeY2XONrh5Ck-zpGFSL35G_-eu)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1bYHAyQ2DTT8xzBk07QF3-zg-wzGwxjDa)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1Rm9gH3KXJB5ZrcZ7-Mf2HDQtEDyZqbrW)  
+   - [📝 Plain Text (direct)](books/resurrection/en/content.txt)  
+   - [🖼️ Cover](books/resurrection/en/cover-en.png)  
+   - (no archive link)
+
+67.	Book 67: **The Cow**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1g4c4FyUMTVGi0v3zpBFNkFgeN6iBAyoS)  
+   - [📖 Download PDF (direct)](books/the-cow/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1b26lHbfmuJHZKwqEmZx6xJdeEhSA1Ze1)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=10IUSWFqIJvKZyNOp5rqlUoT6ip1vL6QD)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=1QtHoD51mTgmIOYafyrFkp4CpQ82DHDsk)  
+   - [📝 Plain Text (direct)](books/the-cow/en/content.txt)  
+   - [🖼️ Cover](books/the-cow/en/cover-en.png)  
+   - (no archive link)
+
+68.	Book 68: **Hajj**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1gNKJfisgB5ruu_FcB_btLCAonmciYoAw)  
+   - [📖 Download PDF (direct)](books/hajj/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1zHQAc3gvwIg8A5tNy1mN42DQdndl3m00)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1j0yP0uNIwRv7V7U_xnSnhKsAPPQuwKO3)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=11grEgpaALycTwdo7HvJbR8XbcEo3Rv3F)  
+   - [📝 Plain Text (direct)](books/hajj/en/content.txt)  
+   - [🖼️ Cover](books/hajj/en/cover-en.png)  
+   - (no archive link)
+
+69.	Book 69: **Divorce**  
+   - [📄 Download DOCX](https://drive.google.com/uc?export=download&id=1P7XwiehxoUapkPToXVH-_jibi9BAjXnS)  
+   - [📖 Download PDF (direct)](books/divorce/en/content.pdf)  
+   - [📖 Download PDF (external)](https://drive.google.com/uc?export=download&id=1V00t4abRtf0yAC0oov8uXk_lMoXnDSsN)  
+   - [🌐 Read HTML (external)](https://drive.google.com/uc?export=download&id=1t9q8p9HrLDRCC5qTa6UgLFombWuzHlNw)  
+   - [📝 Plain Text (external)](https://drive.google.com/uc?export=download&id=12TBPXSqEbAHwSh_MnE5UCjyYg1pg6CVm)  
+   - [📝 Plain Text (direct)](books/divorce/en/content.txt)  
+   - [🖼️ Cover](books/divorce/en/cover-en.png)  
+   - (no archive link)
 ---
 
 ### 🌟 المميزات | Features
