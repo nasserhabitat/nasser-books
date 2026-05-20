@@ -6360,12 +6360,12 @@
       "id": "the-living-quran",
       "book_number": 61,
       "titles": {
-        "ar": "لقرآن الحيّ: هندسة الذكر وتوليد البصيرة",
-        "en": "The Living Quran"
+        "ar": "القرآن الحيّ: هندسة الذكر وتوليد البصيرة",
+        "en": "The Living Qur’an: The Architecture of Remembrance and the Generation of Insight"
       },
       "description": {
-        "ar": "كتاب جديد تمت إضافته من مكتبة ناصر ابن داوود",
-        "en": "New book added from Nasser Ibn Dawood library"
+        "ar": "قراءة تأسيسية هندسة الوحي وتجدد الذكر",
+        "en": "Foundational Reading The Engineering of Revelation and the Renewal of Remembrance"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/the-living-quran/ar/cover-ar.png",
       "ar": {
@@ -6389,8 +6389,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 52,
+        "pages_en": 29,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -6433,12 +6433,12 @@
       "id": "nutrition",
       "book_number": 62,
       "titles": {
-        "ar": "Nutrition",
-        "en": "Nutrition"
+        "ar": "رحلة في علم التغذية القرآنية من الطيبات إلى نظام الحماية ",
+        "en": "A Journey into Qur’anic Nutrition: From Sacred Provisions to the Divine Protection System"
       },
       "description": {
-        "ar": "كتاب جديد تمت إضافته من مكتبة ناصر ابن داوود",
-        "en": "New book added from Nasser Ibn Dawood library"
+        "ar": "فقه اللسان القرآني وهندسة النظم الغذائية",
+        "en": "The Jurisprudence of the Qur’anic Tongue and the Engineering of Dietary Systems"
       },
       "cover_image": "https://nasserhabitat.github.io/nasser-books/books/nutrition/ar/cover-ar.png",
       "ar": {
@@ -6462,8 +6462,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 618,
+        "pages_en": 15,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -6571,8 +6571,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 142,
+        "pages_en": 25,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -6680,8 +6680,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 231,
+        "pages_en": 37,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -6789,8 +6789,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 307,
+        "pages_en": 30,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -6898,8 +6898,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 130,
+        "pages_en": 23,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -7021,8 +7021,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 85,
+        "pages_en": 14,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -7096,8 +7096,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 94,
+        "pages_en": 23,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
@@ -7175,8 +7175,8 @@
       "metadata": {
         "author": "ناصر ابن داوود",
         "category": "faith_studies",
-        "pages_ar": 0,
-        "pages_en": 0,
+        "pages_ar": 121,
+        "pages_en": 21,
         "language_ar": "arabic",
         "language_en": "english",
         "ai_accessible": true,
