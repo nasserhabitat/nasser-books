@@ -67,7 +67,6 @@ Comment: محرك بحث جوجل الرئيسي
 
 User-agent: Googlebot-Image
 Allow: /
-Disallow: /books/*/cover-*.png
 
 User-agent: Bingbot
 Allow: /
@@ -158,15 +157,14 @@ Comment: روبوت زحف تجاري
 Allow: / 
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap.xml
 Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-books.xml
-Sitemap: https://a520098.sitemaphosting7.com/4624346/sitemap_4624346.xml
-itemap: https://nasserhabitat.github.io/nasser-books/sitemap-bing.xml
+Sitemap: https://nasserhabitat.github.io/nasser-books/sitemap-bing.xml
 
 # ==============================================
 # 💡 معلومات إضافية
 # ==============================================
 
 # الرخصة: Creative Commons Attribution-ShareAlike 4.0
-# المحتوى: 32 كتاباً في الدراسات القرآنية واللغوية
+# المحتوى: 69 كتابًا في الدراسات القرآنية واللغوية
 # اللغة: العربية والإنجليزية
 # الهدف: دعم البحث العلمي وتدريب الذكاء الاصطناعي
 # البريد: nasserhabitat@gmail.com
